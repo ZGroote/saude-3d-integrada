@@ -3,7 +3,7 @@ __pycache__/
 bodyparts3d/bruto/
 hra/bruto/
 bodyparts3d/modelos/
-atlas/
+/atlas/
 node_modules/
 .next/
 .env*

@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "atlas": "node scripts/copiar-atlas.mjs"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "@saude3d/motor-anatomico": "*",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.119.2",
     "class-variance-authority": "^0.7.1",
@@ -17,7 +20,8 @@
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "tailwind-merge": "^3.7.1"
+    "tailwind-merge": "^3.7.1",
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",
