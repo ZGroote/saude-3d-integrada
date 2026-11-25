@@ -154,6 +154,30 @@ auditoria (id, autor_id → perfis, paciente_id → pacientes, acao text, criado
 - Qualquer profissional com vínculo ativo vê **todos** os achados do paciente (é o valor multidisciplinar), mas só cria achados em nome próprio e da sua unidade.
 - Toda abertura de prontuário grava em `auditoria` (no servidor, não no cliente). Nasce na Etapa 1, junto com o banco.
 
+### Contrato do banco para o app (Etapa 1)
+
+O app só fala com o banco por estas portas; tudo o mais é RLS.
+
+| Porta | Faz |
+| --- | --- |
+| `minha_unidade() returns uuid` | Unidade do `perfis` do `auth.uid()` |
+| `eh_admin() returns boolean` | Papel do usuário logado |
+| `select … from pacientes` | Só devolve pacientes com vínculo ativo com `minha_unidade()` |
+| `abrir_prontuario(p_paciente uuid) returns pacientes` | Confere o vínculo, grava `auditoria(acao='abrir_prontuario')` e devolve o paciente; sem vínculo → erro `42501` |
+| `select … from auditoria` | Só `admin`, só da própria unidade |
+
+Leitura do prontuário pelo app passa **sempre** por `abrir_prontuario`; a página nunca lê o paciente direto.
+
+### Organização do repositório
+
+| Pasta | Conteúdo |
+| --- | --- |
+| `supabase/migrations/` | SQL versionado (compatível com Supabase) |
+| `supabase/seed.sql` | Dados fictícios da demonstração (§14) |
+| `supabase/testes/` | Testes de RLS em PGlite (Postgres em Node, sem Docker), com um shim de `auth.uid()` |
+| `web/` | App Next.js |
+| `packages/motor-anatomico/` | Motor 3D (§5.4) |
+
 ## 7. Telas e fluxos
 
 | Rota | Função |
