@@ -31,7 +31,8 @@ export default async function ProntuarioPage({ params }: PageProps<"/pacientes/[
   const supabase = await createClient();
   const { data, error } = await supabase.rpc("abrir_prontuario", { p_paciente: id });
 
-  if (error?.code === "42501" || (!error && !data)) {
+  // sem vínculo a função devolve NULL, que o PostgREST entrega como objeto com todos os campos nulos
+  if (error?.code === "42501" || (!error && !data?.id)) {
     return <div className="min-h-screen"><Topbar /><main className="mx-auto max-w-3xl px-5 py-16 sm:px-8"><Card className="px-6 py-12 text-center"><span className="mx-auto grid size-12 place-items-center rounded-full bg-amber-50 text-amber-800"><FileLock2 className="size-5" aria-hidden="true" /></span><h1 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">Sem acesso a este paciente</h1><p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-600">Este paciente não está disponível para sua unidade ou seu vínculo não está ativo.</p><Link href="/pacientes" className="mt-6 inline-flex h-10 items-center justify-center rounded-md bg-teal-800 px-4 text-sm font-semibold text-white hover:bg-teal-900">Voltar à lista</Link></Card></main></div>;
   }
 

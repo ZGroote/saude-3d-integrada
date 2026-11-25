@@ -10,3 +10,5 @@ node_modules/
 !.env.example
 supabase/dados/bruto/
 supabase/.temp/
+hra/denver/bruto/
+hra/totalseg/bruto/

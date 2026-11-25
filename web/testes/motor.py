@@ -1,4 +1,5 @@
 """Teste do 3D no app, sem Supabase. Uso, em web/:  npm run atlas && npm run build && python testes/motor.py [pasta-capturas]
+(com APP_URL=http://... usa um `next dev` já rodando)
 
 1) `next dev`: /dev/motor (mesmo componente do prontuário) no Chrome headless.
 2) `next start` sobre o build: /dev/motor tem de dar 404 e o atlas tem de ser servido.
@@ -204,8 +205,11 @@ def desenvolvimento(url):
         navegador.close()
 
 
-with Servidor('dev') as url:
-    desenvolvimento(url)
+if os.environ.get('APP_URL'):  # um `next dev` já rodando nesta pasta (o Next não permite um segundo)
+    desenvolvimento(os.environ['APP_URL'].rstrip('/'))
+else:
+    with Servidor('dev') as url:
+        desenvolvimento(url)
 
 with Servidor('start') as url:
     assert pedir(f'{url}/dev/motor') == 404, '/dev/motor existe em produção'

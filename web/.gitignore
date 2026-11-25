@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/testes/capturas/
 
 # atlas copiado por scripts/copiar-atlas.mjs
 /public/atlas/

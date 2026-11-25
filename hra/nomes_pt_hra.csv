@@ -1,0 +1,512 @@
+﻿label,nome_pt,validacao
+integumentary system layer,Camada do sistema tegumentar,pendente
+skin of body,Pele do corpo,pendente
+Interlobar adipose tissue of left mammary gland,Tecido adiposo interlobar da glândula mamária esquerda,pendente
+areolar tubercle,Tubérculo areolar,pendente
+left nipple,Papila mamária esquerda,pendente
+Left female areola,Aréola mamária esquerda,pendente
+mammary lobe,Lobo mamário,pendente
+main lactiferous duct,Ducto lactífero principal,pendente
+Lactiferous sinus,Seio lactífero,pendente
+Suspensory ligament of left breast,Ligamento suspensor da mama esquerda,pendente
+Interlobar adipose tissue of right mammary gland,Tecido adiposo interlobar da glândula mamária direita,pendente
+right nipple,Papila mamária direita,pendente
+Right female areola,Aréola mamária direita,pendente
+Suspensory ligament of right breast,Ligamento suspensor da mama direita,pendente
+Right retina,Retina direita,pendente
+Right fovea centralis,Fóvea central direita,pendente
+Right macula lutea,Mácula lútea direita,pendente
+Right optic disc,Disco óptico direito,pendente
+Palpebral conjunctiva of right upper eyelid,Conjuntiva palpebral da pálpebra superior direita,pendente
+Palpebral conjunctiva of right lower eyelid,Conjuntiva palpebral da pálpebra inferior direita,pendente
+Right sclera,Esclera direita,pendente
+Right choroid,Coroide direita,pendente
+right pupil,Pupila direita,pendente
+ciliary processes,Processos ciliares,pendente
+Suspensory ligament of right lens,Ligamento suspensor da lente direita,pendente
+Right ora serrata,Ora serrata direita,pendente
+Right corneoscleral junction,Junção corneoescleral direita,pendente
+Right lens,Lente direita,pendente
+Right scleral venous sinus,Seio venoso da esclera direito,pendente
+Aqueous humor of right eyeball,Humor aquoso do bulbo do olho direito,pendente
+Right ciliary body,Corpo ciliar direito,pendente
+Right ciliary muscle,Músculo ciliar direito,pendente
+eye trabecular meshwork,Malha trabecular do olho,pendente
+Right iris,Íris direita,pendente
+Right bulbar conjunctiva,Conjuntiva bulbar direita,pendente
+Right cornea,Córnea direita,pendente
+Humor of right vitreous body,Humor vítreo do corpo vítreo direito,pendente
+Left retina,Retina esquerda,pendente
+Left fovea centralis,Fóvea central esquerda,pendente
+Left macula lutea,Mácula lútea esquerda,pendente
+Left optic disc,Disco óptico esquerdo,pendente
+Palpebral conjunctiva of left upper eyelid,Conjuntiva palpebral da pálpebra superior esquerda,pendente
+Palpebral conjunctiva of left lower eyelid,Conjuntiva palpebral da pálpebra inferior esquerda,pendente
+Humor of left vitreous body,Humor vítreo do corpo vítreo esquerdo,pendente
+Left cornea,Córnea esquerda,pendente
+Left bulbar conjunctiva,Conjuntiva bulbar esquerda,pendente
+Left iris,Íris esquerda,pendente
+Left ciliary body,Corpo ciliar esquerdo,pendente
+Left ciliary muscle,Músculo ciliar esquerdo,pendente
+Aqueous humor of left eyeball,Humor aquoso do bulbo do olho esquerdo,pendente
+Left scleral venous sinus,Seio venoso da esclera esquerdo,pendente
+Left lens,Lente esquerda,pendente
+Left corneoscleral junction,Junção corneoescleral esquerda,pendente
+Left ora serrata,Ora serrata esquerda,pendente
+Suspensory ligament of left lens,Ligamento suspensor da lente esquerda,pendente
+left pupil,Pupila esquerda,pendente
+Left choroid,Coroide esquerda,pendente
+Left sclera,Esclera esquerda,pendente
+dura mater,Dura-máter,pendente
+Right optic nerve,Nervo óptico direito,pendente
+Left optic nerve,Nervo óptico esquerdo,pendente
+optic chiasma,Quiasma óptico,pendente
+olfactory bulb,Bulbo olfatório,pendente
+anterior olfactory nucleus,Núcleo olfatório anterior,pendente
+piriform cortex,Córtex piriforme,pendente
+left putamen,Putame esquerdo,pendente
+pineal body,Glândula pineal,pendente
+anterior commissure,Comissura anterior,pendente
+corpus callosum,Corpo caloso,pendente
+fornix of brain,Fórnix do encéfalo,pendente
+optic tract,Trato óptico,pendente
+cerebellar vermis,Vérmis do cerebelo,pendente
+left cerebral hemisphere,Hemisfério cerebral esquerdo,pendente
+superior frontal gyrus,Giro frontal superior,pendente
+middle frontal gyrus,Giro frontal médio,pendente
+triangular part of inferior frontal gyrus,Parte triangular do giro frontal inferior,pendente
+opercular part of inferior frontal gyrus,Parte opercular do giro frontal inferior,pendente
+gyrus rectus,Giro reto,pendente
+medial orbital gyrus,Giro orbital medial,pendente
+intermediate orbital gyrus,Giro orbital intermédio,pendente
+lateral orbital gyrus,Giro orbital lateral,pendente
+anterior segment of paracentral lobule,Segmento anterior do lóbulo paracentral,pendente
+frontal operculum,Opérculo frontal,pendente
+postcentral gyrus,Giro pós-central,pendente
+precuneus cortex,Córtex do pré-cúneo,pendente
+superior temporal gyrus,Giro temporal superior,pendente
+middle temporal gyrus,Giro temporal médio,pendente
+inferior temporal gyrus,Giro temporal inferior,pendente
+planum temporale,Plano temporal,pendente
+temporal pole,Polo temporal,pendente
+planum polare,Plano polar,pendente
+occipital pole,Polo occipital,pendente
+cuneus cortex,Córtex do cúneo,pendente
+lingual gyrus,Giro lingual,pendente
+occipital fusiform gyrus,Giro fusiforme occipital,pendente
+inferior occipital gyrus,Giro occipital inferior,pendente
+superior occipital gyrus,Giro occipital superior,pendente
+anterior cingulate gyrus,Giro do cíngulo anterior,pendente
+posterior cingulate gyrus,Giro do cíngulo posterior,pendente
+isthmus of cingulate gyrus,Istmo do giro do cíngulo,pendente
+subcallosal area,Área subcalosa,pendente
+anterior parahippocampal gyrus,Giro para-hipocampal anterior,pendente
+posterior parahippocampal gyrus,Giro para-hipocampal posterior,pendente
+substantia nigra,Substância negra,pendente
+superior colliculus,Colículo superior,pendente
+cerebral peduncle,Pedúnculo cerebral,pendente
+pontine nuclear group,Núcleos da ponte,pendente
+pontine tegmentum,Tegmento da ponte,pendente
+fourth ventricle,Quarto ventrículo,pendente
+parietal operculum,Opérculo parietal,pendente
+optic radiation,Radiação óptica,pendente
+right putamen,Putame direito,pendente
+right cerebral hemisphere,Hemisfério cerebral direito,pendente
+red nucleus,Núcleo rubro,pendente
+inferior colliculus,Colículo inferior,pendente
+hypothalamus,Hipotálamo,pendente
+C1 segment of cervical spinal cord,Segmento C1 da medula espinal cervical,pendente
+C2 segment of cervical spinal cord,Segmento C2 da medula espinal cervical,pendente
+C3 segment of cervical spinal cord,Segmento C3 da medula espinal cervical,pendente
+C4 segment of cervical spinal cord,Segmento C4 da medula espinal cervical,pendente
+C5 segment of cervical spinal cord,Segmento C5 da medula espinal cervical,pendente
+C6 segment of cervical spinal cord,Segmento C6 da medula espinal cervical,pendente
+C7 segment of cervical spinal cord,Segmento C7 da medula espinal cervical,pendente
+C8 segment of cervical spinal cord,Segmento C8 da medula espinal cervical,pendente
+first thoracic spinal cord segment,Primeiro segmento torácico da medula espinal,pendente
+second thoracic spinal cord segment,Segundo segmento torácico da medula espinal,pendente
+third thoracic spinal cord segment,Terceiro segmento torácico da medula espinal,pendente
+fourth thoracic spinal cord segment,Quarto segmento torácico da medula espinal,pendente
+fifth thoracic spinal cord segment,Quinto segmento torácico da medula espinal,pendente
+seventh thoracic spinal cord segment,Sétimo segmento torácico da medula espinal,pendente
+eighth thoracic spinal cord segment,Oitavo segmento torácico da medula espinal,pendente
+sixth thoracic spinal cord segment,Sexto segmento torácico da medula espinal,pendente
+ninth thoracic spinal cord segment,Nono segmento torácico da medula espinal,pendente
+tenth thoracic spinal cord segment,Décimo segmento torácico da medula espinal,pendente
+eleventh thoracic spinal cord segment,Décimo primeiro segmento torácico da medula espinal,pendente
+twelfth thoracic spinal cord segment,Décimo segundo segmento torácico da medula espinal,pendente
+first lumbar spinal cord segment,Primeiro segmento lombar da medula espinal,pendente
+second lumbar spinal cord segment,Segundo segmento lombar da medula espinal,pendente
+third lumbar spinal cord segment,Terceiro segmento lombar da medula espinal,pendente
+fourth lumbar spinal cord segment,Quarto segmento lombar da medula espinal,pendente
+fifth lumbar spinal cord segment,Quinto segmento lombar da medula espinal,pendente
+first sacral spinal cord segment,Primeiro segmento sacral da medula espinal,pendente
+second sacral spinal cord segment,Segundo segmento sacral da medula espinal,pendente
+third sacral spinal cord segment,Terceiro segmento sacral da medula espinal,pendente
+fourth sacral spinal cord segment,Quarto segmento sacral da medula espinal,pendente
+Left medial rectus,Reto medial esquerdo,pendente
+Left inferior rectus,Reto inferior esquerdo,pendente
+Left superior rectus,Reto superior esquerdo,pendente
+Left inferior oblique,Oblíquo inferior esquerdo,pendente
+Left lateral rectus,Reto lateral esquerdo,pendente
+Left superior oblique,Oblíquo superior esquerdo,pendente
+Right medial rectus,Reto medial direito,pendente
+Right inferior rectus,Reto inferior direito,pendente
+Right superior rectus,Reto superior direito,pendente
+Right inferior oblique,Oblíquo inferior direito,pendente
+Right lateral rectus,Reto lateral direito,pendente
+Right superior oblique,Oblíquo superior direito,pendente
+Left rectus femoris,Reto femoral esquerdo,pendente
+Tendon of left quadriceps femoris,Tendão do quadríceps femoral esquerdo,pendente
+Right rectus femoris,Reto femoral direito,pendente
+Tendon of right quadriceps femoris,Tendão do quadríceps femoral direito,pendente
+chorionic plate,Placa coriônica,pendente
+amnion,Âmnio,pendente
+umbilical cord,Cordão umbilical,pendente
+umbilical artery,Artéria umbilical,pendente
+umbilical vein,Veia umbilical,pendente
+vagina,Vagina,pendente
+Ampulla of right uterine tube,Ampola da tuba uterina direita,pendente
+Isthmus of right uterine tube,Istmo da tuba uterina direita,pendente
+Fimbria of right uterine tube,Fímbria da tuba uterina direita,pendente
+Infundibulum of right uterine tube,Infundíbulo da tuba uterina direita,pendente
+Infundibulum of left uterine tube,Infundíbulo da tuba uterina esquerda,pendente
+Fimbria of left uterine tube,Fímbria da tuba uterina esquerda,pendente
+Isthmus of left uterine tube,Istmo da tuba uterina esquerda,pendente
+Ampulla of left uterine tube,Ampola da tuba uterina esquerda,pendente
+Uterovesical pouch,Escavação vesicouterina,pendente
+Right round ligament of uterus,Ligamento redondo do útero direito,pendente
+Left round ligament of uterus,Ligamento redondo do útero esquerdo,pendente
+Right uterosacral ligament,Ligamento uterossacral direito,pendente
+Left uterosacral ligament,Ligamento uterossacral esquerdo,pendente
+Cardinal ligament,Ligamento cardinal,pendente
+Suspensory ligament of right ovary,Ligamento suspensor do ovário direito,pendente
+Suspensory ligament of left ovary,Ligamento suspensor do ovário esquerdo,pendente
+Left ovarian ligament,Ligamento próprio do ovário esquerdo,pendente
+Right ovarian ligament,Ligamento próprio do ovário direito,pendente
+broad ligament of uterus,Ligamento largo do útero,pendente
+Left mesosalpinx,Mesossalpinge esquerdo,pendente
+Right mesosalpinx,Mesossalpinge direito,pendente
+Right mesovarium,Mesovário direito,pendente
+Left mesovarium,Mesovário esquerdo,pendente
+Left ovary,Ovário esquerdo,pendente
+Right ovary,Ovário direito,pendente
+Abdominal ostium of uterine tube,Óstio abdominal da tuba uterina,pendente
+body of uterus,Corpo do útero,pendente
+Fundus of uterus,Fundo do útero,pendente
+Lower uterine segment,Segmento uterino inferior,pendente
+Posterior wall of uterus,Parede posterior do útero,pendente
+Anterior wall of uterus,Parede anterior do útero,pendente
+uterine cervix,Colo do útero,pendente
+internal cervical os,Óstio interno do colo do útero,pendente
+external cervical os,Óstio externo do colo do útero,pendente
+digestive system,Sistema digestório,pendente
+gastric impression of liver,Impressão gástrica do fígado,pendente
+Suprarenal impression of liver,Impressão suprarrenal do fígado,pendente
+renal impression of liver,Impressão renal do fígado,pendente
+duodenal impression of liver,Impressão duodenal do fígado,pendente
+esophageal impression of liver,Impressão esofágica do fígado,pendente
+porta hepatis,Porta do fígado,pendente
+colic impression of liver,Impressão cólica do fígado,pendente
+capsule of the liver,Cápsula fibrosa do fígado,pendente
+bare area of liver,Área nua do fígado,pendente
+diaphragmatic surface of liver,Face diafragmática do fígado,pendente
+quadrate lobe of liver,Lobo quadrado do fígado,pendente
+caudate lobe of liver,Lobo caudado do fígado,pendente
+coronary ligament of liver,Ligamento coronário do fígado,pendente
+falciform ligament,Ligamento falciforme do fígado,pendente
+triangular ligament of liver,Ligamento triangular do fígado,pendente
+ligamentum venosum,Ligamento venoso,pendente
+round ligament of liver,Ligamento redondo do fígado,pendente
+hepatoduodenal ligament,Ligamento hepatoduodenal,pendente
+tail of pancreas,Cauda do pâncreas,pendente
+body of pancreas,Corpo do pâncreas,pendente
+Pancreas,Pâncreas,pendente
+head of pancreas,Cabeça do pâncreas,pendente
+Neck of pancreas,Colo do pâncreas,pendente
+right hepatic duct,Ducto hepático direito,pendente
+left hepatic duct,Ducto hepático esquerdo,pendente
+common hepatic duct,Ducto hepático comum,pendente
+hepatopancreatic ampulla,Ampola hepatopancreática,pendente
+dorsal pancreatic duct,Ducto pancreático acessório,pendente
+common bile duct,Ducto colédoco,pendente
+Ventral pancreatic duct,Ducto pancreático principal,pendente
+cystic duct,Ducto cístico,pendente
+superior part of duodenum,Parte superior do duodeno,pendente
+duodenal ampulla,Ampola duodenal,pendente
+descending part of duodenum,Parte descendente do duodeno,pendente
+Sphincter of hepatopancreatic ampulla,Músculo esfíncter da ampola hepatopancreática,pendente
+ascending part of duodenum,Parte ascendente do duodeno,pendente
+horizontal part of duodenum,Parte horizontal do duodeno,pendente
+jejunum,Jejuno,pendente
+ileum,Íleo,pendente
+distal part of ileum,Parte distal do íleo,pendente
+left palatine tonsil,Tonsila palatina esquerda,pendente
+right palatine tonsil,Tonsila palatina direita,pendente
+hepatic flexure of colon,Flexura direita do colo,pendente
+transverse colon,Colo transverso,pendente
+ascending colon,Colo ascendente,pendente
+vermiform appendix,Apêndice vermiforme,pendente
+descending colon,Colo descendente,pendente
+ileocecal valve,Valva ileocecal,pendente
+caecum,Ceco,pendente
+rectum,Reto,pendente
+sigmoid colon,Colo sigmoide,pendente
+splenic flexure of colon,Flexura esquerda do colo,pendente
+gallbladder,Vesícula biliar,pendente
+kidney capsule,Cápsula fibrosa do rim,pendente
+hilum of kidney,Hilo renal,pendente
+renal papilla,Papila renal,pendente
+renal pyramid,Pirâmide renal,pendente
+renal column,Coluna renal,pendente
+outer cortex of kidney,Córtex renal externo,pendente
+minor calyx,Cálice renal menor,pendente
+major calyx,Cálice renal maior,pendente
+renal pelvis,Pelve renal,pendente
+right ureter,Ureter direito,pendente
+left ureter,Ureter esquerdo,pendente
+fundus of urinary bladder,Fundo da bexiga urinária,pendente
+urinary bladder neck smooth muscle,Músculo liso do colo da bexiga urinária,pendente
+trigone of urinary bladder,Trígono da bexiga urinária,pendente
+Right ureteral orifice,Óstio do ureter direito,pendente
+Left ureteral orifice,Óstio do ureter esquerdo,pendente
+interventricular septum,Septo interventricular,pendente
+left cardiac atrium,Átrio esquerdo do coração,pendente
+heart left ventricle,Ventrículo esquerdo do coração,pendente
+right cardiac atrium,Átrio direito do coração,pendente
+heart right ventricle,Ventrículo direito do coração,pendente
+Anterior papillary muscle of left ventricle,Músculo papilar anterior do ventrículo esquerdo,pendente
+Anterolateral head of lateral papillary muscle of left ventricle,Cabeça anterolateral do músculo papilar lateral do ventrículo esquerdo,pendente
+Septal papillary muscle of right ventricle,Músculo papilar septal do ventrículo direito,pendente
+Posterior papillary muscle of right ventricle,Músculo papilar posterior do ventrículo direito,pendente
+Posteromedial head of posterior papillary muscle of left ventricle,Cabeça posteromedial do músculo papilar posterior do ventrículo esquerdo,pendente
+aortic valve,Valva da aorta,pendente
+pulmonary valve,Valva do tronco pulmonar,pendente
+mitral valve,Valva atrioventricular esquerda (mitral),pendente
+tricuspid valve,Valva atrioventricular direita (tricúspide),pendente
+Left uterine artery,Artéria uterina esquerda,pendente
+Right uterine artery,Artéria uterina direita,pendente
+Left uterine vein,Veia uterina esquerda,pendente
+Right uterine vein,Veia uterina direita,pendente
+ophthalmic vein,Veia oftálmica,pendente
+Left superior ophthalmic vein,Veia oftálmica superior esquerda,pendente
+Left inferior ophthalmic vein,Veia oftálmica inferior esquerda,pendente
+Left central retinal vein,Veia central da retina esquerda,pendente
+Right superior ophthalmic vein,Veia oftálmica superior direita,pendente
+Right inferior ophthalmic vein,Veia oftálmica inferior direita,pendente
+Right central retinal vein,Veia central da retina direita,pendente
+Left long posterior ciliary artery,Artéria ciliar posterior longa esquerda,pendente
+ophthalmic artery,Artéria oftálmica,pendente
+Left central retinal artery,Artéria central da retina esquerda,pendente
+Right long posterior ciliary artery,Artéria ciliar posterior longa direita,pendente
+Right central retinal artery,Artéria central da retina direita,pendente
+right renal artery,Artéria renal direita,pendente
+left renal artery,Artéria renal esquerda,pendente
+left renal vein,Veia renal esquerda,pendente
+right renal vein,Veia renal direita,pendente
+superior mesenteric vein,Veia mesentérica superior,pendente
+superior rectal artery,Artéria retal superior,pendente
+Left common iliac vein,Veia ilíaca comum esquerda,pendente
+Right common iliac vein,Veia ilíaca comum direita,pendente
+Left colic vein,Veia cólica esquerda,pendente
+Right colic vein,Veia cólica direita,pendente
+ileocolic vein,Veia ileocólica,pendente
+middle colic vein,Veia cólica média,pendente
+Inferior rectal vein,Veia retal inferior,pendente
+internal iliac vein,Veia ilíaca interna,pendente
+internal pudendal vein,Veia pudenda interna,pendente
+Left middle rectal vein,Veia retal média esquerda,pendente
+Right middle rectal vein,Veia retal média direita,pendente
+sigmoid vein,Veia sigmóidea,pendente
+median sacral vein,Veia sacral mediana,pendente
+Inferior pancreaticoduodenal vein,Veia pancreaticoduodenal inferior,pendente
+superior mesenteric artery,Artéria mesentérica superior,pendente
+Left colic artery,Artéria cólica esquerda,pendente
+Right colic artery,Artéria cólica direita,pendente
+ileocolic artery,Artéria ileocólica,pendente
+middle colic artery,Artéria cólica média,pendente
+Celiac trunk,Tronco celíaco,pendente
+inferior mesenteric artery,Artéria mesentérica inferior,pendente
+marginal colic artery,Artéria marginal do colo,pendente
+sigmoid artery,Artéria sigmóidea,pendente
+splenic artery,Artéria esplênica,pendente
+splenic vein,Veia esplênica,pendente
+cystic artery,Artéria cística,pendente
+cystic vein,Veia cística,pendente
+Hepatic artery proper,Artéria hepática própria,pendente
+Right hepatic artery,Artéria hepática direita,pendente
+common hepatic artery,Artéria hepática comum,pendente
+Left hepatic artery,Artéria hepática esquerda,pendente
+hepatic portal vein,Veia porta do fígado,pendente
+Middle hepatic vein,Veia hepática média,pendente
+Left hepatic vein,Veia hepática esquerda,pendente
+Right hepatic vein,Veia hepática direita,pendente
+left superior pulmonary vein,Veia pulmonar superior esquerda,pendente
+left inferior pulmonary vein,Veia pulmonar inferior esquerda,pendente
+right superior pulmonary vein,Veia pulmonar superior direita,pendente
+right inferior pulmonary vein,Veia pulmonar inferior direita,pendente
+coronary sinus,Seio coronário,pendente
+great vein of heart,Veia cardíaca magna,pendente
+middle cardiac vein,Veia cardíaca média,pendente
+Oblique vein of left atrium,Veia oblíqua do átrio esquerdo,pendente
+left marginal vein,Veia marginal esquerda,pendente
+Posterior vein of left ventricle,Veia posterior do ventrículo esquerdo,pendente
+Anterior cardiac vein,Veia cardíaca anterior,pendente
+small cardiac vein,Veia cardíaca parva,pendente
+superior vena cava,Veia cava superior,pendente
+inferior vena cava,Veia cava inferior,pendente
+Anterior descending branch of left pulmonary artery,Ramo descendente anterior da artéria pulmonar esquerda,pendente
+circumflex branch of left coronary artery,Ramo circunflexo da artéria coronária esquerda,pendente
+Diagonal branch of anterior descending branch of left coronary artery,Ramo diagonal do ramo descendente anterior da artéria coronária esquerda,pendente
+left coronary artery,Artéria coronária esquerda,pendente
+Left marginal artery,Artéria marginal esquerda,pendente
+left posterior descending branch of circumflex branch of left coronary artery,Ramo descendente posterior esquerdo do ramo circunflexo da artéria coronária esquerda,pendente
+Posterior ventricular branch of circumflex coronary artery,Ramo ventricular posterior do ramo circunflexo da artéria coronária esquerda,pendente
+right coronary artery,Artéria coronária direita,pendente
+marginal branch of right coronary artery,Ramo marginal da artéria coronária direita,pendente
+left pulmonary artery,Artéria pulmonar esquerda,pendente
+pulmonary trunk,Tronco pulmonar,pendente
+right pulmonary artery,Artéria pulmonar direita,pendente
+arch of aorta,Arco da aorta,pendente
+ascending aorta,Aorta ascendente,pendente
+descending aorta,Aorta descendente,pendente
+left common carotid artery plus branches,Artéria carótida comum esquerda e ramos,pendente
+left subclavian artery,Artéria subclávia esquerda,pendente
+brachiocephalic artery,Artéria braquiocefálica,pendente
+left lung hilus,Hilo do pulmão esquerdo,pendente
+Superior lingular bronchopulmonary segment,Segmento broncopulmonar lingular superior,pendente
+Left Anterior Bronchopulmonary Segment,Segmento broncopulmonar anterior esquerdo,pendente
+Left apical bronchopulmonary segment,Segmento broncopulmonar apical esquerdo,pendente
+Left posterior bronchopulmonary segment,Segmento broncopulmonar posterior esquerdo,pendente
+Inferior lingular bronchopulmonary segment,Segmento broncopulmonar lingular inferior,pendente
+Left superior bronchopulmonary segment,Segmento broncopulmonar superior esquerdo,pendente
+Left posterior basal bronchopulmonary segment,Segmento broncopulmonar basal posterior esquerdo,pendente
+left anterior basal bronchopulmonary segment,Segmento broncopulmonar basal anterior esquerdo,pendente
+left Lateral Basal Bronchopulmonary Segment,Segmento broncopulmonar basal lateral esquerdo,pendente
+Left Medial Basal Bronchopulmonary Segment,Segmento broncopulmonar basal medial esquerdo,pendente
+right lung hilus,Hilo do pulmão direito,pendente
+Right Medial Basal Bronchopulmonary Segment,Segmento broncopulmonar basal medial direito,pendente
+Right Posterior Basal Bronchopulmonary Segment,Segmento broncopulmonar basal posterior direito,pendente
+Right anterior basal bronchopulmonary segment,Segmento broncopulmonar basal anterior direito,pendente
+Right Lateral Basal Bronchopulmonary Segment,Segmento broncopulmonar basal lateral direito,pendente
+Right Superior Bronchopulmonary Segment,Segmento broncopulmonar superior direito,pendente
+Right Medial Bronchopulmonary Segment,Segmento broncopulmonar medial direito,pendente
+Right Lateral Bronchopulmonary Segment,Segmento broncopulmonar lateral direito,pendente
+Right Anterior Bronchopulmonary Segment,Segmento broncopulmonar anterior direito,pendente
+Right Apical Bronchopulmonary Segment,Segmento broncopulmonar apical direito,pendente
+Right Posterior Bronchopulmonary Segment,Segmento broncopulmonar posterior direito,pendente
+Right arytenoid cartilage,Cartilagem aritenóidea direita,pendente
+Left arytenoid cartilage,Cartilagem aritenóidea esquerda,pendente
+epiglottic cartilage,Cartilagem epiglótica,pendente
+cricoid cartilage,Cartilagem cricóidea,pendente
+thyroid cartilage,Cartilagem tireóidea,pendente
+Left corniculate cartilage,Cartilagem corniculada esquerda,pendente
+Right corniculate cartilage,Cartilagem corniculada direita,pendente
+trachea,Traqueia,pendente
+trachea cartilage,Cartilagem traqueal,pendente
+carina of trachea,Carina da traqueia,pendente
+Right Main Bronchus,Brônquio principal direito,pendente
+Cartilage of right main bronchus,Cartilagem do brônquio principal direito,pendente
+Left Main Bronchus,Brônquio principal esquerdo,pendente
+Cartilage of left main bronchus,Cartilagem do brônquio principal esquerdo,pendente
+Cartilage of lobar bronchus,Cartilagem do brônquio lobar,pendente
+Cartilage of segmental bronchus,Cartilagem do brônquio segmentar,pendente
+lobar bronchus of left lung upper lobe,Brônquio lobar superior esquerdo,pendente
+lobar bronchus of left lung lower lobe,Brônquio lobar inferior esquerdo,pendente
+Left anterior basal segmental bronchus,Brônquio segmentar basal anterior esquerdo,pendente
+Superior lingular bronchus,Brônquio lingular superior,pendente
+Left apical segmental bronchus,Brônquio segmentar apical esquerdo,pendente
+Left posterior basal segmental bronchus,Brônquio segmentar basal posterior esquerdo,pendente
+Left medial basal segmental bronchus,Brônquio segmentar basal medial esquerdo,pendente
+Left superior segmental bronchus,Brônquio segmentar superior esquerdo,pendente
+Left anterior segmental bronchus,Brônquio segmentar anterior esquerdo,pendente
+Left posterior segmental bronchus,Brônquio segmentar posterior esquerdo,pendente
+Left lateral basal segmental bronchus,Brônquio segmentar basal lateral esquerdo,pendente
+Inferior lingular bronchus,Brônquio lingular inferior,pendente
+Middle lobar bronchus,Brônquio lobar médio,pendente
+Right superior lobar bronchus,Brônquio lobar superior direito,pendente
+Right inferior lobar bronchus,Brônquio lobar inferior direito,pendente
+Right anterior segmental bronchus,Brônquio segmentar anterior direito,pendente
+Right lateral basal segmental bronchus,Brônquio segmentar basal lateral direito,pendente
+Lateral segmental bronchus,Brônquio segmentar lateral,pendente
+Medial segmental bronchus,Brônquio segmentar medial,pendente
+Right medial basal segmental bronchus,Brônquio segmentar basal medial direito,pendente
+Right posterior basal segmental bronchus,Brônquio segmentar basal posterior direito,pendente
+Right posterior segmental bronchus,Brônquio segmentar posterior direito,pendente
+Right superior segmental bronchus,Brônquio segmentar superior direito,pendente
+Right apical segmental bronchus,Brônquio segmentar apical direito,pendente
+Right anterior basal segmental bronchus,Brônquio segmentar basal anterior direito,pendente
+gastric surface of spleen,Face gástrica do baço,pendente
+diaphragmatic surface of spleen,Face diafragmática do baço,pendente
+colic surface of spleen,Face cólica do baço,pendente
+hilum of spleen,Hilo do baço,pendente
+renal surface of spleen,Face renal do baço,pendente
+left thymus lobe,Lobo esquerdo do timo,pendente
+right thymus lobe,Lobo direito do timo,pendente
+afferent lymphatic vessel,Vaso linfático aferente,pendente
+capsule of lymph node,Cápsula do linfonodo,pendente
+lymph node follicle,Folículo linfoide do linfonodo,pendente
+efferent lymphatic vessel,Vaso linfático eferente,pendente
+medulla of lymph node,Medula do linfonodo,pendente
+lymph node T cell domain,Área de células T do linfonodo,pendente
+Lymph vasculature,Sistema vascular linfático,pendente
+skeletal system,Sistema esquelético,pendente
+fused sacrum,Sacro,pendente
+coccyx,Cóccix,pendente
+compact bone tissue,Tecido ósseo compacto,pendente
+trabecular bone tissue,Tecido ósseo trabecular,pendente
+thoracic vertebra 1,Primeira vértebra torácica,pendente
+thoracic vertebra 2,Segunda vértebra torácica,pendente
+thoracic vertebra 3,Terceira vértebra torácica,pendente
+thoracic vertebra 4,Quarta vértebra torácica,pendente
+thoracic vertebra 5,Quinta vértebra torácica,pendente
+thoracic vertebra 6,Sexta vértebra torácica,pendente
+thoracic vertebra 7,Sétima vértebra torácica,pendente
+thoracic vertebra 8,Oitava vértebra torácica,pendente
+thoracic vertebra 9,Nona vértebra torácica,pendente
+thoracic vertebra 10,Décima vértebra torácica,pendente
+thoracic vertebra 11,Décima primeira vértebra torácica,pendente
+thoracic vertebra 12,Décima segunda vértebra torácica,pendente
+vertebral bone 1,Primeira vértebra cervical,pendente
+vertebral bone 2,Segunda vértebra cervical,pendente
+mammalian cervical vertebra 3,Terceira vértebra cervical,pendente
+mammalian cervical vertebra 4,Quarta vértebra cervical,pendente
+mammalian cervical vertebra 5,Quinta vértebra cervical,pendente
+mammalian cervical vertebra 6,Sexta vértebra cervical,pendente
+mammalian cervical vertebra 7,Sétima vértebra cervical,pendente
+lumbar vertebra 5,Quinta vértebra lombar,pendente
+lumbar vertebra 4,Quarta vértebra lombar,pendente
+lumbar vertebra 3,Terceira vértebra lombar,pendente
+lumbar vertebra 2,Segunda vértebra lombar,pendente
+lumbar vertebra 1,Primeira vértebra lombar,pendente
+Right tibial collateral ligament,Ligamento colateral tibial direito,pendente
+Right anterior cruciate ligament,Ligamento cruzado anterior direito,pendente
+Right posterior cruciate ligament,Ligamento cruzado posterior direito,pendente
+anterolateral ligament of knee,Ligamento anterolateral do joelho,pendente
+Right fibular collateral ligament,Ligamento colateral fibular direito,pendente
+Right patellar ligament,Ligamento da patela direito,pendente
+Articular disk of knee joint,Disco articular da articulação do joelho,pendente
+Right femur,Fêmur direito,pendente
+Patellar surface of right femur,Face patelar do fêmur direito,pendente
+Articular cartilage of distal epiphysis of right femur,Cartilagem articular da epífise distal do fêmur direito,pendente
+Medial condyle of right femur,Côndilo medial do fêmur direito,pendente
+Lateral condyle of right femur,Côndilo lateral do fêmur direito,pendente
+distal-most point of medial condyle of femur,Ponto mais distal do côndilo medial do fêmur,pendente
+Intercondylar fossa of right femur,Fossa intercondilar do fêmur direito,pendente
+Right tibia,Tíbia direita,pendente
+Right fibula,Fíbula direita,pendente
+Right patella,Patela direita,pendente
+Left fibular collateral ligament,Ligamento colateral fibular esquerdo,pendente
+Left patellar ligament,Ligamento da patela esquerdo,pendente
+Left tibial collateral ligament,Ligamento colateral tibial esquerdo,pendente
+Left anterior cruciate ligament,Ligamento cruzado anterior esquerdo,pendente
+Left posterior cruciate ligament,Ligamento cruzado posterior esquerdo,pendente
+Left femur,Fêmur esquerdo,pendente
+Intercondylar fossa of left femur,Fossa intercondilar do fêmur esquerdo,pendente
+Patellar surface of left femur,Face patelar do fêmur esquerdo,pendente
+Articular cartilage of distal epiphysis of left femur,Cartilagem articular da epífise distal do fêmur esquerdo,pendente
+Medial condyle of left femur,Côndilo medial do fêmur esquerdo,pendente
+Lateral condyle of left femur,Côndilo lateral do fêmur esquerdo,pendente
+Left patella,Patela esquerda,pendente
+Left tibia,Tíbia esquerda,pendente
+Left fibula,Fíbula esquerda,pendente

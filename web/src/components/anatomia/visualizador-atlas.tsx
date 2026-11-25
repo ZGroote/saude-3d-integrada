@@ -97,7 +97,8 @@ function Corpo({ atlas }: { atlas: Atlas }) {
 
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]" data-atlas={atlas}>
-      <Card className="h-[60svh] min-h-96 overflow-hidden lg:h-[75svh]">
+      {/* o motor sobrepõe a atribuição ao 3D; aqui ela vai para baixo do canvas, para não cobrir os pés */}
+      <Card className="h-[60svh] min-h-96 overflow-hidden lg:h-[75svh] [&_[data-motor]]:flex [&_[data-motor]]:flex-col [&_[data-motor]>small]:static! [&_[data-motor]>small]:shrink-0 [&_[data-motor]>small]:px-2 [&_[data-motor]>small]:py-1">
         <MotorAnatomico
           atlas={atlas}
           versao={versao}
