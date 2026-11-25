@@ -1,6 +1,7 @@
 # Saúde 3D Integrada — Especificação técnica do MVP
 
 > Conceito: https://claude.ai/artifact/1JB9C9ndfDyVUbd63bemM4 · Versão 0.2 · 2026-11-25
+> **SPEC congelada na 0.2** — mudanças daqui em diante entram como critério de aceite da etapa, não como seção nova.
 > 0.2: atlas BodyParts3D + HRA, IDs FMA, meshopt, âncora versionada, paciente em várias unidades, auditoria desde a base.
 
 ## 1. Objetivo
@@ -82,11 +83,13 @@ O motor é um módulo independente (`packages/motor-anatomico`) que **não sabe 
 ```ts
 type Ancora = {
   atlas: string; atlas_versao: string;            // ex.: 'bp3d-m', '4.0-1'
-  estrutura: string | null;                        // ID de ontologia; null = superfície livre
+  sistema: string;                                 // do indice.json
+  estrutura: string | null;                        // ID de ontologia; null = malha sem ID (17 no bp3d-m)
   malha: string;                                   // nó clicado
-  posicao_local: [number, number, number];         // no espaço da malha (fonte da verdade)
-  normal_local: [number, number, number];
-  triangulo: number; baricentricas: [number, number, number]; // válidos só nesta atlas_versao
+  // geometria: null numa âncora só estrutural (ex.: importação FHIR, sem clique)
+  posicao_local: [number, number, number] | null;  // no espaço da malha (fonte da verdade)
+  normal_local: [number, number, number] | null;
+  triangulo: number | null; baricentricas: [number, number, number] | null; // válidos só nesta atlas_versao
 };
 type Marcador = { id: string; ancora: Ancora; cor: string; tamanho: number };
 
@@ -98,6 +101,10 @@ type Marcador = { id: string; ancora: Ancora; cor: string; tamanho: number };
 ```
 
 Ao abrir uma âncora gravada noutra `atlas_versao`, o motor reprojeta `posicao_local` na malha da versão atual (ponto mais próximo) e **nunca reescreve** a âncora original.
+
+**Âncora só estrutural** (sem `posicao_local`): o motor desenha o marcador no centro da caixa da malha indicada. Quando uma estrutura tem várias malhas (559 no `bp3d-m`), quem monta a âncora escolhe a malha de mais triângulos — regra determinística, igual no servidor e no cliente.
+
+**Lado:** `lateralidade` do índice (`left`/`right`/`null`) vira `achados.lado` (`esquerdo`/`direito`/`nao_se_aplica`).
 
 ## 6. Modelo de dados
 
@@ -111,8 +118,10 @@ unidades (id, nome, cnes text unique, municipio_ibge text)
 perfis (id → auth.users, nome text, unidade_id → unidades, especialidade text,
         papel enum('profissional','admin'))
 
-pacientes (id, nome text, cns text unique, cpf_hash text unique, sexo, data_nascimento date,
-           municipio_ibge text)
+pacientes (id, nome text, cns text unique, cpf_hash text unique, sexo enum('feminino','masculino','indeterminado'),
+           data_nascimento date, municipio_ibge text)
+-- cpf_hash = HMAC-SHA256 com segredo do servidor (CPF tem poucos dígitos: hash puro é reversível)
+-- atlas do prontuário: feminino → hra-f, masculino → bp3d-m, indeterminado → o profissional escolhe
 
 -- o paciente não pertence a uma unidade: é atendido por várias (UBS, especialista, maternidade)
 vinculos (id, paciente_id → pacientes, unidade_id → unidades, motivo text not null,
@@ -123,16 +132,19 @@ vinculos (id, paciente_id → pacientes, unidade_id → unidades, motivo text no
 -- achado = um ponto no corpo, codificado
 achados (
   id uuid pk, paciente_id → pacientes, autor_id → perfis, unidade_id → unidades, especialidade text,
-  sistema text,                                    -- sistema do atlas; null = sem local no corpo
-  estrutura text,                                  -- ID de ontologia (ex.: 'FMA24475'); null = superfície ou sem local
-  ancora jsonb,                                    -- tipo Ancora (§5.4); null = sem local no corpo
-  cid10 text,                                      -- ex.: 'I50.0'
-  categoria text, lado text, status text,          -- listas fixas no código
+  ancora jsonb,                                    -- tipo Ancora (§5.4); null = sem local no corpo (fonte da verdade)
+  estrutura text generated always as (ancora->>'estrutura') stored,  -- só para busca e índice
+  cid10 text references cid10,                     -- ex.: 'I50.0'
+  categoria enum('doenca','sintoma','lesao','cirurgia','dispositivo','alergia'),
+  lado enum('esquerdo','direito','bilateral','nao_se_aplica'),
+  status enum('ativo','resolvido','suspeito'),
+  nivel_sigilo enum('normal','restrito') not null default 'normal',
   inicio date, observacao text,
+  substitui_id uuid references achados,            -- correção = novo achado que aponta o anterior
   origem enum('manual','fhir') default 'manual', fhir_id text,
   criado_em timestamptz default now()
 )
--- achados não são editados nem apagados: correção = novo achado que substitui (substitui_id → achados)
+-- achados não são editados nem apagados
 
 -- gestação e nascimento: o elo mãe–filho
 gestacoes (id, mae_id → pacientes, dum date, dpp date, inicio_pre_natal date,
@@ -142,17 +154,21 @@ nascimentos (id, gestacao_id → gestacoes, crianca_id → pacientes unique,
              data date, peso_g int, idade_gestacional_sem int, apgar_5 int)
 
 -- rastreio de importações
-importacoes_fhir (id, autor_id, arquivo text, recursos int, erros jsonb, criado_em)
+importacoes_fhir (id, autor_id, unidade_id → unidades, arquivo text, recursos int, erros jsonb, criado_em)
+-- erros pode conter dados pessoais: RLS só para admin da unidade
 
 -- auditoria: toda leitura e alteração de prontuário
-auditoria (id, autor_id → perfis, paciente_id → pacientes, acao text, criado_em timestamptz)
+auditoria (id, autor_id → perfis, unidade_id → unidades not null, paciente_id → pacientes, acao text,
+           criado_em timestamptz)   -- unidade do autor no momento do evento; só insert por função
 ```
 
 **Tabela de referência:** `cid10 (codigo pk, descricao)` carregada da tabela pública do DATASUS.
 
 ### RLS
 
-- `profissional` lê e escreve `achados`, `gestacoes` e `nascimentos` só de pacientes com **vínculo ativo** (`ate is null or ate >= hoje`) com a sua unidade.
+- **Vínculo ativo** = `desde <= hoje and (ate is null or ate >= hoje)`, em todo lugar.
+- Ninguém lê nem escreve `pacientes`, `vinculos`, `achados`, `gestacoes` ou `nascimentos` direto: só pelas funções do contrato abaixo, que conferem o vínculo e auditam. RLS fica ligada mesmo assim (defesa em profundidade).
+- `perfis`: cada um lê o próprio e os da sua unidade; só o admin altera, e só na própria unidade; ninguém muda o próprio papel. `unidades`: leitura da própria; `cid10`: leitura para todo autenticado.
 - Qualquer profissional com vínculo ativo vê **todos** os achados do paciente (é o valor multidisciplinar), mas só cria achados em nome próprio e da sua unidade.
 - Toda abertura de prontuário grava em `auditoria` (no servidor, não no cliente), inclusive tentativas negadas. Nasce na Etapa 1, junto com o banco.
 - **Sigilo (Etapa 3):** `achados.nivel_sigilo enum('normal','restrito')`, restrito automático por faixa de CID (HIV/Lei 14.289/2022, violência, saúde mental, aborto — lista revisada por médico). Achado restrito só aparece para a unidade autora; para as outras não vira marcador nem mostra CID. Acesso de emergência (*break-glass*) com justificativa obrigatória, auditado e revisado depois.
@@ -165,9 +181,12 @@ O app só fala com o banco por estas portas; tudo o mais é RLS.
 | --- | --- |
 | `minha_unidade() returns uuid` | Unidade do `perfis` do `auth.uid()` |
 | `eh_admin() returns boolean` | Papel do usuário logado |
-| `select … from pacientes` | Só devolve pacientes com vínculo ativo com `minha_unidade()` |
+| `buscar_pacientes(p_texto text) returns table(id, nome, sexo, data_nascimento, cns_final)` | Resumo para lista e busca (nome ou CNS); só vínculos ativos; sem auditoria |
+| `cadastrar_paciente(...)`, `vincular_paciente(...)`, `encerrar_vinculo(...)` | Só admin, só na própria unidade; CNS existente não duplica; tudo auditado |
 | `abrir_prontuario(p_paciente uuid) returns pacientes` | Confere o vínculo e grava `auditoria(acao='abrir_prontuario')`; devolve o paciente. Sem vínculo grava `auditoria(acao='acesso_negado')` e devolve `null` (sem `raise`, para a tentativa não ser desfeita) |
-| `select … from auditoria` | Só `admin`, só da própria unidade |
+| `select … from auditoria` | Só `admin`, só `unidade_id = minha_unidade()` |
+
+Etapas seguintes acrescentam funções no mesmo padrão (`registrar_achado`, `historico_gestacional_crianca`…). A da criança devolve **só** o recorte gestacional relevante (condições da gestação, idade gestacional, peso, Apgar), nunca o prontuário da mãe.
 
 Leitura do prontuário pelo app passa **sempre** por `abrir_prontuario`; a página nunca lê o paciente direto.
 
@@ -259,9 +278,15 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 Cada etapa termina com um teste que passa.
 
 0. **Consolidar o atlas:** SPEC 0.2, `LICENCAS.md`, pacote de atlas (§5.3) para `bp3d-m`, PR #1 aprovado. Teste: `atlas/bp3d-m/<versao>/` abre no visualizador de referência.
-1. **Fundação:** Next.js + Supabase, login, perfis, unidades, pacientes, vínculos, RLS e auditoria. Teste: profissional da unidade A não lê paciente sem vínculo com A; abrir prontuário grava auditoria.
+1. **Fundação:** Next.js + Supabase, login, perfis, unidades, pacientes, vínculos, RLS e auditoria. Testes automatizados:
+   - profissional da unidade A não acessa paciente sem vínculo com A (nem pela lista, nem por `abrir_prontuario`, nem por `select` direto);
+   - ninguém lê ou altera `pacientes`/`vinculos` direto, nem o admin; ninguém apaga vínculo;
+   - profissional não cria vínculo nem muda o próprio papel; admin não mexe em vínculo de outra unidade;
+   - vínculo futuro, encerrado ou expirado não dá acesso;
+   - acesso autorizado e acesso negado gravam auditoria persistente com `unidade_id`; auditoria não aceita update/delete;
+   - páginas do prontuário sem cache compartilhado; sessão encerrada não acessa prontuário.
 2. **Motor anatômico:** `packages/motor-anatomico` em React Three Fiber com o contrato §5.4, atlas `bp3d-m` e `hra-f`. Teste: clicar no fêmur esquerdo devolve `estrutura='FMA24475'` e uma âncora com `posicao_local`.
-3. **Primeiro prontuário:** criar, gravar, reabrir e ver achados com CID-10. Teste: achado criado reaparece no mesmo ponto após recarregar.
+3. **Primeiro prontuário:** criar, gravar, reabrir e ver achados com CID-10. Teste: achado criado reaparece no mesmo ponto após recarregar; achado restrito não vaza por busca, marcador ou contagem para outra unidade.
 4. **Multidisciplinaridade:** especialidades, filtros, histórico, linha do tempo. Teste: demonstração da §14 e meta de 3 s com 200 achados.
 5. **Gestação e nascimento:** gestação, condições, camada gestacional, nascimento, vínculo mãe–filho. Teste: registrar nascimento cria a criança ligada à mãe.
 6. **Interoperabilidade:** importação FHIR. Teste: Bundle sintético com 50 pacientes importa sem erro e sem duplicar.
