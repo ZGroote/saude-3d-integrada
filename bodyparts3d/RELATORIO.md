@@ -14,22 +14,27 @@ Atribuição exigida: "BodyParts3D, © The Database Center for Life Science lice
 | Sistema | Estruturas | Triângulos |
 |---|---:|---:|
 | arterial | 633 | 975,238 |
-| muscular | 404 | 2,318,576 |
-| venoso | 394 | 1,074,524 |
-| esqueletico | 252 | 684,136 |
+| muscular | 410 | 2,362,772 |
+| venoso | 385 | 942,206 |
+| esqueletico | 244 | 605,596 |
 | nervoso | 141 | 499,150 |
-| digestorio | 128 | 202,214 |
+| digestorio | 137 | 334,532 |
 | respiratorio | 104 | 78,740 |
 | articular | 69 | 144,790 |
 | sensorial | 45 | 316,334 |
 | cardiaco | 28 | 108,206 |
 | urogenital | 18 | 17,128 |
 | endocrino | 11 | 25,896 |
+| fascia | 4 | 36,852 |
 | tegumentar | 4 | 232,260 |
-| fascia | 2 | 2,508 |
 | linfatico | 1 | 1,330 |
 
 Classificação automática (árvore FMA + palavras-chave). Ver `catalogo_bp3d.csv`; os casos ambíguos foram revisados em `revisao_outros.csv`.
+
+## Lacunas conhecidas do BodyParts3D
+
+- Carótida: falta o trecho entre a carótida comum (termina a ~1373 mm) e a interna (começa a ~1434 mm), incluindo a bifurcação; não há carótida externa.
+- Um único corpo masculino adulto (2013). Sem anatomia feminina. Nomes em português (`nomes_pt.csv`) ainda sem revisão médica.
 
 ## Encaixe com o caso s1371 (TotalSegmentator)
 

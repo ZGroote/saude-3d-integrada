@@ -202,8 +202,8 @@ FJ1421,FMA43883,Right gracilis,muscular,right,2086,3172
 FJ1421M,FMA43884,Left gracilis,muscular,left,2085,3172
 FJ1422,FMA22322,Right iliacus,muscular,right,2447,2862
 FJ1422M,FMA22323,Left iliacus,muscular,left,2452,2862
-FJ1423,FMA58776,Right iliotibial tract,esqueletico,right,9425,17172
-FJ1423M,FMA58777,Left iliotibial tract,esqueletico,left,9425,17172
+FJ1423,FMA58776,Right iliotibial tract,fascia,right,9425,17172
+FJ1423M,FMA58777,Left iliotibial tract,fascia,left,9425,17172
 FJ1424,FMA44249,Right long plantar ligament,articular,right,2445,2722
 FJ1424M,FMA44250,Left long plantar ligament,articular,left,2450,2722
 FJ1425,FMA22326,Right obturator externus,muscular,right,715,784
@@ -389,10 +389,10 @@ FJ1517,FMA38507,Right extensor carpi ulnaris,esqueletico,right,1114,1208
 FJ1517M,FMA38508,Left extensor carpi ulnaris,esqueletico,left,1116,1208
 FJ1518,FMA38619,Ulnar head of right flexor carpi ulnaris,esqueletico,right,1715,1538
 FJ1518M,FMA38620,Ulnar head of left flexor carpi ulnaris,esqueletico,left,1717,1538
-FJ1520,FMA33581,Ascending part of right trapezius,esqueletico,right,7533,10530
-FJ1520M,FMA33583,Ascending part of left trapezius,esqueletico,left,7507,10530
-FJ1521,FMA33586,Descending part of right trapezius,esqueletico,right,5023,7108
-FJ1521M,FMA33587,Descending part of left trapezius,esqueletico,left,4999,7108
+FJ1520,FMA33581,Ascending part of right trapezius,muscular,right,7533,10530
+FJ1520M,FMA33583,Ascending part of left trapezius,muscular,left,7507,10530
+FJ1521,FMA33586,Descending part of right trapezius,muscular,right,5023,7108
+FJ1521M,FMA33587,Descending part of left trapezius,muscular,left,4999,7108
 FJ1522,FMA23089,Right lumbar rotator,muscular,right,5188,4742
 FJ1522M,FMA23090,Left lumbar rotator,muscular,left,5187,4742
 FJ1524,FMA81752,Right cervical rotator,muscular,right,4553,3534
@@ -449,8 +449,8 @@ FJ1552,,Set of interspinales cervicis,muscular,,1148,1210
 FJ1552M,FMA71309,Set of interspinales cervicis,muscular,,1160,1210
 FJ1553,,Set of posterior cervical intertransversarii,muscular,,1074,1090
 FJ1553M,FMA71443,Set of posterior cervical intertransversarii,muscular,,1071,1090
-FJ1554,FMA33584,Transverse part of right trapezius,esqueletico,right,3535,4460
-FJ1554M,FMA33585,Transverse part of left trapezius,esqueletico,left,3535,4460
+FJ1554,FMA33584,Transverse part of right trapezius,muscular,right,3535,4460
+FJ1554M,FMA33585,Transverse part of left trapezius,muscular,left,3535,4460
 FJ1555,FMA46293,Left digastric,muscular,left,408,650
 FJ1556,FMA46292,Right digastric,muscular,right,457,680
 FJ1557,FMA46288,Inferior oblique part of left longus colli,muscular,left,1130,1960
@@ -765,7 +765,7 @@ FJ1843,FMA83966,Tentorium cerebelli,nervoso,,11794,21924
 FJ1844,FMA50542,Basilar artery,arterial,,128,244
 FJ1846,FMA50737,Celiac artery,arterial,,133,238
 FJ1853,FMA50735,Hepatic portal vein,venoso,,1793,3582
-FJ1858,FMA15747,Hepatovenous segment IX,venoso,,5687,9550
+FJ1858,FMA15747,Hepatovenous segment IX,digestorio,,5687,9550
 FJ1867,FMA15793,Tributary of middle hepatic vein,venoso,,613,1222
 FJ1874,FMA71710,Left lobe branch of left hepatic artery,arterial,left,371,484
 FJ1883,FMA71889,Caudate lobe tributary of left hepatic biliary tree,digestorio,left,283,428
@@ -1115,7 +1115,7 @@ FJ2386,FMA70447,Caudate lobe branch of right hepatic artery,arterial,right,214,3
 FJ2394,FMA71708,Right lobe branch of right hepatic artery,arterial,right,1016,1374
 FJ2404,FMA15415,Left portal vein,venoso,left,4965,6706
 FJ2405,FMA15414,Right portal vein,venoso,right,2605,3230
-FJ2409,FMA15745,Hepatovenous segment VII,venoso,,5091,8534
+FJ2409,FMA15745,Hepatovenous segment VII,digestorio,,5091,8534
 FJ2414,FMA14340,Middle hepatic vein,venoso,,1191,2260
 FJ2415,FMA14339,Left hepatic vein,venoso,left,803,1386
 FJ2416,FMA14338,Right hepatic vein,venoso,right,2510,3538
@@ -1515,13 +1515,13 @@ FJ2814,FMA59816,Lip,digestorio,,2240,1340
 FJ2815,FMA54319,Pubic hair,tegumentar,,5523,2960
 FJ2816,FMA13365,Caudate lobe of liver,digestorio,,2526,5020
 FJ2817,FMA7202,Gallbladder,digestorio,,1202,2396
-FJ2818,FMA15739,Hepatovenous segment II,venoso,,7482,14326
-FJ2819,FMA15741,Hepatovenous segment III,venoso,,5487,10326
-FJ2820,FMA15742,Hepatovenous segment IV,venoso,,11418,17942
-FJ2821,FMA15743,Hepatovenous segment V,venoso,,6605,11442
-FJ2822,FMA15744,Hepatovenous segment VI,venoso,,9988,19450
-FJ2823,FMA15746,Hepatovenous segment VIII,venoso,,10230,19156
-FJ2824,FMA15746,Hepatovenous segment VIII,venoso,,11459,21592
+FJ2818,FMA15739,Hepatovenous segment II,digestorio,,7482,14326
+FJ2819,FMA15741,Hepatovenous segment III,digestorio,,5487,10326
+FJ2820,FMA15742,Hepatovenous segment IV,digestorio,,11418,17942
+FJ2821,FMA15743,Hepatovenous segment V,digestorio,,6605,11442
+FJ2822,FMA15744,Hepatovenous segment VI,digestorio,,9988,19450
+FJ2823,FMA15746,Hepatovenous segment VIII,digestorio,,10230,19156
+FJ2824,FMA15746,Hepatovenous segment VIII,digestorio,,11459,21592
 FJ2881,FMA8647,Left posterior basal segmental artery,arterial,left,878,1748
 FJ2882,FMA8646,Left lateral basal segmental artery,arterial,left,66,62
 FJ2883,FMA8645,Left anterior basal segmental artery,arterial,left,1292,2400

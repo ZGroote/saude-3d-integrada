@@ -76,8 +76,11 @@ pacientes (id, nome text, cns text unique, cpf_hash text unique, sexo, data_nasc
 -- achado = um ponto no corpo, codificado
 achados (
   id uuid pk, paciente_id → pacientes, autor_id → perfis, especialidade text,
-  camada text not null, estrutura text,            -- chave do estruturas.json; null = pele livre
-  ancora jsonb not null,                           -- { personagem, camada, malha, triangulo, baricentricas, posicao, normal }
+  camada text not null, estrutura text,            -- ID permanente (ex.: 'FMA24475'); null = pele livre
+  ancora jsonb not null,                           -- { atlas, atlas_versao, malha, posicao_local, normal_local, triangulo, baricentricas }
+  -- A fonte da verdade é estrutura + posicao_local (coordenada no espaço da própria malha).
+  -- triangulo/baricentricas só valem para a atlas_versao gravada: se a malha mudar, o ponto
+  -- é reprojetado a partir de posicao_local na malha nova, e a âncora antiga nunca é sobrescrita.
   cid10 text,                                      -- ex.: 'I50.0'
   categoria text, lado text, status text,          -- listas fixas no código
   inicio date, observacao text,

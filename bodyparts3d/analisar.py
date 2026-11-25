@@ -40,20 +40,20 @@ def ancestrais(c, vistos=None):
 
 # ordem importa: a primeira regra que bate vence. (sistema, raízes FMA, regex no nome)
 REGRAS = [
-    ("muscular", {"FMA5022", "FMA9721"}, r"muscle|tendon|aponeuro|sphincter|diaphragm|rectus|oblique|levator|pectoralis|serratus|rhomboid|piriformis|psoas|obturator internus|anconeus|brachialis|coracobrachialis|subclavius|transversus"),
+    ("muscular", {"FMA5022", "FMA9721"}, r"trapezius|muscle|tendon|aponeuro|sphincter|diaphragm|rectus|oblique|levator|pectoralis|serratus|rhomboid|piriformis|psoas|obturator internus|anconeus|brachialis|coracobrachialis|subclavius|transversus"),
     ("sensorial", set(), r"eyeball|cornea|sclera|choroid|iris|lens|vitreous|lacrimal|nasolacrimal|cochlea|ossicle|tympanic|auricle of|semicircular"),
     ("cardiaco", {"FMA7088"}, r"\bheart|atrium|atrial|ventricle of heart|(left|right) ventricle|valve|papillary|chorda|myocard"),
-    ("venoso", {"FMA50723"}, r"\bvein|vena\b|venous|sinus of dura|coronary sinus"),
+    ("venoso", {"FMA50723"}, r"\bvein|vena\b|\bvenous|sinus of dura|coronary sinus"),
     ("arterial", {"FMA50720", "FMA7161", "FMA228642", "FMA3710"}, r"arter|aorta|pulmonary trunk|arterial"),
     ("nervoso", {"FMA7157", "FMA65132", "FMA5865", "FMA61284", "FMA55676"}, r"nerve|brain|cerebr|gyrus|spinal cord|ganglion|plexus|medulla oblongata|pons|thalamus|hippocamp"),
     ("respiratorio", {"FMA7158"}, r"bronch|lung|trachea|larynx"),
-    ("digestorio", {"FMA7152", "FMA12516"}, r"tooth|stomach|colon|intestin|liver|pancrea|esophag|duoden|jejun|ileum|cecum|rectum|gallbladder|tongue"),
+    ("digestorio", {"FMA7152", "FMA12516"}, r"hepatovenous|tooth|stomach|colon|intestin|liver|pancrea|esophag|duoden|jejun|ileum|cecum|rectum|gallbladder|tongue"),
     ("urogenital", {"FMA7159", "FMA7160"}, r"kidney|ureter|bladder|urethra|prostate|testis|ovary|uterus|penis"),
     ("endocrino", {"FMA9668"}, r"thyroid|adrenal|pituitary|parathyroid|thymus"),
     ("tegumentar", {"FMA74657", "FMA72979", "FMA7163"}, r"\bskin|hair"),
     ("articular", {"FMA55107"}, r"ligament|cartilage|dis[ck]\b|menisc|capsule|labrum|symphysis|retinaculum"),
-    ("esqueletico", {"FMA23881", "FMA5018", "FMA10483"}, r"bone|vertebra|\brib\b|skull|femur|tibia|fibula|humerus|radius|ulna|phalan|metacarp|metatars|carpal|tarsal|patella|sternum|manubrium|xiphoid|sacrum|coccyx|clavicle|scapula|mandible|maxilla|hyoid|calcaneus|talus|atlas|axis|capitate|hamate|lunate|pisiform|scaphoid|trapezi|triquetral|cuboid|cuneiform|navicular"),
-    ("fascia", set(), r"fascia"),
+    ("esqueletico", {"FMA23881", "FMA5018", "FMA10483"}, r"bone|vertebra|\brib\b|skull|femur|\btibia|fibula|humerus|radius|ulna|phalan|metacarp|metatars|carpal|tarsal|patella|sternum|manubrium|xiphoid|sacrum|coccyx|clavicle|scapula|mandible|maxilla|hyoid|calcaneus|talus|atlas|axis|capitate|hamate|lunate|pisiform|scaphoid|trapezium|trapezoid|triquetral|cuboid|cuneiform|navicular"),
+    ("fascia", set(), r"fascia|iliotibial tract"),
 ]
 REGRAS = [(s, r, re.compile(x, re.I)) for s, r, x in REGRAS]
 
@@ -65,6 +65,14 @@ def sistema(conceito, nome):
     for s, raizes, rx in REGRAS:
         if raizes & anc: return s
     return "outros"
+
+
+# autoteste: casos que já classificamos errado uma vez (regex pega pedaço de palavra)
+for _nome, _esperado in [("Descending part of left trapezius", "muscular"), ("Left trapezium", "esqueletico"),
+                         ("Right iliotibial tract", "fascia"), ("Hepatovenous segment II", "digestorio"),
+                         ("Dorsal venous network of left hand", "venoso"), ("Left tibia", "esqueletico"),
+                         ("Right anterior tibial artery", "arterial"), ("Left femur", "esqueletico")]:
+    assert sistema("", _nome) == _esperado, (_nome, sistema("", _nome), _esperado)
 
 
 # ---------- inventário dos OBJ ----------
@@ -173,6 +181,9 @@ r = ["# BodyParts3D — inventário e teste de encaixe", "",
      "## Por sistema", "", "| Sistema | Estruturas | Triângulos |", "|---|---:|---:|"]
 r += [f"| {k} | {v} | {tri[k]:,} |" for k, v in cont.most_common()]
 r += ["", "Classificação automática (árvore FMA + palavras-chave). Ver `catalogo_bp3d.csv`; os casos ambíguos foram revisados em `revisao_outros.csv`.", "",
+      "## Lacunas conhecidas do BodyParts3D", "",
+      "- Carótida: falta o trecho entre a carótida comum (termina a ~1373 mm) e a interna (começa a ~1434 mm), incluindo a bifurcação; não há carótida externa.",
+      "- Um único corpo masculino adulto (2013). Sem anatomia feminina. Nomes em português (`nomes_pt.csv`) ainda sem revisão médica.", "",
       "## Encaixe com o caso s1371 (TotalSegmentator)", "",
       f"Ajuste de similaridade (escala + rotação + translação) sobre os centros de {len(pares)} estruturas comuns.", "",
       f"- Escala BP3D→s1371: **{s:.3f}**",
