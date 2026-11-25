@@ -115,8 +115,10 @@ pacientes (id, nome text, cns text unique, cpf_hash text unique, sexo, data_nasc
            municipio_ibge text)
 
 -- o paciente não pertence a uma unidade: é atendido por várias (UBS, especialista, maternidade)
-vinculos (id, paciente_id → pacientes, unidade_id → unidades, motivo text,
+vinculos (id, paciente_id → pacientes, unidade_id → unidades, motivo text not null,
+          origem enum('atendimento','encaminhamento','importacao') not null, criado_por → perfis not null,
           desde date not null, ate date, unique (paciente_id, unidade_id, desde))
+-- só o admin da unidade cria ou encerra vínculo da própria unidade; profissional nunca se autovincula
 
 -- achado = um ponto no corpo, codificado
 achados (
@@ -152,7 +154,8 @@ auditoria (id, autor_id → perfis, paciente_id → pacientes, acao text, criado
 
 - `profissional` lê e escreve `achados`, `gestacoes` e `nascimentos` só de pacientes com **vínculo ativo** (`ate is null or ate >= hoje`) com a sua unidade.
 - Qualquer profissional com vínculo ativo vê **todos** os achados do paciente (é o valor multidisciplinar), mas só cria achados em nome próprio e da sua unidade.
-- Toda abertura de prontuário grava em `auditoria` (no servidor, não no cliente). Nasce na Etapa 1, junto com o banco.
+- Toda abertura de prontuário grava em `auditoria` (no servidor, não no cliente), inclusive tentativas negadas. Nasce na Etapa 1, junto com o banco.
+- **Sigilo (Etapa 3):** `achados.nivel_sigilo enum('normal','restrito')`, restrito automático por faixa de CID (HIV/Lei 14.289/2022, violência, saúde mental, aborto — lista revisada por médico). Achado restrito só aparece para a unidade autora; para as outras não vira marcador nem mostra CID. Acesso de emergência (*break-glass*) com justificativa obrigatória, auditado e revisado depois.
 
 ### Contrato do banco para o app (Etapa 1)
 
@@ -163,10 +166,12 @@ O app só fala com o banco por estas portas; tudo o mais é RLS.
 | `minha_unidade() returns uuid` | Unidade do `perfis` do `auth.uid()` |
 | `eh_admin() returns boolean` | Papel do usuário logado |
 | `select … from pacientes` | Só devolve pacientes com vínculo ativo com `minha_unidade()` |
-| `abrir_prontuario(p_paciente uuid) returns pacientes` | Confere o vínculo, grava `auditoria(acao='abrir_prontuario')` e devolve o paciente; sem vínculo → erro `42501` |
+| `abrir_prontuario(p_paciente uuid) returns pacientes` | Confere o vínculo e grava `auditoria(acao='abrir_prontuario')`; devolve o paciente. Sem vínculo grava `auditoria(acao='acesso_negado')` e devolve `null` (sem `raise`, para a tentativa não ser desfeita) |
 | `select … from auditoria` | Só `admin`, só da própria unidade |
 
 Leitura do prontuário pelo app passa **sempre** por `abrir_prontuario`; a página nunca lê o paciente direto.
+
+**Endurecimento obrigatório:** funções `security definer` com `search_path = ''` e nomes qualificados, dono sem `BYPASSRLS`; `revoke execute … from public, anon` e `grant` só a `authenticated`; auditoria só aceita `insert` pelas funções (append-only); páginas de prontuário sem cache compartilhado (`dynamic`, `no-store`); `service_role` nunca no app.
 
 ### Organização do repositório
 
@@ -243,6 +248,8 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 
 - [x] ~~CC BY-SA dos modelos anatômicos~~: o BodyParts3D é CC BY 4.0 desde 27/02/2025 (só exige atribuição). Z-Anatomy (CC BY-SA) não é usado.
 - [x] ~~Licença do HRA~~: united female v1.10 é CC BY 4.0, com crédito à NLM (ver `LICENCAS.md`).
+- [ ] **Homologação antes de dado real:** Supabase de homologação com dados sintéticos, testes adversariais (JWT, PostgREST, RPC, Storage), RIPD e aval do encarregado de dados do município. O teste em PGlite cobre só SQL/RLS.
+- [ ] **Lista de CIDs sensíveis** para o sigilo automático, revisada por médico.
 - [ ] **Validação médica** dos atlas e dos 1.659 nomes em português antes do piloto.
 - [ ] **Hospedagem:** o município exige servidor próprio ou nuvem nacional?
 - [ ] **Identificação:** CNS sozinho basta ou precisamos de CPF?
