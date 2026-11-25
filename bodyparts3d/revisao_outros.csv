@@ -1,0 +1,150 @@
+arquivo,nome_en,sistema_sugerido
+FJ1287,Left corona ciliaris,sensorial
+FJ1291,Left common tendinous ring,muscular
+FJ1316,Optic part of left retina,sensorial
+FJ1338,Right corona ciliaris,sensorial
+FJ1342,Right common tendinous ring,muscular
+FJ1367,Optic part of right retina,sensorial
+FJ1392,Interosseous membrane of right leg,articular
+FJ1392M,Interosseous membrane of left leg,articular
+FJ1393,Lateral head of right flexor hallucis brevis,muscular
+FJ1393M,Lateral head of left flexor hallucis brevis,muscular
+FJ1394,Lateral head of right gastrocnemius,muscular
+FJ1394M,Lateral head of left gastrocnemius,muscular
+FJ1395,Long head of right biceps femoris,muscular
+FJ1395M,Long head of left biceps femoris,muscular
+FJ1396,Medial head of right flexor hallucis brevis,muscular
+FJ1396M,Medial head of left flexor hallucis brevis,muscular
+FJ1397,Medial head of right gastrocnemius,muscular
+FJ1397M,Medial head of left gastrocnemius,muscular
+FJ1441,Right vastus intermedius,muscular
+FJ1441M,Left vastus intermedius,muscular
+FJ1442,Right vastus lateralis,muscular
+FJ1442M,Left vastus lateralis,muscular
+FJ1443,Right vastus medialis,muscular
+FJ1443M,Left vastus medialis,muscular
+FJ1444,Short head of right biceps femoris,muscular
+FJ1444M,Short head of left biceps femoris,muscular
+FJ1445,Transverse head of right adductor hallucis,muscular
+FJ1445M,Transverse head of left adductor hallucis,muscular
+FJ1448,Linea alba,muscular
+FJ1450,External anal sphincter,muscular
+FJ1451,External intercostal muscle,muscular
+FJ1453M,Left iliococcygeus,muscular
+FJ1454,Innermost intercostal muscle,muscular
+FJ1455,Internal intercostal muscle,muscular
+FJ1457M,Left pubococcygeus,muscular
+FJ1458M,Left puborectalis,muscular
+FJ1465,Tendinous arch of levator ani,muscular
+FJ1467,Acromial part of right deltoid,muscular
+FJ1467M,Acromial part of left deltoid,muscular
+FJ1468,Clavicular part of right deltoid,muscular
+FJ1468M,Clavicular part of left deltoid,muscular
+FJ1474,Humeral head of right pronator teres,muscular
+FJ1474M,Humeral head of left pronator teres,muscular
+FJ1476,Interosseous membrane of right forearm,articular
+FJ1476M,Interosseous membrane of left forearm,articular
+FJ1477,Lateral head of right triceps brachii,muscular
+FJ1477M,Lateral head of left triceps brachii,muscular
+FJ1478,Long head of right biceps brachii,muscular
+FJ1478M,Long head of left biceps brachii,muscular
+FJ1479,Long head of right triceps brachii,muscular
+FJ1479M,Long head of left triceps brachii,muscular
+FJ1480,Medial head of right triceps brachii,muscular
+FJ1480M,Medial head of left triceps brachii,muscular
+FJ1509,Set of dorsal interossei of right hand,muscular
+FJ1509M,Set of dorsal interossei of left hand,muscular
+FJ1510,Set of lumbricals of right hand,muscular
+FJ1510M,Set of lumbricals of left hand,muscular
+FJ1511,Set of palmar interossei of right hand,muscular
+FJ1511M,Set of palmar interossei of left hand,muscular
+FJ1512,Short head of right biceps brachii,muscular
+FJ1512M,Short head of left biceps brachii,muscular
+FJ1513,Spinal part of right deltoid,muscular
+FJ1513M,Spinal part of left deltoid,muscular
+FJ1514,Superficial head of right flexor pollicis brevis,muscular
+FJ1514M,Superficial head of left flexor pollicis brevis,muscular
+FJ1515,Transverse head of right adductor pollicis,muscular
+FJ1515M,Transverse head of left adductor pollicis,muscular
+FJ1525,Thoracic rotator,muscular
+FJ1543,Spinalis,muscular
+FJ1547,Lateral lumbar intertransversarius,muscular
+FJ1548,Medial lumbar intertransversarius,muscular
+FJ1549,Set of anterior cervical intertransversarii,muscular
+FJ1549M,Set of anterior cervical intertransversarii,muscular
+FJ1550,Set of interspinales lumborum,muscular
+FJ1550M,Set of interspinales lumborum,muscular
+FJ1552,Set of interspinales cervicis,muscular
+FJ1552M,Set of interspinales cervicis,muscular
+FJ1553,Set of posterior cervical intertransversarii,muscular
+FJ1553M,Set of posterior cervical intertransversarii,muscular
+FJ1601,Vertical intermediate part of left longus colli,muscular
+FJ1656,Anterior inferior cerebellar artery,arterial
+FJ1664,Artery of central sulcus,arterial
+FJ1665,Artery of central sulcus,arterial
+FJ1719,Set of posterior temporal branches of lateral occipital artery,arterial
+FJ1734,Anterior commissure,nervoso
+FJ1735,Brachium of left superior colliculus,nervoso
+FJ1736,Brachium of right superior colliculus,nervoso
+FJ1742,Corpus callosum,nervoso
+FJ1752,Interventricular foramen,nervoso
+FJ1753,Left amygdala,nervoso
+FJ1754,Left caudate nucleus,nervoso
+FJ1757,Left globus pallidus,nervoso
+FJ1761,Brachium of left inferior colliculus,nervoso
+FJ1763,Interpeduncular fossa,nervoso
+FJ1764,Lamina terminalis,nervoso
+FJ1766,Left lateral geniculate body,nervoso
+FJ1768,Mammillary body,nervoso
+FJ1771,Optic chiasm,nervoso
+FJ1773,Left optic tract,nervoso
+FJ1776,Left putamen,nervoso
+FJ1778,Left stria terminalis,nervoso
+FJ1781,Cerebellum,nervoso
+FJ1799,Posterior commissure,nervoso
+FJ1802,Right caudate nucleus,nervoso
+FJ1805,Right globus pallidus,nervoso
+FJ1809,Brachium of right inferior colliculus,nervoso
+FJ1811,Interpeduncular fossa,nervoso
+FJ1812,Lamina terminalis,nervoso
+FJ1813,Right lateral geniculate body,nervoso
+FJ1815,Mammillary body,nervoso
+FJ1816,Right medial geniculate body,nervoso
+FJ1816M,Left medial geniculate body,nervoso
+FJ1818,Optic chiasm,nervoso
+FJ1820,Right optic tract,nervoso
+FJ1823,Right putamen,nervoso
+FJ1825,Stria terminalis,nervoso
+FJ1829,Right amygdala,nervoso
+FJ1830,Cerebellum,nervoso
+FJ1832,Septum of telencephalon,nervoso
+FJ1843,Tentorium cerebelli,nervoso
+FJ2227,Left deep palmar arch,arterial
+FJ2279,Right deep palmar arch,arterial
+FJ2428,Wall of ventricle,cardiaco
+FJ2544,Left iliococcygeus,muscular
+FJ2545,Left pubococcygeus,muscular
+FJ2546,Left puborectalis,muscular
+FJ2549,Right iliococcygeus,muscular
+FJ2550,Right pubococcygeus,muscular
+FJ2551,Right puborectalis,muscular
+FJ2561,Spleen,linfatico
+FJ2744,Left pterygomandibular raphe,muscular
+FJ2749,Pharyngeal raphe,muscular
+FJ2756,Right pterygomandibular raphe,muscular
+FJ2765,Left sublingual gland,digestorio
+FJ2767,Right sublingual gland,digestorio
+FJ2770,Epiglottis,respiratorio
+FJ2774,Left aryepiglotticus,muscular
+FJ2777,Left conus elasticus,respiratorio
+FJ2791,Right aryepiglotticus,muscular
+FJ2794,Right conus elasticus,respiratorio
+FJ2811,External ear,sensorial
+FJ2812,Eyebrow,tegumentar
+FJ2814,Lip,digestorio
+FJ3135,Left deferent duct,urogenital
+FJ3136,Left epididymis,urogenital
+FJ3137,Left seminal vesicle,urogenital
+FJ3140,Right deferent duct,urogenital
+FJ3141,Right epididymis,urogenital
+FJ3143,Right seminal vesicle,urogenital

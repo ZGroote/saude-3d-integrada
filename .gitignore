@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+bodyparts3d/bruto/
+hra/bruto/
+bodyparts3d/modelos/
