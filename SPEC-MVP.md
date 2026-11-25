@@ -218,7 +218,7 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 ## 12. Riscos técnicos e perguntas abertas
 
 - [x] ~~CC BY-SA dos modelos anatômicos~~: o BodyParts3D é CC BY 4.0 desde 27/02/2025 (só exige atribuição). Z-Anatomy (CC BY-SA) não é usado.
-- [ ] **Licença do HRA** na versão exata usada (`hra-f`): confirmar antes de publicar o atlas feminino.
+- [x] ~~Licença do HRA~~: united female v1.10 é CC BY 4.0, com crédito à NLM (ver `LICENCAS.md`).
 - [ ] **Validação médica** dos atlas e dos 1.659 nomes em português antes do piloto.
 - [ ] **Hospedagem:** o município exige servidor próprio ou nuvem nacional?
 - [ ] **Identificação:** CNS sozinho basta ou precisamos de CPF?
