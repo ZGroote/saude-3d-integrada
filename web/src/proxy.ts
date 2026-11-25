@@ -35,7 +35,7 @@ export async function proxy(request: NextRequest) {
   const expirouPorInatividade = user && ultimaAtividade > 0 && Date.now() - ultimaAtividade >= INATIVIDADE_MS;
 
   if (expirouPorInatividade) {
-    await supabase.auth.signOut();
+    await supabase.auth.signOut({ scope: "local" });
     response.cookies.delete(COOKIE_ATIVIDADE);
     if (request.nextUrl.pathname.startsWith("/pacientes")) return NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
     if (rotaAtividade) return NextResponse.json({ erro: "sessao_expirada" }, { status: 401 });

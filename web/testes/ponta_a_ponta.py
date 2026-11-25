@@ -10,6 +10,7 @@ Precisa de Playwright para Python, do Chrome e do atlas em public/atlas (npm run
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -39,6 +40,58 @@ def entrar(pg):
         raise AssertionError('não foi possível preencher a senha') from None  # o erro do Playwright a mostraria
     pg.click('button[type=submit]')
     pg.wait_for_url(f'{APP}/pacientes')
+
+
+def inatividade(navegador):
+    """Os dois logouts por inatividade (navegador e proxy) encerram só a própria sessão."""
+    def sessao(relogio=False):
+        contexto = navegador.new_context()
+        pg = contexto.new_page()
+        pg.set_default_timeout(120000)
+        if relogio:
+            pg.clock.install()  # permite adiantar o temporizador de 30 min
+        entrar(pg)
+        pg.wait_for_selector('ul[aria-label="Pacientes vinculados"] li')
+        return contexto, pg
+
+    def revogada(cookies):
+        copia = navegador.new_context()
+        copia.add_cookies(cookies)
+        pg = copia.new_page()
+        pg.goto(f'{APP}/pacientes')
+        resultado = pg.url.split('?')[0] == f'{APP}/login'
+        copia.close()
+        return resultado
+
+    expirada = f'{APP}/login?motivo=sessao-expirada'
+    outro, testemunha = sessao()
+
+    # 1) temporizador no navegador (monitor-inatividade.tsx)
+    contexto, pg = sessao(relogio=True)
+    pg.wait_for_timeout(1500)  # o monitor precisa estar montado antes de adiantar o relógio
+    cookies = contexto.cookies()
+    pg.clock.fast_forward('31:00')
+    pg.wait_for_url(expirada)
+    assert revogada(cookies), 'inatividade no navegador não revogou a sessão'
+    contexto.close()
+
+    # 2) marca de atividade vencida, vista pelo servidor (proxy.ts)
+    contexto, pg = sessao()
+    cookies = contexto.cookies()
+    pg.goto('about:blank')
+    contexto.add_cookies([{'name': 'saude3d-ultima-atividade', 'url': APP,
+                           'value': str(int((time.time() - 31 * 60) * 1000))}])
+    pg.goto(f'{APP}/pacientes')
+    assert pg.url == expirada, pg.url
+    assert revogada([c for c in cookies if c['name'] != 'saude3d-ultima-atividade']), 'proxy não revogou a sessão'
+    contexto.close()
+
+    testemunha.goto(f'{APP}/pacientes')
+    assert testemunha.url == f'{APP}/pacientes', f'a inatividade derrubou outra sessão: {testemunha.url}'
+    testemunha.locator('header form button[type=submit]').click()
+    testemunha.wait_for_url(f'{APP}/login')
+    outro.close()
+    print('inatividade (navegador e proxy): só a própria sessão é encerrada')
 
 
 def login_sem_javascript(navegador):
@@ -188,6 +241,7 @@ with sync_playwright() as p:
     for largura, altura in ((1440, 900), (390, 844)):
         erros += fluxo(navegador, largura, altura)
         print(f'{largura}x{altura}: login, lista, hra-f, painel, sem acesso e logout local OK')
+    inatividade(navegador)
     navegador.close()
 assert not erros, 'console:\n' + '\n'.join(erros)
 print(f'console limpo; capturas em {CAPTURAS}\nOK')

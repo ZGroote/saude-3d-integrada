@@ -23,10 +23,10 @@ Right sclera,Esclera direita,pendente
 Right choroid,Coroide direita,pendente
 right pupil,Pupila direita,pendente
 ciliary processes,Processos ciliares,pendente
-Suspensory ligament of right lens,Ligamento suspensor da lente direita,pendente
+Suspensory ligament of right lens,Ligamento suspensor do cristalino direito,pendente
 Right ora serrata,Ora serrata direita,pendente
 Right corneoscleral junction,Junção corneoescleral direita,pendente
-Right lens,Lente direita,pendente
+Right lens,Cristalino direito,pendente
 Right scleral venous sinus,Seio venoso da esclera direito,pendente
 Aqueous humor of right eyeball,Humor aquoso do bulbo do olho direito,pendente
 Right ciliary body,Corpo ciliar direito,pendente
@@ -50,10 +50,10 @@ Left ciliary body,Corpo ciliar esquerdo,pendente
 Left ciliary muscle,Músculo ciliar esquerdo,pendente
 Aqueous humor of left eyeball,Humor aquoso do bulbo do olho esquerdo,pendente
 Left scleral venous sinus,Seio venoso da esclera esquerdo,pendente
-Left lens,Lente esquerda,pendente
+Left lens,Cristalino esquerdo,pendente
 Left corneoscleral junction,Junção corneoescleral esquerda,pendente
 Left ora serrata,Ora serrata esquerda,pendente
-Suspensory ligament of left lens,Ligamento suspensor da lente esquerda,pendente
+Suspensory ligament of left lens,Ligamento suspensor do cristalino esquerdo,pendente
 left pupil,Pupila esquerda,pendente
 Left choroid,Coroide esquerda,pendente
 Left sclera,Esclera esquerda,pendente
@@ -510,3 +510,213 @@ Lateral condyle of left femur,Côndilo lateral do fêmur esquerdo,pendente
 Left patella,Patela esquerda,pendente
 Left tibia,Tíbia esquerda,pendente
 Left fibula,Fíbula esquerda,pendente
+Allen amygdalohippocampal area L,Área amigdalo-hipocampal esquerda (Allen),pendente
+Allen amygdalohippocampal area R,Área amigdalo-hipocampal direita (Allen),pendente
+Allen amygdaloid complex L,Complexo amigdaloide esquerdo (Allen),pendente
+Allen amygdaloid complex R,Complexo amigdaloide direito (Allen),pendente
+Allen angular gyrus L,Giro angular esquerdo (Allen),pendente
+Allen angular gyrus R,Giro angular direito (Allen),pendente
+Allen anterior amygdaloid area L,Área amigdaloide anterior esquerda (Allen),pendente
+Allen anterior amygdaloid area R,Área amigdaloide anterior direita (Allen),pendente
+Allen anterior cortical nucleus L,Núcleo cortical anterior esquerdo (Allen),pendente
+Allen anterior cortical nucleus R,Núcleo cortical anterior direito (Allen),pendente
+Allen anterior horn of lateral ventricle L,Corno anterior do ventrículo lateral esquerdo (Allen),pendente
+Allen anterior horn of lateral ventricle R,Corno anterior do ventrículo lateral direito (Allen),pendente
+Allen anterior nuclear complex of thalamus L,Complexo nuclear anterior do tálamo esquerdo (Allen),pendente
+Allen anterior nuclear complex of thalamus R,Complexo nuclear anterior do tálamo direito (Allen),pendente
+Allen anterior olfactory nucleus R,Núcleo olfatório anterior direito (Allen),pendente
+Allen atrium of lateral ventricle L,Átrio do ventrículo lateral esquerdo (Allen),pendente
+Allen atrium of lateral ventricle R,Átrio do ventrículo lateral direito (Allen),pendente
+Allen basal forebrain L,Prosencéfalo basal esquerdo (Allen),pendente
+Allen basal forebrain R,Prosencéfalo basal direito (Allen),pendente
+Allen basolateral nucleus basal nucleus L,Núcleo basolateral (núcleo basal) esquerdo (Allen),pendente
+Allen basolateral nucleus basal nucleus R,Núcleo basolateral (núcleo basal) direito (Allen),pendente
+Allen basomedial nucleus accessory basal nucleus L,Núcleo basomedial (núcleo basal acessório) esquerdo (Allen),pendente
+Allen basomedial nucleus accessory basal nucleus R,Núcleo basomedial (núcleo basal acessório) direito (Allen),pendente
+Allen bed nucleus of stria terminalis L,Núcleo do leito da estria terminal esquerdo (Allen),pendente
+Allen bed nucleus of stria terminalis R,Núcleo do leito da estria terminal direito (Allen),pendente
+Allen body of caudate L,Corpo do núcleo caudado esquerdo (Allen),pendente
+Allen body of caudate R,Corpo do núcleo caudado direito (Allen),pendente
+Allen body of hippocampus L,Corpo do hipocampo esquerdo (Allen),pendente
+Allen body of hippocampus R,Corpo do hipocampo direito (Allen),pendente
+Allen body of lateral ventricle L,Corpo do ventrículo lateral esquerdo (Allen),pendente
+Allen body of lateral ventricle R,Corpo do ventrículo lateral direito (Allen),pendente
+Allen central canal of medulla oblongata L,Canal central do bulbo esquerdo (Allen),pendente
+Allen central canal of medulla oblongata R,Canal central do bulbo direito (Allen),pendente
+Allen central nuclear group L,Grupo nuclear central esquerdo (Allen),pendente
+Allen central nuclear group R,Grupo nuclear central direito (Allen),pendente
+Allen centromedian nucleus of thalamus L,Núcleo centromediano do tálamo esquerdo (Allen),pendente
+Allen centromedian nucleus of thalamus R,Núcleo centromediano do tálamo direito (Allen),pendente
+Allen cerebellar deep nuclei L,Núcleos profundos do cerebelo esquerdo (Allen),pendente
+Allen cerebellar deep nuclei R,Núcleos profundos do cerebelo direito (Allen),pendente
+Allen cerebellar vermis R,Vérmis do cerebelo direito (Allen),pendente
+Allen cerebral aqueduct L,Aqueduto do mesencéfalo esquerdo (Allen),pendente
+Allen cerebral aqueduct R,Aqueduto do mesencéfalo direito (Allen),pendente
+Allen claustrum L,Claustro esquerdo (Allen),pendente
+Allen claustrum R,Claustro direito (Allen),pendente
+Allen dorsal lateral geniculate nucleus L,Núcleo geniculado lateral dorsal esquerdo (Allen),pendente
+Allen dorsal lateral geniculate nucleus R,Núcleo geniculado lateral dorsal direito (Allen),pendente
+Allen external segment of globus pallidus L,Segmento externo do globo pálido esquerdo (Allen),pendente
+Allen external segment of globus pallidus R,Segmento externo do globo pálido direito (Allen),pendente
+Allen frontal agranular insular cortex area Fl L,Córtex insular agranular frontal (área Fl) esquerdo (Allen),pendente
+Allen frontal agranular insular cortex area Fl R,Córtex insular agranular frontal (área Fl) direito (Allen),pendente
+Allen frontal pole L,Polo frontal esquerdo (Allen),pendente
+Allen frontal pole R,Polo frontal direito (Allen),pendente
+Allen frontomarginal gyrus L,Giro frontomarginal esquerdo (Allen),pendente
+Allen frontomarginal gyrus R,Giro frontomarginal direito (Allen),pendente
+Allen gyrus ambiens L,Giro ambiente esquerdo (Allen),pendente
+Allen gyrus ambiens R,Giro ambiente direito (Allen),pendente
+Allen habenular nuclei L,Núcleos habenulares esquerdos (Allen),pendente
+Allen habenular nuclei R,Núcleos habenulares direitos (Allen),pendente
+Allen head of caudate L,Cabeça do núcleo caudado esquerdo (Allen),pendente
+Allen head of caudate R,Cabeça do núcleo caudado direito (Allen),pendente
+Allen head of hippocampus L,Cabeça do hipocampo esquerdo (Allen),pendente
+Allen head of hippocampus R,Cabeça do hipocampo direito (Allen),pendente
+Allen inferior cerebellar peduncle L,Pedúnculo cerebelar inferior esquerdo (Allen),pendente
+Allen inferior cerebellar peduncle R,Pedúnculo cerebelar inferior direito (Allen),pendente
+Allen inferior horn of lateral ventricle L,Corno inferior do ventrículo lateral esquerdo (Allen),pendente
+Allen inferior horn of lateral ventricle R,Corno inferior do ventrículo lateral direito (Allen),pendente
+Allen inferior olive L,Oliva inferior esquerda (Allen),pendente
+Allen inferior olive R,Oliva inferior direita (Allen),pendente
+Allen internal segment of globus pallidus L,Segmento interno do globo pálido esquerdo (Allen),pendente
+Allen internal segment of globus pallidus R,Segmento interno do globo pálido direito (Allen),pendente
+Allen lateral dorsal nucleus of thalamus L,Núcleo dorsal lateral do tálamo esquerdo (Allen),pendente
+Allen lateral dorsal nucleus of thalamus R,Núcleo dorsal lateral do tálamo direito (Allen),pendente
+Allen lateral hemisphere of cerebellum L,Hemisfério lateral do cerebelo esquerdo (Allen),pendente
+Allen lateral hemisphere of cerebellum R,Hemisfério lateral do cerebelo direito (Allen),pendente
+Allen lateral nucleus L,Núcleo lateral esquerdo (Allen),pendente
+Allen lateral nucleus R,Núcleo lateral direito (Allen),pendente
+Allen lateral olfactory gyrus L,Giro olfatório lateral esquerdo (Allen),pendente
+Allen lateral olfactory gyrus R,Giro olfatório lateral direito (Allen),pendente
+Allen lateral posterior nucleus of thalamus L,Núcleo posterior lateral do tálamo esquerdo (Allen),pendente
+Allen lateral posterior nucleus of thalamus R,Núcleo posterior lateral do tálamo direito (Allen),pendente
+Allen limen insula L,Límen da ínsula esquerdo (Allen),pendente
+Allen limen insula R,Límen da ínsula direito (Allen),pendente
+Allen long insular gyri L,Giros longos da ínsula esquerdos (Allen),pendente
+Allen long insular gyri R,Giros longos da ínsula direitos (Allen),pendente
+Allen mammillary region of HTH L,Região mamilar do hipotálamo esquerda (Allen),pendente
+Allen mammillary region of HTH R,Região mamilar do hipotálamo direita (Allen),pendente
+Allen mammillothalamic tract L,Fascículo mamilotalâmico esquerdo (Allen),pendente
+Allen mammillothalamic tract R,Fascículo mamilotalâmico direito (Allen),pendente
+Allen medial geniculate nuclei L,Núcleos geniculados mediais esquerdos (Allen),pendente
+Allen medial geniculate nuclei R,Núcleos geniculados mediais direitos (Allen),pendente
+Allen medial nucleus L,Núcleo medial esquerdo (Allen),pendente
+Allen medial nucleus R,Núcleo medial direito (Allen),pendente
+Allen mediodorsal nucleus of thalamus L,Núcleo mediodorsal do tálamo esquerdo (Allen),pendente
+Allen mediodorsal nucleus of thalamus R,Núcleo mediodorsal do tálamo direito (Allen),pendente
+Allen midbrain tegmentum L,Tegmento do mesencéfalo esquerdo (Allen),pendente
+Allen midbrain tegmentum R,Tegmento do mesencéfalo direito (Allen),pendente
+Allen middle cerebellar peduncle L,Pedúnculo cerebelar médio esquerdo (Allen),pendente
+Allen middle cerebellar peduncle R,Pedúnculo cerebelar médio direito (Allen),pendente
+Allen midline nuclear complex L,Complexo nuclear da linha média esquerdo (Allen),pendente
+Allen midline nuclear complex R,Complexo nuclear da linha média direito (Allen),pendente
+Allen nucleus accumbens L,Núcleo accumbens esquerdo (Allen),pendente
+Allen nucleus accumbens R,Núcleo accumbens direito (Allen),pendente
+Allen occipitotemporal fusiform gyrus temporal part L,Parte temporal do giro occipitotemporal lateral (fusiforme) esquerdo (Allen),pendente
+Allen occipitotemporal fusiform gyrus temporal part R,Parte temporal do giro occipitotemporal lateral (fusiforme) direito (Allen),pendente
+Allen olfactory bulb R,Bulbo olfatório direito (Allen),pendente
+Allen olfactory tract L,Trato olfatório esquerdo (Allen),pendente
+Allen olfactory tract R,Trato olfatório direito (Allen),pendente
+Allen paracentral lobule caudal part L,Parte caudal do lóbulo paracentral esquerdo (Allen),pendente
+Allen paracentral lobule caudal part R,Parte caudal do lóbulo paracentral direito (Allen),pendente
+Allen paracingulate gyrus L,Giro paracingulado esquerdo (Allen),pendente
+Allen paracingulate gyrus R,Giro paracingulado direito (Allen),pendente
+Allen parafascicular nucleus of thalamus L,Núcleo parafascicular do tálamo esquerdo (Allen),pendente
+Allen parafascicular nucleus of thalamus R,Núcleo parafascicular do tálamo direito (Allen),pendente
+Allen paravermis of cerebellum L,Paravérmis do cerebelo esquerdo (Allen),pendente
+Allen paravermis of cerebellum R,Paravérmis do cerebelo direito (Allen),pendente
+Allen perirhinal gyrus rostral part of FuGt L,Giro perirrinal (parte rostral do giro fusiforme) esquerdo (Allen),pendente
+Allen perirhinal gyrus rostral part of FuGt R,Giro perirrinal (parte rostral do giro fusiforme) direito (Allen),pendente
+Allen piriform region R,Região piriforme direita (Allen),pendente
+Allen posterior cortical nucleus L,Núcleo cortical posterior esquerdo (Allen),pendente
+Allen posterior cortical nucleus R,Núcleo cortical posterior direito (Allen),pendente
+Allen posterior horn of lateral ventricle L,Corno posterior do ventrículo lateral esquerdo (Allen),pendente
+Allen posterior horn of lateral ventricle R,Corno posterior do ventrículo lateral direito (Allen),pendente
+Allen posteroventral putamen L,Putame posteroventral esquerdo (Allen),pendente
+Allen posteroventral putamen R,Putame posteroventral direito (Allen),pendente
+Allen preoptic region of HTH L,Região pré-óptica do hipotálamo esquerda (Allen),pendente
+Allen preoptic region of HTH R,Região pré-óptica do hipotálamo direita (Allen),pendente
+Allen pretectal region L,Região pré-tectal esquerda (Allen),pendente
+Allen pretectal region R,Região pré-tectal direita (Allen),pendente
+Allen pulvinar of thalamus L,Pulvinar do tálamo esquerdo (Allen),pendente
+Allen pulvinar of thalamus R,Pulvinar do tálamo direito (Allen),pendente
+Allen pyramidal part of medulla oblongata L,Parte piramidal do bulbo esquerdo (Allen),pendente
+Allen pyramidal part of medulla oblongata R,Parte piramidal do bulbo direito (Allen),pendente
+Allen reuniens nucleus medioventral nucleus of thalamus L,Núcleo reuniens (núcleo medioventral) do tálamo esquerdo (Allen),pendente
+Allen reuniens nucleus medioventral nucleus of thalamus R,Núcleo reuniens (núcleo medioventral) do tálamo direito (Allen),pendente
+Allen rostral gyrus L,Giro rostral esquerdo (Allen),pendente
+Allen rostral gyrus R,Giro rostral direito (Allen),pendente
+Allen septal nuclei L,Núcleos septais esquerdos (Allen),pendente
+Allen septal nuclei R,Núcleos septais direitos (Allen),pendente
+Allen short insular gyri L,Giros curtos da ínsula esquerdos (Allen),pendente
+Allen short insular gyri R,Giros curtos da ínsula direitos (Allen),pendente
+Allen subthalamic nucleus L,Núcleo subtalâmico esquerdo (Allen),pendente
+Allen subthalamic nucleus R,Núcleo subtalâmico direito (Allen),pendente
+Allen superior cerebellar peduncle brachium conjunctivum L,Pedúnculo cerebelar superior esquerdo (Allen),pendente
+Allen superior cerebellar peduncle brachium conjunctivum R,Pedúnculo cerebelar superior direito (Allen),pendente
+Allen supramarginal gyrus L,Giro supramarginal esquerdo (Allen),pendente
+Allen supramarginal gyrus R,Giro supramarginal direito (Allen),pendente
+Allen supraoptic region of HTH L,Região supraóptica do hipotálamo esquerda (Allen),pendente
+Allen supraoptic region of HTH R,Região supraóptica do hipotálamo direita (Allen),pendente
+Allen supraparietal lobule L,Lóbulo parietal superior esquerdo (Allen),pendente
+Allen supraparietal lobule R,Lóbulo parietal superior direito (Allen),pendente
+Allen tail of caudate L,Cauda do núcleo caudado esquerdo (Allen),pendente
+Allen tail of caudate R,Cauda do núcleo caudado direito (Allen),pendente
+Allen tail of hippocampus L,Cauda do hipocampo esquerdo (Allen),pendente
+Allen tail of hippocampus R,Cauda do hipocampo direito (Allen),pendente
+Allen tegmentum of medulla oblongata L,Tegmento do bulbo esquerdo (Allen),pendente
+Allen tegmentum of medulla oblongata R,Tegmento do bulbo direito (Allen),pendente
+Allen temporal agranular insular cortex area Tl L,Córtex insular agranular temporal (área Tl) esquerdo (Allen),pendente
+Allen temporal agranular insular cortex area Tl R,Córtex insular agranular temporal (área Tl) direito (Allen),pendente
+Allen thalamus L,Tálamo esquerdo (Allen),pendente
+Allen thalamus R,Tálamo direito (Allen),pendente
+Allen third ventricle L,Terceiro ventrículo esquerdo (Allen),pendente
+Allen third ventricle R,Terceiro ventrículo direito (Allen),pendente
+Allen transverse temporal gyrus Heschls gyrus L,Giro temporal transverso (de Heschl) esquerdo (Allen),pendente
+Allen transverse temporal gyrus Heschls gyrus R,Giro temporal transverso (de Heschl) direito (Allen),pendente
+Allen tuberal region of HTH L,Região tuberal do hipotálamo esquerda (Allen),pendente
+Allen tuberal region of HTH R,Região tuberal do hipotálamo direita (Allen),pendente
+Allen ventral anterior nucleus of thalamus L,Núcleo ventral anterior do tálamo esquerdo (Allen),pendente
+Allen ventral anterior nucleus of thalamus R,Núcleo ventral anterior do tálamo direito (Allen),pendente
+Allen ventral lateral nucleus of thalamus L,Núcleo ventral lateral do tálamo esquerdo (Allen),pendente
+Allen ventral lateral nucleus of thalamus R,Núcleo ventral lateral do tálamo direito (Allen),pendente
+Allen ventral posterior lateral nucleus L,Núcleo ventral posterolateral esquerdo (Allen),pendente
+Allen ventral posterior lateral nucleus R,Núcleo ventral posterolateral direito (Allen),pendente
+Allen ventral posterior medial nucleus L,Núcleo ventral posteromedial esquerdo (Allen),pendente
+Allen ventral posterior medial nucleus R,Núcleo ventral posteromedial direito (Allen),pendente
+Allen white matter of forebrain L,Substância branca do prosencéfalo esquerdo (Allen),pendente
+Allen white matter of forebrain R,Substância branca do prosencéfalo direito (Allen),pendente
+Allen white matter of hindbrain L,Substância branca do rombencéfalo esquerdo (Allen),pendente
+Allen white matter of hindbrain R,Substância branca do rombencéfalo direito (Allen),pendente
+Allen zona incerta L,Zona incerta esquerda (Allen),pendente
+Allen zona incerta R,Zona incerta direita (Allen),pendente
+anterior cruciate enthesis L,Êntese do ligamento cruzado anterior esquerdo,pendente
+anterior cruciate enthesis R,Êntese do ligamento cruzado anterior direito,pendente
+anterior segmental right hepatic artery,Artéria hepática segmentar anterior direita,pendente
+basal plate,Placa basal,pendente
+cervicovaginal junction,Junção cervicovaginal,pendente
+cornua,Corno uterino,pendente
+lateral epicondylar enthesis L,Êntese do epicôndilo lateral esquerdo,pendente
+lateral epicondylar enthesis R,Êntese do epicôndilo lateral direito,pendente
+lateral perichondular surface L,Superfície pericondral lateral esquerda,pendente
+lateral perichondular surface R,Superfície pericondral lateral direita,pendente
+left anterolateral segment,Segmento anterolateral esquerdo,pendente
+left branch of portal vein,Ramo esquerdo da veia porta,pendente
+left inferomedial segment,Segmento inferomedial esquerdo,pendente
+left superomedial segment,Segmento superomedial esquerdo,pendente
+left superomedial segment1,Segmento superomedial esquerdo (1),pendente
+lumbar vertebra 6,Sexta vértebra lombar,pendente
+medial epicondylar enthesis L,Êntese do epicôndilo medial esquerdo,pendente
+medial epicondylar enthesis R,Êntese do epicôndilo medial direito,pendente
+medial perichondular surface L,Superfície pericondral medial esquerda,pendente
+medial perichondular surface R,Superfície pericondral medial direita,pendente
+middle hepatic artery branch of left hepatic artery,Ramo médio da artéria hepática esquerda,pendente
+placenta vessels,Vasos placentários,pendente
+posterior cruciate enthesis L,Êntese do ligamento cruzado posterior esquerdo,pendente
+posterior cruciate enthesis R,Êntese do ligamento cruzado posterior direito,pendente
+posterior segmental right hepatic artery,Artéria hepática segmentar posterior direita,pendente
+right anteroinferior segment,Segmento anteroinferior direito,pendente
+right anterosuperior segment,Segmento anterosuperior direito,pendente
+right branch of portal vein,Ramo direito da veia porta,pendente
+right posteroinferior segment,Segmento posteroinferior direito,pendente
+right posterosuperior segment,Segmento posterosuperior direito,pendente

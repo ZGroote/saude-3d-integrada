@@ -338,17 +338,13 @@ def publish(rebuild_local=False):
         estrutura = ontology if ontology and ontology != '-' else None
         raw_label = row['label'].strip()
         has_valid_label = bool(raw_label and raw_label != '-')
-        if has_valid_label:
-            trad = translations.get(raw_label)
-            assert trad and trad['nome_pt'], (
-                f'Malha com label válido sem nome_pt em {TRADUCOES.name}: {name} ({raw_label!r})')
-            nome_pt = trad['nome_pt']
-            validacao = trad['validacao']
-        else:
-            nome_pt = None
-            validacao = 'pendente'
         nome_en = raw_label if has_valid_label else readable_node_name(name)
         assert nome_en and nome_en != '-', f'nome_en inválido para {name}'
+        trad = translations.get(nome_en)
+        assert trad and trad['nome_pt'], (
+            f'Malha sem nome_pt em {TRADUCOES.name}: {name} ({nome_en!r})')
+        nome_pt = trad['nome_pt']
+        validacao = trad['validacao']
         item = {
             'malha': name,
             'estrutura': estrutura,

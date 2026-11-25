@@ -20,7 +20,7 @@ export function MonitorInatividade() {
       temporizador = window.setTimeout(async () => {
         if (encerrando) return;
         encerrando = true;
-        try { await createClient().auth.signOut(); } finally { router.replace("/login?motivo=sessao-expirada"); }
+        try { await createClient().auth.signOut({ scope: "local" }); } finally { router.replace("/login?motivo=sessao-expirada"); }
       }, TEMPO_INATIVIDADE);
 
       const agora = Date.now();
