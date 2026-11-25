@@ -1,0 +1,1660 @@
+﻿fma,nome_en,nome_pt,validacao
+FMA59763,Gingiva of upper jaw,Gengiva da maxila,pendente
+FMA59764,Gingiva of lower jaw,Gengiva da mandíbula,pendente
+FMA55704,Left lower first secondary molar tooth,Primeiro dente molar permanente inferior esquerdo,pendente
+FMA55693,Left lower first secondary premolar tooth,Primeiro dente pré-molar permanente inferior esquerdo,pendente
+FMA55703,Left lower second secondary molar tooth,Segundo dente molar permanente inferior esquerdo,pendente
+FMA55692,Left lower second secondary premolar tooth,Segundo dente pré-molar permanente inferior esquerdo,pendente
+FMA57143,Left lower central secondary incisor tooth,Dente incisivo central permanente inferior esquerdo,pendente
+FMA57141,Left lower lateral secondary incisor tooth,Dente incisivo lateral permanente inferior esquerdo,pendente
+FMA55687,Left lower secondary canine tooth,Dente canino permanente inferior esquerdo,pendente
+FMA55699,Left upper first secondary molar tooth,Primeiro dente molar permanente superior esquerdo,pendente
+FMA55690,Left upper first secondary premolar tooth,Primeiro dente pré-molar permanente superior esquerdo,pendente
+FMA55700,Left upper second secondary molar tooth,Segundo dente molar permanente superior esquerdo,pendente
+FMA55691,Left upper second secondary premolar tooth,Segundo dente pré-molar permanente superior esquerdo,pendente
+FMA55682,Left upper central secondary incisor tooth,Dente incisivo central permanente superior esquerdo,pendente
+FMA55683,Left upper lateral secondary incisor tooth,Dente incisivo lateral permanente superior esquerdo,pendente
+FMA55799,Left upper secondary canine tooth,Dente canino permanente superior esquerdo,pendente
+FMA55705,Right lower first secondary molar tooth,Primeiro dente molar permanente inferior direito,pendente
+FMA55694,Right lower first secondary premolar tooth,Primeiro dente pré-molar permanente inferior direito,pendente
+FMA55706,Right lower second secondary molar tooth,Segundo dente molar permanente inferior direito,pendente
+FMA55695,Right lower second secondary premolar tooth,Segundo dente pré-molar permanente inferior direito,pendente
+FMA57142,Right lower central secondary incisor tooth,Dente incisivo central permanente inferior direito,pendente
+FMA57140,Right lower lateral secondary incisor tooth,Dente incisivo lateral permanente inferior direito,pendente
+FMA55686,Right lower secondary canine tooth,Dente canino permanente inferior direito,pendente
+FMA55697,Right upper second secondary molar tooth,Segundo dente molar permanente superior direito,pendente
+FMA55698,Right upper first secondary molar tooth,Primeiro dente molar permanente superior direito,pendente
+FMA55689,Right upper first secondary premolar tooth,Primeiro dente pré-molar permanente superior direito,pendente
+FMA55688,Right upper second secondary premolar tooth,Segundo dente pré-molar permanente superior direito,pendente
+FMA55681,Right upper central secondary incisor tooth,Dente incisivo central permanente superior direito,pendente
+FMA55680,Right upper lateral secondary incisor tooth,Dente incisivo lateral permanente superior direito,pendente
+FMA55798,Right upper secondary canine tooth,Dente canino permanente superior direito,pendente
+FMA58082,Anterior chamber of left eyeball,Câmara anterior do bulbo do olho esquerdo,pendente
+FMA52677,Left anterior ethmoidal nerve,Nervo etmoidal anterior esquerdo,pendente
+FMA49145,Check ligament of left lateral rectus,Ligamento de contenção do reto lateral esquerdo,pendente
+FMA58300,Left choroid,Coroide esquerda,pendente
+FMA58484,Left corona ciliaris,Coroa ciliar esquerda,pendente
+FMA53550,Left ciliary ganglion,Gânglio ciliar esquerdo,pendente
+FMA58240,Left cornea,Córnea esquerda,pendente
+FMA52640,Left frontal nerve,Nervo frontal esquerdo,pendente
+FMA49073,Left common tendinous ring,Anel tendíneo comum esquerdo,pendente
+FMA49148,Check ligament of left medial rectus,Ligamento de contenção do reto medial esquerdo,pendente
+FMA52577,Inferior branch of left oculomotor nerve,Ramo inferior do nervo oculomotor esquerdo,pendente
+FMA49051,Left inferior oblique,Oblíquo inferior esquerdo,pendente
+FMA49047,Left inferior rectus,Reto inferior esquerdo,pendente
+FMA52699,Left infratrochlear nerve,Nervo infratroclear esquerdo,pendente
+FMA58237,Left iris,Íris esquerda,pendente
+FMA59583,Left lacrimal canaliculus,Canalículo lacrimal esquerdo,pendente
+FMA59103,Left lacrimal gland,Glândula lacrimal esquerda,pendente
+FMA52630,Left lacrimal nerve,Nervo lacrimal esquerdo,pendente
+FMA59542,Left lacrimal lake,Lago lacrimal esquerdo,pendente
+FMA59556,Left nasolacrimal duct,Ducto lacrimonasal esquerdo,pendente
+FMA49055,Left lateral rectus,Reto lateral esquerdo,pendente
+FMA58243,Left lens,Lente esquerda,pendente
+FMA49049,Left levator palpebrae superioris,Levantador da pálpebra superior esquerdo,pendente
+FMA49057,Left medial rectus,Reto medial esquerdo,pendente
+FMA59546,Left lacrimal sac,Saco lacrimal esquerdo,pendente
+FMA52670,Left nasociliary nerve,Nervo nasociliar esquerdo,pendente
+FMA52674,Communicating branch of left nasociliary nerve with left ciliary ganglion,Ramo comunicante do nervo nasociliar esquerdo com o gânglio ciliar esquerdo,pendente
+FMA52623,Left ophthalmic nerve,Nervo oftálmico esquerdo,pendente
+FMA50878,Left optic nerve,Nervo óptico esquerdo,pendente
+FMA52716,Left posterior ethmoidal nerve,Nervo etmoidal posterior esquerdo,pendente
+FMA58608,Optic part of left retina,Parte óptica da retina esquerda,pendente
+FMA58272,Left sclera,Esclera esquerda,pendente
+FMA82735,Left long ciliary nerve,Nervo ciliar longo esquerdo,pendente
+FMA7041,Short ciliary nerve,Nervo ciliar curto,pendente
+FMA58840,Suspensory ligament of left lens,Ligamento suspensor da lente esquerda,pendente
+FMA52575,Superior branch of left oculomotor nerve,Ramo superior do nervo oculomotor esquerdo,pendente
+FMA49053,Left superior oblique,Oblíquo superior esquerdo,pendente
+FMA49045,Left superior rectus,Reto superior esquerdo,pendente
+FMA59092,Tarsal plate of left upper eyelid,Tarso superior esquerdo,pendente
+FMA52657,Left supra-orbital nerve,Nervo supraorbital esquerdo,pendente
+FMA52644,Left supratrochlear nerve,Nervo supratroclear esquerdo,pendente
+FMA59090,Tarsal plate of left lower eyelid,Tarso inferior esquerdo,pendente
+FMA49068,Trochlea of left superior oblique,Tróclea do oblíquo superior esquerdo,pendente
+FMA50882,Left trochlear nerve,Nervo troclear esquerdo,pendente
+FMA58829,Left vitreous body,Corpo vítreo esquerdo,pendente
+FMA58081,Anterior chamber of right eyeball,Câmara anterior do bulbo do olho direito,pendente
+FMA52676,Right anterior ethmoidal nerve,Nervo etmoidal anterior direito,pendente
+FMA49144,Check ligament of right lateral rectus,Ligamento de contenção do reto lateral direito,pendente
+FMA49147,Check ligament of right medial rectus,Ligamento de contenção do reto medial direito,pendente
+FMA58299,Right choroid,Coroide direita,pendente
+FMA58483,Right corona ciliaris,Coroa ciliar direita,pendente
+FMA53549,Right ciliary ganglion,Gânglio ciliar direito,pendente
+FMA58239,Right cornea,Córnea direita,pendente
+FMA52639,Right frontal nerve,Nervo frontal direito,pendente
+FMA49072,Right common tendinous ring,Anel tendíneo comum direito,pendente
+FMA54159,Tendon of right levator palpebrae superioris,Tendão do levantador da pálpebra superior direito,pendente
+FMA52576,Inferior branch of right oculomotor nerve,Ramo inferior do nervo oculomotor direito,pendente
+FMA49050,Right inferior oblique,Oblíquo inferior direito,pendente
+FMA49046,Right inferior rectus,Reto inferior direito,pendente
+FMA52698,Right infratrochlear nerve,Nervo infratroclear direito,pendente
+FMA58236,Right iris,Íris direita,pendente
+FMA59582,Right lacrimal canaliculus,Canalículo lacrimal direito,pendente
+FMA59102,Right lacrimal gland,Glândula lacrimal direita,pendente
+FMA52629,Right lacrimal nerve,Nervo lacrimal direito,pendente
+FMA59541,Right lacrimal lake,Lago lacrimal direito,pendente
+FMA59555,Right nasolacrimal duct,Ducto lacrimonasal direito,pendente
+FMA49054,Right lateral rectus,Reto lateral direito,pendente
+FMA58242,Right lens,Lente direita,pendente
+FMA49048,Right levator palpebrae superioris,Levantador da pálpebra superior direito,pendente
+FMA49056,Right medial rectus,Reto medial direito,pendente
+FMA59545,Right lacrimal sac,Saco lacrimal direito,pendente
+FMA52669,Right nasociliary nerve,Nervo nasociliar direito,pendente
+FMA52673,Communicating branch of right nasociliary nerve with right ciliary ganglion,Ramo comunicante do nervo nasociliar direito com o gânglio ciliar direito,pendente
+FMA52622,Right ophthalmic nerve,Nervo oftálmico direito,pendente
+FMA50875,Right optic nerve,Nervo óptico direito,pendente
+FMA52715,Right posterior ethmoidal nerve,Nervo etmoidal posterior direito,pendente
+FMA58607,Optic part of right retina,Parte óptica da retina direita,pendente
+FMA58271,Right sclera,Esclera direita,pendente
+FMA82734,Right long ciliary nerve,Nervo ciliar longo direito,pendente
+FMA58839,Suspensory ligament of right lens,Ligamento suspensor da lente direita,pendente
+FMA52574,Superior branch of right oculomotor nerve,Ramo superior do nervo oculomotor direito,pendente
+FMA49052,Right superior oblique,Oblíquo superior direito,pendente
+FMA49044,Right superior rectus,Reto superior direito,pendente
+FMA59091,Tarsal plate of right upper eyelid,Tarso superior direito,pendente
+FMA52656,Right supra-orbital nerve,Nervo supraorbital direito,pendente
+FMA52643,Right supratrochlear nerve,Nervo supratroclear direito,pendente
+FMA59089,Tarsal plate of right lower eyelid,Tarso inferior direito,pendente
+FMA49067,Trochlea of right superior oblique,Tróclea do oblíquo superior direito,pendente
+FMA50881,Right trochlear nerve,Nervo troclear direito,pendente
+FMA58828,Right vitreous body,Corpo vítreo direito,pendente
+FMA37717,First lumbrical of right foot,Primeiro lumbrical do pé direito,pendente
+FMA37718,First lumbrical of left foot,Primeiro lumbrical do pé esquerdo,pendente
+FMA37745,First plantar interosseous of right foot,Primeiro interósseo plantar do pé direito,pendente
+FMA37746,First plantar interosseous of left foot,Primeiro interósseo plantar do pé esquerdo,pendente
+FMA37719,Second lumbrical of right foot,Segundo lumbrical do pé direito,pendente
+FMA37720,Second lumbrical of left foot,Segundo lumbrical do pé esquerdo,pendente
+FMA37743,Second plantar interosseous of right foot,Segundo interósseo plantar do pé direito,pendente
+FMA37744,Second plantar interosseous of left foot,Segundo interósseo plantar do pé esquerdo,pendente
+FMA37485,Third lumbrical of right foot,Terceiro lumbrical do pé direito,pendente
+FMA37486,Third lumbrical of left foot,Terceiro lumbrical do pé esquerdo,pendente
+FMA37741,Third plantar interosseous of right foot,Terceiro interósseo plantar do pé direito,pendente
+FMA37742,Third plantar interosseous of left foot,Terceiro interósseo plantar do pé esquerdo,pendente
+FMA37483,Fourth lumbrical of right foot,Quarto lumbrical do pé direito,pendente
+FMA37484,Fourth lumbrical of left foot,Quarto lumbrical do pé esquerdo,pendente
+FMA37463,Abductor digiti minimi of right foot,Abdutor do dedo mínimo do pé direito,pendente
+FMA37464,Abductor digiti minimi of left foot,Abdutor do dedo mínimo do pé esquerdo,pendente
+FMA37471,Flexor digiti minimi brevis of right foot,Flexor curto do dedo mínimo do pé direito,pendente
+FMA37472,Flexor digiti minimi brevis of left foot,Flexor curto do dedo mínimo do pé esquerdo,pendente
+FMA35192,Interosseous membrane of right leg,Membrana interóssea da perna direita,pendente
+FMA35193,Interosseous membrane of left leg,Membrana interóssea da perna esquerda,pendente
+FMA45973,Lateral head of right flexor hallucis brevis,Cabeça lateral do flexor curto do hálux direito,pendente
+FMA45974,Lateral head of left flexor hallucis brevis,Cabeça lateral do flexor curto do hálux esquerdo,pendente
+FMA45960,Lateral head of right gastrocnemius,Cabeça lateral do gastrocnêmio direito,pendente
+FMA45961,Lateral head of left gastrocnemius,Cabeça lateral do gastrocnêmio esquerdo,pendente
+FMA45888,Long head of right biceps femoris,Cabeça longa do bíceps femoral direito,pendente
+FMA45889,Long head of left biceps femoris,Cabeça longa do bíceps femoral esquerdo,pendente
+FMA45971,Medial head of right flexor hallucis brevis,Cabeça medial do flexor curto do hálux direito,pendente
+FMA45972,Medial head of left flexor hallucis brevis,Cabeça medial do flexor curto do hálux esquerdo,pendente
+FMA45957,Medial head of right gastrocnemius,Cabeça medial do gastrocnêmio direito,pendente
+FMA45958,Medial head of left gastrocnemius,Cabeça medial do gastrocnêmio esquerdo,pendente
+FMA46018,Oblique head of right adductor hallucis,Cabeça oblíqua do adutor do hálux direito,pendente
+FMA46019,Oblique head of left adductor hallucis,Cabeça oblíqua do adutor do hálux esquerdo,pendente
+FMA86034,Opponens digiti minimi of right foot,Oponente do dedo mínimo do pé direito,pendente
+FMA86035,Opponens digiti minimi of left foot,Oponente do dedo mínimo do pé esquerdo,pendente
+FMA37459,Right abductor hallucis,Abdutor do hálux direito,pendente
+FMA37460,Left abductor hallucis,Abdutor do hálux esquerdo,pendente
+FMA22452,Right adductor brevis,Adutor curto direito,pendente
+FMA22454,Left adductor brevis,Adutor curto esquerdo,pendente
+FMA22456,Right adductor longus,Adutor longo direito,pendente
+FMA22457,Left adductor longus,Adutor longo esquerdo,pendente
+FMA22459,Right adductor magnus,Adutor magno direito,pendente
+FMA22460,Left adductor magnus,Adutor magno esquerdo,pendente
+FMA43886,Right adductor minimus,Adutor mínimo direito,pendente
+FMA43887,Left adductor minimus,Adutor mínimo esquerdo,pendente
+FMA258847,Right calcaneal tendon,Tendão do calcâneo direito,pendente
+FMA264844,Left calcaneal tendon,Tendão do calcâneo esquerdo,pendente
+FMA22548,Right extensor digitorum longus,Extensor longo dos dedos direito,pendente
+FMA22549,Left extensor digitorum longus,Extensor longo dos dedos esquerdo,pendente
+FMA51144,Right extensor hallucis brevis,Extensor curto do hálux direito,pendente
+FMA51145,Left extensor hallucis brevis,Extensor curto do hálux esquerdo,pendente
+FMA22546,Right extensor hallucis longus,Extensor longo do hálux direito,pendente
+FMA22547,Left extensor hallucis longus,Extensor longo do hálux esquerdo,pendente
+FMA22554,Right fibularis brevis,Fibular curto direito,pendente
+FMA22555,Left fibularis brevis,Fibular curto esquerdo,pendente
+FMA22552,Right fibularis longus,Fibular longo direito,pendente
+FMA22553,Left fibularis longus,Fibular longo esquerdo,pendente
+FMA22550,Right fibularis tertius,Fibular terceiro direito,pendente
+FMA22551,Left fibularis tertius,Fibular terceiro esquerdo,pendente
+FMA37465,Right flexor accessorius,Quadrado plantar direito,pendente
+FMA37466,Left flexor accessorius,Quadrado plantar esquerdo,pendente
+FMA37461,Right flexor digitorum brevis,Flexor curto dos dedos direito,pendente
+FMA37462,Left flexor digitorum brevis,Flexor curto dos dedos esquerdo,pendente
+FMA65016,Right flexor digitorum longus,Flexor longo dos dedos direito,pendente
+FMA65017,Left flexor digitorum longus,Flexor longo dos dedos esquerdo,pendente
+FMA65014,Right flexor hallucis longus,Flexor longo do hálux direito,pendente
+FMA65015,Left flexor hallucis longus,Flexor longo do hálux esquerdo,pendente
+FMA22336,Right gemellus inferior,Gêmeo inferior direito,pendente
+FMA22337,Left gemellus inferior,Gêmeo inferior esquerdo,pendente
+FMA22334,Right gemellus superior,Gêmeo superior direito,pendente
+FMA22335,Left gemellus superior,Gêmeo superior esquerdo,pendente
+FMA22328,Right gluteus maximus,Glúteo máximo direito,pendente
+FMA22329,Left gluteus maximus,Glúteo máximo esquerdo,pendente
+FMA22330,Right gluteus medius,Glúteo médio direito,pendente
+FMA22331,Left gluteus medius,Glúteo médio esquerdo,pendente
+FMA22332,Right gluteus minimus,Glúteo mínimo direito,pendente
+FMA22333,Left gluteus minimus,Glúteo mínimo esquerdo,pendente
+FMA43883,Right gracilis,Grácil direito,pendente
+FMA43884,Left gracilis,Grácil esquerdo,pendente
+FMA22322,Right iliacus,Ilíaco direito,pendente
+FMA22323,Left iliacus,Ilíaco esquerdo,pendente
+FMA58776,Right iliotibial tract,Trato iliotibial direito,pendente
+FMA58777,Left iliotibial tract,Trato iliotibial esquerdo,pendente
+FMA44249,Right long plantar ligament,Ligamento plantar longo direito,pendente
+FMA44250,Left long plantar ligament,Ligamento plantar longo esquerdo,pendente
+FMA22326,Right obturator externus,Obturador externo direito,pendente
+FMA22327,Left obturator externus,Obturador externo esquerdo,pendente
+FMA22324,Right obturator internus,Obturador interno direito,pendente
+FMA22325,Left obturator internus,Obturador interno esquerdo,pendente
+FMA22450,Right pectineus,Pectíneo direito,pendente
+FMA22451,Left pectineus,Pectíneo esquerdo,pendente
+FMA22340,Right piriformis,Piriforme direito,pendente
+FMA22341,Left piriformis,Piriforme esquerdo,pendente
+FMA22560,Right plantaris,Plantar direito,pendente
+FMA22561,Left plantaris,Plantar esquerdo,pendente
+FMA22591,Right popliteus,Poplíteo direito,pendente
+FMA22592,Left popliteus,Poplíteo esquerdo,pendente
+FMA22342,Right psoas major,Psoas maior direito,pendente
+FMA22343,Left psoas major,Psoas maior esquerdo,pendente
+FMA22338,Right quadratus femoris,Quadrado femoral direito,pendente
+FMA22339,Left quadratus femoris,Quadrado femoral esquerdo,pendente
+FMA38928,Right rectus femoris,Reto femoral direito,pendente
+FMA38929,Left rectus femoris,Reto femoral esquerdo,pendente
+FMA22354,Right sartorius,Sartório direito,pendente
+FMA22355,Left sartorius,Sartório esquerdo,pendente
+FMA22448,Right semimembranosus,Semimembranáceo direito,pendente
+FMA22449,Left semimembranosus,Semimembranáceo esquerdo,pendente
+FMA22358,Right semitendinosus,Semitendíneo direito,pendente
+FMA22359,Left semitendinosus,Semitendíneo esquerdo,pendente
+FMA22558,Right soleus,Sóleo direito,pendente
+FMA22559,Left soleus,Sóleo esquerdo,pendente
+FMA22425,Right tensor fasciae latae,Tensor da fáscia lata direito,pendente
+FMA22426,Left tensor fasciae latae,Tensor da fáscia lata esquerdo,pendente
+FMA22544,Right tibialis anterior,Tibial anterior direito,pendente
+FMA22545,Left tibialis anterior,Tibial anterior esquerdo,pendente
+FMA65018,Right tibialis posterior,Tibial posterior direito,pendente
+FMA65019,Left tibialis posterior,Tibial posterior esquerdo,pendente
+FMA38934,Right vastus intermedius,Vasto intermédio direito,pendente
+FMA38935,Left vastus intermedius,Vasto intermédio esquerdo,pendente
+FMA38930,Right vastus lateralis,Vasto lateral direito,pendente
+FMA38931,Left vastus lateralis,Vasto lateral esquerdo,pendente
+FMA38932,Right vastus medialis,Vasto medial direito,pendente
+FMA38933,Left vastus medialis,Vasto medial esquerdo,pendente
+FMA45891,Short head of right biceps femoris,Cabeça curta do bíceps femoral direito,pendente
+FMA45892,Short head of left biceps femoris,Cabeça curta do bíceps femoral esquerdo,pendente
+FMA46020,Transverse head of right adductor hallucis,Cabeça transversa do adutor do hálux direito,pendente
+FMA46021,Transverse head of left adductor hallucis,Cabeça transversa do adutor do hálux esquerdo,pendente
+FMA45874,Abdominal part of right pectoralis major,Parte abdominal do peitoral maior direito,pendente
+FMA45875,Abdominal part of left pectoralis major,Parte abdominal do peitoral maior esquerdo,pendente
+FMA34690,Clavicular part of right pectoralis major,Parte clavicular do peitoral maior direito,pendente
+FMA34691,Clavicular part of left pectoralis major,Parte clavicular do peitoral maior esquerdo,pendente
+FMA11336,Linea alba,Linha alba,pendente
+FMA46444,Left coccygeus,Coccígeo esquerdo,pendente
+,External anal sphincter,Esfíncter externo do ânus,pendente
+FMA21930,External anal sphincter,Esfíncter externo do ânus,pendente
+FMA9756,External intercostal muscle,Músculo intercostal externo,pendente
+FMA13336,Right external oblique,Oblíquo externo do abdome direito,pendente
+FMA13337,Left external oblique,Oblíquo externo do abdome esquerdo,pendente
+FMA45859,Left iliococcygeus,Iliococcígeo esquerdo,pendente
+FMA9758,Innermost intercostal muscle,Músculo intercostal íntimo,pendente
+FMA9757,Internal intercostal muscle,Músculo intercostal interno,pendente
+FMA13375,Right pectoralis minor,Peitoral menor direito,pendente
+FMA13376,Left pectoralis minor,Peitoral menor esquerdo,pendente
+FMA45855,Left pubococcygeus,Pubococcígeo esquerdo,pendente
+FMA45857,Left puborectalis,Puborretal esquerdo,pendente
+FMA13398,Right serratus anterior,Serrátil anterior direito,pendente
+FMA13399,Left serratus anterior,Serrátil anterior esquerdo,pendente
+FMA13412,Right subclavius,Subclávio direito,pendente
+FMA13411,Left subclavius,Subclávio esquerdo,pendente
+FMA9761,Right transversus thoracis,Transverso do tórax direito,pendente
+FMA9762,Left transversus thoracis,Transverso do tórax esquerdo,pendente
+FMA74077,Set of right levatores costarum breves,Conjunto dos levantadores curtos das costelas direitos,pendente
+FMA74078,Set of left levatores costarum breves,Conjunto dos levantadores curtos das costelas esquerdos,pendente
+FMA74075,Set of right levatores costarum longi,Conjunto dos levantadores longos das costelas direitos,pendente
+FMA74076,Set of left levatores costarum longi,Conjunto dos levantadores longos das costelas esquerdos,pendente
+FMA79979,Sternocostal part of right pectoralis major,Parte esternocostal do peitoral maior direito,pendente
+FMA79980,Sternocostal part of left pectoralis major,Parte esternocostal do peitoral maior esquerdo,pendente
+FMA46442,Tendinous arch of levator ani,Arco tendíneo do levantador do ânus,pendente
+FMA37396,Abductor digiti minimi of right hand,Abdutor do dedo mínimo da mão direita,pendente
+FMA37397,Abductor digiti minimi of left hand,Abdutor do dedo mínimo da mão esquerda,pendente
+FMA34682,Acromial part of right deltoid,Parte acromial do deltoide direito,pendente
+FMA34683,Acromial part of left deltoid,Parte acromial do deltoide esquerdo,pendente
+FMA34680,Clavicular part of right deltoid,Parte clavicular do deltoide direito,pendente
+FMA34681,Clavicular part of left deltoid,Parte clavicular do deltoide esquerdo,pendente
+FMA37389,Left flexor pollicis brevis,Flexor curto do polegar esquerdo,pendente
+FMA37388,Right flexor pollicis brevis,Flexor curto do polegar direito,pendente
+FMA37398,Flexor digiti minimi brevis of right hand,Flexor curto do dedo mínimo da mão direita,pendente
+FMA37399,Flexor digiti minimi brevis of left hand,Flexor curto do dedo mínimo da mão esquerda,pendente
+FMA40120,Flexor retinaculum of right wrist,Retináculo dos músculos flexores do punho direito,pendente
+FMA40121,Flexor retinaculum of left wrist,Retináculo dos músculos flexores do punho esquerdo,pendente
+FMA38507,Right extensor carpi ulnaris,Extensor ulnar do carpo direito,pendente
+FMA38508,Left extensor carpi ulnaris,Extensor ulnar do carpo esquerdo,pendente
+FMA38617,Humeral head of right flexor carpi ulnaris,Cabeça umeral do flexor ulnar do carpo direito,pendente
+FMA38618,Humeral head of left flexor carpi ulnaris,Cabeça umeral do flexor ulnar do carpo esquerdo,pendente
+FMA38560,Humeral head of right pronator teres,Cabeça umeral do pronador redondo direito,pendente
+FMA38561,Humeral head of left pronator teres,Cabeça umeral do pronador redondo esquerdo,pendente
+FMA38470,Right flexor digitorum superficialis,Flexor superficial dos dedos direito,pendente
+FMA38471,Left flexor digitorum superficialis,Flexor superficial dos dedos esquerdo,pendente
+FMA23707,Interosseous membrane of right forearm,Membrana interóssea do antebraço direito,pendente
+FMA23708,Interosseous membrane of left forearm,Membrana interóssea do antebraço esquerdo,pendente
+FMA37697,Lateral head of right triceps brachii,Cabeça lateral do tríceps braquial direito,pendente
+FMA37698,Lateral head of left triceps brachii,Cabeça lateral do tríceps braquial esquerdo,pendente
+FMA37686,Long head of right biceps brachii,Cabeça longa do bíceps braquial direito,pendente
+FMA37687,Long head of left biceps brachii,Cabeça longa do bíceps braquial esquerdo,pendente
+FMA37699,Long head of right triceps brachii,Cabeça longa do tríceps braquial direito,pendente
+FMA37700,Long head of left triceps brachii,Cabeça longa do tríceps braquial esquerdo,pendente
+FMA37695,Medial head of right triceps brachii,Cabeça medial do tríceps braquial direito,pendente
+FMA37696,Medial head of left triceps brachii,Cabeça medial do tríceps braquial esquerdo,pendente
+FMA46121,Oblique head of right adductor pollicis,Cabeça oblíqua do adutor do polegar direito,pendente
+FMA46122,Oblique head of left adductor pollicis,Cabeça oblíqua do adutor do polegar esquerdo,pendente
+FMA37400,Opponens digiti minimi of right hand,Oponente do dedo mínimo da mão direita,pendente
+FMA37401,Opponens digiti minimi of left hand,Oponente do dedo mínimo da mão esquerda,pendente
+FMA37386,Right abductor pollicis brevis,Abdutor curto do polegar direito,pendente
+FMA37387,Left abductor pollicis brevis,Abdutor curto do polegar esquerdo,pendente
+FMA38516,Right abductor pollicis longus,Abdutor longo do polegar direito,pendente
+FMA38517,Left abductor pollicis longus,Abdutor longo do polegar esquerdo,pendente
+FMA37705,Right anconeus,Ancôneo direito,pendente
+FMA37706,Left anconeus,Ancôneo esquerdo,pendente
+FMA37668,Right brachialis,Braquial direito,pendente
+FMA37669,Left brachialis,Braquial esquerdo,pendente
+FMA38486,Right brachioradialis,Braquiorradial direito,pendente
+FMA38487,Left brachioradialis,Braquiorradial esquerdo,pendente
+FMA37665,Right coracobrachialis,Coracobraquial direito,pendente
+FMA37666,Left coracobrachialis,Coracobraquial esquerdo,pendente
+FMA38498,Right extensor carpi radialis brevis,Extensor radial curto do carpo direito,pendente
+FMA38499,Left extensor carpi radialis brevis,Extensor radial curto do carpo esquerdo,pendente
+FMA38495,Right extensor carpi radialis longus,Extensor radial longo do carpo direito,pendente
+FMA38496,Left extensor carpi radialis longus,Extensor radial longo do carpo esquerdo,pendente
+FMA38504,Right extensor digiti minimi,Extensor do dedo mínimo direito,pendente
+FMA38505,Left extensor digiti minimi,Extensor do dedo mínimo esquerdo,pendente
+FMA38501,Right extensor digitorum,Extensor dos dedos direito,pendente
+FMA38502,Left extensor digitorum,Extensor dos dedos esquerdo,pendente
+FMA38525,Right extensor indicis,Extensor do indicador direito,pendente
+FMA38526,Left extensor indicis,Extensor do indicador esquerdo,pendente
+FMA38519,Right extensor pollicis brevis,Extensor curto do polegar direito,pendente
+FMA38520,Left extensor pollicis brevis,Extensor curto do polegar esquerdo,pendente
+FMA38522,Right extensor pollicis longus,Extensor longo do polegar direito,pendente
+FMA38523,Left extensor pollicis longus,Extensor longo do polegar esquerdo,pendente
+FMA38460,Right flexor carpi radialis,Flexor radial do carpo direito,pendente
+FMA38461,Left flexor carpi radialis,Flexor radial do carpo esquerdo,pendente
+FMA38479,Right flexor digitorum profundus,Flexor profundo dos dedos direito,pendente
+FMA38480,Left flexor digitorum profundus,Flexor profundo dos dedos esquerdo,pendente
+FMA38482,Right flexor pollicis longus,Flexor longo do polegar direito,pendente
+FMA38484,Left flexor pollicis longus,Flexor longo do polegar esquerdo,pendente
+FMA32547,Right infraspinatus muscle,Músculo infraespinal direito,pendente
+FMA32548,Left infraspinatus muscle,Músculo infraespinal esquerdo,pendente
+FMA37390,Right opponens pollicis,Oponente do polegar direito,pendente
+FMA37391,Left opponens pollicis,Oponente do polegar esquerdo,pendente
+FMA38463,Right palmaris longus,Palmar longo direito,pendente
+FMA38464,Left palmaris longus,Palmar longo esquerdo,pendente
+FMA38454,Right pronator quadratus,Pronador quadrado direito,pendente
+FMA38455,Left pronator quadratus,Pronador quadrado esquerdo,pendente
+FMA13414,Right subscapularis,Subescapular direito,pendente
+FMA13415,Left subscapularis,Subescapular esquerdo,pendente
+FMA38513,Right supinator,Supinador direito,pendente
+FMA38514,Left supinator,Supinador esquerdo,pendente
+FMA32544,Right supraspinatus,Supraespinal direito,pendente
+FMA32545,Left supraspinatus,Supraespinal esquerdo,pendente
+FMA32551,Right teres major,Redondo maior direito,pendente
+FMA32552,Left teres major,Redondo maior esquerdo,pendente
+FMA32553,Right teres minor,Redondo menor direito,pendente
+FMA32554,Left teres minor,Redondo menor esquerdo,pendente
+FMA42404,Set of dorsal interossei of right hand,Conjunto dos interósseos dorsais da mão direita,pendente
+FMA42405,Set of dorsal interossei of left hand,Conjunto dos interósseos dorsais da mão esquerda,pendente
+FMA42398,Set of lumbricals of right hand,Conjunto dos lumbricais da mão direita,pendente
+FMA42399,Set of lumbricals of left hand,Conjunto dos lumbricais da mão esquerda,pendente
+FMA42402,Set of palmar interossei of right hand,Conjunto dos interósseos palmares da mão direita,pendente
+FMA42403,Set of palmar interossei of left hand,Conjunto dos interósseos palmares da mão esquerda,pendente
+FMA37684,Short head of right biceps brachii,Cabeça curta do bíceps braquial direito,pendente
+FMA37685,Short head of left biceps brachii,Cabeça curta do bíceps braquial esquerdo,pendente
+FMA34684,Spinal part of right deltoid,Parte espinal do deltoide direito,pendente
+FMA34685,Spinal part of left deltoid,Parte espinal do deltoide esquerdo,pendente
+FMA65198,Superficial head of right flexor pollicis brevis,Cabeça superficial do flexor curto do polegar direito,pendente
+FMA65199,Superficial head of left flexor pollicis brevis,Cabeça superficial do flexor curto do polegar esquerdo,pendente
+FMA46123,Transverse head of right adductor pollicis,Cabeça transversa do adutor do polegar direito,pendente
+FMA46124,Transverse head of left adductor pollicis,Cabeça transversa do adutor do polegar esquerdo,pendente
+FMA38562,Ulnar head of right pronator teres,Cabeça ulnar do pronador redondo direito,pendente
+FMA38563,Ulnar head of left pronator teres,Cabeça ulnar do pronador redondo esquerdo,pendente
+FMA38619,Ulnar head of right flexor carpi ulnaris,Cabeça ulnar do flexor ulnar do carpo direito,pendente
+FMA38620,Ulnar head of left flexor carpi ulnaris,Cabeça ulnar do flexor ulnar do carpo esquerdo,pendente
+FMA33581,Ascending part of right trapezius,Parte ascendente do trapézio direito,pendente
+FMA33583,Ascending part of left trapezius,Parte ascendente do trapézio esquerdo,pendente
+FMA33586,Descending part of right trapezius,Parte descendente do trapézio direito,pendente
+FMA33587,Descending part of left trapezius,Parte descendente do trapézio esquerdo,pendente
+FMA23089,Right lumbar rotator,Rotador lombar direito,pendente
+FMA23090,Left lumbar rotator,Rotador lombar esquerdo,pendente
+FMA81752,Right cervical rotator,Rotador cervical direito,pendente
+FMA81753,Left cervical rotator,Rotador cervical esquerdo,pendente
+FMA23083,Thoracic rotator,Rotador torácico,pendente
+FMA22744,Right iliocostalis cervicis,Iliocostal do pescoço direito,pendente
+FMA22745,Left iliocostalis cervicis,Iliocostal do pescoço esquerdo,pendente
+FMA22740,Right iliocostalis lumborum,Iliocostal do lombo direito,pendente
+FMA22741,Left iliocostalis lumborum,Iliocostal do lombo esquerdo,pendente
+FMA22742,Right iliocostalis thoracis,Iliocostal do tórax direito,pendente
+FMA22743,Left iliocostalis thoracis,Iliocostal do tórax esquerdo,pendente
+FMA32540,Right levator scapulae,Levantador da escápula direito,pendente
+FMA32541,Left levator scapulae,Levantador da escápula esquerdo,pendente
+FMA22754,Right longissimus capitis,Longuíssimo da cabeça direito,pendente
+FMA22756,Left longissimus capitis,Longuíssimo da cabeça esquerdo,pendente
+FMA22757,Right longissimus cervicis,Longuíssimo do pescoço direito,pendente
+FMA22758,Left longissimus cervicis,Longuíssimo do pescoço esquerdo,pendente
+FMA22751,Right longissimus thoracis,Longuíssimo do tórax direito,pendente
+FMA22753,Left longissimus thoracis,Longuíssimo do tórax esquerdo,pendente
+FMA13381,Right rhomboid major,Romboide maior direito,pendente
+FMA13382,Left rhomboid major,Romboide maior esquerdo,pendente
+FMA13383,Right rhomboid minor,Romboide menor direito,pendente
+FMA13384,Left rhomboid minor,Romboide menor esquerdo,pendente
+FMA22876,Right semispinalis capitis,Semiespinal da cabeça direito,pendente
+FMA22877,Left semispinalis capitis,Semiespinal da cabeça esquerdo,pendente
+FMA22874,Right semispinalis cervicis,Semiespinal do pescoço direito,pendente
+FMA22875,Left semispinalis cervicis,Semiespinal do pescoço esquerdo,pendente
+FMA22872,Right semispinalis thoracis,Semiespinal do tórax direito,pendente
+FMA22873,Left semispinalis thoracis,Semiespinal do tórax esquerdo,pendente
+FMA13405,Right serratus posterior inferior,Serrátil posterior inferior direito,pendente
+FMA13406,Left serratus posterior inferior,Serrátil posterior inferior esquerdo,pendente
+FMA13403,Right serratus posterior superior,Serrátil posterior superior direito,pendente
+FMA13404,Left serratus posterior superior,Serrátil posterior superior esquerdo,pendente
+FMA77179,Spinalis,Espinal,pendente
+FMA22779,Right spinalis thoracis,Espinal do tórax direito,pendente
+FMA22780,Left spinalis thoracis,Espinal do tórax esquerdo,pendente
+FMA22728,Right splenius capitis,Esplênio da cabeça direito,pendente
+FMA22729,Left splenius capitis,Esplênio da cabeça esquerdo,pendente
+FMA22726,Right splenius cervicis,Esplênio do pescoço direito,pendente
+FMA22727,Left splenius cervicis,Esplênio do pescoço esquerdo,pendente
+FMA22850,Lateral lumbar intertransversarius,Intertransversário lateral do lombo,pendente
+FMA22851,Medial lumbar intertransversarius,Intertransversário medial do lombo,pendente
+FMA71442,Set of anterior cervical intertransversarii,Conjunto dos intertransversários anteriores do pescoço,pendente
+FMA71307,Set of interspinales lumborum,Conjunto dos interespinhais do lombo,pendente
+FMA22890,Right interspinalis thoracis,Interespinhal do tórax direito,pendente
+FMA22891,Left interspinalis thoracis,Interespinhal do tórax esquerdo,pendente
+FMA71309,Set of interspinales cervicis,Conjunto dos interespinhais do pescoço,pendente
+FMA71443,Set of posterior cervical intertransversarii,Conjunto dos intertransversários posteriores do pescoço,pendente
+FMA33584,Transverse part of right trapezius,Parte transversa do trapézio direito,pendente
+FMA33585,Transverse part of left trapezius,Parte transversa do trapézio esquerdo,pendente
+FMA46293,Left digastric,Digástrico esquerdo,pendente
+FMA46292,Right digastric,Digástrico direito,pendente
+FMA46288,Inferior oblique part of left longus colli,Parte oblíqua inferior do longo do pescoço esquerdo,pendente
+FMA45740,Left platysma,Platisma esquerdo,pendente
+FMA46327,Left geniohyoid,Gênio-hioideo esquerdo,pendente
+FMA46310,Left longus capitis,Longo da cabeça esquerdo,pendente
+FMA46322,Left mylohyoid,Milo-hioideo esquerdo,pendente
+FMA32537,Left obliquus capitis inferior,Oblíquo inferior da cabeça esquerdo,pendente
+FMA32535,Left obliquus capitis superior,Oblíquo superior da cabeça esquerdo,pendente
+FMA13349,Left omohyoid,Omo-hioideo esquerdo,pendente
+FMA46314,Left rectus capitis anterior,Reto anterior da cabeça esquerdo,pendente
+FMA32531,Left rectus capitis posterior major,Reto posterior maior da cabeça esquerdo,pendente
+FMA32533,Left rectus capitis posterior minor,Reto posterior menor da cabeça esquerdo,pendente
+FMA46318,Left rectus capitis lateralis,Reto lateral da cabeça esquerdo,pendente
+FMA13393,Left scalenus anterior,Escaleno anterior esquerdo,pendente
+FMA13391,Left scalenus medius,Escaleno médio esquerdo,pendente
+FMA13389,Left scalenus posterior,Escaleno posterior esquerdo,pendente
+FMA13409,Left sternocleidomastoid,Esternocleidomastoideo esquerdo,pendente
+FMA13347,Left sternohyoid,Esterno-hioideo esquerdo,pendente
+FMA13351,Left sternothyroid,Esternotireoideo esquerdo,pendente
+FMA45827,Left stylohyoid,Estilo-hioideo esquerdo,pendente
+FMA13353,Left thyrohyoid,Tireo-hioideo esquerdo,pendente
+FMA46326,Right geniohyoid,Gênio-hioideo direito,pendente
+FMA258850,Right intermediate tendon,Tendão intermédio direito,pendente
+FMA46309,Right longus capitis,Longo da cabeça direito,pendente
+FMA46321,Right mylohyoid,Milo-hioideo direito,pendente
+FMA32536,Right obliquus capitis inferior,Oblíquo inferior da cabeça direito,pendente
+FMA32534,Right obliquus capitis superior,Oblíquo superior da cabeça direito,pendente
+FMA13348,Right omohyoid,Omo-hioideo direito,pendente
+FMA45739,Right platysma,Platisma direito,pendente
+FMA46313,Right rectus capitis anterior,Reto anterior da cabeça direito,pendente
+FMA32530,Right rectus capitis posterior major,Reto posterior maior da cabeça direito,pendente
+FMA32532,Right rectus capitis posterior minor,Reto posterior menor da cabeça direito,pendente
+FMA46317,Right rectus capitis lateralis,Reto lateral da cabeça direito,pendente
+FMA13392,Right scalenus anterior,Escaleno anterior direito,pendente
+FMA13390,Right scalenus medius,Escaleno médio direito,pendente
+FMA13388,Right scalenus posterior,Escaleno posterior direito,pendente
+FMA13408,Right sternocleidomastoid,Esternocleidomastoideo direito,pendente
+FMA13346,Right sternohyoid,Esterno-hioideo direito,pendente
+FMA13350,Right sternothyroid,Esternotireoideo direito,pendente
+FMA45826,Right stylohyoid,Estilo-hioideo direito,pendente
+FMA13352,Right thyrohyoid,Tireo-hioideo direito,pendente
+FMA46284,Superior oblique part of left longus colli,Parte oblíqua superior do longo do pescoço esquerdo,pendente
+FMA46286,Vertical intermediate part of left longus colli,Parte vertical intermédia do longo do pescoço esquerdo,pendente
+FMA50029,Right anterior cerebral artery,Artéria cerebral anterior direita,pendente
+FMA50030,Left anterior cerebral artery,Artéria cerebral anterior esquerda,pendente
+FMA50169,Anterior communicating artery,Artéria comunicante anterior,pendente
+FMA50544,Anterior inferior cerebellar artery,Artéria cerebelar inferior anterior,pendente
+FMA50532,Right anterior spinal artery,Artéria espinal anterior direita,pendente
+FMA50533,Left anterior spinal artery,Artéria espinal anterior esquerda,pendente
+FMA50088,Right anterior choroidal artery,Artéria corióidea anterior direita,pendente
+FMA50089,Left anterior choroidal artery,Artéria corióidea anterior esquerda,pendente
+FMA50383,Right anterior temporal artery,Artéria temporal anterior direita,pendente
+FMA50384,Left anterior temporal artery,Artéria temporal anterior esquerda,pendente
+FMA50369,Insular part of right middle cerebral artery,Parte insular da artéria cerebral média direita,pendente
+FMA50370,Insular part of left middle cerebral artery,Parte insular da artéria cerebral média esquerda,pendente
+FMA50678,Anterior temporal branch of right lateral occipital artery,Ramo temporal anterior da artéria occipital lateral direita,pendente
+FMA50679,Anterior temporal branch of left lateral occipital artery,Ramo temporal anterior da artéria occipital lateral esquerda,pendente
+FMA50377,Anterolateral central branch of right middle cerebral artery,Ramo central anterolateral da artéria cerebral média direita,pendente
+FMA50378,Anterolateral central branch of left middle cerebral artery,Ramo central anterolateral da artéria cerebral média esquerda,pendente
+FMA77439,Artery of central sulcus,Artéria do sulco central,pendente
+FMA50483,Artery of right postcentral sulcus,Artéria do sulco pós-central direito,pendente
+FMA50484,Artery of left postcentral sulcus,Artéria do sulco pós-central esquerdo,pendente
+FMA50486,Right anterior parietal artery,Artéria parietal anterior direita,pendente
+FMA50487,Left anterior parietal artery,Artéria parietal anterior esquerda,pendente
+FMA50480,Artery of right precentral sulcus,Artéria do sulco pré-central direito,pendente
+FMA50481,Artery of left precentral sulcus,Artéria do sulco pré-central esquerdo,pendente
+FMA50361,Precuneal branch of right pericallosal artery,Ramo precuneal da artéria pericalosa direita,pendente
+FMA50362,Precuneal branch of left pericallosal artery,Ramo precuneal da artéria pericalosa esquerda,pendente
+FMA50542,Basilar artery,Artéria basilar,pendente
+FMA50476,Branch of right middle cerebral artery to right angular gyrus,Ramo da artéria cerebral média direita para o giro angular direito,pendente
+FMA50477,Branch of left middle cerebral artery to left angular gyrus,Ramo da artéria cerebral média esquerda para o giro angular esquerdo,pendente
+FMA50146,Branch of right anterior choroidal artery to posterior limb of right internal capsule,Ramo da artéria corióidea anterior direita para o braço posterior da cápsula interna direita,pendente
+FMA50147,Branch of left anterior choroidal artery to posterior limb of left internal capsule,Ramo da artéria corióidea anterior esquerda para o braço posterior da cápsula interna esquerda,pendente
+FMA50670,Right thalamogeniculate artery,Artéria talamogeniculada direita,pendente
+FMA50671,Left thalamogeniculate artery,Artéria talamogeniculada esquerda,pendente
+FMA50347,Right callosomarginal artery,Artéria calosomarginal direita,pendente
+FMA50348,Left callosomarginal artery,Artéria calosomarginal esquerda,pendente
+FMA50684,Right splenial artery,Artéria esplenial direita,pendente
+FMA50685,Left splenial artery,Artéria esplenial esquerda,pendente
+FMA50428,Hypothalamic branch of right posterior communicating artery,Ramo hipotalâmico da artéria comunicante posterior direita,pendente
+FMA50429,Hypothalamic branch of left posterior communicating artery,Ramo hipotalâmico da artéria comunicante posterior esquerda,pendente
+FMA50680,Middle temporal branch of right lateral occipital artery,Ramo temporal médio da artéria occipital lateral direita,pendente
+FMA50681,Middle temporal branch of left lateral occipital artery,Ramo temporal médio da artéria occipital lateral esquerda,pendente
+FMA50351,Intermediomedial branch of right callosomarginal artery,Ramo intermediomedial da artéria calosomarginal direita,pendente
+FMA50352,Intermediomedial branch of left callosomarginal artery,Ramo intermediomedial da artéria calosomarginal esquerda,pendente
+FMA3949,Right internal carotid artery,Artéria carótida interna direita,pendente
+FMA4062,Left internal carotid artery,Artéria carótida interna esquerda,pendente
+FMA50578,Lateral branch of right superior cerebellar artery,Ramo lateral da artéria cerebelar superior direita,pendente
+FMA50579,Lateral branch of left superior cerebellar artery,Ramo lateral da artéria cerebelar superior esquerda,pendente
+FMA50568,Lateral branch of right pontine artery,Ramo lateral da artéria pontina direita,pendente
+FMA50569,Lateral branch of left pontine artery,Ramo lateral da artéria pontina esquerda,pendente
+FMA50443,Right lateral frontobasal artery,Artéria frontobasal lateral direita,pendente
+FMA50444,Left lateral frontobasal artery,Artéria frontobasal lateral esquerda,pendente
+FMA50643,Right lateral occipital artery,Artéria occipital lateral direita,pendente
+FMA50644,Left lateral occipital artery,Artéria occipital lateral esquerda,pendente
+FMA50581,Medial branch of right superior cerebellar artery,Ramo medial da artéria cerebelar superior direita,pendente
+FMA50582,Medial branch of left superior cerebellar artery,Ramo medial da artéria cerebelar superior esquerda,pendente
+FMA50566,Medial branch of right pontine artery,Ramo medial da artéria pontina direita,pendente
+FMA50567,Medial branch of left pontine artery,Ramo medial da artéria pontina esquerda,pendente
+FMA50343,Right medial frontobasal artery,Artéria frontobasal medial direita,pendente
+FMA50344,Left medial frontobasal artery,Artéria frontobasal medial esquerda,pendente
+FMA50645,Right medial occipital artery,Artéria occipital medial direita,pendente
+FMA50646,Left medial occipital artery,Artéria occipital medial esquerda,pendente
+FMA50366,Sphenoid part of right middle cerebral artery,Parte esfenoidal da artéria cerebral média direita,pendente
+FMA50367,Sphenoid part of left middle cerebral artery,Parte esfenoidal da artéria cerebral média esquerda,pendente
+FMA50467,Middle temporal branch of right middle cerebral artery,Ramo temporal médio da artéria cerebral média direita,pendente
+FMA50468,Middle temporal branch of left middle cerebral artery,Ramo temporal médio da artéria cerebral média esquerda,pendente
+FMA49869,Right ophthalmic artery,Artéria oftálmica direita,pendente
+FMA49870,Left ophthalmic artery,Artéria oftálmica esquerda,pendente
+FMA50357,Paracentral branch of right callosomarginal artery,Ramo paracentral da artéria calosomarginal direita,pendente
+FMA50358,Paracentral branch of left callosomarginal artery,Ramo paracentral da artéria calosomarginal esquerda,pendente
+FMA50359,Right pericallosal artery,Artéria pericalosa direita,pendente
+FMA50360,Left pericallosal artery,Artéria pericalosa esquerda,pendente
+FMA50519,Right posterior inferior cerebellar artery,Artéria cerebelar inferior posterior direita,pendente
+FMA50520,Left posterior inferior cerebellar artery,Artéria cerebelar inferior posterior esquerda,pendente
+FMA50380,Right polar temporal artery,Artéria temporal polar direita,pendente
+FMA50381,Left polar temporal artery,Artéria temporal polar esquerda,pendente
+FMA50085,Right posterior communicating artery,Artéria comunicante posterior direita,pendente
+FMA50086,Left posterior communicating artery,Artéria comunicante posterior esquerda,pendente
+FMA50641,Postcommunicating part of right posterior cerebral artery,Parte pós-comunicante da artéria cerebral posterior direita,pendente
+FMA50642,Postcommunicating part of left posterior cerebral artery,Parte pós-comunicante da artéria cerebral posterior esquerda,pendente
+FMA50489,Right posterior parietal artery,Artéria parietal posterior direita,pendente
+FMA50490,Left posterior parietal artery,Artéria parietal posterior esquerda,pendente
+FMA50470,Posterior temporal branch of right middle cerebral artery,Ramo temporal posterior da artéria cerebral média direita,pendente
+FMA50471,Posterior temporal branch of left middle cerebral artery,Ramo temporal posterior da artéria cerebral média esquerda,pendente
+FMA76128,Trunk of inferior terminal branch of right middle cerebral artery,Tronco do ramo terminal inferior da artéria cerebral média direita,pendente
+FMA76129,Trunk of inferior terminal branch of left middle cerebral artery,Tronco do ramo terminal inferior da artéria cerebral média esquerda,pendente
+FMA71502,Set of posterior temporal branches of lateral occipital artery,Conjunto dos ramos temporais posteriores da artéria occipital lateral,pendente
+FMA50664,Right thalamoperforating artery,Artéria talamoperfurante direita,pendente
+FMA50665,Left thalamoperforating artery,Artéria talamoperfurante esquerda,pendente
+FMA50660,Posteromedial central branch of right posterior cerebral artery,Ramo central posteromedial da artéria cerebral posterior direita,pendente
+FMA50661,Posteromedial central branch of left posterior cerebral artery,Ramo central posteromedial da artéria cerebral posterior esquerda,pendente
+FMA50353,Posteromedial branch of right callosomarginal artery,Ramo posteromedial da artéria calosomarginal direita,pendente
+FMA50354,Posteromedial branch of left callosomarginal artery,Ramo posteromedial da artéria calosomarginal esquerda,pendente
+FMA50639,Precommunicating part of right posterior cerebral artery,Parte pré-comunicante da artéria cerebral posterior direita,pendente
+FMA50640,Precommunicating part of left posterior cerebral artery,Parte pré-comunicante da artéria cerebral posterior esquerda,pendente
+FMA50445,Right prefrontal artery,Artéria pré-frontal direita,pendente
+FMA50478,Left prefrontal artery,Artéria pré-frontal esquerda,pendente
+FMA3958,Right vertebral artery,Artéria vertebral direita,pendente
+FMA4066,Left vertebral artery,Artéria vertebral esquerda,pendente
+FMA50574,Right superior cerebellar artery,Artéria cerebelar superior direita,pendente
+FMA50575,Left superior cerebellar artery,Artéria cerebelar superior esquerda,pendente
+FMA50672,Right posterior medial choroidal artery,Artéria corióidea posterior medial direita,pendente
+FMA50673,Left posterior medial choroidal artery,Artéria corióidea posterior medial esquerda,pendente
+FMA50696,Superior vermian branch of medial branch of right superior cerebellar artery,Ramo vermiano superior do ramo medial da artéria cerebelar superior direita,pendente
+FMA50697,Superior vermian branch of medial branch of left superior cerebellar artery,Ramo vermiano superior do ramo medial da artéria cerebelar superior esquerda,pendente
+FMA50473,Temporo-occipital branch of right middle cerebral artery,Ramo temporo-occipital da artéria cerebral média direita,pendente
+FMA50474,Temporo-occipital branch of left middle cerebral artery,Ramo temporo-occipital da artéria cerebral média esquerda,pendente
+FMA78454,Third ventricle,Terceiro ventrículo,pendente
+FMA78469,Fourth ventricle,Quarto ventrículo,pendente
+FMA72670,Left angular gyrus,Giro angular esquerdo,pendente
+FMA72669,Right angular gyrus,Giro angular direito,pendente
+FMA61961,Anterior commissure,Comissura anterior,pendente
+FMA73462,Brachium of left superior colliculus,Braço do colículo superior esquerdo,pendente
+FMA73461,Brachium of right superior colliculus,Braço do colículo superior direito,pendente
+FMA78497,Central canal of spinal cord,Canal central da medula espinal,pendente
+FMA78467,Cerebral aqueduct,Aqueduto do mesencéfalo,pendente
+FMA72718,Left cingulate gyrus,Giro do cíngulo esquerdo,pendente
+FMA72717,Right cingulate gyrus,Giro do cíngulo direito,pendente
+FMA61970,Commissure of fornix of forebrain,Comissura do fórnice do prosencéfalo,pendente
+FMA86464,Corpus callosum,Corpo caloso,pendente
+FMA62032,Habenula,Habênula,pendente
+FMA72658,Left inferior frontal gyrus,Giro frontal inferior esquerdo,pendente
+FMA72657,Right inferior frontal gyrus,Giro frontal inferior direito,pendente
+FMA72688,Left inferior temporal gyrus,Giro temporal inferior esquerdo,pendente
+FMA72687,Right inferior temporal gyrus,Giro temporal inferior direito,pendente
+FMA72978,Left insula,Ínsula esquerda,pendente
+FMA72977,Right insula,Ínsula direita,pendente
+FMA72907,Left internal capsule,Cápsula interna esquerda,pendente
+FMA72906,Right internal capsule,Cápsula interna direita,pendente
+FMA75351,Interventricular foramen,Forame interventricular,pendente
+FMA72833,Left amygdala,Corpo amigdaloide esquerdo,pendente
+FMA72827,Left caudate nucleus,Núcleo caudado esquerdo,pendente
+FMA61934,Choroid plexus of cerebral hemisphere,Plexo corióideo do hemisfério cerebral,pendente
+FMA72925,Left fornix of forebrain,Fórnice do prosencéfalo esquerdo,pendente
+FMA72831,Left globus pallidus,Globo pálido esquerdo,pendente
+FMA260794,White matter of left cerebral hemisphere,Substância branca do hemisfério cerebral esquerdo,pendente
+FMA72714,Left hippocampus,Hipocampo esquerdo,pendente
+FMA62008,Hypothalamus,Hipotálamo,pendente
+FMA73464,Brachium of left inferior colliculus,Braço do colículo inferior esquerdo,pendente
+FMA73435,Left inferior colliculus,Colículo inferior esquerdo,pendente
+FMA83740,Interpeduncular fossa,Fossa interpeduncular,pendente
+FMA61975,Lamina terminalis,Lâmina terminal,pendente
+FMA73304,Left lateral geniculate body,Corpo geniculado lateral esquerdo,pendente
+FMA78450,Left lateral ventricle,Ventrículo lateral esquerdo,pendente
+FMA74877,Mammillary body,Corpo mamilar,pendente
+FMA62004,Medulla oblongata,Bulbo,pendente
+FMA61993,Midbrain,Mesencéfalo,pendente
+FMA62045,Optic chiasm,Quiasma óptico,pendente
+FMA67936,Left optic tract,Trato óptico esquerdo,pendente
+FMA62394,Peduncle of midbrain,Pedúnculo do mesencéfalo,pendente
+FMA67943,Pons,Ponte,pendente
+FMA72829,Left putamen,Putame esquerdo,pendente
+FMA73414,Left stria medullaris of thalamus,Estria medular do tálamo esquerda,pendente
+FMA72940,Left stria terminalis,Estria terminal esquerda,pendente
+FMA73423,Left superior colliculus,Colículo superior esquerdo,pendente
+FMA62327,Tuber cinereum,Túber cinéreo,pendente
+FMA67944,Cerebellum,Cerebelo,pendente
+FMA258716,Left thalamus,Tálamo esquerdo,pendente
+FMA72690,Left fusiform gyrus,Giro fusiforme esquerdo,pendente
+FMA72689,Right fusiform gyrus,Giro fusiforme direito,pendente
+FMA72706,Left parahippocampal gyrus,Giro para-hipocampal esquerdo,pendente
+FMA72705,Right parahippocampal gyrus,Giro para-hipocampal direito,pendente
+FMA72656,Left middle frontal gyrus,Giro frontal médio esquerdo,pendente
+FMA72655,Right middle frontal gyrus,Giro frontal médio direito,pendente
+FMA72686,Left middle temporal gyrus,Giro temporal médio esquerdo,pendente
+FMA72685,Right middle temporal gyrus,Giro temporal médio direito,pendente
+FMA72976,Left occipital lobe,Lobo occipital esquerdo,pendente
+FMA72975,Right occipital lobe,Lobo occipital direito,pendente
+FMA256194,Orbital gyrus,Giro orbital,pendente
+FMA62033,Pineal body,Glândula pineal,pendente
+FMA13889,Pituitary gland,Hipófise,pendente
+FMA72666,Left postcentral gyrus,Giro pós-central esquerdo,pendente
+FMA72665,Right postcentral gyrus,Giro pós-central direito,pendente
+FMA62072,Posterior commissure,Comissura posterior,pendente
+FMA72662,Left precentral gyrus,Giro pré-central esquerdo,pendente
+FMA72661,Right precentral gyrus,Giro pré-central direito,pendente
+FMA72826,Right caudate nucleus,Núcleo caudado direito,pendente
+FMA72924,Right fornix of forebrain,Fórnice do prosencéfalo direito,pendente
+FMA72830,Right globus pallidus,Globo pálido direito,pendente
+FMA260791,White matter of right cerebral hemisphere,Substância branca do hemisfério cerebral direito,pendente
+FMA72713,Right hippocampus,Hipocampo direito,pendente
+FMA73463,Brachium of right inferior colliculus,Braço do colículo inferior direito,pendente
+FMA73434,Right inferior colliculus,Colículo inferior direito,pendente
+FMA73303,Right lateral geniculate body,Corpo geniculado lateral direito,pendente
+FMA78449,Right lateral ventricle,Ventrículo lateral direito,pendente
+FMA73309,Right medial geniculate body,Corpo geniculado medial direito,pendente
+FMA73310,Left medial geniculate body,Corpo geniculado medial esquerdo,pendente
+FMA62382,Right optic tract,Trato óptico direito,pendente
+FMA72828,Right putamen,Putame direito,pendente
+FMA73413,Right stria medullaris of thalamus,Estria medular do tálamo direita,pendente
+FMA61974,Stria terminalis,Estria terminal,pendente
+FMA73422,Right superior colliculus,Colículo superior direito,pendente
+FMA258714,Right thalamus,Tálamo direito,pendente
+FMA72832,Right amygdala,Corpo amigdaloide direito,pendente
+FMA61842,Septum of telencephalon,Septo do telencéfalo,pendente
+FMA72654,Left superior frontal gyrus,Giro frontal superior esquerdo,pendente
+FMA72653,Right superior frontal gyrus,Giro frontal superior direito,pendente
+FMA72672,Left superior parietal lobule,Lóbulo parietal superior esquerdo,pendente
+FMA72671,Right superior parietal lobule,Lóbulo parietal superior direito,pendente
+FMA72801,Anterior part of left superior temporal gyrus,Parte anterior do giro temporal superior esquerdo,pendente
+FMA72800,Anterior part of right superior temporal gyrus,Parte anterior do giro temporal superior direito,pendente
+FMA72805,Posterior part of left superior temporal gyrus,Parte posterior do giro temporal superior esquerdo,pendente
+FMA72804,Posterior part of right superior temporal gyrus,Parte posterior do giro temporal superior direito,pendente
+FMA72668,Left supramarginal gyrus,Giro supramarginal esquerdo,pendente
+FMA72667,Right supramarginal gyrus,Giro supramarginal direito,pendente
+FMA83966,Tentorium cerebelli,Tentório do cerebelo,pendente
+FMA50737,Celiac artery,Artéria celíaca,pendente
+FMA50735,Hepatic portal vein,Veia porta do fígado,pendente
+FMA15747,Hepatovenous segment IX,Segmento hepatovenoso IX,pendente
+FMA15793,Tributary of middle hepatic vein,Tributária da veia hepática média,pendente
+FMA71710,Left lobe branch of left hepatic artery,Ramo do lobo esquerdo da artéria hepática esquerda,pendente
+FMA71889,Caudate lobe tributary of left hepatic biliary tree,Tributária do lobo caudado da árvore biliar hepática esquerda,pendente
+FMA15415,Left portal vein,Veia porta esquerda,pendente
+FMA7198,Pancreas,Pâncreas,pendente
+FMA10419,Pancreatic duct,Ducto pancreático,pendente
+FMA15414,Right portal vein,Veia porta direita,pendente
+FMA82706,Caudate lobe branch of right portal vein,Ramo do lobo caudado da veia porta direita,pendente
+FMA70447,Caudate lobe branch of right hepatic artery,Ramo do lobo caudado da artéria hepática direita,pendente
+FMA71708,Right lobe branch of right hepatic artery,Ramo do lobo direito da artéria hepática direita,pendente
+FMA14749,Superior mesenteric artery,Artéria mesentérica superior,pendente
+FMA87217,Descending thoracic aorta,Aorta torácica descendente,pendente
+FMA3789,Abdominal aorta,Aorta abdominal,pendente
+FMA68109,Bronchial artery,Artéria bronquial,pendente
+FMA4149,Esophageal artery,Artéria esofágica,pendente
+FMA5042,Right superior intercostal artery,Artéria intercostal superior direita,pendente
+FMA3988,Right superior epigastric artery,Artéria epigástrica superior direita,pendente
+FMA3969,Right internal thoracic artery,Artéria torácica interna direita,pendente
+FMA22675,Right lateral thoracic artery,Artéria torácica lateral direita,pendente
+FMA66242,Right first posterior intercostal artery,Primeira artéria intercostal posterior direita,pendente
+FMA5041,Right second posterior intercostal artery,Segunda artéria intercostal posterior direita,pendente
+FMA63822,Posterior intercostal arteries,Artérias intercostais posteriores,pendente
+FMA4634,Right subcostal artery,Artéria subcostal direita,pendente
+FMA10692,Right musculophrenic artery,Artéria musculofrênica direita,pendente
+FMA4088,Left superior intercostal artery,Artéria intercostal superior esquerda,pendente
+FMA4083,Left superior epigastric artery,Artéria epigástrica superior esquerda,pendente
+FMA4068,Left internal thoracic artery,Artéria torácica interna esquerda,pendente
+FMA66243,Left first posterior intercostal artery,Primeira artéria intercostal posterior esquerda,pendente
+FMA4112,Left second posterior intercostal artery,Segunda artéria intercostal posterior esquerda,pendente
+FMA22676,Left lateral thoracic artery,Artéria torácica lateral esquerda,pendente
+FMA4654,Left subcostal artery,Artéria subcostal esquerda,pendente
+FMA4077,Left musculophrenic artery,Artéria musculofrênica esquerda,pendente
+FMA5011,Accessory hemiazygos vein,Veia hemiázigo acessória,pendente
+FMA70839,Set of anterior intercostal veins,Conjunto das veias intercostais anteriores,pendente
+FMA4797,Left superior intercostal vein,Veia intercostal superior esquerda,pendente
+FMA4951,Left subcostal vein,Veia subcostal esquerda,pendente
+FMA4786,Left musculophrenic vein,Veia musculofrênica esquerda,pendente
+FMA4877,Right superior intercostal vein,Veia intercostal superior direita,pendente
+FMA4758,Right internal thoracic vein,Veia torácica interna direita,pendente
+FMA4844,Right subcostal vein,Veia subcostal direita,pendente
+FMA4772,Right musculophrenic vein,Veia musculofrênica direita,pendente
+FMA14824,Marginal colic artery,Artéria marginal do colo,pendente
+FMA14819,Ileal branch of inferior branch of ileocolic artery,Ramo ileal do ramo inferior da artéria ileocólica,pendente
+FMA14752,Right renal artery,Artéria renal direita,pendente
+FMA8620,Right anterior segmental artery,Artéria segmentar anterior direita,pendente
+FMA86340,Superior segmental branch of right renal artery,Ramo segmentar superior da artéria renal direita,pendente
+FMA86346,Inferior segmental branch of right renal artery,Ramo segmentar inferior da artéria renal direita,pendente
+FMA86348,Posterior segmental branch of right renal artery,Ramo segmentar posterior da artéria renal direita,pendente
+FMA14753,Left renal artery,Artéria renal esquerda,pendente
+FMA86347,Inferior segmental branch of left renal artery,Ramo segmentar inferior da artéria renal esquerda,pendente
+FMA86341,Superior segmental branch of left renal artery,Ramo segmentar superior da artéria renal esquerda,pendente
+FMA86349,Posterior segmental branch of left renal artery,Ramo segmentar posterior da artéria renal esquerda,pendente
+FMA43916,Right dorsalis pedis artery,Artéria dorsal do pé direita,pendente
+FMA21354,Deep dorsal vein of penis,Veia dorsal profunda do pênis,pendente
+FMA21422,Descending branch of right lateral circumflex femoral artery,Ramo descendente da artéria circunflexa femoral lateral direita,pendente
+FMA69517,Distal perforating artery,Artéria perfurante distal,pendente
+FMA44882,Dorsal venous arch of left foot,Arco venoso dorsal do pé esquerdo,pendente
+FMA44881,Dorsal venous arch of right foot,Arco venoso dorsal do pé direito,pendente
+FMA21423,Descending branch of left lateral circumflex femoral artery,Ramo descendente da artéria circunflexa femoral lateral esquerda,pendente
+FMA43897,Left anterior tibial artery,Artéria tibial anterior esquerda,pendente
+FMA43908,Left anterior tibial recurrent artery,Artéria recorrente tibial anterior esquerda,pendente
+FMA69495,Left arcuate artery,Artéria arqueada esquerda,pendente
+FMA69515,Left deep plantar artery,Artéria plantar profunda esquerda,pendente
+FMA22508,Left descending genicular artery,Artéria descendente do joelho esquerda,pendente
+FMA44660,Dorsal digital artery of foot,Artéria digital dorsal do pé,pendente
+FMA43917,Left dorsalis pedis artery,Artéria dorsal do pé esquerda,pendente
+FMA70250,Left femoral artery,Artéria femoral esquerda,pendente
+FMA43893,Left inferior lateral genicular artery,Artéria inferior lateral do joelho esquerda,pendente
+FMA43891,Left inferior medial genicular artery,Artéria inferior medial do joelho esquerda,pendente
+FMA20802,Left lateral circumflex femoral artery,Artéria circunflexa femoral lateral esquerda,pendente
+FMA43932,Left lateral plantar artery,Artéria plantar lateral esquerda,pendente
+FMA22589,Left lateral superior genicular artery,Artéria superior lateral do joelho esquerda,pendente
+FMA69491,Left lateral tarsal artery,Artéria tarsal lateral esquerda,pendente
+FMA43930,Left medial plantar artery,Artéria plantar medial esquerda,pendente
+FMA22587,Left medial superior genicular artery,Artéria superior medial do joelho esquerda,pendente
+FMA22563,Left middle genicular artery,Artéria média do joelho esquerda,pendente
+FMA43944,Left plantar arch,Arco plantar esquerdo,pendente
+FMA77381,Left popliteal artery,Artéria poplítea esquerda,pendente
+FMA43899,Left posterior tibial artery,Artéria tibial posterior esquerda,pendente
+FMA43938,Left superficial medial plantar artery,Artéria plantar medial superficial esquerda,pendente
+FMA70815,Set of perforating arteries,Conjunto das artérias perfurantes,pendente
+FMA71562,Set of calcaneal branches of posterior tibial artery,Conjunto dos ramos calcâneos da artéria tibial posterior,pendente
+FMA70821,Set of common plantar digital arteries,Conjunto das artérias digitais plantares comuns,pendente
+FMA70801,Set of dorsal digital arteries,Conjunto das artérias digitais dorsais,pendente
+FMA71564,Set of plantar digital arteries proper,Conjunto das artérias digitais plantares próprias,pendente
+FMA43956,Plantar metatarsal artery,Artéria metatarsal plantar,pendente
+FMA44337,Left anterior tibial vein,Veia tibial anterior esquerda,pendente
+FMA51043,Left deep femoral vein,Veia femoral profunda esquerda,pendente
+FMA70922,Set of perforating veins,Conjunto das veias perfurantes,pendente
+FMA21189,Left femoral vein,Veia femoral esquerda,pendente
+FMA21380,Left great saphenous vein,Veia safena magna esquerda,pendente
+FMA44888,Left genicular vein,Veia do joelho esquerda,pendente
+FMA44499,Tributary of plantar venous arch,Tributária do arco venoso plantar,pendente
+FMA44329,Left popliteal vein,Veia poplítea esquerda,pendente
+FMA44339,Left posterior tibial vein,Veia tibial posterior esquerda,pendente
+FMA70919,Set of plantar digital veins,Conjunto das veias digitais plantares,pendente
+FMA44335,Left small saphenous vein,Veia safena parva esquerda,pendente
+FMA44341,Left superficial epigastric vein,Veia epigástrica superficial esquerda,pendente
+FMA44884,Plantar venous arch of left foot,Arco venoso plantar do pé esquerdo,pendente
+FMA44883,Plantar venous arch of right foot,Arco venoso plantar do pé direito,pendente
+FMA43896,Right anterior tibial artery,Artéria tibial anterior direita,pendente
+FMA43907,Right anterior tibial recurrent artery,Artéria recorrente tibial anterior direita,pendente
+FMA44336,Right anterior tibial vein,Veia tibial anterior direita,pendente
+FMA69494,Right arcuate artery,Artéria arqueada direita,pendente
+FMA51042,Right deep femoral vein,Veia femoral profunda direita,pendente
+FMA69514,Right deep plantar artery,Artéria plantar profunda direita,pendente
+FMA22507,Right descending genicular artery,Artéria descendente do joelho direita,pendente
+FMA70249,Right femoral artery,Artéria femoral direita,pendente
+FMA21188,Right femoral vein,Veia femoral direita,pendente
+FMA21379,Right great saphenous vein,Veia safena magna direita,pendente
+FMA43892,Right inferior lateral genicular artery,Artéria inferior lateral do joelho direita,pendente
+FMA44887,Right genicular vein,Veia do joelho direita,pendente
+FMA43890,Right inferior medial genicular artery,Artéria inferior medial do joelho direita,pendente
+FMA20801,Right lateral circumflex femoral artery,Artéria circunflexa femoral lateral direita,pendente
+FMA43931,Right lateral plantar artery,Artéria plantar lateral direita,pendente
+FMA22588,Right lateral superior genicular artery,Artéria superior lateral do joelho direita,pendente
+FMA69490,Right lateral tarsal artery,Artéria tarsal lateral direita,pendente
+FMA43929,Right medial plantar artery,Artéria plantar medial direita,pendente
+FMA22586,Right medial superior genicular artery,Artéria superior medial do joelho direita,pendente
+FMA22562,Right middle genicular artery,Artéria média do joelho direita,pendente
+FMA43943,Right plantar arch,Arco plantar direito,pendente
+FMA77380,Right popliteal artery,Artéria poplítea direita,pendente
+FMA44328,Right popliteal vein,Veia poplítea direita,pendente
+FMA43898,Right posterior tibial artery,Artéria tibial posterior direita,pendente
+FMA44338,Right posterior tibial vein,Veia tibial posterior direita,pendente
+FMA44334,Right small saphenous vein,Veia safena parva direita,pendente
+FMA44340,Right superficial epigastric vein,Veia epigástrica superficial direita,pendente
+FMA43937,Right superficial medial plantar artery,Artéria plantar medial superficial direita,pendente
+FMA44886,Left fibular vein,Veia fibular esquerda,pendente
+FMA70917,Set of dorsal digital veins,Conjunto das veias digitais dorsais,pendente
+FMA22954,Dorsal metacarpal vein,Veia metacarpal dorsal,pendente
+FMA44922,Left lateral circumflex femoral vein,Veia circunflexa femoral lateral esquerda,pendente
+FMA44919,Left medial circumflex femoral vein,Veia circunflexa femoral medial esquerda,pendente
+FMA44885,Right fibular vein,Veia fibular direita,pendente
+FMA44504,Plantar metatarsal vein,Veia metatarsal plantar,pendente
+FMA44920,Right lateral circumflex femoral vein,Veia circunflexa femoral lateral direita,pendente
+FMA44918,Right medial circumflex femoral vein,Veia circunflexa femoral medial direita,pendente
+FMA21384,Superficial dorsal vein of penis,Veia dorsal superficial do pênis,pendente
+FMA10697,Right inferior thyroid artery,Artéria tireóidea inferior direita,pendente
+FMA10680,Left inferior thyroid artery,Artéria tireóidea inferior esquerda,pendente
+FMA23069,Acromial branch of left thoraco-acromial artery,Ramo acromial da artéria toracoacromial esquerda,pendente
+FMA22683,Left anterior circumflex humeral artery,Artéria circunflexa anterior do úmero esquerda,pendente
+FMA77955,Left anterior circumflex humeral vein,Veia circunflexa anterior do úmero esquerda,pendente
+FMA22813,Left anterior interosseous artery,Artéria interóssea anterior esquerda,pendente
+FMA22713,Left inferior ulnar collateral artery,Artéria colateral ulnar inferior esquerda,pendente
+FMA22656,Left axillary artery,Artéria axilar esquerda,pendente
+FMA13331,Left axillary vein,Veia axilar esquerda,pendente
+FMA22910,Left basilic vein,Veia basílica esquerda,pendente
+FMA22692,Left brachial artery,Artéria braquial esquerda,pendente
+FMA13326,Left cephalic vein,Veia cefálica esquerda,pendente
+FMA23181,Left circumflex scapular artery,Artéria circunflexa da escápula esquerda,pendente
+FMA77950,Left circumflex scapular vein,Veia circunflexa da escápula esquerda,pendente
+FMA22808,Left common interosseous artery,Artéria interóssea comum esquerda,pendente
+FMA4086,Left costocervical trunk,Tronco costocervical esquerdo,pendente
+FMA22697,Left deep brachial artery,Artéria braquial profunda esquerda,pendente
+FMA4134,Left deep cervical artery,Artéria cervical profunda esquerda,pendente
+FMA22840,Left deep palmar arch,Arco palmar profundo esquerdo,pendente
+FMA62507,Dorsal venous network of left hand,Rede venosa dorsal da mão esquerda,pendente
+FMA22913,Left deep palmar venous arch,Arco venoso palmar profundo esquerdo,pendente
+FMA23073,Deltoid branch of left thoraco-acromial artery,Ramo deltóideo da artéria toracoacromial esquerda,pendente
+FMA22773,Dorsal carpal branch of left radial artery,Ramo carpal dorsal da artéria radial esquerda,pendente
+FMA10552,Left dorsal scapular artery,Artéria dorsal da escápula esquerda,pendente
+FMA71212,Left lateral thoracic vein,Veia torácica lateral esquerda,pendente
+FMA22969,Left median antebrachial vein,Veia intermédia do antebraço esquerda,pendente
+FMA22965,Left median cubital vein,Veia intermédia do cotovelo esquerda,pendente
+FMA22822,Left dorsal carpal branch of ulnar artery,Ramo carpal dorsal da artéria ulnar esquerda,pendente
+FMA22865,Left palmar metacarpal artery,Artéria metacarpal palmar esquerda,pendente
+FMA22921,Left palmar metacarpal vein,Veia metacarpal palmar esquerda,pendente
+FMA22687,Left posterior circumflex humeral artery,Artéria circunflexa posterior do úmero esquerda,pendente
+FMA22805,Left posterior ulnar recurrent artery,Artéria recorrente ulnar posterior esquerda,pendente
+FMA22734,Left radial artery,Artéria radial esquerda,pendente
+FMA22766,Left radial recurrent artery,Artéria recorrente radial esquerda,pendente
+FMA22949,Left radial vein,Veia radial esquerda,pendente
+FMA268669,Left recurrent interosseous artery,Artéria interóssea recorrente esquerda,pendente
+FMA22679,Left subscapular artery,Artéria subescapular esquerda,pendente
+FMA23115,Left subscapular vein,Veia subescapular esquerda,pendente
+FMA22837,Left superficial palmar arterial arch,Arco palmar superficial esquerdo,pendente
+FMA22916,Left superficial palmar venous arch,Arco venoso palmar superficial esquerdo,pendente
+FMA50860,Left suprascapular vein,Veia supraescapular esquerda,pendente
+FMA10681,Left suprascapular artery,Artéria supraescapular esquerda,pendente
+FMA66564,Trunk of left thoraco-acromial artery,Tronco da artéria toracoacromial esquerda,pendente
+FMA66322,Left thoracodorsal artery,Artéria toracodorsal esquerda,pendente
+FMA71215,Left thoracodorsal vein,Veia toracodorsal esquerda,pendente
+FMA4084,Left thyrocervical trunk,Tronco tireocervical esquerdo,pendente
+FMA10683,Left superficial cervical artery,Artéria cervical superficial esquerda,pendente
+FMA10682,Left transverse cervical artery,Artéria transversa do pescoço esquerda,pendente
+FMA22798,Left ulnar artery,Artéria ulnar esquerda,pendente
+FMA22802,Left anterior ulnar recurrent artery,Artéria recorrente ulnar anterior esquerda,pendente
+FMA22952,Left ulnar vein,Veia ulnar esquerda,pendente
+FMA23127,Radial collateral branch of left deep brachial artery,Ramo colateral radial da artéria braquial profunda esquerda,pendente
+FMA23126,Radial collateral branch of right deep brachial artery,Ramo colateral radial da artéria braquial profunda direita,pendente
+FMA23068,Acromial branch of right thoraco-acromial artery,Ramo acromial da artéria toracoacromial direita,pendente
+FMA22682,Right anterior circumflex humeral artery,Artéria circunflexa anterior do úmero direita,pendente
+FMA77954,Right anterior circumflex humeral vein,Veia circunflexa anterior do úmero direita,pendente
+FMA22812,Right anterior interosseous artery,Artéria interóssea anterior direita,pendente
+FMA22712,Right inferior ulnar collateral artery,Artéria colateral ulnar inferior direita,pendente
+FMA22655,Right axillary artery,Artéria axilar direita,pendente
+FMA13330,Right axillary vein,Veia axilar direita,pendente
+FMA22909,Right basilic vein,Veia basílica direita,pendente
+FMA22691,Right brachial artery,Artéria braquial direita,pendente
+FMA13325,Right cephalic vein,Veia cefálica direita,pendente
+FMA23180,Right circumflex scapular artery,Artéria circunflexa da escápula direita,pendente
+FMA77949,Right circumflex scapular vein,Veia circunflexa da escápula direita,pendente
+FMA22807,Right common interosseous artery,Artéria interóssea comum direita,pendente
+FMA5039,Right costocervical trunk,Tronco costocervical direito,pendente
+FMA22696,Right deep brachial artery,Artéria braquial profunda direita,pendente
+FMA10660,Right deep cervical artery,Artéria cervical profunda direita,pendente
+FMA22839,Right deep palmar arch,Arco palmar profundo direito,pendente
+FMA62506,Dorsal venous network of right hand,Rede venosa dorsal da mão direita,pendente
+FMA22912,Right deep palmar venous arch,Arco venoso palmar profundo direito,pendente
+FMA23072,Deltoid branch of right thoraco-acromial artery,Ramo deltóideo da artéria toracoacromial direita,pendente
+FMA22772,Dorsal carpal branch of right radial artery,Ramo carpal dorsal da artéria radial direita,pendente
+FMA4057,Right dorsal scapular artery,Artéria dorsal da escápula direita,pendente
+FMA71211,Right lateral thoracic vein,Veia torácica lateral direita,pendente
+FMA22968,Right median antebrachial vein,Veia intermédia do antebraço direita,pendente
+FMA22964,Right median cubital vein,Veia intermédia do cotovelo direita,pendente
+FMA22821,Right dorsal carpal branch of ulnar artery,Ramo carpal dorsal da artéria ulnar direita,pendente
+FMA22864,Right palmar metacarpal artery,Artéria metacarpal palmar direita,pendente
+FMA22920,Right palmar metacarpal vein,Veia metacarpal palmar direita,pendente
+FMA22685,Right posterior circumflex humeral artery,Artéria circunflexa posterior do úmero direita,pendente
+FMA22804,Right posterior ulnar recurrent artery,Artéria recorrente ulnar posterior direita,pendente
+FMA22733,Right radial artery,Artéria radial direita,pendente
+FMA22764,Right radial recurrent artery,Artéria recorrente radial direita,pendente
+FMA22948,Right radial vein,Veia radial direita,pendente
+FMA268667,Right recurrent interosseous artery,Artéria interóssea recorrente direita,pendente
+FMA22678,Right subscapular artery,Artéria subescapular direita,pendente
+FMA23114,Right subscapular vein,Veia subescapular direita,pendente
+FMA22835,Right superficial palmar arterial arch,Arco palmar superficial direito,pendente
+FMA22915,Right superficial palmar venous arch,Arco venoso palmar superficial direito,pendente
+FMA50859,Right suprascapular vein,Veia supraescapular direita,pendente
+FMA10698,Right suprascapular artery,Artéria supraescapular direita,pendente
+FMA66563,Trunk of right thoraco-acromial artery,Tronco da artéria toracoacromial direita,pendente
+FMA66321,Right thoracodorsal artery,Artéria toracodorsal direita,pendente
+FMA71214,Right thoracodorsal vein,Veia toracodorsal direita,pendente
+FMA3992,Right thyrocervical trunk,Tronco tireocervical direito,pendente
+FMA10700,Right superficial cervical artery,Artéria cervical superficial direita,pendente
+FMA10699,Right transverse cervical artery,Artéria transversa do pescoço direita,pendente
+FMA22797,Right ulnar artery,Artéria ulnar direita,pendente
+FMA22801,Right anterior ulnar recurrent artery,Artéria recorrente ulnar anterior direita,pendente
+FMA22951,Right ulnar vein,Veia ulnar direita,pendente
+FMA22936,Left medial brachial vein,Veia braquial medial esquerda,pendente
+FMA22778,Left arteria radialis indicis,Artéria radial do indicador esquerda,pendente
+FMA85118,Left first common palmar digital artery,Primeira artéria digital palmar comum esquerda,pendente
+FMA85120,Left second common palmar digital artery,Segunda artéria digital palmar comum esquerda,pendente
+FMA85122,Left third common palmar digital artery,Terceira artéria digital palmar comum esquerda,pendente
+FMA85103,Proper palmar digital vein of left little finger,Veia digital palmar própria do dedo mínimo esquerdo,pendente
+FMA22923,Common palmar digital vein,Veia digital palmar comum,pendente
+FMA85097,Proper palmar digital vein of left index finger,Veia digital palmar própria do indicador esquerdo,pendente
+FMA85099,Proper palmar digital vein of left middle finger,Veia digital palmar própria do dedo médio esquerdo,pendente
+FMA85101,Proper palmar digital vein of left ring finger,Veia digital palmar própria do dedo anular esquerdo,pendente
+FMA23064,Pectoral branch of left thoraco-acromial artery,Ramo peitoral da artéria toracoacromial esquerda,pendente
+FMA23125,Middle collateral branch of left deep brachial artery,Ramo colateral médio da artéria braquial profunda esquerda,pendente
+FMA23051,Medial proper palmar digital artery of left index finger,Artéria digital palmar própria medial do indicador esquerdo,pendente
+FMA22860,Lateral proper palmar digital artery of left middle finger,Artéria digital palmar própria lateral do dedo médio esquerdo,pendente
+FMA85116,Lateral proper palmar digital artery of left ring finger,Artéria digital palmar própria lateral do dedo anular esquerdo,pendente
+FMA23055,Lateral proper palmar digital artery of left little finger,Artéria digital palmar própria lateral do dedo mínimo esquerdo,pendente
+FMA85124,Left fourth common palmar digital artery,Quarta artéria digital palmar comum esquerda,pendente
+FMA22907,Left arteria princeps pollicis,Artéria principal do polegar esquerda,pendente
+FMA22935,Right medial brachial vein,Veia braquial medial direita,pendente
+FMA22777,Right arteria radialis indicis,Artéria radial do indicador direita,pendente
+FMA22856,Right first common palmar digital artery,Primeira artéria digital palmar comum direita,pendente
+FMA85119,Right second common palmar digital artery,Segunda artéria digital palmar comum direita,pendente
+FMA85121,Right third common palmar digital artery,Terceira artéria digital palmar comum direita,pendente
+FMA70800,Set of dorsal metacarpal arteries,Conjunto das artérias metacarpais dorsais,pendente
+FMA85102,Proper palmar digital vein of right little finger,Veia digital palmar própria do dedo mínimo direito,pendente
+FMA85096,Proper palmar digital vein of right index finger,Veia digital palmar própria do indicador direito,pendente
+FMA85098,Proper palmar digital vein of right middle finger,Veia digital palmar própria do dedo médio direito,pendente
+FMA85100,Proper palmar digital vein of right ring finger,Veia digital palmar própria do dedo anular direito,pendente
+FMA23063,Pectoral branch of right thoraco-acromial artery,Ramo peitoral da artéria toracoacromial direita,pendente
+FMA23124,Middle collateral branch of right deep brachial artery,Ramo colateral médio da artéria braquial profunda direita,pendente
+FMA23050,Medial proper palmar digital artery of right index finger,Artéria digital palmar própria medial do indicador direito,pendente
+FMA22858,Lateral proper palmar digital artery of right middle finger,Artéria digital palmar própria lateral do dedo médio direito,pendente
+FMA85115,Lateral proper palmar digital artery of right ring finger,Artéria digital palmar própria lateral do dedo anular direito,pendente
+FMA85112,Medial proper palmar digital artery of right middle finger,Artéria digital palmar própria medial do dedo médio direito,pendente
+FMA23054,Lateral proper palmar digital artery of right little finger,Artéria digital palmar própria lateral do dedo mínimo direito,pendente
+FMA23052,Medial proper palmar digital artery of right ring finger,Artéria digital palmar própria medial do dedo anular direito,pendente
+FMA85123,Right fourth common palmar digital artery,Quarta artéria digital palmar comum direita,pendente
+FMA22905,Right arteria princeps pollicis,Artéria principal do polegar direita,pendente
+FMA22707,Right superior ulnar collateral artery,Artéria colateral ulnar superior direita,pendente
+FMA22708,Left superior ulnar collateral artery,Artéria colateral ulnar superior esquerda,pendente
+FMA15745,Hepatovenous segment VII,Segmento hepático VII,pendente
+FMA14340,Middle hepatic vein,Veia hepática média,pendente
+FMA14339,Left hepatic vein,Veia hepática esquerda,pendente
+FMA14338,Right hepatic vein,Veia hepática direita,pendente
+FMA7247,Left anterior cusp of pulmonary valve,Válvula semilunar anterior esquerda da valva do tronco pulmonar,pendente
+FMA7265,Anterolateral head of lateral papillary muscle of left ventricle,Cabeça anterolateral do músculo papilar lateral do ventrículo esquerdo,pendente
+FMA7260,Anterior papillary muscle of right ventricle,Músculo papilar anterior do ventrículo direito,pendente
+FMA7242,Anterior leaflet of mitral valve,Folheto anterior da valva mitral,pendente
+FMA7238,Anterior leaflet of tricuspid valve,Folheto anterior da valva tricúspide,pendente
+FMA9466,Cavity of left ventricle,Cavidade do ventrículo esquerdo,pendente
+FMA9291,Cavity of right ventricle,Cavidade do ventrículo direito,pendente
+FMA11359,Cavity of right atrium,Cavidade do átrio direito,pendente
+FMA9465,Cavity of left atrium,Cavidade do átrio esquerdo,pendente
+FMA7254,Left posterior cusp of aortic valve,Válvula semilunar posterior esquerda da valva aórtica,pendente
+FMA7250,Posterior cusp of pulmonary valve,Válvula semilunar posterior da valva do tronco pulmonar,pendente
+FMA13884,Wall of ventricle,Parede do ventrículo,pendente
+FMA7264,Lateral papillary muscle of left ventricle,Músculo papilar lateral do ventrículo esquerdo,pendente
+FMA7261,Posterior papillary muscle of right ventricle,Músculo papilar posterior do ventrículo direito,pendente
+FMA7252,Right posterior cusp of aortic valve,Válvula semilunar posterior direita da valva aórtica,pendente
+FMA7243,Posterior leaflet of mitral valve,Folheto posterior da valva mitral,pendente
+FMA7239,Posterior leaflet of tricuspid valve,Folheto posterior da valva tricúspide,pendente
+FMA7249,Right anterior cusp of pulmonary valve,Válvula semilunar anterior direita da valva do tronco pulmonar,pendente
+FMA7253,Anterior cusp of aortic valve,Válvula semilunar anterior da valva aórtica,pendente
+FMA7240,Septal leaflet of tricuspid valve,Folheto septal da valva tricúspide,pendente
+FMA7262,Septal papillary muscle of right ventricle,Músculo papilar septal do ventrículo direito,pendente
+FMA9531,Wall of left atrium,Parede do átrio esquerdo,pendente
+FMA9457,Wall of right atrium,Parede do átrio direito,pendente
+FMA9615,Cricoid cartilage,Cartilagem cricóidea,pendente
+FMA68227,Inferior lingular bronchial tree,Árvore brônquica lingular inferior,pendente
+FMA68230,Left medial basal segmental bronchial tree,Árvore brônquica segmentar basal medial esquerda,pendente
+FMA68222,Left anterior segmental bronchial tree,Árvore brônquica segmentar anterior esquerda,pendente
+FMA68223,Left apical segmental bronchial tree,Árvore brônquica segmentar apical esquerda,pendente
+FMA68232,Left lateral basal segmental bronchial tree,Árvore brônquica segmentar basal lateral esquerda,pendente
+FMA68233,Left posterior basal segmental bronchial tree,Árvore brônquica segmentar basal posterior esquerda,pendente
+FMA68225,Left posterior segmental bronchial tree,Árvore brônquica segmentar posterior esquerda,pendente
+FMA68228,Left superior segmental bronchial tree,Árvore brônquica segmentar superior esquerda,pendente
+FMA68215,Lateral segmental bronchial tree,Árvore brônquica segmentar lateral,pendente
+FMA7396,Left main bronchus,Brônquio principal esquerdo,pendente
+FMA68214,Medial segmental bronchial tree,Árvore brônquica segmentar medial,pendente
+FMA68321,Right anterior basal segmental bronchial tree,Árvore brônquica segmentar basal anterior direita,pendente
+FMA68212,Right anterior segmental bronchial tree,Árvore brônquica segmentar anterior direita,pendente
+FMA68211,Right apical segmental bronchial tree,Árvore brônquica segmentar apical direita,pendente
+FMA68220,Right lateral basal segmental bronchial tree,Árvore brônquica segmentar basal lateral direita,pendente
+FMA68218,Right medial basal segmental bronchial tree,Árvore brônquica segmentar basal medial direita,pendente
+FMA68221,Right posterior basal segmental bronchial tree,Árvore brônquica segmentar basal posterior direita,pendente
+FMA68213,Right posterior segmental bronchial tree,Árvore brônquica segmentar posterior direita,pendente
+FMA68216,Right superior segmental bronchial tree,Árvore brônquica segmentar superior direita,pendente
+FMA68226,Superior lingular bronchial tree,Árvore brônquica lingular superior,pendente
+FMA68231,Left anterior basal segmental bronchial tree,Árvore brônquica segmentar basal anterior esquerda,pendente
+FMA68418,Right main bronchus proper,Brônquio principal direito propriamente dito,pendente
+FMA7394,Trachea,Traqueia,pendente
+FMA46443,Right coccygeus,Coccígeo direito,pendente
+FMA45858,Right iliococcygeus,Iliococcígeo direito,pendente
+FMA45854,Right pubococcygeus,Pubococcígeo direito,pendente
+FMA45856,Right puborectalis,Puborretal direito,pendente
+FMA59505,Right major alar cartilage,Cartilagem alar maior direita,pendente
+FMA59506,Left major alar cartilage,Cartilagem alar maior esquerda,pendente
+FMA59513,Left lateral nasal cartilage,Cartilagem nasal lateral esquerda,pendente
+FMA59503,Septal nasal cartilage,Cartilagem do septo nasal,pendente
+FMA59512,Right lateral nasal cartilage,Cartilagem nasal lateral direita,pendente
+FMA7196,Spleen,Baço,pendente
+FMA14773,Splenic artery,Artéria esplênica,pendente
+FMA7131,Esophagus,Esôfago,pendente
+FMA7148,Stomach,Estômago,pendente
+FMA14542,Appendix,Apêndice vermiforme,pendente
+FMA14545,Ascending colon,Colo ascendente,pendente
+FMA14547,Descending colon,Colo descendente,pendente
+FMA15044,Taenia libera,Tênia livre,pendente
+FMA15042,Taenia mesocolica,Tênia mesocólica,pendente
+FMA15043,Taenia omentalis,Tênia omental,pendente
+FMA14544,Rectum,Reto,pendente
+FMA14546,Transverse colon,Colo transverso,pendente
+FMA7206,Duodenum,Duodeno,pendente
+FMA14964,Proximal part of ileum,Parte proximal do íleo,pendente
+FMA14965,Middle part of ileum,Parte média do íleo,pendente
+FMA14966,Distal part of ileum,Parte distal do íleo,pendente
+FMA11338,Ileocecal junction,Junção ileocecal,pendente
+FMA16981,Proximal part of jejunum,Parte proximal do jejuno,pendente
+FMA16982,Middle part of jejunum,Parte média do jejuno,pendente
+FMA16983,Distal part of jejunum,Parte distal do jejuno,pendente
+FMA63120,Parenchyma of pancreas,Parênquima do pâncreas,pendente
+FMA63103,Pancreatic duct tree,Árvore dos ductos pancreáticos,pendente
+FMA74912,Trunk of anterior interventricular branch of left coronary artery,Tronco do ramo interventricular anterior da artéria coronária esquerda,pendente
+FMA3872,First right anterior branch of anterior interventricular branch of left coronary artery,Primeiro ramo anterior direito do ramo interventricular anterior da artéria coronária esquerda,pendente
+FMA3860,Diagonal branch of anterior descending branch of left coronary artery,Ramo diagonal do ramo descendente anterior da artéria coronária esquerda,pendente
+FMA3876,Third right anterior branch of anterior interventricular branch of left coronary artery,Terceiro ramo anterior direito do ramo interventricular anterior da artéria coronária esquerda,pendente
+FMA3868,Conus branch of anterior interventricular branch of left coronary artery,Ramo do cone arterial do ramo interventricular anterior da artéria coronária esquerda,pendente
+FMA3874,Second right anterior branch of anterior interventricular branch of left coronary artery,Segundo ramo anterior direito do ramo interventricular anterior da artéria coronária esquerda,pendente
+FMA3895,Circumflex branch of left coronary artery,Ramo circunflexo da artéria coronária esquerda,pendente
+FMA4706,Coronary sinus,Seio coronário,pendente
+FMA4707,Great cardiac vein,Veia cardíaca magna,pendente
+FMA66403,Anterior interventricular vein,Veia interventricular anterior,pendente
+FMA3818,Marginal branch of right coronary artery,Ramo marginal da artéria coronária direita,pendente
+FMA3807,Right conus artery,Artéria do cone arterial direita,pendente
+FMA3815,First anterior ventricular branch of right coronary artery,Primeiro ramo ventricular anterior da artéria coronária direita,pendente
+FMA4713,Middle cardiac vein,Veia cardíaca média,pendente
+FMA3840,Posterior interventricular branch of right coronary artery,Ramo interventricular posterior da artéria coronária direita,pendente
+FMA4712,Posterior vein of left ventricle,Veia posterior do ventrículo esquerdo,pendente
+FMA4708,Left marginal vein,Veia marginal esquerda,pendente
+FMA3837,First posterior ventricular branch of right coronary artery,Primeiro ramo ventricular posterior da artéria coronária direita,pendente
+FMA3802,Trunk of right coronary artery,Tronco da artéria coronária direita,pendente
+FMA4714,Small cardiac vein,Veia cardíaca parva,pendente
+FMA76767,Anterior cardiac vein,Veia cardíaca anterior,pendente
+FMA4716,Right marginal vein,Veia marginal direita,pendente
+FMA3892,Septal branch of anterior interventricular artery,Ramo septal da artéria interventricular anterior,pendente
+FMA3847,First septal branch of right posterior interventricular artery,Primeiro ramo septal da artéria interventricular posterior direita,pendente
+FMA3848,Second septal branch of right posterior interventricular artery,Segundo ramo septal da artéria interventricular posterior direita,pendente
+FMA3855,Trunk of left coronary artery,Tronco da artéria coronária esquerda,pendente
+FMA46702,Left genioglossus,Genioglosso esquerdo,pendente
+FMA46704,Left hyoglossus,Hioglosso esquerdo,pendente
+FMA46636,Left inferior pharyngeal constrictor,Constritor inferior da faringe esquerdo,pendente
+FMA46729,Left levator veli palatini,Levantador do véu palatino esquerdo,pendente
+FMA46633,Right middle pharyngeal constrictor,Constritor médio da faringe direito,pendente
+FMA46672,Left palatopharyngeus,Palatofaríngeo esquerdo,pendente
+FMA55620,Left pterygomandibular raphe,Rafe pterigomandibular esquerda,pendente
+FMA46670,Left salpingopharyngeus,Salpingofaríngeo esquerdo,pendente
+FMA46668,Left stylopharyngeus,Estilofaríngeo esquerdo,pendente
+FMA46632,Left superior pharyngeal constrictor,Constritor superior da faringe esquerdo,pendente
+FMA46732,Left tensor veli palatini,Tensor do véu palatino esquerdo,pendente
+FMA55077,Pharyngeal raphe,Rafe da faringe,pendente
+FMA46698,Right genioglossus,Genioglosso direito,pendente
+FMA46703,Right hyoglossus,Hioglosso direito,pendente
+FMA46635,Right inferior pharyngeal constrictor,Constritor inferior da faringe direito,pendente
+FMA46728,Right levator veli palatini,Levantador do véu palatino direito,pendente
+FMA46634,Left middle pharyngeal constrictor,Constritor médio da faringe esquerdo,pendente
+FMA46671,Right palatopharyngeus,Palatofaríngeo direito,pendente
+FMA55619,Right pterygomandibular raphe,Rafe pterigomandibular direita,pendente
+FMA46669,Right salpingopharyngeus,Salpingofaríngeo direito,pendente
+FMA46667,Right stylopharyngeus,Estilofaríngeo direito,pendente
+FMA46631,Right superior pharyngeal constrictor,Constritor superior da faringe direito,pendente
+FMA46731,Right tensor veli palatini,Tensor do véu palatino direito,pendente
+FMA54640,Tongue,Língua,pendente
+FMA46733,Uvular muscle,Músculo da úvula,pendente
+FMA72311,Left stylohyoid ligament,Ligamento estilo-hióideo esquerdo,pendente
+FMA72309,Right stylohyoid ligament,Ligamento estilo-hióideo direito,pendente
+FMA59805,Left sublingual gland,Glândula sublingual esquerda,pendente
+FMA59803,Left submandibular gland,Glândula submandibular esquerda,pendente
+FMA59804,Right sublingual gland,Glândula sublingual direita,pendente
+FMA59802,Right submandibular gland,Glândula submandibular direita,pendente
+FMA55130,Epiglottis,Epiglote,pendente
+FMA55227,Hyo-epiglottic ligament,Ligamento hioepiglótico,pendente
+FMA52749,Hyoid bone,Osso hioide,pendente
+FMA55118,Left cuneiform cartilage,Cartilagem cuneiforme esquerda,pendente
+FMA46605,Left aryepiglotticus,Ariepiglótico esquerdo,pendente
+FMA55114,Left arytenoid cartilage,Cartilagem aritenóidea esquerda,pendente
+FMA55116,Left corniculate cartilage,Cartilagem corniculada esquerda,pendente
+FMA55252,Left conus elasticus,Cone elástico esquerdo,pendente
+FMA46581,Left lateral crico-arytenoid,Cricoaritenóideo lateral esquerdo,pendente
+FMA55141,Left lateral thyrohyoid ligament,Ligamento tíreo-hióideo lateral esquerdo,pendente
+FMA46585,Left oblique arytenoid,Aritenóideo oblíquo esquerdo,pendente
+FMA46614,Oblique part of left cricothyroid,Parte oblíqua do cricotireóideo esquerdo,pendente
+FMA46578,Left posterior crico-arytenoid,Cricoaritenóideo posterior esquerdo,pendente
+FMA46612,Straight part of left cricothyroid,Parte reta do cricotireóideo esquerdo,pendente
+FMA46590,Left thyro-arytenoid,Tireoaritenóideo esquerdo,pendente
+FMA55134,Left thyrohyoid membrane,Membrana tíreo-hióidea esquerda,pendente
+FMA55246,Left vocal ligament,Ligamento vocal esquerdo,pendente
+FMA46593,Left vocalis,Vocal esquerdo,pendente
+FMA55237,Median cricothyroid ligament,Ligamento cricotireóideo mediano,pendente
+FMA55138,Median thyrohyoid ligament,Ligamento tíreo-hióideo mediano,pendente
+FMA46604,Right aryepiglotticus,Ariepiglótico direito,pendente
+FMA55113,Right arytenoid cartilage,Cartilagem aritenóidea direita,pendente
+FMA55115,Right corniculate cartilage,Cartilagem corniculada direita,pendente
+FMA55251,Right conus elasticus,Cone elástico direito,pendente
+FMA55117,Right cuneiform cartilage,Cartilagem cuneiforme direita,pendente
+FMA46580,Right lateral crico-arytenoid,Cricoaritenóideo lateral direito,pendente
+FMA55140,Right lateral thyrohyoid ligament,Ligamento tíreo-hióideo lateral direito,pendente
+FMA46584,Right oblique arytenoid,Aritenóideo oblíquo direito,pendente
+FMA46613,Oblique part of right cricothyroid,Parte oblíqua do cricotireóideo direito,pendente
+FMA46577,Right posterior crico-arytenoid,Cricoaritenóideo posterior direito,pendente
+FMA46611,Straight part of right cricothyroid,Parte reta do cricotireóideo direito,pendente
+FMA46589,Right thyro-arytenoid,Tireoaritenóideo direito,pendente
+FMA55133,Right thyrohyoid membrane,Membrana tíreo-hióidea direita,pendente
+FMA55245,Right vocal ligament,Ligamento vocal direito,pendente
+FMA46592,Right vocalis,Vocal direito,pendente
+FMA55230,Thyro-epiglottic ligament,Ligamento tireoepiglótico,pendente
+FMA55099,Thyroid cartilage,Cartilagem tireóidea,pendente
+FMA46582,Transverse arytenoid,Aritenóideo transverso,pendente
+FMA7163,Skin,Pele,pendente
+FMA52781,External ear,Orelha externa,pendente
+FMA54237,Eyebrow,Sobrancelha,pendente
+FMA54241,Hair of head,Cabelo,pendente
+FMA59816,Lip,Lábio,pendente
+FMA54319,Pubic hair,Pelos púbicos,pendente
+FMA13365,Caudate lobe of liver,Lobo caudado do fígado,pendente
+FMA7202,Gallbladder,Vesícula biliar,pendente
+FMA15739,Hepatovenous segment II,Segmento hepático II,pendente
+FMA15741,Hepatovenous segment III,Segmento hepático III,pendente
+FMA15742,Hepatovenous segment IV,Segmento hepático IV,pendente
+FMA15743,Hepatovenous segment V,Segmento hepático V,pendente
+FMA15744,Hepatovenous segment VI,Segmento hepático VI,pendente
+FMA15746,Hepatovenous segment VIII,Segmento hepático VIII,pendente
+FMA8647,Left posterior basal segmental artery,Artéria segmentar basal posterior esquerda,pendente
+FMA8646,Left lateral basal segmental artery,Artéria segmentar basal lateral esquerda,pendente
+FMA8645,Left anterior basal segmental artery,Artéria segmentar basal anterior esquerda,pendente
+FMA8644,Left medial basal segmental artery,Artéria segmentar basal medial esquerda,pendente
+FMA8642,Left superior segmental artery,Artéria segmentar superior esquerda,pendente
+FMA8640,Inferior lingular artery,Artéria lingular inferior,pendente
+FMA8639,Superior lingular artery,Artéria lingular superior,pendente
+FMA13279,Left anterior segmental artery,Artéria segmentar anterior esquerda,pendente
+FMA8635,Left posterior segmental artery,Artéria segmentar posterior esquerda,pendente
+FMA8634,Left apical segmental artery,Artéria segmentar apical esquerda,pendente
+FMA50873,Left pulmonary artery,Artéria pulmonar esquerda,pendente
+FMA49916,Left superior pulmonary vein,Veia pulmonar superior esquerda,pendente
+FMA9438,Left posterior segmental vein,Veia segmentar posterior esquerda,pendente
+FMA8667,Left anterior segmental vein,Veia segmentar anterior esquerda,pendente
+FMA8669,Inferior lingular vein,Veia lingular inferior,pendente
+FMA9437,Left apical segmental vein,Veia segmentar apical esquerda,pendente
+FMA8668,Superior lingular vein,Veia lingular superior,pendente
+FMA49913,Left inferior pulmonary vein,Veia pulmonar inferior esquerda,pendente
+FMA9451,Left posterior basal segmental vein,Veia segmentar basal posterior esquerda,pendente
+FMA9450,Left lateral basal segmental vein,Veia segmentar basal lateral esquerda,pendente
+FMA8678,Left anterior basal segmental vein,Veia segmentar basal anterior esquerda,pendente
+FMA8612,Pulmonary trunk,Tronco pulmonar,pendente
+FMA68662,Apical part of right apical segmental artery,Parte apical da artéria segmentar apical direita,pendente
+FMA68670,Apical part of right posterior segmental artery,Parte apical da artéria segmentar posterior direita,pendente
+FMA68673,Posterior part of right posterior segmental artery,Parte posterior da artéria segmentar posterior direita,pendente
+FMA68197,Right upper lobar artery,Artéria lobar superior direita,pendente
+FMA68677,Posterior branch of right anterior segmental artery,Ramo posterior da artéria segmentar anterior direita,pendente
+FMA68683,Anterior branch of right anterior segmental artery,Ramo anterior da artéria segmentar anterior direita,pendente
+FMA68665,Anterior part of right apical segmental artery,Parte anterior da artéria segmentar apical direita,pendente
+FMA68691,Anterior branch of lateral segmental artery,Ramo anterior da artéria segmentar lateral,pendente
+FMA68690,Posterior branch of lateral segmental artery,Ramo posterior da artéria segmentar lateral,pendente
+FMA68693,Superior branch of medial segmental artery,Ramo superior da artéria segmentar medial,pendente
+FMA68694,Inferior branch of medial segmental artery,Ramo inferior da artéria segmentar medial,pendente
+FMA68712,Lateral branch of right superior segmental artery,Ramo lateral da artéria segmentar superior direita,pendente
+FMA68706,Medial branch of right superior segmental artery,Ramo medial da artéria segmentar superior direita,pendente
+FMA68709,Superior branch of right superior segmental artery,Ramo superior da artéria segmentar superior direita,pendente
+FMA68725,Lateral branch of right anterior basal segmental artery,Ramo lateral da artéria segmentar basal anterior direita,pendente
+FMA68723,Basal branch of right anterior basal segmental artery,Ramo basal da artéria segmentar basal anterior direita,pendente
+FMA68728,Lateral branch of right lateral basal segmental artery,Ramo lateral da artéria segmentar basal lateral direita,pendente
+FMA68741,Mediobasal branch of right posterior basal segmental artery,Ramo mediobasal da artéria segmentar basal posterior direita,pendente
+FMA68735,Accessory subsuperior branch of right posterior basal segmental artery,Ramo subsuperior acessório da artéria segmentar basal posterior direita,pendente
+FMA68738,Laterobasal branch of right posterior basal segmental artery,Ramo laterobasal da artéria segmentar basal posterior direita,pendente
+FMA50872,Right pulmonary artery,Artéria pulmonar direita,pendente
+FMA49914,Right superior pulmonary vein,Veia pulmonar superior direita,pendente
+FMA68928,Inferior part of right anterior segmental vein,Parte inferior da veia segmentar anterior direita,pendente
+FMA8663,Right posterior segmental vein,Veia segmentar posterior direita,pendente
+FMA68926,Superior part of right anterior segmental vein,Parte superior da veia segmentar anterior direita,pendente
+FMA8662,Right anterior segmental vein,Veia segmentar anterior direita,pendente
+FMA68982,Superior part of medial segmental vein,Parte superior da veia segmentar medial,pendente
+FMA68880,Trunk of right apical segmental vein,Tronco da veia segmentar apical direita,pendente
+FMA68983,Inferior part of medial segmental vein,Parte inferior da veia segmentar medial,pendente
+FMA68945,Anterior part of lateral segmental vein,Parte anterior da veia segmentar lateral,pendente
+FMA68944,Posterior part of lateral segmental vein,Parte posterior da veia segmentar lateral,pendente
+FMA49911,Right inferior pulmonary vein,Veia pulmonar inferior direita,pendente
+FMA9428,Right posterior basal segmental vein,Veia segmentar basal posterior direita,pendente
+FMA68921,Anterior part of right apical segmental vein,Parte anterior da veia segmentar apical direita,pendente
+FMA8673,Right anterior basal segmental vein,Veia segmentar basal anterior direita,pendente
+FMA8670,Right superior segmental vein,Veia segmentar superior direita,pendente
+FMA9422,Right medial basal segmental vein,Veia segmentar basal medial direita,pendente
+FMA9425,Right lateral basal segmental vein,Veia segmentar basal lateral direita,pendente
+FMA8681,Apical part of right apical segmental vein,Parte apical da veia segmentar apical direita,pendente
+FMA71867,Anterior superior tributary of right hepatic biliary tree,Tributária anterior superior da árvore biliar hepática direita,pendente
+FMA71868,Anterior inferior tributary of right hepatic biliary tree,Tributária anterior inferior da árvore biliar hepática direita,pendente
+FMA15420,Anterior superior segmental branch of right portal vein,Ramo segmentar anterior superior do ramo direito da veia porta,pendente
+FMA15421,Anterior inferior segmental branch of right portal vein,Ramo segmentar anterior inferior do ramo direito da veia porta,pendente
+FMA70443,Anterior inferior segmental hepatic artery,Artéria hepática segmentar anterior inferior,pendente
+FMA70442,Anterior superior segmental hepatic artery,Artéria hepática segmentar anterior superior,pendente
+FMA70455,Caudate lobe branch of left hepatic artery,Ramo do lobo caudado da artéria hepática esquerda,pendente
+FMA14771,Common hepatic artery,Artéria hepática comum,pendente
+FMA14668,Common hepatic duct,Ducto hepático comum,pendente
+FMA14539,Cystic duct,Ducto cístico,pendente
+FMA14772,Hepatic artery proper,Artéria hepática própria,pendente
+FMA71904,Pre-hepatic portal vein,Veia porta pré-hepática,pendente
+FMA15800,Anterior inferior segmental tributary of middle hepatic vein,Tributária segmentar anterior inferior da veia hepática média,pendente
+FMA15801,Medial inferior segmental tributary of middle hepatic vein,Tributária segmentar medial inferior da veia hepática média,pendente
+FMA71887,Lateral superior tributary of left hepatic biliary tree,Tributária lateral superior da árvore biliar hepática esquerda,pendente
+FMA71888,Lateral inferior tributary of left hepatic biliary tree,Tributária lateral inferior da árvore biliar hepática esquerda,pendente
+FMA70452,Lateral superior segmental hepatic artery,Artéria hepática segmentar lateral superior,pendente
+FMA70453,Lateral inferior segmental hepatic artery,Artéria hepática segmentar lateral inferior,pendente
+FMA76903,Left duct of caudate lobe of liver,Ducto esquerdo do lobo caudado do fígado,pendente
+FMA70457,Trunk of left hepatic artery,Tronco da artéria hepática esquerda,pendente
+FMA14670,Left hepatic duct,Ducto hepático esquerdo,pendente
+FMA15804,Lateral inferior segmental tributary of left hepatic vein,Tributária segmentar lateral inferior da veia hepática esquerda,pendente
+FMA15803,Lateral superior segmental tributary of left hepatic vein,Tributária segmentar lateral superior da veia hepática esquerda,pendente
+FMA15802,Medial superior segmental tributary of left hepatic vein,Tributária segmentar medial superior da veia hepática esquerda,pendente
+FMA82697,Trunk of left portal vein,Tronco do ramo esquerdo da veia porta,pendente
+FMA71886,Medial inferior tributary of left hepatic biliary tree,Tributária medial inferior da árvore biliar hepática esquerda,pendente
+FMA71885,Medial superior tributary of left hepatic biliary tree,Tributária medial superior da árvore biliar hepática esquerda,pendente
+FMA70450,Medial inferior segmental hepatic artery,Artéria hepática segmentar medial inferior,pendente
+FMA70449,Medial superior segmental hepatic artery,Artéria hepática segmentar medial superior,pendente
+FMA71870,Posterior inferior tributary of right hepatic biliary tree,Tributária posterior inferior da árvore biliar hepática direita,pendente
+FMA71869,Posterior superior tributary of right hepatic biliary tree,Tributária posterior superior da árvore biliar hepática direita,pendente
+FMA15424,Posterior inferior segmental branch of right portal vein,Ramo segmentar posterior inferior da veia porta direita,pendente
+FMA15423,Posterior superior segmental branch of right portal vein,Ramo segmentar posterior superior da veia porta direita,pendente
+FMA70446,Posterior inferior segmental hepatic artery,Artéria hepática segmentar posterior inferior,pendente
+FMA70445,Posterior superior segmental hepatic artery,Artéria hepática segmentar posterior superior,pendente
+FMA70456,Trunk of right hepatic artery,Tronco da artéria hepática direita,pendente
+FMA15797,Posterior inferior segmental tributary of right hepatic vein,Tributária segmentar posterior inferior da veia hepática direita,pendente
+FMA15796,Posterior superior segmental tributary of right hepatic vein,Tributária segmentar posterior superior da veia hepática direita,pendente
+FMA15798,Anterior superior segmental tributary of right hepatic vein,Tributária segmentar anterior superior da veia hepática direita,pendente
+FMA82695,Trunk of right portal vein,Tronco da veia porta direita,pendente
+FMA14669,Right hepatic duct,Ducto hepático direito,pendente
+FMA15425,Caudate lobe branch of left portal vein,Ramo do lobo caudado da veia porta esquerda,pendente
+FMA15432,Lateral inferior segmental branch of left portal vein,Ramo segmentar lateral inferior da veia porta esquerda,pendente
+FMA15431,Lateral superior segmental branch of left portal vein,Ramo segmentar lateral superior da veia porta esquerda,pendente
+FMA15428,Medial superior segmental branch of left portal vein,Ramo segmentar medial superior da veia porta esquerda,pendente
+FMA15429,Medial inferior segmental branch of left portal vein,Ramo segmentar medial inferior da veia porta esquerda,pendente
+FMA15630,Left adrenal gland,Glândula suprarrenal esquerda,pendente
+FMA15629,Right adrenal gland,Glândula suprarrenal direita,pendente
+FMA13295,Diaphragm,Diafragma,pendente
+FMA19618,Corpus cavernosum of penis,Corpo cavernoso do pênis,pendente
+FMA19617,Corpus spongiosum of penis,Corpo esponjoso do pênis,pendente
+FMA18247,Glans penis,Glande do pênis,pendente
+FMA19236,Left deferent duct,Ducto deferente esquerdo,pendente
+FMA18257,Left epididymis,Epidídimo esquerdo,pendente
+FMA19388,Left seminal vesicle,Vesícula seminal esquerda,pendente
+FMA7212,Left testis,Testículo esquerdo,pendente
+FMA9600,Prostate,Próstata,pendente
+FMA19235,Right deferent duct,Ducto deferente direito,pendente
+FMA18256,Right epididymis,Epidídimo direito,pendente
+FMA7211,Right testis,Testículo direito,pendente
+FMA19387,Right seminal vesicle,Vesícula seminal direita,pendente
+FMA15572,Left ureter,Ureter esquerdo,pendente
+FMA7205,Left kidney,Rim esquerdo,pendente
+FMA15571,Right ureter,Ureter direito,pendente
+FMA7204,Right kidney,Rim direito,pendente
+FMA19667,Urethra,Uretra,pendente
+FMA15900,Urinary bladder,Bexiga urinária,pendente
+FMA71195,Left lobe of thymus,Lobo esquerdo do timo,pendente
+FMA71194,Right lobe of thymus,Lobo direito do timo,pendente
+FMA16586,Right hip bone,Osso do quadril direito,pendente
+FMA7488,Xiphoid process,Processo xifoide,pendente
+FMA10037,Tenth thoracic vertebra,Décima vértebra torácica,pendente
+FMA10059,Eleventh thoracic vertebra,Décima primeira vértebra torácica,pendente
+FMA10081,Twelfth thoracic vertebra,Décima segunda vértebra torácica,pendente
+FMA13072,First lumbar vertebra,Primeira vértebra lombar,pendente
+FMA9165,First thoracic vertebra,Primeira vértebra torácica,pendente
+FMA13073,Second lumbar vertebra,Segunda vértebra lombar,pendente
+FMA9187,Second thoracic vertebra,Segunda vértebra torácica,pendente
+FMA12521,Third cervical vertebra,Terceira vértebra cervical,pendente
+FMA13074,Third lumbar vertebra,Terceira vértebra lombar,pendente
+FMA9209,Third thoracic vertebra,Terceira vértebra torácica,pendente
+FMA12522,Fourth cervical vertebra,Quarta vértebra cervical,pendente
+FMA13075,Fourth lumbar vertebra,Quarta vértebra lombar,pendente
+FMA9248,Fourth thoracic vertebra,Quarta vértebra torácica,pendente
+FMA12523,Fifth cervical vertebra,Quinta vértebra cervical,pendente
+FMA13076,Fifth lumbar vertebra,Quinta vértebra lombar,pendente
+FMA9922,Fifth thoracic vertebra,Quinta vértebra torácica,pendente
+FMA12524,Sixth cervical vertebra,Sexta vértebra cervical,pendente
+FMA9945,Sixth thoracic vertebra,Sexta vértebra torácica,pendente
+FMA12525,Seventh cervical vertebra,Sétima vértebra cervical,pendente
+FMA9968,Seventh thoracic vertebra,Sétima vértebra torácica,pendente
+FMA9991,Eighth thoracic vertebra,Oitava vértebra torácica,pendente
+FMA10014,Ninth thoracic vertebra,Nona vértebra torácica,pendente
+FMA12519,Atlas,Atlas,pendente
+FMA12520,Axis,Áxis,pendente
+FMA7487,Body of sternum,Corpo do esterno,pendente
+FMA32653,Distal phalanx of left second toe,Falange distal do segundo dedo do pé esquerdo,pendente
+FMA32655,Distal phalanx of left third toe,Falange distal do terceiro dedo do pé esquerdo,pendente
+FMA32657,Distal phalanx of left fourth toe,Falange distal do quarto dedo do pé esquerdo,pendente
+FMA32651,Distal phalanx of left big toe,Falange distal do hálux esquerdo,pendente
+FMA23953,Distal phalanx of left index finger,Falange distal do indicador esquerdo,pendente
+FMA23959,Distal phalanx of left little finger,Falange distal do dedo mínimo esquerdo,pendente
+FMA32659,Distal phalanx of left little toe,Falange distal do dedo mínimo do pé esquerdo,pendente
+FMA23955,Distal phalanx of left middle finger,Falange distal do dedo médio esquerdo,pendente
+FMA23957,Distal phalanx of left ring finger,Falange distal do dedo anelar esquerdo,pendente
+FMA23951,Distal phalanx of left thumb,Falange distal do polegar esquerdo,pendente
+FMA32652,Distal phalanx of right second toe,Falange distal do segundo dedo do pé direito,pendente
+FMA32654,Distal phalanx of right third toe,Falange distal do terceiro dedo do pé direito,pendente
+FMA32656,Distal phalanx of right fourth toe,Falange distal do quarto dedo do pé direito,pendente
+FMA32650,Distal phalanx of right big toe,Falange distal do hálux direito,pendente
+FMA24460,Distal phalanx of right index finger,Falange distal do indicador direito,pendente
+FMA24463,Distal phalanx of right little finger,Falange distal do dedo mínimo direito,pendente
+FMA32658,Distal phalanx of right little toe,Falange distal do dedo mínimo do pé direito,pendente
+FMA24461,Distal phalanx of right middle finger,Falange distal do dedo médio direito,pendente
+FMA24462,Distal phalanx of right ring finger,Falange distal do dedo anelar direito,pendente
+FMA24459,Distal phalanx of right thumb,Falange distal do polegar direito,pendente
+FMA52740,Ethmoid,Osso etmoide,pendente
+FMA52734,Frontal bone,Osso frontal,pendente
+FMA25058,Intervertebral disk of axis,Disco intervertebral do áxis,pendente
+FMA13501,Intervertebral disk of fourth thoracic vertebra,Disco intervertebral da quarta vértebra torácica,pendente
+FMA13502,Intervertebral disk of fifth thoracic vertebra,Disco intervertebral da quinta vértebra torácica,pendente
+FMA13503,Intervertebral disk of sixth thoracic vertebra,Disco intervertebral da sexta vértebra torácica,pendente
+FMA13504,Intervertebral disk of seventh thoracic vertebra,Disco intervertebral da sétima vértebra torácica,pendente
+FMA13505,Intervertebral disk of eighth thoracic vertebra,Disco intervertebral da oitava vértebra torácica,pendente
+FMA13506,Intervertebral disk of ninth thoracic vertebra,Disco intervertebral da nona vértebra torácica,pendente
+FMA13507,Intervertebral disk of tenth thoracic vertebra,Disco intervertebral da décima vértebra torácica,pendente
+FMA13508,Intervertebral disk of eleventh thoracic vertebra,Disco intervertebral da décima primeira vértebra torácica,pendente
+FMA10446,Intervertebral disk,Disco intervertebral,pendente
+FMA16033,Intervertebral disk of first lumbar vertebra,Disco intervertebral da primeira vértebra lombar,pendente
+FMA13896,Intervertebral disk of third cervical vertebra,Disco intervertebral da terceira vértebra cervical,pendente
+FMA16034,Intervertebral disk of second lumbar vertebra,Disco intervertebral da segunda vértebra lombar,pendente
+FMA16035,Intervertebral disk of third lumbar vertebra,Disco intervertebral da terceira vértebra lombar,pendente
+FMA16036,Intervertebral disk of fourth lumbar vertebra,Disco intervertebral da quarta vértebra lombar,pendente
+FMA16037,Intervertebral disk of fifth lumbar vertebra,Disco intervertebral da quinta vértebra lombar,pendente
+FMA13897,Intervertebral disk of fourth cervical vertebra,Disco intervertebral da quarta vértebra cervical,pendente
+FMA13898,Intervertebral disk of fifth cervical vertebra,Disco intervertebral da quinta vértebra cervical,pendente
+FMA13899,Intervertebral disk of sixth cervical vertebra,Disco intervertebral da sexta vértebra cervical,pendente
+FMA13900,Intervertebral disk of seventh cervical vertebra,Disco intervertebral da sétima vértebra cervical,pendente
+FMA10458,Intervertebral disk of first thoracic vertebra,Disco intervertebral da primeira vértebra torácica,pendente
+FMA13495,Intervertebral disk of second thoracic vertebra,Disco intervertebral da segunda vértebra torácica,pendente
+FMA13500,Intervertebral disk of third thoracic vertebra,Disco intervertebral da terceira vértebra torácica,pendente
+FMA8472,Left tenth rib,Décima costela esquerda,pendente
+FMA8532,Left eleventh rib,Décima primeira costela esquerda,pendente
+FMA8534,Left twelfth rib,Décima segunda costela esquerda,pendente
+FMA7987,Left first rib,Primeira costela esquerda,pendente
+FMA8012,Left second rib,Segunda costela esquerda,pendente
+FMA8039,Left third rib,Terceira costela esquerda,pendente
+FMA8148,Left fourth rib,Quarta costela esquerda,pendente
+FMA8093,Left fifth rib,Quinta costela esquerda,pendente
+FMA8202,Left sixth rib,Sexta costela esquerda,pendente
+FMA8256,Left seventh rib,Sétima costela esquerda,pendente
+FMA8310,Left eighth rib,Oitava costela esquerda,pendente
+FMA8391,Left ninth rib,Nona costela esquerda,pendente
+FMA13323,Left clavicle,Clavícula esquerda,pendente
+FMA8005,Left first costal cartilage,Primeira cartilagem costal esquerda,pendente
+FMA24465,Left first metacarpal bone,Primeiro osso metacarpal esquerdo,pendente
+FMA24508,Left first metatarsal bone,Primeiro osso metatarsal esquerdo,pendente
+FMA8031,Left second costal cartilage,Segunda cartilagem costal esquerda,pendente
+FMA24467,Left second metacarpal bone,Segundo osso metacarpal esquerdo,pendente
+FMA24510,Left second metatarsal bone,Segundo osso metatarsal esquerdo,pendente
+FMA8058,Left third costal cartilage,Terceira cartilagem costal esquerda,pendente
+FMA24469,Left third metacarpal bone,Terceiro osso metacarpal esquerdo,pendente
+FMA24512,Left third metatarsal bone,Terceiro osso metatarsal esquerdo,pendente
+FMA8167,Left fourth costal cartilage,Quarta cartilagem costal esquerda,pendente
+FMA24471,Left fourth metacarpal bone,Quarto osso metacarpal esquerdo,pendente
+FMA24514,Left fourth metatarsal bone,Quarto osso metatarsal esquerdo,pendente
+FMA8112,Left fifth costal cartilage,Quinta cartilagem costal esquerda,pendente
+FMA24473,Left fifth metacarpal bone,Quinto osso metacarpal esquerdo,pendente
+FMA24516,Left fifth metatarsal bone,Quinto osso metatarsal esquerdo,pendente
+FMA8221,Left sixth costal cartilage,Sexta cartilagem costal esquerda,pendente
+FMA8275,Left seventh costal cartilage,Sétima cartilagem costal esquerda,pendente
+FMA24498,Left calcaneus,Calcâneo esquerdo,pendente
+FMA24447,Left capitate,Capitato esquerdo,pendente
+FMA24529,Left cuboid bone,Osso cuboide esquerdo,pendente
+FMA24475,Left femur,Fêmur esquerdo,pendente
+FMA24481,Left fibula,Fíbula esquerda,pendente
+FMA24449,Left hamate,Hamato esquerdo,pendente
+FMA23131,Left humerus,Úmero esquerdo,pendente
+FMA54738,Left inferior nasal concha,Concha nasal inferior esquerda,pendente
+FMA24524,Left intermediate cuneiform bone,Osso cuneiforme intermédio esquerdo,pendente
+FMA53646,Left lacrimal bone,Osso lacrimal esquerdo,pendente
+FMA45098,Sesamoid bone of left foot,Osso sesamoide do pé esquerdo,pendente
+FMA24526,Left lateral cuneiform bone,Osso cuneiforme lateral esquerdo,pendente
+FMA24438,Left lunate,Semilunar esquerdo,pendente
+FMA53650,Left maxilla,Maxila esquerda,pendente
+FMA24522,Left medial cuneiform bone,Osso cuneiforme medial esquerdo,pendente
+FMA53648,Left nasal bone,Osso nasal esquerdo,pendente
+FMA53656,Left palatine bone,Osso palatino esquerdo,pendente
+FMA52789,Left parietal bone,Osso parietal esquerdo,pendente
+FMA24487,Left patella,Patela esquerda,pendente
+FMA24442,Left pisiform,Pisiforme esquerdo,pendente
+FMA23465,Left radius,Rádio esquerdo,pendente
+FMA24436,Left scaphoid,Escafoide esquerdo,pendente
+FMA13396,Left scapula,Escápula esquerda,pendente
+FMA24483,Left talus,Tálus esquerdo,pendente
+FMA52739,Left temporal bone,Osso temporal esquerdo,pendente
+FMA24478,Left tibia,Tíbia esquerda,pendente
+FMA24444,Left trapezium,Trapézio esquerdo,pendente
+FMA24445,Left trapezoid,Trapezoide esquerdo,pendente
+FMA24440,Left triquetral,Piramidal esquerdo,pendente
+FMA23468,Left ulna,Ulna esquerda,pendente
+FMA52893,Left zygomatic bone,Osso zigomático esquerdo,pendente
+FMA16587,Left hip bone,Osso do quadril esquerdo,pendente
+FMA52748,Mandible,Mandíbula,pendente
+FMA7486,Manubrium,Manúbrio do esterno,pendente
+FMA23942,Middle phalanx of left ring finger,Falange média do dedo anelar esquerdo,pendente
+FMA24457,Middle phalanx of right ring finger,Falange média do dedo anelar direito,pendente
+FMA32643,Middle phalanx of left second toe,Falange média do segundo dedo do pé esquerdo,pendente
+FMA32645,Middle phalanx of left third toe,Falange média do terceiro dedo do pé esquerdo,pendente
+FMA32647,Middle phalanx of left fourth toe,Falange média do quarto dedo do pé esquerdo,pendente
+FMA23938,Middle phalanx of left index finger,Falange média do indicador esquerdo,pendente
+FMA23944,Middle phalanx of left little finger,Falange média do dedo mínimo esquerdo,pendente
+FMA230988,Middle phalanx of left little toe,Falange média do dedo mínimo do pé esquerdo,pendente
+FMA23940,Middle phalanx of left middle finger,Falange média do dedo médio esquerdo,pendente
+FMA32642,Middle phalanx of right second toe,Falange média do segundo dedo do pé direito,pendente
+FMA32644,Middle phalanx of right third toe,Falange média do terceiro dedo do pé direito,pendente
+FMA32646,Middle phalanx of right fourth toe,Falange média do quarto dedo do pé direito,pendente
+FMA24455,Middle phalanx of right index finger,Falange média do indicador direito,pendente
+FMA24458,Middle phalanx of right little finger,Falange média do dedo mínimo direito,pendente
+FMA230986,Middle phalanx of right little toe,Falange média do dedo mínimo do pé direito,pendente
+FMA24456,Middle phalanx of right middle finger,Falange média do dedo médio direito,pendente
+FMA24501,Navicular bone of left foot,Osso navicular do pé esquerdo,pendente
+FMA24500,Navicular bone of right foot,Osso navicular do pé direito,pendente
+FMA52735,Occipital bone,Osso occipital,pendente
+FMA43253,Proximal phalanx of right big toe,Falange proximal do hálux direito,pendente
+FMA32637,Proximal phalanx of left third toe,Falange proximal do terceiro dedo do pé esquerdo,pendente
+FMA32639,Proximal phalanx of left fourth toe,Falange proximal do quarto dedo do pé esquerdo,pendente
+FMA71915,Proximal phalanx of left index finger,Falange proximal do indicador esquerdo,pendente
+FMA66791,Proximal phalanx of left little finger,Falange proximal do dedo mínimo esquerdo,pendente
+FMA32641,Proximal phalanx of left little toe,Falange proximal do dedo mínimo do pé esquerdo,pendente
+FMA71908,Proximal phalanx of left middle finger,Falange proximal do dedo médio esquerdo,pendente
+FMA71916,Proximal phalanx of left ring finger,Falange proximal do dedo anelar esquerdo,pendente
+FMA65470,Proximal phalanx of left thumb,Falange proximal do polegar esquerdo,pendente
+FMA32634,Proximal phalanx of right second toe,Falange proximal do segundo dedo do pé direito,pendente
+FMA32636,Proximal phalanx of right third toe,Falange proximal do terceiro dedo do pé direito,pendente
+FMA32638,Proximal phalanx of right fourth toe,Falange proximal do quarto dedo do pé direito,pendente
+FMA24451,Proximal phalanx of right index finger,Falange proximal do indicador direito,pendente
+FMA24454,Proximal phalanx of right little finger,Falange proximal do dedo mínimo direito,pendente
+FMA32640,Proximal phalanx of right little toe,Falange proximal do dedo mínimo do pé direito,pendente
+FMA24452,Proximal phalanx of right middle finger,Falange proximal do dedo médio direito,pendente
+FMA24453,Proximal phalanx of right ring finger,Falange proximal do dedo anelar direito,pendente
+FMA24450,Proximal phalanx of right thumb,Falange proximal do polegar direito,pendente
+FMA32635,Proximal phalanx of left second toe,Falange proximal do segundo dedo do pé esquerdo,pendente
+FMA43254,Proximal phalanx of left big toe,Falange proximal do hálux esquerdo,pendente
+FMA8445,Right tenth rib,Décima costela direita,pendente
+FMA8531,Right eleventh rib,Décima primeira costela direita,pendente
+FMA8533,Right twelfth rib,Décima segunda costela direita,pendente
+FMA7875,Right first costal cartilage,Primeira cartilagem costal direita,pendente
+FMA7857,Right first rib,Primeira costela direita,pendente
+FMA7886,Right second costal cartilage,Segunda cartilagem costal direita,pendente
+FMA7882,Right second rib,Segunda costela direita,pendente
+FMA7913,Right third costal cartilage,Terceira cartilagem costal direita,pendente
+FMA7909,Right third rib,Terceira costela direita,pendente
+FMA7976,Right fourth costal cartilage,Quarta cartilagem costal direita,pendente
+FMA7957,Right fourth rib,Quarta costela direita,pendente
+FMA8070,Right fifth costal cartilage,Quinta cartilagem costal direita,pendente
+FMA8066,Right fifth rib,Quinta costela direita,pendente
+FMA8194,Right sixth costal cartilage,Sexta cartilagem costal direita,pendente
+FMA8175,Right sixth rib,Sexta costela direita,pendente
+FMA8248,Right seventh costal cartilage,Sétima cartilagem costal direita,pendente
+FMA8229,Right seventh rib,Sétima costela direita,pendente
+FMA8283,Right eighth rib,Oitava costela direita,pendente
+FMA8364,Right ninth rib,Nona costela direita,pendente
+FMA23464,Right radius,Rádio direito,pendente
+FMA24464,Right first metacarpal bone,Primeiro osso metacarpal direito,pendente
+FMA24507,Right first metatarsal bone,Primeiro osso metatarsal direito,pendente
+FMA24466,Right second metacarpal bone,Segundo osso metacarpal direito,pendente
+FMA24509,Right second metatarsal bone,Segundo osso metatarsal direito,pendente
+FMA24468,Right third metacarpal bone,Terceiro osso metacarpal direito,pendente
+FMA24511,Right third metatarsal bone,Terceiro osso metatarsal direito,pendente
+FMA24470,Right fourth metacarpal bone,Quarto osso metacarpal direito,pendente
+FMA24513,Right fourth metatarsal bone,Quarto osso metatarsal direito,pendente
+FMA24472,Right fifth metacarpal bone,Quinto osso metacarpal direito,pendente
+FMA24515,Right fifth metatarsal bone,Quinto osso metatarsal direito,pendente
+FMA24497,Right calcaneus,Calcâneo direito,pendente
+FMA24446,Right capitate,Capitato direito,pendente
+FMA13322,Right clavicle,Clavícula direita,pendente
+FMA24528,Right cuboid bone,Osso cuboide direito,pendente
+FMA24474,Right femur,Fêmur direito,pendente
+FMA24480,Right fibula,Fíbula direita,pendente
+FMA24448,Right hamate,Hamato direito,pendente
+FMA23130,Right humerus,Úmero direito,pendente
+FMA54737,Right inferior nasal concha,Concha nasal inferior direita,pendente
+FMA24523,Right intermediate cuneiform bone,Osso cuneiforme intermédio direito,pendente
+FMA53645,Right lacrimal bone,Osso lacrimal direito,pendente
+FMA45097,Sesamoid bone of right foot,Osso sesamoide do pé direito,pendente
+FMA24525,Right lateral cuneiform bone,Osso cuneiforme lateral direito,pendente
+FMA24437,Right lunate,Semilunar direito,pendente
+FMA53649,Right maxilla,Maxila direita,pendente
+FMA24521,Right medial cuneiform bone,Osso cuneiforme medial direito,pendente
+FMA53647,Right nasal bone,Osso nasal direito,pendente
+FMA53655,Right palatine bone,Osso palatino direito,pendente
+FMA52788,Right parietal bone,Osso parietal direito,pendente
+FMA24486,Right patella,Patela direita,pendente
+FMA24441,Right pisiform,Pisiforme direito,pendente
+FMA24435,Right scaphoid,Escafoide direito,pendente
+FMA13395,Right scapula,Escápula direita,pendente
+FMA24482,Right talus,Tálus direito,pendente
+FMA52738,Right temporal bone,Osso temporal direito,pendente
+FMA24477,Right tibia,Tíbia direita,pendente
+FMA24443,Right trapezium,Trapézio direito,pendente
+FMA23725,Right trapezoid,Trapezoide direito,pendente
+FMA24439,Right triquetral,Piramidal direito,pendente
+FMA23467,Right ulna,Ulna direita,pendente
+FMA52892,Right zygomatic bone,Osso zigomático direito,pendente
+FMA16202,Sacrum,Sacro,pendente
+FMA52736,Sphenoid bone,Osso esfenoide,pendente
+FMA9710,Vomer,Vômer,pendente
+FMA14643,Mesentery of small intestine,Mesentério do intestino delgado,pendente
+FMA16549,Mesoappendix,Mesoapêndice,pendente
+FMA14647,Transverse mesocolon,Mesocolo transverso,pendente
+FMA14828,Ascending branch of left colic artery,Ramo ascendente da artéria cólica esquerda,pendente
+FMA15394,Left colic vein,Veia cólica esquerda,pendente
+FMA70479,Anterior inferior pancreaticoduodenal artery,Artéria pancreaticoduodenal inferior anterior,pendente
+FMA14816,Anterior cecal artery,Artéria cecal anterior,pendente
+FMA14782,Anterior superior pancreaticoduodenal artery,Artéria pancreaticoduodenal superior anterior,pendente
+FMA14818,Appendicular artery,Artéria apendicular,pendente
+FMA3768,Arch of aorta,Arco da aorta,pendente
+FMA3736,Ascending aorta,Aorta ascendente,pendente
+FMA14820,Ascending branch of inferior branch of ileocolic artery,Ramo ascendente do ramo inferior da artéria ileocólica,pendente
+FMA15408,Ileocolic vein,Veia ileocólica,pendente
+FMA4838,Azygos vein,Veia ázigo,pendente
+FMA3932,Brachiocephalic artery,Artéria braquiocefálica,pendente
+FMA14177,Bronchial branch of arch of aorta,Ramo bronquial do arco da aorta,pendente
+FMA14793,Caudal pancreatic artery,Artéria pancreática caudal,pendente
+FMA14812,Celiac trunk,Tronco celíaco,pendente
+FMA21386,Left superficial dorsal vein of penis,Veia dorsal superficial esquerda do pênis,pendente
+FMA3784,Descending aorta,Aorta descendente,pendente
+FMA14829,Descending branch of left colic artery,Ramo descendente da artéria cólica esquerda,pendente
+FMA14787,Dorsal pancreatic artery,Artéria pancreática dorsal,pendente
+FMA71537,Set of oesophageal branches of thoracic aorta,Conjunto dos ramos esofágicos da aorta torácica,pendente
+FMA76574,Trunk of gastroduodenal artery,Tronco da artéria gastroduodenal,pendente
+FMA14792,Great pancreatic artery,Artéria pancreática magna,pendente
+FMA4944,Hemiazygos vein,Veia hemiázigo,pendente
+FMA14809,Ileal artery,Artéria ileal,pendente
+FMA15405,Ileal vein,Veia ileal,pendente
+FMA14815,Ileocolic artery,Artéria ileocólica,pendente
+FMA10951,Inferior vena cava,Veia cava inferior,pendente
+FMA14750,Inferior mesenteric artery,Artéria mesentérica inferior,pendente
+FMA15391,Inferior mesenteric vein,Veia mesentérica inferior,pendente
+FMA14790,Inferior pancreatic artery,Artéria pancreática inferior,pendente
+FMA14805,Inferior pancreaticoduodenal artery,Artéria pancreaticoduodenal inferior,pendente
+FMA68068,Inferior phrenic vein,Veia frênica inferior,pendente
+FMA70487,Anterior division of left renal artery,Divisão anterior da artéria renal esquerda,pendente
+FMA14766,Left common iliac artery,Artéria ilíaca comum esquerda,pendente
+FMA21388,Left common iliac vein,Veia ilíaca comum esquerda,pendente
+FMA18807,Left external iliac artery,Artéria ilíaca externa esquerda,pendente
+FMA69266,Left inferior suprarenal artery,Artéria suprarrenal inferior esquerda,pendente
+FMA18810,Left internal iliac artery,Artéria ilíaca interna esquerda,pendente
+FMA18888,Left internal iliac vein,Veia ilíaca interna esquerda,pendente
+FMA14756,Left middle suprarenal artery,Artéria suprarrenal média esquerda,pendente
+FMA70490,Posterior division of left renal artery,Divisão posterior da artéria renal esquerda,pendente
+FMA66364,Trunk of left renal artery,Tronco da artéria renal esquerda,pendente
+FMA14336,Left renal vein,Veia renal esquerda,pendente
+FMA4694,Left subclavian artery,Artéria subclávia esquerda,pendente
+FMA14349,Left suprarenal vein,Veia suprarrenal esquerda,pendente
+FMA70493,Ureteric segment of left renal artery,Segmento ureteral da artéria renal esquerda,pendente
+FMA4761,Left brachiocephalic vein,Veia braquiocefálica esquerda,pendente
+FMA4058,Left common carotid artery,Artéria carótida comum esquerda,pendente
+FMA18886,Left external iliac vein,Veia ilíaca externa esquerda,pendente
+FMA4762,Left internal jugular vein,Veia jugular interna esquerda,pendente
+FMA4763,Left subclavian vein,Veia subclávia esquerda,pendente
+FMA4950,Left ascending lumbar vein,Veia lombar ascendente esquerda,pendente
+FMA14826,Left colic artery,Artéria cólica esquerda,pendente
+FMA20819,Left dorsal artery of penis,Artéria dorsal esquerda do pênis,pendente
+FMA14768,Left gastric artery,Artéria gástrica esquerda,pendente
+FMA15399,Left gastric vein,Veia gástrica esquerda,pendente
+FMA14796,Left gastro-epiploic artery,Artéria gastromental esquerda,pendente
+FMA15390,Left gastroepiploic vein,Veia gastromental esquerda,pendente
+FMA18904,Left iliolumbar vein,Veia iliolombar esquerda,pendente
+FMA20689,Left inferior epigastric artery,Artéria epigástrica inferior esquerda,pendente
+FMA21164,Left inferior epigastric vein,Veia epigástrica inferior esquerda,pendente
+FMA18913,Left inferior gluteal vein,Veia glútea inferior esquerda,pendente
+FMA14747,Left inferior phrenic artery,Artéria frênica inferior esquerda,pendente
+FMA18919,Left internal pudendal vein,Veia pudenda interna esquerda,pendente
+FMA18907,Left lateral sacral vein,Veia sacral lateral esquerda,pendente
+FMA18916,Left obturator vein,Veia obturatória esquerda,pendente
+FMA20736,Left superficial epigastric artery,Artéria epigástrica superficial esquerda,pendente
+FMA4785,Left superior epigastric vein,Veia epigástrica superior esquerda,pendente
+FMA18910,Left superior gluteal vein,Veia glútea superior esquerda,pendente
+FMA14760,Left testicular artery,Artéria testicular esquerda,pendente
+FMA14345,Left testicular vein,Veia testicular esquerda,pendente
+FMA14831,Marginal artery of colon,Artéria marginal do colo,pendente
+FMA77168,Median sacral vein,Veia sacral mediana,pendente
+FMA14810,Middle colic artery,Artéria cólica média,pendente
+FMA15406,Middle colic vein,Veia cólica média,pendente
+FMA15398,Pancreaticoduodenal vein,Veia pancreaticoduodenal,pendente
+FMA70480,Posterior inferior pancreaticoduodenal artery,Artéria pancreaticoduodenal inferior posterior,pendente
+FMA14817,Posterior cecal artery,Artéria cecal posterior,pendente
+FMA14784,Posterior superior pancreaticoduodenal artery,Artéria pancreaticoduodenal superior posterior,pendente
+FMA70486,Anterior division of right renal artery,Divisão anterior da artéria renal direita,pendente
+FMA3941,Right common carotid artery,Artéria carótida comum direita,pendente
+FMA14765,Right common iliac artery,Artéria ilíaca comum direita,pendente
+FMA21387,Right common iliac vein,Veia ilíaca comum direita,pendente
+FMA18806,Right external iliac artery,Artéria ilíaca externa direita,pendente
+FMA18885,Right external iliac vein,Veia ilíaca externa direita,pendente
+FMA18809,Right internal iliac artery,Artéria ilíaca interna direita,pendente
+FMA18887,Right internal iliac vein,Veia ilíaca interna direita,pendente
+FMA70489,Posterior division of right renal artery,Divisão posterior da artéria renal direita,pendente
+FMA66363,Trunk of right renal artery,Tronco da artéria renal direita,pendente
+FMA14335,Right renal vein,Veia renal direita,pendente
+FMA3953,Right subclavian artery,Artéria subclávia direita,pendente
+FMA14343,Right suprarenal vein,Veia suprarrenal direita,pendente
+FMA70492,Ureteric segment of right renal artery,Segmento ureteral da artéria renal direita,pendente
+FMA4751,Right brachiocephalic vein,Veia braquiocefálica direita,pendente
+FMA69265,Right inferior suprarenal artery,Artéria suprarrenal inferior direita,pendente
+FMA4754,Right internal jugular vein,Veia jugular interna direita,pendente
+FMA14755,Right middle suprarenal artery,Artéria suprarrenal média direita,pendente
+FMA4755,Right subclavian vein,Veia subclávia direita,pendente
+FMA4843,Right ascending lumbar vein,Veia lombar ascendente direita,pendente
+FMA14811,Right colic artery,Artéria cólica direita,pendente
+FMA15407,Right colic vein,Veia cólica direita,pendente
+FMA20818,Right dorsal artery of penis,Artéria dorsal direita do pênis,pendente
+FMA14776,Right gastric artery,Artéria gástrica direita,pendente
+FMA15400,Right gastric vein,Veia gástrica direita,pendente
+FMA14781,Right gastro-epiploic artery,Artéria gastromental direita,pendente
+FMA15397,Right gastroepiploic vein,Veia gastromental direita,pendente
+FMA18903,Right iliolumbar vein,Veia iliolombar direita,pendente
+FMA20688,Right inferior epigastric artery,Artéria epigástrica inferior direita,pendente
+FMA21163,Right inferior epigastric vein,Veia epigástrica inferior direita,pendente
+FMA18912,Right inferior gluteal vein,Veia glútea inferior direita,pendente
+FMA18918,Right internal pudendal vein,Veia pudenda interna direita,pendente
+FMA18906,Right lateral sacral vein,Veia sacral lateral direita,pendente
+FMA18915,Right obturator vein,Veia obturatória direita,pendente
+FMA20735,Right superficial epigastric artery,Artéria epigástrica superficial direita,pendente
+FMA4771,Right superior epigastric vein,Veia epigástrica superior direita,pendente
+FMA18909,Right superior gluteal vein,Veia glútea superior direita,pendente
+FMA14759,Right testicular artery,Artéria testicular direita,pendente
+FMA14341,Right testicular vein,Veia testicular direita,pendente
+FMA14746,Right inferior phrenic artery,Artéria frênica inferior direita,pendente
+FMA15370,Lumbar vein,Veia lombar,pendente
+FMA14735,Lumbar artery,Artéria lombar,pendente
+FMA21385,Right superficial dorsal vein of penis,Veia dorsal superficial direita do pênis,pendente
+FMA14830,Sigmoid artery,Artéria sigmóidea,pendente
+FMA15395,Sigmoid vein,Veia sigmóidea,pendente
+FMA14331,Splenic vein,Veia esplênica,pendente
+FMA66358,Trunk of superior mesenteric artery,Tronco da artéria mesentérica superior,pendente
+FMA4720,Superior vena cava,Veia cava superior,pendente
+FMA14332,Superior mesenteric vein,Veia mesentérica superior,pendente
+FMA78121,Superior phrenic vein,Veia frênica superior,pendente
+FMA14832,Superior rectal artery,Artéria retal superior,pendente
+FMA15393,Superior rectal vein,Veia retal superior,pendente
+FMA12858,Ascending lumbar vein,Veia lombar ascendente,pendente

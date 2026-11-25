@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas anatômico 3D</title>
+<link rel="icon" href="data:,">
+<style>
+ :root{--bg:#f4f2ee;--fg:#1d1d1b;--painel:#fffffff0;--borda:#d8d4cc}
+ @media (prefers-color-scheme:dark){:root{--bg:#16171a;--fg:#ecebe8;--painel:#22242af0;--borda:#3a3d44}}
+ html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px system-ui,sans-serif;overflow:hidden}
+ canvas{display:block;touch-action:none}
+ aside{position:fixed;top:16px;left:16px;bottom:48px;width:270px;box-sizing:border-box;overflow:auto;background:var(--painel);border:1px solid var(--borda);border-radius:10px;padding:12px 14px}
+ h1{font-size:15px;margin:0 0 8px} h2{font-size:13px;margin:14px 0 6px}
+ label{display:flex;align-items:center;gap:6px;margin:4px 0;cursor:pointer}
+ label i{width:12px;height:12px;border-radius:3px;flex:none} label small{margin-left:auto;opacity:.6}
+ input[type=search],button{font:inherit;color:inherit;background:transparent;border:1px solid var(--borda);border-radius:6px;padding:6px 8px}
+ input[type=search]{width:100%;box-sizing:border-box} button{cursor:pointer} button:disabled{opacity:.4;cursor:default}
+ #resultados button{display:block;width:100%;text-align:left;border:0;padding:4px 2px}
+ #resultados button:hover,#resultados button:focus-visible{background:var(--borda)}
+ dl{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin:0 0 8px} dt{opacity:.6} dd{margin:0}
+ #estado{min-height:1.2em;opacity:.8;margin-top:8px}
+ footer{position:fixed;left:0;right:0;bottom:0;padding:6px 16px;font-size:12px;text-align:center;background:var(--painel);border-top:1px solid var(--borda)}
+ footer a{color:inherit}
+ .aviso{display:block;font-size:11px;font-style:italic;opacity:.65}
+ #gaveta{display:none}
+ /* celular: o painel vira gaveta embaixo, fechada por padrão (só a alça aparece) */
+ @media (max-width:600px){
+  aside{top:auto;left:0;right:0;width:auto;max-height:65%;padding:0 14px 10px;border-radius:10px 10px 0 0}
+  #gaveta{display:block;position:sticky;top:0;z-index:1;width:100%;height:56px;border:0;border-radius:0;padding:0;background:var(--painel);text-align:left}
+  #gaveta span,#gaveta small{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  aside:not(.aberta){padding-bottom:0;overflow:hidden}
+  aside:not(.aberta)>:not(#gaveta){display:none}
+ }
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head><body>
+<aside id="painel">
+ <button id="gaveta" type="button" aria-expanded="false" aria-controls="painel"><span></span><small class="aviso"></small></button>
+ <h1>Atlas anatômico 3D</h1>
+ <input id="busca" type="search" placeholder="Buscar estrutura…" aria-label="Buscar estrutura por nome" autocomplete="off">
+ <div id="resultados"></div>
+ <h2>Estrutura</h2>
+ <div id="info" aria-live="polite">Clique numa estrutura</div>
+ <button id="isolar" disabled aria-pressed="false">Isolar</button>
+ <div id="estado" role="status">Carregando índice…</div>
+ <h2>Camadas</h2><div id="camadas"></div>
+</aside>
+<footer id="rodape">BodyParts3D, © The Database Center for Life Science licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC Attribution 4.0 International</a></footer>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+
+// pasta dos modelos; troque na URL com ?modelos=modelos_web/ (só subpasta local, nunca outro site)
+const PADRAO = 'modelos_web/';
+const pedida = new URLSearchParams(location.search).get('modelos')?.replace(/\/?$/, '/');
+const BASE = /^[\w-]+\/$/.test(pedida) ? pedida : PADRAO;
+
+// id: [rótulo, cor]
+const SISTEMAS = {
+  esqueletico:['Esquelético',0xe9e0c8], articular:['Articular',0x9fc4c9], muscular:['Muscular',0xb5524a],
+  fascia:['Fáscia',0xcfc3b0], cardiaco:['Cardíaco',0x9e1b32], arterial:['Arterial',0xe0262b], venoso:['Venoso',0x2f5bd0],
+  nervoso:['Nervoso',0xf2cc39], respiratorio:['Respiratório',0x7fb8d8], digestorio:['Digestório',0xd98b4a],
+  urogenital:['Urogenital',0x9a6fb0], endocrino:['Endócrino',0x4fa96b], sensorial:['Sensorial',0x3fb5a5],
+  tegumentar:['Tegumentar',0xe3b095], linfatico:['Linfático',0xb7d65a], outros:['Outros',0x999999]};
+const LADOS = {left:'Esquerdo', right:'Direito'};
+const INICIAL = 'esqueletico';
+const $ = id => document.getElementById(id);
+const rotulo = s => SISTEMAS[s]?.[0] ?? s;
+const nome = e => e.nome_pt || e.nome_en;
+// ponytail: todo nome_pt leva o aviso; olhar a coluna validacao quando houver nomes revisados
+const AVISO = 'tradução não revisada';
+const aviso = () => Object.assign(document.createElement('small'), {className:'aviso', textContent:AVISO});
+const movel = matchMedia('(max-width:600px)');
+const normal = t => String(t ?? '').normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+
+const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+document.body.prepend(renderer.domElement);
+const cena = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(35, 1, 0.005, 50); cam.position.set(0, 1, 4);
+const ctl = new OrbitControls(cam, renderer.domElement); ctl.enableDamping = true;
+cena.add(new THREE.HemisphereLight(0xffffff, 0x444444, 2.2));
+// luz presa à câmera: o lado que se olha fica sempre iluminado
+const sol = new THREE.DirectionalLight(0xffffff, 1.4); sol.position.set(.5, 1, 1); cam.add(sol); cena.add(cam);
+const destaque = new THREE.MeshStandardMaterial({color:0x39ff6a, emissive:0x0f7a2c, roughness:.4, side:THREE.DoubleSide});
+
+const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+const porId = new Map();      // FJxxxx -> entrada do índice
+const malhas = new Map();     // FJxxxx -> [Mesh] (só camadas já baixadas)
+const camadas = new Map();    // sistema -> {caixa, glbs, grupo, carga}
+let selecionado = null, isolado = false, enquadrado = false, pedido = 0;
+const baixando = new Set(), falhas = new Map();
+function estado(extra = '') {
+  const fila = baixando.size ? `Carregando ${[...baixando].map(rotulo).join(', ')}…` : '';
+  $('estado').textContent = [...falhas.values(), fila, extra].filter(Boolean).join(' ');
+  alca();
+}
+// a alça da gaveta mostra a seleção (e o aviso/estado) mesmo com o painel fechado
+function alca() {
+  const e = porId.get(selecionado), aberta = $('painel').classList.contains('aberta');
+  $('gaveta').setAttribute('aria-expanded', aberta);
+  $('gaveta').firstChild.textContent = `${aberta ? '▼' : '▲'} ${e ? nome(e) : 'Busca e camadas'}`;
+  $('gaveta').lastChild.textContent = $('estado').textContent || (e?.nome_pt ? AVISO : '');
+}
+function abrir(sim) { $('painel').classList.toggle('aberta', sim); alca(); }
+$('gaveta').onclick = () => abrir(!$('painel').classList.contains('aberta'));
+
+function atualizar() {
+  for (const c of camadas.values()) if (c.grupo) c.grupo.visible = c.caixa.checked;
+  for (const [id, lista] of malhas) for (const m of lista) {
+    m.visible = !isolado || id === selecionado;
+    m.material = id === selecionado ? destaque : m.userData.material;
+  }
+  $('isolar').disabled = !selecionado;
+  $('isolar').textContent = isolado ? 'Mostrar tudo' : 'Isolar';
+  $('isolar').setAttribute('aria-pressed', isolado);
+  alca();
+}
+
+function selecionar(id) {
+  selecionado = id;
+  if (!id) isolado = false;
+  const e = porId.get(id), info = $('info');
+  if (!e) info.textContent = 'Clique numa estrutura';
+  else {
+    const dl = document.createElement('dl');
+    for (const [k, v] of [['Nome', nome(e)], ...(e.nome_pt ? [['Inglês', e.nome_en]] : []), ['FMA', e.fma],
+        ['Sistema', rotulo(e.sistema)], ['Lateralidade', LADOS[e.lateralidade] ?? '—']]) {
+      const dt = document.createElement('dt'), dd = document.createElement('dd');
+      dt.textContent = k; dd.textContent = v; dl.append(dt, dd);
+    }
+    info.replaceChildren(dl);
+    if (e.nome_pt) info.append(aviso());
+  }
+  atualizar();
+}
+
+function enquadrar(objetos) {
+  const caixa = new THREE.Box3(); for (const o of objetos) caixa.expandByObject(o);
+  if (caixa.isEmpty()) return;
+  const esfera = caixa.getBoundingSphere(new THREE.Sphere());
+  const meioFov = THREE.MathUtils.degToRad(cam.fov / 2);
+  let dist = Math.max(esfera.radius / Math.sin(Math.atan(Math.tan(meioFov) * Math.min(1, cam.aspect))), .08);
+  // abertura em retrato: a esfera deixa o corpo pequeno; usa a caixa, de frente, a ~90% da altura (ou 95% da largura)
+  if (!enquadrado && cam.aspect < 1) {
+    const t = caixa.getSize(new THREE.Vector3());
+    dist = Math.max(t.y / .9, t.x / (.95 * cam.aspect)) / (2 * Math.tan(meioFov));
+  }
+  const dir = enquadrado ? cam.position.clone().sub(ctl.target).normalize() : new THREE.Vector3(0, 0, 1);
+  ctl.target.copy(esfera.center); cam.position.copy(esfera.center).addScaledVector(dir, dist); ctl.update();
+}
+
+async function baixar(sistema, c) {
+  const grupo = new THREE.Group(), novas = [];
+  const material = new THREE.MeshStandardMaterial({color: SISTEMAS[sistema]?.[1] ?? 0x999999, roughness:.55, metalness:0, side:THREE.DoubleSide});
+  for (const url of c.glbs) {
+    const gltf = await loader.loadAsync(url);
+    gltf.scene.traverse(o => {
+      if (!o.isMesh) return;
+      let no = o; while (no && !porId.has(no.name)) no = no.parent;
+      if (!no) return;
+      if (!o.geometry.getAttribute('normal')) o.geometry.computeVertexNormals();
+      o.geometry.deleteAttribute('color');
+      o.userData.id = no.name; o.userData.material = material;
+      novas.push(o);
+    });
+    grupo.add(gltf.scene);
+  }
+  if (!novas.length) throw new Error('nenhum nó do GLB bate com o índice');
+  for (const m of novas) { if (!malhas.has(m.userData.id)) malhas.set(m.userData.id, []); malhas.get(m.userData.id).push(m); }
+  c.grupo = grupo; cena.add(grupo);
+}
+
+// baixa uma vez só; se falhar, desliga a camada e permite tentar de novo
+function carregar(sistema) {
+  const c = camadas.get(sistema);
+  return c.carga ??= (async () => {
+    baixando.add(sistema); falhas.delete(sistema); estado();
+    try {
+      await baixar(sistema, c);
+      baixando.delete(sistema); estado();
+      atualizar();
+      if (!enquadrado && c.caixa.checked) { enquadrar([c.grupo]); enquadrado = true; }
+      return true;
+    } catch (erro) {
+      console.error(erro);
+      c.carga = null; c.caixa.checked = false;
+      baixando.delete(sistema); falhas.set(sistema, `Falha ao carregar ${rotulo(sistema)}: ${erro.message}`); estado();
+      return false;
+    }
+  })();
+}
+
+async function ir(id) {
+  const meu = ++pedido, e = porId.get(id), c = camadas.get(e.sistema);
+  c.caixa.checked = true;
+  if (!await carregar(e.sistema) || meu !== pedido) return;
+  c.caixa.checked = true;
+  if (!malhas.has(id)) { estado(`${nome(e)} não está no GLB`); return; }
+  selecionar(id); enquadrar(malhas.get(id)); enquadrado = true;
+  if (movel.matches) { abrir(false); $('gaveta').focus(); }
+}
+
+$('busca').oninput = ev => {
+  const termos = normal(ev.target.value).split(/\s+/).filter(Boolean);
+  const caixa = $('resultados'); caixa.replaceChildren();
+  if (!termos.length) return;
+  const achados = [...porId.values()].filter(e => termos.every(t => e.texto.includes(t)))
+    .sort((a, b) => nome(a).length - nome(b).length);
+  if (achados.slice(0, 30).some(e => e.nome_pt)) caixa.append(aviso());
+  for (const e of achados.slice(0, 30)) {
+    const b = document.createElement('button'); b.type = 'button';
+    b.textContent = `${nome(e)} · ${rotulo(e.sistema)}`; b.onclick = () => ir(e.arquivo);
+    caixa.appendChild(b);
+  }
+  if (!achados.length) caixa.textContent = 'Nada encontrado';
+  else if (achados.length > 30) caixa.append(`+${achados.length - 30} resultados, refine a busca`);
+};
+$('busca').onkeydown = ev => { if (ev.key === 'Enter') $('resultados').querySelector('button')?.click(); };
+$('isolar').onclick = () => { isolado = !isolado; atualizar(); if (isolado) enquadrar(malhas.get(selecionado)); };
+
+const ray = new THREE.Raycaster(); let inicio = null;
+renderer.domElement.addEventListener('pointerdown', e => { inicio = e.isPrimary && e.button === 0 ? [e.clientX, e.clientY] : null; });
+renderer.domElement.addEventListener('pointerup', e => {
+  // arrasto gira a câmera, não seleciona
+  if (!inicio || Math.hypot(e.clientX - inicio[0], e.clientY - inicio[1]) > 5) return;
+  const tela = renderer.domElement;
+  ray.setFromCamera(new THREE.Vector2(e.offsetX/tela.clientWidth*2-1, -e.offsetY/tela.clientHeight*2+1), cam);
+  // o Raycaster ignora .visible, então filtramos aqui
+  const alvos = [...malhas.values()].flat().filter(m => m.visible && camadas.get(porId.get(m.userData.id).sistema).caixa.checked);
+  const hit = ray.intersectObjects(alvos, false)[0];
+  pedido++;
+  if (hit) selecionar(hit.object.userData.id);
+  else if (!isolado) selecionar(null);
+});
+// a cena ocupa só a área livre: acima do rodapé e, no celular, acima da alça (gaveta aberta fica por cima)
+function ajustar() {
+  const rodape = $('rodape').offsetHeight;
+  $('painel').style.bottom = movel.matches ? `${rodape}px` : '';
+  const altura = Math.max(1, innerHeight - rodape - (movel.matches ? $('gaveta').offsetHeight + 2 : 0));
+  cam.aspect = innerWidth/altura; cam.updateProjectionMatrix(); renderer.setSize(innerWidth, altura);
+}
+addEventListener('resize', ajustar); ajustar(); alca();
+// ponytail: um draw call por estrutura (2234 no total); juntar geometrias (BatchedMesh) se ficar lento com tudo ligado
+renderer.setAnimationLoop(() => { ctl.update(); renderer.render(cena, cam); });
+
+// CSV com campos entre aspas ("" = aspa literal) -> objetos pela linha de cabeçalho
+function lerCsv(texto) {
+  const linhas = [[]];
+  for (const [, aspas, simples, fim] of texto.trim().matchAll(/(?:"((?:[^"]|"")*)"|([^",\r\n]*))(,|\r?\n|$)/g)) {
+    linhas.at(-1).push(aspas?.replaceAll('""', '"') ?? simples);
+    if (fim !== ',') linhas.push([]);
+  }
+  const [cab, ...resto] = linhas;
+  return resto.map(l => Object.fromEntries(cab.map((c, i) => [c, l[i]])));
+}
+// nomes em português são opcionais: sem o arquivo, fica o inglês
+const nomesPt = () => fetch('nomes_pt.csv').then(async r => new Map((r.ok ? lerCsv(await r.text()) : [])
+  .filter(l => l.nome_pt?.trim()).map(l => [l.fma, l.nome_pt.trim()]))).catch(() => new Map());
+
+try {
+  const [r, pt] = await Promise.all([fetch(`${BASE}indice.json`), nomesPt()]);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  for (const e of await r.json()) {
+    e.nome_pt ||= pt.get(e.fma);
+    e.arquivo = e.arquivo.replace(/\.obj$/i, '');
+    e.texto = normal(`${e.nome_en} ${e.nome_pt ?? ''}`);
+    porId.set(e.arquivo, e);
+    if (!camadas.has(e.sistema)) camadas.set(e.sistema, {glbs: new Set(), n: 0});
+    const c = camadas.get(e.sistema); c.n++;
+    // glb é relativo à pasta do indice.json
+    c.glbs.add(BASE + (e.glb || `${e.sistema}.glb`));
+  }
+  const ordem = Object.keys(SISTEMAS);
+  for (const s of [...camadas.keys()].sort((a, b) => ordem.indexOf(a) - ordem.indexOf(b))) {
+    const c = camadas.get(s), l = document.createElement('label');
+    const caixa = document.createElement('input'), cor = document.createElement('i'), n = document.createElement('small');
+    caixa.type = 'checkbox'; caixa.value = s; c.caixa = caixa;
+    cor.style.background = '#' + (SISTEMAS[s]?.[1] ?? 0x999999).toString(16).padStart(6, '0'); n.textContent = c.n;
+    caixa.onchange = () => {
+      if (caixa.checked) carregar(s);
+      else if (porId.get(selecionado)?.sistema === s) { selecionar(null); return; }
+      atualizar();
+    };
+    l.append(caixa, cor, rotulo(s), n); $('camadas').appendChild(l);
+  }
+  estado();
+  if (camadas.has(INICIAL)) { camadas.get(INICIAL).caixa.checked = true; await carregar(INICIAL); }
+  document.body.dataset.pronto = '1';
+} catch (erro) {
+  console.error(erro);
+  estado(`Não foi possível ler ${BASE}indice.json (${erro.message}). Sirva a pasta com: python -m http.server`);
+}
+</script></body></html>
