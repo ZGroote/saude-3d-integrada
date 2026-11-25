@@ -1,0 +1,434 @@
+{
+ "adrenal_gland_left": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "adrenal_gland_right": {
+  "camada": "orgaos",
+  "triangulos": 3044
+ },
+ "aorta": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "atrial_appendage_left": {
+  "camada": "coracao",
+  "triangulos": 2668
+ },
+ "autochthon_left": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "autochthon_right": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "brachiocephalic_trunk": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "brachiocephalic_vein_left": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "brachiocephalic_vein_right": {
+  "camada": "vasos",
+  "triangulos": 3152
+ },
+ "clavicula_left": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "clavicula_right": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "colon": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "common_carotid_artery_left": {
+  "camada": "vasos",
+  "triangulos": 3168
+ },
+ "common_carotid_artery_right": {
+  "camada": "vasos",
+  "triangulos": 2708
+ },
+ "costal_cartilages": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "duodenum": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "esophagus": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "femur_left": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "femur_right": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "gallbladder": {
+  "camada": "orgaos",
+  "triangulos": 3752
+ },
+ "gluteus_maximus_left": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "gluteus_maximus_right": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "gluteus_medius_left": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "gluteus_medius_right": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "gluteus_minimus_left": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "gluteus_minimus_right": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "heart": {
+  "camada": "coracao",
+  "triangulos": 4000
+ },
+ "hip_left": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "hip_right": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "humerus_left": {
+  "camada": "ossos",
+  "triangulos": 2248
+ },
+ "humerus_right": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "iliac_artery_left": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "iliac_artery_right": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "iliac_vena_left": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "iliac_vena_right": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "iliopsoas_left": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "iliopsoas_right": {
+  "camada": "musculos",
+  "triangulos": 4000
+ },
+ "inferior_vena_cava": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "kidney_left": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "kidney_right": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "liver": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "lung_lower_lobe_left": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "lung_lower_lobe_right": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "lung_middle_lobe_right": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "lung_upper_lobe_left": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "lung_upper_lobe_right": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "pancreas": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "portal_vein_and_splenic_vein": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "prostate": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "pulmonary_vein": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "rib_left_1": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_10": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_11": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_12": {
+  "camada": "ossos",
+  "triangulos": 3634
+ },
+ "rib_left_2": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_3": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_4": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_5": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_6": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_7": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_8": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_left_9": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_1": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_10": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_11": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_12": {
+  "camada": "ossos",
+  "triangulos": 3388
+ },
+ "rib_right_2": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_3": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_4": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_5": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_6": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_7": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_8": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "rib_right_9": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "sacrum": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "scapula_left": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "scapula_right": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "skull": {
+  "camada": "ossos",
+  "triangulos": 2528
+ },
+ "small_bowel": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "spinal_cord": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "spleen": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "sternum": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "stomach": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "subclavian_artery_left": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "subclavian_artery_right": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "superior_vena_cava": {
+  "camada": "vasos",
+  "triangulos": 4000
+ },
+ "thyroid_gland": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "trachea": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "urinary_bladder": {
+  "camada": "orgaos",
+  "triangulos": 4000
+ },
+ "vertebrae_C7": {
+  "camada": "ossos",
+  "triangulos": 3132
+ },
+ "vertebrae_L1": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_L2": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_L3": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_L4": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_L5": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_S1": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T1": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T10": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T11": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T12": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T2": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T3": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T4": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T5": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T6": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T7": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T8": {
+  "camada": "ossos",
+  "triangulos": 4000
+ },
+ "vertebrae_T9": {
+  "camada": "ossos",
+  "triangulos": 4000
+ }
+}
