@@ -1,0 +1,11 @@
+{
+  "name": "supabase-db",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.14"
+  },
+  "scripts": {
+    "test": "node --test testes/"
+  }
+}

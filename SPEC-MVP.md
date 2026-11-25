@@ -102,7 +102,11 @@ type Marcador = { id: string; ancora: Ancora; cor: string; tamanho: number };
 
 Ao abrir uma âncora gravada noutra `atlas_versao`, o motor reprojeta `posicao_local` na malha da versão atual (ponto mais próximo) e **nunca reescreve** a âncora original.
 
-**Âncora só estrutural** (sem `posicao_local`): o motor desenha o marcador no centro da caixa da malha indicada. Quando uma estrutura tem várias malhas (559 no `bp3d-m`), quem monta a âncora escolhe a malha de mais triângulos — regra determinística, igual no servidor e no cliente.
+**Âncora só estrutural** (sem `posicao_local`): o motor desenha o marcador no centro da caixa da malha indicada. Quando uma estrutura tem várias malhas (559 no `bp3d-m`), quem monta a âncora escolhe a malha de mais triângulos e, no empate, o menor nome de malha — função `malhaPrincipal` do pacote `@saude3d/motor-anatomico/indice`, a mesma no servidor e no cliente (o `indice.json` traz `triangulos`).
+
+**Unidades:** `posicao_local` em metros nos eixos do atlas (nunca nas coordenadas quantizadas do GLB); `Marcador.tamanho` é raio em metros. O motor carrega, sem mostrar, os sistemas de que os marcadores precisam e avisa por `onMarcadoresSemPosicao(ids)` os que não conseguiu posicionar.
+
+**Versão publicada** = enviada à hospedagem do app. Antes disso a versão é local e pode ser reconstruída.
 
 **Lado:** `lateralidade` do índice (`left`/`right`/`null`) vira `achados.lado` (`esquerdo`/`direito`/`nao_se_aplica`).
 
@@ -166,7 +170,7 @@ auditoria (id, autor_id → perfis, unidade_id → unidades not null, paciente_i
 
 ### RLS
 
-- **Vínculo ativo** = `desde <= hoje and (ate is null or ate >= hoje)`, em todo lugar.
+- **Vínculo ativo** = `desde <= hoje and (ate is null or ate > hoje)`, em todo lugar. `ate` é exclusivo: encerrar grava `ate = hoje` e o acesso acaba na hora.
 - Ninguém lê nem escreve `pacientes`, `vinculos`, `achados`, `gestacoes` ou `nascimentos` direto: só pelas funções do contrato abaixo, que conferem o vínculo e auditam. RLS fica ligada mesmo assim (defesa em profundidade).
 - `perfis`: cada um lê o próprio e os da sua unidade; só o admin altera, e só na própria unidade; ninguém muda o próprio papel. `unidades`: leitura da própria; `cid10`: leitura para todo autenticado.
 - Qualquer profissional com vínculo ativo vê **todos** os achados do paciente (é o valor multidisciplinar), mas só cria achados em nome próprio e da sua unidade.
