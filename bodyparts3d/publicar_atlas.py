@@ -118,6 +118,8 @@ def montar(reconstruir_local=False):
         fma = linha['fma'].strip()
         nome_en = linha['nome_en'].strip()
         sistema = linha['sistema'].strip()
+        triangulos = int(linha['triangulos'].strip())
+        assert triangulos > 0, f"triangulos inválido em {linha['arquivo']}: {triangulos}"
         traducao = nomes_por_fma.get(fma, {}) if fma else nomes_por_en.get(nome_en, {})
         item = {
             'malha': linha['arquivo'].strip(),
@@ -128,6 +130,7 @@ def montar(reconstruir_local=False):
             'sistema': sistema,
             'lateralidade': linha['lateralidade'].strip() or None,
             'glb': glb_por_sistema[sistema],
+            'triangulos': triangulos,
         }
         indice.append(item)
         estruturas_por_sistema[sistema] += 1
