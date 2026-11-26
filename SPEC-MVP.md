@@ -209,6 +209,23 @@ Etapas seguintes acrescentam funções no mesmo padrão (`registrar_achado`, `hi
 
 **Âncora de paciente feminina:** enquanto o app mostrar o corpo masculino provisório (sem pacote `hra-f`), o registro de achado com âncora fica bloqueado para ela (só "sem local no corpo"). É regra da tela; o banco não bloqueia por sexo. `ancora.estrutura` pode ser `null` (malha sem ID de ontologia).
 
+`listar_achados` e `historico_achado` devolvem também `unidade_id` (o app decide "Corrigir" por id, não por nome).
+
+### Contrato do banco — Etapa 5 (gestação e nascimento)
+
+| Porta | Faz |
+| --- | --- |
+| `registrar_gestacao(p_mae uuid, p_dum date, p_inicio_pre_natal date) returns uuid` | Exige vínculo ativo com a mãe (sexo feminino); `dpp` = DUM + 280 dias, calculada no servidor; `desfecho='em_curso'`; no máximo uma gestação `em_curso` por mãe; audita |
+| `registrar_condicao_gestacao(p_gestacao uuid, p_cid10 text, p_semana int) returns uuid` | Exige vínculo ativo com a mãe; semana 0–45; sigilo pela mesma `cid10_sigilo` (acrescida de O98.7 — HIV na gestação); autor/unidade do perfil; audita |
+| `encerrar_gestacao(p_gestacao uuid, p_desfecho)` | `nascido_vivo` só via `registrar_nascimento`; `obito_fetal`/`aborto` encerram; audita |
+| `registrar_nascimento(p_gestacao uuid, p_nome text, p_sexo, p_data date, p_peso_g int, p_idade_gestacional_sem int, p_apgar_5 int, p_cns text default null) returns uuid` | Exige vínculo ativo com a mãe; cria a criança em `pacientes`, o `nascimentos` e encerra a gestação como `nascido_vivo`; cria **vínculo da criança com a unidade que registrou** (`origem='atendimento'`, motivo "nascimento") — única exceção à regra "só admin cria vínculo", justificada pelo parto; tudo atômico e auditado; gemelaridade = várias chamadas para a mesma gestação |
+| `listar_gestacoes(p_mae uuid)` | Exige vínculo com a mãe; gestações com condições (restritas de outra unidade ocultas) e nascimentos |
+| `historico_gestacional_crianca(p_crianca uuid)` | Exige vínculo com a **criança**; devolve **só o recorte**: nome da mãe, condições da gestação não restritas (CID, descrição, semana), idade gestacional, peso, Apgar 5, data. Nunca achados, outras gestações ou o prontuário da mãe. Audita |
+
+**Condição gestacional restrita e o pediatra (pergunta aberta para revisão médica):** exposição vertical (ex.: HIV, sífilis) é clinicamente relevante para a criança. No MVP, condições restritas **não** aparecem no recorte do pediatra de outra unidade; a decisão de exibir um alerta de exposição fica pendente de parecer médico e jurídico.
+
+**Camada gestacional:** com gestação `em_curso`, o prontuário da mãe oferece ligar o sistema `gestacional` do atlas (placenta, âmnio, cordão) — representação de referência, não da gestação real.
+
 Leitura do prontuário pelo app passa **sempre** por `abrir_prontuario`; a página nunca lê o paciente direto.
 
 **Endurecimento obrigatório:** funções `security definer` com `search_path = ''` e nomes qualificados, dono sem `BYPASSRLS`; `revoke execute … from public, anon` e `grant` só a `authenticated`; auditoria só aceita `insert` pelas funções (append-only); páginas de prontuário sem cache compartilhado (`dynamic`, `no-store`); `service_role` nunca no app.
@@ -312,7 +329,11 @@ Cada etapa termina com um teste que passa.
    - **Demonstração §14** automatizada contra a homologação: cardiologia (I10, sem local), ortopedia (M54.5 marcado na região lombar) e obstetrícia (Z34, no útero), cada um na sua unidade; os três veem o histórico unificado dos três achados.
    - **Desempenho:** build de produção, navegador com CPU 4× mais lenta e rede "Fast 4G" (simulação de tablet intermediário), paciente de carga com 200 achados vigentes espalhados por vários sistemas; da navegação até lista e marcadores visíveis ≤ 3 s na **mediana de 5 aberturas** (registrar também o p95 e quanto vem do banco, da rede de GLB e da renderização).
    - **Filtros e linha do tempo:** especialidade, status e período filtram ao mesmo tempo o corpo e a lista; a linha do tempo ordena por início (ou criação) e permite escolher um intervalo; histórico de correções visível no cartão do achado.
-5. **Gestação e nascimento:** gestação, condições, camada gestacional, nascimento, vínculo mãe–filho. Teste: registrar nascimento cria a criança ligada à mãe.
+5. **Gestação e nascimento:** gestação, condições, camada gestacional, nascimento, vínculo mãe–filho. Teste: registrar nascimento cria a criança ligada à mãe. Critérios:
+   - Obstetrícia registra a gestação da Maria, uma condição (ex.: O24.4 diabetes gestacional) e o nascimento; a criança nasce com vínculo na Maternidade e aparece em `/pacientes/[id]/familia` da mãe e vice-versa.
+   - Pediatra (unidade com vínculo só com a criança) vê o recorte gestacional e **nada** do prontuário da mãe (nem achados, nem outras gestações); condição restrita de outra unidade não aparece.
+   - Criança abaixo de 12 anos não vê corpo 3D (§5.1); o prontuário dela é estruturado e por linha do tempo.
+   - Gestação em curso: camada gestacional disponível no corpo da mãe.
 6. **Interoperabilidade:** importação FHIR. Teste: Bundle sintético com 50 pacientes importa sem erro e sem duplicar.
 7. **Preparação para piloto:** validação médica, segurança, performance, acessibilidade e usabilidade nos três tamanhos de tela.
 
