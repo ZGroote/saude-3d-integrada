@@ -305,3 +305,6 @@ Dependência de confirmação prévia da licença aberta da task `'body'`, da qu
 - **Revisão humana:** pendente
 - **Validação científica:** pendente
 - **Validação clínica:** pendente
+
+## Decisão de encerramento (2026-11-26)
+Decisão do usuário após a revisão F5 e o resultado do `EXP-0016`: **manter o `hra-f/1.10-1` como atlas feminino do MVP e congelar a linha de pesquisa do corpo feminino**, dentro do teto de 5 dias úteis. Os pacotes `atlas/vhf-f/0.1-0` e `atlas/hib-f/0.1-0` ficam como rascunhos locais, não publicados e não aceitos (o `copiar-atlas` ignora rascunhos). As lacunas conhecidas do HRA (esqueleto remodelado, `EXP-0014`) continuam registradas. Sem validação clínica.

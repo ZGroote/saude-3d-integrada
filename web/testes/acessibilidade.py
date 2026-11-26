@@ -32,6 +32,7 @@ GRAVAR = '--sem-gravar' not in sys.argv
 AXE = next(c for p in (WEB, *WEB.parents) if (c := p / 'node_modules/axe-core/axe.min.js').exists())
 LARGURAS = ((1440, 900), (820, 1180), (390, 844))
 MARIA = '30000000-0000-4000-8000-000000000001'
+MARCA_TESTE = 'Teste de teclado (dado fictício)'
 BEBE = 'Bebê Fictício Etapa5'
 U = {n: f'{n}@saude3d.invalid' for n in ('cardiologia', 'ortopedia', 'obstetricia', 'pediatria', 'admin')}
 
@@ -265,6 +266,8 @@ with sync_playwright() as p:
         tabular(pg, "e.name === 'categoria'", 'categoria')
         pg.keyboard.type('Doen')  # num select, digitar escolhe a opção
         assert pg.locator('select[name=categoria]').input_value() == 'doenca'
+        tabular(pg, "e.name === 'observacao'", 'observação')
+        pg.keyboard.type(MARCA_TESTE)  # supabase/limpar_testes_homologacao.py apaga pela marca
         tabular(pg, "e.type === 'submit' && e.textContent.includes('Salvar')", 'salvar')
         with pg.expect_response(lambda r: '/rpc/registrar_achado' in r.url and r.request.method == 'POST') as espera:
             pg.keyboard.press('Enter')
@@ -317,6 +320,8 @@ window.__THREE_DEVTOOLS__.addEventListener('observe', (e) => e.detail.isScene &&
         pg.wait_for_selector('[data-cid-escolhido]')
         tabular(pg, "e.name === 'categoria'", 'categoria')
         pg.keyboard.type('Sint')
+        tabular(pg, "e.name === 'observacao'", 'observação')
+        pg.keyboard.type(MARCA_TESTE)
         tabular(pg, "e.type === 'submit' && e.textContent.includes('Salvar')", 'salvar')
         with pg.expect_response(lambda r: '/rpc/registrar_achado' in r.url and r.request.method == 'POST') as espera:
             pg.keyboard.press('Enter')
