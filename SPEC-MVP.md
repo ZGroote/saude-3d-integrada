@@ -302,6 +302,12 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 
 **`bodySite` → âncora:** tabela pequena `bodysite_estrutura (snomed text pk, descricao, estrutura_fma, estrutura_uberon)` mantida à mão (ex.: região lombar, coração, joelho E/D, fígado); a âncora estrutural é montada no servidor com `malhaPrincipal` do atlas do sexo do paciente. `bodySite` sem mapeamento → `ancora=null` ("sem local no corpo"). Nunca adivinhar.
 
+### Endurecimento pré-piloto (migração 0008, revisão externa de 2026-11-26)
+
+- **Âncora conferida no catálogo:** tabela `atlas_malhas (atlas, versao, malha, sistema, lateralidade, estrutura)`, PK `(atlas, versao, malha)`, gerada do `indice.json` dos pacotes **publicados** (`bp3d-m/4.0-1`, `hra-f/1.10-1`; rascunhos nunca entram); legível por `authenticated`, sem DML. `registrar_achado` e `importar_condicao_fhir` recusam (22023) âncora cuja `(atlas, atlas_versao, malha)` não exista, ou cujo atlas não seja o do sexo do paciente (mesma regra do app). `sistema`, `lateralidade` e `estrutura` passam a vir do catálogo, não do navegador; só o ponto clicado vem do cliente.
+- **Sistema de origem na importação:** `iniciar_importacao(p_arquivo, p_recursos, p_sistema_origem text)`; `sistema_origem` obrigatório (texto aparado, 1–200, comparado em minúsculas), informado pelo admin na tela. A unicidade de `fhir_id` passa a ser `(unidade_id, sistema_origem, fhir_id)` em `paciente_fhir`, `achados` (só `origem='fhir'`) e `eventos_clinicos`, porque dois sistemas de uma mesma unidade podem ter o mesmo `Patient/123`. Linhas antigas recebem `sistema_origem='legado'`.
+- **`verificationStatus`:** `Condition` com `entered-in-error` ou `refuted` não importa; vira erro do recurso com o motivo. Os demais valores importam como hoje.
+
 ## 10. Requisitos não funcionais
 
 - **LGPD:** base legal de tutela da saúde para o atendimento. Termo e textos adaptados do PHÝŌ.
