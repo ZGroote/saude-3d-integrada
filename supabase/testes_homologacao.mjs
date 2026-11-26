@@ -30,9 +30,11 @@ ok('sem login: nada de pacientes');
 const cardio = await como('cardiologia@saude3d.invalid');
 const lista = await cardio.rpc('buscar_pacientes', { p_texto: null });
 assert.equal(lista.error, null);
-assert.deepEqual(lista.data.map((p) => p.id), [MARIA]);
+// a cardiologia também tem a paciente de carga da Etapa 4; o que importa: Maria sim, João não
+const ids = lista.data.map((p) => p.id);
+assert.ok(ids.includes(MARIA) && !ids.includes(JOAO), JSON.stringify(ids));
 assert.ok(!('cns' in lista.data[0]) && /^\d{4}$/.test(lista.data[0].cns_final));
-ok('cardiologia: lista só a Maria, CNS mascarado');
+ok('cardiologia: lista a Maria e não o João, CNS mascarado');
 
 const direto = await cardio.from('pacientes').select('*');
 assert.ok(direto.error, 'select direto em pacientes deveria falhar');
