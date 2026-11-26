@@ -30,7 +30,7 @@ DENVER_TYPES = {"osso", "musculo", "cartilagem", "ligamento"}
 DENVER_BONES = {
     "Bone Calcaneous", "Bone Cuboid", "Bone Femur", "Bone Fibula", "Bone IntermediateCuneiform",
     "Bone LateralCuneiform", "Bone MedialCuneiform", "Bone Navicular", "Bone Patella",
-    "Bone Phalanges", "Bone Talus", "Bone Tibia",
+    "Bone Pelvis", "Bone Sacrum", "Bone Coccyx", "Bone Phalanges", "Bone Talus", "Bone Tibia",
 }
 DENVER_CARTILAGE = {
     "Cartilage FemurDistal", "Cartilage FemurHead", "Cartilage Patella", "Cartilage Talus",
@@ -38,6 +38,12 @@ DENVER_CARTILAGE = {
 }
 LOWER_LABELS = {"femur_left", "femur_right", "tibia_left", "tibia_right",
                 "fibula_left", "fibula_right", "patella_left", "patella_right", "femur", "tibia", "fibula", "patella"}
+# Round 3 source-unique exclusions: Denver supplies pelvic girdle and attached muscles.
+EXCLUDED_TOTAL_LABELS = {"hip_left", "hip_right", "sacrum", "vertebrae_s1",
+                         "iliopsoas_left", "iliopsoas_right",
+                         "gluteus_maximus_left", "gluteus_maximus_right",
+                         "gluteus_medius_left", "gluteus_medius_right",
+                         "gluteus_minimus_left", "gluteus_minimus_right"}
 LOWER_PREFIXES = ("femur_", "tibia_", "fibula_", "patella_", "pelvis_", "gluteus_maximus_",
                   "gluteus_medius_", "gluteus_minimus_")
 TAUBIN_LAMBDA = 0.45
@@ -131,7 +137,7 @@ def run():
     prior_rows = {row["name"]: row for row in prior.get("meshes", [])}
     reports = []
     for name, ident in sorted(named_ids.items()):
-        if name.lower() in LOWER_LABELS or name.lower().startswith(LOWER_PREFIXES):
+        if name.lower() in LOWER_LABELS or name.lower() in EXCLUDED_TOTAL_LABELS or name.lower().startswith(LOWER_PREFIXES):
             continue
         key = f"total__{file_stem(name)}"
         if key in prior_rows and (OUT / f"{key}.stl").is_file():
@@ -205,12 +211,23 @@ def run():
 
     manifest = {"coordinate_system": "RAS", "units": "mm", "source_total": str(TOTAL.relative_to(ROOT)),
                 "source_body": str(BODY.relative_to(ROOT)), "stage_a": str(TRANSFORMS.relative_to(ROOT)),
-                "lower_limb_source": "Denver only; corresponding TotalSegmentator lower-limb labels omitted",
+                "lower_limb_source": "Denver only for lower limbs and pelvic girdle; corresponding TotalSegmentator labels omitted",
+                "source_excluded_total_labels": sorted(EXCLUDED_TOTAL_LABELS),
+                "denver_pelvic_source_structures": ["Bone Pelvis left/right", "Bone Sacrum", "Bone Coccyx"],
                 "smoothing": {"method": "Taubin lambda-mu", "lambda": TAUBIN_LAMBDA, "mu": TAUBIN_MU,
                               "iterations": TAUBIN_ITERS, "decimation": "none"},
                 "meshes": reports, "denver_mesh_count": denver_count}
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Exported {len(reports)} meshes ({denver_count} Denver) to {OUT}")
+    # Remove stale generated TotalSegmentator STLs omitted by the new source-unique manifest.
+    active_names = {row["name"] for row in reports}
+    removed = []
+    for old_name in prior_rows:
+        if old_name.startswith("total__") and old_name not in active_names:
+            stale = OUT / f"{old_name}.stl"
+            if stale.is_file():
+                stale.unlink()
+                removed.append(old_name)
+    print(f"Exported {len(reports)} meshes ({denver_count} Denver); removed stale TotalSegmentator meshes: {removed}")
 
 
 def mesh_record(name: str, mesh: trimesh.Trimesh) -> dict:

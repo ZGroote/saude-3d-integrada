@@ -36,10 +36,10 @@ def body_boundary():
  skin=mesh('body__skin'); points=surf_samples(skin,300000,15026)
  edge_dist=np.min(np.minimum(points-mins,maxs-points),axis=1)
  near=edge_dist<=1.5
- regions={'head':points[:,2]>-250,'hand_left':(points[:,0]>160)&(points[:,2]>-1200)&(points[:,2]<-700),
-  'hand_right':(points[:,0]<-160)&(points[:,2]>-1200)&(points[:,2]<-700),
-  'arm_left':(points[:,0]>100)&(points[:,2]>=-700)&(points[:,2]<-250),
-  'arm_right':(points[:,0]<-100)&(points[:,2]>=-700)&(points[:,2]<-250),'foot':points[:,2]<-1500}
+ regions={'head':points[:,2]>-250,'hand_right':(points[:,0]>160)&(points[:,2]>-1200)&(points[:,2]<-700),
+  'hand_left':(points[:,0]<-160)&(points[:,2]>-1200)&(points[:,2]<-700),
+  'arm_right':(points[:,0]>100)&(points[:,2]>=-700)&(points[:,2]<-250),
+  'arm_left':(points[:,0]<-100)&(points[:,2]>=-700)&(points[:,2]<-250),'foot':points[:,2]<-1500}
  result={'volume_shape_vox':shape.tolist(),'volume_edge_ras_mm':[mins.tolist(),maxs.tolist()],
   'surface_samples':len(points),'surface_samples_near_volume_edge':int(near.sum()),'fraction_sampled_surface_near_edge':float(near.mean()),
   'face_contacts_voxels':faces,'regions':{}}
@@ -52,15 +52,22 @@ def body_boundary():
   outside=~inside; edge=np.min(np.minimum(v-mins,maxs-v),axis=1)<=3.0
   bins={'head':v[:,2]>-250,'hands':(np.abs(v[:,0])>160)&(v[:,2]>-1200)&(v[:,2]<-700),
    'arms':(np.abs(v[:,0])>100)&(v[:,2]>=-700)&(v[:,2]<-250),'feet':v[:,2]<-1500}
-  associations[name]={'outside_vertices_sampled_by_nearest_body_voxel':int(outside.sum()),'all_vertices_within_3mm_volume_edge':int(edge.sum()),
+  associations[name]={'max_outside_distance_mm_official_f1':f1[name]['max_outside_distance_to_skin_vertex_mm'],'outside_vertices_sampled_by_nearest_body_voxel':int(outside.sum()),'all_vertices_within_3mm_volume_edge':int(edge.sum()),
    'outside_vertices_within_3mm_volume_edge':int((outside&edge).sum()),'outside_fraction_near_edge':float((outside&edge).sum()/outside.sum()) if outside.any() else 0,
    'outside_vertices_by_region':{k:int((outside&sel).sum()) for k,sel in bins.items()}}
+ # Estimate edge-coincident region surface area from exact mask-face voxels. RAS +X is anatomical right.
+ region_vox={'head':1607,'arm_right':175,'arm_left':0,'hand_right':0,'hand_left':0,'foot':0}
+ skin_area=float(skin.area)
+ for name,entry in result['regions'].items():
+  edge_area=region_vox[name]*float(np.prod(zoom[:2]))
+  estimated_region_area=skin_area*entry['surface_samples']/len(points)
+  entry.update({'boundary_face_voxels':region_vox[name],'estimated_edge_area_mm2':edge_area,'estimated_region_area_mm2':estimated_region_area,'fraction_region_surface_coincident_with_volume_edge':edge_area/estimated_region_area if estimated_region_area else 0.0})
  result['f1_outlier_association']=associations
  result['f1_association_note']='Outside status here is nearest original body-mask voxel lookup (not filled 3 mm skin grid); use as regional attribution, not replacement F1 score.'
  return result
 
 def f3_depth():
- rows=[r for r in EVAL['F3']['overlap_pairs'] if not r['criterion_both_below_0_02']]; records={r['name']:r for r in MAN['meshes']}; ordered=[r['name'] for r in MAN['meshes'] if r['name']!='body__skin']; index={n:i for i,n in enumerate(ordered)}
+ excluded={frozenset((x['a'],x['b'])) for x in EVAL['F3v2']['excluded_pairs_present_in_bbox']}; rows=[r for r in EVAL['F3v1']['overlap_pairs'] if not r['criterion_both_below_0_02'] and frozenset((r['a'],r['b'])) not in excluded]; records={r['name']:r for r in MAN['meshes']}; ordered=[r['name'] for r in MAN['meshes'] if r['name']!='body__skin']; index={n:i for i,n in enumerate(ordered)}
  point_cache={}; mesh_cache=OrderedDict(); grid_cache=OrderedDict(); depth_cache=OrderedDict()
  def get_points(n):
   if n not in point_cache:
@@ -105,11 +112,16 @@ def f3_depth():
    'estimated_overlap_cm3_mean_directional':(va+vb)/2000,'max_sampled_penetration_depth_mm_voxel_edt':depth,'classification':cls,
    'sampled_a_points_inside_b':int(ain.sum()),'sampled_b_points_inside_a':int(bin_.sum())})
   if k%25==0:print('F3 diagnostic',k,'/',len(rows),flush=True)
- return {'method':'2 mm filled-grid membership and up to 2,000 deterministic interior points per structure; estimated volume is directional sampled fraction ? exact mesh volume. Penetration depth is Euclidean distance-transform from interior voxel centers to target-grid boundary, quantized at 2 mm; classify as a voxel-scale estimate, not exact triangle distance.',
-  'pair_count':len(rows),'counts_by_max_sampled_depth':counts,
-  'top20_by_estimated_overlap_cm3':sorted(enriched,key=lambda r:r['estimated_overlap_cm3_mean_directional'],reverse=True)[:20],
-  'top20_by_percent':sorted(enriched,key=lambda r:max(r['a_interior_fraction_inside_b'],r['b_interior_fraction_inside_a']),reverse=True)[:20],
-  'all_pairs':enriched}
+ invasions=[r for r in enriched if max(r['a_interior_fraction_inside_b'],r['b_interior_fraction_inside_a'])>=0.02 and r['max_sampled_penetration_depth_mm_voxel_edt']>3.0]
+ eligible_under_depth=[r for r in enriched if max(r['a_interior_fraction_inside_b'],r['b_interior_fraction_inside_a'])>=0.02 and r['max_sampled_penetration_depth_mm_voxel_edt']<=3.0]
+ return {'method':'2 mm filled-grid membership and up to 2,000 deterministic interior points per structure; volume is directional sampled fraction ? exact mesh volume. Penetration depth is Euclidean distance-transform from interior voxel centers to target-grid boundary, quantized at 2 mm; >3 mm is the registered invasion rule.',
+  'F3v1_over_2pct_pairs':sum(not r['criterion_both_below_0_02'] for r in EVAL['F3v1']['overlap_pairs']),
+  'F3v2_over_2pct_candidates_depth_le_3mm':len(eligible_under_depth),
+  'F3v2_invasion_count_ge_2pct_and_depth_gt_3mm':len(invasions),
+  'counts_by_max_sampled_depth':counts,
+  'top20_by_estimated_overlap_cm3':sorted(invasions,key=lambda r:r['estimated_overlap_cm3_mean_directional'],reverse=True)[:20],
+  'top20_by_percent':sorted(invasions,key=lambda r:max(r['a_interior_fraction_inside_b'],r['b_interior_fraction_inside_a']),reverse=True)[:20],
+  'all_v2_over_2pct_pairs':enriched}
 
 def ribs():
  # Diagnose segmentation inclusion and nearest transverse-process proxy from meshes.
