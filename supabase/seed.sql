@@ -2,7 +2,8 @@
 INSERT INTO public.unidades (id, nome, cnes, municipio_ibge) VALUES
   ('10000000-0000-4000-8000-000000000001', 'UBS Centro', '1111111', '3550308'),
   ('10000000-0000-4000-8000-000000000002', 'Ambulatório de Cardiologia', '2222222', '3550308'),
-  ('10000000-0000-4000-8000-000000000003', 'Maternidade Municipal', '3333333', '3550308');
+  ('10000000-0000-4000-8000-000000000003', 'Maternidade Municipal', '3333333', '3550308'),
+  ('10000000-0000-4000-8000-000000000004', 'Ambulatório de Pediatria', '4444444', '3550308');
 
 INSERT INTO auth.users (id, email) VALUES
   ('20000000-0000-4000-8000-000000000001', 'admin@saude3d.invalid'),
@@ -11,7 +12,9 @@ INSERT INTO auth.users (id, email) VALUES
   ('20000000-0000-4000-8000-000000000004', 'obstetricia@saude3d.invalid'),
   ('20000000-0000-4000-8000-000000000005', 'admin-cardiologia@saude3d.invalid'),
   ('20000000-0000-4000-8000-000000000006', 'admin-maternidade@saude3d.invalid'),
-  ('20000000-0000-4000-8000-000000000007', 'admin-ubs-substituto@saude3d.invalid');
+  ('20000000-0000-4000-8000-000000000007', 'admin-ubs-substituto@saude3d.invalid'),
+  ('20000000-0000-4000-8000-000000000008', 'admin-pediatria@saude3d.invalid'),
+  ('20000000-0000-4000-8000-000000000009', 'pediatria@saude3d.invalid');
 
 INSERT INTO public.perfis (id, nome, unidade_id, especialidade, papel) VALUES
   ('20000000-0000-4000-8000-000000000001', 'Admin UBS Centro', '10000000-0000-4000-8000-000000000001', NULL, 'admin'),
@@ -20,7 +23,9 @@ INSERT INTO public.perfis (id, nome, unidade_id, especialidade, papel) VALUES
   ('20000000-0000-4000-8000-000000000004', 'Profissional Obstetrícia', '10000000-0000-4000-8000-000000000003', 'obstetricia', 'profissional'),
   ('20000000-0000-4000-8000-000000000005', 'Admin Cardiologia', '10000000-0000-4000-8000-000000000002', NULL, 'admin'),
   ('20000000-0000-4000-8000-000000000006', 'Admin Maternidade', '10000000-0000-4000-8000-000000000003', NULL, 'admin'),
-  ('20000000-0000-4000-8000-000000000007', 'Admin UBS substituto', '10000000-0000-4000-8000-000000000001', NULL, 'admin');
+  ('20000000-0000-4000-8000-000000000007', 'Admin UBS substituto', '10000000-0000-4000-8000-000000000001', NULL, 'admin'),
+  ('20000000-0000-4000-8000-000000000008', 'Admin Pediatria', '10000000-0000-4000-8000-000000000004', NULL, 'admin'),
+  ('20000000-0000-4000-8000-000000000009', 'Profissional Pediatria', '10000000-0000-4000-8000-000000000004', 'pediatria', 'profissional');
 
 -- Dados sintéticos aplicados como proprietário durante a instalação do seed.
 -- A aplicação não recebe esses privilégios: suas escritas passam pelas funções.

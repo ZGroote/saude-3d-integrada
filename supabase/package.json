@@ -6,6 +6,6 @@
     "@electric-sql/pglite": "^0.3.14"
   },
   "scripts": {
-    "test": "node --test testes/rls.test.mjs testes/achados.test.mjs"
+    "test": "node --test testes/rls.test.mjs testes/achados.test.mjs testes/gestacao.test.mjs"
   }
 }
