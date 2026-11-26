@@ -101,7 +101,10 @@ with sync_playwright() as p:
         raise AssertionError('não foi possível preencher a senha') from None  # o erro do Playwright a mostraria
     pg.click('button[type=submit]')
     pg.wait_for_url(f'{APP}/pacientes')
-    pg.goto(f'{APP}/pacientes?busca=Carga')
+    # a busca é um formulário enviado por POST (o nome não vai na URL)
+    pg.get_by_role('searchbox').fill('Carga')
+    pg.get_by_role('button', name='Buscar').click()
+    pg.wait_for_timeout(3000)
     link = pg.locator('ul[aria-label="Pacientes vinculados"] a', has_text=PACIENTE)
     if not link.count():
         raise SystemExit(f'"{PACIENTE}" ainda não existe (ou sem vínculo com a cardiologia) na homologação')
@@ -110,8 +113,9 @@ with sync_playwright() as p:
     pg.wait_for_selector('[data-motor][data-completos~="tegumentar"]')
     pg.wait_for_timeout(1500)
     atlas = pg.get_attribute('[data-atlas]', 'data-atlas')
-    total = "Number([...document.querySelectorAll('h3')].map((h) => /^Achados \\((\\d+)\\)$/.exec(h.textContent)?.[1]).find(Boolean))"
-    pg.wait_for_function(f"document.querySelectorAll('button[data-achado]').length === {total}")
+    # funções, não texto: a CSP do app proíbe eval, que é como o Playwright avalia um predicado em texto
+    total = r"""() => Number([...document.querySelectorAll('h3')].map((h) => /^Achados \((\d+)\)$/.exec(h.textContent)?.[1]).find(Boolean))"""
+    pg.wait_for_function(f"() => document.querySelectorAll('button[data-achado]').length === ({total})()")
     contar = lambda lista: pg.locator(f'ul[aria-labelledby={lista}] button').count()
     no_corpo, sem_local = contar('achados-no-corpo'), contar('achados-sem-local')
     esperado = {'linhas': pg.evaluate(total), 'marcadores': int(pg.get_attribute('[data-motor]', 'data-marcadores')),
@@ -137,7 +141,7 @@ with sync_playwright() as p:
         cdp.send('Network.emulateNetworkConditions', FAST_4G)
         cdp.send('Emulation.setCPUThrottlingRate', {'rate': CPU})
         pg.goto(prontuario, wait_until='commit')
-        pg.wait_for_function('["lista", "lista_completa", "marcadores", "corpo", "completo"].every((n) => window.__tempos?.[n])', timeout=120000)
+        pg.wait_for_function('() => ["lista", "lista_completa", "marcadores", "corpo", "completo"].every((n) => window.__tempos?.[n])', timeout=120000)
         dados = pg.evaluate(RECURSOS)
         contexto.close()
 

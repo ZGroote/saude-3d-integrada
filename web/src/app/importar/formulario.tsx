@@ -13,7 +13,7 @@ function Numeros({ itens }: { itens: [string, string | number][] }) {
     <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-3">
       {itens.map(([nome, valor]) => (
         <div key={nome}>
-          <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">{nome}</dt>
+          <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">{nome}</dt>
           <dd className="text-lg font-semibold text-slate-900">{valor}</dd>
         </div>
       ))}
@@ -25,7 +25,7 @@ function Erros({ erros }: { erros: ErroImportacao[] }) {
   if (!erros.length) return <p className="mt-3 text-sm text-slate-600">Nenhum erro.</p>;
   return (
     <div className="mt-4">
-      <h3 id="titulo-erros" className="text-xs font-semibold uppercase tracking-wide text-slate-500">Recursos com erro ({erros.length})</h3>
+      <h3 id="titulo-erros" className="text-xs font-semibold uppercase tracking-wide text-slate-600">Recursos com erro ({erros.length})</h3>
       <ul aria-labelledby="titulo-erros" className="mt-1 max-h-72 space-y-1 overflow-y-auto text-sm">
         {erros.map((e, i) => <li key={i} className="break-words"><span className="font-mono">{e.id}</span> — {e.motivo}</li>)}
       </ul>

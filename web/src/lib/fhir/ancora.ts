@@ -20,6 +20,20 @@ export const ATLAS_DO_SEXO: Record<"feminino" | "masculino" | "indeterminado", A
 
 const LATERALIDADE = { direito: "right", esquerdo: "left" } as const;
 
+/** Malha que representa estas entradas de uma mesma estrutura: `malhaPrincipal` (sem ID, só há a própria malha). */
+export function entradaPrincipal(entradas: EntradaIndice[]): EntradaIndice | null {
+  const [primeira] = entradas;
+  return primeira?.estrutura ? malhaPrincipal(entradas, primeira.estrutura) : primeira ?? null;
+}
+
+/** Âncora só estrutural: o motor desenha o marcador no centro da caixa da malha (SPEC §5.4). */
+export function ancoraNaEntrada(entrada: EntradaIndice, { atlas, versao }: { atlas: string; versao: string }): Ancora {
+  return {
+    atlas, atlas_versao: versao, sistema: entrada.sistema, estrutura: entrada.estrutura, malha: entrada.malha,
+    posicao_local: null, normal_local: null, triangulo: null, baricentricas: null,
+  };
+}
+
 /**
  * Âncora no centro da estrutura mapeada, ou null quando não há certeza: nunca adivinha. Entre as malhas da
  * estrutura (do lado pedido) vale `malhaPrincipal`; sem lado, só se todas forem do mesmo lado.
@@ -33,10 +47,6 @@ export function ancoraEstrutural(mapeamento: Mapeamento, atlas: AtlasDeImportaca
   const { lado } = mapeamento;
   if (lado) candidatas = candidatas.filter((e) => e.lateralidade === LATERALIDADE[lado]);
   else if (new Set(candidatas.map((e) => e.lateralidade)).size > 1) return null;
-  const entrada = candidatas.length ? malhaPrincipal(candidatas, candidatas[0]!.estrutura!) : null;
-  if (!entrada) return null;
-  return {
-    atlas: atlas.atlas, atlas_versao: atlas.versao, sistema: entrada.sistema, estrutura: entrada.estrutura, malha: entrada.malha,
-    posicao_local: null, normal_local: null, triangulo: null, baricentricas: null,
-  };
+  const entrada = entradaPrincipal(candidatas);
+  return entrada && ancoraNaEntrada(entrada, atlas);
 }

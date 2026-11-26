@@ -10,6 +10,7 @@ achados não são apagados. Precisa de Playwright para Python, do Chrome e do at
 """
 import json
 import os
+import random
 import sys
 import urllib.request
 from pathlib import Path
@@ -100,9 +101,12 @@ def carregar(pg, acao, email):
     pg.wait_for_url(f'{APP}/pacientes/{MARIA}')
     linhas = listar(email)
     no_corpo = [a for a in linhas if a['ancora'] and a['ancora']['atlas'] == 'hra-f']
-    pg.wait_for_selector('[data-atlas="hra-f"] [data-motor][data-carregados="tegumentar"]')
+    # com a pele completa na tela, o clique no corpo responde na hora
+    pg.wait_for_selector('[data-atlas="hra-f"] [data-motor][data-completos="tegumentar"]')
     pg.wait_for_selector(f'[data-motor][data-marcadores="{len(no_corpo)}"]')
     pg.wait_for_selector(f'text=Achados ({len(linhas)})')
+    # com mais de 30 linhas, a lista termina de ser montada depois dos marcadores
+    pg.wait_for_function(f"document.querySelectorAll('button[data-achado]').length === {len(linhas)}")
     pg.wait_for_timeout(1500)
     ids = pg.locator('button[data-achado]').evaluate_all('(b) => b.map((e) => e.dataset.achado)')
     assert sorted(ids) == sorted(a['id'] for a in linhas), 'lista da tela diferente do banco'
@@ -114,27 +118,34 @@ def abrir_maria(pg, email):
     return carregar(pg, lambda: pg.locator(f'a[href="/pacientes/{MARIA}"]').click(), email)
 
 
-def registrar(pg, cid, alturas):
+def registrar(pg, cid):
     """Clica no corpo, preenche o formulário e salva. Devolve (id, âncora do clique)."""
     canvas = pg.locator('canvas')
     formulario = pg.locator('form[aria-labelledby="titulo-novo-achado"]')
-    # os achados de execuções anteriores continuam no corpo: um clique num marcador abre o cartão dele,
-    # então tenta pontos vizinhos até cair em pele livre
     cartao = pg.locator('[data-cartao]')
-    for dx, fy in [(dx, fy) for dx in (6, -24, 30, -48, 54) for fy in alturas]:
+    # os achados de execuções anteriores continuam no corpo, e um clique num marcador abre o cartão dele:
+    # pontos sorteados pelo corpo inteiro (cabeça, tronco, coxas, pernas) até cair em pele livre
+    pontos = [(dx, fy) for fy in (0.12, 0.28, 0.33, 0.38, 0.43, 0.48, 0.58, 0.63, 0.68, 0.74, 0.80)
+              for dx in range(-45, 46, 3)]
+    random.shuffle(pontos)
+    marcadores = fora = 0
+    for dx, fy in pontos[:120]:
         if cartao.count():
             cartao.get_by_role('button', name='Fechar').click()
         canvas.scroll_into_view_if_needed()
         caixa = canvas.bounding_box()
         canvas.click(position={'x': caixa['width'] / 2 + dx, 'y': caixa['height'] * fy})
         try:
-            pg.wait_for_selector('form[aria-labelledby="titulo-novo-achado"], [data-cartao]', timeout=5000)
+            pg.wait_for_selector('form[aria-labelledby="titulo-novo-achado"], [data-cartao]', timeout=1500)
         except TempoEsgotado:
-            continue  # fora do corpo
+            fora += 1  # fora do corpo
+            continue
         if formulario.count():
             break
-    assert formulario.count() and formulario.locator('[data-ancora]').count(), 'clique no corpo não abriu o formulário'
-    formulario.locator('input[type=search]').press_sequentially(cid, delay=40)
+        marcadores += 1
+    assert formulario.count() and formulario.locator('[data-ancora]').count(), (
+        f'clique no corpo não abriu o formulário ({marcadores} cliques caíram em marcadores, {fora} fora do corpo)')
+    formulario.get_by_role('searchbox').press_sequentially(cid, delay=40)
     pg.get_by_role('list', name='Resultados do CID-10').locator('li button').filter(has_text=cid).first.click()
     assert formulario.locator('[data-cid-escolhido] strong').inner_text() == cid
     formulario.locator('select[name=categoria]').select_option('doenca')
@@ -186,7 +197,7 @@ with sync_playwright() as p:
     # 1) cardiologia registra o I10 clicando no corpo; recarrega
     entrar(pg, CARDIO)
     abrir_maria(pg, CARDIO)
-    normal, clique = registrar(pg, 'I10', (0.35, 0.40, 0.30))
+    normal, clique = registrar(pg, 'I10')
     linhas = carregar(pg, pg.reload, CARDIO)
     [i10] = [a for a in linhas if a['id'] == normal]
     assert i10['cid10'] == 'I10' and i10['nivel_sigilo'] == 'normal', i10
@@ -196,7 +207,7 @@ with sync_playwright() as p:
     print(f'1) I10: clique {clique["posicao_local"]} == listar_achados {i10["ancora"]["posicao_local"]} == marcador desenhado')
 
     # 2) restrito, também com âncora
-    restrito, ancora_restrita = registrar(pg, 'F32.9', (0.50, 0.55, 0.45))
+    restrito, ancora_restrita = registrar(pg, 'F32.9')
     linhas_cardio = carregar(pg, pg.reload, CARDIO)
     [f32] = [a for a in linhas_cardio if a['id'] == restrito]
     assert f32['nivel_sigilo'] == 'restrito' and f32['ancora'] == ancora_restrita, f32

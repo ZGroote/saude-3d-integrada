@@ -396,7 +396,7 @@ def com_app(testar, manipulador=SupabaseFalso):
     threading.Thread(target=falso.serve_forever, daemon=True).start()
     porta = porta_livre()
     ambiente = {**os.environ, 'NEXT_PUBLIC_SUPABASE_URL': f'http://127.0.0.1:{falso.server_port}',
-                'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY': 'chave-falsa'}
+                'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY': 'chave-falsa', 'SESSAO_SEGREDO': 'segredo-falso-so-para-este-teste-0123456789'}
     # o cache do dev guarda o endereço do Supabase dentro do código: começa e termina limpo
     shutil.rmtree(cache, ignore_errors=True)
     saida = tempfile.TemporaryFile()

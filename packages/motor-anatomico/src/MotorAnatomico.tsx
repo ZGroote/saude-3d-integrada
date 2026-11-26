@@ -407,6 +407,7 @@ function Motor({
         camera={{ fov: 35, near: 0.005, far: 50, position: [0, 0, 4] }}
         dpr={[1, 2]}
         onCreated={({ raycaster }) => { raycaster.firstHitOnly = true; }}
+        role="group"
         aria-label="Corpo em 3D"
       >
         <Camera alvo={prontos.length ? cache.get(prontos[0]!)!.sistema! : null} onAmpliar={() => setAmpliado(true)} />

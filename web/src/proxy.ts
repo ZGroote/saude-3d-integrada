@@ -1,17 +1,60 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import type { Database } from "@/lib/banco";
+import { atividadeValida, assinarAtividade } from "@/lib/sessao";
 
 const INATIVIDADE_MS = 30 * 60 * 1000;
 const COOKIE_ATIVIDADE = "saude3d-ultima-atividade";
 
+function copiarCookies(origem: NextResponse, destino: NextResponse) {
+  origem.cookies.getAll().forEach((cookie) => destino.cookies.set(cookie));
+}
+
+function cachePrivado(response: NextResponse, protegido: boolean) {
+  let origemSupabase = "";
+  let hostSupabase = "";
+  try {
+    const supabaseUrl = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL || "");
+    origemSupabase = supabaseUrl.origin;
+    hostSupabase = supabaseUrl.host;
+  } catch { /* CSP continua restrito à própria origem */ }
+  const conexoes = ["'self'", origemSupabase, hostSupabase ? `wss://${hostSupabase}` : ""].filter(Boolean);
+  const script = ["'self'", "'unsafe-inline'", "'wasm-unsafe-eval'"];
+  if (process.env.NODE_ENV !== "production") {
+    script.push("'unsafe-eval'");
+    conexoes.push("ws://localhost:*", "ws://127.0.0.1:*");
+  }
+  response.headers.set("Content-Security-Policy", [
+    "default-src 'self'", `script-src ${script.join(" ")}`, "style-src 'self' 'unsafe-inline'",
+    `connect-src ${conexoes.join(" ")}`, "img-src 'self' data: blob:", "worker-src 'self' blob:",
+    "font-src 'self' data:", "frame-ancestors 'none'", "base-uri 'self'", "object-src 'none'", "form-action 'self'",
+  ].join("; "));
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("Referrer-Policy", "no-referrer");
+  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  if (process.env.NODE_ENV === "production") {
+    response.headers.set("Strict-Transport-Security", "max-age=63072000; includeSubDomains");
+  }
+  if (protegido) response.headers.set("Cache-Control", "no-store, private");
+  return response;
+}
+
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
+  const rotaLogin = request.nextUrl.pathname === "/login";
+  const rotaAtividade = request.nextUrl.pathname === "/api/sessao/atividade";
+  const rotaProtegida = request.nextUrl.pathname.startsWith("/pacientes") || request.nextUrl.pathname.startsWith("/importar");
+  const requerLogin = rotaProtegida || rotaAtividade;
+  if (requerLogin && process.env.NODE_ENV === "production" && !process.env.SESSAO_SEGREDO) {
+    return cachePrivado(NextResponse.json(
+      { erro: "Configuração de segurança ausente: defina SESSAO_SEGREDO no servidor." }, { status: 500 },
+    ), true);
+  }
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const chave = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
   if (!url || !chave) {
-    if (/^\/(pacientes|importar)/.test(request.nextUrl.pathname)) {
-      return NextResponse.redirect(new URL("/login", request.url));
+    if (requerLogin) {
+      return cachePrivado(NextResponse.redirect(new URL("/login", request.url)), true);
     }
     return response;
   }
@@ -28,33 +71,47 @@ export async function proxy(request: NextRequest) {
   });
 
   const { data: { user } } = await supabase.auth.getUser();
-  const rotaLogin = request.nextUrl.pathname === "/login";
-  const rotaAtividade = request.nextUrl.pathname === "/api/sessao/atividade";
-  const rotaProtegida = request.nextUrl.pathname.startsWith("/pacientes") || request.nextUrl.pathname.startsWith("/importar");
-  const requerLogin = rotaProtegida || rotaAtividade;
-  const ultimaAtividade = Number(request.cookies.get(COOKIE_ATIVIDADE)?.value ?? 0);
-  const expirouPorInatividade = user && ultimaAtividade > 0 && Date.now() - ultimaAtividade >= INATIVIDADE_MS;
+  const agora = Date.now();
+  const cookieAtividade = request.cookies.get(COOKIE_ATIVIDADE)?.value;
+  const atividadeValidaAgora = user ? await atividadeValida(cookieAtividade, agora) : false;
+  const expirouPorInatividade = Boolean(user && (requerLogin || rotaLogin) && (
+    !atividadeValidaAgora || agora - Number(cookieAtividade?.split(".")[0]) >= INATIVIDADE_MS
+  ));
 
   if (expirouPorInatividade) {
-    await supabase.auth.signOut({ scope: "local" });
+    try { await supabase.auth.signOut({ scope: "local" }); } catch { /* cookie inválido continua bloqueando as próximas requisições */ }
     response.cookies.delete(COOKIE_ATIVIDADE);
-    if (rotaProtegida) return NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
-    if (rotaAtividade) return NextResponse.json({ erro: "sessao_expirada" }, { status: 401 });
+    if (rotaProtegida) {
+      const destino = NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
+      copiarCookies(response, destino);
+      destino.cookies.delete(COOKIE_ATIVIDADE);
+      return cachePrivado(destino, true);
+    }
+    if (rotaAtividade || rotaLogin) {
+      const destino = rotaAtividade
+        ? NextResponse.json({ erro: "sessao_expirada" }, { status: 401 })
+        : NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
+      copiarCookies(response, destino);
+      destino.cookies.delete(COOKIE_ATIVIDADE);
+      return cachePrivado(destino, rotaAtividade);
+    }
   } else if (requerLogin && !user) {
-    if (rotaAtividade) return NextResponse.json({ erro: "sem_sessao" }, { status: 401 });
+    if (rotaAtividade) return cachePrivado(NextResponse.json({ erro: "sem_sessao" }, { status: 401 }), true);
     const destino = NextResponse.redirect(new URL("/login", request.url));
-    response.cookies.getAll().forEach((cookie) => destino.cookies.set(cookie));
-    return destino;
+    copiarCookies(response, destino);
+    return cachePrivado(destino, true);
   } else if (rotaLogin && user) {
-    return NextResponse.redirect(new URL("/pacientes", request.url));
+    const destino = NextResponse.redirect(new URL("/pacientes", request.url));
+    copiarCookies(response, destino);
+    return cachePrivado(destino, true);
   }
 
-  if (user && !expirouPorInatividade) {
-    response.cookies.set(COOKIE_ATIVIDADE, String(Date.now()), {
-      httpOnly: true, sameSite: "lax", secure: request.nextUrl.protocol === "https:", path: "/", maxAge: 60 * 60,
+  if (user && requerLogin) {
+    response.cookies.set(COOKIE_ATIVIDADE, await assinarAtividade(agora), {
+      httpOnly: true, sameSite: "lax", secure: request.nextUrl.protocol === "https:", path: "/", maxAge: INATIVIDADE_MS / 1000,
     });
   }
-  return response;
+  return cachePrivado(response, requerLogin);
 }
 
-export const config = { matcher: ["/login", "/pacientes/:path*", "/importar", "/api/sessao/atividade"] };
+export const config = { matcher: ["/login", "/pacientes/:path*", "/importar", "/importar/:path*", "/api/sessao/atividade"] };

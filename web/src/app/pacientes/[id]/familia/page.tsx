@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Família" };
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-const ATALHO = "font-semibold text-teal-800 underline";
+const ATALHO = "alvo font-semibold text-teal-800 underline";
 
 export default async function FamiliaPage({ params }: PageProps<"/pacientes/[id]/familia">) {
   const { id } = await params;
@@ -29,7 +29,7 @@ export default async function FamiliaPage({ params }: PageProps<"/pacientes/[id]
     {!falhou && !mae && !filhos.length && <Card className="mt-4 p-6 text-sm text-slate-600">Nenhum vínculo de mãe ou filho registrado.</Card>}
     {mae && (
       <Card className="mt-4 px-5 py-4">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Mãe</h3>
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-600">Mãe</h3>
         <p className="mt-1 text-sm">
           {mae.mae_id ? <Link prefetch={false} href={`/pacientes/${mae.mae_id}`} className={ATALHO}>{mae.nome_mae}</Link> : <span className="font-semibold text-slate-900">{mae.nome_mae}</span>}
         </p>
@@ -37,12 +37,12 @@ export default async function FamiliaPage({ params }: PageProps<"/pacientes/[id]
     )}
     {!!filhos.length && (
       <Card className="mt-4 px-5 py-4">
-        <h3 id="titulo-filhos" className="text-xs font-semibold uppercase tracking-wide text-slate-500">Filhos</h3>
+        <h3 id="titulo-filhos" className="text-xs font-semibold uppercase tracking-wide text-slate-600">Filhos</h3>
         <ul aria-labelledby="titulo-filhos" className="mt-1 space-y-1 text-sm">
           {filhos.map((f) => <li key={f.crianca_id}><Link prefetch={false} href={`/pacientes/${f.crianca_id}`} className={ATALHO}>{nomeDaCrianca(f)}</Link><span className="text-slate-600"> · nascimento em {formatarData(f.data)}</span></li>)}
         </ul>
       </Card>
     )}
-    <p className="mt-4 text-xs leading-5 text-slate-500">Abrir o prontuário de um familiar exige vínculo da sua unidade com ele, e o acesso é registrado.</p>
+    <p className="mt-4 text-xs leading-5 text-slate-600">Abrir o prontuário de um familiar exige vínculo da sua unidade com ele, e o acesso é registrado.</p>
   </PaginaPaciente>;
 }

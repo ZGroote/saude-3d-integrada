@@ -32,13 +32,13 @@ export function CartaoAchado({ achado: a, podeCorrigir, onCorrigir, onFechar }: 
       <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
         {campos.map(([nome, valor]) => (
           <div key={nome} className={nome === "Observação" ? "col-span-2" : undefined}>
-            <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">{nome}</dt>
+            <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">{nome}</dt>
             <dd className="whitespace-pre-wrap break-words text-slate-900">{valor}</dd>
           </div>
         ))}
       </dl>
       <section className="mt-4 border-t border-slate-100 pt-3">
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Histórico de correções</h4>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-600">Histórico de correções</h4>
         {a.substitui_id ? <Historico id={a.id} /> : <p className="mt-1 text-sm text-slate-600">Este achado não foi corrigido.</p>}
       </section>
       {podeCorrigir && <Button type="button" variant="outline" className="mt-3 w-full" onClick={onCorrigir}>Corrigir</Button>}

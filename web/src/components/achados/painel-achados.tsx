@@ -8,7 +8,7 @@ import { FormularioAchado } from "@/components/achados/formulario-achado";
 import { LinhaDoTempo } from "@/components/achados/linha-do-tempo";
 import { ListaAchados } from "@/components/achados/lista-achados";
 import { Prontuario3D } from "@/components/anatomia/prontuario-3d";
-import type { PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
+import type { AtlasPronto, PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { corDaEspecialidade, filtrar, ordenarPorData, SEM_FILTRO, TAMANHO_DO_STATUS, type Achado } from "@/lib/achados";
@@ -35,7 +35,8 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
   const [revisao, setRevisao] = useState(0);
   const [selecionado, setSelecionado] = useState<string | null>(null);
   // undefined = formulário fechado; ponto null = nenhum ponto clicado
-  const [novo, setNovo] = useState<{ ponto: PontoNoCorpo | null; corrigindo?: Achado } | undefined>();
+  const [novo, setNovo] = useState<{ ponto: PontoNoCorpo | null; corrigindo?: Achado; comLocal?: boolean } | undefined>();
+  const [atlasPronto, setAtlasPronto] = useState<AtlasPronto | null>(null);
   const [filtro, setFiltro] = useState(SEM_FILTRO);
   // unidade de quem está logado: só ela vê o botão de corrigir
   const [minhaUnidade, setMinhaUnidade] = useState<string | null>(null);
@@ -81,7 +82,12 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
   );
   const aberto = visiveis.find((a) => a.id === selecionado);
   const abrir = useCallback((id: string) => { setNovo(undefined); setSelecionado(id); }, []);
-  const registrar = (ponto: PontoNoCorpo | null) => { setSelecionado(null); setAviso(""); setNovo({ ponto }); };
+  const registrar = (comLocal: boolean) => { setSelecionado(null); setAviso(""); setNovo({ ponto: null, comLocal }); };
+  // SPEC §5.1: a camada gestacional só existe no contexto de gestação, também na busca
+  const atlasDaBusca = useMemo(
+    () => atlasPronto && (gestacaoEmCurso ? atlasPronto : { ...atlasPronto, indice: atlasPronto.indice.filter((e) => e.sistema !== "gestacional") }),
+    [atlasPronto, gestacaoEmCurso],
+  );
   // clicar no corpo durante uma correção muda o local dela, sem virar achado novo
   const escolherPonto = (ponto: PontoNoCorpo) => {
     setSelecionado(null);
@@ -91,7 +97,8 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
 
   const lateral = (
     <fieldset disabled={!hidratado} className="min-w-0 space-y-4">
-      <Button type="button" className="w-full" onClick={() => registrar(null)}>Achado sem local no corpo</Button>
+      {atlasDaBusca && <Button type="button" className="w-full" onClick={() => registrar(true)}>Achado com local no corpo</Button>}
+      <Button type="button" variant={atlasDaBusca ? "outline" : "default"} className="w-full" onClick={() => registrar(false)}>Achado sem local no corpo</Button>
       <p role="status" className="text-sm text-teal-900 empty:hidden">{aviso}</p>
       {novo && (
         <FormularioAchado
@@ -99,6 +106,9 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
           pacienteId={pacienteId}
           ponto={novo.ponto}
           corrigindo={novo.corrigindo}
+          atlas={atlasDaBusca}
+          comLocal={novo.comLocal}
+          onEscolherPonto={(ponto) => setNovo((atual) => atual && { ...atual, ponto })}
           onCancelar={() => setNovo(undefined)}
           onSalvo={(id) => {
             setAviso(novo.corrigindo ? "Correção registrada." : "Achado registrado.");
@@ -170,6 +180,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
           onSelecionarMarcador: abrir,
           onMarcadoresSemPosicao: setSemPosicao,
           onMarcadoresDesenhados: aoDesenharMarcadores,
+          onAtlasPronto: setAtlasPronto,
         }}
       />
       {lateral}

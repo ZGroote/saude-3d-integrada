@@ -23,7 +23,7 @@ export default async function NascimentoPage({ params, searchParams }: PageProps
 
   return <PaginaPaciente paciente={paciente} aba="nascimento" titulo="Registrar nascimento">
     {error ? <Card className="mt-4 p-6 text-sm text-red-800" role="alert">Não foi possível carregar as gestações. Tente novamente.</Card>
-      : !gestacao ? <Card className="mt-4 p-6 text-sm text-slate-600">Não há gestação em curso. <Link prefetch={false} href={`/pacientes/${paciente.id}/gestacao`} className="font-medium text-teal-800 underline">Ver gestações</Link></Card>
+      : !gestacao ? <Card className="mt-4 p-6 text-sm text-slate-600">Não há gestação em curso. <Link prefetch={false} href={`/pacientes/${paciente.id}/gestacao`} className="alvo font-medium text-teal-800 underline">Ver gestações</Link></Card>
         : <>
           <p className="mt-2 text-sm text-slate-600">
             Mãe: {paciente.nome} · DUM {gestacao.dum ? formatarData(gestacao.dum) : "não informada"}

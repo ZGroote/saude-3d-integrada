@@ -62,7 +62,7 @@ export function ListaAchados({ titulo, id, itens, liberar, selecionado, semPosic
 
   return (
     <div className="mt-3">
-      <h4 id={id} className="text-xs font-semibold uppercase tracking-wide text-slate-500">{titulo} ({itens.length})</h4>
+      <h4 id={id} className="text-xs font-semibold uppercase tracking-wide text-slate-600">{titulo} ({itens.length})</h4>
       {!itens.length ? <p className="mt-1 text-sm text-slate-600">Nenhum.</p> : (
         <div className="mt-1 max-h-96 overflow-y-auto">
           <ul ref={lista} aria-labelledby={id} aria-busy={faltam > 0} className="divide-y divide-slate-100"
@@ -107,7 +107,7 @@ const Linha = memo(function Linha({ achado: a, posicao, total, selecionada, naoE
           <span className="block text-xs font-semibold text-teal-800">{a.inicio ? "Início" : "Registro"} {formatarData(dataDoAchado(a))}</span>
           <span className="block text-slate-900"><strong className="font-mono">{a.cid10}</strong> {a.cid10_descricao}</span>
           <span className="block text-xs text-slate-600">{a.autor_nome} · {a.unidade_nome} · {formatarData(a.criado_em)}</span>
-          <span className="block text-xs text-slate-500">
+          <span className="block text-xs text-slate-600">
             {a.especialidade ?? "Sem especialidade"} · {STATUS[a.status]}
             {!a.ancora ? " · sem local no corpo" : naoExibido ? " · não exibido neste corpo" : ""}
           </span>

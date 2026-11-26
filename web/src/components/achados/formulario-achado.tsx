@@ -1,24 +1,32 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { BuscaEstrutura } from "@/components/achados/busca-estrutura";
+import { pontoDaEntrada, type AtlasPronto, type PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { BuscaCid10 } from "@/components/busca-cid10";
-import type { PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { CATEGORIAS, LADOS, STATUS, type Achado, type Categoria, type Lado, type Status } from "@/lib/achados";
 import type { Cid10 } from "@/lib/banco";
+import { ancoraNaEntrada } from "@/lib/fhir/ancora";
 import { CAMPO, hoje, ROTULO } from "@/lib/formulario";
 import { createClient } from "@/lib/supabase/client";
 
 const opcoes = (mapa: Record<string, string>) => Object.entries(mapa).map(([valor, rotulo]) => <option key={valor} value={valor}>{rotulo}</option>);
 
-export function FormularioAchado({ pacienteId, ponto, corrigindo, onSalvo, onCancelar }: {
+export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLocal, onEscolherPonto, onSalvo, onCancelar }: {
   pacienteId: string;
   /** ponto clicado agora; null = nenhum (sem local, ou correção que mantém o local gravado) */
   ponto: PontoNoCorpo | null;
   /** achado que o novo substitui: os campos partem dele */
   corrigindo?: Achado;
+  /** onde a busca por nome procura; null = sem corpo para marcar */
+  atlas: AtlasPronto | null;
+  /** aberto para marcar um local: o foco começa na busca de estrutura */
+  comLocal?: boolean;
+  /** estrutura escolhida pela busca; null = tirar o local escolhido */
+  onEscolherPonto: (ponto: PontoNoCorpo | null) => void;
   onSalvo: (id: string) => void;
   onCancelar: () => void;
 }) {
@@ -30,10 +38,17 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, onSalvo, onCan
   const [salvando, setSalvando] = useState(false);
   const titulo = useRef<HTMLHeadingElement>(null);
 
+  const busca = useRef<HTMLInputElement>(null);
+  // o foco vai ao formulário quando ele abre e a cada toque no corpo; a escolha pela busca não o move
+  const doCorpo = ponto?.daBusca ? "busca" : ponto;
+  const temBusca = !!atlas;
+
   useEffect(() => {
-    titulo.current?.focus({ preventScroll: true });
-    titulo.current?.scrollIntoView({ block: "nearest" });
-  }, [ponto]);
+    if (doCorpo === "busca") return;
+    const alvo = comLocal && !doCorpo && temBusca ? busca.current : titulo.current;
+    alvo?.focus({ preventScroll: true });
+    alvo?.scrollIntoView({ block: "nearest" });
+  }, [doCorpo, comLocal, temBusca]);
 
   async function salvar(evento: FormEvent<HTMLFormElement>) {
     evento.preventDefault();
@@ -77,6 +92,11 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, onSalvo, onCan
               : "Sem local no corpo."}
           </p>
         )}
+        {atlas && (
+          <BuscaEstrutura ref={busca} indice={atlas.indice}
+            onEscolher={({ entrada }) => onEscolherPonto({ ...pontoDaEntrada(ancoraNaEntrada(entrada, atlas), entrada), daBusca: true })} />
+        )}
+        {ponto && <Button type="button" variant="ghost" className="h-8 px-2" onClick={() => onEscolherPonto(null)}>Tirar este local</Button>}
         <BuscaCid10 escolhido={cid} onEscolher={(c) => { setCid(c); setErro(""); }} />
         <label className={ROTULO}>Categoria
           <select name="categoria" required className={CAMPO} defaultValue={corrigindo?.categoria ?? ""}>

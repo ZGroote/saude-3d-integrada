@@ -103,17 +103,17 @@ function CartaoGestacao({ maeId, gestacao: g }: { maeId: string; gestacao: Gesta
           </p>
         </div>
         <section>
-          <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Condições</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-600">Condições</h4>
           <Condicoes condicoes={g.condicoes} />
           <NovaCondicao gestacaoId={g.gestacao_id} />
         </section>
         {!!g.nascimentos?.length && (
           <section>
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Nascimentos</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-600">Nascimentos</h4>
             <ul className="mt-1 space-y-1 text-sm">
               {g.nascimentos.map((n) => (
                 <li key={n.crianca_id}>
-                  <Link prefetch={false} href={`/pacientes/${n.crianca_id}`} className="font-semibold text-teal-800 underline">{nomeDaCrianca(n)}</Link>
+                  <Link prefetch={false} href={`/pacientes/${n.crianca_id}`} className="alvo font-semibold text-teal-800 underline">{nomeDaCrianca(n)}</Link>
                   <span className="text-slate-600"> · {formatarData(n.data)}{n.peso_g == null ? "" : ` · ${n.peso_g.toLocaleString("pt-BR")} g`}</span>
                 </li>
               ))}
@@ -122,12 +122,12 @@ function CartaoGestacao({ maeId, gestacao: g }: { maeId: string; gestacao: Gesta
         )}
         {g.desfecho === "em_curso" && (
           <div className="flex flex-wrap items-center gap-3 border-t border-slate-100 pt-3">
-            <Link prefetch={false} href={nascimento} className="inline-flex h-10 items-center rounded-md bg-teal-800 px-4 text-sm font-semibold text-white hover:bg-teal-900">Registrar nascimento</Link>
+            <Link prefetch={false} href={nascimento} className="alvo inline-flex h-10 items-center rounded-md bg-teal-800 px-4 text-sm font-semibold text-white hover:bg-teal-900">Registrar nascimento</Link>
             <Encerrar gestacaoId={g.gestacao_id} />
           </div>
         )}
         {g.desfecho === "nascido_vivo" && (
-          <Link prefetch={false} href={nascimento} className="inline-block text-sm font-medium text-teal-800 underline">Registrar outro recém-nascido desta gestação</Link>
+          <Link prefetch={false} href={nascimento} className="alvo inline-block text-sm font-medium text-teal-800 underline">Registrar outro recém-nascido desta gestação</Link>
         )}
       </article>
     </Card>

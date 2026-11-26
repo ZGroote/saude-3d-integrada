@@ -36,12 +36,12 @@ export function Recorte({ linhas }: { linhas: RecorteGestacional[] | null }) {
               <dl className="grid gap-3 text-sm sm:grid-cols-5">
                 {[["Mãe", recorte.nome_mae], ["Nascimento", formatarData(recorte.data)], ...medidas(recorte)].map(([nome, valor]) => (
                   <div key={nome}>
-                    <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">{nome}</dt>
+                    <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">{nome}</dt>
                     <dd className="font-semibold text-slate-900">{valor}</dd>
                   </div>
                 ))}
               </dl>
-              <h3 className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">Condições na gestação</h3>
+              <h3 className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-600">Condições na gestação</h3>
               <Condicoes condicoes={condicoes} />
             </>
           )}

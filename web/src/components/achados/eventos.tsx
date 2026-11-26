@@ -7,7 +7,7 @@ const TIPOS = { Observation: "Observação", Encounter: "Atendimento" } as const
 export function ListaEventos({ eventos }: { eventos: Evento[] }) {
   return (
     <div className="mt-3">
-      <h4 id="eventos-clinicos" className="text-xs font-semibold uppercase tracking-wide text-slate-500">Eventos clínicos ({eventos.length})</h4>
+      <h4 id="eventos-clinicos" className="text-xs font-semibold uppercase tracking-wide text-slate-600">Eventos clínicos ({eventos.length})</h4>
       {!eventos.length ? <p className="mt-1 text-sm text-slate-600">Nenhum no período.</p> : (
         <ul aria-labelledby="eventos-clinicos" className="mt-1 max-h-96 divide-y divide-slate-100 overflow-y-auto">
           {eventos.map((e) => (

@@ -53,7 +53,7 @@ export function BuscaCid10({ escolhido, onEscolher }: { escolhido: Cid10 | null;
         <ul aria-label="Resultados do CID-10" className="max-h-48 divide-y divide-slate-100 overflow-y-auto rounded-md border border-slate-200">
           {atual.itens.map((item) => (
             <li key={item.codigo}>
-              <button type="button" className="w-full px-3 py-2 text-left text-sm outline-none hover:bg-teal-50 focus-visible:bg-teal-100" onClick={() => onEscolher(item)}>
+              <button type="button" className="w-full px-3 py-2 text-left text-sm outline-none hover:bg-teal-50 focus-visible:bg-teal-100 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-teal-700" onClick={() => onEscolher(item)}>
                 <strong className="font-mono">{item.codigo}</strong> {item.descricao}
               </button>
             </li>

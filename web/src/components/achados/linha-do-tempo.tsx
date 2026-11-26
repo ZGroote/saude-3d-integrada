@@ -77,7 +77,7 @@ export function LinhaDoTempo({ achados, eventos, visiveis, filtro, onFiltrar }: 
               style={{ left: `${posicao(diaDe(e.data))}%` }} />
           ))}
         </div>
-        <p className="flex justify-between text-xs text-slate-500"><span>{formatarData(dias[0]!)}</span><span>{formatarData(dias[ultimo]!)}</span></p>
+        <p className="flex justify-between text-xs text-slate-600"><span>{formatarData(dias[0]!)}</span><span>{formatarData(dias[ultimo]!)}</span></p>
         {ultimo > 0 && (
           <>
             <label className={ROTULO}>Início do intervalo

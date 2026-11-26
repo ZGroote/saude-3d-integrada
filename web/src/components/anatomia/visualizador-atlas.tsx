@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import {
-  carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type Marcador, type Pacote,
+  carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type EntradaIndice, type Marcador, type Pacote,
 } from "@saude3d/motor-anatomico";
 import { Card } from "@/components/ui/card";
 import { ladoDaLateralidade, LADOS, type Lado } from "@/lib/achados";
@@ -27,7 +27,21 @@ const NOMES_SISTEMA: Record<string, string> = {
 };
 const nomeSistema = (id: string) => NOMES_SISTEMA[id] ?? id;
 
-export type PontoNoCorpo = { ancora: Ancora; nome: string; sistema: string; lado: Lado; naoRevisado: boolean };
+export type PontoNoCorpo = {
+  ancora: Ancora; nome: string; sistema: string; lado: Lado; naoRevisado: boolean;
+  /** escolhido pela busca por nome: o foco fica onde está */
+  daBusca?: boolean;
+};
+
+/** O atlas em que dá para marcar agora, com o índice dele. */
+export type AtlasPronto = { atlas: string; versao: string; indice: EntradaIndice[] };
+
+export function pontoDaEntrada(ancora: Ancora, e: EntradaIndice): PontoNoCorpo {
+  return {
+    ancora, nome: e.nome_pt || e.nome_en, sistema: nomeSistema(ancora.sistema),
+    lado: ladoDaLateralidade(e.lateralidade), naoRevisado: naoRevisado(e),
+  };
+}
 
 /** O que o prontuário liga ao 3D; sem isso (rota /dev/motor) o painel só identifica o ponto clicado. */
 type Prontuario = {
@@ -41,6 +55,8 @@ type Prontuario = {
   onSelecionarMarcador: (id: string) => void;
   onMarcadoresSemPosicao: (ids: string[]) => void;
   onMarcadoresDesenhados: () => void;
+  /** null = não há onde marcar (carregando ou corpo provisório) */
+  onAtlasPronto: (atlas: AtlasPronto | null) => void;
 };
 const naoRevisado = (e: { nome_pt: string; validacao: string }) => !!e.nome_pt && (!e.validacao || e.validacao === "pendente");
 
@@ -118,15 +134,20 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
   const entradaDe = (a: Ancora) => pacote?.indice.find((e) => e.malha === a.malha);
   const entrada = ancora && entradaDe(ancora);
 
+  const onAtlasPronto = prontuario?.onAtlasPronto;
+  useEffect(() => {
+    // SPEC §6: no corpo provisório não se grava âncora, nem pela busca por nome
+    if (!pacote || provisorio) return;
+    onAtlasPronto?.({ atlas, versao, indice: pacote.indice });
+    return () => onAtlasPronto?.(null);
+  }, [pacote, provisorio, atlas, versao, onAtlasPronto]);
+
   function escolher(a: Ancora) {
     if (!prontuario) return setAncora(a);
     const e = entradaDe(a);
     // SPEC §6: no corpo provisório não se grava âncora. Sem o índice não há nome nem lado.
     if (provisorio || !e) return;
-    prontuario.onEscolherPonto({
-      ancora: a, nome: e.nome_pt || e.nome_en, sistema: nomeSistema(a.sistema),
-      lado: ladoDaLateralidade(e.lateralidade), naoRevisado: naoRevisado(e),
-    });
+    prontuario.onEscolherPonto(pontoDaEntrada(a, e));
   }
 
   // achado num sistema desligado ficaria escondido sob a pele: selecioná-lo liga o sistema (uma vez por seleção)
@@ -165,22 +186,22 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
           ) : (
             <dl className="mt-3 space-y-3 text-sm" data-ancora>
               <div>
-                <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Nome</dt>
+                <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Nome</dt>
                 <dd className="font-semibold text-slate-900">{entrada.nome_pt || entrada.nome_en}</dd>
                 {naoRevisado(entrada) && (
                   <dd className="text-xs italic text-amber-800">tradução não revisada</dd>
                 )}
               </div>
               <div>
-                <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Estrutura</dt>
+                <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Estrutura</dt>
                 <dd className="font-mono text-slate-900">{ancora.estrutura ?? "sem identificador"}</dd>
               </div>
               <div>
-                <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Lado</dt>
+                <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Lado</dt>
                 <dd className="text-slate-900">{LADOS[ladoDaLateralidade(entrada.lateralidade)]}</dd>
               </div>
               <div>
-                <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Sistema</dt>
+                <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Sistema</dt>
                 <dd className="text-slate-900">{nomeSistema(ancora.sistema)}</dd>
               </div>
             </dl>
