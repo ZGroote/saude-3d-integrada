@@ -1,0 +1,10 @@
+# Limitações Conhecidas
+
+1. **Sem atlas pediátrico (infantil):** não há modelo anatômico 3D infantil no MVP (`SPEC-MVP.md` §5.1). Prontuário de criança no MVP é estruturado e por linha do tempo, sem corpo 3D.
+2. **Atlas feminino (`hra-f`) incompleto:** contém 956 malhas (`hra/RELATORIO.md`), com pele, mama, reprodutor e órgãos principais, porém esqueleto, músculos e vasos parciais (por exemplo, sem arquivos de pés no catálogo; `hra/publicar_atlas_hra.py`). Além disso, 210 malhas no catálogo original não possuem ID de ontologia (`estrutura: null`, `sem_ontologia: true`).
+3. **Atlas masculino (`bp3d-m`) com lacunas anatômicas e de ontologia:** 17 malhas sem ID FMA no cabeçalho OBJ (`SPEC-MVP.md` §5.4) e lacuna na artéria carótida (trecho entre carótida comum e interna / bifurcação ausente; sem carótida externa — `bodyparts3d/RELATORIO.md`).
+4. **Nomes em português sem revisão médica:** tanto `bodyparts3d/nomes_pt.csv` quanto `hra/nomes_pt_hra.csv` possuem `validacao = 'pendente'` (`LICENCAS.md`, `SPEC-MVP.md` §5.2).
+5. **Sem validação clínica:** nenhum fluxo, modelo 3D ou algoritmo de alinhamento foi validado clinicamente até o momento (`CLAUDE.md` / `AGENTS.md` regra 11).
+6. **TC da coleção Denver sem Unidades Hounsfield (HU) e sem metadados espaciais completos:** os DICOMs da Denver têm `Modality=OT`, `RescaleType=US`, `PixelRepresentation=0`, slope 1, intercept 0 (sem HU negativos), além de `ImagePositionPatient` e `ImageOrientationPatient` ausentes (`hra/denver/RELATORIO.md`, `hra/totalseg/LEIAME.md`).
+7. **Restrição de hardware (GPU de 4 GB):** a GPU local disponível (`NVIDIA GeForce GTX 1650, 4 GB`, CUDA 12.8) exige uso de `--fast` (resolução de 3 mm) e segmentação em blocos craniocaudais com uma thread de salvamento para evitar esgotamento de VRAM/RAM (`hra/totalseg/LEIAME.md`, `hra/nlm/segmentar_partes.py`).
+8. **Incompatibilidade métrica direta entre fontes distintas:** o ajuste de similaridade entre BodyParts3D e o caso `s1371` apresentou erro médio de 36,5 mm (máx. 86,2 mm), impedindo fusão direta entre corpos de referência diferentes (`bodyparts3d/RELATORIO.md`, `SPEC-MVP.md` §5.1).
