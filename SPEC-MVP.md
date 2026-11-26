@@ -327,6 +327,7 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 - [ ] **Homologação antes de dado real:** Supabase de homologação com dados sintéticos, testes adversariais (JWT, PostgREST, RPC, Storage), RIPD e aval do encarregado de dados do município. O teste em PGlite cobre só SQL/RLS.
 - [ ] **Lista de CIDs sensíveis** para o sigilo automático, revisada por médico.
 - [ ] **Validação médica** dos atlas e dos 1.659 nomes em português antes do piloto.
+- [ ] **Licença do SNOMED CT em produção:** o Brasil aderiu em 2018 mas não consta hoje como membro ativo (snomed.org/members); uso institucional em produção pode exigir *Affiliate License* via MLDS. A importação FHIR só lê o código do `bodySite` e o mapeia por tabela própria (`bodysite_estrutura`, 12 códigos verificados em supabase/dados/bodysite_snomed.csv); confirmar o enquadramento antes do piloto.
 - [ ] **Hospedagem:** o município exige servidor próprio ou nuvem nacional?
 - [ ] **Identificação:** CNS sozinho basta ou precisamos de CPF?
 
