@@ -26,10 +26,6 @@ def rpc(rota):
     if pedido.method == 'OPTIONS':
         return rota.fulfill(status=204, headers=cors)
     nome = pedido.url.split('?')[0].rsplit('/', 1)[1]
-    if nome == 'unidades':
-        linha = {'nome': 'Unidade Fictícia'}
-        um = 'pgrst.object' in pedido.headers.get('accept', '')
-        return rota.fulfill(status=200, headers=cors, content_type='application/json', body=json.dumps(linha if um else [linha]))
     corpo = pedido.post_data_json or {}
     chamadas.append((nome, corpo))
     if nome == 'buscar_cid10':
@@ -38,7 +34,7 @@ def rpc(rota):
         resposta = f'40000000-0000-4000-8000-{len(gravados) + 1:012d}'
         gravados.append({
             'id': resposta, **{k[2:]: v for k, v in corpo.items() if k not in ('p_paciente', 'p_cid10', 'p_substitui')},
-            'substitui_id': corpo.get('p_substitui'),
+            'substitui_id': corpo.get('p_substitui'), 'unidade_id': '10000000-0000-4000-8000-0000000000aa',
             'cid10': corpo['p_cid10'], 'cid10_descricao': CID['descricao'], 'especialidade': 'cardiologia',
             'autor_nome': 'Profissional Fictício', 'unidade_nome': 'Unidade Fictícia', 'criado_em': '2026-11-25T12:00:00Z',
         })

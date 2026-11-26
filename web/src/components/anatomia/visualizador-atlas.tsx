@@ -23,7 +23,7 @@ const NOMES_SISTEMA: Record<string, string> = {
   tegumentar: "Pele", esqueletico: "Esquelético", articular: "Articular", muscular: "Muscular", fascia: "Fáscia",
   cardiaco: "Cardíaco", arterial: "Arterial", venoso: "Venoso", linfatico: "Linfático", nervoso: "Nervoso",
   respiratorio: "Respiratório", digestorio: "Digestório", urogenital: "Urogenital", endocrino: "Endócrino",
-  sensorial: "Sensorial",
+  sensorial: "Sensorial", gestacional: "Gestacional",
 };
 const nomeSistema = (id: string) => NOMES_SISTEMA[id] ?? id;
 
@@ -34,6 +34,8 @@ type Prontuario = {
   marcadores: Marcador[];
   /** os achados ainda não chegaram: o corpo é baixado depois dos marcadores */
   carregando: boolean;
+  /** libera a camada gestacional (SPEC §5.1: só no contexto de gestação) */
+  gestacaoEmCurso: boolean;
   selecionado: string | null;
   onEscolherPonto: (ponto: PontoNoCorpo) => void;
   onSelecionarMarcador: (id: string) => void;
@@ -182,9 +184,9 @@ function Corpo({ atlas, provisorio, prontuario, onAusente }: {
             <legend className="text-sm font-semibold text-slate-950">Sistemas</legend>
             {!pacote && <p className="mt-2 text-sm text-slate-600">Carregando lista…</p>}
             <div className={`mt-2 grid grid-cols-2 gap-x-3 ${prontuario ? "sm:grid-cols-3 xl:grid-cols-5" : "lg:grid-cols-1"}`}>
-              {/* SPEC §5.1: a camada gestacional só é ligada no contexto de gestação (Etapa 5) */}
+              {/* SPEC §5.1: a camada gestacional só é ligada no contexto de gestação */}
               {pacote?.manifesto.sistemas
-                .filter(({ id }) => id !== "gestacional")
+                .filter(({ id }) => id !== "gestacional" || prontuario?.gestacaoEmCurso)
                 .toSorted((a, b) => nomeSistema(a.id).localeCompare(nomeSistema(b.id), "pt-BR"))
                 .map(({ id }) => (
                   <label key={id} className="flex min-h-9 cursor-pointer items-center gap-2 text-sm text-slate-800">
@@ -205,6 +207,9 @@ function Corpo({ atlas, provisorio, prontuario, onAusente }: {
                   </label>
                 ))}
             </div>
+            {prontuario?.gestacaoEmCurso && pacote?.manifesto.sistemas.some((s) => s.id === "gestacional") && (
+              <p className="mt-2 text-xs text-slate-600">Camada gestacional: representação de referência (placenta, âmnio, cordão), não é a gestação desta paciente.</p>
+            )}
           </fieldset>
         </Card>
       </div>

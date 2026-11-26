@@ -15,10 +15,12 @@ import type { Sexo } from "@/lib/banco";
 import { useHidratado } from "@/lib/hidratacao";
 import { createClient } from "@/lib/supabase/client";
 
-export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
+export function PainelAchados({ pacienteId, sexo, com3d, inicial, gestacaoEmCurso = false }: {
   pacienteId: string;
   sexo: Sexo;
   com3d: boolean;
+  /** com gestação em curso o corpo oferece a camada gestacional */
+  gestacaoEmCurso?: boolean;
   /** achados buscados no servidor; null = a busca falhou; omitido = o navegador busca (rota de desenvolvimento) */
   inicial?: Achado[] | null;
 }) {
@@ -30,7 +32,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
   const [novo, setNovo] = useState<{ ponto: PontoNoCorpo | null; corrigindo?: Achado } | undefined>();
   const [filtro, setFiltro] = useState(SEM_FILTRO);
   // unidade de quem está logado: só ela vê o botão de corrigir
-  const [minhaUnidade, setMinhaUnidade] = useState<{ id: string; nome: string | null } | null>(null);
+  const [minhaUnidade, setMinhaUnidade] = useState<string | null>(null);
   const [semPosicao, setSemPosicao] = useState<string[]>([]);
   const [aviso, setAviso] = useState("");
   const veioDoServidor = inicial !== undefined;
@@ -59,12 +61,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
 
   useEffect(() => {
     let valido = true;
-    const banco = createClient();
-    banco.rpc("minha_unidade").then(async ({ data: id }) => {
-      if (!id) return;
-      const { data } = await banco.from("unidades").select("nome").eq("id", id).maybeSingle();
-      if (valido) setMinhaUnidade({ id, nome: data?.nome ?? null });
-    });
+    createClient().rpc("minha_unidade").then(({ data }) => { if (valido) setMinhaUnidade(data); });
     return () => { valido = false; };
   }, []);
 
@@ -77,10 +74,6 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
     [visiveis],
   );
   const aberto = visiveis.find((a) => a.id === selecionado);
-  // ponytail: sem unidade_id (antes da migração 0004) compara o nome; o banco confere o id ao salvar.
-  // Apagar a reserva e a leitura do nome quando a 0004 estiver aplicada.
-  const daMinhaUnidade = (a: Achado) =>
-    !!minhaUnidade && (a.unidade_id ? a.unidade_id === minhaUnidade.id : a.unidade_nome === minhaUnidade.nome);
   const abrir = useCallback((id: string) => { setNovo(undefined); setSelecionado(id); }, []);
   const registrar = (ponto: PontoNoCorpo | null) => { setSelecionado(null); setAviso(""); setNovo({ ponto }); };
   // clicar no corpo durante uma correção muda o local dela, sem virar achado novo
@@ -114,7 +107,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
         <CartaoAchado
           key={aberto.id}
           achado={aberto}
-          podeCorrigir={daMinhaUnidade(aberto)}
+          podeCorrigir={!!minhaUnidade && aberto.unidade_id === minhaUnidade}
           onCorrigir={() => { setSelecionado(null); setAviso(""); setNovo({ ponto: null, corrigindo: aberto }); }}
           onFechar={() => setSelecionado(null)}
         />
@@ -161,6 +154,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
         prontuario={{
           marcadores, selecionado,
           carregando: !achados && !falha,
+          gestacaoEmCurso,
           onEscolherPonto: escolherPonto,
           onSelecionarMarcador: abrir,
           onMarcadoresSemPosicao: setSemPosicao,

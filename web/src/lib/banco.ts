@@ -1,5 +1,6 @@
 import type { Ancora } from "@saude3d/motor-anatomico";
 import type { Achado, Categoria, Lado, Status } from "@/lib/achados";
+import type { Desfecho, Gestacao, RecorteGestacional } from "@/lib/gestacao";
 
 export type Sexo = "feminino" | "masculino" | "indeterminado";
 
@@ -120,6 +121,18 @@ export type Database = {
       };
       listar_achados: { Args: { p_paciente: string }; Returns: Achado[] };
       historico_achado: { Args: { p_achado: string }; Returns: Achado[] };
+      registrar_gestacao: { Args: { p_mae: string; p_dum: string; p_inicio_pre_natal: string | null }; Returns: string };
+      registrar_condicao_gestacao: { Args: { p_gestacao: string; p_cid10: string; p_semana: number }; Returns: string };
+      encerrar_gestacao: { Args: { p_gestacao: string; p_desfecho: Desfecho }; Returns: null };
+      registrar_nascimento: {
+        Args: {
+          p_gestacao: string; p_nome: string; p_sexo: Sexo; p_data: string; p_peso_g: number;
+          p_idade_gestacional_sem: number; p_apgar_5: number;
+        };
+        Returns: string;
+      };
+      listar_gestacoes: { Args: { p_mae: string }; Returns: Gestacao[] };
+      historico_gestacional_crianca: { Args: { p_crianca: string }; Returns: RecorteGestacional[] };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

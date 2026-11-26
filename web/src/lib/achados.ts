@@ -22,8 +22,7 @@ export type Achado = {
   observacao: string | null;
   especialidade: string | null;
   autor_nome: string;
-  /** vem na migração 0004; até lá a unidade só é identificada pelo nome */
-  unidade_id?: string;
+  unidade_id: string;
   unidade_nome: string;
   substitui_id: string | null;
   criado_em: string;
