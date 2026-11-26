@@ -162,7 +162,7 @@ def fotos(pg, nome, achado=None):
 
 
 def conferir_linha(pg, achado, problemas):
-    texto = pg.locator(f'button[data-achado="{achado["id"]}"]').inner_text()
+    texto = pg.locator(f'button[data-achado="{achado["id"]}"]').text_content()
     for campo in ('cid10', 'autor_nome', 'unidade_nome', 'cid10_descricao'):
         if achado[campo] not in texto:
             # a descrição não impede o resto do teste; reprova no fim

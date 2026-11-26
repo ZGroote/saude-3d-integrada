@@ -1,17 +1,16 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Marcador } from "@saude3d/motor-anatomico";
 import { CartaoAchado } from "@/components/achados/cartao-achado";
 import { FormularioAchado } from "@/components/achados/formulario-achado";
 import { LinhaDoTempo } from "@/components/achados/linha-do-tempo";
+import { ListaAchados } from "@/components/achados/lista-achados";
 import { Prontuario3D } from "@/components/anatomia/prontuario-3d";
 import type { PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import {
-  corDaEspecialidade, dataDoAchado, filtrar, formatarData, ordenarPorData, SEM_FILTRO, STATUS, TAMANHO_DO_STATUS, type Achado,
-} from "@/lib/achados";
+import { corDaEspecialidade, filtrar, ordenarPorData, SEM_FILTRO, TAMANHO_DO_STATUS, type Achado } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
 import { useHidratado } from "@/lib/hidratacao";
 import { createClient } from "@/lib/supabase/client";
@@ -36,6 +35,14 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
   const [aviso, setAviso] = useState("");
   const veioDoServidor = inicial !== undefined;
   const hidratado = useHidratado();
+  // o resto das linhas da lista é montado depois que os marcadores aparecem no corpo
+  const [marcadoresNaTela, setMarcadoresNaTela] = useState(!com3d);
+  const aoDesenharMarcadores = useCallback(() => setMarcadoresNaTela(true), []);
+  useEffect(() => {
+    // sem 3D que avise (atlas não escolhido, WebGL indisponível), a lista se completa do mesmo jeito
+    const prazo = setTimeout(aoDesenharMarcadores, 8000);
+    return () => clearTimeout(prazo);
+  }, [aoDesenharMarcadores]);
 
   useEffect(() => {
     // na abertura vale o que veio do servidor; o navegador só busca depois de salvar ou de tentar de novo
@@ -74,7 +81,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
   // Apagar a reserva e a leitura do nome quando a 0004 estiver aplicada.
   const daMinhaUnidade = (a: Achado) =>
     !!minhaUnidade && (a.unidade_id ? a.unidade_id === minhaUnidade.id : a.unidade_nome === minhaUnidade.nome);
-  const abrir = (id: string) => { setNovo(undefined); setSelecionado(id); };
+  const abrir = useCallback((id: string) => { setNovo(undefined); setSelecionado(id); }, []);
   const registrar = (ponto: PontoNoCorpo | null) => { setSelecionado(null); setAviso(""); setNovo({ ponto }); };
   // clicar no corpo durante uma correção muda o local dela, sem virar achado novo
   const escolherPonto = (ponto: PontoNoCorpo) => {
@@ -82,37 +89,6 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
     setAviso("");
     setNovo((atual) => ({ ponto, corrigindo: atual?.corrigindo }));
   };
-
-  function linha(a: Achado) {
-    return (
-      <li key={a.id}>
-        <button type="button" data-achado={a.id} data-dia={dataDoAchado(a)} aria-pressed={a.id === selecionado} onClick={() => abrir(a.id)}
-          className="flex w-full gap-2 rounded-md px-1 py-2 text-left text-sm outline-none hover:bg-teal-50 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-teal-700 aria-pressed:bg-teal-50">
-          <span aria-hidden="true" className="mt-1 size-3 shrink-0 rounded-full" style={{ background: corDaEspecialidade(a.especialidade) }} />
-          <span className="min-w-0">
-            <span className="block text-xs font-semibold text-teal-800">{a.inicio ? "Início" : "Registro"} {formatarData(dataDoAchado(a))}</span>
-            <span className="block text-slate-900"><strong className="font-mono">{a.cid10}</strong> {a.cid10_descricao}</span>
-            <span className="block text-xs text-slate-600">{a.autor_nome} · {a.unidade_nome} · {formatarData(a.criado_em)}</span>
-            <span className="block text-xs text-slate-500">
-              {a.especialidade ?? "Sem especialidade"} · {STATUS[a.status]}
-              {!a.ancora ? " · sem local no corpo" : com3d && semPosicao.includes(a.id) ? " · não exibido neste corpo" : ""}
-            </span>
-          </span>
-        </button>
-      </li>
-    );
-  }
-
-  function lista(titulo: string, id: string, itens: Achado[]) {
-    return (
-      <div className="mt-3">
-        <h4 id={id} className="text-xs font-semibold uppercase tracking-wide text-slate-500">{titulo} ({itens.length})</h4>
-        {itens.length
-          ? <ul aria-labelledby={id} className="mt-1 max-h-96 divide-y divide-slate-100 overflow-y-auto">{itens.map(linha)}</ul>
-          : <p className="mt-1 text-sm text-slate-600">Nenhum.</p>}
-      </div>
-    );
-  }
 
   const lateral = (
     <fieldset disabled={!hidratado} className="min-w-0 space-y-4">
@@ -157,8 +133,11 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
           : !achados.length ? <p className="mt-2 text-sm text-slate-600">Nenhum achado registrado.</p>
             : (
               <>
-                {lista("No corpo", "achados-no-corpo", visiveis.filter((a) => a.ancora))}
-                {lista("Sem local no corpo", "achados-sem-local", visiveis.filter((a) => !a.ancora))}
+                {([["No corpo", "achados-no-corpo", true], ["Sem local no corpo", "achados-sem-local", false]] as const)
+                  .map(([titulo, id, noCorpo]) => (
+                    <ListaAchados key={id} titulo={titulo} id={id} itens={visiveis.filter((a) => !!a.ancora === noCorpo)}
+                      liberar={marcadoresNaTela} selecionado={selecionado} semPosicao={com3d ? semPosicao : []} onAbrir={abrir} />
+                  ))}
               </>
             )}
       </Card>
@@ -185,6 +164,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
           onEscolherPonto: escolherPonto,
           onSelecionarMarcador: abrir,
           onMarcadoresSemPosicao: setSemPosicao,
+          onMarcadoresDesenhados: aoDesenharMarcadores,
         }}
       />
       {lateral}

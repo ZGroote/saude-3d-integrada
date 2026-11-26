@@ -168,7 +168,7 @@ with sync_playwright() as p:
     cartao.wait_for()
     for trecho in ('I10', CID['descricao'], 'Profissional Fictício', 'Unidade Fictícia', '2026', 'Esquerdo'):
         assert trecho in cartao.inner_text(), (trecho, cartao.inner_text())
-        assert trecho == 'Esquerdo' or trecho in linha.inner_text(), (trecho, linha.inner_text())
+        assert trecho == 'Esquerdo' or trecho in linha.text_content(), (trecho, linha.text_content())
     carregados(pg, 'tegumentar esqueletico')
     foto(pg, '2-cartao')
     pg.keyboard.press('Escape')
@@ -183,7 +183,7 @@ with sync_playwright() as p:
     preencher_e_salvar(pg)
     assert gravados[1]['ancora'] is None
     pg.wait_for_selector('text=Achados (2)')
-    assert 'sem local no corpo' in pg.locator('button[data-achado]').nth(1).inner_text()
+    assert 'sem local no corpo' in pg.locator('button[data-achado]').nth(1).text_content()
     assert len(pg.evaluate(DESENHADOS)) == 1
     print('formulário, debounce, salvar, recarregar, teclado, marcador e sem local: OK')
 
@@ -242,12 +242,68 @@ with sync_playwright() as p:
     assert envio['p_substitui'] == original['id'] and envio['p_ancora'] == original['ancora'], envio
     versoes = pg.locator('[data-cartao] ol[aria-label="Versões do achado"] li')
     versoes.nth(1).wait_for()
-    assert versoes.count() == 2 and '(atual)' in versoes.nth(1).inner_text() and 'Ativo' in versoes.nth(0).inner_text()
+    assert versoes.count() == 2 and '(atual)' in versoes.nth(1).text_content() and 'Ativo' in versoes.nth(0).inner_text()
     assert pg.locator(f'button[data-achado="{original["id"]}"]').count() == 0
     conferir(3, 2, 'Achados (3)')
     foto(pg, '6-historico')
     pg.close()
     print('corrigir e histórico: OK')
+
+    # 4d) lista montada aos poucos: com o navegador "sempre ocupado", só o começo existe, e nada fica inalcançável
+    reserva = list(gravados)
+    gravados[:] = [{**reserva[0], 'id': f'40000000-0000-4000-8000-{n:012x}', 'substitui_id': None} for n in range(1, 81)]
+    pg = navegador.new_page(viewport={'width': 1440, 'height': 900})
+    pg.set_default_timeout(60000)
+    pg.add_init_script('window.__ociosas = []; window.requestIdleCallback = (f) => window.__ociosas.push(f); window.cancelIdleCallback = () => {};')
+    pg.route('**/rest/v1/**', rpc)
+    linhas = pg.locator('button[data-achado]')
+    outros = pg.get_by_role('button', name='Mostrar os outros 50 achados')
+
+    def abrir_parcial():
+        pg.goto(f'{APP}/dev/motor?achados=1')
+        pg.wait_for_function('window.__ociosas.length > 0')  # só se pede tempo ocioso depois dos marcadores
+        carregados(pg, 'tegumentar')
+        pg.wait_for_selector('[data-motor][data-marcadores="80"]')
+        assert linhas.count() == 30 and 'Achados (80)' in pg.inner_text('main') and 'No corpo (80)'.lower() in pg.inner_text('main').lower()
+        assert pg.locator('li[aria-posinset="1"]').get_attribute('aria-setsize') == '80' and outros.count() == 1
+        assert pg.locator('li[aria-posinset="1"]').evaluate('(e) => getComputedStyle(e).contentVisibility') == 'auto'
+
+    def todas(momento):
+        pg.wait_for_function("document.querySelectorAll('button[data-achado]').length === 80")
+        assert outros.count() == 0 and pg.locator('ul[aria-busy=true]').count() == 0, momento
+
+    # lotes quando o navegador fica ocioso
+    abrir_parcial()
+    pg.evaluate('window.__ociosas.shift()({})')
+    pg.wait_for_function("document.querySelectorAll('button[data-achado]').length === 60")
+    pg.wait_for_function('window.__ociosas.length > 0')
+    pg.evaluate('window.__ociosas.pop()({})')
+    todas('lotes')
+    # teclado: Tab até perto do fim monta o resto sem perder o foco
+    abrir_parcial()
+    linhas.nth(25).focus()
+    assert linhas.count() == 30
+    for _ in range(10):
+        pg.keyboard.press('Tab')
+    todas('Tab')
+    assert pg.evaluate("document.activeElement.closest('li').ariaPosInSet") == '36'
+    # teclado de baixo para cima, chegando pelo botão: vai para a última linha
+    abrir_parcial()
+    outros.focus()
+    todas('botão pelo teclado')
+    assert pg.evaluate("document.activeElement.closest('li').ariaPosInSet") == '80'
+    # clique no botão: segue para a primeira linha nova
+    abrir_parcial()
+    outros.click()
+    todas('clique')
+    assert pg.evaluate("document.activeElement.closest('li').ariaPosInSet") == '31'
+    # busca do navegador
+    abrir_parcial()
+    pg.keyboard.press('Control+f')
+    todas('Ctrl+F')
+    pg.close()
+    gravados[:] = reserva
+    print('lista aos poucos: total certo, lotes, Tab, botão e Ctrl+F: OK')
 
     # 5) feminina no corpo masculino provisório: clique não abre formulário; sem local continua
     pg = navegador.new_page()

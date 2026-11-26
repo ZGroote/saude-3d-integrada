@@ -26,6 +26,8 @@ export type MotorAnatomicoProps = {
    * que isto for false e um quadro com os marcadores tiver sido desenhado. Omitido = baixa de imediato.
    */
   marcadoresPendentes?: boolean;
+  /** chamada uma vez, depois do primeiro quadro com os marcadores; só quando `marcadoresPendentes` é informado */
+  onMarcadoresDesenhados?: () => void;
   /** id do marcador em destaque */
   selecionado?: string | null;
   onEscolherPonto?: (ancora: Ancora) => void;
@@ -231,7 +233,7 @@ function AposDesenhar({ avisar }: { avisar: () => void }) {
 }
 
 function Motor({
-  atlas, versao, baseUrl, sistemasVisiveis, marcadores = [], marcadoresPendentes, selecionado,
+  atlas, versao, baseUrl, sistemasVisiveis, marcadores = [], marcadoresPendentes, onMarcadoresDesenhados, selecionado,
   onEscolherPonto, onSelecionarMarcador, onMarcadoresSemPosicao,
 }: MotorAnatomicoProps) {
   const base = urlDoPacote(baseUrl, atlas, versao);
@@ -408,7 +410,7 @@ function Motor({
         aria-label="Corpo em 3D"
       >
         <Camera alvo={prontos.length ? cache.get(prontos[0]!)!.sistema! : null} onAmpliar={() => setAmpliado(true)} />
-        {!liberado && marcadoresPendentes === false && <AposDesenhar avisar={() => setLiberado(true)} />}
+        {!liberado && marcadoresPendentes === false && <AposDesenhar avisar={() => { setLiberado(true); onMarcadoresDesenhados?.(); }} />}
         <hemisphereLight args={[0xffffff, 0x444444, 2.2]} />
         {/* ponytail: uma chamada de desenho por estrutura; BatchedMesh se ficar lento com tudo ligado */}
         {prontos.map((id) => (

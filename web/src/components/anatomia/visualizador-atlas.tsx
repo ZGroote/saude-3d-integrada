@@ -38,6 +38,7 @@ type Prontuario = {
   onEscolherPonto: (ponto: PontoNoCorpo) => void;
   onSelecionarMarcador: (id: string) => void;
   onMarcadoresSemPosicao: (ids: string[]) => void;
+  onMarcadoresDesenhados: () => void;
 };
 const naoRevisado = (e: { nome_pt: string; validacao: string }) => !!e.nome_pt && (!e.validacao || e.validacao === "pendente");
 
@@ -144,6 +145,7 @@ function Corpo({ atlas, provisorio, prontuario, onAusente }: {
           onEscolherPonto={escolher}
           onSelecionarMarcador={prontuario?.onSelecionarMarcador}
           onMarcadoresSemPosicao={prontuario?.onMarcadoresSemPosicao}
+          onMarcadoresDesenhados={prontuario?.onMarcadoresDesenhados}
         />
       </Card>
       <div className="space-y-4">

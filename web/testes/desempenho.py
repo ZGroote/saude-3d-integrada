@@ -7,7 +7,8 @@ CPU 4x mais lenta e rede "Fast 4G" (valores do DevTools), pelo CDP. Cada abertur
 só com a sessão: o cache do navegador começa vazio. Cada uma grava eventos na auditoria da homologação.
 Senha lida de supabase/.env.demo, nunca impressa.
 
-Tempo medido: do início da navegação até lista completa e todos os marcadores na cena, mais dois quadros.
+Critério: do início da navegação até a primeira tela da lista (com o total certo) E todos os marcadores na
+cena, mais dois quadros. A lista completa (todas as linhas montadas) é medida e mostrada à parte.
 """
 import json
 import math
@@ -42,8 +43,13 @@ MEDIDOR = """(esperado) => {
   const depoisDeDesenhar = (nome) => requestAnimationFrame(() => requestAnimationFrame(() => { window.__tempos[nome] = performance.now(); }));
   const vistos = {};
   const olhar = () => {
-    if (!vistos.lista && document.querySelectorAll('button[data-achado]').length === esperado.linhas) {
+    const linhas = document.querySelectorAll('button[data-achado]').length;
+    if (!vistos.lista && linhas >= esperado.primeira
+        && [...document.querySelectorAll('h3')].some((h) => h.textContent === `Achados (${esperado.linhas})`)) {
       vistos.lista = true; depoisDeDesenhar('lista');
+    }
+    if (!vistos.lista_completa && linhas === esperado.linhas) {
+      vistos.lista_completa = true; depoisDeDesenhar('lista_completa');
     }
     if (!vistos.marcadores && document.querySelector('canvas')?.width && naCena() >= esperado.marcadores) {
       vistos.marcadores = true; depoisDeDesenhar('marcadores');
@@ -54,7 +60,7 @@ MEDIDOR = """(esperado) => {
     if (!vistos.completo && document.querySelector('[data-motor][data-completos~="tegumentar"]')) {
       vistos.completo = true; depoisDeDesenhar('completo');
     }
-    if (!(vistos.lista && vistos.marcadores && vistos.corpo && vistos.completo)) requestAnimationFrame(olhar);
+    if (!(vistos.lista && vistos.lista_completa && vistos.marcadores && vistos.corpo && vistos.completo)) requestAnimationFrame(olhar);
   };
   requestAnimationFrame(olhar);
 }"""
@@ -104,10 +110,14 @@ with sync_playwright() as p:
     pg.wait_for_selector('[data-motor][data-completos~="tegumentar"]')
     pg.wait_for_timeout(1500)
     atlas = pg.get_attribute('[data-atlas]', 'data-atlas')
-    esperado = {'linhas': pg.locator('button[data-achado]').count(),
-                'marcadores': int(pg.get_attribute('[data-motor]', 'data-marcadores'))}
-    no_corpo = pg.locator('ul[aria-labelledby=achados-no-corpo] button').count()
-    print(f'{esperado["linhas"]} achados, {no_corpo} com local, {esperado["marcadores"]} marcadores no {atlas}')
+    total = "Number([...document.querySelectorAll('h3')].map((h) => /^Achados \\((\\d+)\\)$/.exec(h.textContent)?.[1]).find(Boolean))"
+    pg.wait_for_function(f"document.querySelectorAll('button[data-achado]').length === {total}")
+    contar = lambda lista: pg.locator(f'ul[aria-labelledby={lista}] button').count()
+    no_corpo, sem_local = contar('achados-no-corpo'), contar('achados-sem-local')
+    esperado = {'linhas': pg.evaluate(total), 'marcadores': int(pg.get_attribute('[data-motor]', 'data-marcadores')),
+                'primeira': min(30, no_corpo) + min(30, sem_local)}
+    print(f'{esperado["linhas"]} achados, {no_corpo} com local, {esperado["marcadores"]} marcadores no {atlas}; '
+          f'primeira tela: {esperado["primeira"]} linhas')
     assert esperado['linhas'] >= 200, f'a meta é com 200 achados; há {esperado["linhas"]}'
     assert esperado['marcadores'] == no_corpo, 'há achado com local sem marcador'
     sessao = contexto.storage_state()
@@ -127,7 +137,7 @@ with sync_playwright() as p:
         cdp.send('Network.emulateNetworkConditions', FAST_4G)
         cdp.send('Emulation.setCPUThrottlingRate', {'rate': CPU})
         pg.goto(prontuario, wait_until='commit')
-        pg.wait_for_function('["lista", "marcadores", "corpo", "completo"].every((n) => window.__tempos?.[n])', timeout=120000)
+        pg.wait_for_function('["lista", "lista_completa", "marcadores", "corpo", "completo"].every((n) => window.__tempos?.[n])', timeout=120000)
         dados = pg.evaluate(RECURSOS)
         contexto.close()
 
@@ -143,7 +153,8 @@ with sync_playwright() as p:
         # o maior arquivo JS é o do motor 3D (three, R3F e o visualizador)
         motor = max((r for r in recursos if r['url'].split('?')[0].endswith('.js')), key=lambda r: r['bytes'])
         medida = {
-            'visivel': visivel, 'lista': tempos['lista'], 'marcadores': tempos['marcadores'], 'corpo': tempos['corpo'],
+            'visivel': visivel, 'lista': tempos['lista'], 'marcadores': tempos['marcadores'],
+            'lista_completa': tempos['lista_completa'], 'corpo': tempos['corpo'],
             'completo': tempos['completo'],
             # banco: a página só começa a responder depois de abrir_prontuario e listar_achados, no servidor
             'banco_servidor': documento['responseStart'], 'html_chegou': documento['responseEnd'],
