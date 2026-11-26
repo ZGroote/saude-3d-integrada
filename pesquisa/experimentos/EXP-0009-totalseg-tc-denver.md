@@ -6,8 +6,8 @@
 - **ID:** `EXP-0009`
 - **Título:** TotalSegmentator na TC da Denver convertida por histograma (ossos falharam; GPU 4 GB)
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Codex 2 (GPT-6 Luna — instalação e execução do TotalSegmentator, `preparar_tc.py`); Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `0324bc7`, `8692651`
 - **Linha de pesquisa:** `LP01`

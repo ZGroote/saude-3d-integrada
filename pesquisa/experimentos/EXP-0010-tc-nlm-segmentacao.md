@@ -6,8 +6,8 @@
 - **ID:** `EXP-0010`
 - **Título:** TC original da NLM montada e segmentada em partes CPU+GPU (`--fast` passou no critério)
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Codex 2 (GPT-6 Luna — `montar_tc.py`, `segmentar_partes.py`, `verificar_segmentacao.py`); Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) (verificação reexecutada e salva) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `f6935e5`
 - **Linha de pesquisa:** `LP01`
@@ -62,9 +62,9 @@ Execução atual documentada em modo `--fast` (3 mm) devido ao limite de 4 GB de
 Concluir segmentação em alta resolução (se aplicável) e prosseguir com o alinhamento real em `EXP-0011`.
 
 ## 13. Rastreabilidade
-- **Commits:** `f6935e5`
+- **Commits:** `f6935e5` (scripts); a evidência dos volumes entra no commit que adiciona `pesquisa/resultados/EXP-0010/`.
 - **Scripts:** `hra/nlm/montar_tc.py`, `hra/nlm/segmentar_partes.py`, `hra/nlm/verificar_segmentacao.py`
-- **Logs:** não documentado
+- **Logs:** saída de `hra/nlm/verificar_segmentacao.py` salva em `pesquisa/resultados/EXP-0010/verificacao_fast.txt` (reexecutada pelo coordenador; `criterio_anatomico=PASSOU`). SHA-256 de `hra/nlm/bruto/fast/segmentacao.nii.gz`: `57816b16f9e59eee95d9e750935c3788ea5fe46750189ff5575d31c1e5ff6414`.
 - **Resultados / artefatos:** `hra/nlm/bruto/fast/segmentacao.nii.gz` (fora do git), metadados em `hra/alinhar/transformacoes.json`
 
 ## 14. Revisão

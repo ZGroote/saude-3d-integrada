@@ -6,8 +6,8 @@
 - **ID:** `EXP-0004`
 - **Título:** Compressão `meshopt` sem simplificação (132 → 29 MB, triângulos preservados)
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Codex (GPT-6 — `exportar_glb.py`, `comprimir_web.py`); Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `2b7f443`, `c5157e4`, `3e701c7`
 - **Linha de pesquisa:** `LP02`

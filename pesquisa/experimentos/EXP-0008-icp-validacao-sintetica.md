@@ -6,8 +6,8 @@
 - **ID:** `EXP-0008`
 - **Título:** ICP malha a malha — validação sintética
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Codex (GPT-6 Luna — `alinhar.py` e teste sintético); Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `fdb9441`, `8692651`
 - **Linha de pesquisa:** `LP01`

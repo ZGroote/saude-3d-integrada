@@ -6,8 +6,8 @@
 - **ID:** `EXP-0002`
 - **Título:** Inventário e classificação do BodyParts3D (2.234 malhas, 15 sistemas)
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`); Antigravity (Gemini — `revisao_outros.csv`, `traducoes_pt.json`); Codex 2 (GPT-6 Luna — 1ª tentativa de tradução, descartada por baixa qualidade) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `1e1389e`, `2b7f443`
 - **Linha de pesquisa:** `LP01`
@@ -20,7 +20,7 @@ Catalogar todas as malhas do BodyParts3D 4.0 e classificá-las em sistemas anat�
 A combinação de regras por nome em inglês com ancestrais da árvore FMA (`is_a` e `part_of`), complementada por revisão manual da categoria residual `outros`, classifica integralmente as 2.234 malhas em 15 sistemas.
 
 ## 4. Fundamentação teórica
-Ontologia Foundational Model of Anatomy (FMA 3.0) e relações `is_a` / `part_of` distribuídas no BodyParts3D 4.0.
+Ontologia Foundational Model of Anatomy (FMA 3.0 — conforme o cabeçalho dos OBJ, `Build-up logic : FMA 3.0`, em `bodyparts3d/bruto/`, fora do git) e relações `is_a` / `part_of` distribuídas no BodyParts3D 4.0.
 
 ## 5. Materiais e ambiente
 - **Datasets e versões:** BodyParts3D release 4.0 (2013-06-19), árvore `is_a`, malhas OBJ com 99% de redução.

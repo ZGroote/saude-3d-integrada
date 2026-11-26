@@ -6,8 +6,8 @@
 - **ID:** `EXP-0005`
 - **Título:** Inventário do HRA female (956 malhas) e publicação `hra-f 1.10-1`
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) (`analisar_hra.py`); Codex (GPT-6 Luna — `publicar_atlas_hra.py`); Antigravity (Gemini — `nomes_pt_hra.csv` e correções); Antigravity Revisor (Gemini — revisão) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `1e1389e`, `69f778f`, `a90cc45`, `8e9fe43`
 - **Linha de pesquisa:** `LP01`

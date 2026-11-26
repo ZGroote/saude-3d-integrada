@@ -6,8 +6,8 @@
 - **ID:** `EXP-0006`
 - **Título:** Alinhamento Denver STL→TC por intensidade (não validado)
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Codex (GPT-6 Luna — execução e scripts); Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `0324bc7`
 - **Linha de pesquisa:** `LP01`
@@ -29,11 +29,11 @@ Amostragem de vértices de superfície em volume tomográfico NIfTI (conversão 
 - **Hardware:** não documentado.
 - **Sistema operacional:** Windows.
 - **Bibliotecas e versões:** Python (`numpy`, `nibabel`, `trimesh`, `pydicom` ou similar); versões exatas não documentadas.
-- **Seed:** não documentado (amostragem determinística de 2.000 vértices por STL).
+- **Seed:** não documentado (amostragem determinística de 2.000 vértices nos fêmures).
 
 ## 6. Metodologia
 - **Procedimentos e algoritmos:** montagem da TC (`673×670×1727`, espaçamento `[0.722656, 0.722656, 1.0] mm`), busca diagnóstica de sinal e origem XY, validação nos 28 STLs ósseos (`valor > 200`), 3 pares musculares (`[-50, 150]`) e teste de sensibilidade nos fêmures variando `±2, ±5, ±10 mm` em cada eixo.
-- **Parâmetros:** `limiar_osso > 200`, `intervalo_musculo = [-50, 150]`, `amostra = 2000 vértices/STL`.
+- **Parâmetros:** `limiar_osso > 200`, `intervalo_musculo = [-50, 150]`, `amostra = 2000 vértices/STL` só na prova de referencial e na sensibilidade dos fêmures; na validação dos 28 ossos e dos 3 pares musculares, todos os vértices de cada STL (`hra/denver/RELATORIO.md`).
 - **Comandos para reproduzir:** `python hra/denver/inventario_denver.py` e `python hra/denver/validar_transformacao.py`
 
 ## 7. Critérios de sucesso (definidos antes da execução)

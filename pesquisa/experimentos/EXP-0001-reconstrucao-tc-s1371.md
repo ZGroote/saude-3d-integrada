@@ -6,8 +6,8 @@
 - **ID:** `EXP-0001`
 - **Título:** Reconstrução anatômica a partir de TC com TotalSegmentator (caso `s1371`)
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Claude Code (sessão anterior; commit `1fec829` — divisão de tarefas não documentada) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao` (origem em `1fec829`)
 - **Commit(s):** `1fec829`
 - **Linha de pesquisa:** `LP01`

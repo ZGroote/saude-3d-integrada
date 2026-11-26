@@ -1,0 +1,19 @@
+shape=(320, 320, 1156); axcodes=('R', 'A', 'S'); affine_origem=[-239.25, -239.25, -1771.0]
+femur_left: 506.97 cm3; centroide RAS=(-92.9, 9.9, -1089.6) mm
+femur_right: 518.24 cm3; centroide RAS=(102.5, 1.4, -1090.8) mm
+hip_left: 383.75 cm3; centroide RAS=(-73.6, -3.5, -836.8) mm
+hip_right: 376.14 cm3; centroide RAS=(87.4, -4.7, -836.3) mm
+sacrum: 169.40 cm3; centroide RAS=(7.1, -53.4, -805.4) mm
+vertebrae_L1: 50.14 cm3; centroide RAS=(2.4, -47.3, -593.7) mm
+vertebrae_L2: 55.40 cm3; centroide RAS=(2.3, -41.9, -627.6) mm
+vertebrae_L3: 116.53 cm3; centroide RAS=(2.3, -32.9, -678.0) mm
+vertebrae_L4: 75.29 cm3; centroide RAS=(3.9, -28.5, -722.6) mm
+vertebrae_L5: 63.92 cm3; centroide RAS=(7.2, -24.7, -759.4) mm
+kidney_left: 201.47 cm3; centroide RAS=(-72.2, -28.1, -667.1) mm
+kidney_right: 158.95 cm3; centroide RAS=(77.9, -26.4, -655.9) mm
+liver: 2120.72 cm3; centroide RAS=(49.9, 12.7, -560.5) mm
+spleen: 228.80 cm3; centroide RAS=(-78.5, -45.1, -559.1) mm
+heart: 598.70 cm3; centroide RAS=(-34.9, 16.1, -462.2) mm
+aorta: 172.77 cm3; centroide RAS=(-15.1, -14.3, -478.5) mm
+pulmao esquerdo: 932.12 cm3; direito: 1189.32 cm3
+criterio_anatomico=PASSOU

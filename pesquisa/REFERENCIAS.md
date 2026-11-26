@@ -16,7 +16,7 @@
    Browne, Kristen, Heidi Schlehlein, Bruce W. Herr II, Ellen Quardokus, Andreas Bueckle, and Katy Börner. 2026. *HuBMAP CCF 3D Reference Object Library*. <https://humanatlas.io/3d-reference-library>.
 
 5. **Visible Human Dataset (NLM)** (`hra/LICENCA_HRA.md`, `LICENCAS.md`):
-   Spitzer, Victor M., and David G. Whitlock. 2002. *"The Visible Human Dataset: The Anatomical Platform for Human Simulation."* *The Anatomical Record* 253 (2): 49–57. <https://doi.org/10.1002/(SICI)1097-0185(199804)253:2<49::AID-AR8>3.0.CO;2-9>.
+   Spitzer & Whitlock (2002), citado no README do HRA (`hra/LICENCA_HRA.md`). Referência bibliográfica completa **a verificar na fonte original** (não reproduzida aqui para não citar de memória).
    Termos e dados NLM: <https://www.nlm.nih.gov/research/visible/visible_human.html>, <https://www.nlm.nih.gov/research/visible/getting_data.html>, <https://www.nlm.nih.gov/databases/download/terms_and_conditions.html>.
 
 6. **CID-10 (DATASUS / CBCD / OMS)** (`supabase/dados/LEIAME_CID10.md`):

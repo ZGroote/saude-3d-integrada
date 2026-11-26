@@ -6,8 +6,8 @@
 - **ID:** `EXP-0011`
 - **Título:** ICP real Denver↔TC NLM Etapa A
 - **Data:** `2026-11-25`
-- **Responsável:** não documentado
-- **Agentes de IA:** não documentado
+- **Responsável:** Joao-Guilherme-Groote (autor dos commits) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
+- **Agentes de IA:** Codex (GPT-6 Luna — execução do ICP); Claude Code (Claude Opus, coordenador: planejamento, critérios, decisões e revisão; commits com `Co-Authored-By: Claude Opus 5.5`) — *fonte: mensagens de commit e registro do coordenador da sessão de 2026-11-25*
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `fdb9441`, `8692651`, `f6935e5`
 - **Linha de pesquisa:** `LP01`
@@ -48,7 +48,7 @@ Resultados já registrados em `hra/alinhar/RELATORIO.md` e `hra/alinhar/transfor
   - `Pelvis Left`: `2.816 mm` / `4.926 mm`
   - `Pelvis Right`: `2.718 mm` / `4.848 mm`
 - **Validação independente (`Sacrum` holdout):** média **`3.990 mm`**, P95 **`10.845 mm`**.
-- **Etapa B (NLM CT → HRA):** não executada (`skipped: sacrum validation failed; no real B alignment performed`).
+- **Etapa B (NLM CT → HRA):** não executada — registro em `hra/alinhar/transformacoes.json` (`stage_b.status`): `skipped: fewer than 3 paired fit structures`; `hra/alinhar/RELATORIO.md`: menos de três pares HRA/TC utilizáveis. Os artefatos `hra/alinhar/RELATORIO.md` e `transformacoes.json` ainda não estavam commitados quando este registro foi escrito.
 
 ## 9. Validação
 **Reprovado** no critério pré-definido (`3.990 mm >= 3 mm`). A matriz ajustada está marcada explicitamente como diagnóstica apenas (`criterion_failed_sacrum_holdout`).
