@@ -28,6 +28,7 @@ const conditionSchema = resourceBase.extend({
   code: codeableConceptSchema,
   bodySite: z.array(codeableConceptSchema).optional(),
   clinicalStatus: codeableConceptSchema.optional(),
+  verificationStatus: codeableConceptSchema.optional(),
   onsetDateTime: z.string().optional(),
   recordedDate: z.string().optional(),
 });
@@ -172,6 +173,11 @@ export function planejarImportacaoFHIR(input: unknown): PlanoImportacao {
     }
     if (type === "Condition") {
       const condition = parsed.data as z.infer<typeof conditionSchema>;
+      const verificationStatus = condition.verificationStatus?.coding?.find((item) => item.code)?.code;
+      if (verificationStatus === "entered-in-error" || verificationStatus === "refuted") {
+        output.erros.push({ id, motivo: `Condition com verificationStatus '${verificationStatus}' não pode ser importada.` });
+        continue;
+      }
       const cid10 = firstCid(condition.code.coding);
       if (!cid10) { output.erros.push({ id, motivo: reason(candidate) }); continue; }
       output.condicoes.push({

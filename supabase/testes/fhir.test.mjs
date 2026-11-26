@@ -34,16 +34,20 @@ before(async()=>{
   await db.exec(await readFile(resolve(pasta,'shim_auth.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../migrations/0001_fundacao.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../seed.sql'),'utf8'));
-  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql'])
+  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql'])
     await db.exec(await readFile(resolve(pasta,'../migrations',file),'utf8'));
 });
 after(async()=>db.close());
 
 test('admin importa paciente novo e CNS existente, com vínculo e sem duplicar',async()=>{
   importacao=(await como(admin,()=>db.query(
-    "SELECT public.iniciar_importacao('bundle-sintetico.json',8) AS id",
+    "SELECT public.iniciar_importacao('bundle-sintetico.json',8,'  Sistema-A  ') AS id",
   ))).rows[0].id;
   assert.ok(importacao);
+  assert.equal((await db.query('SELECT sistema_origem FROM public.importacoes_fhir WHERE id=$1',[importacao])).rows[0].sistema_origem,'sistema-a');
+  await assert.rejects(como(admin,()=>db.query(
+    "SELECT public.iniciar_importacao('origem-invalida.json',0,'   ')",
+  )),(e)=>e.code==='22023');
   pacienteNovo=(await como(admin,()=>db.query(
     `SELECT public.importar_paciente_fhir($1,'Patient/sintetico-001','799999999999991',
       'Paciente Sintético Um','feminino','1995-04-03') AS id`,[importacao],
@@ -70,8 +74,9 @@ test('admin importa paciente novo e CNS existente, com vínculo e sem duplicar',
   assert.equal((await db.query('SELECT unidade_id,origem FROM public.vinculos WHERE paciente_id=$1 AND unidade_id=$2',[pacienteNovo,unidadeUbs])).rows[0].origem,'importacao');
 });
 
-test('condições FHIR aceitam âncora e sem âncora, são idempotentes e respeitam sigilo CID',async()=>{
-  const ancora={atlas:'bp3d-m',atlas_versao:'4.0-1',sistema:'esqueletico',estrutura:'FMA24475',malha:'FMA24475'};
+test('condições FHIR validam e normalizam âncora, são idempotentes e respeitam sigilo CID',async()=>{
+  const ancora={atlas:'hra-f',atlas_versao:'1.10-1',sistema:'sistema-forjado',estrutura:'FMA:999999',
+    malha:'VH_F_fat_L',lateralidade:'right',posicao_local:[0.1,0.2,0.3],triangulo:11};
   condicaoComAncora=(await como(admin,()=>db.query(
     `SELECT public.importar_condicao_fhir($1,$2,'Condition/001','I10',$3::jsonb,'ativo','2026-01-02') AS id`,
     [importacao,pacienteNovo,JSON.stringify(ancora)],
@@ -92,11 +97,25 @@ test('condições FHIR aceitam âncora e sem âncora, são idempotentes e respei
   await assert.rejects(recusada,(e)=>e.code==='22023');
   const rows=(await db.query('SELECT id,ancora,origem,fhir_id,nivel_sigilo FROM public.achados WHERE paciente_id=$1 ORDER BY fhir_id',[pacienteNovo])).rows;
   assert.equal(rows.length,2);
-  assert.deepEqual(rows[0].ancora,ancora);
+  assert.deepEqual(rows[0].ancora,{...ancora,sistema:'tegumentar',estrutura:'FMA:73166',lateralidade:'left'});
   assert.equal(rows[1].ancora,null);
   assert.equal(rows[0].origem,'fhir');
   assert.equal(rows[0].nivel_sigilo,'normal');
   assert.equal(rows[1].nivel_sigilo,'restrito');
+  await assert.rejects(como(admin,()=>db.query(
+    `SELECT public.importar_condicao_fhir($1,$2,'Condition/sem-malha','I10',
+      '{"atlas":"hra-f","atlas_versao":"1.10-1","malha":"inventada"}'::jsonb,'ativo',CURRENT_DATE)`,
+    [importacao,pacienteNovo],
+  )),(e)=>e.code==='22023');
+  await assert.rejects(como(admin,()=>db.query(
+    `SELECT public.importar_condicao_fhir($1,$2,'Condition/atlas-errado','I10',
+      '{"atlas":"bp3d-m","atlas_versao":"4.0-1","malha":"FJ1252"}'::jsonb,'ativo',CURRENT_DATE)`,
+    [importacao,pacienteNovo],
+  )),(e)=>e.code==='22023');
+  await assert.rejects(como(admin,()=>db.query(
+    `SELECT public.importar_condicao_fhir($1,$2,'Condition/invalid-status','I10',NULL,'ativo',CURRENT_DATE,'entered-in-error')`,
+    [importacao,pacienteNovo],
+  )),(e)=>e.code==='22023');
   const collision=await como(admin,()=>db.query(
     `SELECT public.importar_condicao_fhir($1,$2,'Condition/001','I10',NULL,'ativo',CURRENT_DATE) AS id`,
     [importacao,maria],
@@ -125,9 +144,63 @@ test('eventos entram uma vez e aparecem na linha do tempo com vínculo ativo',as
   assert.equal((await db.query('SELECT count(*)::int AS n FROM public.eventos_clinicos WHERE unidade_id=$1 AND fhir_id=$2',[unidadeUbs,'Observation/001'])).rows[0].n,1);
 });
 
+test('mesmo fhir_id em sistemas diferentes da mesma unidade gera registros distintos e cada sistema é idempotente',async()=>{
+  const importacaoB=(await como(admin,()=>db.query(
+    "SELECT public.iniciar_importacao('bundle-sistema-b.json',4,'Sistema-B') AS id",
+  ))).rows[0].id;
+  const pacienteB=(await como(admin,()=>db.query(
+    `SELECT public.importar_paciente_fhir($1,'Patient/shared','799999999999991',
+      'Nome ignorado','feminino','1995-04-03') AS id`,[importacaoB],
+  ))).rows[0].id;
+  assert.equal(pacienteB,pacienteNovo);
+  assert.equal((await db.query("SELECT count(*)::int AS n FROM public.paciente_fhir WHERE unidade_id=$1 AND fhir_id='Patient/shared' AND sistema_origem IN ('sistema-a','sistema-b')",[unidadeUbs])).rows[0].n,1);
+  const pacienteSistemaA=(await como(admin,()=>db.query(
+    `SELECT public.importar_paciente_fhir($1,'Patient/shared','799999999999991',
+      'Nome ignorado','feminino','1995-04-03') AS id`,[importacao],
+  ))).rows[0].id;
+  assert.equal(pacienteSistemaA,pacienteNovo);
+  await como(admin,()=>db.query(
+    `SELECT public.importar_paciente_fhir($1,'Patient/shared','799999999999991',
+      'Nome ignorado','feminino','1995-04-03') AS id`,[importacaoB],
+  ));
+  assert.equal((await db.query("SELECT count(*)::int AS n FROM public.paciente_fhir WHERE unidade_id=$1 AND fhir_id='Patient/shared' AND sistema_origem IN ('sistema-a','sistema-b')",[unidadeUbs])).rows[0].n,2);
+  const conditionB=(await como(admin,()=>db.query(
+    `SELECT public.importar_condicao_fhir($1,$2,'Condition/shared','I10',NULL,'ativo',CURRENT_DATE) AS id`,
+    [importacaoB,pacienteNovo],
+  ))).rows[0].id;
+  assert.ok(conditionB);
+  const conditionAgain=(await como(admin,()=>db.query(
+    `SELECT public.importar_condicao_fhir($1,$2,'Condition/shared','I10',NULL,'ativo',CURRENT_DATE) AS id`,
+    [importacaoB,pacienteNovo],
+  ))).rows[0].id;
+  assert.equal(conditionAgain,conditionB);
+  const conditionA=(await como(admin,()=>db.query(
+    `SELECT public.importar_condicao_fhir($1,$2,'Condition/shared','I10',NULL,'ativo',CURRENT_DATE) AS id`,
+    [importacao,pacienteNovo],
+  ))).rows[0].id;
+  assert.ok(conditionA);
+  assert.equal((await db.query("SELECT count(*)::int AS n FROM public.achados WHERE unidade_id=$1 AND fhir_id='Condition/shared' AND origem='fhir'",[unidadeUbs])).rows[0].n,2);
+  await como(admin,()=>db.query(
+    `SELECT public.importar_evento_fhir($1,$2,'Observation/shared','Observation',CURRENT_TIMESTAMP,NULL,NULL,NULL)`,
+    [importacaoB,pacienteNovo],
+  ));
+  await como(admin,()=>db.query(
+    `SELECT public.importar_evento_fhir($1,$2,'Observation/shared','Observation',CURRENT_TIMESTAMP,NULL,NULL,NULL)`,
+    [importacaoB,pacienteNovo],
+  ));
+  await como(admin,()=>db.query(
+    `SELECT public.importar_evento_fhir($1,$2,'Observation/shared','Observation',CURRENT_TIMESTAMP,NULL,NULL,NULL)`,
+    [importacao,pacienteNovo],
+  ));
+  assert.equal((await db.query("SELECT count(*)::int AS n FROM public.eventos_clinicos WHERE unidade_id=$1 AND fhir_id='Observation/shared'",[unidadeUbs])).rows[0].n,2);
+  assert.equal((await db.query("SELECT count(DISTINCT sistema_origem)::int AS n FROM public.achados WHERE unidade_id=$1 AND fhir_id='Condition/shared'",[unidadeUbs])).rows[0].n,2);
+  assert.equal((await db.query("SELECT count(*)::int AS n FROM public.eventos_clinicos WHERE unidade_id=$1 AND fhir_id='Observation/shared' AND sistema_origem='sistema-b'",[unidadeUbs])).rows[0].n,1);
+  assert.deepEqual((await db.query("SELECT DISTINCT sistema_origem FROM public.achados WHERE unidade_id=$1 AND fhir_id='Condition/shared' ORDER BY sistema_origem",[unidadeUbs])).rows.map((r)=>r.sistema_origem),['sistema-a','sistema-b']);
+});
+
 test('fhir_id pode repetir entre unidades, mas não para outro paciente na mesma unidade',async()=>{
   importacaoCardio=(await como(adminCardio,()=>db.query(
-    "SELECT public.iniciar_importacao('bundle-cardio-sintetico.json',4) AS id",
+    "SELECT public.iniciar_importacao('bundle-cardio-sintetico.json',4,'sistema-a') AS id",
   ))).rows[0].id;
   const vinculado=(await como(adminCardio,()=>db.query(
     `SELECT public.importar_paciente_fhir($1,'Patient/sintetico-001','799999999999991',
@@ -175,7 +248,7 @@ test('sem sessão não há retorno de dados nem auditoria nas seis RPCs',async()
   const countBefore=(await db.query("SELECT count(*)::int AS n FROM public.auditoria WHERE acao='acesso_negado'")).rows[0].n;
   await db.exec('SET ROLE authenticated');
   await db.query("SELECT set_config('request.jwt.claim.sub','',false)");
-  const iniciar=await db.query("SELECT public.iniciar_importacao('sem-sessao.json',1) AS id");
+  const iniciar=await db.query("SELECT public.iniciar_importacao('sem-sessao.json',1,'sem-sessao') AS id");
   const paciente=await db.query(`SELECT public.importar_paciente_fhir($1,'Patient/no-session',NULL,'Teste','feminino',CURRENT_DATE) AS id`,[importacao]);
   const condicao=await db.query(`SELECT public.importar_condicao_fhir($1,$2,'Condition/no-session','I10',NULL,'ativo',CURRENT_DATE) AS id`,[importacao,pacienteNovo]);
   const evento=await db.query(`SELECT public.importar_evento_fhir($1,$2,'Observation/no-session','Observation',CURRENT_TIMESTAMP,NULL,NULL,NULL) AS id`,[importacao,pacienteNovo]);
@@ -199,7 +272,7 @@ test('profissional e anon não importam; erros persistidos contêm só id e moti
       'Não importar','feminino',CURRENT_DATE) AS id`,[importacao],
   ));
   assert.equal(denied.rows[0].id,null);
-  const startDenied=await como(profissional,()=>db.query("SELECT public.iniciar_importacao('nao-importar.json',1) AS id"));
+  const startDenied=await como(profissional,()=>db.query("SELECT public.iniciar_importacao('nao-importar.json',1,'nao-importar') AS id"));
   assert.equal(startDenied.rows[0].id,null);
   const conditionDenied=await como(profissional,()=>db.query(
     `SELECT public.importar_condicao_fhir($1,$2,'Condition/deny','I10',NULL,'ativo',CURRENT_DATE) AS id`,
@@ -213,7 +286,7 @@ test('profissional e anon não importam; erros persistidos contêm só id e moti
   await como(profissional,()=>db.query('SELECT public.concluir_importacao($1,$2::jsonb)',[importacao,'[]']));
   assert.equal((await db.query("SELECT count(*)::int AS n FROM public.pacientes WHERE cns='799999999999992'")).rows[0].n,before);
   await db.exec('SET ROLE anon');
-  await assert.rejects(db.query("SELECT public.iniciar_importacao('bundle.json',1)"));
+  await assert.rejects(db.query("SELECT public.iniciar_importacao('bundle.json',1,'sem-sessao')"));
   await assert.rejects(db.query(
     `SELECT public.importar_paciente_fhir($1,'Patient/anon',NULL,'Não importar','feminino',CURRENT_DATE)`,[importacao],
   ));
@@ -281,4 +354,15 @@ test('bodysite_estrutura é legível e não gravável por authenticated',async()
   assert.equal(n,12);
   await assert.rejects(como(admin,()=>db.query(
     "INSERT INTO public.bodysite_estrutura(snomed,descricao,estrutura_fma) VALUES ('1','x','FMA1')")));
+});
+
+test('atlas_malhas contém somente os dois pacotes publicados e é somente leitura',async()=>{
+  const counts=(await db.query('SELECT atlas,count(*)::int AS n FROM public.atlas_malhas GROUP BY atlas ORDER BY atlas')).rows;
+  assert.deepEqual(counts,[{atlas:'bp3d-m',n:2234},{atlas:'hra-f',n:956}]);
+  await como(admin,async()=>{
+    assert.equal((await db.query('SELECT count(*)::int AS n FROM public.atlas_malhas')).rows[0].n,3190);
+    await assert.rejects(db.query("INSERT INTO public.atlas_malhas(atlas,versao,malha,sistema) VALUES('vhf-f','0.1-0','fake','fake')"));
+    await assert.rejects(db.query("UPDATE public.atlas_malhas SET sistema='alterado' WHERE atlas='bp3d-m' AND versao='4.0-1' AND malha='FJ1252'"));
+    await assert.rejects(db.query("DELETE FROM public.atlas_malhas WHERE atlas='bp3d-m' AND versao='4.0-1' AND malha='FJ1252'"));
+  });
 });

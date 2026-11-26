@@ -6,6 +6,7 @@ export const LIMITE_BYTES = 10 * 1024 * 1024;
 export type Previa = {
   /** impressão digital do arquivo analisado: a confirmação só vale para ele */
   hash: string;
+  sistemaOrigem: string;
   pacientes: number;
   /** quantos já têm vínculo ativo com a unidade; null = não foi possível saber */
   vinculados: number | null;

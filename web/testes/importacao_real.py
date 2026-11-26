@@ -132,6 +132,7 @@ with sync_playwright() as p:
     def importar(arquivo):
         admin.goto(f'{APP}/importar')
         admin.locator('input[type=file]').set_input_files(arquivo)
+        admin.get_by_label('Sistema de origem').fill('teste-homologacao')
         admin.get_by_role('button', name='Analisar').click()
         admin.wait_for_selector('text=Prévia: nada foi gravado ainda')
         previa = ' '.join(admin.inner_text('main').split()).lower()

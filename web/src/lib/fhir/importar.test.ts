@@ -48,4 +48,20 @@ describe("planejarImportacaoFHIR", () => {
     const plan = planejarImportacaoFHIR({ resourceType: "Bundle", entry: [{ resource: patient("p1", "other") }] });
     expect(plan.pacientes[0].sexo).toBe("indeterminado");
   });
+
+  it.each(["entered-in-error", "refuted"] as const)("rejeita Condition verificationStatus %s sem dados pessoais no erro", (status) => {
+    const item = { ...condition(), verificationStatus: { coding: [{ system: "http://terminology.hl7.org/CodeSystem/condition-ver-status", code: status }] } };
+    const plan = planejarImportacaoFHIR({ resourceType: "Bundle", entry: [{ resource: patient() }, { resource: item }] });
+    expect(plan.condicoes).toHaveLength(0);
+    expect(plan.erros).toEqual([{ id: "c1", motivo: `Condition com verificationStatus '${status}' não pode ser importada.` }]);
+    expect(JSON.stringify(plan.erros)).not.toContain("999999999999999");
+  });
+
+  it("importa Condition com verificationStatus confirmed como antes", () => {
+    const item = { ...condition(), verificationStatus: { coding: [{ code: "confirmed" }] } };
+    const plan = planejarImportacaoFHIR({ resourceType: "Bundle", entry: [{ resource: patient() }, { resource: item }] });
+    expect(plan.condicoes).toHaveLength(1);
+    expect(plan.condicoes[0]).toMatchObject({ fhir_id: "c1", cid10: "I10" });
+    expect(plan.erros).toEqual([]);
+  });
 });

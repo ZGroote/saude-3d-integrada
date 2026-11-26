@@ -43,7 +43,7 @@ const RPC_ANON = {
   encerrar_gestacao: { p_gestacao: AUSENTE, p_desfecho: 'aborto' },
   registrar_nascimento: { p_gestacao: AUSENTE, p_nome: 'RN Teste', p_sexo: 'feminino', p_data: '2026-01-01', p_peso_g: 3000, p_idade_gestacional_sem: 38, p_apgar_5: 9 },
   listar_gestacoes: { p_mae: MARIA }, historico_gestacional_crianca: { p_crianca: AUSENTE },
-  iniciar_importacao: { p_arquivo: 'teste-ficticio.json', p_recursos: 0 },
+  iniciar_importacao: { p_arquivo: 'teste-ficticio.json', p_recursos: 0, p_sistema_origem: 'teste-adversarial' },
   importar_paciente_fhir: { p_importacao: AUSENTE, p_fhir_id: 'probe-paciente', p_cns: null, p_nome: 'RN Teste', p_sexo: 'feminino', p_nascimento: '2026-01-01' },
   importar_condicao_fhir: { p_importacao: AUSENTE, p_paciente: AUSENTE, p_fhir_id: 'probe-condicao', p_cid10: 'I10', p_ancora: null, p_status: 'ativo', p_inicio: '2026-01-01' },
   importar_evento_fhir: { p_importacao: AUSENTE, p_paciente: AUSENTE, p_fhir_id: 'probe-evento', p_tipo: 'Observation', p_data: null, p_codigo: null, p_descricao: null, p_valor: null },

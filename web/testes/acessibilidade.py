@@ -170,6 +170,7 @@ with sync_playwright() as p:
 
     def com_previa(pg):
         pg.locator('input[type=file]').set_input_files(str(WEB / 'testes/dados/bundle-sintetico-50.json'))
+        pg.get_by_label('Sistema de origem').fill('teste-homologacao')
         pg.get_by_role('button', name='Analisar').click()
         pg.wait_for_selector('text=Prévia: nada foi gravado ainda')
 

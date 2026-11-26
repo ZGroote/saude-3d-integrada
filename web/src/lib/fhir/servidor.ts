@@ -10,6 +10,7 @@ import { ancoraEstrutural, ATLAS_DO_SEXO, type AtlasDeImportacao, type Mapeament
 import { planejarImportacaoFHIR, type CondicaoImportacao, type ErroImportacao, type EventoImportacao, type PacienteImportacao } from "@/lib/fhir/importar";
 import { LIMITE_BYTES, type Previa, type Relatorio } from "@/lib/fhir/tipos";
 import type { createClient } from "@/lib/supabase/server";
+import { z } from "zod";
 
 type Banco = Awaited<ReturnType<typeof createClient>>;
 
@@ -21,6 +22,7 @@ const dataValida = (texto: string) => DATA.test(texto) && new Date(`${texto}T12:
 
 type Preparado = {
   hash: string;
+  sistemaOrigem: string;
   recursos: number;
   pacientes: (PacienteImportacao & { nome: string })[];
   condicoes: (Omit<CondicaoImportacao, "status" | "inicio"> & { status: Status; inicio: string | null; ancora: Ancora | null })[];
@@ -44,7 +46,9 @@ const emBlocos = <T,>(lista: T[], tamanho: number) =>
   Array.from({ length: Math.ceil(lista.length / tamanho) }, (_, i) => lista.slice(i * tamanho, (i + 1) * tamanho));
 
 /** Lê, valida e resolve o Bundle. Erro de arquivo vira `string`. */
-export async function preparar(supabase: Banco, arquivo: unknown): Promise<Preparado | string> {
+export async function preparar(supabase: Banco, arquivo: unknown, sistemaOrigemEntrada: unknown): Promise<Preparado | string> {
+  const sistemaOrigemParseado = z.string().trim().min(1).max(200).safeParse(sistemaOrigemEntrada);
+  if (!sistemaOrigemParseado.success) return "Informe o sistema de origem (1 a 200 caracteres).";
   if (!(arquivo instanceof File) || !arquivo.size) return "Escolha um arquivo .json.";
   if (!/\.json$/i.test(arquivo.name)) return "O arquivo precisa ser .json.";
   if (arquivo.size > LIMITE_BYTES) return "O arquivo passa de 10 MB.";
@@ -121,7 +125,7 @@ export async function preparar(supabase: Banco, arquivo: unknown): Promise<Prepa
     else eventos.push(e);
   }
 
-  return { hash: createHash("sha256").update(texto).digest("hex"), recursos, pacientes, condicoes, eventos, erros, semMapeamento };
+  return { hash: createHash("sha256").update(texto).digest("hex"), sistemaOrigem: sistemaOrigemParseado.data, recursos, pacientes, condicoes, eventos, erros, semMapeamento };
 }
 
 export async function montarPrevia(supabase: Banco, p: Preparado): Promise<Previa> {
@@ -135,6 +139,7 @@ export async function montarPrevia(supabase: Banco, p: Preparado): Promise<Previ
   const comLocal = p.condicoes.filter((c) => c.ancora).length;
   return {
     hash: p.hash,
+    sistemaOrigem: p.sistemaOrigem,
     pacientes: p.pacientes.length,
     vinculados,
     condicoesComLocal: comLocal,
@@ -155,7 +160,7 @@ function motivo(error: { code?: string } | null) {
 
 export async function gravar(supabase: Banco, p: Preparado): Promise<Relatorio | string> {
   // o nome do arquivo pode conter o nome de alguém: grava-se só a impressão digital
-  const { data: importacao, error } = await supabase.rpc("iniciar_importacao", { p_arquivo: `bundle-${p.hash.slice(0, 12)}.json`, p_recursos: p.recursos });
+  const { data: importacao, error } = await supabase.rpc("iniciar_importacao", { p_arquivo: `bundle-${p.hash.slice(0, 12)}.json`, p_recursos: p.recursos, p_sistema_origem: p.sistemaOrigem });
   if (error || !importacao) return "Não foi possível iniciar a importação. Nada foi gravado.";
   const erros = [...p.erros];
   const gravados = { pacientes: 0, condicoes: 0, eventos: 0 };

@@ -36,6 +36,7 @@ function Erros({ erros }: { erros: ErroImportacao[] }) {
 export function FormularioImportacao() {
   const hidratado = useHidratado();
   const [arquivo, setArquivo] = useState<File | null>(null);
+  const [sistemaOrigem, setSistemaOrigem] = useState("");
   const [previa, setPrevia] = useState<Previa | null>(null);
   const [relatorio, setRelatorio] = useState<Relatorio | null>(null);
   const [erro, setErro] = useState("");
@@ -49,9 +50,10 @@ export function FormularioImportacao() {
   };
 
   function enviar(hash?: string) {
-    if (!arquivo || arquivo.size > LIMITE_BYTES) return;
+    if (!arquivo || arquivo.size > LIMITE_BYTES || !sistemaOrigem.trim() || sistemaOrigem.trim().length > 200) return;
     const dados = new FormData();
     dados.set("arquivo", arquivo);
+    dados.set("sistemaOrigem", sistemaOrigem.trim());
     if (hash) dados.set("hash", hash);
     setErro("");
     iniciar(async () => {
@@ -76,7 +78,12 @@ export function FormularioImportacao() {
             <input type="file" name="arquivo" accept=".json,application/json,application/fhir+json" className="block text-sm"
               onChange={(e) => escolher(e.target.files?.[0] ?? null)} />
           </label>
-          <Button type="button" disabled={!arquivo || arquivo.size > LIMITE_BYTES} onClick={() => enviar()}>Analisar</Button>
+          <label className="block space-y-1 text-sm font-medium text-slate-800">Sistema de origem
+            <input type="text" name="sistemaOrigem" required minLength={1} maxLength={200} value={sistemaOrigem}
+              onChange={(e) => { setSistemaOrigem(e.target.value); setPrevia(null); setRelatorio(null); }}
+              className="block h-10 rounded-md border border-slate-300 px-3 text-sm" />
+          </label>
+          <Button type="button" disabled={!arquivo || arquivo.size > LIMITE_BYTES || !sistemaOrigem.trim() || sistemaOrigem.trim().length > 200} onClick={() => enviar()}>Analisar</Button>
         </fieldset>
         <p role="status" className="mt-2 text-sm text-slate-600 empty:hidden">
           {ocupado ? (previa ? "Importando… não feche esta página." : "Analisando…") : ""}
@@ -87,6 +94,7 @@ export function FormularioImportacao() {
       {previa && (
         <Card className="px-5 py-4">
           <h2 className="text-lg font-semibold text-slate-950">Prévia: nada foi gravado ainda</h2>
+          <p className="mt-2 text-sm text-slate-700">Sistema de origem: <strong>{previa.sistemaOrigem}</strong></p>
           <Numeros itens={[
             ["Pacientes", previa.pacientes],
             ["Já vinculados à sua unidade", previa.vinculados ?? "não foi possível saber"],

@@ -56,6 +56,7 @@ def rpc(nome, p, unidade):
     if email not in estado['admins']:
         return None
     if nome == 'iniciar_importacao':
+        assert p.get('p_sistema_origem') == 'teste-simulado', p
         estado['importacoes'].append({'arquivo': p['p_arquivo'], 'recursos': p['p_recursos'], 'erros': None})
         return f'70000000-0000-4000-8000-{len(estado["importacoes"]):012d}'
     if p.get('p_fhir_id') in estado['falhar']:
@@ -196,6 +197,7 @@ def testar(app):
         def analisar_arquivo(conteudo=arquivo):
             entrada.set_input_files([])
             entrada.set_input_files(conteudo)
+            pg.get_by_label('Sistema de origem').fill('teste-simulado')
             analisar.click()
 
         analisar_arquivo({'name': 'ruim.json', 'mimeType': 'application/json', 'buffer': b'{nao e json'})

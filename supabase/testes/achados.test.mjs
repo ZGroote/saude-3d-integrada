@@ -33,11 +33,11 @@ async function comoPapel(papel, sub, fn) {
   }
 }
 
-async function registrar(usuario, paciente, cid, substitui = null, ancora = null) {
+async function registrar(usuario, paciente, cid, substitui = null, ancora = null, lado = 'nao_se_aplica') {
   return como(usuario, () => db.query(
-    `SELECT public.registrar_achado($1,$2::jsonb,$3,'doenca','nao_se_aplica','ativo',CURRENT_DATE,
-      'registro de teste',$4) AS id`,
-    [paciente, ancora === null ? null : JSON.stringify(ancora), cid, substitui],
+    `SELECT public.registrar_achado($1,$2::jsonb,$3,'doenca',$4,'ativo',CURRENT_DATE,
+      'registro de teste',$5) AS id`,
+    [paciente, ancora === null ? null : JSON.stringify(ancora), cid, lado, substitui],
   ));
 }
 
@@ -46,7 +46,8 @@ before(async () => {
   await db.exec(await readFile(resolve(pasta, '../migrations/0001_fundacao.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../seed.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0002_cid10.sql'), 'utf8'));
-  await db.exec(await readFile(resolve(pasta, '../migrations/0003_achados.sql'), 'utf8'));
+  for (const file of ['0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql'])
+    await db.exec(await readFile(resolve(pasta, '../migrations', file), 'utf8'));
 });
 after(async () => db.close());
 
@@ -62,7 +63,7 @@ test('cardiologia registra I10 normal e F32 restrito; obstetrícia não recebe p
   assert.equal(cardioRows.rows.find((r) => r.id === f32).nivel_sigilo, 'restrito');
   assert.deepEqual(Object.keys(cardioRows.rows[0]), [
     'id','ancora','estrutura','cid10','cid10_descricao','categoria','lado','status','nivel_sigilo',
-    'inicio','observacao','especialidade','autor_nome','unidade_nome','substitui_id','criado_em',
+    'inicio','observacao','especialidade','autor_nome','unidade_nome','unidade_id','substitui_id','criado_em',
   ]);
   assert.equal(cardioRows.rows.find((r) => r.id === i10).cid10_descricao.length > 0, true);
   assert.equal(cardioRows.rows.find((r) => r.id === i10).autor_nome, 'Profissional Cardiologia');
@@ -84,7 +85,7 @@ test('correção mantém cadeia e lista apenas o vigente', async () => {
   assert.deepEqual(historico.rows.map((r) => r.id), [primeiro, segundo, terceiro]);
   assert.deepEqual(Object.keys(historico.rows[0]), [
     'id','ancora','estrutura','cid10','cid10_descricao','categoria','lado','status','nivel_sigilo',
-    'inicio','observacao','especialidade','autor_nome','unidade_nome','substitui_id','criado_em',
+    'inicio','observacao','especialidade','autor_nome','unidade_nome','unidade_id','substitui_id','criado_em',
   ]);
 });
 
@@ -163,8 +164,12 @@ test('substituição só pode apontar achado da mesma unidade e paciente; erro �
 
 test('CID inexistente e lateralidade incompatível retornam 22023', async () => {
   await assert.rejects(registrar(cardio, maria, 'ZZZ99.9'), (e) => e.code === '22023');
-  const ancoraDireita = { atlas:'bp3d-m', atlas_versao:'4.0-1', sistema:'esqueletico', estrutura:'FMA1', malha:'FJ1', lateralidade:'right' };
-  await assert.rejects(registrar(cardio, maria, 'I10', null, ancoraDireita), (e) => e.code === '22023');
+  const ancoraCatalogadaEsquerda = { atlas:'hra-f', atlas_versao:'1.10-1', sistema:'falso', estrutura:'FMA1', malha:'VH_F_fat_L', lateralidade:'right' };
+  await assert.rejects(registrar(cardio, maria, 'I10', null, ancoraCatalogadaEsquerda, 'direito'), (e) => e.code === '22023');
+  // sem contradição: malha esquerda aceita bilateral/não se aplica; malha sem lado aceita qualquer lado
+  assert.ok((await registrar(cardio, maria, 'I10', null, ancoraCatalogadaEsquerda, 'nao_se_aplica')).rows[0].id);
+  const semLado = (await como(cardio, () => db.query("SELECT malha FROM public.atlas_malhas WHERE atlas='hra-f' AND lateralidade IS NULL LIMIT 1"))).rows[0].malha;
+  assert.ok((await registrar(cardio, maria, 'I10', null, { atlas:'hra-f', atlas_versao:'1.10-1', malha:semLado }, 'direito')).rows[0].id);
 });
 
 test('quatro RPCs bloqueiam anon e authenticated sem sub; cid10_sigilo não aceita acesso direto', async () => {
@@ -189,13 +194,37 @@ test('quatro RPCs bloqueiam anon e authenticated sem sub; cid10_sigilo não acei
   });
 });
 
-test('âncora incompleta é recusada; feminina aceita e estrutura pode ser null', async () => {
+test('âncora inexistente e atlas incompatível são recusados; metadados vêm do catálogo', async () => {
   await assert.rejects(registrar(cardio, maria, 'I10', null, { atlas: 'hra-f' }), (e) => e.code === '22023');
-  const ancoraSemEstrutura = { atlas: 'hra-f', atlas_versao: '2.0', sistema: 'esqueletico', estrutura: null, malha: 'malha-sem-fma' };
-  const id = (await registrar(cardio, maria, 'I10', null, ancoraSemEstrutura)).rows[0].id;
+  const desconhecida = { atlas:'hra-f', atlas_versao:'1.10-1', sistema:'nervoso', estrutura:null, malha:'malha-inventada' };
+  await assert.rejects(registrar(cardio, maria, 'I10', null, desconhecida), (e) => e.code === '22023');
+  const masculina = { atlas:'bp3d-m', atlas_versao:'4.0-1', sistema:'digestorio', estrutura:'FMA59763', malha:'FJ1252' };
+  await assert.rejects(registrar(cardio, maria, 'I10', null, masculina), (e) => e.code === '22023');
+  const ancoraSemEstrutura = { atlas:'hra-f', atlas_versao:'1.10-1', sistema:'falso', estrutura:'falsa',
+    malha:'Allen_frontal_agranular_insular_cortex_area_Fl_L', lateralidade:'right', posicao_local:[1,2,3], triangulo:17 };
+  const id = (await registrar(cardio, maria, 'I10', null, ancoraSemEstrutura, 'esquerdo')).rows[0].id;
   const row = (await como(cardio, () => db.query('SELECT ancora,estrutura FROM public.listar_achados($1) WHERE id=$2', [maria,id]))).rows[0];
+  assert.equal(row.ancora.sistema, 'nervoso');
+  assert.equal(row.ancora.lateralidade, 'left');
+  assert.equal(row.ancora.malha, ancoraSemEstrutura.malha);
+  assert.deepEqual(row.ancora.posicao_local, [1,2,3]);
+  assert.equal(row.ancora.triangulo, 17);
   assert.equal(row.ancora.estrutura, null);
   assert.equal(row.estrutura, null);
+});
+
+test('lateralidade enviada pelo cliente é substituída pela lateralidade catalogada', async () => {
+  const enviada = { atlas:'hra-f', atlas_versao:'1.10-1', malha:'VH_F_fat_L', sistema:'falso',
+    estrutura:'FMA:999999', lateralidade:'right', posicao_local:[0.1,0.2,0.3], normal_local:[0,1,0], triangulo:9, baricentricas:[0.2,0.3,0.5] };
+  const id = (await registrar(cardio,maria,'I10',null,enviada,'esquerdo')).rows[0].id;
+  const row = (await como(cardio,()=>db.query('SELECT ancora FROM public.listar_achados($1) WHERE id=$2',[maria,id]))).rows[0];
+  assert.equal(row.ancora.sistema,'tegumentar');
+  assert.equal(row.ancora.lateralidade,'left');
+  assert.equal(row.ancora.estrutura,'FMA:73166');
+  assert.deepEqual(row.ancora.posicao_local,[0.1,0.2,0.3]);
+  assert.deepEqual(row.ancora.normal_local,[0,1,0]);
+  assert.equal(row.ancora.triangulo,9);
+  assert.deepEqual(row.ancora.baricentricas,[0.2,0.3,0.5]);
 });
 
 test('buscar CID encontra código e descrição sem acento', async () => {

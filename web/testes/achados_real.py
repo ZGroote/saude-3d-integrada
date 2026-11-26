@@ -15,6 +15,10 @@ import sys
 import urllib.request
 from pathlib import Path
 
+# o banco (0008) grava a lateralidade do catálogo; o cliente a omite quando é nula
+def catalogada(ancora):
+    return {**ancora, 'lateralidade': ancora.get('lateralidade')}
+
 from playwright.sync_api import TimeoutError as TempoEsgotado, sync_playwright
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -201,7 +205,7 @@ with sync_playwright() as p:
     linhas = carregar(pg, pg.reload, CARDIO)
     [i10] = [a for a in linhas if a['id'] == normal]
     assert i10['cid10'] == 'I10' and i10['nivel_sigilo'] == 'normal', i10
-    assert i10['ancora'] == clique, (i10['ancora'], clique)
+    assert i10['ancora'] == catalogada(clique), (i10['ancora'], clique)
     assert desenhado_em(pg, clique['posicao_local']), pg.evaluate(DESENHADOS)
     conferir_linha(pg, i10, problemas)
     print(f'1) I10: clique {clique["posicao_local"]} == listar_achados {i10["ancora"]["posicao_local"]} == marcador desenhado')
@@ -210,7 +214,7 @@ with sync_playwright() as p:
     restrito, ancora_restrita = registrar(pg, 'F32.9')
     linhas_cardio = carregar(pg, pg.reload, CARDIO)
     [f32] = [a for a in linhas_cardio if a['id'] == restrito]
-    assert f32['nivel_sigilo'] == 'restrito' and f32['ancora'] == ancora_restrita, f32
+    assert f32['nivel_sigilo'] == 'restrito' and f32['ancora'] == catalogada(ancora_restrita), f32
     assert ancora_restrita['posicao_local'] != clique['posicao_local']
     fotos(pg, '1-cardiologia-registrou', normal)
     print('2) F32.9 gravado como restrito e visível para a cardiologia')
@@ -236,7 +240,7 @@ with sync_playwright() as p:
     assert restrito in ocultos and not ocultos & visiveis, ocultos & visiveis
     assert visiveis == {a['id'] for a in linhas_cardio} - ocultos, 'contagem não bate com a lista sem os restritos'
     [visto] = [a for a in linhas_obst if a['id'] == normal]
-    assert visto['ancora'] == clique and 'Cardiologia' in visto['autor_nome'] and 'Cardiologia' in visto['unidade_nome'], visto
+    assert visto['ancora'] == catalogada(clique) and 'Cardiologia' in visto['autor_nome'] and 'Cardiologia' in visto['unidade_nome'], visto
     conferir_linha(pg, visto, problemas)
     assert not desenhado_em(pg, ancora_restrita['posicao_local']), 'marcador do restrito desenhado'
     assert any(normal in texto for _, texto in recebido), 'nenhuma resposta capturada trouxe o I10'

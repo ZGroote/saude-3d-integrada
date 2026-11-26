@@ -140,7 +140,7 @@ export type Database = {
         };
         Returns: string;
       };
-      iniciar_importacao: { Args: { p_arquivo: string; p_recursos: number }; Returns: string };
+      iniciar_importacao: { Args: { p_arquivo: string; p_recursos: number; p_sistema_origem: string }; Returns: string };
       importar_paciente_fhir: {
         Args: { p_importacao: string; p_fhir_id: string; p_cns: string; p_nome: string; p_sexo: Sexo; p_nascimento: string | null };
         Returns: string;
