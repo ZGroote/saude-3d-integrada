@@ -11,7 +11,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** não aplicável (pré-execução)
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `executado parcialmente; nao aceito nesta rodada`
 
 ## 2. Problema
 No `EXP-0014` (rodada real, commit `5ec1c34`), a tentativa de usar o HRA como corpo base foi **NÃO ACEITA**: o HRA remodelado por ilustradores diverge na pelve, pernas e coluna lombar (joelho `23–25 mm`, cabeça do fêmur à pelve HRA `17–21 mm`, `32/164` fora da pele HRA aberta, `28/164` sobreposições), enquanto **Denver ↔ TC NLM** (mesma doadora e mesmo exame) encaixa em `~3–4 mm`. A consultoria externa (ChatGPT) aprovou a inversão de base, vetou deformação não rígida global e sugeriu um teto de **5 dias úteis**.
@@ -28,7 +28,7 @@ Registro intramodal/cadavérico de mesma doadora (Denver STLs ↔ TC NLM) como e
   - Modelos STL da University of Denver (`CC BY 4.0`, membros inferiores).
   - Complementos selecionados do HRA `v1.10` (`atlas/hra-f/1.10-1/`).
 - **Licenças:** Denver `CC BY 4.0`; TotalSegmentator `'total'` sob `Apache-2.0`; **licença da task `'body'` do TotalSegmentator a confirmar no README oficial antes de usar — se não for aberta, PARAR e reportar**; Termos NLM (crédito NLM).
-- **Hashes:** a registrar após geração dos artefatos.
+- **Hashes:** SHA-256 dos insumos, scripts, manifesto, avaliação e todos os STL registrados em `atlas/hra-f/2.0-1/proveniencia_sha256.json`.
 - **Hardware:** não documentado.
 - **Sistema operacional:** Windows.
 - **Bibliotecas e versões:** `TotalSegmentator 2.18.0`, Python (`numpy`, `trimesh`, `nibabel`, `scikit-image`).
@@ -66,27 +66,41 @@ Registro intramodal/cadavérico de mesma doadora (Denver STLs ↔ TC NLM) como e
 - **Critério adicional específico para complementos pélvicos do HRA:**
   - Útero e ovários dentro da cavidade pélvica (**F1** em relação à pele e **F3** em relação aos ossos e à bexiga).
 
-## 8. Resultados
-Planejado — não executado.
+## 8. Resultados (execução em 2026-11-26)
+- Conferência da licença: README oficial lista `body` sob “Openly available for any usage (Apache-2.0 license)”; trecho e URL registrados em `hra/vhf/LEIAME.md`.
+- Implementados `hra/vhf/montar_base.py` e `hra/vhf/avaliar_base.py`; dependências sem instalação: execução com `C:\Python314\python.exe` (os pacotes geométricos não estão no venv `C:\Users\respawn\venvs\totalseg\Scripts\python.exe`).
+- Geração final corrigida: 229 malhas no manifesto, em RAS mm, incluindo 122 Denver; sem decimação. 227/229 malhas são watertight (as exceções são esôfago e lobo superior esquerdo); a pele `body` é watertight. Deriva volumétrica máxima após correção uniforme: `2,46e-15` (erro numérico).
+- **F1:** `2.396.767 / 2.451.108` vértices dentro da pele (`97,78%`; **FAIL** frente a `≥99%`). 196/228 estruturas individualmente atingem 99%; o critério global falha, com concentração dos escapes nas malhas Denver distais e em alguns músculos/cartilagens, além de úmeros TotalSegmentator. Avaliação por classificação em grade sólida de 3 mm.
+- **F2 quadril:** cabeça femoral Denver ao vértice mais próximo da malha `hip` TotalSegmentator: esquerda `19,418 mm`, direita `17,911 mm` (**FAIL** como proxy; acetábulo não vem segmentado separadamente). Centro da cabeça aproximado pelo centroide da cartilagem femoral.
+- **F2 joelho:** separação mínima fêmur–tíbia: esquerda `5,693 mm` (**FAIL**), direita `4,948 mm` (**PASS**); aproximação por distância entre vértices amostrados, não centro articular.
+- **F2 costelas–vértebras:** `1/24` pares ≤5 mm; faixa observada `3,821–46,612 mm` (**FAIL**). Distâncias são estimativas superfície-vértices amostradas; a correspondência nível a nível requer revisão.
+- **F2 crânio–C1:** `3,350 mm` (**PASS**, distância mínima amostrada).
+- **F3:** não avaliado. A tentativa all-pairs de sobreposição volumétrica excedeu os recursos locais; nenhum resultado foi inferido.
+- **F4:** `178/178` estruturas laterais concordam com o sinal de X em RAS (**PASS**); estruturas medianas excluídas.
+- **F5:** pendente; nenhuma revisão humana/captura em 4 vistas.
+- **Ambiente de montagem/avaliação:** Python 3.14.4; numpy 2.4.6; nibabel 5.5.0; trimesh 5.2.2; scikit-image 0.26.0; scipy 1.18.1. Sem instalação de pacotes; execução no Python local com dependências geométricas disponíveis.
+
+- **Hashes SHA-256:** entradas (`total`, `body`, transformação Etapa A), manifesto e avaliação registrados em `atlas/hra-f/2.0-1/proveniencia_sha256.json`.
 
 ## 9. Validação
-Planejado — não executado.
+Parcial e **não aceita** pelos critérios funcionais: F1 falha; F2 quadril proxy e joelho esquerdo falham; costelas–vértebras falham; F3 não avaliado; F5 pendente. Joelho direito, crânio–C1 e F4 passaram nas métricas exploratórias. Nenhum resultado é validação clínica.
 
 ## 10. Limitações
 Dependência de confirmação prévia da licença aberta da task `'body'`, da qualidade do fechamento da malha de pele gerada e do prazo máximo de 5 dias úteis.
 
 ## 11. Conclusão
-- **Observado:** protocolo pré-registrado antes da execução.
-- **Interpretação:** a inversão de base alinha a geometria primária ao referencial único da doadora (TC NLM + Denver), isolando os ajustes do HRA aos órgãos complementares locais.
-- **Veredito da hipótese:** `em aberto`
+- **Observado:** licença `Apache-2.0` da task `body` confirmada; corpo-base foi exportado com fonte única, incluindo sacro/S1 TotalSegmentator e membros inferiores Denver.
+- **Interpretação:** os resultados atuais não sustentam aceitação; F1 abaixo do limite e falhas em articulações/alinhamento costovertebral. O protocolo e limites não foram afrouxados.
+- **Veredito da hipótese:** `não aceita nesta rodada; F3/F5 e quadril seguem lacunas`
 
 ## 12. Próximos passos
-1. Conferir no README oficial do `TotalSegmentator` a licença da task `'body'` (se não for aberta, parar e reportar).
-2. Executar a montagem/alinhamento segundo a regra de fonte única e validar todos os critérios do `EXP-0014` + cavidade pélvica dentro do teto de 5 dias úteis.
+1. Investigar F1 e as separações funcionais que falharam sem deformação global.
+2. Executar F3 com avaliação de sobreposição volumétrica por pares anatomicamente relevantes; resolver disponibilidade do acetábulo para o F2.
+3. Obter revisão humana F5 em quatro vistas.
 
 ## 13. Rastreabilidade
 - **Commits:** não aplicável (pré-execução)
-- **Scripts:** não aplicável
+- **Scripts:** `hra/vhf/segmentar_body.py`, `hra/vhf/montar_base.py`, `hra/vhf/avaliar_base.py`; matriz etapa A: `hra/alinhar/transformacoes.json`
 - **Logs:** não aplicável
 - **Resultados / artefatos:** `pesquisa/experimentos/EXP-0015-base-tc-nlm.md`
 
