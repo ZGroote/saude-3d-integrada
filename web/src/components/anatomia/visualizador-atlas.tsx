@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import {
   carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type Marcador, type Pacote,
 } from "@saude3d/motor-anatomico";
@@ -31,6 +31,8 @@ export type PontoNoCorpo = { ancora: Ancora; nome: string; sistema: string; lado
 /** O que o prontuário liga ao 3D; sem isso (rota /dev/motor) o painel só identifica o ponto clicado. */
 type Prontuario = {
   marcadores: Marcador[];
+  /** os achados ainda não chegaram: o corpo é baixado depois dos marcadores */
+  carregando: boolean;
   selecionado: string | null;
   lateral: ReactNode;
   onEscolherPonto: (ponto: PontoNoCorpo) => void;
@@ -41,22 +43,10 @@ const naoRevisado = (e: { nome_pt: string; validacao: string }) => !!e.nome_pt &
 
 export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; prontuario?: Prontuario }) {
   const [pedido, setPedido] = useState<Atlas | null>(ATLAS_DO_SEXO[sexo] ?? null);
-  // null = ainda verificando se o atlas feminino já foi publicado
-  const [temFeminino, setTemFeminino] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    if (pedido !== "hra-f") return;
-    const cancelar = new AbortController();
-    fetch(`${BASE}/hra-f/${ATLAS["hra-f"].versao}/manifesto.json`, { method: "HEAD", signal: cancelar.signal }).then(
-      // só 404 significa "ainda não existe"; outros erros aparecem no próprio motor
-      (resposta) => setTemFeminino(resposta.status !== 404),
-      () => { if (!cancelar.signal.aborted) setTemFeminino(true); },
-    );
-    return () => cancelar.abort();
-  }, [pedido]);
-
-  const verificando = pedido === "hra-f" && temFeminino === null;
-  const provisorio = pedido === "hra-f" && temFeminino === false;
+  // o atlas feminino é tido como publicado; só o 404 do manifesto leva ao corpo provisório
+  const [semFeminino, setSemFeminino] = useState(false);
+  const femininoAusente = useCallback(() => setSemFeminino(true), []);
+  const provisorio = pedido === "hra-f" && semFeminino;
   const atlas = provisorio ? "bp3d-m" : pedido;
 
   return (
@@ -80,22 +70,27 @@ export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; pr
           referência provisória.{prontuario && " Não é possível marcar achados nele: registre sem local no corpo."}
         </p>
       )}
-      {!atlas || verificando ? (
+      {!atlas ? (
         <>
-          {!atlas
-            ? <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
-            : <p role="status" className="text-sm text-slate-600">Verificando o atlas…</p>}
+          <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
           {prontuario?.lateral}
         </>
       ) : (
         // trocar de atlas zera a seleção de sistemas e o ponto escolhido
-        <Corpo key={atlas} atlas={atlas} provisorio={provisorio} prontuario={prontuario} />
+        <Corpo key={atlas} atlas={atlas} provisorio={provisorio} prontuario={prontuario}
+          onAusente={atlas === "hra-f" ? femininoAusente : undefined} />
       )}
     </div>
   );
 }
 
-function Corpo({ atlas, provisorio, prontuario }: { atlas: Atlas; provisorio: boolean; prontuario?: Prontuario }) {
+function Corpo({ atlas, provisorio, prontuario, onAusente }: {
+  atlas: Atlas;
+  provisorio: boolean;
+  prontuario?: Prontuario;
+  /** o pacote deste atlas não foi publicado */
+  onAusente?: () => void;
+}) {
   const { versao } = ATLAS[atlas];
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [sistemas, setSistemas] = useState(["tegumentar"]); // abre na pele
@@ -104,10 +99,12 @@ function Corpo({ atlas, provisorio, prontuario }: { atlas: Atlas; provisorio: bo
   // ponytail: o motor também lê o índice (o navegador reaproveita o cache); expor o pacote pelo motor se pesar
   useEffect(() => {
     const cancelar = new AbortController();
-    // a falha já é mostrada pelo motor, por cima do 3D
-    carregarPacote(BASE, atlas, versao, cancelar.signal).then(setPacote, () => {});
+    // as outras falhas já são mostradas pelo motor, por cima do 3D
+    carregarPacote(BASE, atlas, versao, cancelar.signal).then(setPacote, (erro: Error) => {
+      if (/manifesto\.json: HTTP 404/.test(erro.message)) onAusente?.();
+    });
     return () => cancelar.abort();
-  }, [atlas, versao]);
+  }, [atlas, versao, onAusente]);
 
   const entradaDe = (a: Ancora) => pacote?.indice.find((e) => e.malha === a.malha);
   const entrada = ancora && entradaDe(ancora);
@@ -142,6 +139,7 @@ function Corpo({ atlas, provisorio, prontuario }: { atlas: Atlas; provisorio: bo
           baseUrl={BASE}
           sistemasVisiveis={sistemas}
           marcadores={prontuario?.marcadores}
+          marcadoresPendentes={prontuario?.carregando}
           selecionado={prontuario?.selecionado}
           onEscolherPonto={escolher}
           onSelecionarMarcador={prontuario?.onSelecionarMarcador}

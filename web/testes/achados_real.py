@@ -12,7 +12,7 @@ import os
 import sys
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import TimeoutError as TempoEsgotado, sync_playwright
 
 sys.stdout.reconfigure(encoding='utf-8')
 WEB = Path(__file__).resolve().parent.parent
@@ -98,9 +98,12 @@ def registrar(pg, cid, alturas):
         canvas.scroll_into_view_if_needed()
         caixa = canvas.bounding_box()
         canvas.click(position={'x': caixa['width'] / 2 + 6, 'y': caixa['height'] * fy})
-        pg.wait_for_timeout(500)
-        if formulario.count():
+        try:
+            # com a versão leve na tela, o formulário só abre quando a completa chega
+            formulario.wait_for(timeout=20000)
             break
+        except TempoEsgotado:
+            pass
     assert formulario.count() and formulario.locator('[data-ancora]').count(), 'clique no corpo não abriu o formulário'
     formulario.locator('input[type=search]').press_sequentially(cid, delay=40)
     pg.get_by_role('list', name='Resultados do CID-10').locator('li button').filter(has_text=cid).first.click()

@@ -35,7 +35,8 @@ export type Manifesto = {
   atribuicao: string;
   unidade: string;
   eixos: string;
-  sistemas: { id: string; glb: string; estruturas: number }[];
+  /** `glb_leve`: mesmas malhas e nomes de nó, simplificadas (SPEC §5.3) */
+  sistemas: { id: string; glb: string; glb_leve?: string; estruturas: number }[];
 };
 
 export type EntradaIndice = {

@@ -205,6 +205,70 @@ try:
         assert ancora()['sistema'] == 'tegumentar', ancora()
         print('pele translúcida e clique através dela: ok')
 
+        # versão leve (SPEC §5.3), simulada com o mesmo arquivo: abre por ela e a completa vem em segundo plano
+        pasta = PACOTE.parent.parent / 'atlas/bp3d-m/4.0-1'
+        manifesto = json.loads((pasta / 'manifesto.json').read_text(encoding='utf-8'))
+        next(s for s in manifesto['sistemas'] if s['id'] == 'esqueletico')['glb_leve'] = 'esqueletico_leve.glb'
+        glb = dict(body=(pasta / 'esqueletico.glb').read_bytes(), content_type='model/gltf-binary')
+
+        def com_leve():
+            """Abre a demo com o pedido do GLB completo retido, para ser respondido quando o teste quiser."""
+            pagina = navegador.new_page(viewport={'width': 1200, 'height': 800})
+            retidos, pedidos = [], []
+            pagina.route('**/manifesto.json', lambda r: r.fulfill(json=manifesto))
+            pagina.route('**/esqueletico_leve.glb', lambda r: r.fulfill(**glb))
+            pagina.route('**/esqueletico.glb', lambda r: retidos.append(r))
+            pagina.on('pageerror', lambda e: console.append(str(e)))
+            pagina.on('request', lambda r: r.url.endswith('.glb') and pedidos.append(r.url.rsplit('/', 1)[1]))
+            pagina.goto(url)
+            pagina.wait_for_selector('[data-motor][data-carregados="esqueletico"]', timeout=120000)
+            pagina.wait_for_timeout(1500)
+            # a completa é pedida sozinha, depois da leve
+            assert pedidos == ['esqueletico_leve.glb', 'esqueletico.glb'] and len(retidos) == 1, pedidos
+            assert pagina.get_attribute('[data-motor]', 'data-completos') == ''
+            return pagina, retidos, pedidos
+
+        def completo(pagina):
+            pagina.wait_for_selector('[data-motor][data-completos="esqueletico"]', timeout=120000)
+            pagina.wait_for_timeout(800)
+
+        def mesma_ancora(pagina):
+            pagina.wait_for_function("document.querySelector('#ancora').textContent", timeout=120000)
+            nova = json.loads(pagina.text_content('#ancora'))
+            assert (nova['estrutura'], nova['triangulo']) == (a['estrutura'], a['triangulo']), nova
+            assert math.dist(nova['posicao_local'], a['posicao_local']) < 1e-5, (nova, a)
+
+        # clique antes de a completa chegar: espera por ela; a câmera continua respondendo
+        pagina, retidos, pedidos = com_leve()
+        pagina.mouse.click(x, y); pagina.wait_for_timeout(500)
+        assert pagina.text_content('#ancora') == '', 'âncora entregue com a versão leve'
+        assert 'Carregando detalhe' in pagina.inner_text('[data-motor] [role=status]')
+        retidos[0].fulfill(**glb)
+        completo(pagina)
+        mesma_ancora(pagina)
+        assert len(pedidos) == 2, pedidos
+        pagina.close()
+        # sem clique, a troca acontece sozinha; depois dela o clique é imediato e nada mais é baixado
+        pagina, retidos, pedidos = com_leve()
+        retidos[0].fulfill(**glb)
+        completo(pagina)
+        pagina.mouse.click(x, y)
+        mesma_ancora(pagina)
+        assert len(pedidos) == 2, pedidos
+        pagina.close()
+        # a completa falha: a leve continua na tela e o clique tenta de novo
+        pagina, retidos, pedidos = com_leve()
+        retidos[0].abort()
+        pagina.wait_for_timeout(1000)
+        assert pagina.get_attribute('[data-motor]', 'data-carregados') == 'esqueletico'
+        assert 'Falha' not in pagina.inner_text('[data-motor] [role=status]')
+        pagina.mouse.click(x, y); pagina.wait_for_timeout(500)
+        assert len(retidos) == 2, pedidos
+        retidos[1].fulfill(**glb)
+        mesma_ancora(pagina)
+        pagina.close()
+        print('versão leve: completa em segundo plano; clique antes dela espera; falha não apaga a leve')
+
         # tela de celular
         pg.set_viewport_size({'width': 390, 'height': 844}); pg.reload(); carregados('esqueletico')
         if len(sys.argv) > 1:

@@ -51,7 +51,10 @@ MEDIDOR = """(esperado) => {
     if (!vistos.corpo && document.querySelector('[data-motor][data-carregados~="tegumentar"]')) {
       vistos.corpo = true; depoisDeDesenhar('corpo');
     }
-    if (!(vistos.lista && vistos.marcadores && vistos.corpo)) requestAnimationFrame(olhar);
+    if (!vistos.completo && document.querySelector('[data-motor][data-completos~="tegumentar"]')) {
+      vistos.completo = true; depoisDeDesenhar('completo');
+    }
+    if (!(vistos.lista && vistos.marcadores && vistos.corpo && vistos.completo)) requestAnimationFrame(olhar);
   };
   requestAnimationFrame(olhar);
 }"""
@@ -122,7 +125,7 @@ with sync_playwright() as p:
         cdp.send('Network.emulateNetworkConditions', FAST_4G)
         cdp.send('Emulation.setCPUThrottlingRate', {'rate': CPU})
         pg.goto(prontuario, wait_until='commit')
-        pg.wait_for_function('window.__tempos?.lista && window.__tempos.marcadores && window.__tempos.corpo', timeout=120000)
+        pg.wait_for_function('["lista", "marcadores", "corpo", "completo"].every((n) => window.__tempos?.[n])', timeout=120000)
         dados = pg.evaluate(RECURSOS)
         contexto.close()
 
@@ -131,15 +134,20 @@ with sync_playwright() as p:
         [listar] = [r for r in recursos if '/rpc/listar_achados' in r['url']][:1]
         atlas_baixado = [r for r in recursos if '/atlas/' in r['url']]
         glbs = [r for r in atlas_baixado if r['url'].endswith('.glb')]
-        nomes = sorted(r['url'].rsplit('/', 1)[1] for r in glbs)
-        assert nomes == ['tegumentar.glb'], f'só a pele deveria ser baixada: {nomes}'
+        nomes = [r['url'].rsplit('/', 1)[1] for r in sorted(glbs, key=lambda r: r['de'])]
+        assert nomes in (['tegumentar.glb'], ['tegumentar_leve.glb', 'tegumentar.glb']), f'só a pele deveria ser baixada: {nomes}'
+        if n == 1:
+            print(f'GLBs baixados: {nomes}')
+        # o que abre o corpo (o leve, se houver); o completo vem depois e é medido à parte
+        glbs = [min(glbs, key=lambda r: r['de'])]
         medida = {
-            'visivel': visivel, 'lista': tempos['lista'], 'marcadores': tempos['marcadores'], 'corpo': tempos['corpo'],
+            'visivel': visivel, 'lista': tempos['lista'], 'marcadores': tempos['marcadores'], 'corpo': tempos['corpo'], 'completo': tempos['completo'],
             # banco: página (login + abrir_prontuario no servidor) e a lista (pedida pelo navegador)
             'banco_documento': dados['documento']['responseStart'],
             'banco_listar': listar['ate'] - listar['de'], 'listar_chegou': listar['ate'],
             'glb': max(r['ate'] for r in glbs) - min(r['de'] for r in glbs),
             'glb_bytes': sum(r['bytes'] for r in glbs),
+            'glb_inicio': min(r['de'] for r in glbs),
             # render: dos dados em mãos até estar desenhado
             'render': visivel - listar['ate'],
         }

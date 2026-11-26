@@ -15,7 +15,7 @@ const subpastas = (pasta) =>
 function completo(pasta) {
   try {
     const { sistemas } = JSON.parse(readFileSync(join(pasta, "manifesto.json"), "utf8"));
-    return existsSync(join(pasta, "indice.json")) && sistemas.every((s) => existsSync(join(pasta, s.glb)));
+    return existsSync(join(pasta, "indice.json")) && sistemas.every((s) => [s.glb, s.glb_leve].every((glb) => !glb || existsSync(join(pasta, glb))));
   } catch {
     return false;
   }

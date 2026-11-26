@@ -151,9 +151,13 @@ with sync_playwright() as p:
 
     conferir_posicao('após salvar')
 
-    # 2) recarregar: o marcador volta no mesmo ponto
+    # 2) recarregar: o marcador volta no mesmo ponto, e o corpo só é pedido depois da lista
+    ordem = []
+    pg.on('request', lambda r: r.url.endswith('.glb') and ordem.append('glb'))
+    pg.on('response', lambda r: '/rpc/listar_achados' in r.url and r.request.method == 'POST' and ordem.append('lista'))
     pg.reload()
     carregados(pg, 'tegumentar')
+    assert 'lista' in ordem and ordem.index('lista') < ordem.index('glb'), ordem
     conferir_posicao('após recarregar')
 
     # 3) linha pelo teclado abre o cartão e liga o sistema; Esc fecha; clicar no marcador reabre

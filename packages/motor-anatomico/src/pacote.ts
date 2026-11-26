@@ -61,8 +61,10 @@ export function geometriaDaMalha(partes: Mesh[]): BufferGeometry {
   return unica;
 }
 
-/** Transforma a cena de um GLB em uma malha por nó do índice, com BVH. */
-export function montarSistema(cena: Object3D, porMalha: Map<string, EntradaIndice>, material: Material): Sistema {
+/** Transforma a cena de um GLB em uma malha por nó do índice. `comBVH: false` deixa a BVH para `montarBVHs`. */
+export function montarSistema(
+  cena: Object3D, porMalha: Map<string, EntradaIndice>, material: Material, comBVH = true,
+): Sistema {
   cena.updateMatrixWorld(true);
   const partes = new Map<string, Mesh[]>();
   cena.traverse((objeto) => {
@@ -80,8 +82,7 @@ export function montarSistema(cena: Object3D, porMalha: Map<string, EntradaIndic
   const malhas = new Map<string, Mesh>();
   for (const [nome, lista] of partes) {
     const geometria = geometriaDaMalha(lista);
-    // ponytail: BVH montado na carga, na thread principal; mover para worker se travar no tablet
-    geometria.boundsTree = criarBVH(geometria);
+    if (comBVH) geometria.boundsTree = criarBVH(geometria);
     const malha = new Mesh(geometria, material);
     malha.name = nome;
     const { sistema, estrutura } = porMalha.get(nome)!;
@@ -96,7 +97,24 @@ export function montarSistema(cena: Object3D, porMalha: Map<string, EntradaIndic
 
 export async function carregarSistema(url: string, porMalha: Map<string, EntradaIndice>, material: Material) {
   const gltf = await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(url);
-  return montarSistema(gltf.scene, porMalha, material);
+  return montarSistema(gltf.scene, porMalha, material, false);
+}
+
+/** Resolve depois que o que acabou de entrar na cena foi desenhado (dois quadros). */
+export const doisQuadros = () => new Promise((pronto) => requestAnimationFrame(() => requestAnimationFrame(pronto)));
+
+/**
+ * Monta as BVHs de clique depois que o corpo apareceu, uma malha por vez para a tela continuar respondendo.
+ * Até lá o clique usa o raycast comum do three (`acceleratedRaycast` cai nele sem BVH).
+ */
+export async function montarBVHs({ malhas }: Sistema) {
+  await doisQuadros();
+  // ponytail: na thread principal; mover para um worker se uma malha grande travar o tablet
+  for (const { geometry } of malhas.values()) {
+    // descartarSistema esvazia o mapa, o que encerra este laço
+    geometry.boundsTree ??= criarBVH(geometry);
+    await new Promise((pronto) => setTimeout(pronto));
+  }
 }
 
 export function descartarSistema({ malhas }: Sistema) {
@@ -104,4 +122,5 @@ export function descartarSistema({ malhas }: Sistema) {
     malha.geometry.dispose();
     (malha.material as Material).dispose();
   }
+  malhas.clear();
 }

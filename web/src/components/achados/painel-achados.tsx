@@ -5,7 +5,7 @@ import type { Marcador } from "@saude3d/motor-anatomico";
 import { CartaoAchado } from "@/components/achados/cartao-achado";
 import { FormularioAchado } from "@/components/achados/formulario-achado";
 import { LinhaDoTempo } from "@/components/achados/linha-do-tempo";
-import { Prontuario3D } from "@/components/anatomia/prontuario-3d";
+import { precarregar3D, Prontuario3D } from "@/components/anatomia/prontuario-3d";
 import type { PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -27,6 +27,7 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
   const [minhaUnidade, setMinhaUnidade] = useState<{ id: string; nome: string | null } | null>(null);
   const [semPosicao, setSemPosicao] = useState<string[]>([]);
   const [aviso, setAviso] = useState("");
+  if (com3d) precarregar3D();
 
   useEffect(() => {
     let valido = true;
@@ -168,6 +169,7 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
       sexo={sexo}
       prontuario={{
         marcadores, selecionado, lateral,
+        carregando: !achados && !falha,
         onEscolherPonto: escolherPonto,
         onSelecionarMarcador: abrir,
         onMarcadoresSemPosicao: setSemPosicao,
