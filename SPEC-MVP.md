@@ -197,13 +197,13 @@ Etapas seguintes acrescentam funções no mesmo padrão (`registrar_achado`, `hi
 | Porta | Faz |
 | --- | --- |
 | `buscar_cid10(p_texto text, p_limite int default 20) returns table(codigo, descricao)` | Busca por código (prefixo) ou descrição (sem acento, `ilike`); sem auditoria |
-| `registrar_achado(p_paciente uuid, p_ancora jsonb, p_cid10 text, p_categoria, p_lado, p_status, p_inicio date, p_observacao text, p_substitui uuid default null) returns uuid` | Exige vínculo ativo; autor, unidade e especialidade vêm do perfil (nunca do cliente); valida a âncora (atlas, atlas_versao, sistema, malha obrigatórios quando não for null); `nivel_sigilo` calculado no servidor por `cid10_sigilo`; `p_substitui` só aponta achado do mesmo paciente; audita `registrar_achado` |
-| `listar_achados(p_paciente uuid) returns table(...)` | Exige vínculo ativo; devolve os achados **vigentes** (não substituídos) e audita `listar_achados`. Restrito de outra unidade **não aparece de forma alguma** (nem linha, nem contagem, nem marcador) |
+| `registrar_achado(p_paciente uuid, p_ancora jsonb, p_cid10 text, p_categoria, p_lado, p_status, p_inicio date, p_observacao text, p_substitui uuid default null) returns uuid` | Exige vínculo ativo; autor, unidade e especialidade vêm do perfil (nunca do cliente); valida a âncora (atlas, atlas_versao, sistema, malha obrigatórios quando não for null); `nivel_sigilo` calculado no servidor por `cid10_sigilo`; `p_substitui` só aponta achado do mesmo paciente; audita `registrar_achado`. Sem vínculo ativo devolve `null` e grava `acesso_negado` (sem `raise`, mesmo padrão de `abrir_prontuario`); entrada inválida (âncora, CID, substituição) pode dar erro, pois não é tentativa de acesso |
+| `listar_achados(p_paciente uuid) returns table(id, ancora, estrutura, cid10, cid10_descricao, categoria, lado, status, nivel_sigilo, inicio, observacao, especialidade, autor_nome, unidade_nome, substitui_id, criado_em)` | Exige vínculo ativo; devolve os achados **vigentes** (não substituídos) e audita `listar_achados`. Restrito de outra unidade **não aparece de forma alguma** (nem linha, nem contagem, nem marcador) |
 | `historico_achado(p_achado uuid)` | Cadeia de correções (`substitui_id`) do achado, com as mesmas regras de visibilidade |
 
 `cid10_sigilo (prefixo text pk, motivo text)` — lista **provisória**, pendente de revisão médica: HIV (B20–B24, Z21), violência (T74, Y05, Y07), saúde mental (F*), aborto (O04–O07). A tabela `achados` não recebe `select/insert/update/delete` direto de ninguém.
 
-**Âncora de paciente feminina:** enquanto o app mostrar o corpo masculino provisório (sem pacote `hra-f`), o registro de achado com âncora fica bloqueado para ela (só "sem local no corpo").
+**Âncora de paciente feminina:** enquanto o app mostrar o corpo masculino provisório (sem pacote `hra-f`), o registro de achado com âncora fica bloqueado para ela (só "sem local no corpo"). É regra da tela; o banco não bloqueia por sexo. `ancora.estrutura` pode ser `null` (malha sem ID de ontologia).
 
 Leitura do prontuário pelo app passa **sempre** por `abrir_prontuario`; a página nunca lê o paciente direto.
 
