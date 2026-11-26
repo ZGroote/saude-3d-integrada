@@ -30,10 +30,19 @@ window.__THREE_DEVTOOLS__.addEventListener('observe', (e) => e.detail.isScene &&
 DESENHADOS = """() => {
   const posicoes = [];
   for (const cena of window.__cenas) cena.traverse((o) => {
-    if (o.geometry?.type === 'SphereGeometry' && o.material.side !== 1) posicoes.push(o.parent.position.toArray());
+    if (!o.isInstancedMesh || o.geometry.type !== 'SphereGeometry') return;
+    for (let i = 0; i < o.count; i++) {
+      const m = o.instanceMatrix.array.subarray(i * 16, i * 16 + 16);
+      posicoes.push([m[12], m[13], m[14]]);
+    }
   });
   return posicoes;
 }"""
+
+
+def desenhado_em(pg, posicao):
+    # as matrizes das instâncias são float32: tolerância de 1 micrômetro
+    return any(all(abs(a - b) < 1e-6 for a, b in zip(d, posicao)) for d in pg.evaluate(DESENHADOS))
 
 
 def senha_de(email):
@@ -150,8 +159,7 @@ with sync_playwright() as p:
     [i10] = [a for a in linhas if a['id'] == normal]
     assert i10['cid10'] == 'I10' and i10['nivel_sigilo'] == 'normal', i10
     assert i10['ancora'] == clique, (i10['ancora'], clique)
-    desenhados = pg.evaluate(DESENHADOS)
-    assert any(all(abs(a - b) < 1e-9 for a, b in zip(d, clique['posicao_local'])) for d in desenhados), desenhados
+    assert desenhado_em(pg, clique['posicao_local']), pg.evaluate(DESENHADOS)
     conferir_linha(pg, i10, problemas)
     print(f'1) I10: clique {clique["posicao_local"]} == listar_achados {i10["ancora"]["posicao_local"]} == marcador desenhado')
 
@@ -179,7 +187,7 @@ with sync_playwright() as p:
     [visto] = [a for a in linhas_obst if a['id'] == normal]
     assert visto['ancora'] == clique and 'Cardiologia' in visto['autor_nome'] and 'Cardiologia' in visto['unidade_nome'], visto
     conferir_linha(pg, visto, problemas)
-    assert ancora_restrita['posicao_local'] not in pg.evaluate(DESENHADOS), 'marcador do restrito desenhado'
+    assert not desenhado_em(pg, ancora_restrita['posicao_local']), 'marcador do restrito desenhado'
     for resposta in recebido:
         assert restrito not in resposta.text() and 'F32' not in resposta.text(), resposta.url
     html = pg.content()
@@ -196,7 +204,7 @@ with sync_playwright() as p:
     assert {normal, restrito} <= {a['id'] for a in linhas}
     for achado in (i10, f32):
         conferir_linha(pg, achado, problemas)
-    assert ancora_restrita['posicao_local'] in pg.evaluate(DESENHADOS)
+    assert desenhado_em(pg, ancora_restrita['posicao_local'])
     fotos(pg, '3-cardiologia-de-novo', restrito)
     print(f'4) cardiologia: {len(linhas)} achados, I10 e F32.9 presentes')
     sair(pg)

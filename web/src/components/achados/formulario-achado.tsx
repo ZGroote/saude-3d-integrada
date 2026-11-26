@@ -5,7 +5,7 @@ import type { PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { CATEGORIAS, LADOS, STATUS, type Categoria, type Lado, type Status } from "@/lib/achados";
+import { CATEGORIAS, LADOS, STATUS, type Achado, type Categoria, type Lado, type Status } from "@/lib/achados";
 import type { Cid10 } from "@/lib/banco";
 import { createClient } from "@/lib/supabase/client";
 
@@ -76,14 +76,19 @@ function BuscaCid10({ escolhido, onEscolher }: { escolhido: Cid10 | null; onEsco
   );
 }
 
-export function FormularioAchado({ pacienteId, ponto, onSalvo, onCancelar }: {
+export function FormularioAchado({ pacienteId, ponto, corrigindo, onSalvo, onCancelar }: {
   pacienteId: string;
-  /** null = achado sem local no corpo */
+  /** ponto clicado agora; null = nenhum (sem local, ou correção que mantém o local gravado) */
   ponto: PontoNoCorpo | null;
+  /** achado que o novo substitui: os campos partem dele */
+  corrigindo?: Achado;
   onSalvo: (id: string) => void;
   onCancelar: () => void;
 }) {
-  const [cid, setCid] = useState<Cid10 | null>(null);
+  const [cid, setCid] = useState<Cid10 | null>(
+    corrigindo ? { codigo: corrigindo.cid10, descricao: corrigindo.cid10_descricao } : null,
+  );
+  const ancora = ponto?.ancora ?? corrigindo?.ancora ?? null;
   const [erro, setErro] = useState("");
   const [salvando, setSalvando] = useState(false);
   const titulo = useRef<HTMLHeadingElement>(null);
@@ -102,13 +107,14 @@ export function FormularioAchado({ pacienteId, ponto, onSalvo, onCancelar }: {
     setSalvando(true);
     const { data, error } = await createClient().rpc("registrar_achado", {
       p_paciente: pacienteId,
-      p_ancora: ponto?.ancora ?? null,
+      p_ancora: ancora,
       p_cid10: cid.codigo,
       p_categoria: texto("categoria") as Categoria,
       p_lado: texto("lado") as Lado,
       p_status: texto("status") as Status,
       p_inicio: texto("inicio") || null,
       p_observacao: texto("observacao") || null,
+      p_substitui: corrigindo?.id ?? null,
     });
     setSalvando(false);
     if (error || !data) return setErro("O achado não foi salvo. Confira os dados e o vínculo com o paciente e tente de novo.");
@@ -118,29 +124,38 @@ export function FormularioAchado({ pacienteId, ponto, onSalvo, onCancelar }: {
   return (
     <Card className="px-5 py-4">
       <form onSubmit={salvar} className="space-y-3" aria-labelledby="titulo-novo-achado">
-        <h3 id="titulo-novo-achado" ref={titulo} tabIndex={-1} className="text-sm font-semibold text-slate-950 outline-none">Novo achado</h3>
+        <h3 id="titulo-novo-achado" ref={titulo} tabIndex={-1} className="text-sm font-semibold text-slate-950 outline-none">
+          {corrigindo ? `Corrigir ${corrigindo.cid10}` : "Novo achado"}
+        </h3>
+        {corrigindo && <p className="text-xs text-slate-600">A correção registra um novo achado; o anterior fica no histórico.</p>}
         {ponto ? (
           <p className="text-sm text-slate-600" data-ancora>
             <strong className="text-slate-900">{ponto.nome}</strong> · {ponto.sistema} · <span className="font-mono">{ponto.ancora.estrutura ?? "sem identificador"}</span>
             {ponto.naoRevisado && <span className="block text-xs italic text-amber-800">tradução não revisada</span>}
           </p>
-        ) : <p className="text-sm text-slate-600">Sem local no corpo.</p>}
+        ) : (
+          <p className="text-sm text-slate-600">
+            {ancora
+              ? <>Local mantido: <span className="font-mono">{ancora.estrutura ?? ancora.malha}</span>. Clique no corpo para mudar.</>
+              : "Sem local no corpo."}
+          </p>
+        )}
         <BuscaCid10 escolhido={cid} onEscolher={(c) => { setCid(c); setErro(""); }} />
         <label className={ROTULO}>Categoria
-          <select name="categoria" required className={CAMPO} defaultValue="">
+          <select name="categoria" required className={CAMPO} defaultValue={corrigindo?.categoria ?? ""}>
             <option value="" disabled>Escolha…</option>{opcoes(CATEGORIAS)}
           </select>
         </label>
         <label className={ROTULO}>Lado
           {/* a key refaz o campo quando outro ponto é clicado, sem apagar o resto do formulário */}
-          <select key={ponto ? JSON.stringify(ponto.ancora) : "sem-local"} name="lado" className={CAMPO} defaultValue={ponto?.lado ?? "nao_se_aplica"}>{opcoes(LADOS)}</select>
+          <select key={JSON.stringify(ancora)} name="lado" className={CAMPO} defaultValue={ponto?.lado ?? corrigindo?.lado ?? "nao_se_aplica"}>{opcoes(LADOS)}</select>
         </label>
-        <label className={ROTULO}>Status<select name="status" className={CAMPO} defaultValue="ativo">{opcoes(STATUS)}</select></label>
-        <label className={ROTULO}>Início<Input type="date" name="inicio" max={hoje()} /></label>
-        <label className={ROTULO}>Observação<textarea name="observacao" rows={3} maxLength={2000} className={`${CAMPO} h-auto py-2`} /></label>
+        <label className={ROTULO}>Status<select name="status" className={CAMPO} defaultValue={corrigindo?.status ?? "ativo"}>{opcoes(STATUS)}</select></label>
+        <label className={ROTULO}>Início<Input type="date" name="inicio" max={hoje()} defaultValue={corrigindo?.inicio ?? ""} /></label>
+        <label className={ROTULO}>Observação<textarea name="observacao" rows={3} maxLength={2000} defaultValue={corrigindo?.observacao ?? ""} className={`${CAMPO} h-auto py-2`} /></label>
         {erro && <p role="alert" className="text-sm text-red-800">{erro}</p>}
         <div className="flex gap-2">
-          <Button type="submit" disabled={salvando}>{salvando ? "Salvando…" : "Salvar achado"}</Button>
+          <Button type="submit" disabled={salvando}>{salvando ? "Salvando…" : corrigindo ? "Salvar correção" : "Salvar achado"}</Button>
           <Button type="button" variant="outline" onClick={onCancelar} disabled={salvando}>Cancelar</Button>
         </div>
       </form>

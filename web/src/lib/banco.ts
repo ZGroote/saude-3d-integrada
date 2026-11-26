@@ -119,6 +119,7 @@ export type Database = {
         Returns: string;
       };
       listar_achados: { Args: { p_paciente: string }; Returns: Achado[] };
+      historico_achado: { Args: { p_achado: string }; Returns: Achado[] };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

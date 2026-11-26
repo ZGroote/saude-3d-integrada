@@ -3,7 +3,8 @@
 import { Canvas, useFrame, useThree, type ThreeEvent } from '@react-three/fiber';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
-  BackSide, Box3, DirectionalLight, DoubleSide, Mesh, MeshStandardMaterial, Vector3, type Intersection, type Raycaster,
+  BackSide, Box3, DirectionalLight, DoubleSide, InstancedMesh, Matrix4, Mesh, MeshStandardMaterial, Vector3,
+  type Intersection, type Raycaster,
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { ancoraDeIntersecao, candidatas, precisaDeGeometria, situarMarcador } from './ancora';
@@ -38,10 +39,51 @@ export function MotorAnatomico(props: MotorAnatomicoProps) {
 type Carga = { sistema?: Sistema; erro?: string };
 
 /** Marcador desenhado por cima de tudo também ganha o clique: entra no raycast com distância zero. */
-function raycastNaFrente(this: Mesh, raio: Raycaster, acertos: Intersection[]) {
+function raycastNaFrente(this: InstancedMesh, raio: Raycaster, acertos: Intersection[]) {
   const antes = acertos.length;
-  Mesh.prototype.raycast.call(this, raio, acertos);
+  InstancedMesh.prototype.raycast.call(this, raio, acertos);
   for (const acerto of acertos.slice(antes)) acerto.distance = 0;
+}
+
+type Posicionado = Marcador & { posicao: Vetor3; estrutural: boolean };
+
+/** Marcadores iguais no material (cor e se ficam por cima de tudo): uma chamada de desenho para todos. */
+function Instancias({ itens, destaque = false, onSelecionar }: {
+  itens: Posicionado[];
+  destaque?: boolean;
+  onSelecionar?: (id: string) => void;
+}) {
+  const malha = useRef<InstancedMesh>(null);
+  const { cor, estrutural } = itens[0]!;
+
+  useLayoutEffect(() => {
+    const atual = malha.current!;
+    const matriz = new Matrix4();
+    itens.forEach(({ posicao, tamanho }, i) =>
+      atual.setMatrixAt(i, matriz.makeScale(tamanho, tamanho, tamanho).setPosition(...posicao)));
+    atual.instanceMatrix.needsUpdate = true;
+    atual.computeBoundingSphere(); // fica em cache: sem isto o clique e o recorte usariam as posições antigas
+  }, [itens]);
+
+  return (
+    <instancedMesh
+      // a quantidade de instâncias é fixa na criação
+      key={itens.length}
+      ref={malha}
+      args={[undefined, undefined, itens.length]}
+      renderOrder={estrutural ? 1 : 0}
+      raycast={estrutural ? raycastNaFrente : InstancedMesh.prototype.raycast}
+      onClick={(evento) => {
+        if (evento.delta > 5) return;
+        evento.stopPropagation();
+        const marcador = itens[evento.instanceId!];
+        if (marcador) onSelecionar?.(marcador.id);
+      }}
+    >
+      <sphereGeometry args={[1, 24, 16]} />
+      <meshStandardMaterial color={cor} emissive={cor} emissiveIntensity={destaque ? 0.6 : 0.15} depthTest={!estrutural} />
+    </instancedMesh>
+  );
 }
 
 /**
@@ -151,7 +193,7 @@ function Motor({
       if (carga?.sistema) return carga.sistema.malhas.get(entrada.malha)?.geometry ?? null;
       return carga?.erro ? null : undefined;
     };
-    const posicionados: (Marcador & { posicao: Vetor3; estrutural: boolean })[] = [];
+    const posicionados: Posicionado[] = [];
     const semPosicao: string[] = [];
     let pendentes = false;
     for (const { marcador, entradas } of plano) {
@@ -167,6 +209,19 @@ function Motor({
     }
     return { posicionados, semPosicao, pendentes };
   }, [plano, pacote, atlas, versao, revisao]);
+
+  // o selecionado vai num grupo só dele, que brilha mais
+  const grupos = useMemo(() => {
+    const porMaterial = new Map<string, Posicionado[]>();
+    for (const m of posicionados) {
+      const chave = JSON.stringify([m.cor, m.estrutural, m.id === selecionado]);
+      const grupo = porMaterial.get(chave);
+      if (grupo) grupo.push(m);
+      else porMaterial.set(chave, [m]);
+    }
+    return [...porMaterial];
+  }, [posicionados, selecionado]);
+  const emDestaque = posicionados.find((m) => m.id === selecionado);
 
   const relatado = useRef<string | null>(null);
   const chaveSemPosicao = JSON.stringify(semPosicao);
@@ -223,35 +278,21 @@ function Motor({
         {prontos.map((id) => (
           <primitive key={id} object={cache.get(id)!.sistema!.grupo} onClick={escolher} />
         ))}
-        {posicionados.map((m) => (
-          <group key={m.id} position={m.posicao} scale={m.tamanho}>
-            {/* só estrutural fica no centro da malha, muitas vezes dentro dela: desenhada por cima */}
-            <mesh
-              renderOrder={m.estrutural ? 1 : 0}
-              raycast={m.estrutural ? raycastNaFrente : Mesh.prototype.raycast}
-              onClick={(evento) => {
-                if (evento.delta > 5) return;
-                evento.stopPropagation();
-                onSelecionarMarcador?.(m.id);
-              }}
-            >
-              <sphereGeometry args={[1, 24, 16]} />
-              <meshStandardMaterial
-                color={m.cor}
-                emissive={m.cor}
-                emissiveIntensity={m.id === selecionado ? 0.6 : 0.15}
-                depthTest={!m.estrutural}
-              />
-            </mesh>
-            {m.id === selecionado && (
-              // contorno: casca maior vista por dentro; não intercepta cliques
-              <mesh scale={1.45} raycast={() => null} renderOrder={m.estrutural ? 1 : 0}>
-                <sphereGeometry args={[1, 24, 16]} />
-                <meshBasicMaterial color="#111111" side={BackSide} depthTest={!m.estrutural} />
-              </mesh>
-            )}
-          </group>
+        {grupos.map(([chave, itens]) => (
+          <Instancias key={chave} itens={itens} destaque={itens[0]!.id === selecionado} onSelecionar={onSelecionarMarcador} />
         ))}
+        {emDestaque && (
+          // contorno: casca maior vista por dentro; não intercepta cliques
+          <mesh
+            position={emDestaque.posicao}
+            scale={emDestaque.tamanho * 1.45}
+            raycast={() => null}
+            renderOrder={emDestaque.estrutural ? 1 : 0}
+          >
+            <sphereGeometry args={[1, 24, 16]} />
+            <meshBasicMaterial color="#111111" side={BackSide} depthTest={!emDestaque.estrutural} />
+          </mesh>
+        )}
       </Canvas>
       <div role="status" style={{ position: 'absolute', top: 8, left: 8, right: 8, fontSize: 13, pointerEvents: 'none' }}>
         {aviso}

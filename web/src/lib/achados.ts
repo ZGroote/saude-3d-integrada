@@ -22,9 +22,41 @@ export type Achado = {
   observacao: string | null;
   especialidade: string | null;
   autor_nome: string;
+  /** vem na migração 0004; até lá a unidade só é identificada pelo nome */
+  unidade_id?: string;
   unidade_nome: string;
+  substitui_id: string | null;
   criado_em: string;
 };
+
+// um formatador de cada: criar um por linha pesa com 200 achados num tablet
+const DATA_PURA = new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium", timeZone: "UTC" });
+const CARIMBO = new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium" });
+/** Data pura (início) é lida em UTC para não voltar um dia; carimbo de hora usa o fuso do navegador. */
+export const formatarData = (iso: string) =>
+  iso.length === 10 ? DATA_PURA.format(new Date(`${iso}T12:00:00Z`)) : CARIMBO.format(new Date(iso));
+
+/** Dia (AAAA-MM-DD) do achado na linha do tempo: o início; sem ele, o dia local do registro. */
+export function dataDoAchado(a: Pick<Achado, "inicio" | "criado_em">) {
+  if (a.inicio) return a.inicio;
+  const criado = new Date(a.criado_em);
+  return new Date(criado.getTime() - criado.getTimezoneOffset() * 60_000).toISOString().slice(0, 10);
+}
+
+/** `especialidade` null = todas ("" é um valor: achados sem especialidade); nos outros, "" = sem filtro. Datas inclusivas. */
+export type Filtro = { especialidade: string | null; status: Status | ""; de: string; ate: string };
+export const SEM_FILTRO: Filtro = { especialidade: null, status: "", de: "", ate: "" };
+
+export function filtrar(achados: Achado[], { especialidade, status, de, ate }: Filtro) {
+  return achados.filter((a) => {
+    const dia = dataDoAchado(a);
+    return (especialidade === null || (a.especialidade ?? "") === especialidade)
+      && (!status || a.status === status) && (!de || dia >= de) && (!ate || dia <= ate);
+  });
+}
+
+export const ordenarPorData = (achados: Achado[]) =>
+  achados.toSorted((a, b) => dataDoAchado(a).localeCompare(dataDoAchado(b)) || a.criado_em.localeCompare(b.criado_em));
 
 export const ladoDaLateralidade = (lateralidade: string | null | undefined): Lado =>
   lateralidade === "left" ? "esquerdo" : lateralidade === "right" ? "direito" : "nao_se_aplica";
