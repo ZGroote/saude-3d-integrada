@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import test, { before, after } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
+import { criarSessaoAtiva, definirClaims, limparClaims } from './sessao_helper.mjs';
 
 const pasta = dirname(fileURLToPath(import.meta.url));
 const db = new PGlite();
@@ -20,22 +21,23 @@ const ubs = '10000000-0000-4000-8000-000000000001';
 const cardio = '10000000-0000-4000-8000-000000000002';
 
 async function como(usuario, fn) {
+  const sessao = await criarSessaoAtiva(db, usuario);
   await db.exec('SET ROLE authenticated');
-  await db.query("SELECT set_config('request.jwt.claim.sub', $1, false)", [usuario]);
+  await definirClaims(db, usuario, sessao);
   try { return await fn(); }
   finally {
     await db.exec('RESET ROLE');
-    await db.query("SELECT set_config('request.jwt.claim.sub', '', false)");
+    await limparClaims(db);
   }
 }
 
 async function comoPapel(papel, sub, fn) {
   await db.exec(`SET ROLE ${papel}`);
-  await db.query("SELECT set_config('request.jwt.claim.sub', $1, false)", [sub]);
+  await definirClaims(db, sub || null);
   try { return await fn(); }
   finally {
     await db.exec('RESET ROLE');
-    await db.query("SELECT set_config('request.jwt.claim.sub', '', false)");
+    await limparClaims(db);
   }
 }
 
@@ -49,6 +51,7 @@ async function auditorias(autor, paciente) {
 before(async () => {
   await db.exec(await readFile(resolve(pasta, 'shim_auth.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0001_fundacao.sql'), 'utf8'));
+  await db.exec(await readFile(resolve(pasta, '../migrations/0009_sessao_inatividade.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../seed.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0002_cid10.sql'), 'utf8'));
   maria = (await db.query("SELECT id FROM public.pacientes WHERE cns='700000000000001'")).rows[0].id;

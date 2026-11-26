@@ -18,6 +18,7 @@ import urllib.request
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
+from sessao_atividade import registrar_atividade
 
 sys.stdout.reconfigure(encoding='utf-8')
 WEB = Path(__file__).resolve().parent.parent
@@ -70,6 +71,7 @@ def chamar(caminho, corpo, token=None):
 def foto_do_banco():
     """O que o admin da UBS enxerga direto no banco: pacientes fictícios e os ids de achados e eventos de cada um."""
     token = chamar('/auth/v1/token?grant_type=password', {'email': ADMIN_UBS, 'password': senha_de(ADMIN_UBS)})['access_token']
+    registrar_atividade(token)
     rpc = lambda nome, **a: chamar(f'/rest/v1/rpc/{nome}', a, token)
     achados = {}
     for p in rpc('buscar_pacientes', p_texto='PACIENTE FICTICIO'):

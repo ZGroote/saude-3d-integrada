@@ -8,9 +8,19 @@ import assert from 'node:assert/strict';
 const { createClient } = createRequire(new URL('../web/package.json', import.meta.url))('@supabase/supabase-js');
 const ler = (f) => Object.fromEntries(readFileSync(new URL(f, import.meta.url), 'utf8').split(/\r?\n/).filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1)]));
 const env = ler('./.env');
-const senhas = ler('./.env.demo');
+let envApp = {};
+try {
+  envApp = Object.fromEntries(readFileSync(new URL('../web/.env.local', import.meta.url), 'utf8')
+    .split(/\r?\n/).filter((l) => l.includes('='))
+    .map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1)]));
+} catch (e) { if (e.code !== 'ENOENT') throw e; }
 const URL_ = 'https://zmrxskzokpbedmvikrvc.supabase.co';
 const CHAVE = env.SUPABASE_PUBLISHABLE_KEY ?? 'sb_publishable_flRzSCRnQhQ1ptqC3KFzdA_ePN2J6N0';
+if (!envApp.SUPABASE_SECRET_KEY)
+  throw new Error('SUPABASE_SECRET_KEY ausente em web/.env.local; os testes exigem registrar a atividade da sessão.');
+const senhas = ler('./.env.demo');
+const adminRpc = createClient(URL_, envApp.SUPABASE_SECRET_KEY,
+  { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } });
 const MARIA = '30000000-0000-4000-8000-000000000001';
 const JOAO = '30000000-0000-4000-8000-000000000002';
 
@@ -18,6 +28,16 @@ async function como(email) {
   const c = createClient(URL_, CHAVE, { auth: { persistSession: false } });
   const { error } = await c.auth.signInWithPassword({ email, password: senhas[email] });
   assert.equal(error, null, `login de ${email}: ${error?.message}`);
+  const { data: claimsData, error: claimsError } = await c.auth.getClaims();
+  const claims = claimsData?.claims;
+  assert.equal(claimsError, null, 'não foi possível obter os claims da sessão');
+  assert.equal(typeof claims?.session_id, 'string', 'JWT sem session_id');
+  assert.equal(typeof claims?.sub, 'string', 'JWT sem sub');
+  const { data: registrado, error: atividadeError } = await adminRpc.rpc('registrar_atividade_sessao', {
+    p_sessao: claims.session_id, p_usuario: claims.sub,
+  });
+  assert.equal(atividadeError, null, `registro de atividade falhou${atividadeError?.code ? ` (${atividadeError.code})` : ''}`);
+  assert.equal(registrado, true, 'banco recusou registrar atividade da sessão');
   return c;
 }
 const ok = (nome) => console.log('✔', nome);

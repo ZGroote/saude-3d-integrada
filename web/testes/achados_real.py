@@ -20,6 +20,7 @@ def catalogada(ancora):
     return {**ancora, 'lateralidade': ancora.get('lateralidade')}
 
 from playwright.sync_api import TimeoutError as TempoEsgotado, sync_playwright
+from sessao_atividade import registrar_atividade
 
 sys.stdout.reconfigure(encoding='utf-8')
 WEB = Path(__file__).resolve().parent.parent
@@ -96,6 +97,7 @@ def chamar(caminho, corpo, token=None):
 def listar(email):
     """listar_achados direto no banco, como o profissional: a referência contra a qual a tela é conferida."""
     sessao = chamar('/auth/v1/token?grant_type=password', {'email': email, 'password': senha_de(email)})
+    registrar_atividade(sessao['access_token'])
     return chamar('/rest/v1/rpc/listar_achados', {'p_paciente': MARIA}, sessao['access_token'])
 
 

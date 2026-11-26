@@ -15,18 +15,26 @@ export function MonitorInatividade() {
     let ultimaAtualizacao = 0;
     let encerrando = false;
 
+    const expirar = () => {
+      if (encerrando) return;
+      encerrando = true;
+      window.clearTimeout(temporizador);
+      void createClient().auth.signOut({ scope: "local" })
+        .catch(() => undefined)
+        .finally(() => router.replace("/login?motivo=sessao-expirada"));
+    };
+
     const renovar = () => {
       window.clearTimeout(temporizador);
       temporizador = window.setTimeout(async () => {
-        if (encerrando) return;
-        encerrando = true;
-        try { await createClient().auth.signOut({ scope: "local" }); } finally { router.replace("/login?motivo=sessao-expirada"); }
+        expirar();
       }, TEMPO_INATIVIDADE);
 
       const agora = Date.now();
       if (agora - ultimaAtualizacao >= INTERVALO_ATUALIZACAO) {
         ultimaAtualizacao = agora;
-        void fetch("/api/sessao/atividade", { method: "POST", cache: "no-store", keepalive: true });
+        void fetch("/api/sessao/atividade", { method: "POST", cache: "no-store", keepalive: true })
+          .then((resposta) => { if (resposta.status === 401) expirar(); });
       }
     };
 

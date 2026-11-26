@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import test, { before, after } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
+import { criarSessaoAtiva, definirClaims, limparClaims } from './sessao_helper.mjs';
 
 const pasta = dirname(fileURLToPath(import.meta.url));
 const db = new PGlite();
@@ -19,12 +20,13 @@ let gestacao;
 let crianca;
 
 async function como(usuario, fn) {
+  const sessao = await criarSessaoAtiva(db, usuario);
   await db.exec('SET ROLE authenticated');
-  await db.query("SELECT set_config('request.jwt.claim.sub', $1, false)", [usuario]);
+  await definirClaims(db, usuario, sessao);
   try { return await fn(); }
   finally {
     await db.exec('RESET ROLE');
-    await db.query("SELECT set_config('request.jwt.claim.sub', '', false)");
+    await limparClaims(db);
   }
 }
 
@@ -35,6 +37,7 @@ before(async () => {
   await db.exec(await readFile(resolve(pasta, '../migrations/0002_cid10.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0003_achados.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0004_gestacao.sql'), 'utf8'));
+  await db.exec(await readFile(resolve(pasta, '../migrations/0009_sessao_inatividade.sql'), 'utf8'));
 });
 after(async () => db.close());
 

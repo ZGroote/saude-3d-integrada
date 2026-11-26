@@ -118,6 +118,7 @@ export type Database = {
     Functions: {
       minha_unidade: { Args: Record<string, never>; Returns: string | null };
       eh_admin: { Args: Record<string, never>; Returns: boolean };
+      registrar_atividade_sessao: { Args: { p_sessao: string; p_usuario: string }; Returns: boolean };
       abrir_prontuario: { Args: { p_paciente: string }; Returns: Paciente | null };
       buscar_pacientes: { Args: { p_texto: string }; Returns: PacienteBusca[] };
       buscar_cid10: { Args: { p_texto: string; p_limite?: number }; Returns: Cid10[] };

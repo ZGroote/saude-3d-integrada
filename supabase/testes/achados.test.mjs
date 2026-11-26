@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import test, { before, after } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
+import { criarSessaoAtiva, definirClaims, limparClaims } from './sessao_helper.mjs';
 
 const pasta = dirname(fileURLToPath(import.meta.url));
 const db = new PGlite();
@@ -14,22 +15,23 @@ const joao = '30000000-0000-4000-8000-000000000002';
 const ausente = '90000000-0000-4000-8000-000000000099';
 
 async function como(usuario, fn) {
+  const sessao = await criarSessaoAtiva(db, usuario);
   await db.exec('SET ROLE authenticated');
-  await db.query("SELECT set_config('request.jwt.claim.sub', $1, false)", [usuario]);
+  await definirClaims(db, usuario, sessao);
   try { return await fn(); }
   finally {
     await db.exec('RESET ROLE');
-    await db.query("SELECT set_config('request.jwt.claim.sub', '', false)");
+    await limparClaims(db);
   }
 }
 
 async function comoPapel(papel, sub, fn) {
   await db.exec(`SET ROLE ${papel}`);
-  await db.query("SELECT set_config('request.jwt.claim.sub', $1, false)", [sub]);
+  await definirClaims(db, sub || null);
   try { return await fn(); }
   finally {
     await db.exec('RESET ROLE');
-    await db.query("SELECT set_config('request.jwt.claim.sub', '', false)");
+    await limparClaims(db);
   }
 }
 
@@ -46,7 +48,7 @@ before(async () => {
   await db.exec(await readFile(resolve(pasta, '../migrations/0001_fundacao.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../seed.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0002_cid10.sql'), 'utf8'));
-  for (const file of ['0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql'])
+  for (const file of ['0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql','0009_sessao_inatividade.sql'])
     await db.exec(await readFile(resolve(pasta, '../migrations', file), 'utf8'));
 });
 after(async () => db.close());
@@ -96,8 +98,8 @@ test('achados não permite DML direto nem forja autor ou unidade pela RPC', asyn
       VALUES($1,$2,'10000000-0000-4000-8000-000000000001','I10','doenca','nao_se_aplica','ativo')`, [maria, obstetricia]));
     await assert.rejects(db.query("UPDATE public.achados SET observacao='forjado'"));
     await assert.rejects(db.query('DELETE FROM public.achados'));
-    await registrar(cardio, maria, 'I10');
   });
+  await registrar(cardio, maria, 'I10');
   const row = (await db.query('SELECT autor_id,unidade_id,especialidade FROM public.achados ORDER BY criado_em DESC LIMIT 1')).rows[0];
   assert.equal(row.autor_id, cardio);
   assert.equal(row.unidade_id, '10000000-0000-4000-8000-000000000002');

@@ -16,6 +16,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
+from sessao_atividade import registrar_atividade
 
 sys.stdout.reconfigure(encoding='utf-8')
 WEB = Path(__file__).resolve().parent.parent
@@ -55,6 +56,7 @@ def chamar(caminho, corpo, token=None):
 def rpc(email, nome, **args):
     """rpc direto no banco, como o usuário: a referência contra a qual a tela é conferida."""
     sessao = chamar('/auth/v1/token?grant_type=password', {'email': email, 'password': senha_de(email)})
+    registrar_atividade(sessao['access_token'])
     return chamar(f'/rest/v1/rpc/{nome}', args, sessao['access_token'])
 
 

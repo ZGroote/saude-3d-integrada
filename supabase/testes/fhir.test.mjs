@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import test, { before, after } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
+import { criarSessaoAtiva, definirClaims, limparClaims } from './sessao_helper.mjs';
 
 const pasta=dirname(fileURLToPath(import.meta.url));
 const db=new PGlite();
@@ -24,17 +25,18 @@ let condicaoComAncora;
 let condicaoSemAncora;
 
 async function como(usuario,fn){
+  const sessao=await criarSessaoAtiva(db,usuario);
   await db.exec('SET ROLE authenticated');
-  await db.query("SELECT set_config('request.jwt.claim.sub',$1,false)",[usuario]);
+  await definirClaims(db,usuario,sessao);
   try{return await fn();}
-  finally{await db.exec('RESET ROLE');await db.query("SELECT set_config('request.jwt.claim.sub','',false)");}
+  finally{await db.exec('RESET ROLE');await limparClaims(db);}
 }
 
 before(async()=>{
   await db.exec(await readFile(resolve(pasta,'shim_auth.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../migrations/0001_fundacao.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../seed.sql'),'utf8'));
-  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql'])
+  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql','0009_sessao_inatividade.sql'])
     await db.exec(await readFile(resolve(pasta,'../migrations',file),'utf8'));
 });
 after(async()=>db.close());

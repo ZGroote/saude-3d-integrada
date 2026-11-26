@@ -47,7 +47,8 @@ gestacoes, chamadas = [], []
 
 def jwt(email):
     parte = lambda d: base64.urlsafe_b64encode(json.dumps(d).encode()).decode().rstrip('=')
-    return f"{parte({'alg': 'HS256', 'typ': 'JWT'})}.{parte({'sub': email, 'email': email, 'exp': int(time.time()) + 3600, 'role': 'authenticated'})}.falso"
+    sessao = '00000000-0000-4000-8000-' + ('000000000001' if email == 'obstetra@falso.invalid' else '000000000002')
+    return f"{parte({'alg': 'HS256', 'typ': 'JWT'})}.{parte({'sub': email, 'email': email, 'session_id': sessao, 'exp': int(time.time()) + 3600, 'role': 'authenticated'})}.ZmFsc28"  # 'falso' em base64url: getClaims() decodifica a assinatura
 
 
 def usuario(email):
@@ -153,6 +154,8 @@ class SupabaseFalso(BaseHTTPRequestHandler):
     def do_POST(self):
         caminho = urlparse(self.path).path
         corpo = json.loads(self.rfile.read(int(self.headers.get('content-length') or 0)) or b'{}')
+        if caminho == '/rest/v1/rpc/registrar_atividade_sessao':
+            return self.responder(200, True)
         if caminho == '/auth/v1/token':
             email = corpo.get('email') or corpo.get('refresh_token')
             if email not in USUARIOS:
@@ -396,7 +399,8 @@ def com_app(testar, manipulador=SupabaseFalso):
     threading.Thread(target=falso.serve_forever, daemon=True).start()
     porta = porta_livre()
     ambiente = {**os.environ, 'NEXT_PUBLIC_SUPABASE_URL': f'http://127.0.0.1:{falso.server_port}',
-                'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY': 'chave-falsa', 'SESSAO_SEGREDO': 'segredo-falso-so-para-este-teste-0123456789'}
+                'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY': 'chave-falsa', 'SUPABASE_SECRET_KEY': 'chave-secreta-falsa',
+                'SESSAO_SEGREDO': 'segredo-falso-so-para-este-teste-0123456789'}
     # o cache do dev guarda o endereço do Supabase dentro do código: começa e termina limpo
     shutil.rmtree(cache, ignore_errors=True)
     saida = tempfile.TemporaryFile()

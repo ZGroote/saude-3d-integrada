@@ -51,9 +51,9 @@ export async function proxy(request: NextRequest) {
   const rotaAtividade = request.nextUrl.pathname === "/api/sessao/atividade";
   const rotaProtegida = request.nextUrl.pathname.startsWith("/pacientes") || request.nextUrl.pathname.startsWith("/importar");
   const requerLogin = rotaProtegida || rotaAtividade;
-  if (requerLogin && process.env.NODE_ENV === "production" && !process.env.SESSAO_SEGREDO) {
+  if (requerLogin && process.env.NODE_ENV === "production" && (!process.env.SESSAO_SEGREDO || !process.env.SUPABASE_SECRET_KEY)) {
     return cachePrivado(NextResponse.json(
-      { erro: "Configuração de segurança ausente: defina SESSAO_SEGREDO no servidor." }, { status: 500 },
+      { erro: "Configuração de segurança ausente no servidor." }, { status: 500 },
     ), true);
   }
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;

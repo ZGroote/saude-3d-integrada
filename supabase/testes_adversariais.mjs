@@ -3,16 +3,18 @@
 // Qualquer resposta bem-sucedida com dados ou qualquer gravação é uma falha a reportar.
 // Testes limitados à API pública PostgREST/Auth/Storage; sem SQL privilegiado ou migrações.
 // Toda informação enviada é sintética; nunca imprimir credenciais, tokens ou corpos de resposta.
-// Inventário conferido em supabase/migrations/0001_fundacao.sql a 0005_fhir.sql:
+// 0009: login sem atividade não acessa leituras de paciente; authenticated/anon não registram atividade.
+// Inventário conferido em supabase/migrations/0001_fundacao.sql a 0009_sessao_inatividade.sql:
 // RPC: minha_unidade, eh_admin, abrir_prontuario, buscar_pacientes, cadastrar_paciente,
 // vincular_paciente, encerrar_vinculo, buscar_cid10, registrar_achado, listar_achados,
 // historico_achado, calcular_sigilo_condicao_gestacao, registrar_gestacao,
 // registrar_condicao_gestacao, encerrar_gestacao, registrar_nascimento, listar_gestacoes,
 // historico_gestacional_crianca, iniciar_importacao, importar_paciente_fhir,
-// importar_condicao_fhir, importar_evento_fhir, concluir_importacao, listar_eventos.
-// Tabelas (15): unidades, perfis, pacientes, vinculos, auditoria, cid10, cid10_sigilo, achados,
+// importar_condicao_fhir, importar_evento_fhir, concluir_importacao, listar_eventos, normalizar_ancora,
+// registrar_atividade_sessao, sessao_ativa.
+// Tabelas: unidades, perfis, pacientes, vinculos, auditoria, cid10, cid10_sigilo, achados,
 // gestacoes, condicoes_gestacao, nascimentos, importacoes_fhir, eventos_clinicos,
-// paciente_fhir, bodysite_estrutura.
+// paciente_fhir, bodysite_estrutura, atlas_malhas, sessoes_atividade.
 
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
@@ -23,13 +25,20 @@ const ler = (f) => Object.fromEntries(readFileSync(new URL(f, import.meta.url), 
   .split(/\r?\n/).filter((l) => l.includes('='))
   .map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1)]));
 const env = ler('./.env');
-const senhas = ler('./.env.demo');
+let envApp = {};
+try { envApp = ler('../web/.env.local'); } catch (e) { if (e.code !== 'ENOENT') throw e; }
 const BASE = 'https://zmrxskzokpbedmvikrvc.supabase.co';
 const KEY = env.SUPABASE_PUBLISHABLE_KEY ?? 'sb_publishable_flRzSCRnQhQ1ptqC3KFzdA_ePN2J6N0';
+if (!envApp.SUPABASE_SECRET_KEY)
+  throw new Error('SUPABASE_SECRET_KEY ausente em web/.env.local; testes adversariais exigem registrar atividade via service_role.');
+const senhas = ler('./.env.demo');
+const service = createClient(BASE, envApp.SUPABASE_SECRET_KEY,
+  { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } });
 const MARIA = '30000000-0000-4000-8000-000000000001';
 const AUSENTE = 'ffffffff-ffff-4fff-8fff-ffffffffffff';
 const TABELAS = ['unidades','perfis','pacientes','vinculos','auditoria','cid10','cid10_sigilo','achados',
-  'gestacoes','condicoes_gestacao','nascimentos','importacoes_fhir','eventos_clinicos','paciente_fhir','bodysite_estrutura'];
+  'gestacoes','condicoes_gestacao','nascimentos','importacoes_fhir','eventos_clinicos','paciente_fhir',
+  'bodysite_estrutura','atlas_malhas','sessoes_atividade'];
 const RPC_ANON = {
   minha_unidade: {}, eh_admin: {}, abrir_prontuario: { p_paciente: MARIA },
   buscar_pacientes: { p_texto: null },
@@ -48,6 +57,8 @@ const RPC_ANON = {
   importar_condicao_fhir: { p_importacao: AUSENTE, p_paciente: AUSENTE, p_fhir_id: 'probe-condicao', p_cid10: 'I10', p_ancora: null, p_status: 'ativo', p_inicio: '2026-01-01' },
   importar_evento_fhir: { p_importacao: AUSENTE, p_paciente: AUSENTE, p_fhir_id: 'probe-evento', p_tipo: 'Observation', p_data: null, p_codigo: null, p_descricao: null, p_valor: null },
   concluir_importacao: { p_importacao: AUSENTE, p_erros: [] }, listar_eventos: { p_paciente: MARIA },
+  normalizar_ancora: { p_ancora: null, p_sexo: 'feminino' },
+  registrar_atividade_sessao: { p_sessao: AUSENTE, p_usuario: AUSENTE }, sessao_ativa: {},
 };
 const tentativas = [];
 const falhas = [];
@@ -65,7 +76,18 @@ async function login(email) {
   const c = api();
   const { data, error } = await c.auth.signInWithPassword({ email, password: senhas[email] });
   if (error || !data?.session?.access_token) throw new Error('login de teste indisponível');
-  return { client: c, token: data.session.access_token };
+  const { data: claimsData, error: claimsError } = await c.auth.getClaims();
+  const claims = claimsData?.claims;
+  if (claimsError || typeof claims?.session_id !== 'string' || typeof claims?.sub !== 'string')
+    throw new Error('JWT de teste sem session_id/sub; atividade não registrada');
+  return { client: c, token: data.session.access_token, claims };
+}
+async function ativarSessao(usuario) {
+  const { data, error } = await service.rpc('registrar_atividade_sessao', {
+    p_sessao: usuario.claims.session_id, p_usuario: usuario.claims.sub,
+  });
+  if (error || data !== true)
+    throw new Error(`registro de atividade falhou${error?.code ? ` (${error.code})` : ''}; confira a migração 0009 e a chave service_role.`);
 }
 function b64url(obj) { return Buffer.from(JSON.stringify(obj)).toString('base64url'); }
 async function raw(path, { token, method = 'GET', body, headers = {} } = {}) {
@@ -89,15 +111,39 @@ let prof;
 try { prof = await login('pediatria@saude3d.invalid'); }
 catch { console.error('Não foi possível autenticar o usuário sintético de Pediatria; testes dependentes não executados.'); }
 
+// 2. Uma sessão Auth válida, mas sem atividade registrada, continua sem acesso ao prontuário.
+if (prof) {
+  for (const [fn,args] of [
+    ['abrir_prontuario',{p_paciente:MARIA}], ['listar_achados',{p_paciente:MARIA}],
+    ['buscar_pacientes',{p_texto:null}], ['listar_gestacoes',{p_mae:MARIA}],
+    ['listar_eventos',{p_paciente:MARIA}],
+    ['registrar_achado',{...RPC_ANON.registrar_achado}],
+  ]) {
+    try {
+      const {data,error}=await prof.client.rpc(fn,args);
+      registrar(`Pediatria sem atividade RPC ${fn}`,error?'erro':'2xx',Boolean(error)||vazio(data),error?'negada':vazio(data)?'':'retornou dado ou gravou');
+    } catch { registrar(`Pediatria sem atividade RPC ${fn}`,'exceção',true); }
+  }
+  for (const [papel,cliente] of [['authenticated',prof.client],['anon',anon]]) {
+    try {
+      const {data,error}=await cliente.rpc('registrar_atividade_sessao',{
+        p_sessao:prof.claims.session_id,p_usuario:prof.claims.sub,
+      });
+      registrar(`${papel} não executa registrar_atividade_sessao`,error?'erro':'2xx',Boolean(error)||data===false,error?'negada':data===false?'':'função executou');
+    } catch { registrar(`${papel} não executa registrar_atividade_sessao`,'exceção',true); }
+  }
+  await ativarSessao(prof);
+}
+
 const unidadeProf = prof ? (await api(prof.token).rpc('minha_unidade')).data : null;
 const ESCOPO_LEITURA = {
   unidades: (l) => l.id === unidadeProf,
   perfis: (l) => l.unidade_id === unidadeProf,
   cid10: () => true,
-  bodysite_estrutura: () => true,
+  bodysite_estrutura: () => true, atlas_malhas: () => true,
 };
 
-// 2. CRUD direto em cada tabela, anon e profissional.
+// 3. CRUD direto em cada tabela, anon e profissional.
 for (const [papel, token] of [['anon', null], ...(prof ? [['profissional', prof.token]] : [])]) {
   for (const tabela of TABELAS) {
     // leituras previstas (0001/0002/0006): referência aberta a authenticated; unidades e perfis só da própria unidade
