@@ -12,6 +12,7 @@ import json
 import struct
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import nibabel as nib
@@ -27,6 +28,9 @@ DENVER_STL = DENVER_DIR / "bruto" / "Final 3D STL Models-stl"
 DENVER_CATALOG = DENVER_DIR / "catalogo_denver.csv"
 TC_PATH = DENVER_DIR / "bruto" / "tc_alinhada.nii.gz"
 MASK_DIR = ROOT / "hra" / "totalseg" / "bruto" / "saida"
+MULTILABEL_CANDIDATES = [ROOT / "hra" / "totalseg" / "bruto" / "fast" / "segmentacao.nii.gz",
+                         ROOT / "hra" / "totalseg" / "bruto" / "fast" / "segmentacao.nii"]
+ACTIVE_MULTILABEL = None
 HRA_DIR = ROOT / "atlas" / "hra-f" / "1.10-1"
 DECODER = OUT / "decoder_glb.mjs"
 TRANSFORMS_PATH = OUT / "transformacoes.json"
@@ -39,6 +43,7 @@ MASK_A = {
     "hip_right": "Pelvis Right",
     "sacrum": "Sacrum",
 }
+A_FIT_LABELS = tuple(name for name in MASK_A if name != "sacrum")
 FIT_PAIRS_B = [
     (f"vertebrae_L{i}", f"VH_F_lumbar_vertebra_{i}",) for i in range(1, 6)
 ]
@@ -176,6 +181,45 @@ def mask_to_mesh(mask: np.ndarray, affine: np.ndarray) -> trimesh.Trimesh:
     verts -= 1.0
     world = (np.c_[verts, np.ones(len(verts))] @ affine.T)[:, :3]
     return trimesh.Trimesh(vertices=world, faces=faces, process=False)
+
+
+def load_multilabel():
+    candidates = [ACTIVE_MULTILABEL] if ACTIVE_MULTILABEL is not None else MULTILABEL_CANDIDATES
+    path = next((p for p in candidates if p is not None and p.exists()), None)
+    if path is None:
+        return None
+    image = nib.load(str(path))
+    label_map = {}
+    for extension in image.header.extensions:
+        try:
+            root = ET.fromstring(extension.get_content())
+        except (ET.ParseError, ValueError, TypeError):
+            continue
+        for elem in root.findall(".//LabelTable/Label"):
+            key = elem.attrib.get("Key")
+            if key is not None and elem.text:
+                label_map[int(key)] = elem.text.strip()
+        if label_map:
+            break
+    if not label_map:
+        raise ValueError(f"NIfTI multilabel sem tabela LabelTable no header: {path}")
+    data = np.asanyarray(image.dataobj)
+    ids, counts = np.unique(data, return_counts=True)
+    count_by_id = {int(i): int(n) for i, n in zip(ids, counts)}
+    nonempty = {label_map[i]: count_by_id.get(i, 0) for i in label_map if count_by_id.get(i, 0) > 0}
+    return {"path": path, "image": image, "data": data, "label_map": label_map,
+            "count_by_id": count_by_id, "nonempty": nonempty}
+
+
+def mesh_from_label(multilabel: dict, name: str) -> trimesh.Trimesh:
+    reverse = {label: idx for idx, label in multilabel["label_map"].items()}
+    if name not in reverse:
+        raise KeyError(f"Label ausente no header multilabel: {name}")
+    label_id = reverse[name]
+    count = multilabel["count_by_id"].get(label_id, 0)
+    if count == 0:
+        raise ValueError(f"Label sem voxels na multilabel: {name} (ID {label_id})")
+    return mask_to_mesh(multilabel["data"] == label_id, multilabel["image"].affine)
 
 
 def denver_meshes() -> dict[str, trimesh.Trimesh]:
@@ -364,7 +408,7 @@ def pair_error_table(pairs, matrix):
 
 def create_pending(missing: list[str]):
     transforms = {
-        "status": "aguardando máscaras TotalSegmentator; nenhuma transformação real calculada",
+        "status": "aguardando multilabel TotalSegmentator; nenhuma transformação real calculada",
         "synthetic_test": {"status": "passed", "rigid_mean_mm": 3.8914563487556367e-07,
                            "similarity_mean_mm": 3.7361574362546644e-07,
                            "similarity_scale": [1.2, 1.2, 1.2],
@@ -373,7 +417,8 @@ def create_pending(missing: list[str]):
                            "stage_a_sign_combinations": 8, "held_out_sacrum_mean_mm": 0.0,
                            "stage_b_multistart_anisotropic_mean_mm": 1.5969833767196247e-07,
                            "marching_cubes_faces": 1800, "gltf_extent_error_mm": 4.470348358154297e-06},
-        "stage_a": {"status": "aguardando", "required_masks": list(MASK_A), "missing_masks": missing,
+        "stage_a": {"status": "aguardando", "source_multilabel_candidates": [str(p.relative_to(ROOT)) for p in MULTILABEL_CANDIDATES],
+                    "required_labels": list(MASK_A), "missing_labels": missing,
                     "fit_pairs": ["femur_left", "femur_right", "hip_left", "hip_right"],
                     "held_out_validation": "sacrum", "criterion_sacrum_mean_mm": 3.0},
         "stage_b": {"status": "aguardando etapa A aprovada", "atlas": "atlas/hra-f/1.10-1",
@@ -382,10 +427,10 @@ def create_pending(missing: list[str]):
     }
     TRANSFORMS_PATH.write_text(json.dumps(transforms, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     report = ["# Alinhamento Denver → TC → HRA", "",
-              "**Status: aguardando máscaras TotalSegmentator. Nenhum ICP real foi executado.**", "",
-              "| Máscara requerida para etapa A | Estado |", "|---|---|"]
-    report += [f"| `{name}.nii.gz` | {'ausente' if name in missing else 'disponível'} |" for name in MASK_A]
-    report += ["", "Execute da raiz do repositório: `python hra/alinhar/alinhar.py`. O pipeline só começa quando femur_left/right, hip_left/right e sacrum estiverem presentes.",
+              "**Status: aguardando NIfTI multilabel TotalSegmentator. Nenhum ICP real foi executado.**", "",
+              "| Label requerida para etapa A | Estado |", "|---|---|"]
+    report += [f"| `{name}` | {'ausente' if name in missing else 'disponível'} |" for name in MASK_A]
+    report += ["", "Execute da raiz do repositório: `python hra/alinhar/alinhar.py`. O pipeline lê `hra/totalseg/bruto/fast/segmentacao.nii[.gz]`, extrai IDs do XML `LabelTable` no header e só começa quando femur_left/right, hip_left/right e sacrum estiverem não vazios.",
                "", "A etapa A ajusta os quatro ossos emparelhados e valida o sacro fora do ajuste; se a média bidirecional do sacro não ficar abaixo de 3 mm, a etapa B é interrompida.",
                "", "A etapa B usa vértebras L1–L5/T10–T12, sacro, fêmures e ilia (proxy parcial dos quadris) no ajuste; rins compostos são reservados para validação fora do ajuste. Fígado, baço e bexiga sem superfície HRA integral ficam listados como não pareáveis.",
                "", "## Teste sintético (sem máscaras reais)", "",
@@ -401,26 +446,50 @@ def create_pending(missing: list[str]):
     REPORT_PATH.write_text("\n".join(report), encoding="utf-8")
 
 
-def run_real():
+def run_real(mask_dir_override: Path | None = None):
     if not TC_PATH.exists():
         raise FileNotFoundError(f"TC alinhada não encontrada: {TC_PATH}")
-    expected = set(MASK_A) | {p[0] for p in FIT_PAIRS_B} | {p[0] for p in HOLDOUT_PAIRS_B}
-    missing_a = [name for name in MASK_A if not (MASK_DIR / f"{name}.nii.gz").exists()]
+    multilabel = load_multilabel()
+    if multilabel is None and mask_dir_override is None:
+        create_pending(list(MASK_A))
+        print("NIfTI multilabel ou --mask-dir nÃ£o fornecido/encontrado.")
+        return 2
+    label_ids = {name: idx for idx, name in multilabel["label_map"].items()} if multilabel else {}
+    def label_present(name):
+        if multilabel is not None:
+            return name in label_ids and multilabel["count_by_id"].get(label_ids[name], 0) > 0
+        return (mask_dir_override / f"{name}.nii.gz").exists()
+    def get_mesh(name):
+        if multilabel is not None:
+            return mesh_from_label(multilabel, name)
+        return mask_mesh(mask_dir_override / f"{name}.nii.gz")
+    missing_a = [name for name in A_FIT_LABELS if not label_present(name)]
     if missing_a:
         create_pending(missing_a)
         print("Aguardando máscaras etapa A:", ", ".join(missing_a))
         return 2
+    if not label_present("sacrum"):
+        create_pending(["sacrum"])
+        print("Aguardando máscara de validação independente: sacrum")
+        return 2
 
-    tc_image = nib.load(str(TC_PATH))
     denver = denver_meshes()
-    target_a = {MASK_A[name]: mask_mesh(MASK_DIR / f"{name}.nii.gz") for name in MASK_A}
+    target_a = {MASK_A[name]: get_mesh(name) for name in MASK_A}
     winner_a, sign_results, _, _ = fit_a(denver, target_a)
     matrix_a = np.asarray(winner_a["matrix"])
     fit_pairs = [(name, denver[name], target_a[name]) for name in
                  ("Femur Left", "Femur Right", "Pelvis Left", "Pelvis Right")]
     fit_error_a = pair_error_table(fit_pairs, matrix_a)
     sacrum_error = pair_error_table([("Sacrum", denver["Sacrum"], target_a["Sacrum"])], matrix_a)["Sacrum"]
-    transforms = {"stage_a": {"status": "completed", "source": "Denver STL mm", "target": "TC NIfTI world mm",
+    source_meta = ({"path": str(multilabel["path"].relative_to(ROOT)),
+                                         "shape_ijk": list(multilabel["image"].shape),
+                                         "affine_ijk_to_world_mm": multilabel["image"].affine.tolist(),
+                                         "labels_in_header": len(multilabel["label_map"]),
+                                         "nonempty_labels": len(multilabel["nonempty"]),
+                                         "nonempty_label_ids": {str(i): multilabel["label_map"].get(i, f"id_{i}") for i in multilabel["nonempty"]}}
+                   if multilabel is not None else {"mask_dir": str(mask_dir_override.relative_to(ROOT))})
+    transforms = {"source_multilabel": source_meta,
+                  "stage_a": {"status": "completed", "source": "Denver STL mm", "target": "TC NIfTI world mm",
                                "matrix_4x4": matrix_a.tolist(), "signs": winner_a["signs"],
                                "iterations": winner_a["iterations"], "sign_search": sign_results,
                                "fit_errors_by_structure": fit_error_a,
@@ -440,12 +509,12 @@ def run_real():
     available_fit, unavailable = [], []
     for mask_name, hra_names in FIT_PAIRS_B:
         names = [hra_names] if isinstance(hra_names, str) else hra_names
-        if (MASK_DIR / f"{mask_name}.nii.gz").exists() and all(n in hra_mesh_map for n in names):
+        if label_present(mask_name) and all(n in hra_mesh_map for n in names):
             hra_target = merge_meshes([hra_mesh_map[n] for n in names])
-            available_fit.append((mask_name, mask_mesh(MASK_DIR / f"{mask_name}.nii.gz"), hra_target, names))
+            available_fit.append((mask_name, get_mesh(mask_name), hra_target, names))
         else:
             unavailable.append({"mask": mask_name, "hra_meshes": names,
-                                "mask_present": (MASK_DIR / f"{mask_name}.nii.gz").exists()})
+                                "mask_present": label_present(mask_name)})
     if len(available_fit) < 3:
         transforms["stage_b"] = {"status": "skipped: fewer than 3 paired fit structures", "unavailable": unavailable}
         write_real_outputs(transforms, "ETAPA A aprovada; etapa B não executada: menos de três pares HRA/TC utilizáveis.")
@@ -464,9 +533,8 @@ def run_real():
     holdout_errors = {}
     holdout_pairs_used = []
     for mask_name, hra_names, note in HOLDOUT_PAIRS_B:
-        mask_path = MASK_DIR / f"{mask_name}.nii.gz"
-        if mask_path.exists() and all(n in hra_mesh_map for n in hra_names):
-            tc_mesh = mask_mesh(mask_path)
+        if label_present(mask_name) and all(n in hra_mesh_map for n in hra_names):
+            tc_mesh = get_mesh(mask_name)
             hra_mesh = merge_meshes([hra_mesh_map[n] for n in hra_names])
             holdout_pairs_used.append({"mask": mask_name, "hra_meshes": hra_names, "note": note})
             holdout_errors[mask_name] = {
@@ -626,13 +694,38 @@ def test_synthetic():
 
 
 def main():
+    global ACTIVE_MULTILABEL
     parser = argparse.ArgumentParser()
     parser.add_argument("--teste-sintetico", action="store_true")
+    parser.add_argument("--multilabel", type=Path,
+                        help="NIfTI multilabel TotalSegmentator; caminho relativo à raiz ou absoluto")
+    parser.add_argument("--mask-dir", type=Path,
+                        help="Diretório de máscaras NIfTI separadas, compatibilidade com saída antiga")
+    parser.add_argument("--tc", type=Path,
+                        help="NIfTI de referência; deve compartilhar o referencial mundo das máscaras")
     args = parser.parse_args()
     if args.teste_sintetico:
         test_synthetic()
         return 0
-    return run_real()
+    if args.multilabel:
+        ACTIVE_MULTILABEL = args.multilabel if args.multilabel.is_absolute() else ROOT / args.multilabel
+    elif args.mask_dir:
+        # The separate-mask loader is retained for backward compatibility.
+        global MASK_DIR
+        MASK_DIR = args.mask_dir if args.mask_dir.is_absolute() else ROOT / args.mask_dir
+    # Prevent accidental use of the known-invalid Denver fast result.
+    if ACTIVE_MULTILABEL is None and not args.mask_dir:
+        ACTIVE_MULTILABEL = ROOT / "hra" / "nlm" / "bruto" / "segmentacao.nii.gz"
+        if not ACTIVE_MULTILABEL.exists():
+            ACTIVE_MULTILABEL = ROOT / "hra" / "nlm" / "bruto" / "segmentacao.nii"
+    if args.tc:
+        global TC_PATH
+        TC_PATH = args.tc if args.tc.is_absolute() else ROOT / args.tc
+    mask_dir = args.mask_dir if args.mask_dir and args.mask_dir.is_absolute() else (
+        ROOT / args.mask_dir if args.mask_dir else None)
+    if mask_dir is not None and not mask_dir.exists():
+        raise FileNotFoundError(f"--mask-dir nÃ£o existe: {mask_dir}")
+    return run_real(mask_dir)
 
 
 if __name__ == "__main__":
