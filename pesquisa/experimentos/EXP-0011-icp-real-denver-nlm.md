@@ -11,7 +11,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `fdb9441`, `8692651`, `f6935e5`
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `em execução`
+- **Situação:** `concluído — reprovado no critério de 3 mm`
 
 ## 2. Problema
 Alinhar os modelos ósseos STL da University of Denver às superfícies segmentadas da TC original da NLM (Etapa A) e, posteriormente, a TC da NLM ao atlas HRA Female `1.10-1` (Etapa B).
@@ -40,26 +40,19 @@ ICP rígido com busca dos 8 sinais de eixos, extração de superfícies das más
 Erro médio simétrico de superfície no `Sacrum` (*holdout*) **`< 3 mm`**.
 
 ## 8. Resultados
-Resultados já registrados em `hra/alinhar/RELATORIO.md` e `hra/alinhar/transformacoes.json` (Etapa A sobre `fast/segmentacao.nii.gz`):
-- **Sinais vencedores:** `[1, 1, 1]`
-- **Erros de ajuste (média / P95):**
-  - `Femur Left`: `3.344 mm` / `6.167 mm`
-  - `Femur Right`: `3.243 mm` / `5.675 mm`
-  - `Pelvis Left`: `2.816 mm` / `4.926 mm`
-  - `Pelvis Right`: `2.718 mm` / `4.848 mm`
-- **Validação independente (`Sacrum` holdout):** média **`3.990 mm`**, P95 **`10.845 mm`**.
-- **Etapa B (NLM CT → HRA):** não executada — registro em `hra/alinhar/transformacoes.json` (`stage_b.status`): `skipped: fewer than 3 paired fit structures`; `hra/alinhar/RELATORIO.md`: menos de três pares HRA/TC utilizáveis. Os artefatos `hra/alinhar/RELATORIO.md` e `transformacoes.json` ainda não estavam commitados quando este registro foi escrito.
+- **Rodada 1 (`--fast`, `hra/nlm/bruto/fast/segmentacao.nii.gz`, 2026-11-25):** sinais vencedores `[1, 1, 1]`; `Femur Left` `3,344 mm` (P95 `6,167 mm`), `Femur Right` `3,243 mm` (P95 `5,675 mm`), `Pelvis Left` `2,816 mm` (P95 `4,926 mm`), `Pelvis Right` `2,718 mm` (P95 `4,848 mm`), **`Sacrum` (holdout) `3,990 mm` (P95 `10,845 mm`)**. Etapa B não executada (`skipped: fewer than 3 paired fit structures` em `transformacoes.json`).
+- **Rodada 2 (resolução normal `1,5 mm`, `hra/nlm/bruto/saida/segmentacao.nii.gz`, commit `5ec1c34`, 2026-11-26):** sinais vencedores `[1, 1, 1]`; `Femur Left` `3,006 mm` (P95 `5,717 mm`), `Femur Right` `3,234 mm` (P95 `6,155 mm`), `Pelvis Left` `3,027 mm` (P95 `4,771 mm`), `Pelvis Right` `2,707 mm` (P95 `4,743 mm`), **`Sacrum NLM vs Denver Sacrum + Coccyx` (holdout) `3,785 mm` (P95 `9,602 mm`)**. *Mudança de método entre rodadas:* na Rodada 2 o comparador do holdout passou de `Sacrum` Denver para a união `Sacrum + Coccyx` Denver (o cóccix é separado nos STLs da Denver e incluído na máscara `sacrum` do TotalSegmentator); o limite `< 3 mm` não foi alterado.
 
 ## 9. Validação
-**Reprovado** no critério pré-definido (`3.990 mm >= 3 mm`). A matriz ajustada está marcada explicitamente como diagnóstica apenas (`criterion_failed_sacrum_holdout`).
+**Reprovado** no critério pré-definido (`< 3 mm`) em ambas as rodadas (`3,990 mm` na Rodada 1 `--fast` e `3,785 mm` na Rodada 2 em resolução normal). A matriz ajustada permanece marcada como diagnóstica apenas (`EXP-0011` não alterado retroativamente após o `EXP-0014`).
 
 ## 10. Limitações
-Segmentação de entrada gerada em modo `--fast` (3 mm); experimento em andamento para investigar causas do residual e etapas seguintes.
+Diferenças anatômicas/de segmentação residuais no sacro entre os STLs da Denver e a máscara do TotalSegmentator mantiveram o erro médio em ~3,8–4,0 mm.
 
 ## 11. Conclusão
-- **Observado:** na Etapa A sobre `--fast`, fêmures apresentaram média ~3,3 mm, pelve ~2,7–2,8 mm e o sacro *holdout* atingiu 3,990 mm (P95 10,845 mm), reprovando no critério `< 3 mm`.
-- **Interpretação:** a matriz diagnóstica da Etapa A não deve ser adotada como alinhamento aceito; a Etapa B permanece bloqueada até resolução do alinhamento A.
-- **Veredito da hipótese:** `em aberto` (critério da Etapa A sobre `--fast` **rejeitado**)
+- **Observado:** tanto sobre `--fast` (`3,990 mm`) quanto sobre resolução normal (`3,785 mm`), o sacro *holdout* permaneceu acima do limite `< 3 mm`.
+- **Interpretação:** a hipótese de alinhamento rígido `< 3 mm` foi rejeitada sob esse critério; a avaliação de aceitação por finalidade passou a ser conduzida separadamente no `EXP-0014` (mantendo o `EXP-0011` reprovado).
+- **Veredito da hipótese:** `rejeitada` (critério `< 3 mm` não atingido)
 
 ## 12. Próximos passos
 Investigar origem do erro residual no sacro (ex.: resolução `--fast` de 3 mm vs. resolução completa, ou segmentação/diferença anatômica local).

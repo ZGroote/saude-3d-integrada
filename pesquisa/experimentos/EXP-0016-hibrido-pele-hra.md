@@ -9,7 +9,7 @@
 - **Agentes de IA:** Claude (protocolo), Codex (execução)
 - **Branch:** `etapa-1-fundacao`
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `concluído — congelado e não aceito`
 
 ## 2. Problema
 Na comparação F5 (`web/testes/capturas/f5/comparacao.html`), o corpo `vhf-f` (`EXP-0015`) tem esqueleto completo da doadora, mas pele com rosto real, braços cortados pelo campo da TC e degraus. O `hra-f` tem pele idealizada e completa e órgãos ricos (956 malhas), mas esqueleto remodelado que falhou no `EXP-0014`. A proposta é juntar a pele e os órgãos do HRA ao esqueleto da TC/Denver.
@@ -153,6 +153,17 @@ F4 considera as estruturas importadas VHF (malhas HRA permanecem inalteradas): `
 ## 9. Rastreabilidade
 - Protocolo: este arquivo (commit de registro).
 - Scripts: `hra/hibrido/construir.py`, `hra/hibrido/avaliar.py`.
+
+## 10. Conclusão
+- **Observado:** Rodada 1 foi invalidada por erro de leitura da quantização glTF (`KHR_mesh_quantization`); na Rodada 2 (com STLs originais), F1 reprovou em A (`76,6141%`) e B (`79,0022%`), F3 reprovou em A (`6` invasões) e B (`6` invasões), e F4 passou (`80/80`).
+- **Interpretação:** a interface entre esqueleto `vhf-f` e pele/órgãos HRA não atinge os critérios funcionais do `EXP-0014`; por decisão do usuário, o híbrido foi encerrado/congelado mantendo `hra-f/1.10-1` como atlas feminino do MVP e `atlas/hib-f/0.1-0` como rascunho local não publicado.
+- **Veredito da hipótese:** `rejeitada` (não aceito; linha congelada, sem validação clínica)
+
+## 11. Revisão
+- **Revisor:** não documentado
+- **Revisão humana:** capturas F5 geradas em `web/testes/capturas/f5-hibrido/` (aprovação humana pendente; linha congelada)
+- **Validação científica:** não documentado
+- **Validação clínica:** não realizada
 
 ## Decisão de encerramento (2026-11-26)
 Decisão do usuário após a revisão F5 e o resultado do `EXP-0016`: **manter o `hra-f/1.10-1` como atlas feminino do MVP e congelar a linha de pesquisa do corpo feminino**, dentro do teto de 5 dias úteis. Os pacotes `atlas/vhf-f/0.1-0` e `atlas/hib-f/0.1-0` ficam como rascunhos locais, não publicados e não aceitos (o `copiar-atlas` ignora rascunhos). As lacunas conhecidas do HRA (esqueleto remodelado, `EXP-0014`) continuam registradas. Sem validação clínica.

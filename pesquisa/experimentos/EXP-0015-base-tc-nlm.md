@@ -11,7 +11,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** não aplicável (pré-execução)
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `executado parcialmente; nao aceito nesta rodada`
+- **Situação:** `concluído — congelado e não aceito`
 
 ## 2. Problema
 No `EXP-0014` (rodada real, commit `5ec1c34`), a tentativa de usar o HRA como corpo base foi **NÃO ACEITA**: o HRA remodelado por ilustradores diverge na pelve, pernas e coluna lombar (joelho `23–25 mm`, cabeça do fêmur à pelve HRA `17–21 mm`, `32/164` fora da pele HRA aberta, `28/164` sobreposições), enquanto **Denver ↔ TC NLM** (mesma doadora e mesmo exame) encaixa em `~3–4 mm`. A consultoria externa (ChatGPT) aprovou a inversão de base, vetou deformação não rígida global e sugeriu um teto de **5 dias úteis**.
@@ -105,7 +105,7 @@ Esta subseccao preserva os resultados da Rodada 2; nao deve ser substituida pelo
 
 - F1 inicial: 2.426.192/2.480.533 vertices dentro (97,8093%). A mascara body tocava 1.607 voxels no limite superior da cabeca e 175 voxels na face RAS X positiva, no braco direito; estimativa regional 2,68% e 0,197%. As outras quatro faces sem contato. A localizacao dos vertices fora e aproximada; detalhes completos estao no diagnostico_EXP-0015.json da Rodada 2.
 - F3 v1 Rodada 2: 2.137 candidatos por caixas; 74 pares com malha aberta excluidos; 541 com sobreposicao; 289 pares >=2%. Profundidade estimada em grade 2 mm: 0 <=1,5 mm, 24 entre 1,5-3 mm e 265 >3 mm. Esses numeros sao preservados; a Rodada 3 tem novo manifesto source-unique e seus proprios resultados na secao 8.3.
-- F2 quadril na Rodada 2: folga superficial Denver femoral/cartilagem acetabular 0,019/0,025 mm; para superficie TotalSegmentator hip 0,038/0,097 mm. F2 joelho anterior: E 5,693 mm, D 4,948 mm. Cr?nio-C1 anterior: 3,350 mm.
+- F2 quadril na Rodada 2: folga superficial Denver femoral/cartilagem acetabular 0,019/0,025 mm; para superficie TotalSegmentator hip 0,038/0,097 mm. F2 joelho anterior: E 5,693 mm, D 4,948 mm. Crânio-C1 anterior: 3,350 mm.
 - Costelas-T2 a T9 apresentavam gaps bilaterais em torno de 8,6-14,5 mm; o diagnostico identificou ausencia de sublabels para cabeca/colo costal e processo transverso e registrou limitacao provavel da segmentacao TotalSegmentator, nao da transformacao Denver.
 - Interpretacao FOV/F1: contato na cabeca e braco direito e escapes nas malhas Denver distais; contacto do limite inferior com a mascara nao foi observado, embora os pes estejam proximos. F4 da Rodada 2 era 156/156 antes da correcao da classificacao dos ossos medianos.
 
@@ -248,7 +248,7 @@ Aplicada a particao por campo fonte do manifesto somente aos 237 pares que ja sa
 
 Esta estratificacao e descritiva: nao muda o universo, o limite de 2%, a regra de profundidade >3 mm ou a avaliacao PASS/REPROVOU. Dados completos em `diagnostico_EXP-0015.json`, campo `f3_depth_and_rankings.source_stratification`.
 
-## 8.5 Analise por fonte e pacote F5 provis?rio (2026-11-26)
+## 8.5 Analise por fonte e pacote F5 provisório (2026-11-26)
 
 ### Estratos F3 v2
 Sem novo criterio, as 237 invasoes ja contabilizadas em F3 v2 se dividem em **133 Denver-Denver**, **90 TotalSegmentator-TotalSegmentator** e **14 entre fontes**. Os dois primeiros estratos medem consistencia interna da fonte; apenas o terceiro mede diretamente a integracao. Todos os 14 pares entre fontes, com volume medio estimado e profundidade, estao registrados na secao 8.4 e em `diagnostico_EXP-0015.json`; a estratificacao nao altera nenhum status anterior.
@@ -287,7 +287,7 @@ Dependência de confirmação prévia da licença aberta da task `'body'`, da qu
 ## 11. Conclusão
 - **Observado:** licença `Apache-2.0` da task `body` confirmada; corpo-base foi exportado com fonte única, incluindo sacro/S1 TotalSegmentator e membros inferiores Denver.
 - **Interpretação:** os resultados atuais não sustentam aceitação; F1 abaixo do limite e falhas em articulações/alinhamento costovertebral. O protocolo e limites não foram afrouxados.
-- **Veredito da hipótese:** `não aceita nesta rodada; F3/F5 e quadril seguem lacunas`
+- **Veredito da hipótese:** `rejeitada` (não aceita; linha de pesquisa congelada mantendo `hra-f/1.10-1` no MVP e `atlas/vhf-f/0.1-0` apenas como rascunho local não publicado)
 
 ## 12. Próximos passos
 1. Investigar F1 e as separações funcionais que falharam sem deformação global.

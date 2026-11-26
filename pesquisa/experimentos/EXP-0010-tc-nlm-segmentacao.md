@@ -11,7 +11,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** `f6935e5`
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `em execução`
+- **Situação:** `concluído`
 
 ## 2. Problema
 A TC da Denver falhou por não conter Unidades Hounsfield (HU) reais (`EXP-0009`). Além disso, o volume de corpo inteiro da NLM excede a capacidade de memória/VRAM da GTX 1650 (4 GB) se segmentado de uma só vez.
@@ -43,20 +43,19 @@ Definidos em `hra/nlm/verificar_segmentacao.py`:
 - `vertebrae_L1`..`vertebrae_L5 > 0 cm³`
 
 ## 8. Resultados
-Até o momento nos arquivos versionados (`hra/alinhar/transformacoes.json` e `hra/alinhar/RELATORIO.md`):
-- Volume multilabel `--fast` gerado em `hra/nlm/bruto/fast/segmentacao.nii.gz` com `shape_ijk = [320, 320, 1156]`, voxel `1,5 mm` isotrópico (`affine_ijk_to_world_mm` origem `[-239.25, -239.25, -1771.0]`), `117` rótulos no cabeçalho e **`114` rótulos não vazios** (incluindo fêmures, quadris, sacro, L1–L5, T1–T12, C1–C7, fígado, rins, coração, aorta e pulmões).
-- Execução `--fast` reportada como aprovada no critério anatômico; segmentação em alta resolução / etapas adicionais seguem em andamento.
+- **Rodada 1 (`--fast`, `3 mm`, commit `f6935e5`, 2026-11-25):** volume multilabel gerado em `hra/nlm/bruto/fast/segmentacao.nii.gz` (`shape_ijk = [320, 320, 1156]`, voxel `1,5 mm` isotrópico, `117` rótulos no cabeçalho e **`114` rótulos não vazios**). Passou no critério anatômico de `verificar_segmentacao.py`.
+- **Rodada 2 (resolução normal `1,5 mm`, usada no `EXP-0014` em `5ec1c34`, 2026-11-26):** volume multilabel gerado em `hra/nlm/bruto/saida/segmentacao.nii.gz`, utilizado como entrada oficial das rodadas `EXP-0014`, `EXP-0015` e `EXP-0016`. (Arquivo `segmentacao.nii.gz` é `gitignored`, existente localmente.)
 
 ## 9. Validação
-Verificação automatizada via `hra/nlm/verificar_segmentacao.py` (`criterio_anatomico=PASSOU` para `--fast`).
+Verificação automatizada via `hra/nlm/verificar_segmentacao.py` (`criterio_anatomico=PASSOU` para `--fast`) e uso direto na rodada `5ec1c34` (`EXP-0014`).
 
 ## 10. Limitações
-Execução atual documentada em modo `--fast` (3 mm) devido ao limite de 4 GB de VRAM da GTX 1650.
+Na GPU local de 4 GB (`GTX 1650`), o processamento de corpo inteiro exigiu particionamento craniocaudal em blocos sobrepostos.
 
 ## 11. Conclusão
-- **Observado:** a TC original da NLM foi montada em 1,5 mm e segmentada em 114 rótulos não vazios no modo `--fast`.
-- **Interpretação:** a segmentação `--fast` sobre a TC da NLM viabilizou o início do alinhamento real por ICP (`EXP-0011`); o experimento permanece em execução para etapas de maior resolução.
-- **Veredito da hipótese:** `em aberto` (`--fast` sustentada parcialmente)
+- **Observado:** a TC original da NLM foi montada em 1,5 mm e segmentada com sucesso tanto em `--fast` (114 rótulos não vazios) quanto em resolução normal (`hra/nlm/bruto/saida/segmentacao.nii.gz`).
+- **Interpretação:** o pipeline em blocos CPU+GPU superou a limitação da TC da Denver (`EXP-0009`) e produziu as segmentações usadas nos experimentos subsequentes (`EXP-0011`, `EXP-0014`, `EXP-0015`, `EXP-0016`).
+- **Veredito da hipótese:** `sustentada` (validada tecnicamente; sem validação clínica)
 
 ## 12. Próximos passos
 Concluir segmentação em alta resolução (se aplicável) e prosseguir com o alinhamento real em `EXP-0011`.

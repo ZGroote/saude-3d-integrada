@@ -27,8 +27,9 @@ A aplicação prevê autenticação de profissionais e consulta/registro de pron
 | `paciente_fhir` | `unidade_id`, `fhir_id`, `paciente_id`, `criado_em` | `supabase/migrations/0005_fhir.sql:33-40` |
 | `auditoria` | `autor_id`, `unidade_id`, `paciente_id`, `acao`, `criado_em` | `supabase/migrations/0001_fundacao.sql:42-49`; `paciente_id` passa a aceitar nulo em `supabase/migrations/0003_achados.sql:42` |
 | `cid10_sigilo` | prefixos CID e motivo/classificação para sigilo (pode revelar categorias sensíveis por associação) | `supabase/migrations/0003_achados.sql:7-14` |
+| `atlas_malhas` | catálogo de referência de `3.190` malhas publicadas (`bp3d-m/4.0-1`, `hra-f/1.10-1`), validação de âncora por sexo e sobrescrita de `sistema`/`lateralidade`/`estrutura` (`0008_endurecimento_piloto.sql`) | `supabase/migrations/0008_endurecimento_piloto.sql` |
 
-`cid10`, `bodysite_estrutura` e índices anatômicos são tabelas de referência, não prontuário individual (`supabase/migrations/0002_cid10.sql:2-7`; `supabase/migrations/0005_fhir.sql:42-52`). A tabela `auth.users` pertence ao Supabase Auth; sua estrutura não é criada pelas migrações do projeto. Campos e metadados adicionais do provedor devem ser inventariados na homologação sem exportar credenciais.
+`cid10`, `bodysite_estrutura`, `atlas_malhas` e índices anatômicos são tabelas de referência, não prontuário individual (`supabase/migrations/0002_cid10.sql:2-7`; `supabase/migrations/0005_fhir.sql:42-52`; `supabase/migrations/0008_endurecimento_piloto.sql`). A tabela `auth.users` pertence ao Supabase Auth; sua estrutura não é criada pelas migrações do projeto. Campos e metadados adicionais do provedor devem ser inventariados na homologação sem exportar credenciais.
 
 ### Titulares previstos
 
@@ -109,4 +110,4 @@ Não localizei regra de retenção, prazo de guarda, descarte de prontuário, au
 
 ## 10. Estado para homologação
 
-**Não é autorização para tratar dados reais.** Conforme SPEC, permanecem pré-requisitos: ambiente de homologação com dados sintéticos, testes adversariais e aval do encarregado municipal (`SPEC-MVP.md:327`), além das revisões jurídicas/municipais acima. Este rascunho descreve apenas sinais verificáveis no repositório; não comprova configuração em nuvem, execução efetiva de controles, aprovação clínica ou conformidade legal.
+**Não é autorização para tratar dados reais.** Atualização técnica em `2026-11-26` (migração `0008_endurecimento_piloto.sql` aplicada à homologação): catálogo `public.atlas_malhas` (`3.190` malhas), validação de âncora por catálogo/sexo, `sistema_origem` na unicidade FHIR (`(unidade_id, sistema_origem, fhir_id)`), recusa de `Condition` `entered-in-error`/`refuted`, **49/49 testes PGlite** e **169 tentativas adversariais na API pública com 0 falhas** (`supabase/testes_adversariais.mjs`). Permanecem pendentes de avaliação humana/decisão antes de qualquer dado real: validação médica, revisão jurídica do RIPD e aval do encarregado de dados, licença do SNOMED CT em produção, decisão de hospedagem (limite de login por IP do servidor) e definição sobre expiração por inatividade com acesso direto ao Supabase. Este rascunho descreve apenas sinais verificáveis no repositório; não comprova aprovação clínica ou conformidade jurídica.
