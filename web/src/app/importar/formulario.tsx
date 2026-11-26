@@ -108,8 +108,11 @@ export function FormularioImportacao() {
       {relatorio && (
         <Card className="px-5 py-4" data-relatorio>
           <h2 className="text-lg font-semibold text-slate-950">Relatório da importação</h2>
-          {/* o banco devolve o mesmo id para o que já existia: aqui se conta o aceito, não só o novo */}
-          <Numeros itens={[["Pacientes aceitos", relatorio.pacientes], ["Condições aceitas", relatorio.condicoes], ["Eventos aceitos", relatorio.eventos]]} />
+          {/* o banco devolve o mesmo id para o que já existia: aqui se conta o que o banco aceitou, não só o novo */}
+          <Numeros itens={[
+            ["Pacientes (novos + já existentes)", relatorio.pacientes], ["Condições (novas + já existentes)", relatorio.condicoes],
+            ["Eventos (novos + já existentes)", relatorio.eventos],
+          ]} />
           <p className="mt-2 text-sm text-slate-600">O que já tinha sido importado não é criado de novo. Registro: <span className="font-mono">{relatorio.importacao}</span></p>
           {!relatorio.concluida && <p role="alert" className="mt-2 text-sm text-red-800">Os recursos foram processados, mas o registro da importação não foi fechado.</p>}
           <Erros erros={relatorio.erros} />

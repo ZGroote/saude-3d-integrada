@@ -91,6 +91,8 @@ def rpc(nome, p, unidade):
 
 
 base.rpc = rpc
+# a prévia faz 8 buscas ao mesmo tempo: com a fila padrão (5) o falso recusaria conexões de vez em quando
+base.ThreadingHTTPServer.request_queue_size = 64
 
 
 class Falso(base.SupabaseFalso):
@@ -113,6 +115,10 @@ class Falso(base.SupabaseFalso):
 def montar_bundle():
     """O Bundle sintético do repositório mais os casos de borda; nomes marcados para procurar nos logs."""
     bundle = json.loads((WEB / 'testes/dados/bundle-sintetico-50.json').read_text(encoding='utf-8'))
+    # as contagens deste teste não dependem dos códigos do sintético: todos viram um que o mapa falso não tem
+    for entrada in bundle['entry']:
+        for local in entrada['resource'].get('bodySite', []):
+            local['coding'][0]['code'] = '73780009'
     paciente = lambda i, sexo, cns: {'resourceType': 'Patient', 'id': i, 'gender': sexo, 'birthDate': '1990-05-05',
                                      'name': [{'given': ['NOMESECRETO'], 'family': i.upper()}],
                                      **({'identifier': [{'system': CNS_SISTEMA, 'value': cns}]} if cns else {})}
@@ -235,7 +241,7 @@ def testar(app):
         # um paciente falha: vira erro com os recursos dele, e o resto entra
         estado['falhar'] = {'sintetico-003'}
         relatorio = importar()
-        for trecho in ('pacientes aceitos 51', 'condições aceitas 53', 'eventos aceitos 50', 'recursos com erro (6)',
+        for trecho in ('pacientes (novos + já existentes) 51', 'condições (novas + já existentes) 53', 'eventos (novos + já existentes) 50', 'recursos com erro (6)',
                        'sintetico-003 — dados recusados', 'o paciente deste recurso não foi importado'):
             assert trecho in relatorio, (trecho, relatorio)
         nomes = [n for n, _ in estado['chamadas'] if n.startswith(('iniciar_', 'importar_', 'concluir_'))]
@@ -248,8 +254,8 @@ def testar(app):
 
         contar = lambda: tuple(len(estado[k]) for k in ('pacientes', 'condicoes', 'eventos'))
         estado['falhar'] = set()
-        assert 'pacientes aceitos 52' in importar() and contar() == (52, 54, 51), contar()
-        assert 'pacientes aceitos 52' in importar() and contar() == (52, 54, 51), 'reimportar criou algo'
+        assert 'pacientes (novos + já existentes) 52' in importar() and contar() == (52, 54, 51), contar()
+        assert 'pacientes (novos + já existentes) 52' in importar() and contar() == (52, 54, 51), 'reimportar criou algo'
         print('confirmação: falha isolada, relatório; reimportar não cria nada; erros sem dado pessoal')
 
         ancoras = {k: v['linha']['ancora'] for k, v in estado['condicoes'].items()}
