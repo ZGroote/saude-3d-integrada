@@ -82,6 +82,77 @@ Registro intramodal/cadavérico de mesma doadora (Denver STLs ↔ TC NLM) como e
 
 - **Hashes SHA-256:** entradas (`total`, `body`, transformação Etapa A), manifesto e avaliação registrados em `atlas/hra-f/2.0-1/proveniencia_sha256.json`.
 
+### 8.2 Diagn?stico de FOV, F1, F3 e costovertebral (2026-11-26)
+Diagn?stico sem altera??o das malhas ou crit?rios; dados detalhados em `atlas/hra-f/2.0-1/diagnostico_EXP-0015.json`, script `hra/vhf/diagnosticar_base.py`.
+
+#### Observa??es ? FOV e F1
+Volume de 320?320?1156 voxels isotr?picos de 1,5 mm; limites RAS aproximados X/Y ?240 mm e Z ?1771,75 a ?37,75 mm. A m?scara `body` toca **1.607 voxels de superf?cie na face Z superior (cabe?a)** e **175 na face X positiva (bra?o esquerdo do paciente em RAS)**; nas outras quatro faces s?o zero. ?rea regional coincidente com a borda estimada em: cabe?a **2,68%**, bra?o esquerdo **0,197%**, bra?o direito/m?os/p?s **0%**. Estimativa usa ?rea da face por voxel (2,25 mm?) e ?rea regional da pele por amostragem uniforme. O p? fica a aproximadamente 2 mm do limite inferior, mas a m?scara n?o toca essa face. Regi?es s?o bins aproximados em coordenadas RAS, n?o labels anat?micos dedicados.
+
+Os escapes dos h?meros localizam-se nos bra?os, sem coincidirem em geral com a borda: lookup no voxel `body` original encontrou 1.032 v?rtices externos no ?mero esquerdo (0 a ?3 mm do FOV) e 1.683 no direito (28 a ?3 mm). Nos p?s: falanges Denver E 9.544 externos (1.247 a ?3 mm da borda), D 14.151 (8.770 pr?ximos); extensor longo do h?lux E 2.033/59 e D 1.839/110. Nenhum v?rtice externo foi localizado na cabe?a ou m?os. O lookup regional usa o voxel `body` original e ? diagn?stico espacial; n?o substitui o F1 oficial, que classifica na pele fechada preenchida em grade de 3 mm, e por isso os contadores diferem.
+
+#### Interpreta??o ? FOV e F1
+O contato exato indica prov?vel corte da pele na cabe?a e bra?o esquerdo, fechados no STL por tampas artificiais. N?o h? evid?ncia de m?os cortadas. O p? n?o toca a borda, mas a proximidade inferior pode contribuir para os escapes distais. A maioria dos escapes dos ?meros n?o est? junto ao FOV; o corte n?o explica todos os escapes dos bra?os.
+
+#### Observa??es ? F3
+Dos **289 pares** com sobreposi??o amostrada ?2% em ao menos uma dire??o, volume foi estimado pela m?dia direcional (fra??o amostrada ? volume fechado), com at? 2.000 centros internos por estrutura e grade de 2 mm. Profundidade usa transformada Euclidiana de dist?ncia da grade alvo: **0 pares ?1,5 mm**, **24 entre 1,5?3 mm**, **265 >3 mm**. A grade quantiza a estimativa em 2 mm; n?o ? dist?ncia cont?nua entre tri?ngulos.
+
+Top 20 por volume m?dio estimado (cm?):
+| Estrutura A | Estrutura B | cm? | Maior fra??o | Profundidade |
+|---|---|---:|---:|---|
+| `total__iliopsoas_left` | `denver__muscle_psoasmajor__left` | 121.00 | 73.7% | penetration_gt_3mm |
+| `total__brain` | `total__skull` | 111.63 | 13.8% | penetration_gt_3mm |
+| `total__iliopsoas_right` | `denver__muscle_psoasmajor__right` | 111.49 | 73.8% | penetration_gt_3mm |
+| `total__iliopsoas_left` | `denver__muscle_illiacus__left` | 101.50 | 68.8% | penetration_gt_3mm |
+| `total__iliopsoas_right` | `denver__muscle_illiacus__right` | 78.36 | 59.7% | penetration_gt_3mm |
+| `total__hip_right` | `denver__muscle_illiacus__right` | 42.13 | 33.2% | penetration_gt_3mm |
+| `total__hip_left` | `denver__muscle_illiacus__left` | 40.78 | 28.7% | penetration_gt_3mm |
+| `denver__muscle_vastusintermedius__right` | `denver__muscle_vastuslateralis__right` | 37.50 | 12.8% | penetration_gt_3mm |
+| `denver__muscle_vastusintermedius__left` | `denver__muscle_vastuslateralis__left` | 32.49 | 11.8% | penetration_gt_3mm |
+| `denver__muscle_gastrocnemiuslateral__left` | `denver__muscle_soleus__left` | 23.81 | 25.2% | penetration_gt_3mm |
+| `denver__bone_femur__left` | `denver__muscle_vastusintermedius__left` | 23.53 | 7.1% | penetration_gt_3mm |
+| `denver__muscle_gastrocnemiuslateral__right` | `denver__muscle_soleus__right` | 21.71 | 25.3% | penetration_gt_3mm |
+| `total__liver` | `total__stomach` | 21.56 | 2.2% | intermediate_1_5_to_3mm |
+| `total__hip_left` | `total__iliopsoas_left` | 17.89 | 7.8% | penetration_gt_3mm |
+| `denver__muscle_sartorius__left` | `denver__muscle_vastusmedialis__left` | 17.74 | 17.2% | penetration_gt_3mm |
+| `denver__muscle_sartorius__right` | `denver__muscle_vastusmedialis__right` | 16.64 | 15.3% | penetration_gt_3mm |
+| `total__hip_right` | `total__iliopsoas_right` | 16.08 | 7.7% | penetration_gt_3mm |
+| `denver__bone_femur__left` | `denver__muscle_vastusmedialis__left` | 16.05 | 5.5% | penetration_gt_3mm |
+| `denver__bone_femur__right` | `denver__muscle_vastusintermedius__right` | 15.52 | 6.2% | penetration_gt_3mm |
+| `total__hip_left` | `denver__muscle_obturatorinternus__left` | 15.41 | 32.9% | penetration_gt_3mm |
+
+Top 20 por maior percentual direcional:
+| Estrutura A | Estrutura B | Maior fra??o | cm? estimados | Profundidade |
+|---|---|---:|---:|---|
+| `denver__bone_tibia__left` | `denver__ligament_acl__left` | 100.0% | 2.99 | penetration_gt_3mm |
+| `denver__bone_tibia__right` | `denver__ligament_acl__right` | 100.0% | 3.74 | penetration_gt_3mm |
+| `total__lung_upper_lobe_right` | `total__rib_right_1` | 88.2% | 11.86 | penetration_gt_3mm |
+| `denver__bone_intermediatecuneiform__right` | `denver__bone_phalanges__right` | 81.8% | 3.33 | penetration_gt_3mm |
+| `total__lung_upper_lobe_right` | `total__rib_right_2` | 79.0% | 12.06 | penetration_gt_3mm |
+| `denver__cartilage_talus__left` | `denver__muscle_flexordigitorumlongus__left` | 76.0% | 0.03 | penetration_gt_3mm |
+| `total__iliopsoas_right` | `denver__muscle_psoasmajor__right` | 73.8% | 111.49 | penetration_gt_3mm |
+| `total__iliopsoas_left` | `denver__muscle_psoasmajor__left` | 73.7% | 121.00 | penetration_gt_3mm |
+| `total__aorta` | `total__brachiocephalic_trunk` | 69.9% | 1.66 | penetration_gt_3mm |
+| `total__iliopsoas_left` | `denver__muscle_illiacus__left` | 68.8% | 101.50 | penetration_gt_3mm |
+| `denver__bone_tibia__right` | `denver__cartilage_tibiamedial__right` | 67.2% | 2.73 | penetration_gt_3mm |
+| `denver__bone_tibia__left` | `denver__ligament_pcl__left` | 64.7% | 2.48 | penetration_gt_3mm |
+| `denver__bone_femur__left` | `denver__cartilage_femurhead__left` | 62.5% | 4.33 | penetration_gt_3mm |
+| `denver__bone_tibia__right` | `denver__ligament_pcl__right` | 61.3% | 1.56 | penetration_gt_3mm |
+| `total__iliopsoas_right` | `denver__muscle_illiacus__right` | 59.7% | 78.36 | penetration_gt_3mm |
+| `denver__bone_femur__right` | `denver__cartilage_femurhead__right` | 59.0% | 7.38 | penetration_gt_3mm |
+| `denver__bone_femur__left` | `denver__cartilage_pelvisacetabulum__left` | 57.8% | 1.17 | penetration_gt_3mm |
+| `denver__bone_lateralcuneiform__left` | `denver__bone_phalanges__left` | 56.9% | 2.64 | penetration_gt_3mm |
+| `denver__bone_fibula__left` | `denver__muscle_plantaris__left` | 56.8% | 1.15 | penetration_gt_3mm |
+| `denver__bone_tibia__left` | `denver__muscle_flexordigitorumlongus__left` | 55.4% | 14.94 | penetration_gt_3mm |
+
+#### Interpreta??o ? F3
+A lista mistura colis?es prov?veis e interfaces esperadas (cartilagem/osso, ligamentos e m?sculos). Os pares >3 mm s?o prioridades de inspe??o; volumes e profundidades s?o estimativas amostradas. O crit?rio F3 n?o foi alterado.
+
+#### Observa??es ? costelas e v?rtebras
+Os labels TotalSegmentator s?o `rib_left/right_1?12` e `vertebrae_T1?T12`; n?o h? sublabels para cabe?a/colo costal, corpo, faceta ou processo transverso. A dist?ncia costela?T(i) e costela?proxy lateral do processo transverso (quartil lateral da superf?cie vertebral em |RAS-X|) praticamente coincidem. T1: E/D 7,4/3,8 mm. T2?T9: padr?o bilateral **8,6?14,5 mm**. T10: 17,2/22,9 mm; T11: 21,2/28,2 mm; T12: 28,9/46,6 mm (E/D). Para T2?T9 h? centenas a milhares de pontos costais a ?20 mm, mas quase nenhum a ?10 mm. Dados por n?vel, pontos RAS e pares T(i?1)/T(i) est?o no JSON.
+
+#### Interpreta??o ? costelas e v?rtebras
+O afastamento de ~10?14 mm ? sistem?tico bilateralmente entre m?scaras TotalSegmentator extra?das da mesma TC; a transforma??o Denver?TC n?o participa, favorecendo limita??o ou separa??o dos r?tulos da segmenta??o em vez de erro de transforma??o. Sem sublabels, n?o se prova que cabe?a/colo foi omitida; as malhas atuais n?o representam contato no complexo costovertebral.
+
 ## 9. Validação
 Parcial e **não aceita** pelos critérios funcionais: F1 falha; F2 quadril proxy e joelho esquerdo falham; costelas–vértebras falham; F3 não avaliado; F5 pendente. Joelho direito, crânio–C1 e F4 passaram nas métricas exploratórias. Nenhum resultado é validação clínica.
 
