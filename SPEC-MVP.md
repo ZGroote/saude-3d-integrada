@@ -330,7 +330,7 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 
 - [x] ~~CC BY-SA dos modelos anatômicos~~: o BodyParts3D é CC BY 4.0 desde 27/02/2025 (só exige atribuição). Z-Anatomy (CC BY-SA) não é usado.
 - [x] ~~Licença do HRA~~: united female v1.10 é CC BY 4.0, com crédito à NLM (ver `LICENCAS.md`).
-- [ ] **Homologação antes de dado real:** Supabase de homologação com dados sintéticos, testes adversariais (JWT, PostgREST, RPC, Storage), RIPD e aval do encarregado de dados do município. O teste em PGlite cobre só SQL/RLS.
+- [ ] **Homologação antes de dado real:** Supabase de homologação com dados sintéticos, testes adversariais (JWT, PostgREST, RPC, Storage), RIPD e aval do encarregado de dados do município. O teste em PGlite cobre só SQL/RLS. Feito em 2026-11-26: `supabase/testes_adversariais.mjs` (169 tentativas via API pública — RPC anônima, CRUD direto, JWT forjado, outra unidade, Storage — 0 falhas) e rascunho técnico `docs/lgpd/RIPD-rascunho.md`; faltam a revisão jurídica do RIPD e o aval do encarregado.
 - [ ] **Lista de CIDs sensíveis** para o sigilo automático, revisada por médico.
 - [ ] **Validação médica** dos atlas e dos 1.659 nomes em português antes do piloto.
 - [ ] **Licença do SNOMED CT em produção:** o Brasil aderiu em 2018 mas não consta hoje como membro ativo (snomed.org/members); uso institucional em produção pode exigir *Affiliate License* via MLDS. A importação FHIR só lê o código do `bodySite` e o mapeia por tabela própria (`bodysite_estrutura`, 12 códigos verificados em supabase/dados/bodysite_snomed.csv); confirmar o enquadramento antes do piloto.
