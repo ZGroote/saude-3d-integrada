@@ -9,6 +9,7 @@ import re
 import shutil
 import struct
 import subprocess
+import sys
 import tempfile
 import time
 from collections import defaultdict
@@ -65,6 +66,8 @@ SISTEMAS_BP3D = {
     'respiratorio', 'digestorio', 'urogenital', 'endocrino', 'linfatico',
     'sensorial', 'tegumentar', 'articular', 'fascia', 'gestacional',
 }
+LOD_TRIANGLES = 40_000
+SYSTEM_PYTHON = Path(r'C:\Python314\python.exe')
 
 
 def read_glb(path):
@@ -238,6 +241,56 @@ def run_gltf(command, *args):
         raise RuntimeError(f'gltf-transform {command} falhou:\n{result.stdout}{result.stderr}')
 
 
+def simplify_tegumentar(source, destination, names, expected_triangles):
+    if not SYSTEM_PYTHON.exists():
+        raise FileNotFoundError(f'Python do sistema ausente: {SYSTEM_PYTHON}')
+    helper = r"""
+import json, sys, trimesh, numpy as np
+src,dst,target=sys.argv[1],sys.argv[2],int(sys.argv[3])
+scene=trimesh.load(src,force='scene',process=False); entries=[]
+for node in list(scene.graph.nodes_geometry):
+    transform,geom=scene.graph[node]; mesh=scene.geometry[geom]
+    entries.append((node,geom,len(mesh.faces),float(mesh.area)))
+minimum=200
+if len(entries)*minimum>target*1.1: raise RuntimeError('Too many meshes for 200-face minimum')
+areas=np.array([max(e[3],1e-12) for e in entries]); weights=areas/areas.sum()
+budgets=np.maximum(minimum,np.floor(weights*target).astype(int)); budgets=np.minimum(budgets,[e[2] for e in entries])
+while budgets.sum()<target:
+    candidates=[i for i,e in enumerate(entries) if budgets[i]<e[2]]
+    if not candidates: break
+    i=max(candidates,key=lambda j:weights[j]*target-budgets[j]); budgets[i]+=1
+for (node,geom,faces,area),count in zip(entries,budgets):
+    if faces>count: scene.geometry[geom]=scene.geometry[geom].simplify_quadric_decimation(face_count=int(count))
+open(dst,'wb').write(scene.export(file_type='glb'))
+print(json.dumps([e[0] for e in entries]))
+"""
+    target = int(LOD_TRIANGLES * 0.9)
+    result=subprocess.run([str(SYSTEM_PYTHON),'-c',helper,str(source),str(destination),str(target)],capture_output=True,text=True,encoding='utf-8',errors='replace')
+    if result.returncode: raise RuntimeError(f'Simplifica??o trimesh falhou:\n{result.stdout}{result.stderr}')
+    simplified,_=read_glb(destination)
+    out_names=[node.get('name') for node in simplified.get('nodes',[]) if 'mesh' in node]
+    if len(out_names)!=len(names) or set(out_names)!=set(names): raise AssertionError('Nomes de n? alterados no LOD')
+    count=sum(triangles(simplified,node) for node in simplified['nodes'] if 'mesh' in node)
+    if not LOD_TRIANGLES*0.9<=count<=LOD_TRIANGLES*1.1: raise AssertionError(f'LOD fora da toler?ncia: {count} tri?ngulos')
+    return count
+
+def surface_deviation_mm(reference_path, simplified_path, names):
+    helper = r"""
+import json,sys,trimesh,numpy as np
+from scipy.spatial import cKDTree
+def load(path):
+    scene=trimesh.load(path,force='scene',process=False); out={}
+    for node in scene.graph.nodes_geometry:
+        transform,geom=scene.graph[node]; mesh=scene.geometry[geom].copy(); mesh.apply_transform(transform); out[node]=np.asarray(mesh.vertices)
+    return out
+a,b=load(sys.argv[1]),load(sys.argv[2]); names=json.loads(sys.argv[3]); ds=[]
+for name in names: ds.extend((cKDTree(b[name]).query(a[name])[0],cKDTree(a[name]).query(b[name])[0]))
+d=np.concatenate(ds)*1000; print(json.dumps([float(d.mean()),float(d.max())]))
+"""
+    result=subprocess.run([str(SYSTEM_PYTHON),'-c',helper,str(reference_path),str(simplified_path),json.dumps(names)],capture_output=True,text=True,encoding='utf-8',errors='replace')
+    if result.returncode: raise RuntimeError(f'Medi??o de desvio falhou:\n{result.stdout}{result.stderr}')
+    return tuple(json.loads(result.stdout.strip().splitlines()[-1]))
+
 def sha256(path):
     digest = hashlib.sha256()
     with path.open('rb') as f:
@@ -390,6 +443,31 @@ def publish(rebuild_local=False):
             output = stage / f'{system}.glb'
             write_glb(raw, document, binary)
             run_gltf('prune', raw, pruned)
+            if system == 'tegumentar':
+                leve_raw = working / 'tegumentar-leve-raw.glb'
+                leve_pruned = working / 'tegumentar-leve-pruned.glb'
+                leve_output = stage / 'tegumentar_leve.glb'
+                leve_triangles = simplify_tegumentar(
+                    pruned, leve_raw, names, triangle_counts[system])
+                run_gltf('prune', leve_raw, leve_pruned)
+                run_gltf('meshopt', leve_pruned, leve_output, '--level', 'high',
+                         '--quantize-position', '16', '--quantization-volume', 'mesh')
+                run_gltf('inspect', leve_output)
+                leve_doc, _ = read_glb(leve_output)
+                if 'EXT_meshopt_compression' not in leve_doc.get('extensionsRequired', []):
+                    raise AssertionError('Meshopt não obrigatório em tegumentar_leve.glb')
+                if {n.get('name') for n in leve_doc['nodes'] if 'mesh' in n} != set(names):
+                    raise AssertionError('Meshopt alterou nós de tegumentar_leve.glb')
+                leve_output_raw = working / 'tegumentar-leve-validacao.glb'
+                run_gltf('dequantize', leve_output, leve_output_raw)
+                leve_decoded, _ = read_glb(leve_output_raw)
+                distances = surface_deviation_mm(pruned, leve_output_raw, names)
+                print(f'tegumentar_leve.glb: {leve_output.stat().st_size / 1e6:.3f} MB; '
+                      f'{leve_triangles} triângulos; desvio médio={distances[0]:.3f} mm; '
+                      f'máximo={distances[1]:.3f} mm', flush=True)
+                leve_output_raw.unlink()
+                leve_raw.unlink()
+                leve_pruned.unlink()
             run_gltf('meshopt', pruned, output, '--level', 'high',
                      '--quantize-position', '16', '--quantization-volume', 'mesh')
             run_gltf('inspect', output)
@@ -434,6 +512,7 @@ def publish(rebuild_local=False):
             'sha256': hashes,
             'sistemas': [
                 {'id': system, 'glb': f'{system}.glb',
+                 **({'glb_leve': 'tegumentar_leve.glb'} if system == 'tegumentar' else {}),
                  'estruturas': len(names), 'triangulos': triangle_counts[system]}
                 for system, names in sorted(groups.items())
             ],
