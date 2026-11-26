@@ -106,6 +106,8 @@ Ao abrir uma âncora gravada noutra `atlas_versao`, o motor reprojeta `posicao_l
 
 **Âncora só estrutural** (sem `posicao_local`): o motor desenha o marcador no centro da caixa da malha indicada. Quando uma estrutura tem várias malhas (559 no `bp3d-m`), quem monta a âncora escolhe a malha de mais triângulos e, no empate, o menor nome de malha — função `malhaPrincipal` do pacote `@saude3d/motor-anatomico/indice`, a mesma no servidor e no cliente (o `indice.json` traz `triangulos`).
 
+**Carregamento:** `marcadoresPendentes` (opcional) diz ao motor que a lista de marcadores ainda vai chegar; ele desenha os marcadores antes de baixar o GLB do corpo, abre pelo `glb_leve` quando existir, baixa o completo em segundo plano depois que o corpo aparece e monta a estrutura de clique (BVH) após o primeiro desenho.
+
 **Unidades:** `posicao_local` em metros nos eixos do atlas (nunca nas coordenadas quantizadas do GLB); `Marcador.tamanho` é raio em metros. O motor carrega, sem mostrar, os sistemas de que os marcadores precisam e avisa por `onMarcadoresSemPosicao(ids)` os que não conseguiu posicionar.
 
 **Versão publicada** = enviada à hospedagem do app. Antes disso a versão é local e pode ser reconstruída.
