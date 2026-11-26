@@ -86,7 +86,7 @@ def kabsch(source: np.ndarray, target: np.ndarray) -> tuple[np.ndarray, np.ndarr
     return r, t
 
 
-def fit_corresponded(source: np.ndarray, target: np.ndarray, mode: str):
+def fit_corresponded(source: np.ndarray, target: np.ndarray, mode: str, scale_bounds=(0.85, 1.15)):
     if mode == "rigid":
         r, t = kabsch(source, target)
         return r, np.ones(3), t
@@ -101,12 +101,12 @@ def fit_corresponded(source: np.ndarray, target: np.ndarray, mode: str):
             a = (source - sm) @ r.T
             denom = np.sum((source - sm) ** 2)
             s = float(np.sum(a * ty) / max(denom, 1e-12))
-            scale[:] = max(s, 1e-6)
+            scale[:] = np.clip(s, *scale_bounds)
         elif mode == "anisotropic":
             for axis in range(3):
                 basis = r[:, axis]
                 denom = float(np.sum(sx[:, axis] ** 2))
-                scale[axis] = max(float(np.sum((sx[:, axis, None] * basis[None, :]) * ty) / max(denom, 1e-12)), 1e-6)
+                scale[axis] = np.clip(float(np.sum((sx[:, axis, None] * basis[None, :]) * ty) / max(denom, 1e-12)), *scale_bounds)
         else:
             raise ValueError(mode)
         t = tm - (sm * scale) @ r.T
@@ -125,7 +125,8 @@ def transform_matrix(r: np.ndarray, scale: np.ndarray, t: np.ndarray, signs=(1, 
 
 
 def icp(source: np.ndarray, target: np.ndarray, mode="rigid", signs=(1, 1, 1),
-        max_iter=35, trim=0.88, initial_rotation=None):
+        max_iter=35, trim=0.88, initial_rotation=None, symmetric=False,
+        scale_bounds=(0.85, 1.15)):
     src = np.asarray(source, dtype=np.float64) * np.asarray(signs)
     dst = np.asarray(target, dtype=np.float64)
     r, scale = np.array(initial_rotation, dtype=float) if initial_rotation is not None else np.eye(3), np.ones(3)
@@ -136,9 +137,21 @@ def icp(source: np.ndarray, target: np.ndarray, mode="rigid", signs=(1, 1, 1),
         distances, match = nearest(current, dst)
         limit = np.quantile(distances, trim)
         keep = distances <= limit
-        nr, ns, nt = fit_corresponded(src[keep], dst[match[keep]], mode)
+        if symmetric:
+            reverse_distances, reverse_match = nearest(dst, current)
+            reverse_keep = reverse_distances <= np.quantile(reverse_distances, trim)
+            source_corr = np.concatenate((src[keep], src[reverse_match[reverse_keep]]), axis=0)
+            target_corr = np.concatenate((dst[match[keep]], dst[reverse_keep]), axis=0)
+            nr, ns, nt = fit_corresponded(source_corr, target_corr, mode, scale_bounds)
+        else:
+            nr, ns, nt = fit_corresponded(src[keep], dst[match[keep]], mode, scale_bounds)
         moved = apply_transform(src, nr, ns, nt)
-        err = float(np.mean(nearest(moved, dst)[0]))
+        forward_error = nearest(moved, dst)[0]
+        if symmetric:
+            reverse_error = nearest(dst, moved)[0]
+            err = float((forward_error.mean() + reverse_error.mean()) / 2.0)
+        else:
+            err = float(np.mean(forward_error))
         change = np.linalg.norm(nt - t) + np.linalg.norm(nr - r) + np.linalg.norm(ns - scale)
         r, scale, t = nr, ns, nt
         if abs(old_error - err) < 1e-5 and change < 1e-4:
@@ -235,6 +248,8 @@ def denver_meshes() -> dict[str, trimesh.Trimesh]:
                 selected[f"Pelvis {row['lateralidade']}"] = trimesh.load_mesh(DENVER_STL / row["arquivo"], process=False)
             elif "Bone_Sacrum" in filename:
                 selected["Sacrum"] = trimesh.load_mesh(DENVER_STL / row["arquivo"], process=False)
+            elif "Bone_Coccyx" in filename:
+                selected["Coccyx"] = trimesh.load_mesh(DENVER_STL / row["arquivo"], process=False)
     required = {"Femur Left", "Femur Right", "Pelvis Left", "Pelvis Right", "Sacrum"}
     if not required.issubset(selected):
         raise RuntimeError(f"Denver bone STLs faltando: {sorted(required - selected.keys())}")
@@ -333,7 +348,9 @@ def extract_gltf_meshes(doc: dict, binary: bytes, wanted: set[str]) -> dict[str,
             if primitive.get("mode", 4) != 4:
                 continue
             local = read_accessor(doc, binary, primitive["attributes"]["POSITION"])
-            vertices = (np.c_[local[:, :3], np.ones(len(local))] @ transform.T)[:, :3] * 1000.0
+            app_m = (np.c_[local[:, :3], np.ones(len(local))] @ transform.T)[:, :3]
+            # HRA app axes (x left, y up, z front), meters -> NIfTI RAS mm.
+            vertices = np.column_stack((-app_m[:, 0], app_m[:, 2], app_m[:, 1])) * 1000.0
             if "indices" in primitive:
                 faces = read_accessor(doc, binary, primitive["indices"]).reshape(-1).astype(np.int64)
             else:
@@ -446,7 +463,7 @@ def create_pending(missing: list[str]):
     REPORT_PATH.write_text("\n".join(report), encoding="utf-8")
 
 
-def run_real(mask_dir_override: Path | None = None):
+def run_real(mask_dir_override: Path | None = None, diagnostic_stage_b: bool = False):
     if not TC_PATH.exists():
         raise FileNotFoundError(f"TC alinhada não encontrada: {TC_PATH}")
     multilabel = load_multilabel()
@@ -480,25 +497,31 @@ def run_real(mask_dir_override: Path | None = None):
     fit_pairs = [(name, denver[name], target_a[name]) for name in
                  ("Femur Left", "Femur Right", "Pelvis Left", "Pelvis Right")]
     fit_error_a = pair_error_table(fit_pairs, matrix_a)
-    sacrum_error = pair_error_table([("Sacrum", denver["Sacrum"], target_a["Sacrum"])], matrix_a)["Sacrum"]
+    denver_sacrum_union = merge_meshes([denver["Sacrum"], denver["Coccyx"]])
+    sacrum_error = pair_error_table([("Sacrum + Coccyx", denver_sacrum_union, target_a["Sacrum"])], matrix_a)["Sacrum + Coccyx"]
     source_meta = ({"path": str(multilabel["path"].relative_to(ROOT)),
                                          "shape_ijk": list(multilabel["image"].shape),
                                          "affine_ijk_to_world_mm": multilabel["image"].affine.tolist(),
                                          "labels_in_header": len(multilabel["label_map"]),
                                          "nonempty_labels": len(multilabel["nonempty"]),
-                                         "nonempty_label_ids": {str(i): multilabel["label_map"].get(i, f"id_{i}") for i in multilabel["nonempty"]}}
+                                         "nonempty_label_ids": {str(i): multilabel["label_map"][i] for i in multilabel["label_map"]
+                                                                 if multilabel["count_by_id"].get(i, 0) > 0}}
                    if multilabel is not None else {"mask_dir": str(mask_dir_override.relative_to(ROOT))})
     transforms = {"source_multilabel": source_meta,
                   "stage_a": {"status": "completed", "source": "Denver STL mm", "target": "TC NIfTI world mm",
                                "matrix_4x4": matrix_a.tolist(), "signs": winner_a["signs"],
                                "iterations": winner_a["iterations"], "sign_search": sign_results,
                                "fit_errors_by_structure": fit_error_a,
-                               "held_out_validation": {"Sacrum": sacrum_error,
+                               "held_out_validation": {"Sacrum + Coccyx": sacrum_error,
                                                        "criterion_mean_lt_3mm": sacrum_error["mean_mm"] < 3.0}},
                   "stage_b": {"status": "skipped: sacrum validation failed"}}
-    if sacrum_error["mean_mm"] >= 3.0:
+    stage_a_passed = sacrum_error["mean_mm"] < 3.0
+    if not stage_a_passed and not diagnostic_stage_b:
         write_real_outputs(transforms, "ETAPA A REPROVADA: sacro não atingiu média < 3 mm; etapa B interrompida.")
         return 3
+    if not stage_a_passed:
+        transforms["stage_a"]["status"] = "diagnostic_only: sacrum criterion failed"
+        transforms["stage_a"]["diagnostic_matrix_not_accepted"] = True
 
     # Read HRA geometry only after A passed. Missing structures are reported,
     # rather than silently fitted to an unrelated atlas component.
@@ -526,8 +549,8 @@ def run_real(mask_dir_override: Path | None = None):
         dst_parts.append(sample_mesh(hra_mesh, 220, 200 + i))
         b_fit_pairs.append((name, tc_mesh, hra_mesh))
     src_b, dst_b = np.vstack(src_parts), np.vstack(dst_parts)
-    model_sim = fit_multistart_similarity(src_b, dst_b, mode="similarity")
-    model_aniso = fit_multistart_similarity(src_b, dst_b, mode="anisotropic")
+    model_sim = fit_b_similarity(src_b, dst_b, mode="similarity")
+    model_aniso = fit_b_similarity(src_b, dst_b, mode="anisotropic")
     sim_errors = pair_error_table(b_fit_pairs, model_sim["matrix"])
     aniso_errors = pair_error_table(b_fit_pairs, model_aniso["matrix"])
     holdout_errors = {}
@@ -542,7 +565,15 @@ def run_real(mask_dir_override: Path | None = None):
                 "anisotropic": symmetric_surface_error(sample_mesh(tc_mesh, 3000, 31), sample_mesh(hra_mesh, 3000, 41), model_aniso["matrix"]),
             }
     transforms["stage_b"] = {
-        "status": "completed", "source": "TC NIfTI world mm", "target": "HRA app coordinates converted from meters to mm",
+        "status": "diagnostic_only" if not stage_a_passed else "completed",
+        "stage_a_gate_bypassed_for_diagnostic_mode": not stage_a_passed,
+        "stage_a_matrix_used_as_stage_b_initialization": False,
+        "source": "TC NIfTI world RAS mm", "target": "HRA explicitly converted from app meters to RAS mm",
+        "hra_app_to_ras_mm": [[-1000.0, 0.0, 0.0, 0.0], [0.0, 0.0, 1000.0, 0.0],
+                              [0.0, 1000.0, 0.0, 0.0], [0.0, 0.0, 0.0, 1.0]],
+        "icp_initialization": "centroid difference of union of paired fit structures",
+        "icp_objective": "symmetric mean of source-to-target and target-to-source nearest-surface distances",
+        "scale_bounds": [0.85, 1.15],
         "fit_pairs_used": [{"mask": n, "hra_meshes": names} for n, _, _, names in available_fit],
         "fit_pairs_unavailable": unavailable,
         "similarity": {"matrix_4x4": model_sim["matrix"].tolist(), "scale_uniform": float(model_sim["scale"][0]),
@@ -557,7 +588,10 @@ def run_real(mask_dir_override: Path | None = None):
         "held_out_pairs_used": holdout_pairs_used, "held_out_errors": holdout_errors,
         "not_paired_whole_organs": ["liver", "spleen", "urinary_bladder"],
     }
-    write_real_outputs(transforms, "Alinhamentos reais calculados; consulte as tabelas e as ressalvas de correspondência no JSON.")
+    output_note = ("Etapa B executada em modo diagnóstico após reprovação do holdout do sacro; "
+                   "não usar transformações como finais." if not stage_a_passed else
+                   "Alinhamentos reais calculados; consulte as tabelas e as ressalvas de correspondência no JSON.")
+    write_real_outputs(transforms, output_note)
     return 0
 
 
@@ -585,19 +619,34 @@ def fit_multistart_similarity(source, target, mode):
     return min(candidates, key=lambda x: x["objective"])
 
 
+def fit_b_similarity(source, target, mode):
+    """Stage B ICP: direct RAS-mm fit, centroid initialization, symmetric objective, bounded scale."""
+    fitted = icp(source, target, mode=mode, signs=(1, 1, 1), max_iter=45,
+                 trim=0.88, symmetric=True, scale_bounds=(0.85, 1.15))
+    matrix = fitted["matrix"]
+    moved = (np.c_[source, np.ones(len(source))] @ matrix.T)[:, :3]
+    forward = nearest(moved, target)[0].mean()
+    reverse = nearest(target, moved)[0].mean()
+    fitted["objective"] = float((forward + reverse) / 2.0)
+    return fitted
+
+
 def write_real_outputs(transforms, message):
     TRANSFORMS_PATH.write_text(json.dumps(transforms, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = ["# Alinhamento Denver → TC → HRA", "", message, ""]
     if "stage_a" in transforms and "fit_errors_by_structure" in transforms["stage_a"]:
         a = transforms["stage_a"]
         lines += ["## Etapa A — Denver STL → TC", "",
-                  f"Sinais vencedores: `{a['signs']}`; sacro de validação: média {a['held_out_validation']['Sacrum']['mean_mm']:.3f} mm, p95 {a['held_out_validation']['Sacrum']['p95_mm']:.3f} mm.",
+                  f"Sinais vencedores: `{a['signs']}`; máscara sacrum contra união Denver Sacrum + Coccyx: média {a['held_out_validation']['Sacrum + Coccyx']['mean_mm']:.3f} mm, p95 {a['held_out_validation']['Sacrum + Coccyx']['p95_mm']:.3f} mm.",
                   "", "| Estrutura | Média (mm) | P95 (mm) |", "|---|---:|---:|"]
         lines += [f"| {name} | {err['mean_mm']:.3f} | {err['p95_mm']:.3f} |" for name, err in a["fit_errors_by_structure"].items()]
-        lines += [f"| Sacrum (holdout) | {a['held_out_validation']['Sacrum']['mean_mm']:.3f} | {a['held_out_validation']['Sacrum']['p95_mm']:.3f} |", ""]
-    if transforms.get("stage_b", {}).get("status") == "completed":
+        lines += [f"| Sacrum NLM vs Denver Sacrum + Coccyx (holdout) | {a['held_out_validation']['Sacrum + Coccyx']['mean_mm']:.3f} | {a['held_out_validation']['Sacrum + Coccyx']['p95_mm']:.3f} |", ""]
+    if transforms.get("stage_b", {}).get("status") in ("completed", "diagnostic_only"):
         b = transforms["stage_b"]
-        lines += ["## Etapa B — TC → HRA", "", "### Pareamento usado", "",
+        status_note = " **DIAGNÓSTICO: etapa A reprovou o sacro; não usar como transformação final.**" if b.get("status") == "diagnostic_only" else ""
+        lines += [f"## Etapa B — TC → HRA{status_note}", "",
+                  "HRA convertido explicitamente de metros/eixos do app para RAS mm: `x_ras=-x_app*1000`, `y_ras=z_app*1000`, `z_ras=y_app*1000`. ICP sem busca de sinais/eixos, inicializado pela diferença de centroides das uniões pareadas; objetivo de distância média simétrica. Escala uniforme e por eixo limitadas a `[0.85, 1.15]`.", "",
+                  "### Pareamento usado", "",
                   "| Máscara TotalSegmentator | Malha(s) HRA | Uso |", "|---|---|---|"]
         for p in b["fit_pairs_used"]:
             lines.append(f"| {p['mask']} | {', '.join(p['hra_meshes'])} | ajuste |")
@@ -703,6 +752,8 @@ def main():
                         help="Diretório de máscaras NIfTI separadas, compatibilidade com saída antiga")
     parser.add_argument("--tc", type=Path,
                         help="NIfTI de referência; deve compartilhar o referencial mundo das máscaras")
+    parser.add_argument("--modo-diagnostico", action="store_true",
+                        help="Executa etapa B mesmo se o holdout do sacro reprovar; resultados não são finais")
     args = parser.parse_args()
     if args.teste_sintetico:
         test_synthetic()
@@ -725,7 +776,7 @@ def main():
         ROOT / args.mask_dir if args.mask_dir else None)
     if mask_dir is not None and not mask_dir.exists():
         raise FileNotFoundError(f"--mask-dir nÃ£o existe: {mask_dir}")
-    return run_real(mask_dir)
+    return run_real(mask_dir, diagnostic_stage_b=args.modo_diagnostico)
 
 
 if __name__ == "__main__":

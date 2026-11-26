@@ -1,0 +1,1171 @@
+{
+  "source_multilabel": {
+    "path": "hra\\nlm\\bruto\\fast\\segmentacao.nii.gz",
+    "shape_ijk": [
+      320,
+      320,
+      1156
+    ],
+    "affine_ijk_to_world_mm": [
+      [
+        1.5,
+        0.0,
+        0.0,
+        -239.25
+      ],
+      [
+        0.0,
+        1.5,
+        0.0,
+        -239.25
+      ],
+      [
+        0.0,
+        0.0,
+        1.5,
+        -1771.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "labels_in_header": 117,
+    "nonempty_labels": 114,
+    "nonempty_label_ids": {
+      "1": "spleen",
+      "2": "kidney_right",
+      "3": "kidney_left",
+      "4": "gallbladder",
+      "5": "liver",
+      "6": "stomach",
+      "7": "pancreas",
+      "8": "adrenal_gland_right",
+      "9": "adrenal_gland_left",
+      "10": "lung_upper_lobe_left",
+      "11": "lung_lower_lobe_left",
+      "12": "lung_upper_lobe_right",
+      "13": "lung_middle_lobe_right",
+      "14": "lung_lower_lobe_right",
+      "15": "esophagus",
+      "16": "trachea",
+      "17": "thyroid_gland",
+      "18": "small_bowel",
+      "19": "duodenum",
+      "20": "colon",
+      "21": "urinary_bladder",
+      "25": "sacrum",
+      "26": "vertebrae_S1",
+      "27": "vertebrae_L5",
+      "28": "vertebrae_L4",
+      "29": "vertebrae_L3",
+      "30": "vertebrae_L2",
+      "31": "vertebrae_L1",
+      "32": "vertebrae_T12",
+      "33": "vertebrae_T11",
+      "34": "vertebrae_T10",
+      "35": "vertebrae_T9",
+      "36": "vertebrae_T8",
+      "37": "vertebrae_T7",
+      "38": "vertebrae_T6",
+      "39": "vertebrae_T5",
+      "40": "vertebrae_T4",
+      "41": "vertebrae_T3",
+      "42": "vertebrae_T2",
+      "43": "vertebrae_T1",
+      "44": "vertebrae_C7",
+      "45": "vertebrae_C6",
+      "46": "vertebrae_C5",
+      "47": "vertebrae_C4",
+      "48": "vertebrae_C3",
+      "49": "vertebrae_C2",
+      "50": "vertebrae_C1",
+      "51": "heart",
+      "52": "aorta",
+      "53": "pulmonary_vein",
+      "54": "brachiocephalic_trunk",
+      "55": "subclavian_artery_right",
+      "56": "subclavian_artery_left",
+      "57": "common_carotid_artery_right",
+      "58": "common_carotid_artery_left",
+      "59": "brachiocephalic_vein_left",
+      "60": "brachiocephalic_vein_right",
+      "61": "atrial_appendage_left",
+      "62": "superior_vena_cava",
+      "63": "inferior_vena_cava",
+      "64": "portal_vein_and_splenic_vein",
+      "65": "iliac_artery_left",
+      "66": "iliac_artery_right",
+      "67": "iliac_vena_left",
+      "68": "iliac_vena_right",
+      "69": "humerus_left",
+      "70": "humerus_right",
+      "71": "scapula_left",
+      "72": "scapula_right",
+      "73": "clavicula_left",
+      "74": "clavicula_right",
+      "75": "femur_left",
+      "76": "femur_right",
+      "77": "hip_left",
+      "78": "hip_right",
+      "79": "spinal_cord",
+      "80": "gluteus_maximus_left",
+      "81": "gluteus_maximus_right",
+      "82": "gluteus_medius_left",
+      "83": "gluteus_medius_right",
+      "84": "gluteus_minimus_left",
+      "85": "gluteus_minimus_right",
+      "86": "autochthon_left",
+      "87": "autochthon_right",
+      "88": "iliopsoas_left",
+      "89": "iliopsoas_right",
+      "90": "brain",
+      "91": "skull",
+      "92": "rib_left_1",
+      "93": "rib_left_2",
+      "94": "rib_left_3",
+      "95": "rib_left_4",
+      "96": "rib_left_5",
+      "97": "rib_left_6",
+      "98": "rib_left_7",
+      "99": "rib_left_8",
+      "100": "rib_left_9",
+      "101": "rib_left_10",
+      "102": "rib_left_11",
+      "103": "rib_left_12",
+      "104": "rib_right_1",
+      "105": "rib_right_2",
+      "106": "rib_right_3",
+      "107": "rib_right_4",
+      "108": "rib_right_5",
+      "109": "rib_right_6",
+      "110": "rib_right_7",
+      "111": "rib_right_8",
+      "112": "rib_right_9",
+      "113": "rib_right_10",
+      "114": "rib_right_11",
+      "115": "rib_right_12",
+      "116": "sternum",
+      "117": "costal_cartilages"
+    }
+  },
+  "stage_a": {
+    "status": "diagnostic_only: sacrum+coccyx mean remains above 3 mm",
+    "source": "Denver STL mm",
+    "target": "TC NIfTI world mm",
+    "matrix_4x4": [
+      [
+        0.9992519238183978,
+        -0.02638831675866439,
+        0.028271000758304684,
+        -546.0650409956036
+      ],
+      [
+        0.02601852161976887,
+        0.999572056296913,
+        0.013369398007490261,
+        -465.46785251402116
+      ],
+      [
+        -0.028611698271044626,
+        -0.01262382703483623,
+        0.9995108852398972,
+        -1746.221181385113
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "signs": [
+      1,
+      1,
+      1
+    ],
+    "iterations": 20,
+    "sign_search": [
+      {
+        "signs": [
+          -1,
+          -1,
+          -1
+        ],
+        "objective_mean_mm": 226.859960187605,
+        "matrix": [
+          [
+            -0.9994450608475344,
+            0.005881055704376124,
+            -0.03278694147477202,
+            569.0963579963993
+          ],
+          [
+            -0.00869224797526366,
+            -0.9962339064191974,
+            0.08626962690241122,
+            378.38031534542273
+          ],
+          [
+            0.03215610630354066,
+            -0.08650674473442396,
+            -0.9957321768140506,
+            -218.1085876429305
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 30,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 197.43276450339306,
+            "p95_mm": 234.51400825546338,
+            "source_to_target_mean_mm": 197.93801797630346,
+            "target_to_source_mean_mm": 196.92751103048263
+          },
+          "Femur Right": {
+            "mean_mm": 197.60154828738442,
+            "p95_mm": 234.10238247578454,
+            "source_to_target_mean_mm": 196.95211522716266,
+            "target_to_source_mean_mm": 198.25098134760623
+          },
+          "Pelvis Left": {
+            "mean_mm": 259.2572950011117,
+            "p95_mm": 344.8982544852536,
+            "source_to_target_mean_mm": 257.5327914921767,
+            "target_to_source_mean_mm": 260.98179851004664
+          },
+          "Pelvis Right": {
+            "mean_mm": 253.14823295853074,
+            "p95_mm": 339.73609357651225,
+            "source_to_target_mean_mm": 251.21645707174147,
+            "target_to_source_mean_mm": 255.08000884532007
+          }
+        }
+      },
+      {
+        "signs": [
+          -1,
+          -1,
+          1
+        ],
+        "objective_mean_mm": 144.19957150082647,
+        "matrix": [
+          [
+            -0.999652309132326,
+            0.026297631147054856,
+            -0.0019223533656942233,
+            538.0045144227983
+          ],
+          [
+            -0.026245095040249206,
+            -0.999377774232622,
+            -0.023563941864204865,
+            482.8134165960907
+          ],
+          [
+            -0.0025408330794115573,
+            -0.023505296550028174,
+            0.9997204835359527,
+            -1759.6141320661989
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 20,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 166.93086235312555,
+            "p95_mm": 231.94160187374007,
+            "source_to_target_mean_mm": 165.82270241048445,
+            "target_to_source_mean_mm": 168.03902229576667
+          },
+          "Femur Right": {
+            "mean_mm": 164.69112547155146,
+            "p95_mm": 226.88941222787582,
+            "source_to_target_mean_mm": 164.3805959833178,
+            "target_to_source_mean_mm": 165.00165495978516
+          },
+          "Pelvis Left": {
+            "mean_mm": 125.10200252829787,
+            "p95_mm": 189.82380498456928,
+            "source_to_target_mean_mm": 123.25111895266299,
+            "target_to_source_mean_mm": 126.95288610393276
+          },
+          "Pelvis Right": {
+            "mean_mm": 120.07429565033097,
+            "p95_mm": 180.07007291908158,
+            "source_to_target_mean_mm": 118.5074047021157,
+            "target_to_source_mean_mm": 121.64118659854621
+          }
+        }
+      },
+      {
+        "signs": [
+          -1,
+          1,
+          -1
+        ],
+        "objective_mean_mm": 226.73602267751238,
+        "matrix": [
+          [
+            -0.9961674949327244,
+            0.08084353655965504,
+            -0.03338629413378426,
+            537.8862719473009
+          ],
+          [
+            0.07543679302344003,
+            0.9872960018161465,
+            0.13984239363007744,
+            -586.8843504226708
+          ],
+          [
+            0.04426750837576577,
+            0.13678789198748062,
+            -0.9896107620210194,
+            -329.34106457447103
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 30,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 199.94766858662499,
+            "p95_mm": 238.081171891367,
+            "source_to_target_mean_mm": 200.13302285390486,
+            "target_to_source_mean_mm": 199.7623143193451
+          },
+          "Femur Right": {
+            "mean_mm": 194.87077558017884,
+            "p95_mm": 232.1557655137252,
+            "source_to_target_mean_mm": 193.9899609191461,
+            "target_to_source_mean_mm": 195.75159024121163
+          },
+          "Pelvis Left": {
+            "mean_mm": 260.24055568302884,
+            "p95_mm": 344.72650217385416,
+            "source_to_target_mean_mm": 259.10820333149337,
+            "target_to_source_mean_mm": 261.3729080345643
+          },
+          "Pelvis Right": {
+            "mean_mm": 251.88509086021688,
+            "p95_mm": 337.4714362354916,
+            "source_to_target_mean_mm": 250.15484371850175,
+            "target_to_source_mean_mm": 253.615338001932
+          }
+        }
+      },
+      {
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "objective_mean_mm": 140.07356956016415,
+        "matrix": [
+          [
+            -0.9954770428003661,
+            0.09395753862237037,
+            -0.014051270172613387,
+            514.057363466577
+          ],
+          [
+            0.0938252152738038,
+            0.995540463806443,
+            0.0097986684236427,
+            -498.13815996378133
+          ],
+          [
+            -0.014909266791575372,
+            -0.008435986016933626,
+            0.9998532631859837,
+            -1755.453964582231
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 20,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 166.9648661302755,
+            "p95_mm": 230.9400225655814,
+            "source_to_target_mean_mm": 166.25584935864052,
+            "target_to_source_mean_mm": 167.67388290191053
+          },
+          "Femur Right": {
+            "mean_mm": 163.59871203922543,
+            "p95_mm": 229.59881123319158,
+            "source_to_target_mean_mm": 163.56607980954038,
+            "target_to_source_mean_mm": 163.63134426891048
+          },
+          "Pelvis Left": {
+            "mean_mm": 115.18418235961826,
+            "p95_mm": 185.39790463016882,
+            "source_to_target_mean_mm": 114.66580732973439,
+            "target_to_source_mean_mm": 115.70255738950213
+          },
+          "Pelvis Right": {
+            "mean_mm": 114.54651771153738,
+            "p95_mm": 184.04556998903598,
+            "source_to_target_mean_mm": 114.6464787247172,
+            "target_to_source_mean_mm": 114.44655669835757
+          }
+        }
+      },
+      {
+        "signs": [
+          1,
+          -1,
+          -1
+        ],
+        "objective_mean_mm": 137.05674317239783,
+        "matrix": [
+          [
+            0.9963416779882237,
+            -0.08274740815160928,
+            0.02135713341720239,
+            -516.0494312511652
+          ],
+          [
+            -0.08427424362040004,
+            -0.9928220705734803,
+            0.08486570593824537,
+            419.0522007041056
+          ],
+          [
+            0.014181416213434633,
+            -0.08635509612280123,
+            -0.9961634829724499,
+            -209.2301117179528
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 30,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 48.50221895111776,
+            "p95_mm": 133.8417108336506,
+            "source_to_target_mean_mm": 50.048331340792274,
+            "target_to_source_mean_mm": 46.95610656144326
+          },
+          "Femur Right": {
+            "mean_mm": 52.04259171543586,
+            "p95_mm": 141.98778741644387,
+            "source_to_target_mean_mm": 50.73475893557801,
+            "target_to_source_mean_mm": 53.350424495293716
+          },
+          "Pelvis Left": {
+            "mean_mm": 226.9522970457944,
+            "p95_mm": 310.4018604141955,
+            "source_to_target_mean_mm": 227.19952448353902,
+            "target_to_source_mean_mm": 226.70506960804988
+          },
+          "Pelvis Right": {
+            "mean_mm": 220.72986497724335,
+            "p95_mm": 305.07547139282235,
+            "source_to_target_mean_mm": 219.17523727417128,
+            "target_to_source_mean_mm": 222.28449268031545
+          }
+        }
+      },
+      {
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "objective_mean_mm": 17.671750823225562,
+        "matrix": [
+          [
+            0.9935587495042673,
+            -0.11330487236839067,
+            0.0017370034828730046,
+            -487.8703428925803
+          ],
+          [
+            -0.11328020787147339,
+            -0.9935058918641564,
+            -0.010660081416330064,
+            519.0055644237516
+          ],
+          [
+            -0.002933562358736769,
+            -0.010394649046008696,
+            0.999941671040415,
+            -1763.0597575778327
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 24,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 10.485214531318205,
+            "p95_mm": 21.95098703027688,
+            "source_to_target_mean_mm": 10.253393753710009,
+            "target_to_source_mean_mm": 10.717035308926402
+          },
+          "Femur Right": {
+            "mean_mm": 10.060354894191457,
+            "p95_mm": 19.575571652952508,
+            "source_to_target_mean_mm": 9.38513818631502,
+            "target_to_source_mean_mm": 10.735571602067898
+          },
+          "Pelvis Left": {
+            "mean_mm": 25.50830447294513,
+            "p95_mm": 68.46120996098458,
+            "source_to_target_mean_mm": 23.34850617567381,
+            "target_to_source_mean_mm": 27.668102770216453
+          },
+          "Pelvis Right": {
+            "mean_mm": 24.633129394447455,
+            "p95_mm": 58.98244450526794,
+            "source_to_target_mean_mm": 24.679188150332717,
+            "target_to_source_mean_mm": 24.587070638562185
+          }
+        }
+      },
+      {
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "objective_mean_mm": 136.19483912648735,
+        "matrix": [
+          [
+            0.9983916239187846,
+            0.015129658963981664,
+            0.05463752106790701,
+            -590.5404321642272
+          ],
+          [
+            -0.022811913302739798,
+            0.9894821514216473,
+            0.14284498111399221,
+            -537.2510357062329
+          ],
+          [
+            0.05190165604564701,
+            0.14386161905672457,
+            -0.9882358284650973,
+            -333.860681758689
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 30,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 46.45738055351632,
+            "p95_mm": 139.32142007060835,
+            "source_to_target_mean_mm": 47.50978525914968,
+            "target_to_source_mean_mm": 45.404975847882966
+          },
+          "Femur Right": {
+            "mean_mm": 55.82029426136523,
+            "p95_mm": 155.43894426291507,
+            "source_to_target_mean_mm": 54.7072636255109,
+            "target_to_source_mean_mm": 56.93332489721956
+          },
+          "Pelvis Left": {
+            "mean_mm": 225.78617895458433,
+            "p95_mm": 308.20160149364546,
+            "source_to_target_mean_mm": 225.46432234461062,
+            "target_to_source_mean_mm": 226.10803556455804
+          },
+          "Pelvis Right": {
+            "mean_mm": 216.7155027364835,
+            "p95_mm": 301.211404030584,
+            "source_to_target_mean_mm": 213.0231359944654,
+            "target_to_source_mean_mm": 220.40786947850157
+          }
+        }
+      },
+      {
+        "signs": [
+          1,
+          1,
+          1
+        ],
+        "objective_mean_mm": 4.588672134555322,
+        "matrix": [
+          [
+            0.9992519238183978,
+            -0.02638831675866439,
+            0.028271000758304684,
+            -546.0650409956036
+          ],
+          [
+            0.02601852161976887,
+            0.999572056296913,
+            0.013369398007490261,
+            -465.46785251402116
+          ],
+          [
+            -0.028611698271044626,
+            -0.01262382703483623,
+            0.9995108852398972,
+            -1746.221181385113
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "iterations": 20,
+        "fit_errors": {
+          "Femur Left": {
+            "mean_mm": 4.892355163878534,
+            "p95_mm": 8.213395851560472,
+            "source_to_target_mean_mm": 4.825783480943633,
+            "target_to_source_mean_mm": 4.958926846813437
+          },
+          "Femur Right": {
+            "mean_mm": 4.6269099175365564,
+            "p95_mm": 8.109977620841228,
+            "source_to_target_mean_mm": 4.563311795483266,
+            "target_to_source_mean_mm": 4.690508039589846
+          },
+          "Pelvis Left": {
+            "mean_mm": 4.499068205181896,
+            "p95_mm": 8.458826233381181,
+            "source_to_target_mean_mm": 4.556764438421683,
+            "target_to_source_mean_mm": 4.441371971942107
+          },
+          "Pelvis Right": {
+            "mean_mm": 4.336355251624305,
+            "p95_mm": 8.026871504533162,
+            "source_to_target_mean_mm": 4.247760372502325,
+            "target_to_source_mean_mm": 4.424950130746285
+          }
+        }
+      }
+    ],
+    "fit_errors_by_structure": {
+      "Femur Left": {
+        "mean_mm": 3.3437443681853063,
+        "p95_mm": 6.167111449710112,
+        "source_to_target_mean_mm": 3.259789412332143,
+        "target_to_source_mean_mm": 3.4276993240384686
+      },
+      "Femur Right": {
+        "mean_mm": 3.2427892536543483,
+        "p95_mm": 5.675192359794472,
+        "source_to_target_mean_mm": 3.150241199741226,
+        "target_to_source_mean_mm": 3.3353373075674706
+      },
+      "Pelvis Left": {
+        "mean_mm": 2.8162465799100094,
+        "p95_mm": 4.9262925532381665,
+        "source_to_target_mean_mm": 2.7651002806520673,
+        "target_to_source_mean_mm": 2.867392879167952
+      },
+      "Pelvis Right": {
+        "mean_mm": 2.7175113225582312,
+        "p95_mm": 4.848087847042826,
+        "source_to_target_mean_mm": 2.6942771641084775,
+        "target_to_source_mean_mm": 2.7407454810079845
+      }
+    },
+    "held_out_validation": {
+      "Sacrum + Coccyx": {
+        "mean_mm": 3.8166017306862488,
+        "p95_mm": 10.112813200079005,
+        "source_to_target_mean_mm": 3.919482108011114,
+        "target_to_source_mean_mm": 3.713721353361383
+      },
+      "criterion_mean_lt_3mm": false
+    },
+    "diagnostic_matrix_not_accepted": true,
+    "validation_source_meshes": [
+      "VHF_Left_Bone_Sacrum_smooth.stl",
+      "VHF_Left_Bone_Coccyx_smooth.stl"
+    ]
+  },
+  "stage_b": {
+    "status": "diagnostic_only",
+    "stage_a_gate_bypassed_for_diagnostic_mode": true,
+    "stage_a_matrix_used_as_stage_b_initialization": false,
+    "source": "TC NIfTI world RAS mm",
+    "target": "HRA explicitly converted from app meters to RAS mm",
+    "hra_app_to_ras_mm": [
+      [
+        -1000.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1000.0,
+        0.0
+      ],
+      [
+        0.0,
+        1000.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "icp_initialization": "centroid difference of the union of paired fit structures",
+    "icp_objective": "symmetric mean of both surface-distance directions",
+    "scale_bounds": [
+      0.85,
+      1.15
+    ],
+    "fit_pairs_used": [
+      {
+        "mask": "vertebrae_L1",
+        "hra_meshes": [
+          "VH_F_lumbar_vertebra_1"
+        ]
+      },
+      {
+        "mask": "vertebrae_L2",
+        "hra_meshes": [
+          "VH_F_lumbar_vertebra_2"
+        ]
+      },
+      {
+        "mask": "vertebrae_L3",
+        "hra_meshes": [
+          "VH_F_lumbar_vertebra_3"
+        ]
+      },
+      {
+        "mask": "vertebrae_L4",
+        "hra_meshes": [
+          "VH_F_lumbar_vertebra_4"
+        ]
+      },
+      {
+        "mask": "vertebrae_L5",
+        "hra_meshes": [
+          "VH_F_lumbar_vertebra_5"
+        ]
+      },
+      {
+        "mask": "vertebrae_T10",
+        "hra_meshes": [
+          "VH_F_thoracic_vertebra_10"
+        ]
+      },
+      {
+        "mask": "vertebrae_T11",
+        "hra_meshes": [
+          "VH_F_thoracic_vertebra_11"
+        ]
+      },
+      {
+        "mask": "vertebrae_T12",
+        "hra_meshes": [
+          "VH_F_thoracic_vertebra_12"
+        ]
+      },
+      {
+        "mask": "sacrum",
+        "hra_meshes": [
+          "VH_F_sacrum"
+        ]
+      },
+      {
+        "mask": "femur_left",
+        "hra_meshes": [
+          "VH_F_femur_L"
+        ]
+      },
+      {
+        "mask": "femur_right",
+        "hra_meshes": [
+          "VH_F_femur_R"
+        ]
+      },
+      {
+        "mask": "hip_left",
+        "hra_meshes": [
+          "VH_F_ilium_compact_bone_L",
+          "VH_F_ilium_spongy_bone_L"
+        ]
+      },
+      {
+        "mask": "hip_right",
+        "hra_meshes": [
+          "VH_F_ilium_compact_bone_R",
+          "VH_F_ilium_spongy_bone_R"
+        ]
+      }
+    ],
+    "fit_pairs_unavailable": [],
+    "similarity": {
+      "matrix_4x4": [
+        [
+          1.0174970810329316,
+          -0.007645731392376498,
+          0.0042880960024880435,
+          -2.5633827322631966
+        ],
+        [
+          0.0076479031094209265,
+          1.017505977875971,
+          -0.0004994507772558088,
+          -85.33182580857601
+        ],
+        [
+          -0.0042842215021910105,
+          0.0005316620407925861,
+          1.0175256840335687,
+          879.9457977074646
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scale_uniform": 1.0175348420994663,
+      "rotation": [
+        [
+          0.9999628896574619,
+          -0.007513975026743222,
+          0.004214200659350859
+        ],
+        [
+          0.007516109319304593,
+          0.9999716331841416,
+          -0.0004908439068536449
+        ],
+        [
+          -0.004210392927038678,
+          0.0005225000843171275,
+          0.9999909997520293
+        ]
+      ],
+      "translation_mm": [
+        -2.5633827322631966,
+        -85.33182580857601,
+        879.9457977074646
+      ],
+      "iterations": 41,
+      "fit_errors_by_structure": {
+        "vertebrae_L1": {
+          "mean_mm": 1.6942119627123133,
+          "p95_mm": 3.1883058091577907,
+          "source_to_target_mean_mm": 1.7868543025487815,
+          "target_to_source_mean_mm": 1.6015696228758447
+        },
+        "vertebrae_L2": {
+          "mean_mm": 2.332913462582801,
+          "p95_mm": 3.5695339592979307,
+          "source_to_target_mean_mm": 2.884783253795284,
+          "target_to_source_mean_mm": 1.7810436713703177
+        },
+        "vertebrae_L3": {
+          "mean_mm": 6.2153754983924285,
+          "p95_mm": 28.949615777505663,
+          "source_to_target_mean_mm": 10.177998488180029,
+          "target_to_source_mean_mm": 2.2527525086048286
+        },
+        "vertebrae_L4": {
+          "mean_mm": 10.626527108530778,
+          "p95_mm": 30.56844739793709,
+          "source_to_target_mean_mm": 13.786138378783942,
+          "target_to_source_mean_mm": 7.466915838277616
+        },
+        "vertebrae_L5": {
+          "mean_mm": 15.472280020881746,
+          "p95_mm": 34.25773000573789,
+          "source_to_target_mean_mm": 17.859976532395788,
+          "target_to_source_mean_mm": 13.084583509367706
+        },
+        "vertebrae_T10": {
+          "mean_mm": 2.3432486618984605,
+          "p95_mm": 4.550393205981471,
+          "source_to_target_mean_mm": 2.469838357874419,
+          "target_to_source_mean_mm": 2.2166589659225013
+        },
+        "vertebrae_T11": {
+          "mean_mm": 2.0278535162005444,
+          "p95_mm": 3.814289713801954,
+          "source_to_target_mean_mm": 2.164426800318468,
+          "target_to_source_mean_mm": 1.8912802320826207
+        },
+        "vertebrae_T12": {
+          "mean_mm": 1.7996000738286044,
+          "p95_mm": 3.353588838159482,
+          "source_to_target_mean_mm": 1.9031663464044013,
+          "target_to_source_mean_mm": 1.6960338012528078
+        },
+        "sacrum": {
+          "mean_mm": 3.6249823855587384,
+          "p95_mm": 10.04717213091859,
+          "source_to_target_mean_mm": 3.429662755745155,
+          "target_to_source_mean_mm": 3.820302015372321
+        },
+        "femur_left": {
+          "mean_mm": 11.067746462980162,
+          "p95_mm": 32.81132967864594,
+          "source_to_target_mean_mm": 11.95600454182607,
+          "target_to_source_mean_mm": 10.17948838413425
+        },
+        "femur_right": {
+          "mean_mm": 20.252964260153025,
+          "p95_mm": 49.800462962877866,
+          "source_to_target_mean_mm": 20.684580768324125,
+          "target_to_source_mean_mm": 19.821347751981925
+        },
+        "hip_left": {
+          "mean_mm": 11.551595243820971,
+          "p95_mm": 72.5938392750414,
+          "source_to_target_mean_mm": 19.757159596365604,
+          "target_to_source_mean_mm": 3.3460308912763383
+        },
+        "hip_right": {
+          "mean_mm": 11.860116699073874,
+          "p95_mm": 70.09015141879001,
+          "source_to_target_mean_mm": 19.390808975105088,
+          "target_to_source_mean_mm": 4.329424423042657
+        }
+      }
+    },
+    "anisotropic": {
+      "matrix_4x4": [
+        [
+          1.1007182342779682,
+          -0.02174140158681937,
+          -0.004005329299828099,
+          -8.384053084323483
+        ],
+        [
+          0.02323600587647434,
+          1.0285357554402879,
+          -0.0068925019356081575,
+          -88.32313033883936
+        ],
+        [
+          0.004576202734632721,
+          0.007013305497731149,
+          0.9984027096331773,
+          867.4373562546073
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scale_xyz": [
+        1.1009729719082884,
+        1.0287894221929421,
+        0.9984345345833164
+      ],
+      "rotation": [
+        [
+          0.9997686249918756,
+          -0.02113299487515719,
+          -0.004011609335508082
+        ],
+        [
+          0.021104973936099416,
+          0.999753431803261,
+          -0.006903308826837258
+        ],
+        [
+          0.004156507790287445,
+          0.006817046663234309,
+          0.999968125150887
+        ]
+      ],
+      "translation_mm": [
+        -8.384053084323483,
+        -88.32313033883936,
+        867.4373562546073
+      ],
+      "iterations": 45,
+      "fit_errors_by_structure": {
+        "vertebrae_L1": {
+          "mean_mm": 1.5201757811025234,
+          "p95_mm": 2.7363095974940905,
+          "source_to_target_mean_mm": 1.593513451296519,
+          "target_to_source_mean_mm": 1.4468381109085275
+        },
+        "vertebrae_L2": {
+          "mean_mm": 2.4654539830136075,
+          "p95_mm": 3.895997796328298,
+          "source_to_target_mean_mm": 3.0527961776218393,
+          "target_to_source_mean_mm": 1.878111788405376
+        },
+        "vertebrae_L3": {
+          "mean_mm": 6.358060314616805,
+          "p95_mm": 28.593337297710967,
+          "source_to_target_mean_mm": 10.237880844039324,
+          "target_to_source_mean_mm": 2.478239785194284
+        },
+        "vertebrae_L4": {
+          "mean_mm": 10.584948169944468,
+          "p95_mm": 30.419405573537773,
+          "source_to_target_mean_mm": 13.62130027352391,
+          "target_to_source_mean_mm": 7.548596066365025
+        },
+        "vertebrae_L5": {
+          "mean_mm": 14.862082946421966,
+          "p95_mm": 32.827313474293,
+          "source_to_target_mean_mm": 17.088703080967562,
+          "target_to_source_mean_mm": 12.63546281187637
+        },
+        "vertebrae_T10": {
+          "mean_mm": 1.6193115547776116,
+          "p95_mm": 3.111002795841287,
+          "source_to_target_mean_mm": 1.7052159232782567,
+          "target_to_source_mean_mm": 1.5334071862769663
+        },
+        "vertebrae_T11": {
+          "mean_mm": 1.4705177945648404,
+          "p95_mm": 2.7924174102450854,
+          "source_to_target_mean_mm": 1.5744299859152395,
+          "target_to_source_mean_mm": 1.3666056032144418
+        },
+        "vertebrae_T12": {
+          "mean_mm": 1.4457596737338778,
+          "p95_mm": 2.711536889390599,
+          "source_to_target_mean_mm": 1.5419178820154844,
+          "target_to_source_mean_mm": 1.3496014654522714
+        },
+        "sacrum": {
+          "mean_mm": 3.5903993928033695,
+          "p95_mm": 9.7548073494594,
+          "source_to_target_mean_mm": 3.404745045132718,
+          "target_to_source_mean_mm": 3.776053740474021
+        },
+        "femur_left": {
+          "mean_mm": 9.953700981640761,
+          "p95_mm": 32.50675307328333,
+          "source_to_target_mean_mm": 11.46201596507887,
+          "target_to_source_mean_mm": 8.445385998202653
+        },
+        "femur_right": {
+          "mean_mm": 13.077018395724862,
+          "p95_mm": 40.40156699446482,
+          "source_to_target_mean_mm": 14.320112450862082,
+          "target_to_source_mean_mm": 11.833924340587638
+        },
+        "hip_left": {
+          "mean_mm": 11.315425339211686,
+          "p95_mm": 68.47069217320247,
+          "source_to_target_mean_mm": 18.861390603378666,
+          "target_to_source_mean_mm": 3.7694600750447087
+        },
+        "hip_right": {
+          "mean_mm": 9.807910021639097,
+          "p95_mm": 63.25238459494899,
+          "source_to_target_mean_mm": 16.54138303749205,
+          "target_to_source_mean_mm": 3.0744370057861414
+        }
+      }
+    },
+    "anisotropic_macro_mean_improvement_percent": 12.68833665999799,
+    "held_out_pairs_used": [
+      {
+        "mask": "kidney_left",
+        "hra_meshes": [
+          "VH_F_kidney_capsule_L",
+          "VH_F_outer_cortex_of_kidney_L",
+          "VH_F_hilum_of_kidney_L",
+          "VH_F_renal_pelvis_L"
+        ],
+        "note": "composite HRA, approximate"
+      },
+      {
+        "mask": "kidney_right",
+        "hra_meshes": [
+          "VH_F_kidney_capsule_R",
+          "VH_F_outer_cortex_of_kidney_R",
+          "VH_F_hilum_of_kidney_R",
+          "VH_F_renal_pelvis_R"
+        ],
+        "note": "composite HRA, approximate"
+      }
+    ],
+    "held_out_errors": {
+      "kidney_left": {
+        "similarity": {
+          "mean_mm": 4.250005042621731,
+          "p95_mm": 8.631371525204477,
+          "source_to_target_mean_mm": 4.1680398800438345,
+          "target_to_source_mean_mm": 4.331970205199628
+        },
+        "anisotropic": {
+          "mean_mm": 4.342461458061264,
+          "p95_mm": 8.40573809636551,
+          "source_to_target_mean_mm": 4.081240040021971,
+          "target_to_source_mean_mm": 4.603682876100557
+        }
+      },
+      "kidney_right": {
+        "similarity": {
+          "mean_mm": 3.8990021615768518,
+          "p95_mm": 8.434042234537547,
+          "source_to_target_mean_mm": 3.832921786356043,
+          "target_to_source_mean_mm": 3.9650825367976594
+        },
+        "anisotropic": {
+          "mean_mm": 5.321971785837141,
+          "p95_mm": 12.603684569594567,
+          "source_to_target_mean_mm": 5.870758889281025,
+          "target_to_source_mean_mm": 4.773184682393256
+        }
+      }
+    },
+    "not_paired_whole_organs": [
+      "liver",
+      "spleen",
+      "urinary_bladder"
+    ],
+    "fit_is_direct_from_nlm_world_to_hra_ras_mm": true,
+    "axis_sign_search": "none"
+  }
+}
