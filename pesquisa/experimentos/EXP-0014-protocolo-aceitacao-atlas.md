@@ -9,9 +9,9 @@
 - **Responsável:** Coordenador do projeto (sugestão do usuário e consultoria)
 - **Agentes de IA:** Antigravity (registro documental)
 - **Branch:** `etapa-1-fundacao`
-- **Commit(s):** não aplicável (pré-execução)
+- **Commit(s):** `5ec1c34`
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `concluído — hipótese rejeitada para a base HRA`
 
 ## 2. Problema
 No `EXP-0011` (segmentação `--fast`), o critério rígido único `< 3 mm` no sacro (*holdout*) reprovou a Etapa A (`3,990 mm`), bloqueando a Etapa B. Entretanto, um critério único indiferenciado não reflete a finalidade clínica/informacional de um atlas anatômico de referência nem distingue estruturas grandes, vértebras/grandes vasos e integridade funcional (contenção na pele, articulações e ausência de sobreposição).
@@ -62,27 +62,40 @@ Se o ajuste global (similaridade) falhar em alguma região, usar **ajuste por re
 - **F5 — Revisão humana:** capturas em 4 vistas (frente, costas, lados) aprovadas por uma pessoa.
 
 ## 8. Resultados
-Planejado — a segmentação em resolução normal ainda não rodou.
+Rodada real executada no commit `5ec1c34` (`hra/nlm/bruto/saida/segmentacao.nii.gz` em resolução normal; fonte: `hra/alinhar/RELATORIO.md` e `hra/alinhar/transformacoes.json`) — **NÃO ACEITO**:
+- **Etapa A (Denver STL → TC NLM):** `Femur Left` 3,006 mm (P95 5,717 mm), `Femur Right` 3,234 mm (P95 6,155 mm), `Pelvis Left` 3,027 mm (P95 4,771 mm), `Pelvis Right` 2,707 mm (P95 4,743 mm), `Sacrum NLM vs Denver Sacrum + Coccyx` (holdout) 3,785 mm (P95 9,602 mm). (`EXP-0011` permanece **REPROVADO** no critério original de 3 mm.)
+- **Etapa B global (TC → HRA):**
+  - Passaram: torácicas `T10–T12` (`1,786–2,399 mm`), `sacrum` (`3,704 mm`), `kidney_left` (`4,588 mm`), `kidney_right` (`4,433 mm` na similaridade; `5,820 mm` em escala XYZ), `spleen` (`3,791 mm`).
+  - Reprovaram: lombares `L1–L5` (`5,649` a `19,228 mm`), `femur_left`/`right` (`10,541` / `19,747 mm`), `hip_left`/`right` (`11,857` / `11,777 mm`), grandes vasos (`4,800–5,678 mm`), `liver` (`5,108 mm`), `heart` (`8,240 mm`).
+- **Ajuste por região (Plano B) e pernas Denver→HRA:**
+  - Região `head_neck` (cervical) e `thorax` (torácica) passaram nas âncoras regionais, com emendas `head_neck/thorax = 1,689 mm` e `thorax/abdomen_pelvis = 1,810 mm`; `L1–L5` e `kidney_left` reprovaram no ajuste regional.
+  - **Joelho (fêmur–tíbia):** `24,960 mm` (esquerdo) e `23,159 mm` (direito) — **FAIL**.
+  - **Cabeça do fêmur à pelve HRA:** `17–21 mm` (limite `≤ 5 mm`) — **FAIL**.
+- **Critérios funcionais:**
+  - **F1 (Contenção):** reprovou em **`32/164`** estruturas (limitação adicional documentada: a pele do HRA é malha aberta, com ~79% das normais para fora).
+  - **F3 (Sobreposição):** reprovou em **`28/164`** estruturas.
+  - **F4 (Lateralidade):** **`160/160` PASS** (fonte única sem duplicatas).
+  - **F5 (Revisão humana):** **pendente**.
 
 ## 9. Validação
-Planejado — não executado.
+**NÃO ACEITO** no protocolo `EXP-0014`: apesar de Plano B regional passar nas regiões cervical e torácica, falhou na pelve, lombar (`L1–L5`), rim esquerdo, joelho (`23–25 mm`), quadril (`17–21 mm`), contenção (`32/164`) e sobreposição (`28/164`).
 
 ## 10. Limitações
-Os limiares geométricos e funcionais são critérios de engenharia para investigação e **não constituem tolerâncias clinicamente validadas** até avaliação por professores de medicina / especialistas.
+Pele do HRA é aberta (não fechada, ~79% das normais apontando para fora), distorcendo o teste de contenção F1; o modelo HRA foi remodelado por ilustradores no Maya e diverge geometricamente da anatomia real da doadora na pelve, pernas e coluna lombar.
 
 ## 11. Conclusão
-- **Observado:** protocolo formalmente pré-registrado antes da execução em resolução normal; `EXP-0011` permanece **REPROVADO** no critério de `< 3 mm`.
-- **Interpretação:** a estratificação por finalidade e os critérios F1–F5 permitem avaliar adequação de uso como atlas de referência sem mascarar o resultado prévio do `EXP-0011`.
-- **Veredito da hipótese:** `em aberto`
+- **Observado:** o alinhamento entre Denver/TC NLM (mesma doadora e exame, erro ~3–4 mm) e o corpo base do HRA falhou nos critérios geométricos e funcionais (`joelho 23–25 mm`, `quadril 17–21 mm`, `F1 32/164`, `F3 28/164`, `L1–L5` e rim esquerdo reprovados).
+- **Interpretação:** a divergência estrutural vem da remodelagem artística do HRA; manter o HRA como corpo base exige deformações que violam a fidelidade anatômica. Recomenda-se inverter a base para a TC NLM (`EXP-0015`).
+- **Veredito da hipótese:** `rejeitada` (para a base HRA)
 
 ## 12. Próximos passos
-Executar a segmentação do `TotalSegmentator` em resolução normal (`1,5 mm`), aplicar o protocolo `EXP-0014` (e Plano B regional, se necessário) e discutir os limiares com professores de medicina.
+Executar o `EXP-0015` invertendo o corpo base para a TC original da NLM (`TotalSegmentator total + body`) com as pernas da Denver e complementos do HRA ajustados localmente.
 
 ## 13. Rastreabilidade
-- **Commits:** não aplicável (pré-execução)
-- **Scripts:** não aplicável
-- **Logs:** não aplicável
-- **Resultados / artefatos:** `pesquisa/experimentos/EXP-0014-protocolo-aceitacao-atlas.md`
+- **Commits:** `5ec1c34`
+- **Scripts:** `hra/alinhar/alinhar.py`
+- **Logs:** não documentado em arquivo separado
+- **Resultados / artefatos:** `hra/alinhar/RELATORIO.md`, `hra/alinhar/transformacoes.json`, `pesquisa/experimentos/EXP-0014-protocolo-aceitacao-atlas.md`
 
 ## 14. Revisão
 - **Revisor:** não documentado
