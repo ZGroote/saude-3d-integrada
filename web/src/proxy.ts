@@ -10,6 +10,12 @@ function copiarCookies(origem: NextResponse, destino: NextResponse) {
   origem.cookies.getAll().forEach((cookie) => destino.cookies.set(cookie));
 }
 
+function apagarCookieAtividade(response: NextResponse, request: NextRequest) {
+  response.cookies.set(COOKIE_ATIVIDADE, "", {
+    httpOnly: true, sameSite: "lax", secure: request.nextUrl.protocol === "https:", path: "/", maxAge: 0,
+  });
+}
+
 function cachePrivado(response: NextResponse, protegido: boolean) {
   let origemSupabase = "";
   let hostSupabase = "";
@@ -80,11 +86,10 @@ export async function proxy(request: NextRequest) {
 
   if (expirouPorInatividade) {
     try { await supabase.auth.signOut({ scope: "local" }); } catch { /* cookie inválido continua bloqueando as próximas requisições */ }
-    response.cookies.delete(COOKIE_ATIVIDADE);
     if (rotaProtegida) {
       const destino = NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
       copiarCookies(response, destino);
-      destino.cookies.delete(COOKIE_ATIVIDADE);
+      apagarCookieAtividade(destino, request);
       return cachePrivado(destino, true);
     }
     if (rotaAtividade || rotaLogin) {
@@ -92,7 +97,7 @@ export async function proxy(request: NextRequest) {
         ? NextResponse.json({ erro: "sessao_expirada" }, { status: 401 })
         : NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
       copiarCookies(response, destino);
-      destino.cookies.delete(COOKIE_ATIVIDADE);
+      apagarCookieAtividade(destino, request);
       return cachePrivado(destino, rotaAtividade);
     }
   } else if (requerLogin && !user) {

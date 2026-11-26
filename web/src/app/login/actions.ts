@@ -36,7 +36,9 @@ export async function entrar(_anterior: { erro: string; email: string }, dados: 
 }
 
 export async function sair() {
-  (await cookies()).delete(COOKIE_ATIVIDADE);
+  (await cookies()).set(COOKIE_ATIVIDADE, "", {
+    httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: "/", maxAge: 0,
+  });
   const supabase = await createClient();
   // só esta sessão: outros aparelhos do mesmo profissional continuam conectados
   await supabase.auth.signOut({ scope: "local" });
