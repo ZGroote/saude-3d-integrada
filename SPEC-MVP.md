@@ -74,7 +74,9 @@ atlas/<atlas>/<versao>/
   <sistema>.glb      nós nomeados pela malha (o índice é a referência dos metadados)
 ```
 
-Uma versão publicada nunca é alterada; mudança de geometria gera versão nova. O pacote é gerado por script (`bodyparts3d/publicar_atlas.py`) e não vai para o git; onde ele é hospedado (pasta `public/` ou Supabase Storage) se decide na Etapa 2.
+Uma versão publicada nunca é alterada; mudança de geometria gera versão nova.
+
+**Versão leve (LOD):** cada sistema pode trazer `glb_leve` no manifesto (`sistemas:[{id, glb, glb_leve?, estruturas}]`), com as mesmas malhas simplificadas e os mesmos nomes de nó. O motor abre pelo leve e troca pelo completo quando o sistema é selecionado ou ampliado. A âncora continua no espaço do atlas e vale para as duas versões. Simplificação só onde não destrói anatomia: pele e grandes superfícies sim; vasos, nervos e estruturas finas não. O pacote é gerado por script (`bodyparts3d/publicar_atlas.py`) e não vai para o git; onde ele é hospedado (pasta `public/` ou Supabase Storage) se decide na Etapa 2.
 
 ### 5.4 Contrato do motor anatômico
 
