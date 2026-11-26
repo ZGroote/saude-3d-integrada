@@ -44,7 +44,12 @@ type Prontuario = {
 };
 const naoRevisado = (e: { nome_pt: string; validacao: string }) => !!e.nome_pt && (!e.validacao || e.validacao === "pendente");
 
-export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; prontuario?: Prontuario }) {
+export default function VisualizadorAtlas({ sexo, prontuario, pacoteDeRevisao }: {
+  sexo: Sexo;
+  prontuario?: Prontuario;
+  /** só a rota /dev/motor passa: abre um pacote fora da tabela, para revisão */
+  pacoteDeRevisao?: { atlas: string; versao: string };
+}) {
   const [pedido, setPedido] = useState<Atlas | null>(ATLAS_DO_SEXO[sexo] ?? null);
   // o atlas feminino é tido como publicado; só o 404 do manifesto leva ao corpo provisório
   const [semFeminino, setSemFeminino] = useState(false);
@@ -52,6 +57,8 @@ export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; pr
   const hidratado = useHidratado();
   const provisorio = pedido === "hra-f" && semFeminino;
   const atlas = provisorio ? "bp3d-m" : pedido;
+
+  if (pacoteDeRevisao) return <Corpo key={`${pacoteDeRevisao.atlas}/${pacoteDeRevisao.versao}`} {...pacoteDeRevisao} provisorio={false} />;
 
   return (
     <div className="space-y-4">
@@ -79,21 +86,21 @@ export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; pr
         <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
       ) : (
         // trocar de atlas zera a seleção de sistemas e o ponto escolhido
-        <Corpo key={atlas} atlas={atlas} provisorio={provisorio} prontuario={prontuario}
+        <Corpo key={atlas} atlas={atlas} versao={ATLAS[atlas].versao} provisorio={provisorio} prontuario={prontuario}
           onAusente={atlas === "hra-f" ? femininoAusente : undefined} />
       )}
     </div>
   );
 }
 
-function Corpo({ atlas, provisorio, prontuario, onAusente }: {
-  atlas: Atlas;
+function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
+  atlas: string;
+  versao: string;
   provisorio: boolean;
   prontuario?: Prontuario;
   /** o pacote deste atlas não foi publicado */
   onAusente?: () => void;
 }) {
-  const { versao } = ATLAS[atlas];
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [sistemas, setSistemas] = useState(["tegumentar"]); // abre na pele
   const [ancora, setAncora] = useState<Ancora | null>(null);
