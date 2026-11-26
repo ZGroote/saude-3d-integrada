@@ -34,7 +34,7 @@ before(async()=>{
   await db.exec(await readFile(resolve(pasta,'shim_auth.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../migrations/0001_fundacao.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../seed.sql'),'utf8'));
-  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql'])
+  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql'])
     await db.exec(await readFile(resolve(pasta,'../migrations',file),'utf8'));
 });
 after(async()=>db.close());
