@@ -283,6 +283,25 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 - **Duplicatas:** recurso com `fhir_id` já importado é ignorado.
 - **Dados de teste:** gerar Bundles sintéticos (ex.: Synthea) e ajustar para CNS e CID-10. Nenhum dado real fora do piloto.
 
+### Contrato da Etapa 6 (importação)
+
+**Fluxo:** só o `admin`, só no servidor (nunca o navegador falando com o banco para importar). Upload do Bundle (até 10 MB) → validação zod e mapeamento → **prévia** (pacientes novos/existentes, condições, eventos, erros por recurso) → confirmação → gravação → relatório. Nenhum dado pessoal em log; `importacoes_fhir.erros` guarda só o `id` do recurso e o motivo.
+
+| Porta (banco) | Faz |
+| --- | --- |
+| `iniciar_importacao(p_arquivo text, p_recursos int) returns uuid` | Admin; cria `importacoes_fhir` da unidade |
+| `importar_paciente_fhir(p_importacao uuid, p_fhir_id text, p_cns text, p_nome text, p_sexo, p_nascimento date) returns uuid` | Admin; mesmo comportamento de `cadastrar_paciente` (CNS existente não duplica; vínculo com a unidade, `origem='importacao'`); `fhir_id` registrado |
+| `importar_condicao_fhir(p_importacao uuid, p_paciente uuid, p_fhir_id text, p_cid10 text, p_ancora jsonb, p_status, p_inicio date) returns uuid` | Admin com vínculo ativo; achado `origem='fhir'`, autor = admin, unidade = do admin, sigilo pela `cid10_sigilo`; **`fhir_id` já importado é ignorado** (devolve o id existente) |
+| `importar_evento_fhir(p_importacao uuid, p_paciente uuid, p_fhir_id text, p_tipo text, p_data timestamptz, p_codigo text, p_descricao text, p_valor text)` | `Observation`/`Encounter` em `eventos_clinicos` (linha do tempo; não viram ponto no corpo); `fhir_id` idempotente |
+| `concluir_importacao(p_importacao uuid, p_erros jsonb)` | Fecha o registro com contagens e erros |
+| `listar_eventos(p_paciente uuid)` | Vínculo ativo; eventos para a linha do tempo |
+
+`eventos_clinicos (id, paciente_id, unidade_id, importacao_id, fhir_id, tipo, data, codigo, descricao, valor, criado_em)` — `unique(origem fhir_id)`; sem DML direto.
+
+**CID-10 no `Condition.code`:** aceita os sistemas `http://hl7.org/fhir/sid/icd-10` e o CID-10 brasileiro; código inexistente na tabela `cid10` vira erro do recurso (não importa).
+
+**`bodySite` → âncora:** tabela pequena `bodysite_estrutura (snomed text pk, descricao, estrutura_fma, estrutura_uberon)` mantida à mão (ex.: região lombar, coração, joelho E/D, fígado); a âncora estrutural é montada no servidor com `malhaPrincipal` do atlas do sexo do paciente. `bodySite` sem mapeamento → `ancora=null` ("sem local no corpo"). Nunca adivinhar.
+
 ## 10. Requisitos não funcionais
 
 - **LGPD:** base legal de tutela da saúde para o atendimento. Termo e textos adaptados do PHÝŌ.
@@ -334,7 +353,11 @@ Cada etapa termina com um teste que passa.
    - Pediatra (unidade com vínculo só com a criança) vê o recorte gestacional e **nada** do prontuário da mãe (nem achados, nem outras gestações); condição restrita de outra unidade não aparece.
    - Criança abaixo de 12 anos não vê corpo 3D (§5.1); o prontuário dela é estruturado e por linha do tempo.
    - Gestação em curso: camada gestacional disponível no corpo da mãe.
-6. **Interoperabilidade:** importação FHIR. Teste: Bundle sintético com 50 pacientes importa sem erro e sem duplicar.
+6. **Interoperabilidade:** importação FHIR. Teste: Bundle sintético com 50 pacientes importa sem erro e sem duplicar. Critérios:
+   - Bundle sintético (gerado por script do repositório, CNS e nomes fictícios) com 50 pacientes, condições com e sem `bodySite` mapeado e observações: importa sem erro; reimportar o mesmo Bundle não cria nada novo.
+   - Prévia mostra contagens e erros antes de gravar; um Bundle com recursos inválidos importa os válidos e lista os inválidos com o motivo.
+   - Só admin importa; profissional e anônimo são negados; nada de dado pessoal em log ou em `erros`.
+   - Condição com `bodySite` mapeado aparece no ponto da estrutura; sem mapeamento, em "sem local no corpo"; condições sigilosas seguem `cid10_sigilo`.
 7. **Preparação para piloto:** validação médica, segurança, performance, acessibilidade e usabilidade nos três tamanhos de tela.
 
 ## 14. Demonstração de referência
