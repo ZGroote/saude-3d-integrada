@@ -4,21 +4,27 @@ import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { corDaEspecialidade, dataDoAchado, formatarData, SEM_FILTRO, STATUS, type Achado, type Filtro, type Status } from "@/lib/achados";
+import { corDaEspecialidade, dataDoAchado, diaDe, formatarData, SEM_FILTRO, STATUS, type Achado, type Filtro, type Status } from "@/lib/achados";
+import { filtrarEventos, type Evento } from "@/lib/eventos";
 
 const CAMPO = "h-10 w-full rounded-md border border-slate-300 bg-white px-2 text-sm text-slate-900 outline-none focus-visible:ring-2 focus-visible:ring-teal-700";
 const ROTULO = "block space-y-1 text-xs font-medium text-slate-700";
 
 /** Filtros e linha do tempo escrevem no mesmo `filtro`: os campos de data e os deslizantes são o mesmo intervalo. */
-export function LinhaDoTempo({ achados, visiveis, filtro, onFiltrar }: {
+export function LinhaDoTempo({ achados, eventos, visiveis, filtro, onFiltrar }: {
   achados: Achado[];
+  eventos: Evento[];
   visiveis: Achado[];
   filtro: Filtro;
   onFiltrar: (filtro: Filtro) => void;
 }) {
   const especialidades = useMemo(() => [...new Set(achados.map((a) => a.especialidade ?? ""))].sort((a, b) => a.localeCompare(b, "pt-BR")), [achados]);
-  // dias com achado, em ordem: as paradas dos deslizantes
-  const dias = useMemo(() => [...new Set(achados.map(dataDoAchado))].sort(), [achados]);
+  // dias com achado ou evento, em ordem: as paradas dos deslizantes
+  const dias = useMemo(
+    () => [...new Set([...achados.map(dataDoAchado), ...eventos.flatMap((e) => (e.data ? [diaDe(e.data)] : []))])].sort(),
+    [achados, eventos],
+  );
+  const eventosMarcados = useMemo(() => new Set(filtrarEventos(eventos, filtro).map((e) => e.id)), [eventos, filtro]);
   const marcados = useMemo(() => new Set(visiveis.map((a) => a.id)), [visiveis]);
   const ultimo = dias.length - 1;
   // posição de cada deslizante a partir das datas, que também podem ser digitadas
@@ -55,6 +61,7 @@ export function LinhaDoTempo({ achados, visiveis, filtro, onFiltrar }: {
             <Input type="date" name="filtro-ate" className="px-2" value={filtro.ate} min={filtro.de || undefined} onChange={(e) => onFiltrar({ ...filtro, ate: e.target.value })} />
           </label>
         </div>
+        {!!dias.length && (<>
         {/* desenho de apoio: os mesmos achados estão nas listas, em ordem de data */}
         <div aria-hidden="true" data-linha-do-tempo className="relative mx-1 h-6">
           <span className="absolute inset-x-0 top-1/2 h-px bg-slate-300" />
@@ -62,6 +69,12 @@ export function LinhaDoTempo({ achados, visiveis, filtro, onFiltrar }: {
             <span key={a.id} title={`${formatarData(dataDoAchado(a))} · ${a.cid10}`}
               className={`absolute top-1/2 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full ${marcados.has(a.id) ? "" : "opacity-20"}`}
               style={{ left: `${posicao(dataDoAchado(a))}%`, background: corDaEspecialidade(a.especialidade) }} />
+          ))}
+          {/* eventos são losangos */}
+          {eventos.map((e) => e.data && (
+            <span key={e.id} title={formatarData(e.data)}
+              className={`absolute top-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-slate-500 ${eventosMarcados.has(e.id) ? "" : "opacity-20"}`}
+              style={{ left: `${posicao(diaDe(e.data))}%` }} />
           ))}
         </div>
         <p className="flex justify-between text-xs text-slate-500"><span>{formatarData(dias[0]!)}</span><span>{formatarData(dias[ultimo]!)}</span></p>
@@ -77,6 +90,7 @@ export function LinhaDoTempo({ achados, visiveis, filtro, onFiltrar }: {
             </label>
           </>
         )}
+        </>)}
         <Button type="button" variant="outline" className="w-full" onClick={() => onFiltrar(SEM_FILTRO)}>Limpar filtros</Button>
       </fieldset>
     </Card>

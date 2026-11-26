@@ -40,7 +40,9 @@ export const formatarData = (iso: string) =>
   iso.length === 10 ? DATA_PURA.format(new Date(`${iso}T12:00:00Z`)) : CARIMBO.format(new Date(iso));
 
 /** Dia (AAAA-MM-DD) do achado na linha do tempo: o início; sem ele, o dia do registro. */
-export const dataDoAchado = (a: Pick<Achado, "inicio" | "criado_em">) => a.inicio ?? DIA_ISO.format(new Date(a.criado_em));
+export const dataDoAchado = (a: Pick<Achado, "inicio" | "criado_em">) => a.inicio ?? diaDe(a.criado_em);
+/** Dia de uma data pura ou de um carimbo de hora, no fuso do app. */
+export const diaDe = (iso: string) => (iso.length === 10 ? iso : DIA_ISO.format(new Date(iso)));
 
 /** `especialidade` null = todas ("" é um valor: achados sem especialidade); nos outros, "" = sem filtro. Datas inclusivas. */
 export type Filtro = { especialidade: string | null; status: Status | ""; de: string; ate: string };

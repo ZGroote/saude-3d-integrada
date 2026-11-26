@@ -55,6 +55,8 @@ export type ErroImportacao = { id: string; motivo: string };
 export type PacienteImportacao = {
   fhir_id: string;
   cns: string;
+  /** dado pessoal: só no servidor */
+  nome: string | null;
   sexo: "feminino" | "masculino" | "indeterminado";
   nascimento: string | null;
 };
@@ -107,6 +109,16 @@ function firstCid(codings: Array<z.infer<typeof codingSchema>> | undefined): str
   return codings?.find((item) => item.system && ICD10_SYSTEMS.has(item.system) && item.code)?.code ?? null;
 }
 
+function patientName(names: unknown[] | undefined): string | null {
+  for (const item of names ?? []) {
+    const { text, given, family } = (item ?? {}) as { text?: unknown; given?: unknown; family?: unknown };
+    const parts = [...(Array.isArray(given) ? given : []), family].filter((part) => typeof part === "string");
+    const name = (typeof text === "string" ? text : parts.join(" ")).trim();
+    if (name) return name;
+  }
+  return null;
+}
+
 function snomedCodes(sites: Array<z.infer<typeof codeableConceptSchema>> | undefined): string[] {
   return [...new Set((sites ?? []).flatMap((site) => (site.coding ?? [])
     .filter((coding) => coding.system === "http://snomed.info/sct" && coding.code)
@@ -132,15 +144,15 @@ export function planejarImportacaoFHIR(input: unknown): PlanoImportacao {
     const candidate = entry.resource;
     if (!candidate || typeof candidate !== "object" || !["Patient", "Condition", "Observation", "Encounter"].includes(String((candidate as { resourceType?: unknown }).resourceType))) continue;
     const type = (candidate as { resourceType: string }).resourceType;
-    const parsed = type === "Patient" ? patientSchema.safeParse(candidate) : null;
     if (type !== "Patient") continue;
+    const parsed = patientSchema.safeParse(candidate);
     const id = parsed.success ? parsed.data.id : ((candidate as { id?: unknown }).id && typeof (candidate as { id?: unknown }).id === "string" ? (candidate as { id: string }).id : "Patient");
     if (!parsed.success) { output.erros.push({ id, motivo: reason(candidate) }); continue; }
     const cns = parsed.data.identifier?.find((item) => item.system === SYSTEM_CNS)?.value;
     if (!cns) { output.erros.push({ id: parsed.data.id, motivo: reason(candidate) }); continue; }
     if (patientIds.has(parsed.data.id)) { output.erros.push({ id: parsed.data.id, motivo: "ID de recurso duplicado no Bundle." }); continue; }
     patientIds.add(parsed.data.id);
-    output.pacientes.push({ fhir_id: parsed.data.id, cns, sexo: sex(parsed.data.gender), nascimento: parsed.data.birthDate ?? null });
+    output.pacientes.push({ fhir_id: parsed.data.id, cns, nome: patientName(parsed.data.name), sexo: sex(parsed.data.gender), nascimento: parsed.data.birthDate ?? null });
   }
 
   const patientIdSet = new Set(output.pacientes.map((item) => item.fhir_id));
@@ -159,22 +171,27 @@ export function planejarImportacaoFHIR(input: unknown): PlanoImportacao {
       continue;
     }
     if (type === "Condition") {
-      const cid10 = firstCid(parsed.data.code.coding);
+      const condition = parsed.data as z.infer<typeof conditionSchema>;
+      const cid10 = firstCid(condition.code.coding);
       if (!cid10) { output.erros.push({ id, motivo: reason(candidate) }); continue; }
       output.condicoes.push({
         fhir_id: id, paciente_fhir_id: patientId, cid10,
-        bodySite: snomedCodes(parsed.data.bodySite),
-        status: display(parsed.data.clinicalStatus),
-        inicio: parsed.data.onsetDateTime ?? parsed.data.recordedDate ?? null,
+        bodySite: snomedCodes(condition.bodySite),
+        // o código é o que vale; o display é texto livre
+        status: condition.clinicalStatus?.coding?.find((item) => item.code)?.code ?? display(condition.clinicalStatus),
+        inicio: condition.onsetDateTime ?? condition.recordedDate ?? null,
       });
       continue;
     }
     if (type === "Observation") {
-      const value = parsed.data.valueString ?? (parsed.data.valueQuantity?.value === undefined ? null : `${parsed.data.valueQuantity.value}${parsed.data.valueQuantity.unit ? ` ${parsed.data.valueQuantity.unit}` : ""}`);
-      output.eventos.push({ fhir_id: id, paciente_fhir_id: patientId, tipo: "Observation", data: parsed.data.effectiveDateTime ?? parsed.data.effectiveInstant ?? null, codigo: parsed.data.code.coding?.find((item) => item.code)?.code ?? null, descricao: display(parsed.data.code), valor: value });
+      const observation = parsed.data as z.infer<typeof observationSchema>;
+      const quantity = observation.valueQuantity;
+      const value = observation.valueString ?? (quantity?.value === undefined ? null : `${quantity.value}${quantity.unit ? ` ${quantity.unit}` : ""}`);
+      output.eventos.push({ fhir_id: id, paciente_fhir_id: patientId, tipo: "Observation", data: observation.effectiveDateTime ?? observation.effectiveInstant ?? null, codigo: observation.code.coding?.find((item) => item.code)?.code ?? null, descricao: display(observation.code), valor: value });
     } else {
-      const code = parsed.data.type?.flatMap((item) => item.coding ?? []).find((item) => item.code);
-      output.eventos.push({ fhir_id: id, paciente_fhir_id: patientId, tipo: "Encounter", data: parsed.data.period?.start ?? null, codigo: code?.code ?? null, descricao: code?.display ?? null, valor: parsed.data.status ?? null });
+      const encounter = parsed.data as z.infer<typeof encounterSchema>;
+      const code = encounter.type?.flatMap((item) => item.coding ?? []).find((item) => item.code);
+      output.eventos.push({ fhir_id: id, paciente_fhir_id: patientId, tipo: "Encounter", data: encounter.period?.start ?? null, codigo: code?.code ?? null, descricao: code?.display ?? null, valor: encounter.status ?? null });
     }
   }
   return output;

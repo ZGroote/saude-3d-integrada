@@ -10,7 +10,7 @@ export async function proxy(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const chave = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
   if (!url || !chave) {
-    if (request.nextUrl.pathname.startsWith("/pacientes")) {
+    if (/^\/(pacientes|importar)/.test(request.nextUrl.pathname)) {
       return NextResponse.redirect(new URL("/login", request.url));
     }
     return response;
@@ -30,14 +30,15 @@ export async function proxy(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser();
   const rotaLogin = request.nextUrl.pathname === "/login";
   const rotaAtividade = request.nextUrl.pathname === "/api/sessao/atividade";
-  const requerLogin = request.nextUrl.pathname.startsWith("/pacientes") || rotaAtividade;
+  const rotaProtegida = request.nextUrl.pathname.startsWith("/pacientes") || request.nextUrl.pathname.startsWith("/importar");
+  const requerLogin = rotaProtegida || rotaAtividade;
   const ultimaAtividade = Number(request.cookies.get(COOKIE_ATIVIDADE)?.value ?? 0);
   const expirouPorInatividade = user && ultimaAtividade > 0 && Date.now() - ultimaAtividade >= INATIVIDADE_MS;
 
   if (expirouPorInatividade) {
     await supabase.auth.signOut({ scope: "local" });
     response.cookies.delete(COOKIE_ATIVIDADE);
-    if (request.nextUrl.pathname.startsWith("/pacientes")) return NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
+    if (rotaProtegida) return NextResponse.redirect(new URL("/login?motivo=sessao-expirada", request.url));
     if (rotaAtividade) return NextResponse.json({ erro: "sessao_expirada" }, { status: 401 });
   } else if (requerLogin && !user) {
     if (rotaAtividade) return NextResponse.json({ erro: "sem_sessao" }, { status: 401 });
@@ -56,4 +57,4 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/login", "/pacientes/:path*", "/api/sessao/atividade"] };
+export const config = { matcher: ["/login", "/pacientes/:path*", "/importar", "/api/sessao/atividade"] };

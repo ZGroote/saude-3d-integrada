@@ -22,8 +22,9 @@ export default async function ProntuarioPage({ params }: PageProps<"/pacientes/[
   const com3d = temAtlasAdulto(paciente);
   // os achados vão prontos no HTML: lista e linha do tempo aparecem na primeira pintura. As consultas
   // da gestação correm junto, para não somar espera.
-  const [achados, gestacoes, recorte] = await Promise.all([
+  const [achados, eventos, gestacoes, recorte] = await Promise.all([
     supabase.rpc("listar_achados", { p_paciente: paciente.id }),
+    supabase.rpc("listar_eventos", { p_paciente: paciente.id }),
     com3d && paciente.sexo === "feminino" ? supabase.rpc("listar_gestacoes", { p_mae: paciente.id }) : null,
     com3d ? null : supabase.rpc("historico_gestacional_crianca", { p_crianca: paciente.id }),
   ]);
@@ -33,6 +34,7 @@ export default async function ProntuarioPage({ params }: PageProps<"/pacientes/[
     {recorte && <Recorte linhas={recorte.error ? null : (recorte.data ?? [])} />}
     <section className="mt-8"><div className="mb-4"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal-800">Visualização clínica</p><h2 className="mt-1 text-xl font-semibold text-slate-950">{com3d ? "Prontuário 3D" : "Prontuário e linha do tempo"}</h2></div>
       <PainelAchados key={paciente.id} pacienteId={paciente.id} inicial={achados.error ? null : (achados.data ?? [])} sexo={paciente.sexo} com3d={com3d}
+        eventos={eventos.error ? null : (eventos.data ?? [])}
         gestacaoEmCurso={!!gestacoes?.data?.some((g) => g.desfecho === "em_curso")} />
     </section>
   </PaginaPaciente>;

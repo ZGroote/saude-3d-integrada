@@ -1,5 +1,8 @@
 import type { Ancora } from "@saude3d/motor-anatomico";
 import type { Achado, Categoria, Lado, Status } from "@/lib/achados";
+import type { Evento } from "@/lib/eventos";
+import type { Mapeamento } from "@/lib/fhir/ancora";
+import type { ErroImportacao } from "@/lib/fhir/importar";
 import type { Desfecho, Gestacao, RecorteGestacional } from "@/lib/gestacao";
 
 export type Sexo = "feminino" | "masculino" | "indeterminado";
@@ -98,6 +101,12 @@ export type Database = {
         Update: Record<string, unknown>;
         Relationships: [];
       };
+      bodysite_estrutura: {
+        Row: Mapeamento;
+        Insert: Record<string, unknown>;
+        Update: Record<string, unknown>;
+        Relationships: [];
+      };
       cid10: {
         Row: { codigo: string; descricao: string };
         Insert: { codigo: string; descricao: string };
@@ -131,6 +140,27 @@ export type Database = {
         };
         Returns: string;
       };
+      iniciar_importacao: { Args: { p_arquivo: string; p_recursos: number }; Returns: string };
+      importar_paciente_fhir: {
+        Args: { p_importacao: string; p_fhir_id: string; p_cns: string; p_nome: string; p_sexo: Sexo; p_nascimento: string | null };
+        Returns: string;
+      };
+      importar_condicao_fhir: {
+        Args: {
+          p_importacao: string; p_paciente: string; p_fhir_id: string; p_cid10: string; p_ancora: Ancora | null;
+          p_status: Status; p_inicio: string | null;
+        };
+        Returns: string;
+      };
+      importar_evento_fhir: {
+        Args: {
+          p_importacao: string; p_paciente: string; p_fhir_id: string; p_tipo: Evento["tipo"]; p_data: string | null;
+          p_codigo: string | null; p_descricao: string | null; p_valor: string | null;
+        };
+        Returns: null;
+      };
+      concluir_importacao: { Args: { p_importacao: string; p_erros: ErroImportacao[] }; Returns: null };
+      listar_eventos: { Args: { p_paciente: string }; Returns: Evento[] };
       listar_gestacoes: { Args: { p_mae: string }; Returns: Gestacao[] };
       historico_gestacional_crianca: { Args: { p_crianca: string }; Returns: RecorteGestacional[] };
     };

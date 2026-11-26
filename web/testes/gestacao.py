@@ -68,6 +68,10 @@ def rpc(nome, p, unidade):
         return pacientes[i] if ve(i) else {k: None for k in pacientes[MAE]}
     if nome == 'buscar_cid10':
         return [{'codigo': c, 'descricao': d} for c, d in CID.items() if p['p_texto'].lower() in f'{c} {d}'.lower()]
+    if nome == 'listar_eventos':
+        return []
+    if nome == 'eh_admin':
+        return False
     if nome == 'listar_achados':
         return achados.get(p['p_paciente'], []) if ve(p['p_paciente']) else []
     if nome == 'listar_gestacoes':
@@ -384,10 +388,11 @@ def chamadas_de(nome):
     return [p for n, p in chamadas if n == nome]
 
 
-if __name__ == '__main__':
+def com_app(testar, manipulador=SupabaseFalso):
+    """Sobe o Supabase falso e um `next dev` apontado para ele, roda `testar(url)` e devolve o log do Next."""
     cache = WEB / '.next/dev'
     assert not (cache / 'lock').exists(), 'há (ou ficou) um `next dev` nesta pasta: encerre-o e apague web/.next/dev'
-    falso = ThreadingHTTPServer(('127.0.0.1', porta_livre()), SupabaseFalso)
+    falso = ThreadingHTTPServer(('127.0.0.1', porta_livre()), manipulador)
     threading.Thread(target=falso.serve_forever, daemon=True).start()
     porta = porta_livre()
     ambiente = {**os.environ, 'NEXT_PUBLIC_SUPABASE_URL': f'http://127.0.0.1:{falso.server_port}',
@@ -397,15 +402,21 @@ if __name__ == '__main__':
     saida = tempfile.TemporaryFile()
     servidor = subprocess.Popen(['node', str(NEXT), 'dev', '-H', '127.0.0.1', '-p', str(porta)], cwd=WEB, env=ambiente,
                                 stdout=saida, stderr=subprocess.STDOUT)
+
+    def log():
+        saida.seek(0)
+        return saida.read().decode('utf-8', 'replace')
+
     try:
         for _ in range(300):
-            assert servidor.poll() is None, (saida.seek(0), saida.read().decode('utf-8', 'replace'))[1]
+            assert servidor.poll() is None, log()
             try:
                 socket.create_connection(('127.0.0.1', porta), timeout=1).close()
                 break
             except OSError:
                 time.sleep(0.3)
         testar(f'http://127.0.0.1:{porta}')
+        return log()
     finally:
         if os.name == 'nt':  # o Next cria processos filhos
             subprocess.run(['taskkill', '/T', '/F', '/PID', str(servidor.pid)], capture_output=True)
@@ -414,3 +425,7 @@ if __name__ == '__main__':
         servidor.wait(timeout=30)
         falso.shutdown()
         shutil.rmtree(cache, ignore_errors=True)
+
+
+if __name__ == '__main__':
+    com_app(testar)

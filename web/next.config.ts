@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // o Bundle FHIR tem até 10 MB; o padrão das ações de servidor é 1 MB. A folga é do envelope multipart.
+  experimental: { serverActions: { bodySizeLimit: "11mb" }, proxyClientMaxBodySize: "12mb" },
+  // o `next dev` registraria os argumentos das ações no terminal: nada de dado pessoal em log
+  logging: { serverFunctions: false },
   turbopack: {
     rules: {
       "*.css": {

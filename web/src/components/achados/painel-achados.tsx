@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Marcador } from "@saude3d/motor-anatomico";
 import { CartaoAchado } from "@/components/achados/cartao-achado";
+import { ListaEventos } from "@/components/achados/eventos";
 import { FormularioAchado } from "@/components/achados/formulario-achado";
 import { LinhaDoTempo } from "@/components/achados/linha-do-tempo";
 import { ListaAchados } from "@/components/achados/lista-achados";
@@ -12,13 +13,18 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { corDaEspecialidade, filtrar, ordenarPorData, SEM_FILTRO, TAMANHO_DO_STATUS, type Achado } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
+import { filtrarEventos, type Evento } from "@/lib/eventos";
 import { useHidratado } from "@/lib/hidratacao";
 import { createClient } from "@/lib/supabase/client";
 
-export function PainelAchados({ pacienteId, sexo, com3d, inicial, gestacaoEmCurso = false }: {
+const SEM_EVENTOS: Evento[] = [];
+
+export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_EVENTOS, gestacaoEmCurso = false }: {
   pacienteId: string;
   sexo: Sexo;
   com3d: boolean;
+  /** eventos clínicos da linha do tempo; null = a busca falhou */
+  eventos?: Evento[] | null;
   /** com gestação em curso o corpo oferece a camada gestacional */
   gestacaoEmCurso?: boolean;
   /** achados buscados no servidor; null = a busca falhou; omitido = o navegador busca (rota de desenvolvimento) */
@@ -112,7 +118,9 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, gestacaoEmCurs
           onFechar={() => setSelecionado(null)}
         />
       )}
-      {!!achados?.length && <LinhaDoTempo achados={achados} visiveis={visiveis} filtro={filtro} onFiltrar={setFiltro} />}
+      {!!(achados?.length || eventos?.length) && (
+        <LinhaDoTempo achados={achados ?? []} eventos={eventos ?? SEM_EVENTOS} visiveis={visiveis} filtro={filtro} onFiltrar={setFiltro} />
+      )}
       <Card className="px-5 py-4">
         <h3 className="text-sm font-semibold text-slate-950" aria-live="polite">
           Achados{!achados ? "" : visiveis.length === achados.length ? ` (${achados.length})` : ` (${visiveis.length} de ${achados.length})`}
@@ -133,6 +141,9 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, gestacaoEmCurs
                   ))}
               </>
             )}
+        {eventos === null
+          ? <p role="alert" className="mt-3 text-sm text-red-800">Não foi possível carregar os eventos clínicos.</p>
+          : !!eventos.length && <ListaEventos eventos={filtrarEventos(eventos, filtro)} />}
       </Card>
     </fieldset>
   );
