@@ -1,12 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type Marcador, type Pacote,
 } from "@saude3d/motor-anatomico";
 import { Card } from "@/components/ui/card";
 import { ladoDaLateralidade, LADOS, type Lado } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
+import { useHidratado } from "@/lib/hidratacao";
 
 const BASE = process.env.NEXT_PUBLIC_ATLAS_URL || "/atlas";
 const ATLAS = {
@@ -34,7 +35,6 @@ type Prontuario = {
   /** os achados ainda não chegaram: o corpo é baixado depois dos marcadores */
   carregando: boolean;
   selecionado: string | null;
-  lateral: ReactNode;
   onEscolherPonto: (ponto: PontoNoCorpo) => void;
   onSelecionarMarcador: (id: string) => void;
   onMarcadoresSemPosicao: (ids: string[]) => void;
@@ -46,6 +46,7 @@ export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; pr
   // o atlas feminino é tido como publicado; só o 404 do manifesto leva ao corpo provisório
   const [semFeminino, setSemFeminino] = useState(false);
   const femininoAusente = useCallback(() => setSemFeminino(true), []);
+  const hidratado = useHidratado();
   const provisorio = pedido === "hra-f" && semFeminino;
   const atlas = provisorio ? "bp3d-m" : pedido;
 
@@ -55,6 +56,7 @@ export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; pr
         <label className="flex flex-wrap items-center gap-2 text-sm font-medium text-slate-800">
           Atlas anatômico
           <select
+            disabled={!hidratado}
             className="h-10 rounded-md border border-slate-300 bg-white px-3 text-sm"
             value={pedido ?? ""}
             onChange={(e) => setPedido((e.target.value || null) as Atlas | null)}
@@ -71,10 +73,7 @@ export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; pr
         </p>
       )}
       {!atlas ? (
-        <>
-          <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
-          {prontuario?.lateral}
-        </>
+        <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
       ) : (
         // trocar de atlas zera a seleção de sistemas e o ponto escolhido
         <Corpo key={atlas} atlas={atlas} provisorio={provisorio} prontuario={prontuario}
@@ -129,8 +128,9 @@ function Corpo({ atlas, provisorio, prontuario, onAusente }: {
     if (sistema && !sistemas.includes(sistema)) setSistemas([...sistemas, sistema]);
   }
 
+  // no prontuário a coluna ao lado é a dos achados: aqui os sistemas vão para baixo do corpo
   return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]" data-atlas={atlas}>
+    <div className={prontuario ? "space-y-4" : "grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]"} data-atlas={atlas}>
       {/* o motor sobrepõe a atribuição ao 3D; aqui ela vai para baixo do canvas, para não cobrir os pés */}
       <Card className="h-[60svh] min-h-96 overflow-hidden lg:h-[75svh] [&_[data-motor]]:flex [&_[data-motor]]:flex-col [&_[data-motor]>small]:static! [&_[data-motor]>small]:shrink-0 [&_[data-motor]>small]:px-2 [&_[data-motor]>small]:py-1">
         <MotorAnatomico
@@ -147,7 +147,7 @@ function Corpo({ atlas, provisorio, prontuario, onAusente }: {
         />
       </Card>
       <div className="space-y-4">
-        {prontuario ? prontuario.lateral : <Card className="px-5 py-4" aria-live="polite">
+        {!prontuario && <Card className="px-5 py-4" aria-live="polite">
           <h3 className="text-sm font-semibold text-slate-950">Ponto selecionado</h3>
           {!ancora || !entrada ? (
             <p className="mt-2 text-sm text-slate-600">Clique no corpo para identificar uma estrutura.</p>
@@ -179,7 +179,7 @@ function Corpo({ atlas, provisorio, prontuario, onAusente }: {
           <fieldset>
             <legend className="text-sm font-semibold text-slate-950">Sistemas</legend>
             {!pacote && <p className="mt-2 text-sm text-slate-600">Carregando lista…</p>}
-            <div className="mt-2 grid grid-cols-2 gap-x-3 lg:grid-cols-1">
+            <div className={`mt-2 grid grid-cols-2 gap-x-3 ${prontuario ? "sm:grid-cols-3 xl:grid-cols-5" : "lg:grid-cols-1"}`}>
               {/* SPEC §5.1: a camada gestacional só é ligada no contexto de gestação (Etapa 5) */}
               {pacote?.manifesto.sistemas
                 .filter(({ id }) => id !== "gestacional")

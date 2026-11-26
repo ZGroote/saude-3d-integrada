@@ -29,19 +29,19 @@ export type Achado = {
   criado_em: string;
 };
 
+// Fuso fixo: o servidor desenha a lista e o navegador a confere, os dois têm de chegar ao mesmo dia.
+// ponytail: horário de Brasília para todos; usar o fuso do município quando o app atender outros.
+const FUSO = "America/Sao_Paulo";
 // um formatador de cada: criar um por linha pesa com 200 achados num tablet
 const DATA_PURA = new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium", timeZone: "UTC" });
-const CARIMBO = new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium" });
-/** Data pura (início) é lida em UTC para não voltar um dia; carimbo de hora usa o fuso do navegador. */
+const CARIMBO = new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium", timeZone: FUSO });
+const DIA_ISO = new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: FUSO });
+/** Data pura (início) é lida em UTC para não voltar um dia; carimbo de hora vale no fuso do app. */
 export const formatarData = (iso: string) =>
   iso.length === 10 ? DATA_PURA.format(new Date(`${iso}T12:00:00Z`)) : CARIMBO.format(new Date(iso));
 
-/** Dia (AAAA-MM-DD) do achado na linha do tempo: o início; sem ele, o dia local do registro. */
-export function dataDoAchado(a: Pick<Achado, "inicio" | "criado_em">) {
-  if (a.inicio) return a.inicio;
-  const criado = new Date(a.criado_em);
-  return new Date(criado.getTime() - criado.getTimezoneOffset() * 60_000).toISOString().slice(0, 10);
-}
+/** Dia (AAAA-MM-DD) do achado na linha do tempo: o início; sem ele, o dia do registro. */
+export const dataDoAchado = (a: Pick<Achado, "inicio" | "criado_em">) => a.inicio ?? DIA_ISO.format(new Date(a.criado_em));
 
 /** `especialidade` null = todas ("" é um valor: achados sem especialidade); nos outros, "" = sem filtro. Datas inclusivas. */
 export type Filtro = { especialidade: string | null; status: Status | ""; de: string; ate: string };

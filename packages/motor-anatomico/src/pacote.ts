@@ -13,12 +13,24 @@ export type Sistema = { grupo: Group; malhas: Map<string, Mesh> };
 export const urlDoPacote = (baseUrl: string, atlas: string, versao: string) =>
   `${baseUrl.replace(/\/+$/, '')}/${atlas}/${versao}`;
 
-async function lerJson(url: string, signal?: AbortSignal) {
-  const resposta = await fetch(url, { signal });
+async function lerJson(url: string) {
+  const resposta = await fetch(url);
   if (!resposta.ok) throw new Error(`${url}: HTTP ${resposta.status}`);
   return resposta.json();
 }
 
+const pacotes = new Map<string, Promise<Pacote>>();
+
+async function baixarPacote(url: string, atlas: string, versao: string): Promise<Pacote> {
+  const [manifesto, indice] = await Promise.all([lerJson(`${url}/manifesto.json`), lerJson(`${url}/indice.json`)]);
+  // pacote trocado de pasta gravaria âncoras com atlas/versão errados
+  if (manifesto?.atlas !== atlas || manifesto?.versao !== versao || !Array.isArray(manifesto.sistemas))
+    throw new Error(`manifesto em ${url} não é de ${atlas} ${versao}`);
+  if (!Array.isArray(indice)) throw new Error(`indice.json em ${url} não é uma lista`);
+  return { manifesto, indice };
+}
+
+/** Uma versão publicada não muda (SPEC §5.3): quem pedir o mesmo pacote divide a mesma leitura. Falha não fica guardada. */
 export async function carregarPacote(
   baseUrl: string,
   atlas: string,
@@ -26,15 +38,15 @@ export async function carregarPacote(
   signal?: AbortSignal,
 ): Promise<Pacote> {
   const url = urlDoPacote(baseUrl, atlas, versao);
-  const [manifesto, indice] = await Promise.all([
-    lerJson(`${url}/manifesto.json`, signal),
-    lerJson(`${url}/indice.json`, signal),
-  ]);
-  // pacote trocado de pasta gravaria âncoras com atlas/versão errados
-  if (manifesto?.atlas !== atlas || manifesto?.versao !== versao || !Array.isArray(manifesto.sistemas))
-    throw new Error(`manifesto em ${url} não é de ${atlas} ${versao}`);
-  if (!Array.isArray(indice)) throw new Error(`indice.json em ${url} não é uma lista`);
-  return { manifesto, indice };
+  let pedido = pacotes.get(url);
+  if (!pedido) {
+    pedido = baixarPacote(url, atlas, versao);
+    pacotes.set(url, pedido);
+    pedido.catch(() => pacotes.delete(url));
+  }
+  const pacote = await pedido;
+  signal?.throwIfAborted();
+  return pacote;
 }
 
 /**

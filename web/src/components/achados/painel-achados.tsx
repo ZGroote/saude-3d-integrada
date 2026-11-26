@@ -5,7 +5,7 @@ import type { Marcador } from "@saude3d/motor-anatomico";
 import { CartaoAchado } from "@/components/achados/cartao-achado";
 import { FormularioAchado } from "@/components/achados/formulario-achado";
 import { LinhaDoTempo } from "@/components/achados/linha-do-tempo";
-import { precarregar3D, Prontuario3D } from "@/components/anatomia/prontuario-3d";
+import { Prontuario3D } from "@/components/anatomia/prontuario-3d";
 import type { PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -13,11 +13,18 @@ import {
   corDaEspecialidade, dataDoAchado, filtrar, formatarData, ordenarPorData, SEM_FILTRO, STATUS, TAMANHO_DO_STATUS, type Achado,
 } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
+import { useHidratado } from "@/lib/hidratacao";
 import { createClient } from "@/lib/supabase/client";
 
-export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string; sexo: Sexo; com3d: boolean }) {
-  const [achados, setAchados] = useState<Achado[] | null>(null);
-  const [falha, setFalha] = useState(false);
+export function PainelAchados({ pacienteId, sexo, com3d, inicial }: {
+  pacienteId: string;
+  sexo: Sexo;
+  com3d: boolean;
+  /** achados buscados no servidor; null = a busca falhou; omitido = o navegador busca (rota de desenvolvimento) */
+  inicial?: Achado[] | null;
+}) {
+  const [achados, setAchados] = useState<Achado[] | null>(inicial ?? null);
+  const [falha, setFalha] = useState(inicial === null);
   const [revisao, setRevisao] = useState(0);
   const [selecionado, setSelecionado] = useState<string | null>(null);
   // undefined = formulário fechado; ponto null = nenhum ponto clicado
@@ -27,9 +34,12 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
   const [minhaUnidade, setMinhaUnidade] = useState<{ id: string; nome: string | null } | null>(null);
   const [semPosicao, setSemPosicao] = useState<string[]>([]);
   const [aviso, setAviso] = useState("");
-  if (com3d) precarregar3D();
+  const veioDoServidor = inicial !== undefined;
+  const hidratado = useHidratado();
 
   useEffect(() => {
+    // na abertura vale o que veio do servidor; o navegador só busca depois de salvar ou de tentar de novo
+    if (veioDoServidor && !revisao) return;
     let valido = true;
     createClient().rpc("listar_achados", { p_paciente: pacienteId }).then(({ data, error }) => {
       if (!valido) return;
@@ -38,7 +48,7 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
       setAchados(error ? null : (data ?? []));
     });
     return () => { valido = false; };
-  }, [pacienteId, revisao]);
+  }, [pacienteId, revisao, veioDoServidor]);
 
   useEffect(() => {
     let valido = true;
@@ -105,7 +115,7 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
   }
 
   const lateral = (
-    <>
+    <fieldset disabled={!hidratado} className="min-w-0 space-y-4">
       <Button type="button" className="w-full" onClick={() => registrar(null)}>Achado sem local no corpo</Button>
       <p role="status" className="text-sm text-teal-900 empty:hidden">{aviso}</p>
       {novo && (
@@ -152,7 +162,7 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
               </>
             )}
       </Card>
-    </>
+    </fieldset>
   );
 
   if (!com3d) {
@@ -164,16 +174,20 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
       </div>
     );
   }
+  // a lista fica fora do 3D: não espera o código dele para aparecer
   return (
-    <Prontuario3D
-      sexo={sexo}
-      prontuario={{
-        marcadores, selecionado, lateral,
-        carregando: !achados && !falha,
-        onEscolherPonto: escolherPonto,
-        onSelecionarMarcador: abrir,
-        onMarcadoresSemPosicao: setSemPosicao,
-      }}
-    />
+    <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <Prontuario3D
+        sexo={sexo}
+        prontuario={{
+          marcadores, selecionado,
+          carregando: !achados && !falha,
+          onEscolherPonto: escolherPonto,
+          onSelecionarMarcador: abrir,
+          onMarcadoresSemPosicao: setSemPosicao,
+        }}
+      />
+      {lateral}
+    </div>
   );
 }

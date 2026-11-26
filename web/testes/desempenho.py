@@ -100,17 +100,16 @@ with sync_playwright() as p:
     if not link.count():
         raise SystemExit(f'"{PACIENTE}" ainda não existe (ou sem vínculo com a cardiologia) na homologação')
     prontuario = APP + link.first.get_attribute('href')
-    with pg.expect_response(lambda r: '/rpc/listar_achados' in r.url and r.request.method == 'POST') as espera:
-        pg.goto(prontuario)
-    linhas = espera.value.json()
-    pg.wait_for_selector('[data-atlas]')
+    pg.goto(prontuario)
+    pg.wait_for_selector('[data-motor][data-completos~="tegumentar"]')
+    pg.wait_for_timeout(1500)
     atlas = pg.get_attribute('[data-atlas]', 'data-atlas')
-    no_corpo = [a for a in linhas if a['ancora'] and a['ancora']['atlas'] == atlas]
-    esperado = {'linhas': len(linhas), 'marcadores': len(no_corpo)}
-    sistemas = sorted({a['ancora']['sistema'] for a in no_corpo})
-    sem_ponto = sum(not a['ancora']['posicao_local'] for a in no_corpo)
-    print(f'{len(linhas)} achados, {len(no_corpo)} marcadores no {atlas}, sistemas {sistemas}, {sem_ponto} sem posicao_local')
-    assert len(linhas) >= 200, f'a meta é com 200 achados; há {len(linhas)}'
+    esperado = {'linhas': pg.locator('button[data-achado]').count(),
+                'marcadores': int(pg.get_attribute('[data-motor]', 'data-marcadores'))}
+    no_corpo = pg.locator('ul[aria-labelledby=achados-no-corpo] button').count()
+    print(f'{esperado["linhas"]} achados, {no_corpo} com local, {esperado["marcadores"]} marcadores no {atlas}')
+    assert esperado['linhas'] >= 200, f'a meta é com 200 achados; há {esperado["linhas"]}'
+    assert esperado['marcadores'] == no_corpo, 'há achado com local sem marcador'
     sessao = contexto.storage_state()
     contexto.close()
 
@@ -120,6 +119,9 @@ with sync_playwright() as p:
         pg = contexto.new_page()
         pg.set_default_timeout(120000)
         pg.add_init_script(f'({MEDIDOR})({json.dumps(esperado)})')
+        erros = []
+        pg.on('console', lambda m: m.type == 'error' and erros.append(m.text))
+        pg.on('pageerror', lambda e: erros.append(str(e)))
         cdp = contexto.new_cdp_session(pg)
         cdp.send('Network.enable')
         cdp.send('Network.emulateNetworkConditions', FAST_4G)
@@ -129,34 +131,34 @@ with sync_playwright() as p:
         dados = pg.evaluate(RECURSOS)
         contexto.close()
 
-        tempos, recursos = dados['tempos'], dados['recursos']
+        assert not erros, erros  # inclui diferença entre o HTML do servidor e o do navegador
+        tempos, recursos, documento = dados['tempos'], dados['recursos'], dados['documento']
         visivel = max(tempos['lista'], tempos['marcadores'])
-        [listar] = [r for r in recursos if '/rpc/listar_achados' in r['url']][:1]
-        atlas_baixado = [r for r in recursos if '/atlas/' in r['url']]
-        glbs = [r for r in atlas_baixado if r['url'].endswith('.glb')]
+        assert not [r for r in recursos if '/rpc/listar_achados' in r['url']], 'a abertura não deveria pedir a lista de novo'
+        glbs = [r for r in recursos if r['url'].endswith('.glb')]
         nomes = [r['url'].rsplit('/', 1)[1] for r in sorted(glbs, key=lambda r: r['de'])]
         assert nomes in (['tegumentar.glb'], ['tegumentar_leve.glb', 'tegumentar.glb']), f'só a pele deveria ser baixada: {nomes}'
-        if n == 1:
-            print(f'GLBs baixados: {nomes}')
         # o que abre o corpo (o leve, se houver); o completo vem depois e é medido à parte
-        glbs = [min(glbs, key=lambda r: r['de'])]
+        leve = min(glbs, key=lambda r: r['de'])
+        # o maior arquivo JS é o do motor 3D (three, R3F e o visualizador)
+        motor = max((r for r in recursos if r['url'].split('?')[0].endswith('.js')), key=lambda r: r['bytes'])
         medida = {
-            'visivel': visivel, 'lista': tempos['lista'], 'marcadores': tempos['marcadores'], 'corpo': tempos['corpo'], 'completo': tempos['completo'],
-            # banco: página (login + abrir_prontuario no servidor) e a lista (pedida pelo navegador)
-            'banco_documento': dados['documento']['responseStart'],
-            'banco_listar': listar['ate'] - listar['de'], 'listar_chegou': listar['ate'],
-            'glb': max(r['ate'] for r in glbs) - min(r['de'] for r in glbs),
-            'glb_bytes': sum(r['bytes'] for r in glbs),
-            'glb_inicio': min(r['de'] for r in glbs),
-            # render: dos dados em mãos até estar desenhado
-            'render': visivel - listar['ate'],
+            'visivel': visivel, 'lista': tempos['lista'], 'marcadores': tempos['marcadores'], 'corpo': tempos['corpo'],
+            'completo': tempos['completo'],
+            # banco: a página só começa a responder depois de abrir_prontuario e listar_achados, no servidor
+            'banco_servidor': documento['responseStart'], 'html_chegou': documento['responseEnd'],
+            'html_bytes': documento['encodedBodySize'],
+            'js3d_inicio': motor['de'], 'js3d_fim': motor['ate'], 'js3d_bytes': motor['bytes'],
+            'glb_inicio': leve['de'], 'glb': leve['ate'] - leve['de'], 'glb_bytes': leve['bytes'],
+            # render: do código 3D em mãos até os marcadores desenhados
+            'render_3d': tempos['marcadores'] - motor['ate'],
         }
         medidas.append(medida)
         print(f'abertura {n}: ' + ', '.join(f'{k}={v:.0f}' for k, v in medida.items()))
     navegador.close()
 
 resumo = {k: {'mediana': statistics.median(m[k] for m in medidas), 'p95': p95([m[k] for m in medidas])} for k in medidas[0]}
-print('\n(ms; glb_bytes em bytes)           mediana        p95')
+print('\n(ms; *_bytes em bytes)             mediana        p95')
 for chave, valor in resumo.items():
     print(f'{chave:<28}{valor["mediana"]:>14.0f}{valor["p95"]:>11.0f}')
 print('as parcelas se sobrepõem no tempo (GLB e banco correm juntos): não somam o total')

@@ -8,8 +8,10 @@ Não sobe nem derruba servidor. As senhas são lidas de supabase/.env.demo e nun
 Cada execução grava DOIS achados na paciente fictícia (um I10 e um F32.9 restrito) e eventos na auditoria;
 achados não são apagados. Precisa de Playwright para Python, do Chrome e do atlas servido pelo app.
 """
+import json
 import os
 import sys
+import urllib.request
 from pathlib import Path
 
 from playwright.sync_api import TimeoutError as TempoEsgotado, sync_playwright
@@ -69,41 +71,68 @@ def sair(pg):
     pg.wait_for_url(f'{APP}/login')
 
 
-def carregar(pg, acao):
-    """Executa a navegação, espera a resposta real de listar_achados e o corpo com todos os marcadores."""
-    with pg.expect_response(lambda r: '/rpc/listar_achados' in r.url and r.request.method == 'POST') as espera:
-        acao()
-    resposta = espera.value
-    assert resposta.ok, f'listar_achados: {resposta.status} {resposta.text()}'
-    linhas = resposta.json()
+def ajustes():
+    linhas = (WEB / '.env.local').read_text(encoding='utf-8-sig').splitlines()
+    return {k.strip(): v.strip().strip('"') for k, s, v in (linha.partition('=') for linha in linhas) if s}
+
+
+def chamar(caminho, corpo, token=None):
+    env = ajustes()
+    chave = env['NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY']
+    cabecalhos = {'apikey': chave, 'content-type': 'application/json'}
+    if token:
+        cabecalhos['authorization'] = f'Bearer {token}'
+    pedido = urllib.request.Request(env['NEXT_PUBLIC_SUPABASE_URL'].rstrip('/') + caminho,
+                                    data=json.dumps(corpo).encode(), headers=cabecalhos)
+    with urllib.request.urlopen(pedido, timeout=60) as resposta:
+        return json.load(resposta)
+
+
+def listar(email):
+    """listar_achados direto no banco, como o profissional: a referência contra a qual a tela é conferida."""
+    sessao = chamar('/auth/v1/token?grant_type=password', {'email': email, 'password': senha_de(email)})
+    return chamar('/rest/v1/rpc/listar_achados', {'p_paciente': MARIA}, sessao['access_token'])
+
+
+def carregar(pg, acao, email):
+    """Executa a navegação e espera o corpo com todos os marcadores; a tela tem de bater com o banco."""
+    acao()
+    pg.wait_for_url(f'{APP}/pacientes/{MARIA}')
+    linhas = listar(email)
     no_corpo = [a for a in linhas if a['ancora'] and a['ancora']['atlas'] == 'hra-f']
     pg.wait_for_selector('[data-atlas="hra-f"] [data-motor][data-carregados="tegumentar"]')
     pg.wait_for_selector(f'[data-motor][data-marcadores="{len(no_corpo)}"]')
     pg.wait_for_selector(f'text=Achados ({len(linhas)})')
     pg.wait_for_timeout(1500)
-    assert pg.locator('button[data-achado]').count() == len(linhas)
+    ids = pg.locator('button[data-achado]').evaluate_all('(b) => b.map((e) => e.dataset.achado)')
+    assert sorted(ids) == sorted(a['id'] for a in linhas), 'lista da tela diferente do banco'
     assert len(pg.evaluate(DESENHADOS)) == len(no_corpo), 'marcadores desenhados diferentes da lista'
     return linhas
 
 
-def abrir_maria(pg):
-    return carregar(pg, lambda: pg.locator(f'a[href="/pacientes/{MARIA}"]').click())
+def abrir_maria(pg, email):
+    return carregar(pg, lambda: pg.locator(f'a[href="/pacientes/{MARIA}"]').click(), email)
 
 
 def registrar(pg, cid, alturas):
     """Clica no corpo, preenche o formulário e salva. Devolve (id, âncora do clique)."""
     canvas = pg.locator('canvas')
     formulario = pg.locator('form[aria-labelledby="titulo-novo-achado"]')
-    for fy in alturas:
+    # os achados de execuções anteriores continuam no corpo: um clique num marcador abre o cartão dele,
+    # então tenta pontos vizinhos até cair em pele livre
+    cartao = pg.locator('[data-cartao]')
+    for dx, fy in [(dx, fy) for dx in (6, -24, 30, -48, 54) for fy in alturas]:
+        if cartao.count():
+            cartao.get_by_role('button', name='Fechar').click()
         canvas.scroll_into_view_if_needed()
         caixa = canvas.bounding_box()
-        canvas.click(position={'x': caixa['width'] / 2 + 6, 'y': caixa['height'] * fy})
+        canvas.click(position={'x': caixa['width'] / 2 + dx, 'y': caixa['height'] * fy})
         try:
-            # com a versão leve na tela, o formulário só abre quando a completa chega
-            formulario.wait_for(timeout=20000)
-            break
+            pg.wait_for_selector('form[aria-labelledby="titulo-novo-achado"], [data-cartao]', timeout=5000)
         except TempoEsgotado:
-            pass
+            continue  # fora do corpo
+        if formulario.count():
+            break
     assert formulario.count() and formulario.locator('[data-ancora]').count(), 'clique no corpo não abriu o formulário'
     formulario.locator('input[type=search]').press_sequentially(cid, delay=40)
     pg.get_by_role('list', name='Resultados do CID-10').locator('li button').filter(has_text=cid).first.click()
@@ -156,9 +185,9 @@ with sync_playwright() as p:
 
     # 1) cardiologia registra o I10 clicando no corpo; recarrega
     entrar(pg, CARDIO)
-    abrir_maria(pg)
+    abrir_maria(pg, CARDIO)
     normal, clique = registrar(pg, 'I10', (0.35, 0.40, 0.30))
-    linhas = carregar(pg, pg.reload)
+    linhas = carregar(pg, pg.reload, CARDIO)
     [i10] = [a for a in linhas if a['id'] == normal]
     assert i10['cid10'] == 'I10' and i10['nivel_sigilo'] == 'normal', i10
     assert i10['ancora'] == clique, (i10['ancora'], clique)
@@ -168,7 +197,7 @@ with sync_playwright() as p:
 
     # 2) restrito, também com âncora
     restrito, ancora_restrita = registrar(pg, 'F32.9', (0.50, 0.55, 0.45))
-    linhas_cardio = carregar(pg, pg.reload)
+    linhas_cardio = carregar(pg, pg.reload, CARDIO)
     [f32] = [a for a in linhas_cardio if a['id'] == restrito]
     assert f32['nivel_sigilo'] == 'restrito' and f32['ancora'] == ancora_restrita, f32
     assert ancora_restrita['posicao_local'] != clique['posicao_local']
@@ -178,10 +207,18 @@ with sync_playwright() as p:
 
     # 3) obstetrícia: vê o I10, e nada do restrito (resposta, linha, contagem, marcador, HTML)
     recebido = []
-    anotar = lambda r: '/rest/v1/' in r.url and r.request.method == 'POST' and recebido.append(r)
+    # tudo o que leva dado do prontuário: a página (HTML e dados do React) e as chamadas ao banco
+    def anotar(r):
+        if ('/rest/v1/' in r.url or r.url.startswith(f'{APP}/pacientes')) and r.ok and r.request.method != 'OPTIONS':
+            try:
+                recebido.append((r.url, r.text()))
+            except Exception:  # resposta de pré-carga descartada pelo navegador
+                pass
+
     entrar(pg, OBSTETRICIA)
     pg.on('response', anotar)
-    linhas_obst = abrir_maria(pg)
+    linhas_obst = abrir_maria(pg, OBSTETRICIA)
+    carregar(pg, pg.reload, OBSTETRICIA)  # a página inteira, com os achados no HTML
     ocultos = {a['id'] for a in linhas_cardio
                if a['nivel_sigilo'] == 'restrito' and a['unidade_nome'] == i10['unidade_nome']}
     visiveis = {a['id'] for a in linhas_obst}
@@ -191,8 +228,9 @@ with sync_playwright() as p:
     assert visto['ancora'] == clique and 'Cardiologia' in visto['autor_nome'] and 'Cardiologia' in visto['unidade_nome'], visto
     conferir_linha(pg, visto, problemas)
     assert not desenhado_em(pg, ancora_restrita['posicao_local']), 'marcador do restrito desenhado'
-    for resposta in recebido:
-        assert restrito not in resposta.text() and 'F32' not in resposta.text(), resposta.url
+    assert any(normal in texto for _, texto in recebido), 'nenhuma resposta capturada trouxe o I10'
+    for endereco, texto in recebido:
+        assert restrito not in texto and 'F32' not in texto, endereco
     html = pg.content()
     assert restrito not in html and 'F32' not in html, 'rastro do restrito na página'
     fotos(pg, '2-obstetricia', normal)
@@ -203,7 +241,7 @@ with sync_playwright() as p:
 
     # 4) cardiologia de novo vê os dois
     entrar(pg, CARDIO)
-    linhas = abrir_maria(pg)
+    linhas = abrir_maria(pg, CARDIO)
     assert {normal, restrito} <= {a['id'] for a in linhas}
     for achado in (i10, f32):
         conferir_linha(pg, achado, problemas)

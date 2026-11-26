@@ -2,15 +2,8 @@
 
 import dynamic from "next/dynamic";
 
-const carregar = () => import("./visualizador-atlas");
-
-/** Começa a baixar o código 3D antes de o visualizador ser montado. */
-export function precarregar3D() {
-  if (typeof window !== "undefined") void carregar();
-}
-
-// WebGL, fetch dos GLBs e workers só existem no navegador: nada disto é renderizado no servidor.
-export const Prontuario3D = dynamic(carregar, {
-  ssr: false,
+// Separado em outro arquivo JS, mas renderizado também no servidor: assim o HTML já pede o código 3D
+// (preload) e ele baixa junto com a página. WebGL e GLBs só rodam em efeitos, no navegador.
+export const Prontuario3D = dynamic(() => import("./visualizador-atlas"), {
   loading: () => <p role="status" className="text-sm text-slate-600">Carregando visualizador 3D…</p>,
 });
