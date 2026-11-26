@@ -78,6 +78,12 @@ Exclusoes F3 v2 a implementar por pares exatos:
 
 Fonte unica: Denver fornece membros inferiores e cintura pelvica que constem no catalogo, incluindo pelve, sacro e coccix; fornece tambem gluteos e musculos pelvicos. TotalSegmentator fornece o restante e a pele body. A lista efetivamente removida sera registrada nos resultados. Sem complementos HRA, sem mudar limites e sem commit.
 
+## 7.2 Plano registrado antes da analise e do pacote F5 (2026-11-26)
+
+Sem mudanca de criterios: separar invasoes F3 v2 existentes em `mesma_fonte` (Denver-Denver e TotalSegmentator-TotalSegmentator) e `entre_fontes` (TotalSegmentator-Denver). Reportar todos os pares entre fontes que satisfazem a regra de invasao ja registrada, com volume e profundidade; nao criar novo criterio.
+
+Gerar pacote local de revisao humana em `atlas/vhf-f/0.1-0`, sem publicacao: status explicito `rascunho, nao publicado, nao aceito`. Seguir SPEC-MVP.md secao 5.3; um GLB por cada um dos 16 sistemas de `bp3d-m`; coordenadas do app em metros: `x=-x_RAS`, `y=z_RAS`, `z=y_RAS` (mm para m); indice com campos `malha`, `estrutura:null`, `nome_en`, `nome_pt:null`, `sistema`, `lateralidade`, `glb`, `triangulos`, `fonte`. GLBs completos usam meshopt sem simplificacao. Pele recebe `glb_leve` simplificado por decimacao quadratica trimesh, alvo aproximado 40.000 triangulos. Incluir SHA-256 dos arquivos no manifesto. Mapeamentos de sistema e rotulos ficam rastreados no gerador. Reportar contagem de entradas e MB por sistema. Sem commit e sem instalar pacotes.
+
 ## 8. Resultados (execução em 2026-11-26)
 - Conferência da licença: README oficial lista `body` sob “Openly available for any usage (Apache-2.0 license)”; trecho e URL registrados em `hra/vhf/LEIAME.md`.
 - Implementados `hra/vhf/montar_base.py` e `hra/vhf/avaliar_base.py`; dependências sem instalação: execução com `C:\Python314\python.exe` (os pacotes geométricos não estão no venv `C:\Users\respawn\venvs\totalseg\Scripts\python.exe`).
@@ -218,6 +224,59 @@ F4 - PASSOU: 154/154 estruturas laterais corretas em RAS; sacro/coccix medianos 
 Criterios geometricos do EXP-0014 (pele media <=10 mm; ossos grandes/orgaos/musculos grandes media <=5 mm e P95 <=12 mm; vertebras/grandes vasos media <=3 mm; vasos pequenos/nervos avaliacao individual): NAO AVALIADOS nesta rodada; nao foi feita comparacao simetrica por classe contra referencia. Complementos uterinos/ovarianos HRA nao incluidos nesta rodada.
 
 Quadro funcional: F1 REPROVOU; F2 REPROVOU (quadril PASSOU, joelho E e costovertebral REPROVARAM; joelho D e cranio-C1 PASSARAM); F3 v1 REPROVOU; F3 v2 REPROVOU; F4 PASSOU; F5 PENDENTE. Sem validacao clinica.
+
+## 8.4 Estratificacao das invasoes F3 v2 - analise, sem novo criterio (2026-11-26)
+
+Aplicada a particao por campo fonte do manifesto somente aos 237 pares que ja satisfazem a regra F3 v2 (sobreposicao >=2% e profundidade >3 mm). Resultado: 133 pares Denver-Denver, 90 pares TotalSegmentator-TotalSegmentator e **14 pares entre fontes**. Os dois grupos de mesma fonte medem consistencia dentro da origem; nao medem a integracao entre fontes. A lista entre fontes mede a interface TotalSegmentator-Denver. Volumes sao a media das estimativas direcionais por amostragem, em cm3; profundidade e estimativa na grade 2 mm.
+
+| Estrutura TotalSegmentator | Estrutura Denver | Volume medio estimado (cm3) | Maior fracao direcional | Profundidade (mm) |
+|---|---|---:|---:|---:|
+| total__spinal_cord | denver__bone_sacrum__left | 8.371 | 8.00% | 14.1 |
+| total__vertebrae_l5 | denver__bone_sacrum__left | 4.492 | 6.25% | 10.0 |
+| total__iliac_vena_left | denver__muscle_pectineus__left | 2.541 | 10.65% | 8.2 |
+| total__iliac_vena_left | denver__bone_pelvis__left | 2.401 | 12.15% | 11.7 |
+| total__iliac_vena_right | denver__bone_pelvis__right | 2.280 | 12.80% | 11.5 |
+| total__urinary_bladder | denver__bone_pelvis__right | 1.997 | 5.45% | 6.0 |
+| total__urinary_bladder | denver__bone_pelvis__left | 1.754 | 4.75% | 7.2 |
+| total__iliac_artery_right | denver__bone_pelvis__right | 0.940 | 9.70% | 11.5 |
+| total__iliac_artery_left | denver__muscle_pectineus__left | 0.854 | 8.25% | 10.0 |
+| total__iliac_artery_left | denver__muscle_sartorius__left | 0.806 | 7.10% | 6.3 |
+| total__small_bowel | denver__cartilage_pelvisacetabulum__left | 0.589 | 5.09% | 8.0 |
+| total__iliac_artery_left | denver__bone_pelvis__left | 0.496 | 4.90% | 6.6 |
+| total__iliac_artery_right | denver__muscle_sartorius__right | 0.396 | 3.45% | 4.5 |
+| total__stomach | denver__cartilage_pelvisacetabulum__left | 0.036 | 4.26% | 26.4 |
+
+Esta estratificacao e descritiva: nao muda o universo, o limite de 2%, a regra de profundidade >3 mm ou a avaliacao PASS/REPROVOU. Dados completos em `diagnostico_EXP-0015.json`, campo `f3_depth_and_rankings.source_stratification`.
+
+## 8.5 Analise por fonte e pacote F5 provis?rio (2026-11-26)
+
+### Estratos F3 v2
+Sem novo criterio, as 237 invasoes ja contabilizadas em F3 v2 se dividem em **133 Denver-Denver**, **90 TotalSegmentator-TotalSegmentator** e **14 entre fontes**. Os dois primeiros estratos medem consistencia interna da fonte; apenas o terceiro mede diretamente a integracao. Todos os 14 pares entre fontes, com volume medio estimado e profundidade, estao registrados na secao 8.4 e em `diagnostico_EXP-0015.json`; a estratificacao nao altera nenhum status anterior.
+
+### Pacote de revisao
+Gerado em `atlas/vhf-f/0.1-0`, com **rascunho, nao publicado, nao aceito** no manifesto. Tem 229 entradas: 101 TotalSegmentator (inclui pele) e 128 Denver. Foram produzidos todos os 16 sistemas do `bp3d-m`; fascia, gestacional e sensorial estao como GLBs vazios porque esta base nao tem entradas para eles. GLBs completos sem simplificacao, meshopt preservou nome dos nos e triangulos. Pele completa: 2.076.986 triangulos; `tegumentar_leve.glb`: 40.000 triangulos por simplificacao quadratica trimesh. Referencial app em metros, `x=-x_RAS`, `y=z_RAS`, `z=y_RAS`. `indice.json`: 229 itens com `estrutura` e `nome_pt` null e `fonte` preenchida em cada item. Hashes SHA-256 dos 18 arquivos de pacote no manifesto; hashes dos 229 STLs de origem tambem registrados.
+
+| Sistema / GLB | Estruturas | Triangulos | Tamanho |
+|---|---:|---:|---:|
+| arterial | 8 | 74708 | 1.015 MB |
+| articular | 25 | 334918 | 5.193 MB |
+| cardiaco | 2 | 70834 | 1.037 MB |
+| digestorio | 8 | 644284 | 8.747 MB |
+| endocrino | 3 | 9728 | 0.160 MB |
+| esqueletico | 84 | 1698598 | 25.955 MB |
+| fascia | 0 | 0 | 0.000 MB |
+| gestacional | 0 | 0 | 0.000 MB |
+| linfatico | 1 | 29186 | 0.429 MB |
+| muscular | 78 | 1474934 | 23.445 MB |
+| nervoso | 2 | 121332 | 1.663 MB |
+| respiratorio | 6 | 284004 | 4.085 MB |
+| sensorial | 0 | 0 | 0.000 MB |
+| tegumentar | 1 | 2076986 | 22.941 MB |
+| urogenital | 3 | 67644 | 1.009 MB |
+| venoso | 8 | 65628 | 0.954 MB |
+| tegumentar_leve (LOD) | 1 | 40000 | 0.376 MB |
+
+Soma dos GLBs (incluindo LOD): **97,010 MB**; pacote ainda nao foi publicado nem aceito. O manifesto e indice foram verificados quanto a campos, nomes, contagens e hashes. O pacote foi produzido para revisao humana F5; nao constitui validacao clinica.
 
 ## 9. Validação
 Parcial e **não aceita** pelos critérios funcionais: F1 falha; F2 quadril proxy e joelho esquerdo falham; costelas–vértebras falham; F3 não avaliado; F5 pendente. Joelho direito, crânio–C1 e F4 passaram nas métricas exploratórias. Nenhum resultado é validação clínica.
