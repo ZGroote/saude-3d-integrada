@@ -25,6 +25,8 @@ export async function entrar(_anterior: { erro: string; email: string }, dados: 
   try {
     const supabase = await createClient();
     const { error } = await supabase.auth.signInWithPassword({ email: validacao.data.email, password: validacao.data.senha });
+    // 429: limite de tentativas do Supabase Auth (hoje contado pelo IP do servidor, ver SPEC §12)
+    if (error?.status === 429) return { erro: "Muitas tentativas de entrada. Aguarde alguns minutos e tente de novo.", email };
     if (error) return { erro: "Não foi possível entrar. Confira seu e-mail e sua senha.", email };
     (await cookies()).set(COOKIE_ATIVIDADE, await assinarAtividade(Date.now()), {
       httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: "/", maxAge: 30 * 60,
