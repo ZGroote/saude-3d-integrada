@@ -34,7 +34,7 @@ DENVER_BONES = {
 }
 DENVER_CARTILAGE = {
     "Cartilage FemurDistal", "Cartilage FemurHead", "Cartilage Patella", "Cartilage Talus",
-    "Cartilage TibiaDistal", "Cartilage TibiaLateral", "Cartilage TibiaMedial",
+    "Cartilage PelvisAcetabulum", "Cartilage TibiaDistal", "Cartilage TibiaLateral", "Cartilage TibiaMedial",
 }
 LOWER_LABELS = {"femur_left", "femur_right", "tibia_left", "tibia_right",
                 "fibula_left", "fibula_right", "patella_left", "patella_right", "femur", "tibia", "fibula", "patella"}
@@ -126,24 +126,34 @@ def run():
     # A saída inclui uma malha por classe não vazia da task total, sem substituir
     # membro inferior Denver. Os labels totais são desmembrados individualmente.
     OUT.mkdir(parents=True, exist_ok=True)
+    manifest_path = OUT / "manifest.json"
+    prior = json.loads(manifest_path.read_text(encoding="utf-8-sig")) if manifest_path.is_file() else {}
+    prior_rows = {row["name"]: row for row in prior.get("meshes", [])}
     reports = []
     for name, ident in sorted(named_ids.items()):
         if name.lower() in LOWER_LABELS or name.lower().startswith(LOWER_PREFIXES):
+            continue
+        key = f"total__{file_stem(name)}"
+        if key in prior_rows and (OUT / f"{key}.stl").is_file():
+            reports.append(prior_rows[key])
             continue
         mask = values == ident
         if not mask.any():
             continue
         mesh = taubin(mask_mesh(mask, total.affine))
-        key = f"total__{file_stem(name)}"
         mesh.export(OUT / f"{key}.stl")
         reports.append(mesh_record(key, mesh))
     # Label body=1 para a superfície externa; o rótulo inclui body_trunc/extremities
     # quando o modelo gera regiões separadas. Unimos os labels não-zero em uma pele.
-    skin_mask = body_values > 0
-    skin_mask = ndimage.binary_closing(skin_mask, structure=np.ones((3, 3, 3), dtype=bool))
-    skin_mask = ndimage.binary_fill_holes(skin_mask)
-    skin = taubin(mask_mesh(skin_mask, body.affine))
-    if not skin.is_watertight:
+    skin = None
+    if "body__skin" in prior_rows and (OUT / "body__skin.stl").is_file():
+        reports.append(prior_rows["body__skin"])
+    else:
+        skin_mask = body_values > 0
+        skin_mask = ndimage.binary_closing(skin_mask, structure=np.ones((3, 3, 3), dtype=bool))
+        skin_mask = ndimage.binary_fill_holes(skin_mask)
+        skin = taubin(mask_mesh(skin_mask, body.affine))
+    if skin is not None and not skin.is_watertight:
         voxel = skin.voxelized(pitch=1.5, method="subdivide")
         voxel.fill(method="holes")
         skin = voxel.marching_cubes
@@ -151,10 +161,11 @@ def run():
             trimesh.repair.fill_holes(skin)
         if skin.is_watertight:
             skin = taubin(skin)
-    if not skin.is_watertight:
+    if skin is not None and not skin.is_watertight:
         raise RuntimeError("Não foi possível fechar a malha body da pele")
-    skin.export(OUT / "body__skin.stl")
-    reports.append(mesh_record("body__skin", skin))
+    if skin is not None:
+        skin.export(OUT / "body__skin.stl")
+        reports.append(mesh_record("body__skin", skin))
 
     document = json.loads(TRANSFORMS.read_text(encoding="utf-8"))
     # Usa a transformação Etapa A já registrada; normalmente contém um modelo
@@ -174,16 +185,20 @@ def run():
         path = DENVER_DIR / rel
         if not path.is_file():
             continue
+        side = row.get("lateralidade", "").lower()
+        key = f"denver__{file_stem(structure)}__{side or 'midline'}"
+        if key in prior_rows and (OUT / f"{key}.stl").is_file():
+            reports.append(prior_rows[key])
+            denver_count += 1
+            continue
         mesh = trimesh.load_mesh(path, process=False)
         if isinstance(mesh, trimesh.Scene):
             mesh = trimesh.util.concatenate(tuple(mesh.geometry.values()))
-        side = row.get("lateralidade", "").lower()
         matrix = default_matrix
         if matrix is None:
             raise ValueError("Matriz global da Etapa A ausente")
         mesh = align.apply_matrix_to_mesh(mesh, matrix)
         mesh = taubin(mesh)
-        key = f"denver__{file_stem(structure)}__{side or 'midline'}"
         mesh.export(OUT / f"{key}.stl")
         reports.append(mesh_record(key, mesh))
         denver_count += 1
@@ -194,7 +209,7 @@ def run():
                 "smoothing": {"method": "Taubin lambda-mu", "lambda": TAUBIN_LAMBDA, "mu": TAUBIN_MU,
                               "iterations": TAUBIN_ITERS, "decimation": "none"},
                 "meshes": reports, "denver_mesh_count": denver_count}
-    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Exported {len(reports)} meshes ({denver_count} Denver) to {OUT}")
 
 

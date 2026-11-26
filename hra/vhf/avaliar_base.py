@@ -1,8 +1,13 @@
-"""Avaliação funcional F1-F4 da montagem EXP-0015 (métricas geométricas exploratórias)."""
+"""Reavalia F1-F4 do EXP-0015 com correções de medição do coordenador.
+
+Distâncias de superfície usam amostragem determinística de pontos e KD-tree,
+sem o acelerador rtree opcional. F3 usa pontos internos em grade sólida 5 mm.
+"""
 from __future__ import annotations
 
 import json
-import re
+import argparse
+from collections import OrderedDict
 from pathlib import Path
 
 import numpy as np
@@ -12,192 +17,271 @@ from scipy.spatial import cKDTree
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "atlas" / "hra-f" / "2.0-1"
 OUT = BASE / "avaliacao_F1-F4.json"
-PITCH = 3.0
-SAMPLES = 200_000
+SKIN_PITCH = 3.0
+F3_PITCH = 2.0
+F3_INTERIOR_POINTS = 2000
+SURFACE_POINTS = 50000
+SEED = 15026
 
 
-def load(name):
-    # STL has no indexed topology; weld coincident facet vertices before checks.
-    return trimesh.load_mesh(BASE / name, process=True)
+def load(name: str) -> trimesh.Trimesh:
+    # STL duplicates each triangle's vertices; weld them before topology checks.
+    return trimesh.load_mesh(BASE / f"{name}.stl", process=True)
 
 
-def sample(mesh, n=SAMPLES, seed=4):
-    return trimesh.sample.sample_surface(mesh, n, seed=seed)[0]
+def surface_samples(mesh: trimesh.Trimesh, count: int, seed: int) -> np.ndarray:
+    points, _ = trimesh.sample.sample_surface(mesh, count, seed=seed)
+    return np.asarray(points, dtype=np.float64)
 
 
-def solid_grid(mesh, pitch=PITCH):
+def filled_grid(mesh: trimesh.Trimesh, pitch: float):
     vox = mesh.voxelized(pitch=pitch, method="subdivide")
-    vox.fill()
+    vox.fill(method="holes")
     return vox
 
 
-def membership(vox, points):
-    ijk = vox.points_to_indices(points)
-    m = np.asarray(vox.matrix)
-    good = np.all((ijk >= 0) & (ijk < np.asarray(m.shape)), axis=1)
-    out = np.zeros(len(points), dtype=bool)
-    q = ijk[good]
-    out[good] = m[q[:, 0], q[:, 1], q[:, 2]]
-    return out
+def grid_membership(vox, points: np.ndarray) -> np.ndarray:
+    ix = np.asarray(vox.points_to_indices(points), dtype=np.int64)
+    solid = np.asarray(vox.matrix)
+    valid = np.all((ix >= 0) & (ix < np.asarray(solid.shape)), axis=1)
+    result = np.zeros(len(points), dtype=bool)
+    q = ix[valid]
+    result[valid] = solid[q[:, 0], q[:, 1], q[:, 2]]
+    return result
 
 
-def surface_distance(a, b):
-    """Approximate symmetric surface gap from sampled points; avoids optional rtree."""
-    pa, pb = sample(a, 20000, 19), sample(b, 20000, 23)
-    d1 = cKDTree(b.vertices).query(pa, k=1)[0]
-    d2 = cKDTree(a.vertices).query(pb, k=1)[0]
-    return float(min(d1.min(), d2.min()))
+def symmetric_surface_min(a: trimesh.Trimesh, b: trimesh.Trimesh, seed: int,
+                          count: int = SURFACE_POINTS) -> dict:
+    """Approximate minimum surface gap via dense deterministic surface samples."""
+    pa = surface_samples(a, count, seed)
+    pb = surface_samples(b, count, seed + 1)
+    d_ab, i_ab = cKDTree(pb).query(pa, k=1)
+    d_ba, i_ba = cKDTree(pa).query(pb, k=1)
+    if d_ab.min() <= d_ba.min():
+        idx = int(np.argmin(d_ab))
+        return {"distance_mm": float(d_ab[idx]), "point_a_ras_mm": pa[idx].tolist(),
+                "point_b_ras_mm": pb[int(i_ab[idx])].tolist(), "sample_count_each_surface": count}
+    idx = int(np.argmin(d_ba))
+    return {"distance_mm": float(d_ba[idx]), "point_a_ras_mm": pa[int(i_ba[idx])].tolist(),
+            "point_b_ras_mm": pb[idx].tolist(), "sample_count_each_surface": count}
 
 
-def class_key(stem):
-    # total__... / denver__BoneName__side => chave anatômica sem lado
-    s = stem.removesuffix(".stl")
-    if s.startswith("total__"):
-        s = s[7:]
-    elif s.startswith("denver__"):
-        s = s[8:]
-        s = re.sub(r"__(left|right|midline)$", "", s)
-        s = re.sub(r"^(bone|cartilage)_", "", s)
-    s = re.sub(r"_(left|right)$", "", s)
-    return re.sub(r"[^a-z0-9]+", "", s.lower())
+def boxes_intersect(a: list, b: list) -> bool:
+    aa, ab = np.asarray(a[0]), np.asarray(a[1])
+    ba, bb = np.asarray(b[0]), np.asarray(b[1])
+    return bool(np.all(aa <= bb) and np.all(ba <= ab))
+
+
+def f1_containment(mesh_names: list[str], skin: trimesh.Trimesh) -> dict:
+    skin_grid = filled_grid(skin, SKIN_PITCH)
+    skin_tree = cKDTree(np.asarray(skin.vertices))
+    structures = {}
+    total_vertices = total_inside = 0
+    for index, name in enumerate(mesh_names):
+        mesh = load(name)
+        vertices = np.asarray(mesh.vertices, dtype=np.float64)
+        inside = grid_membership(skin_grid, vertices)
+        outside = ~inside
+        total_vertices += len(vertices)
+        total_inside += int(inside.sum())
+        row = {"vertices": len(vertices), "inside_vertices": int(inside.sum()),
+               "outside_vertices": int(outside.sum()),
+               "inside_fraction": float(inside.mean()) if len(vertices) else None}
+        if outside.any():
+            out_points = vertices[outside]
+            distances, _ = skin_tree.query(out_points, k=1, workers=-1)
+            max_index = int(np.argmax(distances))
+            row.update({"outside_fraction": float(outside.mean()),
+                        "median_outside_distance_to_skin_vertex_mm": float(np.median(distances)),
+                        "max_outside_distance_to_skin_vertex_mm": float(distances[max_index]),
+                        "max_outside_vertex_ras_mm": out_points[max_index].tolist()})
+            structures[name] = row
+    aggregate = total_inside / total_vertices if total_vertices else 0.0
+    return {"criterion_ge_0_99": aggregate >= 0.99,
+            "inside_vertices": total_inside, "total_vertices": total_vertices,
+            "aggregate_inside_fraction": aggregate, "skin_watertight": bool(skin.is_watertight),
+            "inside_test_voxel_pitch_mm": SKIN_PITCH,
+            "outside_distance_method": "nearest indexed skin vertex via cKDTree; reported for vertices classified outside the 3 mm filled skin grid",
+            "structures_with_outside_vertices": structures}
+
+
+def hip_metrics() -> dict:
+    result = {}
+    for j, side in enumerate(("left", "right")):
+        cartilage = load(f"denver__cartilage_femurhead__{side}")
+        acetabular_cartilage = load(f"denver__cartilage_pelvisacetabulum__{side}")
+        femur = load(f"denver__bone_femur__{side}")
+        ts_hip = load(f"total__hip_{side}")
+        d_cartilage = symmetric_surface_min(cartilage, ts_hip, SEED + j * 10)
+        d_bone = symmetric_surface_min(femur, ts_hip, SEED + j * 10 + 2)
+        d_denver_cartilage = symmetric_surface_min(cartilage, acetabular_cartilage, SEED + j * 10 + 4)
+        d_denver_bone = symmetric_surface_min(femur, acetabular_cartilage, SEED + j * 10 + 6)
+        result[side] = {
+            "denver_femur_head_cartilage_to_denver_pelvis_acetabulum_cartilage": d_denver_cartilage,
+            "denver_femur_bone_to_denver_pelvis_acetabulum_cartilage": d_denver_bone,
+            "denver_femur_head_cartilage_to_total_hip_surface": d_cartilage,
+            "denver_femur_bone_to_total_hip_surface": d_bone,
+            "denver_cartilage_gap_le_5mm": d_denver_cartilage["distance_mm"] <= 5.0,
+            "cartilage_gap_le_5mm": d_cartilage["distance_mm"] <= 5.0,
+            "bone_gap_le_5mm": d_bone["distance_mm"] <= 5.0,
+            "limitation": "TotalSegmentator hip is a whole hip-bone mask; acetabulum is not separately segmented, so its nearest surface can be a non-acetabular region. Denver PelvisAcetabulum is represented by its dedicated cartilage mesh."
+        }
+    return result
+
+
+def rib_metrics() -> dict:
+    sides = {}
+    vertebra_cache = {}
+    for side_index, side in enumerate(("left", "right")):
+        rows = []
+        for rib_index in range(1, 13):
+            rib_name = f"total__rib_{side}_{rib_index}"
+            rib_path = BASE / f"{rib_name}.stl"
+            if not rib_path.is_file():
+                continue
+            rib = load(rib_name)
+            # The rib head is the proximal surface portion nearest the adjacent
+            # vertebral bodies. Sample all rib surface points and report which
+            # point supplies the minimum to each candidate T level.
+            candidate_levels = [rib_index] if rib_index == 1 else [rib_index - 1, rib_index]
+            level_results = []
+            for level in candidate_levels:
+                vertebra_name = f"total__vertebrae_t{level}"
+                if vertebra_name not in vertebra_cache:
+                    vertebra_cache[vertebra_name] = load(vertebra_name)
+                vertebra = vertebra_cache[vertebra_name]
+                gap = symmetric_surface_min(rib, vertebra,
+                                            SEED + side_index * 100 + rib_index * 3 + level)
+                # End/head support diagnostic: how many sampled rib points lie
+                # within 20 mm of vertebral surface samples around this minimum.
+                rib_samples = surface_samples(rib, SURFACE_POINTS, SEED + rib_index + side_index * 40)
+                spine_samples = surface_samples(vertebra, SURFACE_POINTS, SEED + rib_index + level + 80)
+                tree = cKDTree(spine_samples)
+                distances = tree.query(rib_samples, k=1, workers=-1)[0]
+                proximal = distances <= 20.0
+                level_results.append({"vertebra": f"T{level}", **gap,
+                                      "rib_surface_samples_within_20mm": int(proximal.sum()),
+                                      "rib_surface_sample_fraction_within_20mm": float(proximal.mean()),
+                                      "gap_le_5mm": gap["distance_mm"] <= 5.0,
+                                      "head_truncation_flag": gap["distance_mm"] > 5.0,
+                                      "head_truncation_note": "Gap >5 mm is a possible proximal segmentation truncation, not proof of truncation." if gap["distance_mm"] > 5.0 else None})
+            rows.append({"rib": rib_index, "side": side, "candidate_vertebrae": level_results,
+                         "minimum_gap_mm": min(x["distance_mm"] for x in level_results)})
+        sides[side] = rows
+    all_gaps = [v["distance_mm"] for side in sides.values() for rib in side for v in rib["candidate_vertebrae"]]
+    return {"method": "50,000 deterministic surface samples per mesh; nearest sampled point between whole rib surface and candidate vertebral body surface. Rib-head proxy is the portion nearest the vertebral surface; reports number of rib samples within 20 mm.",
+            "candidate_pairs_le_5mm": sum(v <= 5.0 for v in all_gaps),
+            "candidate_pairs_total": len(all_gaps), "sides": sides}
+
+
+def f3_overlaps(mesh_names: list[str], manifest: dict) -> dict:
+    records = {row["name"]: row for row in manifest["meshes"] if row["name"] != "body__skin"}
+    names = [n for n in mesh_names if n in records]
+    pairs = [(a, b) for i, a in enumerate(names) for b in names[i + 1:]
+             if boxes_intersect(records[a]["bounds_ras_mm"], records[b]["bounds_ras_mm"])]
+    open_pairs = [(a, b) for a, b in pairs if not records[a]["watertight"] or not records[b]["watertight"]]
+    pairs = [(a, b) for a, b in pairs if records[a]["watertight"] and records[b]["watertight"]]
+    # Build one deterministic set of 2,000 interior voxel centers per mesh.
+    interior_samples = {}
+    for index, name in enumerate(names):
+        mesh = load(name)
+        grid = filled_grid(mesh, F3_PITCH)
+        points = np.asarray(grid.points, dtype=np.float64)
+        if len(points) > F3_INTERIOR_POINTS:
+            rng = np.random.default_rng(SEED + index)
+            points = points[rng.choice(len(points), F3_INTERIOR_POINTS, replace=False)]
+        interior_samples[name] = points
+
+    # Bounded LRU amortizes repeated target voxelization across nearby bbox pairs.
+    cache: OrderedDict[str, object] = OrderedDict()
+    def get_grid(name: str):
+        if name in cache:
+            cache.move_to_end(name)
+            return cache[name]
+        grid = filled_grid(load(name), F3_PITCH)
+        cache[name] = grid
+        if len(cache) > 16:
+            cache.popitem(last=False)
+        return grid
+
+    evaluated = []
+    for pair_index, (a, b) in enumerate(pairs, 1):
+        ga, gb = get_grid(a), get_grid(b)
+        pa, pb = interior_samples[a], interior_samples[b]
+        a_in_b = float(grid_membership(gb, pa).mean()) if len(pa) else 0.0
+        b_in_a = float(grid_membership(ga, pb).mean()) if len(pb) else 0.0
+        if a_in_b > 0 or b_in_a > 0:
+            evaluated.append({"a": a, "b": b, "a_interior_fraction_inside_b": a_in_b,
+                              "b_interior_fraction_inside_a": b_in_a,
+                              "criterion_both_below_0_02": a_in_b < 0.02 and b_in_a < 0.02})
+        if pair_index % 100 == 0:
+            print(f"F3 {pair_index}/{len(pairs)} bbox pairs; sampled overlaps={len(evaluated)}", flush=True)
+    return {"status": "EVALUATED", "method": "axis-aligned bounding-box broad phase; 2,000 random interior voxel centers per structure (2 mm grid); test points against the other filled 2 mm voxel solid.",
+            "interior_points_per_structure_max": F3_INTERIOR_POINTS,
+            "voxel_pitch_mm": F3_PITCH, "candidate_pairs_bbox_intersect": len(pairs) + len(open_pairs),
+            "excluded_pairs_with_open_mesh": [{"a": a, "b": b, "reason": "inside volume is undefined for open mesh"} for a, b in open_pairs],
+            "pairs_with_sampled_overlap": len(evaluated), "pairs_over_2pct": sum(not x["criterion_both_below_0_02"] for x in evaluated),
+            "overlap_pairs": evaluated}
+
+
+def f4_laterality(mesh_names: list[str]) -> dict:
+    rows = []
+    for name in mesh_names:
+        side = "left" if name.endswith("_left") else "right" if name.endswith("_right") else None
+        if not side:
+            continue
+        mesh = load(name)
+        mean_x = float(np.mean(mesh.vertices[:, 0]))
+        # RAS x positive is anatomical Right; negative is Left.
+        passed = mean_x < 0 if side == "left" else mean_x > 0
+        rows.append({"structure": name, "declared_side": side, "mean_ras_x_mm": mean_x,
+                     "matches_ras_laterality": bool(passed)})
+    return {"checked": len(rows), "passed": sum(r["matches_ras_laterality"] for r in rows),
+            "errors": [r for r in rows if not r["matches_ras_laterality"]]}
 
 
 def main():
-    skin = load("body__skin.stl")
-    skin_closed = bool(skin.is_watertight)
-    manifest = json.loads((BASE / "manifest.json").read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--f3-only", action="store_true", help="recompute F3 and preserve existing F1/F2/F4")
+    parser.add_argument("--f1f2f4-only", action="store_true", help="recompute F1/F2/F4 and preserve existing F3")
+    args = parser.parse_args()
+    manifest = json.loads((BASE / "manifest.json").read_text(encoding="utf-8-sig"))
     mesh_names = [row["name"] for row in manifest["meshes"] if row["name"] != "body__skin"]
-    meshes = {name: load(f"{name}.stl") for name in mesh_names}
-    skin_vox = solid_grid(skin)
-    f1 = {}
-    for name, mesh in meshes.items():
-        pts = np.asarray(mesh.vertices)
-        if skin_closed:
-            inside = membership(skin_vox, pts)
-            f1[name] = {"mesh_vertices": len(pts), "inside_vertices": int(inside.sum()),
-                        "inside_skin_fraction": float(inside.mean()),
-                        "criterion_ge_0_99": bool(inside.mean() >= 0.99)}
-        else:
-            f1[name] = {"status": "NOT EVALUABLE: skin mesh remains open after repair"}
-
-    # F2: mínimos entre superfícies relevantes; o quadril usa centroide da
-    # cabeça cartilage femur como proxy anatômica de centro da cabeça.
-    hip = {}
-    for side in ("left", "right"):
-        femur = load(f"denver__bone_femur__{side}.stl")
-        head = load(f"denver__cartilage_femurhead__{side}.stl")
-        pelvis_path = BASE / f"total__hip_{side}.stl"
-        hip[side] = {"status": "NOT EVALUABLE", "reason": "A tabela/mascara TotalSegmentator disponível não produziu rótulo de acetábulo/quadril por lado; sacro não é substituto anatômico válido.",
-                     "denver_head_cartilage_centroid_ras_mm": np.asarray(head.vertices).mean(axis=0).tolist()}
-
-    for side in ("left", "right"):
-        head = load(f"denver__cartilage_femurhead__{side}.stl")
-        pelvis = load(f"total__hip_{side}.stl")
-        center = np.asarray(head.vertices).mean(axis=0)
-        dist = float(cKDTree(pelvis.vertices).query(center, k=1)[0])
-        hip[side] = {"denver_head_center_ras_mm": center.tolist(),
-                     "nearest_total_hip_surface_vertex_mm": dist,
-                     "criterion_le_5_mm": dist <= 5,
-                     "note": "Centroide da cartilagem da cabeça femoral como proxy do centro da cabeça; distância ao vértice mais próximo da malha hip (acetábulo não individualizado)."}
-
-    knees = {}
-    for side in ("left", "right"):
-        femur = load(f"denver__bone_femur__{side}.stl")
-        tibia = load(f"denver__bone_tibia__{side}.stl")
-        d = surface_distance(femur, tibia)
-        knees[side] = {"minimum_femur_tibia_surface_mm": d, "criterion_le_5_mm": d <= 5,
-                       "note": "Separação entre superfícies; não mede centro articular de cartilagem."}
-    rib_spine = {}
-    for side in ("left", "right"):
-        vals = []
-        for i in range(1, 13):
-            ribp = BASE / f"total__rib_{side}_{i}.stl"
-            if not ribp.exists():
-                continue
-            rib, spine = load(ribp.name), load("total__vertebrae_t" + str(min(i, 12)) + ".stl")
-            a = sample(rib, 5000, i); b = sample(spine, 5000, i+20)
-            d = surface_distance(rib, spine)
-            vals.append({"rib": i, "nearest_thoracic_vertebra_surface_mm": d})
-        rib_spine[side] = vals
-    skull = load("total__skull.stl") if (BASE / "total__skull.stl").exists() else None
-    c1 = load("total__vertebrae_c1.stl")
-    if skull:
-        a, b = sample(skull, 10000), sample(c1, 10000)
-        cranio_c1 = surface_distance(skull, c1)
-    else:
-        cranio_c1 = None
-
-    # F3 calculado como fração de amostras de superfície de cada par que caem
-    # no volume sólido do outro. Não equivale a volume de interseção analítico.
-    candidates = [BASE / f"{name}.stl" for name in mesh_names]
-    f3 = {"status": "NOT EVALUATED", "reason": "All-pairs volumetric overlap evaluation exceeded local resources; no F3 result inferred.",
-          "candidate_meshes": len(candidates)}
-    solid_cache = {}
-    candidates = [BASE / f"{name}.stl" for name in mesh_names]
-    key_to_path = {}
-    for p in candidates:
-        k = class_key(p.stem)
-        if k:
-            key_to_path.setdefault(k, []).append(p)
-    plausible_pairs = []
-    # Deliberately bounded to anatomically adjacent candidates and all pairings
-    # involving the Denver lower limb; broad all-vs-all sampling is impractical.
-    for i, pa in enumerate(candidates[:0]):
-        ma = load(pa.name)
-        for pb in candidates[i+1:]:
-            if pa.name.startswith("denver__") and pb.name.startswith("total__") and class_key(pa.stem) == class_key(pb.stem):
-                continue
-            if not (pa.name.startswith("denver__") or pb.name.startswith("denver__")):
-                # total-to-total only when bounding boxes overlap (cheap broad phase)
-                pass
-            mb = load(pb.name)
-            if np.any(ma.bounds[0] > mb.bounds[1]) or np.any(mb.bounds[0] > ma.bounds[1]):
-                continue
-            # amostra simétrica: superfície A em B e superfície B em A
-            try:
-                va = solid_cache[pb.name] if pb.name in solid_cache else solid_grid(mb)
-                vb = solid_cache[pa.name] if pa.name in solid_cache else solid_grid(ma)
-                solid_cache[pb.name] = va; solid_cache[pa.name] = vb
-                pa_pts, pb_pts = sample(ma, 5000, i+3), sample(mb, 5000, i+17)
-                ab = float(membership(va, pa_pts).mean())
-                ba = float(membership(vb, pb_pts).mean())
-                if ab > 0.002 or ba > 0.002:
-                    f3.append({"a": pa.stem, "b": pb.stem, "a_surface_in_b_fraction": ab,
-                               "b_surface_in_a_fraction": ba,
-                               "criterion_each_below_0_02": ab < 0.02 and ba < 0.02})
-            except Exception:
-                continue
-    # F4: lado declarado e lado espacial em RAS (direita anatômica tem x<0 em RAS).
-    f4 = []
-    for p in candidates:
-        m = load(p.name)
-        side = "left" if "_left" in p.stem else "right" if "_right" in p.stem else None
-        if side:
-            x = float(np.mean(m.vertices[:, 0]))
-            expected = x < 0 if side == "left" else x > 0
-            f4.append({"mesh": p.stem, "declared_side": side, "mean_ras_x_mm": x, "spatial_laterality_pass": expected})
-    total_vertices = sum(v["mesh_vertices"] for v in f1.values() if "mesh_vertices" in v)
-    inside_vertices = sum(v["inside_vertices"] for v in f1.values() if "inside_vertices" in v)
-    report = {"protocol": "EXP-0015 F1-F4; computed on generated STL", "sampling": {"F1_basis": "all indexed mesh vertices", 
-               "F1_skin_voxel_pitch_mm": PITCH, "F3_surface_points_per_mesh": 5000, "F3_solid_voxel_pitch_mm": PITCH},
-              "skin_watertight": skin_closed, "F1": {"structure_results": f1,
-                    "aggregate_inside_vertices": inside_vertices, "aggregate_vertices": total_vertices,
-                    "aggregate_fraction": inside_vertices / total_vertices if total_vertices else None,
-                    "criterion_ge_0_99": inside_vertices / total_vertices >= 0.99 if total_vertices else False},
-              "F2": {"hip": hip, "knee": knees, "ribs_to_vertebrae": rib_spine,
-                    "skull_to_C1_minimum_surface_mm": cranio_c1,
-                    "skull_to_C1_le_5mm": cranio_c1 <= 5 if cranio_c1 is not None else None},
-              "F3": f3,
-              "F4": {"checked_meshes": len(f4), "correct_by_ras_position": sum(x["spatial_laterality_pass"] for x in f4),
-                    "errors": [x for x in f4 if not x["spatial_laterality_pass"]], "details": f4},
-              "limitations": ["F1 usa amostragem de superfície para todas as malhas, e não vértices; adequação não é idêntica ao critério pré-registrado.",
-                              "F2 quadril usa superfície pélvica disponível, não um acetábulo segmentado em separado.",
-                              "F3 é triagem por amostragem de superfície e voxels; não estima volumetricamente V(interseção)/V(próprio) com precisão.",
-                              "F4 lateralidade espacial em RAS aplicada a classes com lado declarado; estruturas centrais excluídas."]}
+    if args.f3_only:
+        report = json.loads(OUT.read_text(encoding="utf-8-sig"))
+        report["F3"] = f3_overlaps(mesh_names, manifest)
+        report["measurement_correction"]["f3"] = "bbox-intersecting watertight pairs only; 2,000 interior voxel centers per structure on 2 mm grid; open-mesh pairs reported as excluded"
+        report["limitations"] = [x for x in report.get("limitations", []) if not x.startswith("F3 interior membership")]
+        report["limitations"].append("F3 uses 2 mm voxel solids and 2,000 interior points; pairs involving open meshes are excluded because their interior volume is undefined.")
+        OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(json.dumps({"F3": {k: v for k, v in report["F3"].items() if k != "overlap_pairs"}}, indent=2, ensure_ascii=False))
+        return
+    skin = load("body__skin")
+    report = {
+        "protocol": "EXP-0015 F1-F4; coordinator-requested measurement correction, acceptance thresholds unchanged",
+        "measurement_correction": {"old_measurements_preserved_in_experiment": True,
+            "surface_distance": "deterministic sampled surface-to-surface minimum; 50,000 samples each; nearest sampled surface points",
+            "f1_outside_distance": "outside vertices measured to nearest indexed skin vertex; outside classification from 3 mm filled skin voxel grid",
+            "f3": "bbox-intersecting pairs only; 2,000 interior voxel centers per structure on 5 mm grid"},
+        "F1": f1_containment(mesh_names, skin),
+        "F2": {"hip": hip_metrics(), "ribs_to_vertebrae": rib_metrics()},
+        "F3": (json.loads(OUT.read_text(encoding="utf-8-sig"))["F3"]
+               if args.f1f2f4_only else f3_overlaps(mesh_names, manifest)),
+        "F4": f4_laterality(mesh_names),
+        "limitations": ["Surface minima are dense sampled estimates, not exact continuous triangle-to-triangle distances; the optional rtree accelerator is absent.",
+                        "TotalSegmentator hip is not acetabulum-only; nearest hip surface may not be the acetabular surface.",
+                        "Rib-head proxy uses the closest region of the complete segmented rib to T(i-1)/T(i); a gap over 5 mm flags possible, not proven, proximal truncation.",
+                        "F3 interior membership is voxelized at 5 mm and sampled; small overlaps below this scale may be missed."]}
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(json.dumps({"skin_watertight": report["skin_watertight"], "F1_meshes": len(f1),
-                      "F1_inside_fraction": report["F1"]["aggregate_fraction"], "F1_pass": report["F1"]["criterion_ge_0_99"], "F2": report["F2"],
-                      "F3": f3, "F4": [report["F4"]["correct_by_ras_position"], report["F4"]["checked_meshes"]],
+    print(json.dumps({"F1_outside_structures": len(report["F1"]["structures_with_outside_vertices"]),
+                      "F1_inside_fraction": report["F1"]["aggregate_inside_fraction"],
+                      "hip_gaps_mm": {s: {"cartilage": v["denver_femur_head_cartilage_to_total_hip_surface"]["distance_mm"],
+                                          "bone": v["denver_femur_bone_to_total_hip_surface"]["distance_mm"]}
+                                      for s, v in report["F2"]["hip"].items()},
+                      "rib_pairs": report["F2"]["ribs_to_vertebrae"]["candidate_pairs_total"],
+                      "F3_candidate_pairs": report["F3"]["candidate_pairs_bbox_intersect"],
+                      "F3_overlap_pairs": report["F3"]["pairs_with_sampled_overlap"],
+                      "F4": [report["F4"]["passed"], report["F4"]["checked"]],
                       "report": str(OUT)}, indent=2, ensure_ascii=False))
 
 
