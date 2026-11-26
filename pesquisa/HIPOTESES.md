@@ -14,3 +14,4 @@
 | H10 | `EXP-0010` | LP01 | A TC original da NLM (com cabeçalhos GE completos) segmentada em blocos craniocaudais com `--fast` atinge os critérios anatômicos mínimos. | **Em execução** (`--fast` passou no critério) |
 | H11 | `EXP-0011` | LP01 | ICP rígido nos fêmures e pelve alinha os STLs da Denver à TC da NLM com erro médio `< 3 mm` no sacro (*holdout*). | **Em execução** (Etapa A reprovou: sacro 3,990 mm / p95 10,845 mm) |
 | H12 | `EXP-0012` | LP01 | A integração multimodal (TC + RM + máscaras Denver) aumenta a cobertura anatômica sem comprometer a precisão geométrica (`< 3 mm`). | **Planejada** (viabilidade avaliada: ganho limitado a `intervertebral_discs`/`brain`; priorizar Método A só TC) |
+| H13 | `EXP-0013` | LP01 | Existem fontes, métodos e ferramentas abertas (compatíveis com uso comercial mediante atribuição) que podem reduzir os gargalos G1–G5. | **Planejada** (levantamento de existência/licenças concluído; eficácia em aberto até execução) |
