@@ -304,7 +304,10 @@ Cada etapa termina com um teste que passa.
    - páginas do prontuário sem cache compartilhado; sessão encerrada não acessa prontuário.
 2. **Motor anatômico:** `packages/motor-anatomico` em React Three Fiber com o contrato §5.4, atlas `bp3d-m` e `hra-f`. Teste: clicar no fêmur esquerdo devolve `estrutura='FMA24475'` e uma âncora com `posicao_local`.
 3. **Primeiro prontuário:** criar, gravar, reabrir e ver achados com CID-10. Teste: achado criado reaparece no mesmo ponto após recarregar; achado restrito não vaza por busca, marcador ou contagem para outra unidade.
-4. **Multidisciplinaridade:** especialidades, filtros, histórico, linha do tempo. Teste: demonstração da §14 e meta de 3 s com 200 achados.
+4. **Multidisciplinaridade:** especialidades, filtros, histórico, linha do tempo. Teste: demonstração da §14 e meta de 3 s com 200 achados. Critérios:
+   - **Demonstração §14** automatizada contra a homologação: cardiologia (I10, sem local), ortopedia (M54.5 marcado na região lombar) e obstetrícia (Z34, no útero), cada um na sua unidade; os três veem o histórico unificado dos três achados.
+   - **Desempenho:** build de produção, navegador com CPU 4× mais lenta e rede "Fast 4G" (simulação de tablet intermediário), paciente de carga com 200 achados vigentes espalhados por vários sistemas; da navegação até lista e marcadores visíveis ≤ 3 s na **mediana de 5 aberturas** (registrar também o p95 e quanto vem do banco, da rede de GLB e da renderização).
+   - **Filtros e linha do tempo:** especialidade, status e período filtram ao mesmo tempo o corpo e a lista; a linha do tempo ordena por início (ou criação) e permite escolher um intervalo; histórico de correções visível no cartão do achado.
 5. **Gestação e nascimento:** gestação, condições, camada gestacional, nascimento, vínculo mãe–filho. Teste: registrar nascimento cria a criança ligada à mãe.
 6. **Interoperabilidade:** importação FHIR. Teste: Bundle sintético com 50 pacientes importa sem erro e sem duplicar.
 7. **Preparação para piloto:** validação médica, segurança, performance, acessibilidade e usabilidade nos três tamanhos de tela.
