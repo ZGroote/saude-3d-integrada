@@ -34,7 +34,7 @@ before(async()=>{
   await db.exec(await readFile(resolve(pasta,'shim_auth.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../migrations/0001_fundacao.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../seed.sql'),'utf8'));
-  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql'])
+  for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql'])
     await db.exec(await readFile(resolve(pasta,'../migrations',file),'utf8'));
 });
 after(async()=>db.close());
@@ -257,7 +257,7 @@ test('profissional e anon não importam; erros persistidos contêm só id e moti
   await como(adminCardio,()=>db.query('SELECT public.concluir_importacao($1,$2::jsonb)',[importacaoCardio,'[]']));
   await como(profissional,async()=>{
     for(const table of ['importacoes_fhir','eventos_clinicos','paciente_fhir','bodysite_estrutura']){
-      await assert.rejects(db.query(`SELECT * FROM public.${table}`));
+      if(table!=='bodysite_estrutura') await assert.rejects(db.query(`SELECT * FROM public.${table}`)); // referência: leitura liberada (0006)
       await assert.rejects(db.query(`INSERT INTO public.${table} DEFAULT VALUES`));
       await assert.rejects(db.query(`UPDATE public.${table} SET id=id`));
       await assert.rejects(db.query(`DELETE FROM public.${table}`));
@@ -274,4 +274,11 @@ test('profissional e anon não importam; erros persistidos contêm só id e moti
     FROM public.bodysite_estrutura`)).rows[0];
   assert.deepEqual(lateralidade,{total:12,corretas:12});
   assert.ok((await db.query("SELECT 1 FROM public.auditoria WHERE autor_id=$1 AND unidade_id=$2 AND acao='acesso_negado'",[profissional,unidadeCardio])).rows.length>0);
+});
+
+test('bodysite_estrutura é legível e não gravável por authenticated',async()=>{
+  const n=(await como(profissional,()=>db.query('SELECT count(*)::int AS n FROM public.bodysite_estrutura'))).rows[0].n;
+  assert.equal(n,12);
+  await assert.rejects(como(admin,()=>db.query(
+    "INSERT INTO public.bodysite_estrutura(snomed,descricao,estrutura_fma) VALUES ('1','x','FMA1')")));
 });

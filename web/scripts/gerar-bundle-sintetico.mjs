@@ -41,7 +41,8 @@ for (let i = 1; i <= 50; i++) {
     resourceType: "Condition", id: `condicao-${String(i).padStart(3, "0")}`,
     subject: { reference: `Patient/${patientId}` },
     code: { coding: [{ system: i % 2 === 0 ? ICD_SYSTEM : ICD_BR_SYSTEM, code: i % 3 === 0 ? "M54.5" : "I10" }] },
-    ...(withSite ? { bodySite: [{ coding: [{ system: "http://snomed.info/sct", code: "73780009", display: "Região abdominal" }] }] } : {}),
+    // 3 códigos de supabase/dados/bodysite_snomed.csv (lombar, coração, rim D) + 1 fora da tabela ("sem local")
+    ...(withSite ? { bodySite: [{ coding: [{ system: "http://snomed.info/sct", code: ["52612000", "80891009", "9846003", "73780009"][(i / 2) % 4] }] }] } : {}),
     clinicalStatus: { coding: [{ code: "active", display: "active" }] },
     onsetDateTime: `2025-${String(1 + (i % 12)).padStart(2, "0")}-10`,
   } });

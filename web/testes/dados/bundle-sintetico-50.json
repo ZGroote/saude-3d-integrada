@@ -1071,8 +1071,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }
@@ -1180,8 +1179,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "9846003"
               }
             ]
           }
@@ -1289,8 +1287,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "73780009"
               }
             ]
           }
@@ -1398,8 +1395,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "52612000"
               }
             ]
           }
@@ -1507,8 +1503,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }
@@ -1616,8 +1611,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "9846003"
               }
             ]
           }
@@ -1725,8 +1719,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "73780009"
               }
             ]
           }
@@ -1834,8 +1827,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "52612000"
               }
             ]
           }
@@ -1943,8 +1935,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }
@@ -2052,8 +2043,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "9846003"
               }
             ]
           }
@@ -2161,8 +2151,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "73780009"
               }
             ]
           }
@@ -2270,8 +2259,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "52612000"
               }
             ]
           }
@@ -2379,8 +2367,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }
@@ -2488,8 +2475,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "9846003"
               }
             ]
           }
@@ -2597,8 +2583,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "73780009"
               }
             ]
           }
@@ -2706,8 +2691,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "52612000"
               }
             ]
           }
@@ -2815,8 +2799,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }
@@ -2924,8 +2907,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "9846003"
               }
             ]
           }
@@ -3033,8 +3015,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "73780009"
               }
             ]
           }
@@ -3142,8 +3123,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "52612000"
               }
             ]
           }
@@ -3251,8 +3231,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }
@@ -3360,8 +3339,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "9846003"
               }
             ]
           }
@@ -3469,8 +3447,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "73780009"
               }
             ]
           }
@@ -3578,8 +3555,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "52612000"
               }
             ]
           }
@@ -3687,8 +3663,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "73780009",
-                "display": "Região abdominal"
+                "code": "80891009"
               }
             ]
           }

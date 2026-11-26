@@ -294,9 +294,9 @@ Entrada: Bundle FHIR R4 em JSON. No MVP é por upload; a conexão com a RNDS fic
 | `importar_condicao_fhir(p_importacao uuid, p_paciente uuid, p_fhir_id text, p_cid10 text, p_ancora jsonb, p_status, p_inicio date) returns uuid` | Admin com vínculo ativo; achado `origem='fhir'`, autor = admin, unidade = do admin, sigilo pela `cid10_sigilo`; **`fhir_id` já importado é ignorado** (devolve o id existente) |
 | `importar_evento_fhir(p_importacao uuid, p_paciente uuid, p_fhir_id text, p_tipo text, p_data timestamptz, p_codigo text, p_descricao text, p_valor text)` | `Observation`/`Encounter` em `eventos_clinicos` (linha do tempo; não viram ponto no corpo); `fhir_id` idempotente |
 | `concluir_importacao(p_importacao uuid, p_erros jsonb)` | Fecha o registro com contagens e erros |
-| `listar_eventos(p_paciente uuid)` | Vínculo ativo; eventos para a linha do tempo |
+| `listar_eventos(p_paciente uuid)` | Vínculo ativo; eventos **da própria unidade** para a linha do tempo. Decisão conservadora: eventos não têm classificação de sigilo (ex.: carga viral de HIV chega como código LOINC comum), então não circulam entre unidades até existir uma regra de sigilo para eles |
 
-`eventos_clinicos (id, paciente_id, unidade_id, importacao_id, fhir_id, tipo, data, codigo, descricao, valor, criado_em)` — `unique(origem fhir_id)`; sem DML direto.
+`eventos_clinicos (id, paciente_id, unidade_id, importacao_id, fhir_id, tipo, data, codigo, descricao, valor, criado_em)` — `fhir_id` único por unidade, enviado como `Tipo/id` (ids FHIR só são únicos por tipo); sem DML direto. `bodysite_estrutura` tem a coluna `lado` e é legível por `authenticated` (dado de referência, como `cid10`). Joelho só tem FMA: no atlas feminino fica sem local até haver mapeamento.
 
 **CID-10 no `Condition.code`:** aceita os sistemas `http://hl7.org/fhir/sid/icd-10` e o CID-10 brasileiro; código inexistente na tabela `cid10` vira erro do recurso (não importa).
 
