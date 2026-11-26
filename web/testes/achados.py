@@ -34,7 +34,7 @@ def rpc(rota):
         resposta = f'40000000-0000-4000-8000-{len(gravados) + 1:012d}'
         gravados.append({
             'id': resposta, **{k[2:]: v for k, v in corpo.items() if k not in ('p_paciente', 'p_cid10')},
-            'cid10': corpo['p_cid10'], 'descricao': CID['descricao'], 'especialidade': 'cardiologia',
+            'cid10': corpo['p_cid10'], 'cid10_descricao': CID['descricao'], 'especialidade': 'cardiologia',
             'autor_nome': 'Profissional Fictício', 'unidade_nome': 'Unidade Fictícia', 'criado_em': '2026-11-25T12:00:00Z',
         })
     elif nome == 'listar_achados':

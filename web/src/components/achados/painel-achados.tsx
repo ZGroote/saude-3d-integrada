@@ -79,7 +79,7 @@ export function PainelAchados({ pacienteId, sexo, com3d }: { pacienteId: string;
                       className="flex w-full gap-2 rounded-md px-1 py-2 text-left text-sm outline-none hover:bg-teal-50 focus-visible:ring-2 focus-visible:ring-teal-700 aria-pressed:bg-teal-50">
                       <span aria-hidden="true" className="mt-1 size-3 shrink-0 rounded-full" style={{ background: corDaEspecialidade(a.especialidade) }} />
                       <span className="min-w-0">
-                        <span className="block text-slate-900"><strong className="font-mono">{a.cid10}</strong> {a.descricao}</span>
+                        <span className="block text-slate-900"><strong className="font-mono">{a.cid10}</strong> {a.cid10_descricao}</span>
                         <span className="block text-xs text-slate-600">{a.autor_nome} · {a.unidade_nome} · {data(a.criado_em)}</span>
                         <span className="block text-xs text-slate-500">
                           {a.especialidade ?? "Sem especialidade"} · {STATUS[a.status]}
@@ -132,7 +132,7 @@ function Cartao({ achado: a, onFechar }: { achado: Achado; onFechar: () => void 
   return (
     <Card className="px-5 py-4" data-cartao={a.id} onKeyDown={(e) => { if (e.key === "Escape") onFechar(); }}>
       <div className="flex items-start justify-between gap-2">
-        <h3 ref={titulo} tabIndex={-1} className="text-sm font-semibold text-slate-950 outline-none"><span className="font-mono">{a.cid10}</span> {a.descricao}</h3>
+        <h3 ref={titulo} tabIndex={-1} className="text-sm font-semibold text-slate-950 outline-none"><span className="font-mono">{a.cid10}</span> {a.cid10_descricao}</h3>
         <Button type="button" variant="ghost" className="h-7 px-2" onClick={onFechar}>Fechar</Button>
       </div>
       <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">

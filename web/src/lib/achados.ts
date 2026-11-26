@@ -9,12 +9,12 @@ export type Categoria = keyof typeof CATEGORIAS;
 export type Lado = keyof typeof LADOS;
 export type Status = keyof typeof STATUS;
 
-/** Linha de `listar_achados`. A SPEC não nomeia as colunas: este é o formato que o app espera da migração. */
+/** Linha de `listar_achados` (supabase/migrations/0003); só as colunas que o app usa. */
 export type Achado = {
   id: string;
   ancora: Ancora | null;
   cid10: string;
-  descricao: string;
+  cid10_descricao: string;
   categoria: Categoria;
   lado: Lado;
   status: Status;
