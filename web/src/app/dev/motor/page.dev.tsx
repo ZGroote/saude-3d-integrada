@@ -1,7 +1,9 @@
 // Só existe no `next dev`: a extensão .dev.tsx fica fora de pageExtensions no build (next.config.ts).
 // Mesmo componente do prontuário, sem paciente, sem login e sem Supabase.
+// ?achados=1 mostra o painel de achados com paciente falso; testes/achados.py simula as rpc no navegador.
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PainelAchados } from "@/components/achados/painel-achados";
 import { Prontuario3D } from "@/components/anatomia/prontuario-3d";
 import type { Sexo } from "@/lib/banco";
 
@@ -9,8 +11,8 @@ export const metadata: Metadata = { title: "Demonstração do motor 3D", robots:
 
 const SEXOS: Sexo[] = ["masculino", "feminino", "indeterminado"];
 
-export default async function DemoMotor({ searchParams }: { searchParams: Promise<{ sexo?: string }> }) {
-  const { sexo } = await searchParams;
+export default async function DemoMotor({ searchParams }: { searchParams: Promise<{ sexo?: string; achados?: string }> }) {
+  const { sexo, achados } = await searchParams;
   const escolhido = SEXOS.find((s) => s === sexo) ?? "masculino";
   return (
     <main className="mx-auto max-w-6xl px-5 py-8 sm:px-8">
@@ -22,7 +24,9 @@ export default async function DemoMotor({ searchParams }: { searchParams: Promis
           </Link>
         ))}
       </nav>
-      <Prontuario3D key={escolhido} sexo={escolhido} />
+      {achados
+        ? <PainelAchados key={escolhido} pacienteId="00000000-0000-4000-8000-00000000fa15" sexo={escolhido} com3d />
+        : <Prontuario3D key={escolhido} sexo={escolhido} />}
     </main>
   );
 }

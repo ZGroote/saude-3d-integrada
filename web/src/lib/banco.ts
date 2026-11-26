@@ -1,3 +1,6 @@
+import type { Ancora } from "@saude3d/motor-anatomico";
+import type { Achado, Categoria, Lado, Status } from "@/lib/achados";
+
 export type Sexo = "feminino" | "masculino" | "indeterminado";
 
 export type PacienteBusca = {
@@ -17,6 +20,8 @@ export type Paciente = {
   data_nascimento: string;
   municipio_ibge: string;
 };
+
+export type Cid10 = { codigo: string; descricao: string };
 
 export type Database = {
   public: {
@@ -105,6 +110,15 @@ export type Database = {
       eh_admin: { Args: Record<string, never>; Returns: boolean };
       abrir_prontuario: { Args: { p_paciente: string }; Returns: Paciente | null };
       buscar_pacientes: { Args: { p_texto: string }; Returns: PacienteBusca[] };
+      buscar_cid10: { Args: { p_texto: string; p_limite?: number }; Returns: Cid10[] };
+      registrar_achado: {
+        Args: {
+          p_paciente: string; p_ancora: Ancora | null; p_cid10: string; p_categoria: Categoria; p_lado: Lado;
+          p_status: Status; p_inicio: string | null; p_observacao: string | null; p_substitui?: string | null;
+        };
+        Returns: string;
+      };
+      listar_achados: { Args: { p_paciente: string }; Returns: Achado[] };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

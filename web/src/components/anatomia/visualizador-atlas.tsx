@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
-  carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type Pacote,
+  carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type Marcador, type Pacote,
 } from "@saude3d/motor-anatomico";
 import { Card } from "@/components/ui/card";
+import { ladoDaLateralidade, LADOS, type Lado } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
 
 const BASE = process.env.NEXT_PUBLIC_ATLAS_URL || "/atlas";
@@ -24,9 +25,21 @@ const NOMES_SISTEMA: Record<string, string> = {
   sensorial: "Sensorial",
 };
 const nomeSistema = (id: string) => NOMES_SISTEMA[id] ?? id;
-const LADOS: Record<string, string> = { left: "Esquerdo", right: "Direito" };
 
-export default function VisualizadorAtlas({ sexo }: { sexo: Sexo }) {
+export type PontoNoCorpo = { ancora: Ancora; nome: string; sistema: string; lado: Lado; naoRevisado: boolean };
+
+/** O que o prontuário liga ao 3D; sem isso (rota /dev/motor) o painel só identifica o ponto clicado. */
+type Prontuario = {
+  marcadores: Marcador[];
+  selecionado: string | null;
+  lateral: ReactNode;
+  onEscolherPonto: (ponto: PontoNoCorpo) => void;
+  onSelecionarMarcador: (id: string) => void;
+  onMarcadoresSemPosicao: (ids: string[]) => void;
+};
+const naoRevisado = (e: { nome_pt: string; validacao: string }) => !!e.nome_pt && (!e.validacao || e.validacao === "pendente");
+
+export default function VisualizadorAtlas({ sexo, prontuario }: { sexo: Sexo; prontuario?: Prontuario }) {
   const [pedido, setPedido] = useState<Atlas | null>(ATLAS_DO_SEXO[sexo] ?? null);
   // null = ainda verificando se o atlas feminino já foi publicado
   const [temFeminino, setTemFeminino] = useState<boolean | null>(null);
@@ -64,22 +77,25 @@ export default function VisualizadorAtlas({ sexo }: { sexo: Sexo }) {
       {provisorio && (
         <p role="alert" className="rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
           <strong>Atlas feminino em preparação.</strong> O corpo exibido é o masculino (BodyParts3D), apenas como
-          referência provisória.
+          referência provisória.{prontuario && " Não é possível marcar achados nele: registre sem local no corpo."}
         </p>
       )}
-      {!atlas ? (
-        <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
-      ) : verificando ? (
-        <p role="status" className="text-sm text-slate-600">Verificando o atlas…</p>
+      {!atlas || verificando ? (
+        <>
+          {!atlas
+            ? <p className="text-sm text-slate-600">Sexo indeterminado: escolha o atlas para ver o corpo em 3D.</p>
+            : <p role="status" className="text-sm text-slate-600">Verificando o atlas…</p>}
+          {prontuario?.lateral}
+        </>
       ) : (
         // trocar de atlas zera a seleção de sistemas e o ponto escolhido
-        <Corpo key={atlas} atlas={atlas} />
+        <Corpo key={atlas} atlas={atlas} provisorio={provisorio} prontuario={prontuario} />
       )}
     </div>
   );
 }
 
-function Corpo({ atlas }: { atlas: Atlas }) {
+function Corpo({ atlas, provisorio, prontuario }: { atlas: Atlas; provisorio: boolean; prontuario?: Prontuario }) {
   const { versao } = ATLAS[atlas];
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [sistemas, setSistemas] = useState(["tegumentar"]); // abre na pele
@@ -93,7 +109,28 @@ function Corpo({ atlas }: { atlas: Atlas }) {
     return () => cancelar.abort();
   }, [atlas, versao]);
 
-  const entrada = ancora && pacote?.indice.find((e) => e.malha === ancora.malha);
+  const entradaDe = (a: Ancora) => pacote?.indice.find((e) => e.malha === a.malha);
+  const entrada = ancora && entradaDe(ancora);
+
+  function escolher(a: Ancora) {
+    if (!prontuario) return setAncora(a);
+    const e = entradaDe(a);
+    // SPEC §6: no corpo provisório não se grava âncora. Sem o índice não há nome nem lado.
+    if (provisorio || !e) return;
+    prontuario.onEscolherPonto({
+      ancora: a, nome: e.nome_pt || e.nome_en, sistema: nomeSistema(a.sistema),
+      lado: ladoDaLateralidade(e.lateralidade), naoRevisado: naoRevisado(e),
+    });
+  }
+
+  // achado num sistema desligado ficaria escondido sob a pele: selecioná-lo liga o sistema (uma vez por seleção)
+  const doSelecionado = prontuario?.marcadores.find((m) => m.id === prontuario.selecionado && m.ancora.atlas === atlas);
+  const [revelado, setRevelado] = useState<string | null>(null);
+  if ((doSelecionado?.id ?? null) !== revelado) {
+    setRevelado(doSelecionado?.id ?? null);
+    const sistema = doSelecionado?.ancora.sistema;
+    if (sistema && !sistemas.includes(sistema)) setSistemas([...sistemas, sistema]);
+  }
 
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]" data-atlas={atlas}>
@@ -104,11 +141,15 @@ function Corpo({ atlas }: { atlas: Atlas }) {
           versao={versao}
           baseUrl={BASE}
           sistemasVisiveis={sistemas}
-          onEscolherPonto={setAncora}
+          marcadores={prontuario?.marcadores}
+          selecionado={prontuario?.selecionado}
+          onEscolherPonto={escolher}
+          onSelecionarMarcador={prontuario?.onSelecionarMarcador}
+          onMarcadoresSemPosicao={prontuario?.onMarcadoresSemPosicao}
         />
       </Card>
       <div className="space-y-4">
-        <Card className="px-5 py-4" aria-live="polite">
+        {prontuario ? prontuario.lateral : <Card className="px-5 py-4" aria-live="polite">
           <h3 className="text-sm font-semibold text-slate-950">Ponto selecionado</h3>
           {!ancora || !entrada ? (
             <p className="mt-2 text-sm text-slate-600">Clique no corpo para identificar uma estrutura.</p>
@@ -117,7 +158,7 @@ function Corpo({ atlas }: { atlas: Atlas }) {
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Nome</dt>
                 <dd className="font-semibold text-slate-900">{entrada.nome_pt || entrada.nome_en}</dd>
-                {entrada.nome_pt && (!entrada.validacao || entrada.validacao === "pendente") && (
+                {naoRevisado(entrada) && (
                   <dd className="text-xs italic text-amber-800">tradução não revisada</dd>
                 )}
               </div>
@@ -127,7 +168,7 @@ function Corpo({ atlas }: { atlas: Atlas }) {
               </div>
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Lado</dt>
-                <dd className="text-slate-900">{LADOS[entrada.lateralidade ?? ""] ?? "Não se aplica"}</dd>
+                <dd className="text-slate-900">{LADOS[ladoDaLateralidade(entrada.lateralidade)]}</dd>
               </div>
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">Sistema</dt>
@@ -135,7 +176,7 @@ function Corpo({ atlas }: { atlas: Atlas }) {
               </div>
             </dl>
           )}
-        </Card>
+        </Card>}
         <Card className="px-5 py-4">
           <fieldset>
             <legend className="text-sm font-semibold text-slate-950">Sistemas</legend>
