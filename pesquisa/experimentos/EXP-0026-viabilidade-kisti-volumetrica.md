@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `bloqueado — aguardando ação humana (login no DataON)`
 
 ## 2. Problema
 O EXP-0023 encontrou uma única base aberta (CC BY 4.0) com músculos do membro inferior segmentados individualmente: 20 pessoas (10 mulheres), 13 músculos e 31 ossos por membro, publicada como pares 2D de imagem e máscara. O artigo não liga o sexo aos IDs de caso (`hm_25_001_ct` a `hm_25_040_ct`). Se for possível remontar o volume de cada perna e saber quais são de mulheres, a base vira referência independente de validação muscular.
@@ -46,7 +46,10 @@ O artigo informa que o plano axial manteve o espaçamento original de 0,7 mm (~1
 Leitura: **H26 sustentada** se K1–K5; **viável sem sexo** se K1, K2, K3 e K5 sem K4 (depende de contato com os autores); **rejeitada** se K1 ou K2 falham.
 
 ## 8. Resultados
-A preencher.
+Execução parcial por Antigravity em 2026-11-27 (`pesquisa/resultados/EXP-0026/RELATORIO.md`, `inspecionar_dataon.py`).
+- As páginas públicas listam os arquivos com tamanho e SHA-256. **1472:** `class_info.csv` (4.613 B), `labels.zip` (339.273.873 B), `images.zip` (943.427.895 B), total 1,28 GB, dentro do limite. **1473:** dois relatórios `.hwp` (~2 MB cada), PNG do IRB e `data.tar` (27.181.592.064 B).
+- **Todo download exige login** no DataON: a função de download redireciona para `/user/userLogin.do` e o endpoint `fileDownload_C.do` responde "Please log in to access this page." Nenhum download foi tentado com conta, conforme o protocolo.
+- K1, K2, K4: não verificados. K3: espaçamento documentado no artigo (axial 0,7 mm, plano 0,496 mm; conferido pelo revisor no PDF no EXP-0023). K5: **bloqueado**.
 
 ## 9. Validação
 A preencher.
@@ -57,7 +60,7 @@ A preencher.
 - Os músculos glúteos foram excluídos pelos autores.
 
 ## 11. Conclusão
-A preencher.
+Os arquivos são pequenos (1,28 GB para o conjunto AI-ready) e CC BY 4.0, mas o acesso exige conta no DataON. O experimento fica parado até o usuário criar a conta e baixar `class_info.csv` e `labels.zip` para `hra/externo/kisti/`; depois as etapas 3–8 seguem sem mudança de protocolo.
 
 ## 12. Próximos passos
 A preencher.
