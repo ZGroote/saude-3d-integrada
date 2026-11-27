@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `em andamento — rodada 1 inconclusiva (V0) e com comparador inválido; rodada 2 registrada`
+- **Situação:** `concluído — faixa feminina válida (V0, V1, V3); H24 inconclusiva: pelve do hra-f incompleta`
 
 ## 2. Problema
 Até o EXP-0022, as geometrias femininas só eram comparadas com uma mulher (a doadora da Visible Human Female). O EXP-0023 mostrou que o TotalSegmentator V3 (CC BY 4.0) tem centenas de exames de mulheres com quadril, sacro e fêmur segmentados. Falta transformar isso em **faixas de variação** contra as quais qualquer pelve feminina do atlas (atual ou adaptada) possa ser julgada.
@@ -81,26 +81,55 @@ Registradas depois de ver os resultados da rodada 1 (V1 com 12 homens já conhec
 4. As malhas do atlas publicado são montadas na posição de corpo com a mesma regra do motor (`packages/motor-anatomico/src/pacote.ts`); conferência visual obrigatória (figura frontal com as peças nos lugares).
 5. Nada mais muda: mulheres, divisão, parâmetros congelados, métricas e critérios V0–V3 iguais.
 
+### 8.3 Rodada 2 (resultado)
+Execução por Codex 2 em 2026-11-27 (`pesquisa/resultados/EXP-0024/rodada2/`); máscaras dos 57 homens de reposição baixadas pelo revisor (285 arquivos, 48 MB por HTTP Range; nenhuma TC).
+- **Atlas montados** a partir dos GLB publicados com a regra do motor (`montar_atlas.mjs`, figura `atlas_publicados_frontal.png`). A figura mostra que a pelve do `hra-f/1.10-1` tem só os ílios (`VH_F_ilium_compact_bone_R/L`) e o sacro: **faltam ísquio, púbis e acetábulo**. A do `bp3d-m` está completa.
+- **Cobertura** da superfície dos quadris femininos (máscaras `hip_left/right`) pelo `hra-f` a até 5 mm: mediana **52,1%** (p2,5–p97,5: 41,4–56,8%; n = 21). Abaixo de 90% → **V2 não avaliável — pelve do `hra-f` incompleta**.
+- Fêmures do `hra-f`: o esquerdo é aproximadamente o espelho do direito (resíduo médio 2,66 mm, p95 3,73 mm).
+- **Homens:** 12 da rodada 1 + 8 de reposição (17 candidatos avaliados na ordem da seed 240025) = 20.
+
+| Critério | Resultado |
+|---|---|
+| V0 — amostra | **atendido**: 31 mulheres (21 validação), 20 homens |
+| V1 — discriminação | **atendido**: AUC 0,831 |
+| V2 — `hra-f` | **não avaliável** (pelve incompleta; cobertura 52%) |
+| V3 — `bp3d-m` | **atendido**: M1 médio 5,02 mm > p97,5 feminino 4,72 mm |
+
+Faixa feminina de referência (validação, 21 mulheres): M1 médio 3,42–4,72 mm; tamanho de centróide 15.370–17.607 mm; razões M3 em `faixas_femininas.json` da rodada 1 (mesmas mulheres e parâmetros).
+
 ## 9. Validação
-A preencher.
+Revisão (Claude Code):
+- Rodada 1: o comparador `hra-f` usava o Female Atlas externo (EXP-0022), achado pela razão impossível entre cabeças femorais e largura da pelve; corrigido na rodada 2 e registrado antes de rodar.
+- A emenda da amostra masculina foi registrada depois de ver a rodada 1 (V1 com 12 homens já conhecido) e está declarada como tal.
+- A incompletude da pelve do `hra-f` foi vista primeiro na figura montada e confirmada pela cobertura (≈ 50%, coerente com só o ílio presente).
+- O relatório da rodada 1 tinha dupla codificação (UTF-8 lido como cp1252) e BOM; corrigido pelo revisor sem alterar conteúdo.
+
+Não houve validação anatômica humana.
 
 ## 10. Limitações
-- Exames clínicos em decúbito; "sem patologia" é o rótulo do dataset, não um laudo de normalidade.
-- Máscaras do TotalSegmentator são geradas com apoio de modelo e revisão humana.
-- Sem identificador de paciente; Q4 é uma aproximação.
+- Exames clínicos em decúbito; "sem patologia" é o rótulo do dataset, não um laudo.
+- Máscaras do TotalSegmentator geradas com apoio de modelo e revisão humana.
+- Sem identificador de paciente; Q4 (distância < 1 mm) é aproximação. Q4 executado só em pares com tamanho de centróide a menos de 5% (detalhe de implementação).
 - População majoritariamente de um centro suíço; sem dado de paridade.
-- O fêmur de exames de pelve costuma estar truncado; só o fêmur proximal é avaliado.
+- Só o fêmur proximal é avaliado.
+- A cobertura não teve controle positivo (o `bp3d-m` completo não foi medido por ela); a conclusão de incompletude se apoia também na figura.
+- Emenda masculina feita após ver resultados.
 
 ## 11. Conclusão
-A preencher.
+- **Observado:** existe agora uma **faixa feminina de referência** para a forma da pelve (31 mulheres independentes da VHF), e a métrica distingue homens de mulheres (AUC 0,83); a pelve masculina do `bp3d-m` cai fora dela. A pelve do `hra-f/1.10-1` do MVP é **incompleta** (só ílios e sacro).
+- **Interpretação:** a ferramenta de validação óssea funciona e pode julgar qualquer pelve feminina futura (adaptada ou completada). O atlas feminino do MVP não pode ser julgado por ela porque lhe falta metade do osso do quadril; no produto, achados em púbis, ísquio e acetábulo não têm onde ser ancorados no corpo feminino.
+- **Veredito:** H24 **inconclusiva** (V2 não avaliável); V0, V1 e V3 atendidos.
 
 ## 12. Próximos passos
-A preencher.
+- Registrar a lacuna da pelve do `hra-f` (ísquio, púbis, acetábulo) na lista de lacunas do atlas feminino (EXP-0021) e avaliar no produto como tratar achados nessas estruturas no corpo feminino.
+- Usar `faixas_femininas.json` como critério de aceitação de qualquer pelve feminina futura.
 
 ## 13. Rastreabilidade
-- `pesquisa/resultados/EXP-0024/` (scripts, `casos.csv`, `faixas_femininas.json`, métricas, figuras).
+- Rodada 1: `pesquisa/resultados/EXP-0024/` (`preparar.py`, `baixar_mascaras.py`, `analisar_local.py`, `RELATORIO.md`, `resultados.json`, `faixas_femininas.json`, `casos.csv`, `qc.json`, `q4.json`).
+- Rodada 2: `pesquisa/resultados/EXP-0024/rodada2/` (`montar_atlas.mjs`, `analisar_rodada2.py`, `cobertura_hra_f.csv`, `homens_r2_qc_q4.json`, `RELATORIO.md`, `resultados.json`, figuras) e `baixar_homens_r2.py`, `homens_r2_ordem.json`, `homens_r2_manifesto.json`.
+- Máscaras e amostras de superfície fora do git (`hra/externo/totalseg_v3/`, `*.npz`).
 
 ## 14. Revisão
-- **Revisor:** Claude Code
+- **Revisor:** Claude Code (achou o comparador errado, registrou a emenda e a verificação de cobertura antes da rodada 2, baixou os dados)
 - **Revisão humana:** pendente
 - **Validação científica:** não realizada
