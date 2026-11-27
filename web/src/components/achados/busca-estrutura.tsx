@@ -4,14 +4,16 @@ import { useMemo, useState, type KeyboardEvent, type Ref } from "react";
 import type { EntradaIndice } from "@saude3d/motor-anatomico";
 import { Input } from "@/components/ui/input";
 import { LADO_DA_ESTRUTURA, listarEstruturas, procurarEstruturas, type Estrutura } from "@/lib/estruturas";
+import type { Lacuna } from "@/lib/lacunas";
 import { ROTULO } from "@/lib/formulario";
 
 const MAXIMO = 30;
 
 /** Combobox de estrutura anatômica (padrão ARIA 1.2): setas percorrem, Enter escolhe, Esc fecha. */
-export function BuscaEstrutura({ indice, onEscolher, ref }: {
+export function BuscaEstrutura({ indice, onEscolher, lacunas, ref }: {
   indice: EntradaIndice[];
   onEscolher: (estrutura: Estrutura) => void;
+  lacunas?: (texto: string) => Lacuna[];
   ref?: Ref<HTMLInputElement>;
 }) {
   const estruturas = useMemo(() => listarEstruturas(indice), [indice]);
@@ -19,6 +21,7 @@ export function BuscaEstrutura({ indice, onEscolher, ref }: {
   const [aberto, setAberto] = useState(false);
   const [ativo, setAtivo] = useState(0);
   const achadas = useMemo(() => procurarEstruturas(estruturas, texto), [estruturas, texto]);
+  const lacunasAchadas = useMemo(() => lacunas?.(texto) ?? [], [lacunas, texto]);
   const visiveis = achadas.slice(0, MAXIMO);
   const mostrar = aberto && visiveis.length > 0;
 
@@ -62,6 +65,13 @@ export function BuscaEstrutura({ indice, onEscolher, ref }: {
             : achadas.length > MAXIMO ? `${achadas.length} estruturas; as primeiras ${MAXIMO} na lista. Digite mais para refinar.`
               : `${achadas.length} estrutura(s).`}
       </p>
+      {lacunasAchadas.map((lacuna) => (
+        <p key={lacuna.nome} role="note" className="rounded border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-950">
+          {lacuna.parcial
+            ? <><strong>{lacuna.nome}</strong>: {lacuna.parcial}. Púbis, ísquio e acetábulo não existem neste corpo.</>
+            : <><strong>{lacuna.nome}</strong> não existe neste corpo (lacuna conhecida do atlas feminino). Registre o achado sem local e escreva a estrutura na observação; não marque no osso vizinho.</>}
+        </p>
+      ))}
       <ul id="lista-estruturas" role="listbox" aria-label="Estruturas encontradas" hidden={!mostrar}
         className="max-h-60 divide-y divide-slate-100 overflow-y-auto rounded-md border border-slate-200">
         {visiveis.map((e, i) => (

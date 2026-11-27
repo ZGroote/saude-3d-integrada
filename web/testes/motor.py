@@ -168,6 +168,23 @@ def desenvolvimento(url):
         pg.wait_for_function("Number(document.querySelector('[data-motor]')?.getAttribute('data-camadas-total')) > 0")
         assert 'Camadas musculares aproximadas' in pg.inner_text('[aria-label="Ferramentas do corpo"]')
         print('vistas superior/posterior, órbita sem NaN, isolamento/restauração e camadas musculares ok')
+        ciclos_gpu = []
+        for ciclo in range(1, 9):
+            pg.uncheck('input[value=muscular]')
+            carregados(pg, 'tegumentar esqueletico')
+            pg.check('input[value=muscular]')
+            carregados(pg, 'tegumentar esqueletico muscular')
+            pg.wait_for_function("""() => {
+              const m = document.querySelector('[data-motor]');
+              return !!m?.getAttribute('data-gpu') && !!m?.getAttribute('data-visuais');
+            }""")
+            geometrias, texturas = map(int, pg.get_attribute('[data-motor]', 'data-gpu').split('/'))
+            visuais = int(pg.get_attribute('[data-motor]', 'data-visuais'))
+            ciclos_gpu.append((geometrias, texturas, visuais))
+            print(f'GPU ciclo {ciclo}: geometrias={geometrias} texturas={texturas} visuais={visuais}')
+        baseline_gpu = ciclos_gpu[1]
+        assert all(g <= baseline_gpu[0] and v <= baseline_gpu[2] for g, _, v in ciclos_gpu[2:]), ciclos_gpu
+        print(f'GPU estável após ciclo 2: baseline={baseline_gpu}; ciclos={ciclos_gpu}')
         pg.close()
 
         # feminino sem atlas publicado (404 forçado para valer mesmo quando ele existir)
@@ -207,9 +224,43 @@ def desenvolvimento(url):
         if FEMININO_REAL:
             pg = abrir('feminino')
             pg.wait_for_selector('[data-atlas="hra-f"] [data-motor][data-carregados="tegumentar"]')
+            pg.wait_for_selector('text=Faltam neste corpo: Púbis, Ísquio, Acetábulo.')
             foto(pg, 'feminino-real')
             pg.close()
             print('atlas hra-f real abre na pele')
+
+            def rpc_hra_vazia(route):
+                pedido = route.request
+                cors = {'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': '*'}
+                if pedido.method == 'OPTIONS':
+                    return route.fulfill(status=204, headers=cors)
+                nome = pedido.url.split('?')[0].rsplit('/', 1)[1]
+                if nome == 'listar_achados':
+                    dados = []
+                elif nome == 'minha_unidade':
+                    dados = None
+                else:
+                    raise AssertionError(f'rpc inesperada no diagnóstico das lacunas: {nome}')
+                return route.fulfill(status=200, headers=cors, content_type='application/json', body=json.dumps(dados))
+
+            pg = navegador.new_page(viewport={'width': 1440, 'height': 900})
+            pg.set_default_timeout(180000)
+            pg.route('**/rest/v1/rpc/**', rpc_hra_vazia)
+            pg.goto(f'{url}/dev/motor?achados=1&sexo=feminino')
+            pg.wait_for_selector('[data-atlas="hra-f"] [data-motor][data-carregados="tegumentar"]')
+            pg.get_by_role('button', name='Achado com local no corpo').click()
+            busca_lacuna = pg.get_by_role('combobox', name='Buscar estrutura do corpo')
+            busca_lacuna.fill('isq')
+            nota_isquio = pg.locator('p[role="note"]').filter(has_text='Ísquio não existe neste corpo')
+            nota_isquio.wait_for()
+            assert 'Registre o achado sem local' in nota_isquio.inner_text()
+            busca_lacuna.fill('ilio')
+            opcao_ilio = pg.get_by_role('option').filter(has_text='Ílio (osso compacto)').first
+            opcao_ilio.wait_for()
+            assert 'lado' in opcao_ilio.inner_text().lower(), opcao_ilio.inner_text()
+            assert 'Faltam neste corpo: Púbis, Ísquio, Acetábulo.' in pg.inner_text('main')
+            print('lacunas HRA: isq mostra nota; ilio mostra Ílio (osso compacto) com lado; aviso visível')
+            pg.close()
 
         # indeterminado: só mostra corpo depois da escolha
         pg = abrir('indeterminado')

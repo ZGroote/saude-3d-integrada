@@ -53,6 +53,7 @@ Cada atlas é um corpo de referência **independente**. Atlas diferentes nunca s
 | `hra-f` | HRA, Visible Human Female | Corpo feminino: pele, mama, reprodutor, órgãos. Esqueleto, músculos e vasos parciais |
 
 - No feminino entra tudo o que estiver alinhado, licenciado e funcionando; a tela diz claramente o que não existe naquele atlas.
+  - **Lacunas conhecidas** ficam em `web/src/lib/lacunas.ts` por `atlas/versao`. No `hra-f/1.10-1`: púbis, ísquio e acetábulo (pelve só com ílios e sacro, `EXP-0024`). A busca de estrutura avisa quando o termo é uma lacuna (registrar sem local, citar na observação, não marcar no osso vizinho) e o corpo mostra "Faltam neste corpo: …". Nome de exibição pode ser corrigido por malha no app (ex.: ílio do `hra-f`, que vem como tecido ósseo); a âncora e o ID de ontologia não mudam.
 - **Camada gestacional** (placenta, âmnio, cordão): camada própria do `hra-f`, ligada só no contexto de gestação. É representação de referência, não da gestação real da paciente.
 - **Infantil:** não há atlas pediátrico. Prontuário de criança no MVP é estruturado e por linha do tempo, sem corpo 3D (nunca um corpo adulto no lugar).
 

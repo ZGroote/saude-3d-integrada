@@ -12,6 +12,7 @@ import type { Cid10 } from "@/lib/banco";
 import type { VistaCamera } from "@saude3d/motor-anatomico";
 import { ancoraNaEntrada } from "@/lib/fhir/ancora";
 import { CAMPO, hoje, ROTULO } from "@/lib/formulario";
+import { lacunasDaBusca } from "@/lib/lacunas";
 import { createClient } from "@/lib/supabase/client";
 
 const opcoes = (mapa: Record<string, string>) => Object.entries(mapa).map(([valor, rotulo]) => <option key={valor} value={valor}>{rotulo}</option>);
@@ -100,6 +101,7 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLoca
         )}
         {atlas && (
           <BuscaEstrutura ref={busca} indice={atlas.indice}
+            lacunas={(texto) => lacunasDaBusca(atlas.atlas, atlas.versao, texto)}
             onEscolher={({ entrada }) => onEscolherPonto({ ...pontoDaEntrada(ancoraNaEntrada(entrada, atlas), entrada), daBusca: true })} />
         )}
         {ponto && <Button type="button" variant="ghost" className="h-8 px-2" onClick={() => onEscolherPonto(null)}>Tirar este local</Button>}

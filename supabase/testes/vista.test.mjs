@@ -32,7 +32,7 @@ before(async()=>{
   await db.exec(await readFile(resolve(pasta,'../migrations/0001_fundacao.sql'),'utf8'));
   await db.exec(await readFile(resolve(pasta,'../seed.sql'),'utf8'));
   for(const file of ['0002_cid10.sql','0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql',
-    '0007_endurecimento.sql','0008_endurecimento_piloto.sql','0009_sessao_inatividade.sql','0010_vista_achado.sql','0011_vista_up_consistencia.sql'])
+    '0007_endurecimento.sql','0008_endurecimento_piloto.sql','0009_sessao_inatividade.sql','0010_vista_achado.sql','0011_vista_up_consistencia.sql','0012_vista_up_unitario.sql'])
     await db.exec(await readFile(resolve(pasta,'../migrations',file),'utf8'));
   ancora=(await db.query(`SELECT atlas,versao AS atlas_versao,malha FROM public.atlas_malhas
     WHERE atlas=$1 AND versao=$2 ORDER BY malha LIMIT 1`,[vista.atlas,vista.atlas_versao])).rows[0];
@@ -54,7 +54,7 @@ test('vista válida é gravada e devolvida por listar_achados e historico_achado
 });
 
 test('up opcional válido é gravado e devolvido',async()=>{
-  for(const up of [[0,1,0],[0,0,-1],[-1,0.5,1]]){
+  for(const up of [[0,1,0],[0,0,1],[0,0,-1],[0.6,0,-0.8],[0,0.99,0],[0,1,0.14]]){
     const id=await registrar({...vista,up});
     assert.deepEqual((await db.query('SELECT vista FROM public.achados WHERE id=$1',[id])).rows[0].vista,{...vista,up});
   }
@@ -77,7 +77,8 @@ test('vistas inválidas são recusadas sem gravar',async()=>{
       [0,0,10.001],[-10.001,0,0],[1e300,0,0]].map((v)=>({...vista,[k]:v}))),
     ...['pele',null,{},[1],[null],[['pele']],[''],['Pele'],['pele 2'],['pele-x'],['ação'],['a'.repeat(41)],
       Array(21).fill('pele')].map((v)=>({...vista,sistemas:v})),
-    ...['0,1,0',null,{},[],[0,1],[0,1,0,0],[0,'1',0],[0,null,0],[0,[1],0],[0,1.001,0],[-1.001,0,0]]
+    ...['0,1,0',null,{},[],[0,1],[0,1,0,0],[0,'1',0],[0,null,0],[0,[1],0],[0,1.001,0],[-1.001,0,0],
+      [0,0,0],[0.5,0,0],[0,0.989,0],[0,1,0.15],[1,1,0]]
       .map((up)=>({...vista,up})),
   ].map((v)=>JSON.stringify(v));
   // só o limite de bytes recusa: número válido com milhares de casas

@@ -77,7 +77,7 @@ type Posicionado = Marcador & { posicao: Vetor3; estrutural: boolean };
 type OrbitControlsComEixo = OrbitControls & { _quat: Quaternion; _quatInverse: Quaternion };
 
 /** OrbitControls fixa seus quaternions a partir de object.up no construtor; acompanhe alterações posteriores. */
-function atualizarEixoOrbitacao(camera: ThreeCamera, orbit: OrbitControls, up: Vetor3) {
+export function atualizarEixoOrbitacao(camera: ThreeCamera, orbit: OrbitControls, up: Vetor3) {
   camera.up.fromArray(up);
   const controle = orbit as OrbitControlsComEixo;
   controle._quat.setFromUnitVectors(camera.up, EIXO_VERTICAL);
@@ -253,6 +253,13 @@ function AposDesenhar({ avisar }: { avisar: () => void }) {
   return null;
 }
 
+/** Expõe contagens do renderer sem provocar renders React durante a animação. */
+function MedidorGpu({ atualizar }: { atualizar: (geometrias: number, texturas: number) => void }) {
+  const gl = useThree((s) => s.gl);
+  useFrame(() => atualizar(gl.info.memory.geometries, gl.info.memory.textures));
+  return null;
+}
+
 function Motor({
   atlas, versao, baseUrl, sistemasVisiveis, marcadores = [], marcadoresPendentes, onMarcadoresDesenhados, selecionado,
   onEscolherPonto, onSelecionarMarcador, onMarcadoresSemPosicao, comandoCamera, onVista,
@@ -389,6 +396,10 @@ function Motor({
   // Guarda os materiais e raycasts originais para filtrar por malha sem alterar o GLB/cache.
   const visuaisOriginais = useRef(new Map<Mesh, { material: Mesh['material']; raycast: Mesh['raycast']; translucido?: MeshStandardMaterial }>());
   const wrapperMotor = useRef<HTMLDivElement>(null);
+  const atualizarGpu = useCallback((geometrias: number, texturas: number) => {
+    const valor = `${geometrias}/${texturas}`;
+    if (wrapperMotor.current?.dataset.gpu !== valor) wrapperMotor.current?.setAttribute('data-gpu', valor);
+  }, []);
   useLayoutEffect(() => {
     const malhasEmUso = new Set<Mesh>();
     for (const id of prontos) {
@@ -507,6 +518,7 @@ function Motor({
       ref={wrapperMotor}
       style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}
       data-motor
+      data-gpu="0/0"
       data-carregados={prontos.join(' ')}
       data-completos={prontos.filter((id) => cache.get(id)!.completo).join(' ')}
       data-marcadores={posicionados.length}
@@ -531,6 +543,7 @@ function Motor({
           selecionado={emDestaque?.posicao ?? null} selecionadoId={emDestaque?.id ?? null}
           onCamera={informarCamera} onAmpliar={() => setAmpliado(true)}
         />
+        <MedidorGpu atualizar={atualizarGpu} />
         {!liberado && marcadoresPendentes === false && <AposDesenhar avisar={() => { setLiberado(true); onMarcadoresDesenhados?.(); }} />}
         <hemisphereLight args={[0xffffff, 0x444444, 2.2]} />
         {/* ponytail: uma chamada de desenho por estrutura; BatchedMesh se ficar lento com tudo ligado */}

@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { ladoDaLateralidade, LADOS, type Lado } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
 import { useHidratado } from "@/lib/hidratacao";
+import { LACUNAS, nomearIndiceLacunas } from "@/lib/lacunas";
 
 const BASE = process.env.NEXT_PUBLIC_ATLAS_URL || "/atlas";
 const ATLAS = {
@@ -143,15 +144,17 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
     return () => cancelar.abort();
   }, [atlas, versao, onAusente]);
 
-  const entradaDe = (a: Ancora) => pacote?.indice.find((e) => e.malha === a.malha);
+  // Normaliza rótulos do índice uma única vez antes de entregá-lo à busca, ao formulário e aos cards.
+  const indice = useMemo(() => pacote ? nomearIndiceLacunas(atlas, versao, pacote.indice) : [], [pacote, atlas, versao]);
+  const entradaDe = (a: Ancora) => indice.find((e) => e.malha === a.malha);
 
   const onAtlasPronto = prontuario?.onAtlasPronto;
   useEffect(() => {
     // SPEC §6: no corpo provisório não se grava âncora, nem pela busca por nome
     if (!pacote || provisorio) return;
-    onAtlasPronto?.({ atlas, versao, indice: pacote.indice });
+    onAtlasPronto?.({ atlas, versao, indice });
     return () => onAtlasPronto?.(null);
-  }, [pacote, provisorio, atlas, versao, onAtlasPronto]);
+  }, [pacote, provisorio, atlas, versao, indice, onAtlasPronto]);
 
   function escolher(a: Ancora) {
     setAncora(a);
@@ -178,10 +181,11 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
   const entradaAtual = ancora ? entradaDe(ancora) : undefined;
   const malhasDaEstrutura = useMemo(() => {
     if (!ancora) return [];
-    return pacote?.indice.filter((e) => ancora.estrutura !== null
+    const encontradas = indice.filter((e) => ancora.estrutura !== null
       ? e.estrutura === ancora.estrutura
-      : e.estrutura === null && e.malha === ancora.malha).map((e) => e.malha) ?? [ancora.malha];
-  }, [ancora, pacote]);
+      : e.estrutura === null && e.malha === ancora.malha).map((e) => e.malha);
+    return encontradas.length ? encontradas : [ancora.malha];
+  }, [ancora, indice]);
   const achadosDaEstrutura = useMemo(() => ancora && prontuario
     ? filtrarMarcadoresNestaEstrutura(prontuario.marcadores, ancora.estrutura, ancora.malha)
     : [], [ancora, prontuario]);
@@ -243,6 +247,9 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
         )}
         {(ocultas.length > 0 || isoladas !== null) && <button type="button" className="min-h-9 rounded border px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={mostrarTudo}>Mostrar tudo</button>}
       </div>
+      {!!(LACUNAS[`${atlas}/${versao}`]?.some((l) => !l.parcial)) && (
+        <p role="note" className="text-sm text-amber-900">Faltam neste corpo: {LACUNAS[`${atlas}/${versao}`]!.filter((l) => !l.parcial).map((l) => l.nome).join(", ")}.</p>
+      )}
       {/* A barra fica fora do canvas para não cobrir o corpo em telas estreitas. */}
       <Card className="h-[60svh] min-h-96 overflow-hidden lg:h-[75svh] [&_[data-motor]]:flex [&_[data-motor]]:flex-col [&_[data-motor]>small]:static! [&_[data-motor]>small]:shrink-0 [&_[data-motor]>small]:px-2 [&_[data-motor]>small]:py-1">
         <div className="h-full min-h-0" data-vista-camera={vistaCamera ? "registrada" : "nao-registrada"}>
