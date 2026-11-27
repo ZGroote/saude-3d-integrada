@@ -1,0 +1,283 @@
+{
+  "a_hips_only": {
+    "target_labels": {
+      "labels": [
+        "hip_left",
+        "hip_right"
+      ],
+      "ids": [
+        77,
+        78
+      ],
+      "voxel_count": 225463,
+      "surface_faces": 165584,
+      "bbox_world_mm": [
+        [
+          -142.5,
+          -84.0,
+          -1261.75
+        ],
+        [
+          156.0,
+          70.5,
+          -736.75
+        ]
+      ]
+    },
+    "sources": {
+      "female_atlas": [
+        "BP3D_FJ3152",
+        "BP3D_FJ3288"
+      ],
+      "bp3d_m": [
+        "FJ3152",
+        "FJ3288"
+      ]
+    },
+    "female_atlas": {
+      "mean_mm": 5.078001374038544,
+      "p95_mm": 14.252698678280264,
+      "source_to_target_mean_mm": 4.315171078951824,
+      "target_to_source_mean_mm": 5.840831669125263,
+      "uniform_scale": 1.0275573880157736,
+      "iterations": 135,
+      "converged": true,
+      "last_delta": 0.0,
+      "samples_each_direction": 30000,
+      "rotation": [
+        [
+          -0.9999034242010081,
+          0.007174337434152704,
+          0.011902569196577735
+        ],
+        [
+          0.010839299824873893,
+          -0.13341961772573627,
+          0.9910003608401086
+        ],
+        [
+          0.00869780721819555,
+          0.9910336697046668,
+          0.1333289678250595
+        ]
+      ],
+      "translation_mm": [
+        1.9833999168181293,
+        204.36848246156651,
+        -1750.7586941005927
+      ],
+      "aligned_bounds_mm": [
+        [
+          -126.93815097898649,
+          -70.03380353974441,
+          -951.3112233705956
+        ],
+        [
+          144.18886505182076,
+          72.46500002872895,
+          -744.9280057787522
+        ]
+      ]
+    },
+    "bp3d_m": {
+      "mean_mm": 4.203593467747156,
+      "p95_mm": 9.98615292712592,
+      "source_to_target_mean_mm": 3.9950492102281423,
+      "target_to_source_mean_mm": 4.41213772526617,
+      "uniform_scale": 1.0375389385231861,
+      "iterations": 87,
+      "converged": true,
+      "last_delta": 2.000580707114743e-17,
+      "samples_each_direction": 30000,
+      "rotation": [
+        [
+          -0.9999095410902684,
+          0.010495528473384714,
+          0.00841151108383033
+        ],
+        [
+          0.007907762194651701,
+          -0.047148314718009725,
+          0.9988565981742947
+        ],
+        [
+          0.010880116438800944,
+          0.9988327589247943,
+          0.04706105358958999
+        ]
+      ],
+      "translation_mm": [
+        4.966796602809824,
+        33.13609191015224,
+        -913.1843976043853
+      ],
+      "aligned_bounds_mm": [
+        [
+          -144.38701602959154,
+          -76.44458352358973,
+          -952.0813009226315
+        ],
+        [
+          156.06310009063964,
+          71.44569151301226,
+          -736.3694327546744
+        ]
+      ]
+    },
+    "mean_reduction_percent": -20.801438412169084,
+    "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
+  },
+  "b_hips_plus_bp3d_sacrum": {
+    "target_labels": {
+      "labels": [
+        "hip_left",
+        "hip_right",
+        "sacrum"
+      ],
+      "ids": [
+        25,
+        77,
+        78
+      ],
+      "voxel_count": 275592,
+      "surface_faces": 213978,
+      "bbox_world_mm": [
+        [
+          -142.5,
+          -102.0,
+          -1261.75
+        ],
+        [
+          156.0,
+          70.5,
+          -736.75
+        ]
+      ]
+    },
+    "sources": {
+      "female_atlas": [
+        "BP3D_FJ3152",
+        "BP3D_FJ3288",
+        "BP3D_FJ3393"
+      ],
+      "bp3d_m": [
+        "FJ3152",
+        "FJ3288",
+        "FJ3393"
+      ]
+    },
+    "female_atlas": {
+      "mean_mm": 5.830474620091285,
+      "p95_mm": 15.670367804737188,
+      "source_to_target_mean_mm": 5.821724745226797,
+      "target_to_source_mean_mm": 5.839224494955772,
+      "uniform_scale": 1.064012813949623,
+      "iterations": 152,
+      "converged": true,
+      "last_delta": 0.0,
+      "samples_each_direction": 30000,
+      "rotation": [
+        [
+          -0.9999779618146221,
+          0.006183665670557216,
+          0.0024162292832961276
+        ],
+        [
+          0.0015250243198060545,
+          -0.14026454375861214,
+          0.9901128885460551
+        ],
+        [
+          0.006461438376916208,
+          0.9900947530630916,
+          0.140252022342062
+        ]
+      ],
+      "translation_mm": [
+        2.155758410914369,
+        215.80387520312627,
+        -1773.532503984808
+      ],
+      "aligned_bounds_mm": [
+        [
+          -131.92552712446746,
+          -88.47242273282836,
+          -947.1960739778093
+        ],
+        [
+          148.87848367383637,
+          72.98778031965259,
+          -733.8284625423889
+        ]
+      ]
+    },
+    "bp3d_m": {
+      "mean_mm": 5.284401288956832,
+      "p95_mm": 14.382901338453472,
+      "source_to_target_mean_mm": 5.409650409149732,
+      "target_to_source_mean_mm": 5.1591521687639315,
+      "uniform_scale": 1.0564049847685284,
+      "iterations": 91,
+      "converged": true,
+      "last_delta": 0.0,
+      "samples_each_direction": 30000,
+      "rotation": [
+        [
+          -0.9999726428166434,
+          -0.0039009846067043184,
+          0.006284579333269208
+        ],
+        [
+          0.006455571556065495,
+          -0.04548910101684036,
+          0.9989439760489897
+        ],
+        [
+          -0.0036109852093876866,
+          0.9989572183070593,
+          0.0455130396484308
+        ]
+      ],
+      "translation_mm": [
+        7.85919472770144,
+        31.929525973563173,
+        -912.0040887092366
+      ],
+      "aligned_bounds_mm": [
+        [
+          -146.326338895689,
+          -84.92357833364316,
+          -951.361079713298
+        ],
+        [
+          159.67945527231163,
+          70.93281962508252,
+          -732.8622030173992
+        ]
+      ]
+    },
+    "mean_reduction_percent": -10.333684012143806,
+    "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
+  },
+  "c_duplicates": {
+    "exact_duplicate_structure_groups": 70,
+    "partial_parent_fragment_overlap_groups": 2,
+    "total_reported_groups": 72,
+    "csv": "suplementar_duplicadas.csv",
+    "exact_groups_by_basis": {
+      "shared_FMA_concept": 45,
+      "axial_name_mapping": 25
+    }
+  },
+  "method": {
+    "analysis": "post-hoc, not part of fixed success criteria",
+    "seed": 220022,
+    "surface_samples_each_direction": 30000,
+    "sampling": "same area-uniform triangle sampling, cKDTree, concatenated bidirectional surface distances as baseline pelvis analysis",
+    "ICP": "same initial local-to-RAS axis map, proper rotation, uniform scale, translation, trim=0.12, delta tolerance=1e-7; max iterations raised from 50 to 200; convergence reported explicitly",
+    "python": "3.14.4",
+    "numpy": "2.4.6",
+    "trimesh": "5.2.2",
+    "scipy": "1.18.1"
+  }
+}

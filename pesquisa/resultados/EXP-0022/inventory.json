@@ -1,0 +1,789 @@
+{
+  "declared": {
+    "meshes": 3004,
+    "concepts": 2557,
+    "systems": 16
+  },
+  "observed": {
+    "meshes": 3004,
+    "concepts": 2557,
+    "systems": 16,
+    "triangles": 3893539,
+    "unique_mesh_names": 2264,
+    "duplicate_mesh_names": 740,
+    "source_id_prefixes": {
+      "HRA_VH_F": 552,
+      "Allen_prefixed": 282,
+      "Yao_prefixed": 7,
+      "BodyParts3D": 2163
+    },
+    "system_mesh_counts": {
+      "arterial": 666,
+      "cardiac": 58,
+      "connective": 40,
+      "digestive": 137,
+      "endocrine": 4,
+      "integumentary": 4,
+      "lymphatic": 17,
+      "muscular": 416,
+      "nervous": 424,
+      "pregnancy": 8,
+      "reproductive": 54,
+      "respiratory": 187,
+      "sensory": 98,
+      "skeletal": 343,
+      "urinary": 91,
+      "venous": 457
+    }
+  },
+  "concept_id_prefixes": {
+    "HRA": 1037,
+    "composite/other": 1520
+  },
+  "candidate_pelvis_parts": [
+    {
+      "id": "VH_F_sacrum",
+      "name": "fused sacrum",
+      "conceptId": "UBERON:0003690",
+      "triangles": 6496,
+      "bounds_m": [
+        [
+          -0.07182217389345169,
+          0.8386021852493286,
+          -0.18245455622673035
+        ],
+        [
+          0.055596258491277695,
+          0.9376426935195923,
+          -0.07756024599075317
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_coccyx",
+      "name": "coccyx",
+      "conceptId": "UBERON:0001350",
+      "triangles": 1166,
+      "bounds_m": [
+        [
+          -0.02362126298248768,
+          0.8129814863204956,
+          -0.1783144772052765
+        ],
+        [
+          0.0082860654219985,
+          0.83992999792099,
+          -0.14032788574695587
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_pubis_spongy_bone_L",
+      "name": "trabecular bone tissue",
+      "conceptId": "UBERON:0002483",
+      "triangles": 1406,
+      "bounds_m": [
+        [
+          -0.008993437513709068,
+          0.7576959729194641,
+          -0.07678491622209549
+        ],
+        [
+          0.08298981189727783,
+          0.846821129322052,
+          -0.009849939495325089
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_pubis_spongy_bone_R",
+      "name": "trabecular bone tissue",
+      "conceptId": "UBERON:0002483",
+      "triangles": 1320,
+      "bounds_m": [
+        [
+          -0.10081145912408829,
+          0.7559248208999634,
+          -0.07869210839271545
+        ],
+        [
+          -0.009307545609772205,
+          0.8469223380088806,
+          -0.009593372233211994
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_pubis_compact_bone_R",
+      "name": "compact bone tissue",
+      "conceptId": "UBERON:0001439",
+      "triangles": 2806,
+      "bounds_m": [
+        [
+          -0.10163989663124084,
+          0.7546660900115967,
+          -0.07894393056631088
+        ],
+        [
+          -0.008095011115074158,
+          0.8476353287696838,
+          -0.008380246348679066
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_pubis_compact_bone_L",
+      "name": "compact bone tissue",
+      "conceptId": "UBERON:0001439",
+      "triangles": 2926,
+      "bounds_m": [
+        [
+          -0.01019351463764906,
+          0.7564601302146912,
+          -0.07702130824327469
+        ],
+        [
+          0.08353851735591888,
+          0.8475977182388306,
+          -0.008632659912109375
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ilium_compact_bone_R",
+      "name": "compact bone tissue",
+      "conceptId": "UBERON:0001439",
+      "triangles": 4084,
+      "bounds_m": [
+        [
+          -0.16699616611003876,
+          0.8195099830627441,
+          -0.16555026173591614
+        ],
+        [
+          -0.05201111361384392,
+          0.9594193696975708,
+          -0.003940601367503405
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ilium_compact_bone_L",
+      "name": "compact bone tissue",
+      "conceptId": "UBERON:0001439",
+      "triangles": 4200,
+      "bounds_m": [
+        [
+          0.031099094077944756,
+          0.8204036951065063,
+          -0.16546127200126648
+        ],
+        [
+          0.14984172582626343,
+          0.9587647318840027,
+          0.0002899217652156949
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ilium_spongy_bone_L",
+      "name": "trabecular bone tissue",
+      "conceptId": "UBERON:0002483",
+      "triangles": 2072,
+      "bounds_m": [
+        [
+          0.03230540081858635,
+          0.8217130899429321,
+          -0.1642341911792755
+        ],
+        [
+          0.1486232578754425,
+          0.9574272036552429,
+          -0.0009347915183752775
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ilium_spongy_bone_R",
+      "name": "trabecular bone tissue",
+      "conceptId": "UBERON:0002483",
+      "triangles": 1984,
+      "bounds_m": [
+        [
+          -0.1658097356557846,
+          0.8202372193336487,
+          -0.16433562338352203
+        ],
+        [
+          -0.05321741849184036,
+          0.9580666422843933,
+          -0.005156707484275103
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ischium_compact_bone_R",
+      "name": "compact bone tissue",
+      "conceptId": "UBERON:0001439",
+      "triangles": 2950,
+      "bounds_m": [
+        [
+          -0.12699082493782043,
+          0.7479265332221985,
+          -0.12626242637634277
+        ],
+        [
+          -0.046172089874744415,
+          0.8429248929023743,
+          -0.05853816866874695
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ischium_compact_bone_L",
+      "name": "compact bone tissue",
+      "conceptId": "UBERON:0001439",
+      "triangles": 2944,
+      "bounds_m": [
+        [
+          0.026980094611644745,
+          0.7493924498558044,
+          -0.12395896762609482
+        ],
+        [
+          0.10978954285383224,
+          0.8441396355628967,
+          -0.059219177812337875
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ischium_spongy_bone_R",
+      "name": "trabecular bone tissue",
+      "conceptId": "UBERON:0002483",
+      "triangles": 1417,
+      "bounds_m": [
+        [
+          -0.12585468590259552,
+          0.7492663264274597,
+          -0.12506085634231567
+        ],
+        [
+          -0.04709869250655174,
+          0.8424084186553955,
+          -0.059403374791145325
+        ]
+      ]
+    },
+    {
+      "id": "VH_F_ischium_spongy_bone_L",
+      "name": "trabecular bone tissue",
+      "conceptId": "UBERON:0002483",
+      "triangles": 1416,
+      "bounds_m": [
+        [
+          0.027776489034295082,
+          0.7507369518280029,
+          -0.12273278832435608
+        ],
+        [
+          0.10860014706850052,
+          0.8437438607215881,
+          -0.06008795276284218
+        ]
+      ]
+    },
+    {
+      "id": "BP3D_FJ3152",
+      "name": "Right hip bone",
+      "conceptId": "FMA16586",
+      "triangles": 1898,
+      "bounds_m": [
+        [
+          -0.13206583261489868,
+          0.7998350262641907,
+          -0.1415037214756012
+        ],
+        [
+          -0.00304328091442585,
+          0.9980115294456482,
+          -0.01493194978684187
+        ]
+      ]
+    },
+    {
+      "id": "BP3D_FJ3288",
+      "name": "Left hip bone",
+      "conceptId": "FMA16587",
+      "triangles": 1808,
+      "bounds_m": [
+        [
+          0.0029996202792972326,
+          0.799640417098999,
+          -0.14198818802833557
+        ],
+        [
+          0.1318536102771759,
+          0.997959554195404,
+          -0.0151893999427557
+        ]
+      ]
+    },
+    {
+      "id": "BP3D_FJ3393",
+      "name": "Sacrum",
+      "conceptId": "FMA16202",
+      "triangles": 5058,
+      "bounds_m": [
+        [
+          -0.05922330543398857,
+          0.8294194936752319,
+          -0.1628556251525879
+        ],
+        [
+          0.05789337679743767,
+          0.968466579914093,
+          -0.0696619302034378
+        ]
+      ]
+    }
+  ],
+  "provenance": {
+    "HRA": {
+      "source": "HRA united-female v1.5 GLB",
+      "transform": "convert-female.py adds +0.794760942 m to Y; source has baked Y-up meter coordinates; no node matrix/transforms accepted."
+    },
+    "BodyParts3D": {
+      "source": "BodyParts3D 4.0 OBJ",
+      "transform": "convert-anatomy.py: (x,y,z) mm -> (0.001*x, 0.001*z+0.0781112, -0.001*y-0.1) m; build-perfect scales X=.95, Y=.96335, Z=.95 and adds Z=-.052 m, then applies piecewise height/region deformations (neck, shoulders, rib cage, waist/hips, lower back, glutes, arms; extra skin breast/groin edits)."
+    },
+    "postprocessing": {
+      "source": "meshoptimizer",
+      "transform": "optimize-anatomy.mjs welds coincident HRA vertices/averages normals, simplifies each part toward 22% of original triangle count with error argument .002, compacts vertices; report README says .2% relative error but source passes .002 and target count is ~22%."
+    },
+    "coverage": "The shipped atlas.json identifies all 3004 parts. The 841 HRA-origin parts include 552 VH_F_, 282 Allen_ and 7 Yao_ IDs; hra/catalogo_hra.csv contains all 289 Allen/Yao records (including Yao_lymph_node within VH_F_lymphatic_system). The HRA source-group conversion is documented; 10 HRA-origin nodes lack individual catalog rows but remain attributable to the HRA input GLB and converter."
+  },
+  "axes": {
+    "female_composite_representative_bounds_m": [
+      {
+        "id": "VH_F_sacrum",
+        "name": "fused sacrum",
+        "bounds_m": [
+          [
+            -0.07182217389345169,
+            0.8386021852493286,
+            -0.18245455622673035
+          ],
+          [
+            0.055596258491277695,
+            0.9376426935195923,
+            -0.07756024599075317
+          ]
+        ]
+      },
+      {
+        "id": "VH_F_lumbar_vertebra_1",
+        "name": "lumbar vertebra 1",
+        "bounds_m": [
+          [
+            -0.04831548035144806,
+            1.0787327289581299,
+            -0.17090368270874023
+          ],
+          [
+            0.042556680738925934,
+            1.1265172958374023,
+            -0.09026109427213669
+          ]
+        ]
+      },
+      {
+        "id": "VH_F_lumbar_vertebra_2",
+        "name": "lumbar vertebra 2",
+        "bounds_m": [
+          [
+            -0.044422030448913574,
+            1.0427249670028687,
+            -0.17077824473381042
+          ],
+          [
+            0.03592272102832794,
+            1.0941370725631714,
+            -0.08203910291194916
+          ]
+        ]
+      },
+      {
+        "id": "VH_F_lumbar_vertebra_3",
+        "name": "lumbar vertebra 3",
+        "bounds_m": [
+          [
+            -0.05092961713671684,
+            1.001867651939392,
+            -0.16791297495365143
+          ],
+          [
+            0.040566589683294296,
+            1.058172345161438,
+            -0.07843106985092163
+          ]
+        ]
+      },
+      {
+        "id": "VH_F_lumbar_vertebra_4",
+        "name": "lumbar vertebra 4",
+        "bounds_m": [
+          [
+            -0.05346116051077843,
+            0.9735735058784485,
+            -0.16676414012908936
+          ],
+          [
+            0.04332270100712776,
+            1.0260850191116333,
+            -0.07348006218671799
+          ]
+        ]
+      },
+      {
+        "id": "VH_F_lumbar_vertebra_5",
+        "name": "lumbar vertebra 5",
+        "bounds_m": [
+          [
+            -0.05305946618318558,
+            0.9455679059028625,
+            -0.16151849925518036
+          ],
+          [
+            0.04304292052984238,
+            0.9966628551483154,
+            -0.0708748921751976
+          ]
+        ]
+      },
+      {
+        "id": "VH_F_lumbar_vertebra_6",
+        "name": "lumbar vertebra 6",
+        "bounds_m": [
+          [
+            -0.06101758033037186,
+            0.9192191958427429,
+            -0.15757226943969727
+          ],
+          [
+            0.043546609580516815,
+            0.9655877947807312,
+            -0.07024209946393967
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ2810",
+        "name": "Skin",
+        "bounds_m": [
+          [
+            -0.31120648980140686,
+            1.3369166856864788e-17,
+            -0.1994880586862564
+          ],
+          [
+            0.31003209948539734,
+            1.6564140319824219,
+            0.10707408934831619
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3152",
+        "name": "Right hip bone",
+        "bounds_m": [
+          [
+            -0.13206583261489868,
+            0.7998350262641907,
+            -0.1415037214756012
+          ],
+          [
+            -0.00304328091442585,
+            0.9980115294456482,
+            -0.01493194978684187
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3157",
+        "name": "First lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.029225347563624382,
+            1.0532413721084595,
+            -0.10896936058998108
+          ],
+          [
+            0.0281384140253067,
+            1.1079403162002563,
+            -0.03983783349394798
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3159",
+        "name": "Second lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.03154980018734932,
+            1.0311959981918335,
+            -0.1035209596157074
+          ],
+          [
+            0.03055231273174286,
+            1.0769011974334717,
+            -0.03445400297641754
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3162",
+        "name": "Third lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.03115290403366089,
+            1.0074753761291504,
+            -0.10864429175853729
+          ],
+          [
+            0.030136091634631157,
+            1.0479717254638672,
+            -0.03386228159070015
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3165",
+        "name": "Fourth lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.0342414528131485,
+            0.9795104265213013,
+            -0.1133420318365097
+          ],
+          [
+            0.0331641249358654,
+            1.022608757019043,
+            -0.03874879330396652
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3168",
+        "name": "Fifth lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.04357858747243881,
+            0.946690022945404,
+            -0.12316159904003143
+          ],
+          [
+            0.04235376790165901,
+            0.9950867891311646,
+            -0.05008735880255699
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3212",
+        "name": "Intervertebral disk of first lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.01750298961997032,
+            1.0699650049209595,
+            -0.07009012997150421
+          ],
+          [
+            0.016474846750497818,
+            1.0853883028030396,
+            -0.03708026558160782
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3214",
+        "name": "Intervertebral disk of second lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.017778534442186356,
+            1.0396772623062134,
+            -0.06590676307678223
+          ],
+          [
+            0.0167537909001112,
+            1.0507076978683472,
+            -0.033320486545562744
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3215",
+        "name": "Intervertebral disk of third lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.018371760845184326,
+            1.0032377243041992,
+            -0.06949944794178009
+          ],
+          [
+            0.01732477732002735,
+            1.0200124979019165,
+            -0.03631914407014847
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3216",
+        "name": "Intervertebral disk of fourth lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.02157589979469776,
+            0.9717689156532288,
+            -0.08043693751096725
+          ],
+          [
+            0.02040615677833557,
+            0.993892252445221,
+            -0.04642026126384735
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3217",
+        "name": "Intervertebral disk of fifth lumbar vertebra",
+        "bounds_m": [
+          [
+            -0.022840548306703568,
+            0.9372791051864624,
+            -0.09203372895717621
+          ],
+          [
+            0.02157745510339737,
+            0.9651632308959961,
+            -0.05860914662480354
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3259",
+        "name": "Left femur",
+        "bounds_m": [
+          [
+            0.030657071620225906,
+            0.4298151731491089,
+            -0.106302410364151
+          ],
+          [
+            0.16327431797981262,
+            0.8785204887390137,
+            -0.04033780097961426
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3288",
+        "name": "Left hip bone",
+        "bounds_m": [
+          [
+            0.0029996202792972326,
+            0.799640417098999,
+            -0.14198818802833557
+          ],
+          [
+            0.1318536102771759,
+            0.997959554195404,
+            -0.0151893999427557
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3365",
+        "name": "Right femur",
+        "bounds_m": [
+          [
+            -0.16286778450012207,
+            0.4299057126045227,
+            -0.10617070645093918
+          ],
+          [
+            -0.030299587175250053,
+            0.8784347772598267,
+            -0.040657948702573776
+          ]
+        ]
+      },
+      {
+        "id": "BP3D_FJ3393",
+        "name": "Sacrum",
+        "bounds_m": [
+          [
+            -0.05922330543398857,
+            0.8294194936752319,
+            -0.1628556251525879
+          ],
+          [
+            0.05789337679743767,
+            0.968466579914093,
+            -0.0696619302034378
+          ]
+        ]
+      }
+    ],
+    "tc_nlm": {
+      "shape_ijk": [
+        320,
+        320,
+        1156
+      ],
+      "affine_ijk_to_RAS_mm": [
+        [
+          1.5,
+          0.0,
+          0.0,
+          -239.25
+        ],
+        [
+          0.0,
+          1.5,
+          0.0,
+          -239.25
+        ],
+        [
+          0.0,
+          0.0,
+          1.5,
+          -1771.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_bbox_mm": [
+        [
+          -239.25,
+          -239.25,
+          -1771.0
+        ],
+        [
+          239.25,
+          239.25,
+          -38.5
+        ]
+      ],
+      "voxel_spacing_mm": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "EXP0010_affine_matches_loaded": true
+    }
+  }
+}

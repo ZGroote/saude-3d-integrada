@@ -1,0 +1,3531 @@
+{
+  "experiment": "EXP-0022",
+  "preregistration_commit": "0e1ab8acb874947f1fa2bf7c27a8f7fa053fc429",
+  "external_clone": {
+    "url": "https://github.com/HiMahendraBeniwal/female-atlas",
+    "commit": "b0a20fa3a009ca5f6bfa07b7479312e04c862af2",
+    "commit_count": 10,
+    "untrusted_code_executed": false
+  },
+  "protocol_criteria_changed": false,
+  "criteria": {
+    "C1": {
+      "status": "pass",
+      "criterion": "source and transformation reconstructible for 100% of meshes",
+      "observed": {
+        "meshes": 3004,
+        "transformation_group_assigned": 3004,
+        "BodyParts3D": 2163,
+        "HRA_VH_F": 552,
+        "Allen_prefixed_in_HRA_input": 282,
+        "Yao_prefixed_in_HRA_input": 7
+      },
+      "reason": "The published conversion/build scripts reconstruct the transforms by source group, but the 7 Yao-prefixed meshes have no provider-level source record in the clone; 100% source lineage is therefore not established.",
+      "initial_assessment_status": "fail",
+      "correction_reason": "All 3004 proveniencia.csv rows have a source group and non-empty transformation; HRA catalog supports Yao_/Allen_ lineage."
+    },
+    "C2": {
+      "status": "pass",
+      "criterion": "each mesh has an identifiable CC BY 4.0 source and reproducible attribution",
+      "declared_sources": {
+        "HRA": "CC BY 4.0; README/ATTRIBUTION cite HRA female v1.5, DOI 10.48539/HBM352.BTSQ.586 and https://lod.humanatlas.io/ref-organ/united-female/v1.5",
+        "BodyParts3D": "CC BY 4.0; ATTRIBUTION cites https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+      },
+      "initial_assessment_status": "fail",
+      "correction_reason": "HRA catalog identifies all Allen_/Yao_ rows in the HRA united-female dataset; the repository declares HRA and BodyParts3D data CC BY 4.0 with attribution."
+    },
+    "C3": {
+      "status": "fail",
+      "criterion": {
+        "mean_reduction_vs_bp3d_min_percent": 20,
+        "female_mean_max_mm": 5,
+        "female_p95_max_mm": 12
+      },
+      "female_atlas": {
+        "mean_mm": 3.8812887727783747,
+        "p95_mm": 16.05836713285684,
+        "parts_included": [
+          "VH_F_sacrum",
+          "VH_F_pubis_spongy_bone_L",
+          "VH_F_pubis_spongy_bone_R",
+          "VH_F_pubis_compact_bone_R",
+          "VH_F_pubis_compact_bone_L",
+          "VH_F_ilium_compact_bone_R",
+          "VH_F_ilium_compact_bone_L",
+          "VH_F_ilium_spongy_bone_L",
+          "VH_F_ilium_spongy_bone_R",
+          "VH_F_ischium_compact_bone_R",
+          "VH_F_ischium_compact_bone_L",
+          "VH_F_ischium_spongy_bone_R",
+          "VH_F_ischium_spongy_bone_L",
+          "BP3D_FJ3152",
+          "BP3D_FJ3288",
+          "BP3D_FJ3393"
+        ],
+        "uniform_scale": 0.947532248257812
+      },
+      "bp3d_m": {
+        "mean_mm": 5.25124007874309,
+        "p95_mm": 14.038483345299044,
+        "parts_included": [
+          "FJ3393",
+          "FJ3288",
+          "FJ3152"
+        ],
+        "uniform_scale": 1.0611714571437627
+      },
+      "mean_reduction_percent": 26.088148426316483,
+      "reason": "Mean improvement and absolute mean meet their limits; female p95 exceeds the fixed 12 mm limit."
+    },
+    "C4": {
+      "status": "fail",
+      "criterion": "all femurs and L1-L5 mean <=5 mm and p95 <=12 mm",
+      "comparisons": 19,
+      "passing_comparisons": 10,
+      "failing_comparisons": 9,
+      "per_structure": {
+        "femur_left|female_atlas:BP3D_FJ3259": {
+          "mean_mm": 3.5386110516704066,
+          "p95_mm": 8.469377760191437,
+          "uniform_scale": 0.9329828837749885,
+          "iterations": 50
+        },
+        "femur_left|bp3d_m:FJ3259": {
+          "mean_mm": 3.3501999481975266,
+          "p95_mm": 9.280667563334415,
+          "uniform_scale": 0.9130758523841231,
+          "iterations": 50
+        },
+        "femur_right|female_atlas:BP3D_FJ3365": {
+          "mean_mm": 3.5767596974904663,
+          "p95_mm": 8.21033045649149,
+          "uniform_scale": 0.9490317423783239,
+          "iterations": 50
+        },
+        "femur_right|bp3d_m:FJ3365": {
+          "mean_mm": 3.6877192198920024,
+          "p95_mm": 10.511088541114809,
+          "uniform_scale": 0.9262805053398251,
+          "iterations": 50
+        },
+        "vertebrae_L1|female_atlas:VH_F_lumbar_vertebra_1": {
+          "mean_mm": 4.804172875661165,
+          "p95_mm": 31.253245640310755,
+          "uniform_scale": 0.957619960160569,
+          "iterations": 50
+        },
+        "vertebrae_L1|female_atlas:BP3D_FJ3157": {
+          "mean_mm": 5.760550170627024,
+          "p95_mm": 30.218776171396293,
+          "uniform_scale": 1.091785420673504,
+          "iterations": 50
+        },
+        "vertebrae_L1|bp3d_m:FJ3157": {
+          "mean_mm": 5.53775663486672,
+          "p95_mm": 30.819562782616686,
+          "uniform_scale": 0.9745371584286391,
+          "iterations": 50
+        },
+        "vertebrae_L2|female_atlas:VH_F_lumbar_vertebra_2": {
+          "mean_mm": 6.445370446546085,
+          "p95_mm": 23.33809110335652,
+          "uniform_scale": 0.8426002456102557,
+          "iterations": 50
+        },
+        "vertebrae_L2|female_atlas:BP3D_FJ3159": {
+          "mean_mm": 6.875639890457551,
+          "p95_mm": 21.81897259346136,
+          "uniform_scale": 0.9643239722837399,
+          "iterations": 50
+        },
+        "vertebrae_L2|bp3d_m:FJ3159": {
+          "mean_mm": 6.185007400448832,
+          "p95_mm": 23.343364523986292,
+          "uniform_scale": 0.9840115802793967,
+          "iterations": 50
+        },
+        "vertebrae_L3|female_atlas:VH_F_lumbar_vertebra_3": {
+          "mean_mm": 3.7873703674955443,
+          "p95_mm": 26.524263501071022,
+          "uniform_scale": 0.9609881852964312,
+          "iterations": 50
+        },
+        "vertebrae_L3|female_atlas:BP3D_FJ3162": {
+          "mean_mm": 5.743308860775432,
+          "p95_mm": 24.004684674569248,
+          "uniform_scale": 0.9856528510946764,
+          "iterations": 50
+        },
+        "vertebrae_L3|bp3d_m:FJ3162": {
+          "mean_mm": 4.5362935097780435,
+          "p95_mm": 26.791608287006838,
+          "uniform_scale": 0.9965722254247344,
+          "iterations": 50
+        },
+        "vertebrae_L4|female_atlas:VH_F_lumbar_vertebra_4": {
+          "mean_mm": 1.213439053969617,
+          "p95_mm": 2.9622612328470272,
+          "uniform_scale": 0.9423888729826084,
+          "iterations": 50
+        },
+        "vertebrae_L4|female_atlas:BP3D_FJ3165": {
+          "mean_mm": 1.967608683255351,
+          "p95_mm": 4.924933281884949,
+          "uniform_scale": 1.148998154937111,
+          "iterations": 50
+        },
+        "vertebrae_L4|bp3d_m:FJ3165": {
+          "mean_mm": 1.5782385288932317,
+          "p95_mm": 4.0962752032607055,
+          "uniform_scale": 1.0381816261055332,
+          "iterations": 50
+        },
+        "vertebrae_L5|female_atlas:VH_F_lumbar_vertebra_5": {
+          "mean_mm": 1.8023000503123394,
+          "p95_mm": 4.954530729611887,
+          "uniform_scale": 0.919644377015942,
+          "iterations": 50
+        },
+        "vertebrae_L5|female_atlas:BP3D_FJ3168": {
+          "mean_mm": 1.9891718258693711,
+          "p95_mm": 5.312081520965043,
+          "uniform_scale": 1.0837755042631132,
+          "iterations": 50
+        },
+        "vertebrae_L5|bp3d_m:FJ3168": {
+          "mean_mm": 1.6364303471911728,
+          "p95_mm": 4.114816940182518,
+          "uniform_scale": 1.015450012843231,
+          "iterations": 50
+        }
+      },
+      "ribs_extra_measurements": {
+        "comparisons": 48,
+        "mean_range_mm": [
+          1.7049863088705708,
+          7.7246553297822995
+        ],
+        "p95_range_mm": [
+          4.573157535352868,
+          44.52603545621839
+        ]
+      }
+    },
+    "C5": {
+      "status": "fail",
+      "criterion": {
+        "F1_min_percent": 99,
+        "F2_max_mm": 5,
+        "F3_max_percent_exclusive": 2,
+        "F4_percent": 100
+      },
+      "F1": {
+        "status": "not_verifiable",
+        "criterion": "at least 99% of imported bones/muscles inside skin",
+        "skin": {
+          "id": "BP3D_FJ2810",
+          "watertight": false,
+          "winding_consistent": true,
+          "vertices": 22902,
+          "triangles": 44744,
+          "bounds_m": [
+            [
+              -0.31120648980140686,
+              1.3369166856864788e-17,
+              -0.1994880586862564
+            ],
+            [
+              0.31003209948539734,
+              1.6564140319824219,
+              0.10707408934831619
+            ]
+          ],
+          "eligible_imported_bone_muscle_meshes": 698,
+          "closed_imported_bone_muscle_meshes": 13
+        },
+        "reason": "Skin mesh is open (not watertight); point-in-volume containment is undefined for the required closed-surface test."
+      },
+      "F2": {
+        "femur_to_same_side_hip_bone_proxy": {
+          "left": {
+            "sampled_surface_min_mm": 0.06494616022075303,
+            "femur_id": "BP3D_FJ3259",
+            "hip_id": "BP3D_FJ3288",
+            "interpretation": "whole-mesh proxy; femoral-head-to-acetabulum subregions are not separately named."
+          },
+          "right": {
+            "sampled_surface_min_mm": 0.11722438063056004,
+            "femur_id": "BP3D_FJ3365",
+            "hip_id": "BP3D_FJ3152",
+            "interpretation": "whole-mesh proxy; femoral-head-to-acetabulum subregions are not separately named."
+          }
+        },
+        "rib_to_same_number_thoracic_vertebra": {
+          "left_1": {
+            "sampled_surface_min_mm": 0.024691032580282157,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3228",
+            "vertebra_id": "BP3D_FJ3158"
+          },
+          "left_2": {
+            "sampled_surface_min_mm": 0.034610530411048196,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3229",
+            "vertebra_id": "BP3D_FJ3160"
+          },
+          "left_3": {
+            "sampled_surface_min_mm": 0.031450425525483376,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3230",
+            "vertebra_id": "BP3D_FJ3163"
+          },
+          "left_4": {
+            "sampled_surface_min_mm": 0.037572444071600215,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3231",
+            "vertebra_id": "BP3D_FJ3166"
+          },
+          "left_5": {
+            "sampled_surface_min_mm": 0.04759432715691319,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3232",
+            "vertebra_id": "BP3D_FJ3169"
+          },
+          "left_6": {
+            "sampled_surface_min_mm": 0.046744879782422775,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3233",
+            "vertebra_id": "BP3D_FJ3171"
+          },
+          "left_7": {
+            "sampled_surface_min_mm": 0.028708411312209327,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3234",
+            "vertebra_id": "BP3D_FJ3173"
+          },
+          "left_8": {
+            "sampled_surface_min_mm": 0.0338198847556333,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3235",
+            "vertebra_id": "BP3D_FJ3174"
+          },
+          "left_9": {
+            "sampled_surface_min_mm": 0.05378943977710677,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3236",
+            "vertebra_id": "BP3D_FJ3175"
+          },
+          "left_10": {
+            "sampled_surface_min_mm": 0.10691828126210565,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3225",
+            "vertebra_id": "BP3D_FJ3154"
+          },
+          "left_11": {
+            "sampled_surface_min_mm": 0.024947768667540206,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3226",
+            "vertebra_id": "BP3D_FJ3155"
+          },
+          "left_12": {
+            "sampled_surface_min_mm": 0.04212478870666465,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3227",
+            "vertebra_id": "BP3D_FJ3156"
+          },
+          "right_1": {
+            "sampled_surface_min_mm": 0.03220440975298167,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3334",
+            "vertebra_id": "BP3D_FJ3158"
+          },
+          "right_2": {
+            "sampled_surface_min_mm": 0.007818538601320976,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3336",
+            "vertebra_id": "BP3D_FJ3160"
+          },
+          "right_3": {
+            "sampled_surface_min_mm": 0.022542775253043282,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3338",
+            "vertebra_id": "BP3D_FJ3163"
+          },
+          "right_4": {
+            "sampled_surface_min_mm": 0.04297212489895991,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3340",
+            "vertebra_id": "BP3D_FJ3166"
+          },
+          "right_5": {
+            "sampled_surface_min_mm": 0.06859211711684117,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3342",
+            "vertebra_id": "BP3D_FJ3169"
+          },
+          "right_6": {
+            "sampled_surface_min_mm": 0.048516547085949255,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3344",
+            "vertebra_id": "BP3D_FJ3171"
+          },
+          "right_7": {
+            "sampled_surface_min_mm": 0.05971383755809964,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3346",
+            "vertebra_id": "BP3D_FJ3173"
+          },
+          "right_8": {
+            "sampled_surface_min_mm": 0.027974722727295575,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3347",
+            "vertebra_id": "BP3D_FJ3174"
+          },
+          "right_9": {
+            "sampled_surface_min_mm": 0.029001838367395227,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3348",
+            "vertebra_id": "BP3D_FJ3175"
+          },
+          "right_10": {
+            "sampled_surface_min_mm": 0.03540467493741763,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3330",
+            "vertebra_id": "BP3D_FJ3154"
+          },
+          "right_11": {
+            "sampled_surface_min_mm": 0.014726603889587006,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3331",
+            "vertebra_id": "BP3D_FJ3155"
+          },
+          "right_12": {
+            "sampled_surface_min_mm": 0.020092481227495775,
+            "pairing": "same-numbered T vertebra",
+            "rib_id": "BP3D_FJ3332",
+            "vertebra_id": "BP3D_FJ3156"
+          }
+        },
+        "skull_to_C1": {
+          "sampled_surface_min_mm": 0.11645862509941589,
+          "skull_mesh_count": 18,
+          "C1_id": "VH_F_cervical_vertebra_1",
+          "interpretation": "whole cranial bone group to whole C1 proxy; occipital condyle/articular facets are not separately named."
+        }
+      },
+      "F3": {
+        "status": "not_verifiable",
+        "definition": "volume fraction of each imported structure inside/intersecting HRA-origin organs or bones; limit <2%.",
+        "imported_meshes": 2163,
+        "imported_watertight": 162,
+        "hra_origin_meshes": 841,
+        "hra_origin_watertight": 397,
+        "reason": "The source meshes include open surfaces, so a watertight volume intersection denominator is unavailable; no volumetric result is inferred from surface proximity."
+      },
+      "F4": {
+        "status": "pass",
+        "side_specific_meshes_checked": 1705,
+        "mismatches": [],
+        "ids_without_catalog_record": []
+      },
+      "reason": "F1 and F3 cannot be measured as volume criteria with open meshes; F2 only has whole-mesh proxies and does not isolate all required articular subregions. F4 passes for all 1705 side-specific meshes."
+    }
+  },
+  "H22_verdict": "sustained per preregistered reading because C3 fails. After reviewer correction C1/C2 pass; the candidate still fails C3/C4/C5 and is not qualified as a V3 base.",
+  "inventory": {
+    "meshes": 3004,
+    "concepts": 2557,
+    "systems": 16,
+    "triangles": 3893539,
+    "unique_mesh_names": 2264,
+    "duplicate_mesh_names": 740,
+    "source_id_prefixes": {
+      "HRA_VH_F": 552,
+      "Allen_prefixed": 282,
+      "Yao_prefixed": 7,
+      "BodyParts3D": 2163
+    },
+    "system_mesh_counts": {
+      "arterial": 666,
+      "cardiac": 58,
+      "connective": 40,
+      "digestive": 137,
+      "endocrine": 4,
+      "integumentary": 4,
+      "lymphatic": 17,
+      "muscular": 416,
+      "nervous": 424,
+      "pregnancy": 8,
+      "reproductive": 54,
+      "respiratory": 187,
+      "sensory": 98,
+      "skeletal": 343,
+      "urinary": 91,
+      "venous": 457
+    }
+  },
+  "provenance": {
+    "rows": 3004,
+    "csv": "proveniencia.csv",
+    "script_source_map": {
+      "HRA": {
+        "source": "HRA united-female v1.5 GLB",
+        "transform": "convert-female.py adds +0.794760942 m to Y; source has baked Y-up meter coordinates; no node matrix/transforms accepted."
+      },
+      "BodyParts3D": {
+        "source": "BodyParts3D 4.0 OBJ",
+        "transform": "convert-anatomy.py: (x,y,z) mm -> (0.001*x, 0.001*z+0.0781112, -0.001*y-0.1) m; build-perfect scales X=.95, Y=.96335, Z=.95 and adds Z=-.052 m, then applies piecewise height/region deformations (neck, shoulders, rib cage, waist/hips, lower back, glutes, arms; extra skin breast/groin edits)."
+      },
+      "postprocessing": {
+        "source": "meshoptimizer",
+        "transform": "optimize-anatomy.mjs welds coincident HRA vertices/averages normals, simplifies each part toward 22% of original triangle count with error argument .002, compacts vertices; report README says .2% relative error but source passes .002 and target count is ~22%."
+      },
+      "coverage": "The shipped atlas.json identifies all 3004 parts. The 841 HRA-origin parts include 552 VH_F_, 282 Allen_ and 7 Yao_ IDs; hra/catalogo_hra.csv contains all 289 Allen/Yao records (including Yao_lymph_node within VH_F_lymphatic_system). The HRA source-group conversion is documented; 10 HRA-origin nodes lack individual catalog rows but remain attributable to the HRA input GLB and converter."
+    }
+  },
+  "reference_frame": {
+    "HRA_local_frame": "x positive=left; y positive=up; z positive=front; metres, per project record and HRA source conversion.",
+    "bp3d_m_local_frame": "x positive=left, y positive=up, z positive=front; metres, confirmed by BodyParts3D exporter and decoded node lateralities.",
+    "TC_world_frame": "NIfTI affine coordinates labelled RAS mm by EXP-0010; x increases right, y increases anterior, z increases superior. Affine is diagonal +1.5 mm voxel spacing; negative world Z origin is a translation, not an axis reversal.",
+    "HRA_to_RAS_axis_map": {
+      "x_RAS_mm": "-1000*x_local_m",
+      "y_RAS_mm": "1000*z_local_m",
+      "z_RAS_mm": "1000*y_local_m"
+    },
+    "BP3D_representative_geometry": {
+      "FJ3152": {
+        "name": "Right hip bone",
+        "bounds_m": [
+          [
+            -0.14422450917988322,
+            -0.03460640087723732,
+            -0.09964854765056866
+          ],
+          [
+            -0.002143792060844099,
+            0.17110960185527802,
+            0.03825092437981861
+          ]
+        ],
+        "centroid_m": [
+          -0.07545182137094637,
+          0.07313341737158191,
+          -0.028604591465260933
+        ]
+      },
+      "FJ3288": {
+        "name": "Left hip bone",
+        "bounds_m": [
+          [
+            0.003398307750225274,
+            -0.03480840101838112,
+            -0.09945292736010816
+          ],
+          [
+            0.14540000314615648,
+            0.17133060097694397,
+            0.038327470073273445
+          ]
+        ],
+        "centroid_m": [
+          0.07687981005265969,
+          0.07317394429522345,
+          -0.028570807373956703
+        ]
+      },
+      "FJ3393": {
+        "name": "Sacrum",
+        "bounds_m": [
+          [
+            -0.058943128624276864,
+            -0.003922400064766407,
+            -0.10802035881546895
+          ],
+          [
+            0.0588488303509519,
+            0.14044059813022614,
+            -0.019372393280587985
+          ]
+        ],
+        "centroid_m": [
+          -4.412411454736481e-06,
+          0.08855596453056566,
+          -0.06745975657918832
+        ]
+      },
+      "FJ3259": {
+        "name": "Left femur",
+        "bounds_m": [
+          [
+            0.03261320034309912,
+            -0.4187034070491791,
+            -0.05128805439456343
+          ],
+          [
+            0.15088400130823565,
+            0.047479599714279175,
+            0.011510852794190639
+          ]
+        ],
+        "centroid_m": [
+          0.09417203501253915,
+          -0.19746490793345534,
+          -0.015710308228693255
+        ]
+      },
+      "FJ3365": {
+        "name": "Right femur",
+        "bounds_m": [
+          [
+            -0.14948516527363215,
+            -0.4186094105243683,
+            -0.05123658735878013
+          ],
+          [
+            -0.031249137574945338,
+            0.04749260097742081,
+            0.011423386415608153
+          ]
+        ],
+        "centroid_m": [
+          -0.09288548220992483,
+          -0.19742954072480592,
+          -0.015723992139503422
+        ]
+      }
+    },
+    "NLM_label_boxes": {
+      "hip_left": {
+        "voxel_count": 112774,
+        "bounds_RAS_mm": [
+          [
+            -141.75,
+            -83.25,
+            -1261.0
+          ],
+          [
+            5.25,
+            69.75,
+            -739.0
+          ]
+        ],
+        "centroid_RAS_mm": [
+          -73.77191107879476,
+          -3.9454971890684023,
+          -836.0109910085658
+        ]
+      },
+      "hip_right": {
+        "voxel_count": 112689,
+        "bounds_RAS_mm": [
+          [
+            8.25,
+            -83.25,
+            -950.5
+          ],
+          [
+            155.25,
+            66.75,
+            -737.5
+          ]
+        ],
+        "centroid_RAS_mm": [
+          87.89063040758192,
+          -4.808009211191864,
+          -835.5079599605996
+        ]
+      },
+      "sacrum": {
+        "voxel_count": 50129,
+        "bounds_RAS_mm": [
+          [
+            -53.25,
+            -101.25,
+            -883.0
+          ],
+          [
+            65.25,
+            -11.25,
+            -763.0
+          ]
+        ],
+        "centroid_RAS_mm": [
+          7.237562089808295,
+          -54.25555566638074,
+          -804.8111272915877
+        ]
+      },
+      "femur_left": {
+        "voxel_count": 150453,
+        "bounds_RAS_mm": [
+          [
+            -156.75,
+            -29.25,
+            -1280.5
+          ],
+          [
+            -29.25,
+            38.25,
+            -862.0
+          ]
+        ],
+        "centroid_RAS_mm": [
+          -93.64534605491416,
+          9.831753105621024,
+          -1087.7600546350022
+        ]
+      },
+      "femur_right": {
+        "voxel_count": 154789,
+        "bounds_RAS_mm": [
+          [
+            33.75,
+            -41.25,
+            -1285.0
+          ],
+          [
+            170.25,
+            36.75,
+            -862.0
+          ]
+        ],
+        "centroid_RAS_mm": [
+          103.21822125603241,
+          1.2946511056987253,
+          -1089.0147458798751
+        ]
+      },
+      "vertebrae_L1": {
+        "voxel_count": 17490,
+        "bounds_RAS_mm": [
+          [
+            -24.75,
+            -90.75,
+            -655.0
+          ],
+          [
+            44.25,
+            -3.75,
+            -572.5
+          ]
+        ],
+        "centroid_RAS_mm": [
+          1.995368782161235,
+          -44.82941680960549,
+          -600.1403945111492
+        ]
+      },
+      "vertebrae_L5": {
+        "voxel_count": 18899,
+        "bounds_RAS_mm": [
+          [
+            -41.25,
+            -74.25,
+            -779.5
+          ],
+          [
+            56.25,
+            5.25,
+            -734.5
+          ]
+        ],
+        "centroid_RAS_mm": [
+          7.340745542092174,
+          -24.763413408116833,
+          -758.9689136991375
+        ]
+      }
+    },
+    "note": "30-voxel disconnected hip_left component at z≈−1261 mm is included in metric mask; the figure zooms the connected pelvic ROI and clips this tiny outlier."
+  },
+  "surface_metrics": {
+    "metadata": {
+      "python": "3.14.4",
+      "numpy": "2.4.6",
+      "trimesh": "5.2.2",
+      "scipy": "1.18.1",
+      "nibabel": "5.5.0",
+      "nlm_path": "hra/nlm/bruto/saida/segmentacao.nii.gz",
+      "affine_ijk_to_world_RAS_mm": [
+        [
+          1.5,
+          0.0,
+          0.0,
+          -239.25
+        ],
+        [
+          0.0,
+          1.5,
+          0.0,
+          -239.25
+        ],
+        [
+          0.0,
+          0.0,
+          1.5,
+          -1771.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sampling": "area-uniform triangle sampling; fixed seed 220022; pelvis 30000 samples/direction; femur/vertebra/rib 15000 samples/direction; exact cKDTree nearest distances; symmetric statistics over concatenated directed distances",
+      "registration": "proper-rotation uniform similarity ICP; initial documented local-to-RAS axis map; trim 12%; 30000 pelvis or 15000 other source points; maximum 50 iterations; no reflections",
+      "bp3d_decoded_glb_nodes": 244
+    },
+    "masks": {
+      "pelvis": {
+        "labels": [
+          "hip_left",
+          "hip_right",
+          "sacrum"
+        ],
+        "ids": [
+          25,
+          77,
+          78
+        ],
+        "voxel_count": 275592,
+        "surface_faces": 213978,
+        "bbox_world_mm": [
+          [
+            -142.5,
+            -102.0,
+            -1261.75
+          ],
+          [
+            156.0,
+            70.5,
+            -736.75
+          ]
+        ]
+      },
+      "femur_left": {
+        "labels": [
+          "femur_left"
+        ],
+        "ids": [
+          75
+        ],
+        "voxel_count": 150453,
+        "surface_faces": 76632,
+        "bbox_world_mm": [
+          [
+            -157.5,
+            -30.0,
+            -1281.25
+          ],
+          [
+            -28.5,
+            39.0,
+            -861.25
+          ]
+        ]
+      },
+      "femur_right": {
+        "labels": [
+          "femur_right"
+        ],
+        "ids": [
+          76
+        ],
+        "voxel_count": 154789,
+        "surface_faces": 77908,
+        "bbox_world_mm": [
+          [
+            33.0,
+            -42.0,
+            -1285.75
+          ],
+          [
+            171.0,
+            37.5,
+            -861.25
+          ]
+        ]
+      },
+      "vertebrae_L1": {
+        "labels": [
+          "vertebrae_L1"
+        ],
+        "ids": [
+          31
+        ],
+        "voxel_count": 17490,
+        "surface_faces": 21944,
+        "bbox_world_mm": [
+          [
+            -25.5,
+            -91.5,
+            -655.75
+          ],
+          [
+            45.0,
+            -3.0,
+            -571.75
+          ]
+        ]
+      },
+      "vertebrae_L2": {
+        "labels": [
+          "vertebrae_L2"
+        ],
+        "ids": [
+          30
+        ],
+        "voxel_count": 29206,
+        "surface_faces": 33944,
+        "bbox_world_mm": [
+          [
+            -39.0,
+            -90.0,
+            -696.25
+          ],
+          [
+            48.0,
+            0.0,
+            -604.75
+          ]
+        ]
+      },
+      "vertebrae_L3": {
+        "labels": [
+          "vertebrae_L3"
+        ],
+        "ids": [
+          29
+        ],
+        "voxel_count": 21587,
+        "surface_faces": 25370,
+        "bbox_world_mm": [
+          [
+            -42.0,
+            -82.5,
+            -724.75
+          ],
+          [
+            49.5,
+            4.5,
+            -640.75
+          ]
+        ]
+      },
+      "vertebrae_L4": {
+        "labels": [
+          "vertebrae_L4"
+        ],
+        "ids": [
+          28
+        ],
+        "voxel_count": 18937,
+        "surface_faces": 18884,
+        "bbox_world_mm": [
+          [
+            -42.0,
+            -78.0,
+            -754.75
+          ],
+          [
+            49.5,
+            7.5,
+            -703.75
+          ]
+        ]
+      },
+      "vertebrae_L5": {
+        "labels": [
+          "vertebrae_L5"
+        ],
+        "ids": [
+          27
+        ],
+        "voxel_count": 18899,
+        "surface_faces": 19688,
+        "bbox_world_mm": [
+          [
+            -42.0,
+            -75.0,
+            -780.25
+          ],
+          [
+            57.0,
+            6.0,
+            -733.75
+          ]
+        ]
+      },
+      "rib_left_1": {
+        "labels": [
+          "rib_left_1"
+        ],
+        "ids": [
+          92
+        ],
+        "voxel_count": 2666,
+        "surface_faces": 6668,
+        "bbox_world_mm": [
+          [
+            -70.5,
+            -27.0,
+            -367.75
+          ],
+          [
+            -30.0,
+            48.0,
+            -297.25
+          ]
+        ]
+      },
+      "rib_left_2": {
+        "labels": [
+          "rib_left_2"
+        ],
+        "ids": [
+          93
+        ],
+        "voxel_count": 3343,
+        "surface_faces": 8364,
+        "bbox_world_mm": [
+          [
+            -99.0,
+            -46.5,
+            -393.25
+          ],
+          [
+            -28.5,
+            60.0,
+            -310.75
+          ]
+        ]
+      },
+      "rib_left_3": {
+        "labels": [
+          "rib_left_3"
+        ],
+        "ids": [
+          94
+        ],
+        "voxel_count": 3471,
+        "surface_faces": 9380,
+        "bbox_world_mm": [
+          [
+            -117.0,
+            -64.5,
+            -417.25
+          ],
+          [
+            -30.0,
+            66.0,
+            -330.25
+          ]
+        ]
+      },
+      "rib_left_4": {
+        "labels": [
+          "rib_left_4"
+        ],
+        "ids": [
+          95
+        ],
+        "voxel_count": 4089,
+        "surface_faces": 10186,
+        "bbox_world_mm": [
+          [
+            -121.5,
+            -73.5,
+            -445.75
+          ],
+          [
+            -31.5,
+            70.5,
+            -348.25
+          ]
+        ]
+      },
+      "rib_left_5": {
+        "labels": [
+          "rib_left_5"
+        ],
+        "ids": [
+          96
+        ],
+        "voxel_count": 4949,
+        "surface_faces": 11400,
+        "bbox_world_mm": [
+          [
+            -124.5,
+            -79.5,
+            -508.75
+          ],
+          [
+            -31.5,
+            75.0,
+            -367.75
+          ]
+        ]
+      },
+      "rib_left_6": {
+        "labels": [
+          "rib_left_6"
+        ],
+        "ids": [
+          97
+        ],
+        "voxel_count": 5938,
+        "surface_faces": 12786,
+        "bbox_world_mm": [
+          [
+            -127.5,
+            -84.0,
+            -547.75
+          ],
+          [
+            -30.0,
+            64.5,
+            -390.25
+          ]
+        ]
+      },
+      "rib_left_7": {
+        "labels": [
+          "rib_left_7"
+        ],
+        "ids": [
+          98
+        ],
+        "voxel_count": 5245,
+        "surface_faces": 11064,
+        "bbox_world_mm": [
+          [
+            -130.5,
+            -84.0,
+            -579.25
+          ],
+          [
+            -30.0,
+            51.0,
+            -414.25
+          ]
+        ]
+      },
+      "rib_left_8": {
+        "labels": [
+          "rib_left_8"
+        ],
+        "ids": [
+          99
+        ],
+        "voxel_count": 4535,
+        "surface_faces": 9852,
+        "bbox_world_mm": [
+          [
+            -130.5,
+            -84.0,
+            -613.75
+          ],
+          [
+            -30.0,
+            36.0,
+            -444.25
+          ]
+        ]
+      },
+      "rib_left_9": {
+        "labels": [
+          "rib_left_9"
+        ],
+        "ids": [
+          100
+        ],
+        "voxel_count": 3877,
+        "surface_faces": 8782,
+        "bbox_world_mm": [
+          [
+            -132.0,
+            -84.0,
+            -579.25
+          ],
+          [
+            -30.0,
+            16.5,
+            -468.25
+          ]
+        ]
+      },
+      "rib_left_10": {
+        "labels": [
+          "rib_left_10"
+        ],
+        "ids": [
+          101
+        ],
+        "voxel_count": 3585,
+        "surface_faces": 8612,
+        "bbox_world_mm": [
+          [
+            -130.5,
+            -82.5,
+            -628.75
+          ],
+          [
+            -30.0,
+            15.0,
+            -492.25
+          ]
+        ]
+      },
+      "rib_left_11": {
+        "labels": [
+          "rib_left_11"
+        ],
+        "ids": [
+          102
+        ],
+        "voxel_count": 2586,
+        "surface_faces": 7230,
+        "bbox_world_mm": [
+          [
+            -126.0,
+            -82.5,
+            -651.25
+          ],
+          [
+            -28.5,
+            1.5,
+            -522.25
+          ]
+        ]
+      },
+      "rib_left_12": {
+        "labels": [
+          "rib_left_12"
+        ],
+        "ids": [
+          103
+        ],
+        "voxel_count": 1375,
+        "surface_faces": 4196,
+        "bbox_world_mm": [
+          [
+            -105.0,
+            -75.0,
+            -649.75
+          ],
+          [
+            -28.5,
+            -45.0,
+            -555.25
+          ]
+        ]
+      },
+      "rib_right_1": {
+        "labels": [
+          "rib_right_1"
+        ],
+        "ids": [
+          104
+        ],
+        "voxel_count": 2855,
+        "surface_faces": 7168,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -25.5,
+            -372.25
+          ],
+          [
+            82.5,
+            45.0,
+            -301.75
+          ]
+        ]
+      },
+      "rib_right_2": {
+        "labels": [
+          "rib_right_2"
+        ],
+        "ids": [
+          105
+        ],
+        "voxel_count": 3146,
+        "surface_faces": 8032,
+        "bbox_world_mm": [
+          [
+            40.5,
+            -43.5,
+            -397.75
+          ],
+          [
+            109.5,
+            57.0,
+            -316.75
+          ]
+        ]
+      },
+      "rib_right_3": {
+        "labels": [
+          "rib_right_3"
+        ],
+        "ids": [
+          106
+        ],
+        "voxel_count": 3410,
+        "surface_faces": 9002,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -58.5,
+            -429.25
+          ],
+          [
+            123.0,
+            61.5,
+            -336.25
+          ]
+        ]
+      },
+      "rib_right_4": {
+        "labels": [
+          "rib_right_4"
+        ],
+        "ids": [
+          107
+        ],
+        "voxel_count": 4122,
+        "surface_faces": 9988,
+        "bbox_world_mm": [
+          [
+            40.5,
+            -69.0,
+            -462.25
+          ],
+          [
+            129.0,
+            67.5,
+            -355.75
+          ]
+        ]
+      },
+      "rib_right_5": {
+        "labels": [
+          "rib_right_5"
+        ],
+        "ids": [
+          108
+        ],
+        "voxel_count": 5558,
+        "surface_faces": 11856,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -73.5,
+            -520.75
+          ],
+          [
+            132.0,
+            69.0,
+            -375.25
+          ]
+        ]
+      },
+      "rib_right_6": {
+        "labels": [
+          "rib_right_6"
+        ],
+        "ids": [
+          109
+        ],
+        "voxel_count": 6332,
+        "surface_faces": 13056,
+        "bbox_world_mm": [
+          [
+            40.5,
+            -79.5,
+            -550.75
+          ],
+          [
+            133.5,
+            64.5,
+            -397.75
+          ]
+        ]
+      },
+      "rib_right_7": {
+        "labels": [
+          "rib_right_7"
+        ],
+        "ids": [
+          110
+        ],
+        "voxel_count": 5250,
+        "surface_faces": 11286,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -81.0,
+            -583.75
+          ],
+          [
+            133.5,
+            60.0,
+            -421.75
+          ]
+        ]
+      },
+      "rib_right_8": {
+        "labels": [
+          "rib_right_8"
+        ],
+        "ids": [
+          111
+        ],
+        "voxel_count": 4028,
+        "surface_faces": 9386,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -82.5,
+            -612.25
+          ],
+          [
+            133.5,
+            42.0,
+            -445.75
+          ]
+        ]
+      },
+      "rib_right_9": {
+        "labels": [
+          "rib_right_9"
+        ],
+        "ids": [
+          112
+        ],
+        "voxel_count": 3720,
+        "surface_faces": 8620,
+        "bbox_world_mm": [
+          [
+            40.5,
+            -82.5,
+            -591.25
+          ],
+          [
+            139.5,
+            21.0,
+            -469.75
+          ]
+        ]
+      },
+      "rib_right_10": {
+        "labels": [
+          "rib_right_10"
+        ],
+        "ids": [
+          113
+        ],
+        "voxel_count": 3311,
+        "surface_faces": 8614,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -82.5,
+            -634.75
+          ],
+          [
+            141.0,
+            22.5,
+            -495.25
+          ]
+        ]
+      },
+      "rib_right_11": {
+        "labels": [
+          "rib_right_11"
+        ],
+        "ids": [
+          114
+        ],
+        "voxel_count": 2620,
+        "surface_faces": 7340,
+        "bbox_world_mm": [
+          [
+            37.5,
+            -82.5,
+            -660.25
+          ],
+          [
+            133.5,
+            10.5,
+            -523.75
+          ]
+        ]
+      },
+      "rib_right_12": {
+        "labels": [
+          "rib_right_12"
+        ],
+        "ids": [
+          115
+        ],
+        "voxel_count": 1475,
+        "surface_faces": 4292,
+        "bbox_world_mm": [
+          [
+            39.0,
+            -73.5,
+            -663.25
+          ],
+          [
+            112.5,
+            -39.0,
+            -562.75
+          ]
+        ]
+      }
+    },
+    "comparisons": {
+      "pelvis_female_atlas": {
+        "mean_mm": 3.8812887727783747,
+        "p95_mm": 16.05836713285684,
+        "source_to_target_mean_mm": 5.22839874060046,
+        "target_to_source_mean_mm": 2.534178804956288,
+        "samples_each_direction": 30000,
+        "parts": [
+          "VH_F_sacrum",
+          "VH_F_pubis_spongy_bone_L",
+          "VH_F_pubis_spongy_bone_R",
+          "VH_F_pubis_compact_bone_R",
+          "VH_F_pubis_compact_bone_L",
+          "VH_F_ilium_compact_bone_R",
+          "VH_F_ilium_compact_bone_L",
+          "VH_F_ilium_spongy_bone_L",
+          "VH_F_ilium_spongy_bone_R",
+          "VH_F_ischium_compact_bone_R",
+          "VH_F_ischium_compact_bone_L",
+          "VH_F_ischium_spongy_bone_R",
+          "VH_F_ischium_spongy_bone_L",
+          "BP3D_FJ3152",
+          "BP3D_FJ3288",
+          "BP3D_FJ3393"
+        ],
+        "uniform_scale": 0.947532248257812,
+        "iterations": 50,
+        "aligned_bounds_mm": [
+          [
+            -143.424017265625,
+            -101.06540216592461,
+            -945.0140319810738
+          ],
+          [
+            156.79817788418953,
+            72.20839117396078,
+            -708.1197620083784
+          ]
+        ],
+        "rotation": [
+          [
+            -0.9999974315410924,
+            -0.0017202699666556368,
+            -0.0014756633966156124
+          ],
+          [
+            -0.001495390829269992,
+            0.011523318929596833,
+            0.9999324861844996
+          ],
+          [
+            -0.0017031492847145837,
+            0.9999321245925089,
+            -0.011525861808357631
+          ]
+        ],
+        "translation_mm": [
+          0.010329308597778475,
+          62.415687151187804,
+          -1654.7591415436705
+        ]
+      },
+      "pelvis_bp3d_m": {
+        "mean_mm": 5.25124007874309,
+        "p95_mm": 14.038483345299044,
+        "source_to_target_mean_mm": 5.388161802194473,
+        "target_to_source_mean_mm": 5.114318355291707,
+        "samples_each_direction": 30000,
+        "parts": [
+          "FJ3393",
+          "FJ3288",
+          "FJ3152"
+        ],
+        "uniform_scale": 1.0611714571437627,
+        "iterations": 50,
+        "aligned_bounds_mm": [
+          [
+            -146.62164184282608,
+            -85.23421763929107,
+            -951.6992275904113
+          ],
+          [
+            160.740392084507,
+            71.25233366385208,
+            -732.5761312455885
+          ]
+        ],
+        "rotation": [
+          [
+            -0.999995074504941,
+            -0.0014963452500047455,
+            0.002758970233643096
+          ],
+          [
+            0.0028254373451386825,
+            -0.04640392946580849,
+            0.9989187615787088
+          ],
+          [
+            -0.0013667002839086832,
+            0.9989216367068163,
+            0.04640792873323388
+          ]
+        ],
+        "translation_mm": [
+          7.899571088869012,
+          32.15926568413509,
+          -912.2296574966708
+        ]
+      },
+      "femur_left|female_atlas:BP3D_FJ3259": {
+        "mean_mm": 3.5386110516704066,
+        "p95_mm": 8.469377760191437,
+        "source_to_target_mean_mm": 3.2343958134314987,
+        "target_to_source_mean_mm": 3.8428262899093144,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9329828837749885,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3259"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -158.57459256458202,
+            -25.101281372176686,
+            -1283.9507443415018
+          ],
+          [
+            -33.92122152173303,
+            34.32475069941736,
+            -865.5909653867119
+          ]
+        ]
+      },
+      "femur_left|bp3d_m:FJ3259": {
+        "mean_mm": 3.3501999481975266,
+        "p95_mm": 9.280667563334415,
+        "source_to_target_mean_mm": 3.022719523314116,
+        "target_to_source_mean_mm": 3.677680373080937,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9130758523841231,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3259"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -154.88107414425437,
+            -23.45674188396543,
+            -1282.6061529113936
+          ],
+          [
+            -31.47857353883681,
+            34.20898072318751,
+            -858.7972827845731
+          ]
+        ]
+      },
+      "femur_right|female_atlas:BP3D_FJ3365": {
+        "mean_mm": 3.5767596974904663,
+        "p95_mm": 8.21033045649149,
+        "source_to_target_mean_mm": 3.305350057712132,
+        "target_to_source_mean_mm": 3.8481693372688004,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9490317423783239,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3365"
+        ],
+        "aligned_bounds_mm": [
+          [
+            36.497123001770106,
+            -36.692828720228746,
+            -1287.876819146221
+          ],
+          [
+            172.6341473149032,
+            29.251252268039753,
+            -864.3036144146225
+          ]
+        ]
+      },
+      "femur_right|bp3d_m:FJ3365": {
+        "mean_mm": 3.6877192198920024,
+        "p95_mm": 10.511088541114809,
+        "source_to_target_mean_mm": 3.301967877242164,
+        "target_to_source_mean_mm": 4.073470562541841,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9262805053398251,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3365"
+        ],
+        "aligned_bounds_mm": [
+          [
+            34.623472867133344,
+            -32.11770550991275,
+            -1285.759660316937
+          ],
+          [
+            169.28084578688117,
+            23.56058431808315,
+            -857.5709536690363
+          ]
+        ]
+      },
+      "vertebrae_L1|female_atlas:VH_F_lumbar_vertebra_1": {
+        "mean_mm": 4.804172875661165,
+        "p95_mm": 31.253245640310755,
+        "source_to_target_mean_mm": 0.9749563542637659,
+        "target_to_source_mean_mm": 8.633389397058565,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.957619960160569,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:VH_F_lumbar_vertebra_1"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -42.05338755126725,
+            -91.86803316415354,
+            -618.552034926269
+          ],
+          [
+            44.97195350675065,
+            -14.692940567673105,
+            -572.8344850472488
+          ]
+        ]
+      },
+      "vertebrae_L1|female_atlas:BP3D_FJ3157": {
+        "mean_mm": 5.760550170627024,
+        "p95_mm": 30.218776171396293,
+        "source_to_target_mean_mm": 1.8804880257525787,
+        "target_to_source_mean_mm": 9.64061231550147,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.091785420673504,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3157"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -27.37362016623363,
+            -94.09294775909683,
+            -622.7767757379688
+          ],
+          [
+            35.2364944605431,
+            -13.028496124617362,
+            -574.6983651238911
+          ]
+        ]
+      },
+      "vertebrae_L1|bp3d_m:FJ3157": {
+        "mean_mm": 5.53775663486672,
+        "p95_mm": 30.819562782616686,
+        "source_to_target_mean_mm": 1.6716441398054938,
+        "target_to_source_mean_mm": 9.403869129927946,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9745371584286391,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3157"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -30.843309283544407,
+            -96.04563713236327,
+            -620.3601556855025
+          ],
+          [
+            37.571206575475244,
+            -15.597085474147768,
+            -575.8773042807677
+          ]
+        ]
+      },
+      "vertebrae_L2|female_atlas:VH_F_lumbar_vertebra_2": {
+        "mean_mm": 6.445370446546085,
+        "p95_mm": 23.33809110335652,
+        "source_to_target_mean_mm": 2.6416343441616035,
+        "target_to_source_mean_mm": 10.249106548930566,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8426002456102557,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:VH_F_lumbar_vertebra_2"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -30.54513094950854,
+            -77.54327853989082,
+            -680.3846474534669
+          ],
+          [
+            36.794835661319745,
+            -3.2640467514664806,
+            -630.545065157907
+          ]
+        ]
+      },
+      "vertebrae_L2|female_atlas:BP3D_FJ3159": {
+        "mean_mm": 6.875639890457551,
+        "p95_mm": 21.81897259346136,
+        "source_to_target_mean_mm": 3.019206161462997,
+        "target_to_source_mean_mm": 10.732073619452105,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9643239722837399,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3159"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -27.05272822567764,
+            -74.75103546785061,
+            -678.9726349916393
+          ],
+          [
+            30.13332044817753,
+            -12.534860544092425,
+            -621.6331783916821
+          ]
+        ]
+      },
+      "vertebrae_L2|bp3d_m:FJ3159": {
+        "mean_mm": 6.185007400448832,
+        "p95_mm": 23.343364523986292,
+        "source_to_target_mean_mm": 2.7406430057113553,
+        "target_to_source_mean_mm": 9.629371795186307,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9840115802793967,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3159"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -34.32642699404771,
+            -80.19406550798811,
+            -686.9841564069139
+          ],
+          [
+            43.437905252566104,
+            -4.070640509302077,
+            -629.2957609303586
+          ]
+        ]
+      },
+      "vertebrae_L3|female_atlas:VH_F_lumbar_vertebra_3": {
+        "mean_mm": 3.7873703674955443,
+        "p95_mm": 26.524263501071022,
+        "source_to_target_mean_mm": 1.215838109542716,
+        "target_to_source_mean_mm": 6.358902625448373,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9609881852964312,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:VH_F_lumbar_vertebra_3"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -39.968688018823826,
+            -79.45820871285179,
+            -728.6261765382919
+          ],
+          [
+            47.902286964709276,
+            6.327786354828561,
+            -675.6423570373004
+          ]
+        ]
+      },
+      "vertebrae_L3|female_atlas:BP3D_FJ3162": {
+        "mean_mm": 5.743308860775432,
+        "p95_mm": 24.004684674569248,
+        "source_to_target_mean_mm": 2.266029245591028,
+        "target_to_source_mean_mm": 9.220588475959838,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9856528510946764,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3162"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -23.370842385378968,
+            -76.83645875754247,
+            -712.5556711768741
+          ],
+          [
+            36.305611661761084,
+            -3.0817414872008975,
+            -673.0020465256223
+          ]
+        ]
+      },
+      "vertebrae_L3|bp3d_m:FJ3162": {
+        "mean_mm": 4.5362935097780435,
+        "p95_mm": 26.791608287006838,
+        "source_to_target_mean_mm": 1.7510304172003472,
+        "target_to_source_mean_mm": 7.321556602355741,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9965722254247344,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3162"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -34.93284500993977,
+            -80.14308101246189,
+            -721.0023330924578
+          ],
+          [
+            43.82357071197271,
+            2.2707588182900764,
+            -675.7949074677662
+          ]
+        ]
+      },
+      "vertebrae_L4|female_atlas:VH_F_lumbar_vertebra_4": {
+        "mean_mm": 1.213439053969617,
+        "p95_mm": 2.9622612328470272,
+        "source_to_target_mean_mm": 1.1822325077474558,
+        "target_to_source_mean_mm": 1.244645600191778,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9423888729826084,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:VH_F_lumbar_vertebra_4"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -40.340986385071176,
+            -78.7316360594942,
+            -755.4875406223864
+          ],
+          [
+            50.79115328286896,
+            8.221816340327253,
+            -704.8637791711897
+          ]
+        ]
+      },
+      "vertebrae_L4|female_atlas:BP3D_FJ3165": {
+        "mean_mm": 1.967608683255351,
+        "p95_mm": 4.924933281884949,
+        "source_to_target_mean_mm": 1.6968604232150708,
+        "target_to_source_mean_mm": 2.2383569432956314,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.148998154937111,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3165"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -33.31232678212925,
+            -72.90047987660711,
+            -754.8357357297077
+          ],
+          [
+            43.976850006034226,
+            6.7229050245789495,
+            -705.5756382220079
+          ]
+        ]
+      },
+      "vertebrae_L4|bp3d_m:FJ3165": {
+        "mean_mm": 1.5782385288932317,
+        "p95_mm": 4.0962752032607055,
+        "source_to_target_mean_mm": 1.3827131298584976,
+        "target_to_source_mean_mm": 1.773763927927966,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.0381816261055332,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3165"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -38.730124200873455,
+            -75.16082428911591,
+            -753.8166580365865
+          ],
+          [
+            48.46148253489805,
+            7.275595528379029,
+            -707.5675698458288
+          ]
+        ]
+      },
+      "vertebrae_L5|female_atlas:VH_F_lumbar_vertebra_5": {
+        "mean_mm": 1.8023000503123394,
+        "p95_mm": 4.954530729611887,
+        "source_to_target_mean_mm": 1.5178442971514485,
+        "target_to_source_mean_mm": 2.0867558034732303,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.919644377015942,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:VH_F_lumbar_vertebra_5"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -38.48581736846981,
+            -76.2964971323675,
+            -777.9128754956047
+          ],
+          [
+            49.81941649574859,
+            8.263286492639182,
+            -733.4852868298307
+          ]
+        ]
+      },
+      "vertebrae_L5|female_atlas:BP3D_FJ3168": {
+        "mean_mm": 1.9891718258693711,
+        "p95_mm": 5.312081520965043,
+        "source_to_target_mean_mm": 1.7295574023304954,
+        "target_to_source_mean_mm": 2.2487862494082473,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.0837755042631132,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3168"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -37.884310597605314,
+            -70.90676083094468,
+            -782.295186944189
+          ],
+          [
+            55.164706245709475,
+            6.501420374622256,
+            -735.0948622479939
+          ]
+        ]
+      },
+      "vertebrae_L5|bp3d_m:FJ3168": {
+        "mean_mm": 1.6364303471911728,
+        "p95_mm": 4.114816940182518,
+        "source_to_target_mean_mm": 1.5102138521147732,
+        "target_to_source_mean_mm": 1.762646842267572,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.015450012843231,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3168"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -43.49455872469837,
+            -73.18775301099656,
+            -782.1558524685088
+          ],
+          [
+            58.56710767294484,
+            7.745679032488837,
+            -735.6410159914338
+          ]
+        ]
+      },
+      "rib_left_1|female_atlas:BP3D_FJ3228": {
+        "mean_mm": 2.075251792075269,
+        "p95_mm": 8.404732467854725,
+        "source_to_target_mean_mm": 1.009933425147371,
+        "target_to_source_mean_mm": 3.140570159003167,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9946402784779727,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3228"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -68.05228690945472,
+            -19.77837728414015,
+            -358.7149756994834
+          ],
+          [
+            -29.54717724251975,
+            38.58768010433727,
+            -302.48315527999466
+          ]
+        ]
+      },
+      "rib_left_1|bp3d_m:FJ3228": {
+        "mean_mm": 1.869079062583145,
+        "p95_mm": 6.356036913854867,
+        "source_to_target_mean_mm": 0.9730987433701273,
+        "target_to_source_mean_mm": 2.7650593817961626,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9048012720217267,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3228"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -67.59742395875006,
+            -22.947502956025172,
+            -358.2921664826744
+          ],
+          [
+            -25.17932062778425,
+            37.12244319232908,
+            -301.00598540616807
+          ]
+        ]
+      },
+      "rib_left_2|female_atlas:BP3D_FJ3229": {
+        "mean_mm": 2.513129131822169,
+        "p95_mm": 11.415008609279301,
+        "source_to_target_mean_mm": 1.5834814573145932,
+        "target_to_source_mean_mm": 3.4427768063297437,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9372541042264161,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3229"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -100.18110394794947,
+            -49.30946195085201,
+            -381.8852103740646
+          ],
+          [
+            -42.1373489665358,
+            61.44713956584404,
+            -314.80729837376725
+          ]
+        ]
+      },
+      "rib_left_2|bp3d_m:FJ3229": {
+        "mean_mm": 2.0515047469441714,
+        "p95_mm": 6.5506594601760835,
+        "source_to_target_mean_mm": 1.5513148312477991,
+        "target_to_source_mean_mm": 2.5516946626405437,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8968384496615032,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3229"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -102.46013512679832,
+            -49.09650681372963,
+            -379.66771100758143
+          ],
+          [
+            -30.393415882529457,
+            61.672617251389354,
+            -311.74268466841835
+          ]
+        ]
+      },
+      "rib_left_3|female_atlas:BP3D_FJ3230": {
+        "mean_mm": 3.374171401227698,
+        "p95_mm": 16.450660495169963,
+        "source_to_target_mean_mm": 2.2287546518385604,
+        "target_to_source_mean_mm": 4.519588150616836,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8695581664042117,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3230"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -114.30707543405197,
+            -58.37084275438248,
+            -409.414098082005
+          ],
+          [
+            -47.709362435715406,
+            62.083211202649636,
+            -337.286622938758
+          ]
+        ]
+      },
+      "rib_left_3|bp3d_m:FJ3230": {
+        "mean_mm": 1.9979520218927311,
+        "p95_mm": 6.800332010365651,
+        "source_to_target_mean_mm": 1.8913123747466487,
+        "target_to_source_mean_mm": 2.104591669038814,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8880415837824708,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3230"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -116.33189656655438,
+            -61.71627158439725,
+            -412.459485474992
+          ],
+          [
+            -31.150238067542546,
+            67.58457239805327,
+            -335.7088215374314
+          ]
+        ]
+      },
+      "rib_left_4|female_atlas:BP3D_FJ3231": {
+        "mean_mm": 3.8298215320849334,
+        "p95_mm": 18.214190764952345,
+        "source_to_target_mean_mm": 2.7792901445376077,
+        "target_to_source_mean_mm": 4.8803529196322595,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8450972073424993,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3231"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -123.74283075366566,
+            -64.92207010390116,
+            -435.11954206360053
+          ],
+          [
+            -47.23615744538739,
+            65.86630829906777,
+            -351.57634796832394
+          ]
+        ]
+      },
+      "rib_left_4|bp3d_m:FJ3231": {
+        "mean_mm": 1.7049863088705708,
+        "p95_mm": 4.573157535352868,
+        "source_to_target_mean_mm": 1.8708911555888594,
+        "target_to_source_mean_mm": 1.539081462152282,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9014670738071225,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3231"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -122.74488648655316,
+            -72.36600885491669,
+            -445.0774738753367
+          ],
+          [
+            -25.18125803014901,
+            75.57148883854802,
+            -348.7288286493521
+          ]
+        ]
+      },
+      "rib_left_5|female_atlas:BP3D_FJ3232": {
+        "mean_mm": 5.176553960541369,
+        "p95_mm": 22.080132274719773,
+        "source_to_target_mean_mm": 3.274751221934884,
+        "target_to_source_mean_mm": 7.078356699147854,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8252102569033521,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3232"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -128.31391188707596,
+            -67.62884755141053,
+            -471.4103948975128
+          ],
+          [
+            -50.76048826878758,
+            65.06005593415023,
+            -371.14941529224166
+          ]
+        ]
+      },
+      "rib_left_5|bp3d_m:FJ3232": {
+        "mean_mm": 2.613930477326933,
+        "p95_mm": 7.183421133979795,
+        "source_to_target_mean_mm": 2.239746042862964,
+        "target_to_source_mean_mm": 2.9881149117909014,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9075012700643187,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3232"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -124.2065947746117,
+            -78.46623433107143,
+            -484.10359403269683
+          ],
+          [
+            -21.896754187085108,
+            78.44540542443777,
+            -368.3667488073796
+          ]
+        ]
+      },
+      "rib_left_6|female_atlas:BP3D_FJ3233": {
+        "mean_mm": 5.012061633842113,
+        "p95_mm": 26.117378004981934,
+        "source_to_target_mean_mm": 2.7465842029589207,
+        "target_to_source_mean_mm": 7.277539064725306,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9666425939178722,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3233"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -130.20639844482338,
+            -87.18388055325066,
+            -514.1795312045449
+          ],
+          [
+            -35.817493176789526,
+            71.13803674276376,
+            -389.1619547161538
+          ]
+        ]
+      },
+      "rib_left_6|bp3d_m:FJ3233": {
+        "mean_mm": 5.032963451622639,
+        "p95_mm": 26.57896524172625,
+        "source_to_target_mean_mm": 2.7937146882559696,
+        "target_to_source_mean_mm": 7.272212214989309,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8799513053849369,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3233"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -129.41368698987404,
+            -81.55303330829966,
+            -511.3671856870528
+          ],
+          [
+            -18.98340473132967,
+            71.70573318093963,
+            -392.5934724315982
+          ]
+        ]
+      },
+      "rib_left_7|female_atlas:BP3D_FJ3234": {
+        "mean_mm": 6.6181536318933585,
+        "p95_mm": 37.97696296134361,
+        "source_to_target_mean_mm": 3.2271118619695,
+        "target_to_source_mean_mm": 10.009195401817216,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8647058836175129,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3234"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -128.55969937737103,
+            -79.80709041174272,
+            -518.758569763389
+          ],
+          [
+            -22.450673325466596,
+            42.20079490984719,
+            -414.5838134187003
+          ]
+        ]
+      },
+      "rib_left_7|bp3d_m:FJ3234": {
+        "mean_mm": 6.72432333462545,
+        "p95_mm": 35.84945754769177,
+        "source_to_target_mean_mm": 3.64710780192913,
+        "target_to_source_mean_mm": 9.801538867321769,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.7741653102393248,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3234"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -128.8833798403765,
+            -79.87941942277324,
+            -521.4007129094775
+          ],
+          [
+            -23.12553323857253,
+            41.14855330241963,
+            -414.36467431887706
+          ]
+        ]
+      },
+      "rib_left_8|female_atlas:BP3D_FJ3235": {
+        "mean_mm": 5.846775229057136,
+        "p95_mm": 41.754582273895316,
+        "source_to_target_mean_mm": 2.6728157155881176,
+        "target_to_source_mean_mm": 9.020734742526155,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.899438831076787,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3235"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -128.5974895348798,
+            -80.53492085520271,
+            -548.6198054749027
+          ],
+          [
+            -21.590415512407844,
+            32.47340669358567,
+            -446.2174909475068
+          ]
+        ]
+      },
+      "rib_left_8|bp3d_m:FJ3235": {
+        "mean_mm": 5.955300313617289,
+        "p95_mm": 44.52603545621839,
+        "source_to_target_mean_mm": 2.4683322926256612,
+        "target_to_source_mean_mm": 9.442268334608917,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.7885496787230664,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3235"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -128.97416993475792,
+            -80.80597108370873,
+            -545.2726914882078
+          ],
+          [
+            -20.494972201995722,
+            31.92645896183214,
+            -446.3034133860231
+          ]
+        ]
+      },
+      "rib_left_9|female_atlas:BP3D_FJ3236": {
+        "mean_mm": 2.3226466038587814,
+        "p95_mm": 6.382066618940806,
+        "source_to_target_mean_mm": 2.473448404553691,
+        "target_to_source_mean_mm": 2.1718448031638724,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9690833002431799,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3236"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -136.7806763624459,
+            -82.63434959383457,
+            -568.933062687401
+          ],
+          [
+            -13.217881175718048,
+            14.295806294276275,
+            -471.48917424508295
+          ]
+        ]
+      },
+      "rib_left_9|bp3d_m:FJ3236": {
+        "mean_mm": 2.1353340307283832,
+        "p95_mm": 5.479864970877433,
+        "source_to_target_mean_mm": 2.8718944178717214,
+        "target_to_source_mean_mm": 1.3987736435850446,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9326101944524943,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3236"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -132.50831661966305,
+            -83.3916844764237,
+            -581.2669710902037
+          ],
+          [
+            -4.765440508157212,
+            20.443201923611042,
+            -470.79190993434275
+          ]
+        ]
+      },
+      "rib_left_10|female_atlas:BP3D_FJ3225": {
+        "mean_mm": 2.991603810645204,
+        "p95_mm": 8.187599363580375,
+        "source_to_target_mean_mm": 2.594238022172059,
+        "target_to_source_mean_mm": 3.3889695991183486,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9996784440782126,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3225"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -130.77569882665728,
+            -83.30513274872825,
+            -612.4608200708923
+          ],
+          [
+            -20.15299040517931,
+            -1.543266141581455,
+            -497.8594018271847
+          ]
+        ]
+      },
+      "rib_left_10|bp3d_m:FJ3225": {
+        "mean_mm": 2.194467342113261,
+        "p95_mm": 5.132856991206273,
+        "source_to_target_mean_mm": 2.9956917169698767,
+        "target_to_source_mean_mm": 1.3932429672566455,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.0389714454947738,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3225"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -130.30841378370278,
+            -83.82230772087465,
+            -627.3820287199599
+          ],
+          [
+            -6.418299084530716,
+            13.416136551242943,
+            -490.31827945629135
+          ]
+        ]
+      },
+      "rib_left_11|female_atlas:BP3D_FJ3226": {
+        "mean_mm": 3.093100635132611,
+        "p95_mm": 10.813441841087153,
+        "source_to_target_mean_mm": 2.9624198176001353,
+        "target_to_source_mean_mm": 3.223781452665087,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.056886422922521,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3226"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -120.05668271849405,
+            -84.51754090999542,
+            -639.970608382007
+          ],
+          [
+            -29.123146411346966,
+            -14.83312067729662,
+            -535.7083987909843
+          ]
+        ]
+      },
+      "rib_left_11|bp3d_m:FJ3226": {
+        "mean_mm": 2.3337944929030887,
+        "p95_mm": 8.493983470165837,
+        "source_to_target_mean_mm": 2.965880615646928,
+        "target_to_source_mean_mm": 1.7017083701592501,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.064886211435277,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3226"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -124.50809972660389,
+            -83.25041460370755,
+            -645.0178446977234
+          ],
+          [
+            -18.423804011917493,
+            -8.404026200517563,
+            -526.96684347255
+          ]
+        ]
+      },
+      "rib_left_12|female_atlas:BP3D_FJ3227": {
+        "mean_mm": 7.075404955970634,
+        "p95_mm": 30.005369585645546,
+        "source_to_target_mean_mm": 1.2151309937666201,
+        "target_to_source_mean_mm": 12.935678918174647,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.5181177069744495,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3227"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -74.18972422224793,
+            -75.02777987798237,
+            -621.599721162274
+          ],
+          [
+            -44.97688857274643,
+            -62.00765142507271,
+            -581.2838177756186
+          ]
+        ]
+      },
+      "rib_left_12|bp3d_m:FJ3227": {
+        "mean_mm": 5.95730786847531,
+        "p95_mm": 26.01631046960124,
+        "source_to_target_mean_mm": 1.4757636586594003,
+        "target_to_source_mean_mm": 10.43885207829122,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.5615939386206246,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3227"
+        ],
+        "aligned_bounds_mm": [
+          [
+            -74.82925734999172,
+            -75.87154434078718,
+            -624.4543429880587
+          ],
+          [
+            -40.036989046425006,
+            -59.394778227338435,
+            -575.9837080703373
+          ]
+        ]
+      },
+      "rib_right_1|female_atlas:BP3D_FJ3334": {
+        "mean_mm": 2.197413860281009,
+        "p95_mm": 8.528932216026774,
+        "source_to_target_mean_mm": 1.0434760645151477,
+        "target_to_source_mean_mm": 3.351351656046871,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9909561641791839,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3334"
+        ],
+        "aligned_bounds_mm": [
+          [
+            42.478435668933884,
+            -18.82082240769103,
+            -368.59232597018377
+          ],
+          [
+            80.14241700834643,
+            35.824675309563105,
+            -309.1913175528971
+          ]
+        ]
+      },
+      "rib_right_1|bp3d_m:FJ3334": {
+        "mean_mm": 1.7677680102550337,
+        "p95_mm": 5.969510255980696,
+        "source_to_target_mean_mm": 0.9859135353975781,
+        "target_to_source_mean_mm": 2.5496224851124896,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9184052126626624,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3334"
+        ],
+        "aligned_bounds_mm": [
+          [
+            37.867967087335,
+            -22.148873074890925,
+            -367.8551407893446
+          ],
+          [
+            79.09962886066798,
+            35.7265025695215,
+            -306.4941184288746
+          ]
+        ]
+      },
+      "rib_right_2|female_atlas:BP3D_FJ3336": {
+        "mean_mm": 2.7468333006796,
+        "p95_mm": 13.071360770592637,
+        "source_to_target_mean_mm": 1.538824680431337,
+        "target_to_source_mean_mm": 3.9548419209278634,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8833815492427103,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3336"
+        ],
+        "aligned_bounds_mm": [
+          [
+            55.7498223168944,
+            -46.37476951271769,
+            -392.53578476470466
+          ],
+          [
+            109.25817799664989,
+            54.655877761366796,
+            -323.6666542159908
+          ]
+        ]
+      },
+      "rib_right_2|bp3d_m:FJ3336": {
+        "mean_mm": 2.0823892171197196,
+        "p95_mm": 7.15514859295374,
+        "source_to_target_mean_mm": 1.4421527302005428,
+        "target_to_source_mean_mm": 2.7226257040388964,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8557442335756141,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3336"
+        ],
+        "aligned_bounds_mm": [
+          [
+            45.140382250821744,
+            -45.705042556084535,
+            -390.9752026529288
+          ],
+          [
+            111.5631242843461,
+            56.21693660256384,
+            -320.1396982177998
+          ]
+        ]
+      },
+      "rib_right_3|female_atlas:BP3D_FJ3338": {
+        "mean_mm": 3.203301951729403,
+        "p95_mm": 14.795833628971238,
+        "source_to_target_mean_mm": 2.1704699899680437,
+        "target_to_source_mean_mm": 4.236133913490762,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8506006148240575,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3338"
+        ],
+        "aligned_bounds_mm": [
+          [
+            57.29559419079335,
+            -53.83008410863579,
+            -425.83609461355127
+          ],
+          [
+            119.40391829456767,
+            57.726318462502476,
+            -344.5382074103036
+          ]
+        ]
+      },
+      "rib_right_3|bp3d_m:FJ3338": {
+        "mean_mm": 1.8948386233716232,
+        "p95_mm": 6.233981270361272,
+        "source_to_target_mean_mm": 1.8511080755750262,
+        "target_to_source_mean_mm": 1.93856917116822,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.866989459089513,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3338"
+        ],
+        "aligned_bounds_mm": [
+          [
+            42.443404885266055,
+            -56.71888419760719,
+            -428.42473510992914
+          ],
+          [
+            122.0194722273097,
+            62.779329804162764,
+            -341.6620237392103
+          ]
+        ]
+      },
+      "rib_right_4|female_atlas:BP3D_FJ3340": {
+        "mean_mm": 3.671974241786286,
+        "p95_mm": 18.18566185749895,
+        "source_to_target_mean_mm": 2.4941134602718367,
+        "target_to_source_mean_mm": 4.849835023300736,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8242573691074232,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3340"
+        ],
+        "aligned_bounds_mm": [
+          [
+            58.02049864594193,
+            -60.34916601285498,
+            -453.5062310695597
+          ],
+          [
+            129.87681030440356,
+            60.31337938609967,
+            -360.35571414903234
+          ]
+        ]
+      },
+      "rib_right_4|bp3d_m:FJ3340": {
+        "mean_mm": 1.791328766117066,
+        "p95_mm": 5.495252839497848,
+        "source_to_target_mean_mm": 1.8271091376099524,
+        "target_to_source_mean_mm": 1.7555483946241792,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8639948310863989,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3340"
+        ],
+        "aligned_bounds_mm": [
+          [
+            39.85550461995595,
+            -66.8838095010386,
+            -463.2805230479019
+          ],
+          [
+            129.26052392889878,
+            66.92969256200658,
+            -357.5303890067562
+          ]
+        ]
+      },
+      "rib_right_5|female_atlas:BP3D_FJ3342": {
+        "mean_mm": 5.972172012602616,
+        "p95_mm": 25.30108418518631,
+        "source_to_target_mean_mm": 3.1080597492734086,
+        "target_to_source_mean_mm": 8.836284275931824,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.7910435110213094,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3342"
+        ],
+        "aligned_bounds_mm": [
+          [
+            65.5653968123649,
+            -59.51738942169464,
+            -485.27917864384403
+          ],
+          [
+            134.32138953279244,
+            61.153748786058,
+            -379.9298908405485
+          ]
+        ]
+      },
+      "rib_right_5|bp3d_m:FJ3342": {
+        "mean_mm": 2.865556407701363,
+        "p95_mm": 11.778789921471727,
+        "source_to_target_mean_mm": 2.2091287458978615,
+        "target_to_source_mean_mm": 3.521984069504865,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8865965935160918,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3342"
+        ],
+        "aligned_bounds_mm": [
+          [
+            37.14476748365564,
+            -73.81184364213456,
+            -497.9118718446888
+          ],
+          [
+            130.83684460987783,
+            72.71350764462325,
+            -374.2671682691451
+          ]
+        ]
+      },
+      "rib_right_6|female_atlas:BP3D_FJ3344": {
+        "mean_mm": 3.0271026615753542,
+        "p95_mm": 10.734702751382123,
+        "source_to_target_mean_mm": 2.709674465224541,
+        "target_to_source_mean_mm": 3.3445308579261677,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.0243117434645517,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3344"
+        ],
+        "aligned_bounds_mm": [
+          [
+            43.57609452860993,
+            -84.41496689717621,
+            -552.2974112745674
+          ],
+          [
+            138.1268229912011,
+            61.063176409473556,
+            -394.29650158647314
+          ]
+        ]
+      },
+      "rib_right_6|bp3d_m:FJ3344": {
+        "mean_mm": 3.4518840272707743,
+        "p95_mm": 10.004852967086345,
+        "source_to_target_mean_mm": 3.2031626320947866,
+        "target_to_source_mean_mm": 3.7006054224467624,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8865235385342194,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3344"
+        ],
+        "aligned_bounds_mm": [
+          [
+            33.28573509389807,
+            -79.58074120550229,
+            -537.2845807347318
+          ],
+          [
+            135.9010476199754,
+            62.8454622534538,
+            -399.86230755716286
+          ]
+        ]
+      },
+      "rib_right_7|female_atlas:BP3D_FJ3346": {
+        "mean_mm": 6.482020890291019,
+        "p95_mm": 34.53724320980686,
+        "source_to_target_mean_mm": 3.4813632364862963,
+        "target_to_source_mean_mm": 9.48267854409574,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8680180852898117,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3346"
+        ],
+        "aligned_bounds_mm": [
+          [
+            36.24237952746512,
+            -78.11213066689108,
+            -527.6279266948636
+          ],
+          [
+            133.25854601340387,
+            51.03478552703977,
+            -425.53163539266166
+          ]
+        ]
+      },
+      "rib_right_7|bp3d_m:FJ3346": {
+        "mean_mm": 5.21116656210595,
+        "p95_mm": 17.939766944899773,
+        "source_to_target_mean_mm": 3.949107042104942,
+        "target_to_source_mean_mm": 6.473226082106959,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.818043146098069,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3346"
+        ],
+        "aligned_bounds_mm": [
+          [
+            32.546251540247596,
+            -80.66644184397629,
+            -545.8395678739614
+          ],
+          [
+            137.20316829203364,
+            43.90061382703371,
+            -423.71070333421056
+          ]
+        ]
+      },
+      "rib_right_8|female_atlas:BP3D_FJ3347": {
+        "mean_mm": 5.487689824937733,
+        "p95_mm": 42.31754720321335,
+        "source_to_target_mean_mm": 2.3687227187437765,
+        "target_to_source_mean_mm": 8.60665693113169,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.8843892256500441,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3347"
+        ],
+        "aligned_bounds_mm": [
+          [
+            32.4441894520391,
+            -79.60915596998386,
+            -550.6004558604602
+          ],
+          [
+            134.34282416341188,
+            35.04873618111314,
+            -450.01308012666277
+          ]
+        ]
+      },
+      "rib_right_8|bp3d_m:FJ3347": {
+        "mean_mm": 5.604575709211444,
+        "p95_mm": 43.59624659717734,
+        "source_to_target_mean_mm": 2.2989299837279336,
+        "target_to_source_mean_mm": 8.910221434694956,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.7755917905743321,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3347"
+        ],
+        "aligned_bounds_mm": [
+          [
+            31.480511898503295,
+            -79.62243641684968,
+            -548.3252184145911
+          ],
+          [
+            134.82528963081418,
+            34.04737181480435,
+            -450.192069584841
+          ]
+        ]
+      },
+      "rib_right_9|female_atlas:BP3D_FJ3348": {
+        "mean_mm": 2.679020165027344,
+        "p95_mm": 8.645649725625754,
+        "source_to_target_mean_mm": 2.873789423499552,
+        "target_to_source_mean_mm": 2.484250906555136,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9850331020748895,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3348"
+        ],
+        "aligned_bounds_mm": [
+          [
+            21.971704802485874,
+            -82.33781027846203,
+            -573.6577790656333
+          ],
+          [
+            146.45311514160716,
+            17.856854174197736,
+            -473.75640988922805
+          ]
+        ]
+      },
+      "rib_right_9|bp3d_m:FJ3348": {
+        "mean_mm": 2.2916853836519007,
+        "p95_mm": 6.261317006253194,
+        "source_to_target_mean_mm": 3.1398880781687324,
+        "target_to_source_mean_mm": 1.443482689135069,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9402459245107837,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3348"
+        ],
+        "aligned_bounds_mm": [
+          [
+            14.950808863869469,
+            -82.91908422891787,
+            -585.6057554749885
+          ],
+          [
+            139.9294194492819,
+            25.33356467812483,
+            -471.37958941339707
+          ]
+        ]
+      },
+      "rib_right_10|female_atlas:BP3D_FJ3330": {
+        "mean_mm": 3.5872086348000756,
+        "p95_mm": 11.48696689875805,
+        "source_to_target_mean_mm": 3.0227407053246673,
+        "target_to_source_mean_mm": 4.151676564275483,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9884599955265475,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3330"
+        ],
+        "aligned_bounds_mm": [
+          [
+            31.50191330982375,
+            -83.34456659336917,
+            -616.3002388006487
+          ],
+          [
+            140.89007653484595,
+            0.2787421670631147,
+            -504.68340046556
+          ]
+        ]
+      },
+      "rib_right_10|bp3d_m:FJ3330": {
+        "mean_mm": 2.6993417583143504,
+        "p95_mm": 8.64827426375311,
+        "source_to_target_mean_mm": 3.638526222448136,
+        "target_to_source_mean_mm": 1.7601572941805648,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.0497291553942016,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3330"
+        ],
+        "aligned_bounds_mm": [
+          [
+            14.787105901282004,
+            -84.13843716159516,
+            -631.3928654880302
+          ],
+          [
+            141.5931072378471,
+            16.045625585565688,
+            -495.7523527696843
+          ]
+        ]
+      },
+      "rib_right_11|female_atlas:BP3D_FJ3331": {
+        "mean_mm": 4.519383751339178,
+        "p95_mm": 19.039337944512493,
+        "source_to_target_mean_mm": 3.639835683950114,
+        "target_to_source_mean_mm": 5.398931818728243,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.9727343944243854,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3331"
+        ],
+        "aligned_bounds_mm": [
+          [
+            49.280120082947406,
+            -81.85554041304258,
+            -644.4092695380873
+          ],
+          [
+            126.91723219578577,
+            -13.520292244033797,
+            -545.1754856149023
+          ]
+        ]
+      },
+      "rib_right_11|bp3d_m:FJ3331": {
+        "mean_mm": 2.8453523336019235,
+        "p95_mm": 11.597720730004514,
+        "source_to_target_mean_mm": 3.4696357318017204,
+        "target_to_source_mean_mm": 2.2210689354021267,
+        "samples_each_direction": 15000,
+        "uniform_scale": 1.0723988737533847,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3331"
+        ],
+        "aligned_bounds_mm": [
+          [
+            31.019890362619876,
+            -83.17229580814625,
+            -655.3624925164747
+          ],
+          [
+            131.73355792687858,
+            -4.098184282881597,
+            -532.766018546265
+          ]
+        ]
+      },
+      "rib_right_12|female_atlas:BP3D_FJ3332": {
+        "mean_mm": 7.7246553297822995,
+        "p95_mm": 32.82389050769822,
+        "source_to_target_mean_mm": 1.405105959370246,
+        "target_to_source_mean_mm": 14.044204700194353,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.5199997253599877,
+        "iterations": 50,
+        "parts": [
+          "female_atlas:BP3D_FJ3332"
+        ],
+        "aligned_bounds_mm": [
+          [
+            54.62953126519005,
+            -72.22382060200434,
+            -634.2084649900426
+          ],
+          [
+            83.14692645574172,
+            -61.372317588613726,
+            -592.2931209037841
+          ]
+        ]
+      },
+      "rib_right_12|bp3d_m:FJ3332": {
+        "mean_mm": 6.545018454171748,
+        "p95_mm": 29.03907635595676,
+        "source_to_target_mean_mm": 1.5711262277030402,
+        "target_to_source_mean_mm": 11.518910680640456,
+        "samples_each_direction": 15000,
+        "uniform_scale": 0.5542805271288036,
+        "iterations": 50,
+        "parts": [
+          "bp3d_m:FJ3332"
+        ],
+        "aligned_bounds_mm": [
+          [
+            50.55529311564726,
+            -73.68965255617738,
+            -636.6039615423916
+          ],
+          [
+            83.85141554403027,
+            -57.20932011325755,
+            -587.6047968249128
+          ]
+        ]
+      }
+    }
+  },
+  "method_limits": [
+    "ICP hit its 50-iteration cap in all comparisons; the final transform is recorded but convergence was not reached. Distances may therefore be upper estimates/local minima.",
+    "Surface distances use finite area-uniform samples: pelvis 30000 samples per direction; other structures 15000 per direction. p95 is over the concatenated directed samples.",
+    "Pelvic NLM mask includes all labeled voxels; hip_left has one disconnected 30-voxel component at z≈−1261 mm. It is retained in metrics and clipped only in figure zoom.",
+    "F2 proxies compare whole meshes, not isolated articular regions; F1/F3 volume criteria remain not verified due open surfaces."
+  ],
+  "sha256": {
+    "hra/externo/female-atlas/public/models/atlas.json": "5fec63b2ebcb76ecd9c33027ed725e8ec0a7a76b756f72681285410072ae5c51",
+    "hra/nlm/bruto/saida/segmentacao.nii.gz": "21a8c7c7e81dcc6554706fcbb5e6a5ade66d99a3880535358f1c981f61ad8830",
+    "pesquisa/resultados/EXP-0022/bp3d-esqueletico.glb": "ff2c28fd642ed8c091466ddc2f9513ada985439c0613bf7de080c9253ae1c1f5",
+    "pesquisa/resultados/EXP-0022/pelve_frente.png": "b6e7c2d416e4760a095fcd12befa0c3b8d327605713a4dd53c4c65d9e58cd2d5",
+    "pesquisa/resultados/EXP-0022/pelve_de_cima.png": "c3125a9e35e4d89ff6f99a9907fec3d0f96ef9d280dad47d58c1fb653459fdf3",
+    "pesquisa/resultados/EXP-0022/proveniencia.csv": "d87d97aa35c1cd4754a872597bf96ddd0815425ea24a64bb917e44c9d37fdb92",
+    "pesquisa/resultados/EXP-0022/suplementar.json": "93a77062029b1fbf5cb2a880b7640242a1d398cbbf278a396d91a3d226f3a406",
+    "pesquisa/resultados/EXP-0022/suplementar_duplicadas.csv": "00f6c239ef03f45d3a6359a4c0eb1a3c4de66c398853db0206ad0f93f43f1278"
+  },
+  "runtime": {
+    "python": "3.14.4",
+    "numpy": "2.4.6",
+    "trimesh": "5.2.2",
+    "scipy": "1.18.1",
+    "nibabel": "5.5.0",
+    "seed": 220022,
+    "execution": "CPU; no GPU processing"
+  },
+  "reviewer_correction": {
+    "reviewer": "Claude Code",
+    "evidence": "hra/catalogo_hra.csv contains all 7 Yao_ rows under sistema_hra=VH_F_lymphatic_system and orgao=Yao_lymph_node; it also contains 282 Allen_ rows. The 841 HRA-origin meshes map to the HRA united-female source group.",
+    "provenance_rows": 3004,
+    "rows_with_empty_transformation": 0,
+    "hra_catalog_matches": 831,
+    "hra_catalog_missing_rows": 10,
+    "corrected_C1": "pass",
+    "corrected_C2": "pass",
+    "note": "This is a reviewer correction to the initial report assessment; the original verdict table in RELATORIO.md is retained unchanged."
+  },
+  "post_hoc_supplement": {
+    "label": "análise pós-hoc, não altera critérios nem veredito",
+    "data": {
+      "a_hips_only": {
+        "target_labels": {
+          "labels": [
+            "hip_left",
+            "hip_right"
+          ],
+          "ids": [
+            77,
+            78
+          ],
+          "voxel_count": 225463,
+          "surface_faces": 165584,
+          "bbox_world_mm": [
+            [
+              -142.5,
+              -84.0,
+              -1261.75
+            ],
+            [
+              156.0,
+              70.5,
+              -736.75
+            ]
+          ]
+        },
+        "sources": {
+          "female_atlas": [
+            "BP3D_FJ3152",
+            "BP3D_FJ3288"
+          ],
+          "bp3d_m": [
+            "FJ3152",
+            "FJ3288"
+          ]
+        },
+        "female_atlas": {
+          "mean_mm": 5.078001374038544,
+          "p95_mm": 14.252698678280264,
+          "source_to_target_mean_mm": 4.315171078951824,
+          "target_to_source_mean_mm": 5.840831669125263,
+          "uniform_scale": 1.0275573880157736,
+          "iterations": 135,
+          "converged": true,
+          "last_delta": 0.0,
+          "samples_each_direction": 30000,
+          "rotation": [
+            [
+              -0.9999034242010081,
+              0.007174337434152704,
+              0.011902569196577735
+            ],
+            [
+              0.010839299824873893,
+              -0.13341961772573627,
+              0.9910003608401086
+            ],
+            [
+              0.00869780721819555,
+              0.9910336697046668,
+              0.1333289678250595
+            ]
+          ],
+          "translation_mm": [
+            1.9833999168181293,
+            204.36848246156651,
+            -1750.7586941005927
+          ],
+          "aligned_bounds_mm": [
+            [
+              -126.93815097898649,
+              -70.03380353974441,
+              -951.3112233705956
+            ],
+            [
+              144.18886505182076,
+              72.46500002872895,
+              -744.9280057787522
+            ]
+          ]
+        },
+        "bp3d_m": {
+          "mean_mm": 4.203593467747156,
+          "p95_mm": 9.98615292712592,
+          "source_to_target_mean_mm": 3.9950492102281423,
+          "target_to_source_mean_mm": 4.41213772526617,
+          "uniform_scale": 1.0375389385231861,
+          "iterations": 87,
+          "converged": true,
+          "last_delta": 2.000580707114743e-17,
+          "samples_each_direction": 30000,
+          "rotation": [
+            [
+              -0.9999095410902684,
+              0.010495528473384714,
+              0.00841151108383033
+            ],
+            [
+              0.007907762194651701,
+              -0.047148314718009725,
+              0.9988565981742947
+            ],
+            [
+              0.010880116438800944,
+              0.9988327589247943,
+              0.04706105358958999
+            ]
+          ],
+          "translation_mm": [
+            4.966796602809824,
+            33.13609191015224,
+            -913.1843976043853
+          ],
+          "aligned_bounds_mm": [
+            [
+              -144.38701602959154,
+              -76.44458352358973,
+              -952.0813009226315
+            ],
+            [
+              156.06310009063964,
+              71.44569151301226,
+              -736.3694327546744
+            ]
+          ]
+        },
+        "mean_reduction_percent": -20.801438412169084,
+        "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
+      },
+      "b_hips_plus_bp3d_sacrum": {
+        "target_labels": {
+          "labels": [
+            "hip_left",
+            "hip_right",
+            "sacrum"
+          ],
+          "ids": [
+            25,
+            77,
+            78
+          ],
+          "voxel_count": 275592,
+          "surface_faces": 213978,
+          "bbox_world_mm": [
+            [
+              -142.5,
+              -102.0,
+              -1261.75
+            ],
+            [
+              156.0,
+              70.5,
+              -736.75
+            ]
+          ]
+        },
+        "sources": {
+          "female_atlas": [
+            "BP3D_FJ3152",
+            "BP3D_FJ3288",
+            "BP3D_FJ3393"
+          ],
+          "bp3d_m": [
+            "FJ3152",
+            "FJ3288",
+            "FJ3393"
+          ]
+        },
+        "female_atlas": {
+          "mean_mm": 5.830474620091285,
+          "p95_mm": 15.670367804737188,
+          "source_to_target_mean_mm": 5.821724745226797,
+          "target_to_source_mean_mm": 5.839224494955772,
+          "uniform_scale": 1.064012813949623,
+          "iterations": 152,
+          "converged": true,
+          "last_delta": 0.0,
+          "samples_each_direction": 30000,
+          "rotation": [
+            [
+              -0.9999779618146221,
+              0.006183665670557216,
+              0.0024162292832961276
+            ],
+            [
+              0.0015250243198060545,
+              -0.14026454375861214,
+              0.9901128885460551
+            ],
+            [
+              0.006461438376916208,
+              0.9900947530630916,
+              0.140252022342062
+            ]
+          ],
+          "translation_mm": [
+            2.155758410914369,
+            215.80387520312627,
+            -1773.532503984808
+          ],
+          "aligned_bounds_mm": [
+            [
+              -131.92552712446746,
+              -88.47242273282836,
+              -947.1960739778093
+            ],
+            [
+              148.87848367383637,
+              72.98778031965259,
+              -733.8284625423889
+            ]
+          ]
+        },
+        "bp3d_m": {
+          "mean_mm": 5.284401288956832,
+          "p95_mm": 14.382901338453472,
+          "source_to_target_mean_mm": 5.409650409149732,
+          "target_to_source_mean_mm": 5.1591521687639315,
+          "uniform_scale": 1.0564049847685284,
+          "iterations": 91,
+          "converged": true,
+          "last_delta": 0.0,
+          "samples_each_direction": 30000,
+          "rotation": [
+            [
+              -0.9999726428166434,
+              -0.0039009846067043184,
+              0.006284579333269208
+            ],
+            [
+              0.006455571556065495,
+              -0.04548910101684036,
+              0.9989439760489897
+            ],
+            [
+              -0.0036109852093876866,
+              0.9989572183070593,
+              0.0455130396484308
+            ]
+          ],
+          "translation_mm": [
+            7.85919472770144,
+            31.929525973563173,
+            -912.0040887092366
+          ],
+          "aligned_bounds_mm": [
+            [
+              -146.326338895689,
+              -84.92357833364316,
+              -951.361079713298
+            ],
+            [
+              159.67945527231163,
+              70.93281962508252,
+              -732.8622030173992
+            ]
+          ]
+        },
+        "mean_reduction_percent": -10.333684012143806,
+        "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
+      },
+      "c_duplicates": {
+        "exact_duplicate_structure_groups": 70,
+        "partial_parent_fragment_overlap_groups": 2,
+        "total_reported_groups": 72,
+        "csv": "suplementar_duplicadas.csv",
+        "exact_groups_by_basis": {
+          "shared_FMA_concept": 45,
+          "axial_name_mapping": 25
+        }
+      },
+      "method": {
+        "analysis": "post-hoc, not part of fixed success criteria",
+        "seed": 220022,
+        "surface_samples_each_direction": 30000,
+        "sampling": "same area-uniform triangle sampling, cKDTree, concatenated bidirectional surface distances as baseline pelvis analysis",
+        "ICP": "same initial local-to-RAS axis map, proper rotation, uniform scale, translation, trim=0.12, delta tolerance=1e-7; max iterations raised from 50 to 200; convergence reported explicitly",
+        "python": "3.14.4",
+        "numpy": "2.4.6",
+        "trimesh": "5.2.2",
+        "scipy": "1.18.1"
+      }
+    }
+  }
+}

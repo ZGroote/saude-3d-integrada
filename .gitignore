@@ -14,3 +14,6 @@ hra/denver/bruto/
 hra/totalseg/bruto/
 hra/nlm/bruto/
 hra/externo/
+
+# EXP-0022: GLB decodificado de atlas/ (regerável com hra/alinhar/decoder_glb.mjs)
+pesquisa/resultados/EXP-0022/bp3d-esqueletico.glb
