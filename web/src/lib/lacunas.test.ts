@@ -10,6 +10,15 @@ describe("lacunas do atlas feminino", () => {
     expect(lacunasDaBusca("bp3d-m", "4.0-1", "isq")).toEqual([]);
   });
 
+  it("reconhece pulmão no bp3d-m e orienta o registro pela árvore brônquica", () => {
+    expect(lacunasDaBusca("bp3d-m", "4.0-1", "pulm")).toEqual([{
+      nome: "Pulmão",
+      termos: ["pulmao", "pulmoes", "lung"],
+      parcial: "só a árvore brônquica está no corpo",
+      detalhe: "Registre no brônquio ou sem local e descreva na observação.",
+    }]);
+  });
+
   it("ajusta só os nomes das malhas do ílio e preserva a identificação estrutural", () => {
     const entrada = {
       malha: "VH_F_ilium_compact_bone_R", estrutura: "UBERON:0001274", lateralidade: "right",

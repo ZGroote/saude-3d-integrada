@@ -20,3 +20,12 @@ Não alterar `web/`, `packages/`, migrações, `pesquisa/`. Não commitar.
 
 ## Relatório
 Responder com: arquivos alterados, saída resumida do `--seco` (malha escolhida por achado e o que ficou sem local), e qualquer função do banco cuja assinatura não bateu com o `PACIENTES.md`.
+
+## Rodada 2 do contrato (após o relatório do `--seco`)
+As três incompatibilidades apontadas estão resolvidas assim (o `PACIENTES.md` foi atualizado):
+6. **Malhas fixas:** usar exatamente o ID de malha indicado na coluna "Local" do `PACIENTES.md` (ex.: `FJ2428`, `VH_F_right_posterior_basal_bronchopulmonary_segment`); tirar a busca por nome. Malha ausente no índice = erro (não cair para sem local).
+7. **Encerrar rodadas anteriores:** exportar de `etapa4_comum.mjs` o cliente da chave de serviço (hoje `admin`, renomear o export para `servico`) e usá-lo **só para leitura**: vínculos ativos (`ate IS NULL` ou futuro) de pacientes com CNS `79` de outra rodada, e das crianças nascidas das gestações dessas mães (`nascimentos.crianca_id` via `gestacoes.mae_id`). Encerrar cada um com `encerrar_vinculo(id)` logado como o admin da unidade do vínculo. Toda escrita continua pelas funções.
+8. **P07 sem CNS:** a criança é criada por `registrar_nascimento` (Obstetrícia) com peso 3150, idade gestacional 39, Apgar 5 = 9; idempotência pelo nascimento já existente na gestação da P06 da rodada. Depois vincular P07 à Pediatria com `vincular_paciente` (admin da Pediatria).
+9. **Idempotência:** paciente por CNS (leitura de serviço); achado por observação `AVAL-NN-<paciente>-<CID>` em `listar_achados`; gestação por mãe + DUM.
+10. **Lacuna nova (web):** em `web/src/lib/lacunas.ts`, `"bp3d-m/4.0-1": [{ nome: "Pulmão", termos: ["pulmao", "pulmoes", "lung"], parcial: "só a árvore brônquica está no corpo" }]`. Como a mensagem parcial do `BuscaEstrutura` hoje cita púbis/ísquio/acetábulo fixo, passe a texto do próprio dado: acrescente o campo opcional `detalhe` à `Lacuna` e use-o (hra-f quadril: "Púbis, ísquio e acetábulo não existem neste corpo."; bp3d-m pulmão: "Registre no brônquio ou sem local e descreva na observação."). Teste vitest para "pulm" no `bp3d-m`.
+11. Verificar: `--seco` com as malhas fixas (todas resolvidas), tsc/vitest do web. A carga real o revisor roda.

@@ -14,7 +14,8 @@ INSERT INTO auth.users (id, email) VALUES
   ('20000000-0000-4000-8000-000000000006', 'admin-maternidade@saude3d.invalid'),
   ('20000000-0000-4000-8000-000000000007', 'admin-ubs-substituto@saude3d.invalid'),
   ('20000000-0000-4000-8000-000000000008', 'admin-pediatria@saude3d.invalid'),
-  ('20000000-0000-4000-8000-000000000009', 'pediatria@saude3d.invalid');
+  ('20000000-0000-4000-8000-000000000009', 'pediatria@saude3d.invalid'),
+  ('20000000-0000-4000-8000-00000000000a', 'mfc@saude3d.invalid');
 
 INSERT INTO public.perfis (id, nome, unidade_id, especialidade, papel) VALUES
   ('20000000-0000-4000-8000-000000000001', 'Admin UBS Centro', '10000000-0000-4000-8000-000000000001', NULL, 'admin'),
@@ -25,7 +26,8 @@ INSERT INTO public.perfis (id, nome, unidade_id, especialidade, papel) VALUES
   ('20000000-0000-4000-8000-000000000006', 'Admin Maternidade', '10000000-0000-4000-8000-000000000003', NULL, 'admin'),
   ('20000000-0000-4000-8000-000000000007', 'Admin UBS substituto', '10000000-0000-4000-8000-000000000001', NULL, 'admin'),
   ('20000000-0000-4000-8000-000000000008', 'Admin Pediatria', '10000000-0000-4000-8000-000000000004', NULL, 'admin'),
-  ('20000000-0000-4000-8000-000000000009', 'Profissional Pediatria', '10000000-0000-4000-8000-000000000004', 'pediatria', 'profissional');
+  ('20000000-0000-4000-8000-000000000009', 'Profissional Pediatria', '10000000-0000-4000-8000-000000000004', 'pediatria', 'profissional'),
+  ('20000000-0000-4000-8000-00000000000a', 'Profissional Medicina de Família', '10000000-0000-4000-8000-000000000001', 'medicina_familia', 'profissional');
 
 -- Dados sintéticos aplicados como proprietário durante a instalação do seed.
 -- A aplicação não recebe esses privilégios: suas escritas passam pelas funções.

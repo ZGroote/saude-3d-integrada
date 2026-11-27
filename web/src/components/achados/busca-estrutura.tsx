@@ -68,7 +68,7 @@ export function BuscaEstrutura({ indice, onEscolher, lacunas, ref }: {
       {lacunasAchadas.map((lacuna) => (
         <p key={lacuna.nome} role="note" className="rounded border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-950">
           {lacuna.parcial
-            ? <><strong>{lacuna.nome}</strong>: {lacuna.parcial}. Púbis, ísquio e acetábulo não existem neste corpo.</>
+            ? <><strong>{lacuna.nome}</strong>: {lacuna.parcial}. {lacuna.detalhe}</>
             : <><strong>{lacuna.nome}</strong> não existe neste corpo (lacuna conhecida do atlas feminino). Registre o achado sem local e escreva a estrutura na observação; não marque no osso vizinho.</>}
         </p>
       ))}

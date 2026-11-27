@@ -15,14 +15,20 @@ if (!env.NEXT_PUBLIC_SUPABASE_URL || !env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY)
 const senhas = lerEnv(new URL('./.env.demo', import.meta.url));
 const require = createRequire(new URL('../web/package.json', import.meta.url));
 export const { createClient } = require('@supabase/supabase-js');
-const admin = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SECRET_KEY,
+export const servico = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SECRET_KEY,
   { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } });
 export const clientes = {};
 export const emails = {
+  mfc: 'mfc@saude3d.invalid',
   cardiologia: 'cardiologia@saude3d.invalid',
   ortopedia: 'ortopedia@saude3d.invalid',
   obstetricia: 'obstetricia@saude3d.invalid',
+  pediatria: 'pediatria@saude3d.invalid',
+  adminUbs: 'admin@saude3d.invalid',
   adminCardio: 'admin-cardiologia@saude3d.invalid',
+  adminMaternidade: 'admin-maternidade@saude3d.invalid',
+  adminUbsSubstituto: 'admin-ubs-substituto@saude3d.invalid',
+  adminPediatria: 'admin-pediatria@saude3d.invalid',
 };
 export async function login(email) {
   if (clientes[email]) return clientes[email];
@@ -36,7 +42,7 @@ export async function login(email) {
   const claims = claimsData?.claims;
   if (claimsError || typeof claims?.session_id !== 'string' || typeof claims?.sub !== 'string')
     throw new Error('Não foi possível obter session_id/sub do JWT após login; atividade não registrada.');
-  const { data: registrado, error: atividadeError } = await admin.rpc('registrar_atividade_sessao', {
+  const { data: registrado, error: atividadeError } = await servico.rpc('registrar_atividade_sessao', {
     p_sessao: claims.session_id, p_usuario: claims.sub,
   });
   if (atividadeError || registrado !== true)

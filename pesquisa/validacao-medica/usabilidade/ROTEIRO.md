@@ -27,9 +27,9 @@ Ler cada tarefa como está. Não dizer o nome de botões. Anotar: concluiu sem a
 |---|---|---|---|
 | T1 | Medicina de Família | "Encontre a paciente Ana Lima e diga quais problemas de saúde ela tem hoje." | Cita os achados **ativos** (HAS, FA, DM2, gonartrose) e não cita a pneumonia como atual |
 | T2 | Medicina de Família | "Algum desses problemas foi registrado por outra unidade? Qual e por quem?" | Identifica HAS e FA como da Cardiologia |
-| T3 | Ortopedia | "O paciente José Pereira voltou com dor no ombro esquerdo. Registre isso no prontuário, no lugar certo do corpo." | Achado salvo com local no ombro/estrutura do ombro **esquerdo**, lado esquerdo, CID compatível (ex.: M25.51/M75.x) |
+| T3 | Ortopedia | "O paciente José Pereira voltou com dor no ombro esquerdo. Registre isso no prontuário, no lugar certo do corpo." | Achado salvo com local no ombro/estrutura do ombro **esquerdo**, lado esquerdo, CID compatível (ex.: M25.5/M75.x) |
 | T4 | Medicina de Família | "Registre para a Ana Lima que ela tem dislipidemia." | Achado salvo **sem local** (E78.x) |
-| T5 | Ortopedia | "No Pedro Alves, o diagnóstico do joelho mudou ao longo do tempo. Mostre como ele evoluiu." | Encontra a correção (M25.56 → M23.2) e o histórico de versões |
+| T5 | Ortopedia | "No Pedro Alves, o diagnóstico do joelho mudou ao longo do tempo. Mostre como ele evoluiu." | Encontra a correção (M25.5 → M23.2) e o histórico de versões |
 | T6 | Medicina de Família | "A Ana Lima caiu e fez fratura do ramo do púbis. Registre." | Lê o aviso de lacuna e registra **sem local** (ou com observação). **Falha crítica** se ancorar no ílio/sacro como se fosse o púbis |
 | T7 | Ortopedia | "Mostre a lombalgia do José olhando o corpo por trás e deixe essa vista salva junto do achado que você registrar." | Usa vista posterior; ao reabrir o achado, a vista volta |
 | T8 | Obstetrícia, depois Pediatria | "Quantas semanas de gestação tem a Carla Mendes e que condições ela tem nesta gestação?" Depois, na Pediatria: "O Davi Santos teve algo importante na gestação da mãe?" | 24 semanas e diabetes gestacional; depois, hipertensão gestacional da mãe visto a partir da criança |

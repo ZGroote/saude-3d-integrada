@@ -1,14 +1,17 @@
 import type { EntradaIndice } from "@saude3d/motor-anatomico";
 import { normalizar } from "./estruturas";
 
-export type Lacuna = { nome: string; termos: string[]; parcial?: string };
+export type Lacuna = { nome: string; termos: string[]; parcial?: string; detalhe?: string };
 
 export const LACUNAS: Record<string, Lacuna[]> = {
   "hra-f/1.10-1": [
     { nome: "Púbis", termos: ["pubis", "pube", "pubic"] },
     { nome: "Ísquio", termos: ["isquio", "ischium", "ischial"] },
     { nome: "Acetábulo", termos: ["acetabulo", "acetabulum"] },
-    { nome: "Osso do quadril", termos: ["quadril", "coxal", "hip"], parcial: "só o ílio está no corpo" },
+    { nome: "Osso do quadril", termos: ["quadril", "coxal", "hip"], parcial: "só o ílio está no corpo", detalhe: "Púbis, ísquio e acetábulo não existem neste corpo." },
+  ],
+  "bp3d-m/4.0-1": [
+    { nome: "Pulmão", termos: ["pulmao", "pulmoes", "lung"], parcial: "só a árvore brônquica está no corpo", detalhe: "Registre no brônquio ou sem local e descreva na observação." },
   ],
 };
 
