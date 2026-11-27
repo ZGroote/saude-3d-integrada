@@ -1,0 +1,12 @@
+﻿grupo_muscular,componente,fma_musculo,malha_bp3d,vertices_musculo,vertices_insercao_m2b,fracao_vertices_insercao_m2b,bones_rotulados,comprimento_eixo_pca_mm,fallback_tps_sem_insercao,fonte_literatura
+rectus_femoris,unico,FMA38929,FJ1433M,3326,398,0.11966325917017438,pelvis;patella;tibia,557.294605245195,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+vastus_lateralis,unico,FMA38931,FJ1442M,3974,325,0.08178158027176648,femur;tibia,470.6111093753233,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+vastus_medialis,unico,FMA38933,FJ1443M,2772,390,0.1406926406926407,femur;patella;tibia,398.0443410041047,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+sartorius,unico,FMA22355,FJ1434M,2633,585,0.22218002278769464,pelvis,630.9270628047332,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+gracilis,unico,FMA43884,FJ1421M,2085,689,0.3304556354916067,pelvis;tibia,517.5248964889632,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+adductor_longus,unico,FMA22457,FJ1402M,1536,240,0.15625,pelvis;femur,296.17357202550966,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+biceps_femoris,longa,FMA45889,FJ1395M,2837,332,0.11702502643637645,pelvis;fibula,440.7944816541477,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+biceps_femoris,curta,FMA45892,FJ1444M,1215,256,0.21069958847736625,femur;fibula,318.7892976487424,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+gastrocnemius_medial,unico,FMA45958,FJ1397M,2264,175,0.07729681978798586,femur,311.69417866093124,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+gluteus_medius,unico,FMA22331,FJ1419M,2308,615,0.26646447140381285,pelvis;femur,169.47545517695758,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"
+tibialis_anterior,unico,FMA22545,FJ1439M,2206,635,0.28785131459655483,tibia;medial_cuneiform;navicular,397.6918027874241,False,"Gray's Anatomy, 42ª ed., capítulo/página: a conferir"

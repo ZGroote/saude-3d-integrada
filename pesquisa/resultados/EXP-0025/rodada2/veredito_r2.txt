@@ -1,0 +1,8 @@
+EXP-0025 — Rodada 2; critérios originais R1–R4, sem alteração
+Seeds/amostragem: avaliação 25022; 6.000 pontos por direção; voxel 1 mm; R1 compara cada variante com B0.
+M2a (R1–R4): R1 REPROVOU (0/10; reduções %: rectus_femoris=-16.9, vastus_lateralis=-8.9, vastus_medialis=-12.0, sartorius=3.3, gracilis=-6.6, adductor_longus=-4.7, biceps_femoris=-22.3, gastrocnemius_medial=-71.3, gluteus_medius=-16.5, tibialis_anterior=3.0)
+M2a: R2 PASSOU (mediana=0.945 mm; n=4640); R3 REPROVOU (máximo=20.081%; grupos <2%=3/10); R4 Dice mediano=0.2820 (exploratório).
+M2b (R1–R4): R1 REPROVOU (0/10; reduções %: rectus_femoris=-15.7, vastus_lateralis=-5.2, vastus_medialis=-13.9, sartorius=8.9, gracilis=-13.1, adductor_longus=-7.4, biceps_femoris=-21.3, gastrocnemius_medial=-55.0, gluteus_medius=-19.0, tibialis_anterior=5.6)
+M2b: R2 PASSOU (mediana=0.000 mm; n=4640); R3 REPROVOU (máximo=23.316%; grupos <2%=3/10); R4 Dice mediano=0.2668 (exploratório).
+Veredito H25 da rodada 2 (decisão exclusiva M2b, R1/R2/R3): REJEITADA.
+R2 é uma medida de inserções projetadas no osso, portanto parcialmente por construção; R3 é voxelização aproximada a 1 mm com fechamento temporário em memória, como na rodada 1.

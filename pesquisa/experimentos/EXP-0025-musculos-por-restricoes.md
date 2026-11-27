@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `em andamento — rodada 1 rejeitada; rodada 2 registrada`
+- **Situação:** `em andamento — rodadas 1 e 2 rejeitadas; rodada 3 (final) registrada`
 
 ## 2. Problema
 O `hra-f` não tem ~95% da musculatura (EXP-0021), e não existe fonte aberta de músculos femininos de outras mulheres (EXP-0023). Deformar o corpo masculino pela silhueta não funciona (EXP-0022). A alternativa é deformar cada músculo masculino guiado pelos **ossos** femininos em que ele se prende. Antes de pensar em escala, é preciso saber se esse método chega perto de músculos femininos reais.
@@ -77,12 +77,32 @@ Ver seção 9 para a causa. Mudanças (o resto da metodologia, B0, avaliação e
 - **Medida exploratória acrescentada (não decide):** distância unidirecional Denver→adaptado (média), para separar "músculo no lugar errado" de "músculo com tendão a mais".
 - A rodada 1 fica preservada integralmente (malhas, hashes, métricas).
 
+### 8.3 Rodada 2 (resultado)
+Execução por Codex em 2026-11-27 (`pesquisa/resultados/EXP-0025/rodada2/`). Barreira e hashes conferidos (33 malhas verificadas antes de abrir os músculos Denver).
+
+| Variante | R1 (≥ 20% sobre B0 em ≥ 8/10) | R2 | R3 | R4 (Dice) |
+|---|---|---|---|---|
+| M2a (só TPS) | reprovado: 0/10; melhorou só sartório (+3,3%) e tibial anterior (+3,0%) | 0,945 mm | reprovado (máx. 20,1%) | 0,28 |
+| M2b (primário) | reprovado: 0/10; melhorou só sartório (+8,9%) e tibial anterior (+5,6%) | 0,000 mm | reprovado (máx. 23,3%) | 0,27 |
+
+**Veredito da rodada 2: H25 rejeitada** (M2b falha R1 e R3).
+
+### 8.4 Rodada 3 — mudança registrada antes da execução (última rodada)
+Diagnóstico da revisão (seção 9): até o campo puro (M2a) piora em relação a B0, então o problema está antes dos músculos, na correspondência óssea. Na implementação das rodadas 1–2, o "registro não rígido" foi só a projeção de cada ponto do osso BP3D alinhado no ponto mais próximo do osso Denver. Esse deslocamento é quase sempre normal à superfície e não captura diferenças ao longo do osso (comprimento, torção).
+
+Mudanças (B0, avaliação, critérios R1–R4 e leitura iguais):
+- **Correspondência óssea M3:** Coherent Point Drift não rígido (Myronenko & Song, 2010) por osso, implementado em NumPy, de amostras do osso BP3D alinhado (B0) para amostras do osso Denver. Parâmetros fixos: `w = 0,1`, `β = 2,0` (em unidades do osso normalizado para raio unitário), `λ = 3,0`, até 150 iterações, ~1.500 pontos por osso, seed 25031.
+- **Pré-condição de qualidade (Q-osso):** em pontos do osso BP3D **não usados** no ajuste, a distância média até o osso Denver após o CPD deve ser `≤ 2 mm` e menor que a de B0 em todos os ossos. Se falhar, a rodada 3 é **inconclusiva** (a correspondência não funcionou) e não se avalia músculo.
+- **Campo:** thin-plate spline ajustado nos pares (ponto BP3D original → posição após CPD) dos ossos de inserção e vizinhos, aplicado aos vértices do músculo; inserções como em M2b (≤ 3 mm e 10% terminais), projetadas; mesmo laplaciano.
+- **Regra de parada (pré-registrada):** se a rodada 3 reprovar em R1, o EXP-0025 é encerrado como **rejeitado** e a linha muscular fica parada até haver referência muscular de outras mulheres (EXP-0026). Não haverá rodada 4.
+
 ## 9. Validação
 Revisão (Claude Code) da rodada 1:
 - **Separação adaptação/avaliação:** conferida pelos hashes e pela lista de arquivos lidos (`metricas_meta.json`).
 - **Causa da piora (falha de protocolo, do revisor):** a definição de inserção como "vértice `≤ 3 mm` de um osso" capturou de 11% a 49% da superfície de cada músculo (tibial anterior 49%, grácil 37%, glúteo médio 36%). Isso é **área de contato**, não origem/inserção. Projetar essas áreas no osso achatou os músculos: abriu 112–568 ciclos de borda por músculo e mudou o volume para 0,25–1,87× o da Denver.
 - **Diferença de convenção de segmentação:** na figura, o reto femoral do BodyParts3D se estende ~200 mm abaixo do da Denver, sugerindo que o molde inclui tendão/ligamento patelar e a Denver só o ventre muscular. Isso pesa igual em B0 e M (não muda R1), mas infla as distâncias absolutas e o Dice.
 - **R2:** passou por construção; não é evidência do método.
+- **Rodada 2:** M2a (só o campo) também piora em 8 de 10 grupos, o que isola a causa na correspondência óssea por ponto mais próximo (seção 8.4). A distância exploratória Denver→adaptado confirma: piora em 7 de 10 com M2a.
 
 ## 10. Limitações
 - Uma única doadora (VHF): a prova é de viabilidade do método, não de generalização para outras mulheres.
