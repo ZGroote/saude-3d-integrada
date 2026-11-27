@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `em andamento — rodadas 1 e 2 rejeitadas; rodada 3 (final) registrada`
+- **Situação:** `concluído — hipótese rejeitada (3 rodadas; regra de parada)`
 
 ## 2. Problema
 O `hra-f` não tem ~95% da musculatura (EXP-0021), e não existe fonte aberta de músculos femininos de outras mulheres (EXP-0023). Deformar o corpo masculino pela silhueta não funciona (EXP-0022). A alternativa é deformar cada músculo masculino guiado pelos **ossos** femininos em que ele se prende. Antes de pensar em escala, é preciso saber se esse método chega perto de músculos femininos reais.
@@ -96,6 +96,15 @@ Mudanças (B0, avaliação, critérios R1–R4 e leitura iguais):
 - **Campo:** thin-plate spline ajustado nos pares (ponto BP3D original → posição após CPD) dos ossos de inserção e vizinhos, aplicado aos vértices do músculo; inserções como em M2b (≤ 3 mm e 10% terminais), projetadas; mesmo laplaciano.
 - **Regra de parada (pré-registrada):** se a rodada 3 reprovar em R1, o EXP-0025 é encerrado como **rejeitado** e a linha muscular fica parada até haver referência muscular de outras mulheres (EXP-0026). Não haverá rodada 4.
 
+### 8.5 Rodada 3 (resultado, final)
+Execução por Codex em 2026-11-27 (`pesquisa/resultados/EXP-0025/rodada3/`). Self-check do CPD passou. **DESVIO de implementação:** a solução densa do CPD (1.500×1.500 por iteração) não terminou; foi usada aproximação de Nyström de posto 128 do kernel, com os mesmos hiperparâmetros. A qualidade dessa aproximação é medida pela pré-condição Q-osso.
+
+- **Q-osso: atendida nos 13 ossos.** Distância média em pontos não usados no ajuste: 0,32–1,95 mm (B0: 2,9–28,8 mm). A correspondência óssea deixou de ser o problema.
+- **R1: reprovado (1/10).** Melhoraram ≥ 20% só o glúteo médio (+23,3%); tibial anterior +10,4%, bíceps femoral +7,4%, vasto lateral +3,1%. Pioraram: vasto medial −63,9%, reto femoral −44,7%, gastrocnêmio medial −39,0%, sartório −32,0%, grácil −16,1%, adutor longo −14,0%.
+- R2: 0,000 mm (por construção). R3: reprovado (máximo 9,0%; 3/10 abaixo de 2%). R4: Dice mediano 0,36.
+
+**Veredito final: H25 rejeitada** nas três rodadas; EXP-0025 encerrado pela regra de parada pré-registrada.
+
 ## 9. Validação
 Revisão (Claude Code) da rodada 1:
 - **Separação adaptação/avaliação:** conferida pelos hashes e pela lista de arquivos lidos (`metricas_meta.json`).
@@ -103,6 +112,7 @@ Revisão (Claude Code) da rodada 1:
 - **Diferença de convenção de segmentação:** na figura, o reto femoral do BodyParts3D se estende ~200 mm abaixo do da Denver, sugerindo que o molde inclui tendão/ligamento patelar e a Denver só o ventre muscular. Isso pesa igual em B0 e M (não muda R1), mas infla as distâncias absolutas e o Dice.
 - **R2:** passou por construção; não é evidência do método.
 - **Rodada 2:** M2a (só o campo) também piora em 8 de 10 grupos, o que isola a causa na correspondência óssea por ponto mais próximo (seção 8.4). A distância exploratória Denver→adaptado confirma: piora em 7 de 10 com M2a.
+- **Rodada 3:** com os ossos encaixados a menos de 2 mm, os músculos continuam longe. Isso mostra que, entre essas duas pessoas (doador masculino do BodyParts3D e doadora da Denver), a forma dos músculos não é explicada pela deformação dos ossos. Parte da diferença também é de convenção de segmentação (tendões).
 
 ## 10. Limitações
 - Uma única doadora (VHF): a prova é de viabilidade do método, não de generalização para outras mulheres.
@@ -112,10 +122,13 @@ Revisão (Claude Code) da rodada 1:
 - Convenções diferentes de segmentação (tendão incluído ou não) entre BodyParts3D e Denver.
 
 ## 11. Conclusão
-A preencher.
+- **Observado:** deformar músculos masculinos por um campo ancorado nos ossos não os aproximou dos músculos femininos reais. Com correspondência óssea ruim (rodadas 1–2), piorou quase todos; com correspondência óssea boa (rodada 3, ossos a < 2 mm), melhorou 1 de 10 e piorou 6.
+- **Interpretação:** a forma do músculo carrega variação individual e de sexo que o esqueleto não determina. Um "motor de adaptação" só por ossos e inserções não basta; ele precisaria de informação muscular de referência (volume, seção transversal, contorno) de outras mulheres.
+- **Veredito:** H25 rejeitada (3 rodadas, regra de parada).
 
 ## 12. Próximos passos
-A preencher.
+- Linha muscular parada até haver referência muscular de outras mulheres (EXP-0026, dados KISTI, aguardando acesso).
+- Se retomada: usar a referência muscular como alvo (não só os ossos) e comparar convenções de segmentação (tendão) antes de medir.
 
 ## 13. Rastreabilidade
 - `pesquisa/resultados/EXP-0025/` (scripts de adaptação e de avaliação separados, `insercoes.csv`, hashes das malhas adaptadas, métricas, figuras).
