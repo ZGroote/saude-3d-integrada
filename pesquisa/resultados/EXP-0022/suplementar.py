@@ -65,6 +65,21 @@ def write_duplicates():
                        'hra_mesh_ids':';'.join(p['id'] for p in hs),'hra_mesh_names':';'.join(p['name'] for p in hs),
                        'bp3d_mesh_ids':';'.join(p['id'] for p in bs),'bp3d_mesh_names':';'.join(p['name'] for p in bs),
                        'overlap_class':'same ontology structure'})
+    signatures={(tuple(sorted(x['hra_mesh_ids'].split(';'))),tuple(sorted(x['bp3d_mesh_ids'].split(';')))) for x in groups}
+    # Exact normalized English names add source pairs where the atlas did not
+    # carry the same FMA concept identifier in both source records.
+    hnames=defaultdict(list);bnames=defaultdict(list)
+    for p in hra:hnames[p['name'].strip().lower()].append(p)
+    for p in bp:bnames[p['name'].strip().lower()].append(p)
+    name_groups=0
+    for name in sorted(hnames.keys()&bnames.keys()):
+        hs=hnames[name];bs=bnames[name];sig=(tuple(sorted(p['id'] for p in hs)),tuple(sorted(p['id'] for p in bs)))
+        if sig in signatures:continue
+        groups.append({'match_basis':'exact normalized mesh name','structure_id':'name:'+name,'structure_label':hs[0]['name'],
+                       'hra_mesh_ids':';'.join(p['id'] for p in hs),'hra_mesh_names':';'.join(p['name'] for p in hs),
+                       'bp3d_mesh_ids':';'.join(p['id'] for p in bs),'bp3d_mesh_names':';'.join(p['name'] for p in bs),
+                       'overlap_class':'same normalized name; structure match inferred from labels'})
+        signatures.add(sig);name_groups+=1
     # HRA has UBERON IDs for the vertebral column; match the named anatomy directly
     # to the BP3D FMA names and IDs. This includes sacrum and C1-C7/L1-L5/T1-T12.
     ords=['first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth','eleventh','twelfth']
@@ -77,13 +92,15 @@ def write_duplicates():
     for n in range(1,8):
         bname_text='Atlas' if n==1 else 'Axis' if n==2 else f'{ords[n-1]} cervical vertebra'
         axial.append((f'VH_F_cervical_vertebra_{n}',f'cervical vertebra {n}',bname_text))
-    fma_used=set(hidx.keys()&bidx.keys())
+    axial_groups=0
     for hid,label,bn in axial:
         h=hbyid.get(hid);bs=bname.get(bn.lower(),[])
-        if h and bs and not any(x['hra_mesh_ids']==h['id'] for x in groups):
+        sig=((h['id'],),tuple(sorted(p['id'] for p in bs))) if h and bs else None
+        if h and bs and sig not in signatures:
             groups.append({'match_basis':'canonical axial bone name / source catalog name','structure_id':label,'structure_label':label,
                            'hra_mesh_ids':h['id'],'hra_mesh_names':h['name'],'bp3d_mesh_ids':';'.join(p['id'] for p in bs),
                            'bp3d_mesh_names':';'.join(p['name'] for p in bs),'overlap_class':'same anatomical structure'})
+            signatures.add(sig);axial_groups+=1
     exact_count=len(groups)
     # Parent/fragment overlap: the full BP3D hip bone overlaps HRA pubis/ilium/ischium parts;
     # these are reported separately as non-identical levels of anatomical granularity.
@@ -98,7 +115,7 @@ def write_duplicates():
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(groups)
     return {'exact_duplicate_structure_groups':exact_count,'partial_parent_fragment_overlap_groups':len(groups)-exact_count,
             'total_reported_groups':len(groups),'csv':'suplementar_duplicadas.csv',
-            'exact_groups_by_basis':{'shared_FMA_concept':len(hidx.keys()&bidx.keys()),'axial_name_mapping':exact_count-len(hidx.keys()&bidx.keys())}}
+            'exact_groups_by_basis':{'shared_FMA_concept':len(hidx.keys()&bidx.keys()),'exact_normalized_name':name_groups,'axial_name_mapping':axial_groups}}
 
 def main():
     ext=g.external_all();bp=g.bp3d_all()
@@ -116,7 +133,8 @@ def main():
         ma=metric(fa,target,np.random.default_rng(SEED+3),target_fit,target_dist)
         mb=metric(bm,target,np.random.default_rng(SEED+4),target_fit,target_dist)
         red=(1-ma['mean_mm']/mb['mean_mm'])*100
-        out[name]={'target_labels':mask_info,'sources':source,'female_atlas':ma,'bp3d_m':mb,'mean_reduction_percent':float(red),
+        p95red=(1-ma['p95_mm']/mb['p95_mm'])*100
+        out[name]={'target_labels':mask_info,'sources':source,'female_atlas':ma,'bp3d_m':mb,'mean_reduction_percent':float(red),'p95_reduction_percent':float(p95red),
                    'interpretation':'post-hoc only; does not change preregistered criteria or verdict'}
     out['c_duplicates']=write_duplicates()
     out['method']={'analysis':'post-hoc, not part of fixed success criteria','seed':SEED,'surface_samples_each_direction':SAMPLES,
@@ -124,7 +142,7 @@ def main():
                    'ICP':'same initial local-to-RAS axis map, proper rotation, uniform scale, translation, trim=0.12, delta tolerance=1e-7; max iterations raised from 50 to 200; convergence reported explicitly',
                    'python':'3.14.4','numpy':np.__version__,'trimesh':trimesh.__version__,'scipy':__import__('scipy').__version__}
     (HERE/'suplementar.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8')
-    print(json.dumps({'a':{'female':(out['a_hips_only']['female_atlas']['mean_mm'],out['a_hips_only']['female_atlas']['p95_mm']),'bp3d':(out['a_hips_only']['bp3d_m']['mean_mm'],out['a_hips_only']['bp3d_m']['p95_mm']),'reduction':out['a_hips_only']['mean_reduction_percent'],'converged':[out['a_hips_only']['female_atlas']['converged'],out['a_hips_only']['bp3d_m']['converged']]},
-                      'b':{'female':(out['b_hips_plus_bp3d_sacrum']['female_atlas']['mean_mm'],out['b_hips_plus_bp3d_sacrum']['female_atlas']['p95_mm']),'bp3d':(out['b_hips_plus_bp3d_sacrum']['bp3d_m']['mean_mm'],out['b_hips_plus_bp3d_sacrum']['bp3d_m']['p95_mm']),'reduction':out['b_hips_plus_bp3d_sacrum']['mean_reduction_percent'],'converged':[out['b_hips_plus_bp3d_sacrum']['female_atlas']['converged'],out['b_hips_plus_bp3d_sacrum']['bp3d_m']['converged']]},'c':out['c_duplicates']}))
+    print(json.dumps({'a':{'female':(out['a_hips_only']['female_atlas']['mean_mm'],out['a_hips_only']['female_atlas']['p95_mm']),'bp3d':(out['a_hips_only']['bp3d_m']['mean_mm'],out['a_hips_only']['bp3d_m']['p95_mm']),'mean_reduction':out['a_hips_only']['mean_reduction_percent'],'p95_reduction':out['a_hips_only']['p95_reduction_percent'],'converged':[out['a_hips_only']['female_atlas']['converged'],out['a_hips_only']['bp3d_m']['converged']]},
+                      'b':{'female':(out['b_hips_plus_bp3d_sacrum']['female_atlas']['mean_mm'],out['b_hips_plus_bp3d_sacrum']['female_atlas']['p95_mm']),'bp3d':(out['b_hips_plus_bp3d_sacrum']['bp3d_m']['mean_mm'],out['b_hips_plus_bp3d_sacrum']['bp3d_m']['p95_mm']),'mean_reduction':out['b_hips_plus_bp3d_sacrum']['mean_reduction_percent'],'p95_reduction':out['b_hips_plus_bp3d_sacrum']['p95_reduction_percent'],'converged':[out['b_hips_plus_bp3d_sacrum']['female_atlas']['converged'],out['b_hips_plus_bp3d_sacrum']['bp3d_m']['converged']]},'c':out['c_duplicates']}))
 
 if __name__=='__main__':main()

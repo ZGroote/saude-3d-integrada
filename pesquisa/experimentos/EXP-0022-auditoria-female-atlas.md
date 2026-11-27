@@ -71,7 +71,7 @@ Execução por Codex 2 em 2026-11-27, somente na CPU. O relatório completo est�
 **Análise pós-hoc** (registrada como tal; não altera critérios nem veredito). O ICP usou até 200 iterações e todas as execuções convergiram. Foram comparadas só as malhas BP3D deformadas pelo autor com as originais do `bp3d-m`, contra a NLM:
 - (a) Ossos do quadril: Female Atlas média 5,078 mm, p95 14,253 mm. `bp3d-m`: 4,204 / 9,986. **A pelve deformada ficou 20,8% pior que a masculina original.**
 - (b) Quadris + sacro: 5,830 / 15,670 contra 5,284 / 14,383, ou seja, 10,3% pior.
-- (c) **70 estruturas duplicadas** entre as fontes:
+- (c) **103 estruturas duplicadas** entre as fontes (45 com o mesmo FMA, 33 com nome igual e 25 vértebras e sacro), além de 2 sobreposições pai/fragmento:
   - a coluna inteira C1–L5 e o sacro aparecem como HRA e também como BP3D;
   - há 45 estruturas com o mesmo FMA nas duas fontes (por exemplo, veia cava inferior e veias hepáticas);
   - há também 2 sobreposições pai/fragmento.
@@ -97,7 +97,7 @@ Não houve validação anatômica humana.
   - O Female Atlas não passa em C3, C4 e C5.
   - A deformação "feminina" que o autor aplicou ao BodyParts3D **afastou** a pelve de uma pelve feminina real, em vez de aproximá-la.
   - A melhora aparente em C3 vem de fragmentos HRA da mesma doadora da referência.
-  - O pacote ainda duplica 70 estruturas.
+  - O pacote ainda duplica 103 estruturas.
 - **Interpretação:** é uma adaptação visual, não anatômica. Ela não serve de base para o Atlas Feminino V3. Também mostra que deformar por silhueta (cintura, quadris) não reproduz a morfologia pélvica feminina.
 - **Veredito da hipótese:** H22 **sustentada** (C3 reprovado, e a análise pós-hoc vai na mesma direção).
 

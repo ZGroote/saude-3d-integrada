@@ -110,11 +110,11 @@ O HRA female e a TC NLM usada neste experimento derivam da mesma doadora Visible
 
 Repeti o ICP de similaridade uniforme, com o mesmo mapa de eixos, trim de 12%, amostragem de superfície e critério de convergência; o limite subiu de 50 para **200 iterações**. Todas as quatro execuções suplementares convergiram. Em cada comparação, as duas fontes usaram os mesmos pontos-alvo da superfície NLM.
 
-| Comparação suplementar | Female Atlas — BP3D deformado | `bp3d-m` | Redução da média Female Atlas vs. BP3D |
+| Comparação suplementar | Female Atlas — BP3D deformado | `bp3d-m` | Redução Female Atlas vs. BP3D (média / p95) |
 |---|---:|---:|---:|
-| (a) Só os dois ossos do quadril; alvo NLM `hip_left + hip_right` | média **5,078 mm**, p95 **14,253 mm** (135 iterações) | média **4,204 mm**, p95 **9,986 mm** (87 iterações) | **−20,80%** |
-| (b) Os dois quadris + sacro BP3D; alvo NLM `hip_left + hip_right + sacrum` | média **5,830 mm**, p95 **15,670 mm** (152 iterações) | média **5,284 mm**, p95 **14,383 mm** (91 iterações) | **−10,33%** |
+| (a) Só os dois ossos do quadril; alvo NLM `hip_left + hip_right` | média **5,078 mm**, p95 **14,253 mm** (135 iterações) | média **4,204 mm**, p95 **9,986 mm** (87 iterações) | **−20,80% / −42,72%** |
+| (b) Os dois quadris + sacro BP3D; alvo NLM `hip_left + hip_right + sacrum` | média **5,830 mm**, p95 **15,670 mm** (152 iterações) | média **5,284 mm**, p95 **14,383 mm** (91 iterações) | **−10,33% / −8,95%** |
 
 O sinal negativo indica que a média do Female Atlas foi maior que a do comparador `bp3d-m` nessas seleções só de malhas BP3D. Isso é compatível com o viés circular acima: no C3 original, incluir fragmentos pélvicos HRA reduz a distância à própria doadora que originou a TC.
 
-Foram identificados **70 grupos de duplicação exata** entre fontes (45 por `conceptId` FMA compartilhado e 25 correspondências axiais por nome/anatomia: sacro, C1–C7, L1–L5 e T1–T12), além de **2 sobreposições parciais pai/fragmento** (os dois ossos do quadril BP3D e fragmentos HRA de ílio/púbis/ísquio). A lista contém 72 linhas em [suplementar_duplicadas.csv](suplementar_duplicadas.csv); o sacro HRA + BP3D aparece como duplicação exata. As métricas e os estados de convergência estão em [suplementar.json](suplementar.json).
+Foram identificados **103 grupos de duplicação exata** entre fontes: 45 por `conceptId` FMA compartilhado, 33 por nome normalizado exato adicional e 25 correspondências axiais por nome/anatomia (sacro, C1–C7, L1–L5 e T1–T12). Há também **2 sobreposições parciais pai/fragmento** (os dois ossos do quadril BP3D e fragmentos HRA de ílio/púbis/ísquio). A lista contém 105 linhas em [suplementar_duplicadas.csv](suplementar_duplicadas.csv); o sacro HRA + BP3D aparece como duplicação exata. As métricas e os estados de convergência estão em [suplementar.json](suplementar.json).

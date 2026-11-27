@@ -125,6 +125,7 @@
       ]
     },
     "mean_reduction_percent": -20.801438412169084,
+    "p95_reduction_percent": -42.72461860227374,
     "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
   },
   "b_hips_plus_bp3d_sacrum": {
@@ -257,15 +258,17 @@
       ]
     },
     "mean_reduction_percent": -10.333684012143806,
+    "p95_reduction_percent": -8.95136826699634,
     "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
   },
   "c_duplicates": {
-    "exact_duplicate_structure_groups": 70,
+    "exact_duplicate_structure_groups": 103,
     "partial_parent_fragment_overlap_groups": 2,
-    "total_reported_groups": 72,
+    "total_reported_groups": 105,
     "csv": "suplementar_duplicadas.csv",
     "exact_groups_by_basis": {
       "shared_FMA_concept": 45,
+      "exact_normalized_name": 33,
       "axial_name_mapping": 25
     }
   },

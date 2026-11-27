@@ -20,8 +20,8 @@
         "Allen_prefixed_in_HRA_input": 282,
         "Yao_prefixed_in_HRA_input": 7
       },
-      "reason": "The published conversion/build scripts reconstruct the transforms by source group, but the 7 Yao-prefixed meshes have no provider-level source record in the clone; 100% source lineage is therefore not established.",
       "initial_assessment_status": "fail",
+      "initial_assessment_reason": "The published conversion/build scripts reconstruct the transforms by source group, but the 7 Yao-prefixed meshes have no provider-level source record in the clone; 100% source lineage is therefore not established.",
       "correction_reason": "All 3004 proveniencia.csv rows have a source group and non-empty transformation; HRA catalog supports Yao_/Allen_ lineage."
     },
     "C2": {
@@ -32,6 +32,7 @@
         "BodyParts3D": "CC BY 4.0; ATTRIBUTION cites https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
       },
       "initial_assessment_status": "fail",
+      "initial_assessment_not_verified": "The clone does not provide separate provider-level source/license evidence for the 282 Allen-prefixed and 7 Yao-prefixed nodes. The 7 Yao nodes alone prevent 100% criterion proof.",
       "correction_reason": "HRA catalog identifies all Allen_/Yao_ rows in the HRA united-female dataset; the repository declares HRA and BodyParts3D data CC BY 4.0 with attribution."
     },
     "C3": {
@@ -3219,8 +3220,8 @@
     "pesquisa/resultados/EXP-0022/pelve_frente.png": "b6e7c2d416e4760a095fcd12befa0c3b8d327605713a4dd53c4c65d9e58cd2d5",
     "pesquisa/resultados/EXP-0022/pelve_de_cima.png": "c3125a9e35e4d89ff6f99a9907fec3d0f96ef9d280dad47d58c1fb653459fdf3",
     "pesquisa/resultados/EXP-0022/proveniencia.csv": "d87d97aa35c1cd4754a872597bf96ddd0815425ea24a64bb917e44c9d37fdb92",
-    "pesquisa/resultados/EXP-0022/suplementar.json": "93a77062029b1fbf5cb2a880b7640242a1d398cbbf278a396d91a3d226f3a406",
-    "pesquisa/resultados/EXP-0022/suplementar_duplicadas.csv": "00f6c239ef03f45d3a6359a4c0eb1a3c4de66c398853db0206ad0f93f43f1278"
+    "pesquisa/resultados/EXP-0022/suplementar.json": "ab9d79bef7ca1d0733d192f75330df7c87a9184458acb9a8e331837ac78696e2",
+    "pesquisa/resultados/EXP-0022/suplementar_duplicadas.csv": "5571a289ed140a72e8eb48e91846118e92791df0c5dc1d152e7ce33254a0b5d7"
   },
   "runtime": {
     "python": "3.14.4",
@@ -3371,6 +3372,7 @@
           ]
         },
         "mean_reduction_percent": -20.801438412169084,
+        "p95_reduction_percent": -42.72461860227374,
         "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
       },
       "b_hips_plus_bp3d_sacrum": {
@@ -3503,15 +3505,17 @@
           ]
         },
         "mean_reduction_percent": -10.333684012143806,
+        "p95_reduction_percent": -8.95136826699634,
         "interpretation": "post-hoc only; does not change preregistered criteria or verdict"
       },
       "c_duplicates": {
-        "exact_duplicate_structure_groups": 70,
+        "exact_duplicate_structure_groups": 103,
         "partial_parent_fragment_overlap_groups": 2,
-        "total_reported_groups": 72,
+        "total_reported_groups": 105,
         "csv": "suplementar_duplicadas.csv",
         "exact_groups_by_basis": {
           "shared_FMA_concept": 45,
+          "exact_normalized_name": 33,
           "axial_name_mapping": 25
         }
       },
