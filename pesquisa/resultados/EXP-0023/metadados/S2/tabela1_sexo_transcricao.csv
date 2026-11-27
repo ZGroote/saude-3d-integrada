@@ -1,0 +1,31 @@
+caso,sexo_tabela,grupo,observacao
+002,F,completo,
+006,F,completo,
+010,F,completo,
+014,F,completo,
+015,M,completo,
+016,F,completo,
+017,F,completo,
+019,M,completo,
+023,M,completo,
+z001,M,completo,
+z004,M,completo,
+z009,M,completo,
+z019,M,completo,
+z023,F,completo,
+z027,F,completo,
+z035,F,completo,duplicado de VSD z030
+z042,F,completo,
+z046,M,completo,
+z056,M,completo,
+z062,M,completo,
+z013,F,adicional,duplicado de VSD z024 com metadados conflitantes; acesso intraósseo na tíbia esquerda
+z036,M,adicional,duplicado de VSD z029; faltam peso e altura
+z049,M,adicional,metadado gender diverge do sexo biológico visível na TC
+z050,M,adicional,duplicado de VSD z011; prótese total articulada no joelho direito
+z055,M,adicional,duplicado de z026 com peso conflitante
+z057,M,adicional,faltam peso e altura
+z061,F,adicional,falanges direitas truncadas
+z063,F,adicional,fusão L4-L5-S1; próteses totais bilaterais de quadril e prótese de joelho direito
+z064,M,adicional,faltam peso e altura
+z066,M,adicional,metacarpos truncados; falanges ausentes; artefatos metálicos; faltam peso e altura
