@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `concluído — H27a sustentada (validação); H27b não sustentada (base do produto)`
 
 ## 2. Problema
 O MVP não tem atlas pediátrico: o prontuário infantil é estruturado, sem corpo 3D, e nunca usa um corpo adulto no lugar (`SPEC-MVP.md`). Reduzir um atlas adulto não reproduz a anatomia infantil (proporções, placas de crescimento, ossos não fundidos, órgãos em proporção diferente). Antes de qualquer reconstrução, é preciso saber que fontes pediátricas existem, para que faixas etárias, e com que licença.
@@ -58,25 +58,46 @@ Para cada fonte, em `pesquisa/resultados/EXP-0027/fontes.md`, com URL por campo:
 **Regra de decisão (pré-registrada):** a linha pediátrica só abre experimento de reconstrução depois que o método muscular/ósseo do atlas feminino (EXP-0024 e EXP-0025) tiver resultado positivo. Este levantamento apenas registra o que existe.
 
 ## 8. Resultados
-A preencher.
+Levantamento por Antigravity em 2026-11-27 (`pesquisa/resultados/EXP-0027/fontes.md`, `contar_p1_pediatrico.py`, `contar_p5_pediatrico.py`).
+
+| Fonte | 0–1 (F/M) | 2–5 (F/M) | 6–11 (F/M) | 12–17 (F/M) | Formato | Licença | Uso |
+|---|---|---|---|---|---|---|---|
+| **P1** TotalSegmentator V3 | 12/9 | 46/54 | 70/74 | 10/11 | máscaras NIfTI, 117 estruturas | CC BY 4.0 | validação (3 faixas) |
+| **P5** Pediatric-CT-SEG (TCIA) | 16/16 | 70/73 | 54/51 | 39/40 | TC + contornos RTSTRUCT de órgãos | CC BY 4.0 | validação (4 faixas) |
+| **P2** ICRP 143/156 | 1 modelo por idade e sexo (RN, 1, 5, 10, 15 anos) | | | | voxel e malha | copyright ICRP; transformação, redistribuição e uso comercial só com permissão escrita | nenhum sem permissão |
+| **P3** UF/NCI | 10 de referência + 362 por porte | | | | híbrido | acordo de transferência; comercial exige licença do NCI | pesquisa não comercial sob acordo |
+| **P4** XCAT pediátrico | 10 de referência | | | | — | contrato com a Duke | nenhum sem contrato |
+
+Fora do escopo do veredito: Stanford Pediatric Whole-Body CT (358 TCs, 0–16 anos, 117 estruturas), acesso por termo de uso não comercial; não verificado pelo revisor.
+
+- **P-D1:** atendido.
+- **H27a: sustentada.** P1 e P5 têm `≥ 10` crianças por sexo em pelo menos duas faixas, com segmentação volumétrica e CC BY 4.0.
+- **H27b: não sustentada.** Os modelos pediátricos por idade (ICRP, UF/NCI, XCAT) existem, mas nenhum permite transformação e uso comercial sem permissão ou contrato.
 
 ## 9. Validação
-A preencher.
+Conferência do revisor (Claude Code):
+- P1: `contar_p1_pediatrico.py` reexecutado; mesmos números. A cobertura corporal dos exames pediátricos (277 de 286 sem `study_type`) continua pendente.
+- P5: página do TCIA confirma 359 sujeitos, 359 estudos, CC BY 4.0, acesso público, 65,69 GB; `contar_p5_pediatrico.py` reexecutado (179 F / 180 M). A lista de estruturas (incluindo ossos e cabeça femoral) não foi conferida pelo revisor.
+- P2–P4: licenças conferidas só pelo relatório do agente.
 
 ## 10. Limitações
 - Levantamento por agente de IA em páginas públicas, com conferência por amostragem.
-- Exames pediátricos clínicos têm patologia e protocolos de baixa dose; ver resolução por caso.
+- Exames pediátricos clínicos têm patologia e protocolos de baixa dose; P1 tem corte mediano de 2,5 mm.
+- P5 cobre tórax, abdome e pelve, não o corpo inteiro.
 
 ## 11. Conclusão
-A preencher.
+- **Observado:** há referência aberta e comercialmente utilizável para **validar** anatomia infantil em todas as faixas (TotalSegmentator V3 e Pediatric-CT-SEG). Não há **geometria pediátrica pronta** com licença para o produto.
+- **Interpretação:** um atlas pediátrico teria de ser construído (por exemplo, pelo método em teste no EXP-0025) ou licenciado (ICRP, NCI, Duke).
+- **Veredito:** H27a sustentada; H27b não sustentada.
 
 ## 12. Próximos passos
-A preencher.
+- Pela regra pré-registrada, nenhuma reconstrução pediátrica antes de resultado positivo no método feminino (EXP-0024/EXP-0025).
+- Opção comercial a decidir pelo usuário no futuro: pedir permissão à ICRP para os modelos em malha da Publicação 156.
 
 ## 13. Rastreabilidade
-- `pesquisa/resultados/EXP-0027/fontes.md` (a criar).
+- `pesquisa/resultados/EXP-0027/fontes.md`, `contar_p1_pediatrico.py`, `contar_p5_pediatrico.py`, `metadados/`.
 
 ## 14. Revisão
-- **Revisor:** Claude Code
+- **Revisor:** Claude Code (reexecutou as contagens e conferiu P5 na página do TCIA)
 - **Revisão humana:** pendente
 - **Validação científica:** não se aplica (levantamento de fontes)

@@ -70,7 +70,7 @@ def main() -> int:
         txt = raw.decode('utf-8', errors='replace')
         if MOJIBAKE_RE.search(txt):
             errors.append(f'Mojibake encontrado em {md.relative_to(ROOT)}')
-        if BROKEN_Q_RE.search(txt):
+        if BROKEN_Q_RE.search(re.sub(r'https?://\S+', '', txt)):  # '?' de query string em URL não é encoding quebrado
             errors.append(f'Caractere ? suspeito de encoding em {md.relative_to(ROOT)}')
 
         # (c) links relativos de .md apontam para arquivos existentes
