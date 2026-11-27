@@ -1,0 +1,536 @@
+{
+  "source": "local masks supplied by user; this script is offline-only",
+  "case_ids": [
+    "s0777",
+    "s0686",
+    "s0739",
+    "s1297",
+    "s0783",
+    "s0367",
+    "s0158",
+    "s0175",
+    "s0918",
+    "s0258",
+    "s0913",
+    "s0574",
+    "s0098",
+    "s1389",
+    "s1012",
+    "s0577",
+    "s0250"
+  ],
+  "mask_records": [
+    {
+      "case_id": "s0777",
+      "mask": "hip_left",
+      "bytes": 241838,
+      "sha256": "9d6323f66b0820dcb71ca92a516c2e6173d20f8ca738b6fef41d936e60f24978"
+    },
+    {
+      "case_id": "s0777",
+      "mask": "hip_right",
+      "bytes": 240356,
+      "sha256": "44afb9c577929f28e55094e6dc2dfd2b688062503a45b4ef3e2dcd035b31622c"
+    },
+    {
+      "case_id": "s0777",
+      "mask": "sacrum",
+      "bytes": 59378,
+      "sha256": "9c9fd18ff41900ee5ac1a0d86546877e92447d05925f04539694d0fb6f7d93cd"
+    },
+    {
+      "case_id": "s0777",
+      "mask": "femur_left",
+      "bytes": 218637,
+      "sha256": "8af4ded5f5a23adf7056e58ed2cfa08bab8e3df4d7c041a668742c1ecc478082"
+    },
+    {
+      "case_id": "s0777",
+      "mask": "femur_right",
+      "bytes": 218111,
+      "sha256": "916a81d21f3d10f642145c54ff7420009b5b6835f40e1ba3164b3c414b883650"
+    },
+    {
+      "case_id": "s0686",
+      "mask": "hip_left",
+      "bytes": 159901,
+      "sha256": "8eb4bca41464d234b7b78bf015f22e06dd06c0c2efd9f22e0072ca44ae21f598"
+    },
+    {
+      "case_id": "s0686",
+      "mask": "hip_right",
+      "bytes": 159048,
+      "sha256": "e38c4bba96e1bba42612964cce2745fdc7be5f1e280cb83fdf8c237060d09ebb"
+    },
+    {
+      "case_id": "s0686",
+      "mask": "sacrum",
+      "bytes": 41941,
+      "sha256": "cf1a5790589770196133abd4dfaebb14970589cd6957cb0157a87022585b1fbe"
+    },
+    {
+      "case_id": "s0686",
+      "mask": "femur_left",
+      "bytes": 137080,
+      "sha256": "9b1ad5f0731155626f156892b2c17a79e583a5fb9e45d6b574294641e942bd76"
+    },
+    {
+      "case_id": "s0686",
+      "mask": "femur_right",
+      "bytes": 136968,
+      "sha256": "e9ee0b9dd78da55483e861ec7858561a2e7938ffffd9c23d3445412d509b10ab"
+    },
+    {
+      "case_id": "s0739",
+      "mask": "hip_left",
+      "bytes": 164406,
+      "sha256": "2342bd2549821702380912cd8965ae6d2f57de62cfe37169735f9bfe21479378"
+    },
+    {
+      "case_id": "s0739",
+      "mask": "hip_right",
+      "bytes": 165131,
+      "sha256": "037ac9dcc4a9eff0cabc378fa619accbac6056c3a6199e1dc89399412b93b88f"
+    },
+    {
+      "case_id": "s0739",
+      "mask": "sacrum",
+      "bytes": 151664,
+      "sha256": "22100df7003e9c1806c5967312ff0fe3b4e7f219a2e1bef1d680a6797ce38894"
+    },
+    {
+      "case_id": "s0739",
+      "mask": "femur_left",
+      "bytes": 142439,
+      "sha256": "e285401b0bcf6ed2b63d638890b75312740f840a42492b4c4923c715fbf7e9ff"
+    },
+    {
+      "case_id": "s0739",
+      "mask": "femur_right",
+      "bytes": 142662,
+      "sha256": "9e7e5bee63bd7e9bae09225f9526782d906fdd6b2d346d887bde66b7f4350d9c"
+    },
+    {
+      "case_id": "s1297",
+      "mask": "hip_left",
+      "bytes": 150012,
+      "sha256": "b05aa4653bb4716911b910f7167d237471246e0c64a9d84709a8b40789c64600"
+    },
+    {
+      "case_id": "s1297",
+      "mask": "hip_right",
+      "bytes": 149680,
+      "sha256": "3b5fa9b98a6aa82e4245319eb3d31f53a1dc80010f0fd50a6e4492a8ddee7904"
+    },
+    {
+      "case_id": "s1297",
+      "mask": "sacrum",
+      "bytes": 135225,
+      "sha256": "f6a8f81fe0946b569f74d6a53bf185a76c8acf942ca11604725cfa5badbc40f5"
+    },
+    {
+      "case_id": "s1297",
+      "mask": "femur_left",
+      "bytes": 130321,
+      "sha256": "fd2e8e57cbd33e5d6e998678e68106f20ae13da6c934193eb5ae175678c54f2d"
+    },
+    {
+      "case_id": "s1297",
+      "mask": "femur_right",
+      "bytes": 130177,
+      "sha256": "8cefbd9ba1d803f1f4d3628abd2ca8f681583019f325d1ae93dd325f4bd5fb04"
+    },
+    {
+      "case_id": "s0783",
+      "mask": "hip_left",
+      "bytes": 92695,
+      "sha256": "5df33716d33e46ac6504f4dc67493e7526b6040701287a4af09073a571630e08"
+    },
+    {
+      "case_id": "s0783",
+      "mask": "hip_right",
+      "bytes": 76590,
+      "sha256": "2095a7253ec8ad87debc18363b84d73d89bd774eb0eb889334bfc07aedfd2767"
+    },
+    {
+      "case_id": "s0783",
+      "mask": "sacrum",
+      "bytes": 75643,
+      "sha256": "e9af32cad118d3ebc7e5674ad31ccfe337fe50d7154afd1264be56dd7ae4af18"
+    },
+    {
+      "case_id": "s0783",
+      "mask": "femur_left",
+      "bytes": 120104,
+      "sha256": "568473db85b7245b41adaa334212ee2ede7c22b1e750d6039ed95edcc60bf30f"
+    },
+    {
+      "case_id": "s0783",
+      "mask": "femur_right",
+      "bytes": 75637,
+      "sha256": "85cd4be52f269ff1d2c334cb4cc0429e155faabcbc460b51dbc2b6239ff4ca50"
+    },
+    {
+      "case_id": "s0367",
+      "mask": "hip_left",
+      "bytes": 40340,
+      "sha256": "fec9cb4712f24488f60b182fa513e5a2b7b35f59ec5c93ffe68a7397431dbcaf"
+    },
+    {
+      "case_id": "s0367",
+      "mask": "hip_right",
+      "bytes": 40340,
+      "sha256": "fec9cb4712f24488f60b182fa513e5a2b7b35f59ec5c93ffe68a7397431dbcaf"
+    },
+    {
+      "case_id": "s0367",
+      "mask": "sacrum",
+      "bytes": 40351,
+      "sha256": "f64e60cf3ab74277c9551d9945262833979cd8cac0cc99d7ede62322543c134f"
+    },
+    {
+      "case_id": "s0367",
+      "mask": "femur_left",
+      "bytes": 40340,
+      "sha256": "fec9cb4712f24488f60b182fa513e5a2b7b35f59ec5c93ffe68a7397431dbcaf"
+    },
+    {
+      "case_id": "s0367",
+      "mask": "femur_right",
+      "bytes": 40340,
+      "sha256": "fec9cb4712f24488f60b182fa513e5a2b7b35f59ec5c93ffe68a7397431dbcaf"
+    },
+    {
+      "case_id": "s0158",
+      "mask": "hip_left",
+      "bytes": 107220,
+      "sha256": "17aa3847b2cea9b57d7515bc69d18f3ad3568ff165d054c308d026e3294d047d"
+    },
+    {
+      "case_id": "s0158",
+      "mask": "hip_right",
+      "bytes": 106486,
+      "sha256": "d8c8bbe15bf20200b4f7a146c3dfea9edebd480d2c069eda4a37d180e7ac1f92"
+    },
+    {
+      "case_id": "s0158",
+      "mask": "sacrum",
+      "bytes": 27996,
+      "sha256": "2023c887d9a2567510c67f2d1211af4d22d0fe62ec7c8bf7bd35fe2d3f8d49be"
+    },
+    {
+      "case_id": "s0158",
+      "mask": "femur_left",
+      "bytes": 82162,
+      "sha256": "df0219b6b30e720c9846b884ff909672c1d8d7048c4aca4b53353720e09efa83"
+    },
+    {
+      "case_id": "s0158",
+      "mask": "femur_right",
+      "bytes": 80789,
+      "sha256": "7ea7414199624d5901aee842f7f5118bc5652a963849024e4e1987a6603a0cec"
+    },
+    {
+      "case_id": "s0175",
+      "mask": "hip_left",
+      "bytes": 44536,
+      "sha256": "26500fbebee59757412c6a8842b46a64c8c176dda9ef82295f04b5961fd48c79"
+    },
+    {
+      "case_id": "s0175",
+      "mask": "hip_right",
+      "bytes": 44536,
+      "sha256": "26500fbebee59757412c6a8842b46a64c8c176dda9ef82295f04b5961fd48c79"
+    },
+    {
+      "case_id": "s0175",
+      "mask": "sacrum",
+      "bytes": 44547,
+      "sha256": "fc8ac89aee6da1dead3bc68e2f227639d819d21fce0626f6bfa3dc007d129832"
+    },
+    {
+      "case_id": "s0175",
+      "mask": "femur_left",
+      "bytes": 44536,
+      "sha256": "26500fbebee59757412c6a8842b46a64c8c176dda9ef82295f04b5961fd48c79"
+    },
+    {
+      "case_id": "s0175",
+      "mask": "femur_right",
+      "bytes": 44536,
+      "sha256": "26500fbebee59757412c6a8842b46a64c8c176dda9ef82295f04b5961fd48c79"
+    },
+    {
+      "case_id": "s0918",
+      "mask": "hip_left",
+      "bytes": 164664,
+      "sha256": "c090bed0bee155dcd79c403854bd84afc2f276b03a775a7c93cfe4a2dd17b15a"
+    },
+    {
+      "case_id": "s0918",
+      "mask": "hip_right",
+      "bytes": 161710,
+      "sha256": "ab45166638072ad0ab544a48b25db52e8ea8dd2e7a2bbe787892b7162ee7020c"
+    },
+    {
+      "case_id": "s0918",
+      "mask": "sacrum",
+      "bytes": 146490,
+      "sha256": "eca492b920ff33e34a54866a6eaca324287baa62ae54444a88ca7f24e035c3e5"
+    },
+    {
+      "case_id": "s0918",
+      "mask": "femur_left",
+      "bytes": 136478,
+      "sha256": "91e81a2cef64e63905a52017c76eeab99f7a85f22c3db4b1faac43b3ecb0266c"
+    },
+    {
+      "case_id": "s0918",
+      "mask": "femur_right",
+      "bytes": 140215,
+      "sha256": "95d81680e8d2a0e6aec73890cbfec33f42c9ca98449635893b5796af082330da"
+    },
+    {
+      "case_id": "s0258",
+      "mask": "hip_left",
+      "bytes": 32848,
+      "sha256": "8309c6eb784e7d7dbd507866f63242be8b5c652c1be5bd4a8080bfe152229eac"
+    },
+    {
+      "case_id": "s0258",
+      "mask": "hip_right",
+      "bytes": 32848,
+      "sha256": "8309c6eb784e7d7dbd507866f63242be8b5c652c1be5bd4a8080bfe152229eac"
+    },
+    {
+      "case_id": "s0258",
+      "mask": "sacrum",
+      "bytes": 32859,
+      "sha256": "08aabe11b03e4f4da78b4d435a0b9046d73f34dd5d913be4efdaa72ab45a6026"
+    },
+    {
+      "case_id": "s0258",
+      "mask": "femur_left",
+      "bytes": 32848,
+      "sha256": "8309c6eb784e7d7dbd507866f63242be8b5c652c1be5bd4a8080bfe152229eac"
+    },
+    {
+      "case_id": "s0258",
+      "mask": "femur_right",
+      "bytes": 32848,
+      "sha256": "8309c6eb784e7d7dbd507866f63242be8b5c652c1be5bd4a8080bfe152229eac"
+    },
+    {
+      "case_id": "s0913",
+      "mask": "hip_left",
+      "bytes": 203163,
+      "sha256": "9e99ef27d1d675b669ebd631199f015212516bdc2fa1a1510676488575165cfe"
+    },
+    {
+      "case_id": "s0913",
+      "mask": "hip_right",
+      "bytes": 203414,
+      "sha256": "21d2a754a1c70e61077be4421b512fb0b2f8b95a5f24e9caded71c4024673857"
+    },
+    {
+      "case_id": "s0913",
+      "mask": "sacrum",
+      "bytes": 187804,
+      "sha256": "f3fbe1c7c28bf12d9c3206cfe99b43efc39a11657b547e5046d65072d912e9fe"
+    },
+    {
+      "case_id": "s0913",
+      "mask": "femur_left",
+      "bytes": 182307,
+      "sha256": "d8194bfb261fcb8375cdcd4d036f303978717266a905474358cfadbef1c8a987"
+    },
+    {
+      "case_id": "s0913",
+      "mask": "femur_right",
+      "bytes": 180783,
+      "sha256": "7ab4bb54e3ebdadb5bd29bec965b0b962be6e37f95cd2399288b1f570009ae99"
+    },
+    {
+      "case_id": "s0574",
+      "mask": "hip_left",
+      "bytes": 158689,
+      "sha256": "00dd40d9d68ad89f0073573c9b31e82f65a0b524a33fc6e8aed6b5469ddab508"
+    },
+    {
+      "case_id": "s0574",
+      "mask": "hip_right",
+      "bytes": 160552,
+      "sha256": "1810c53152f253ed95b5916ad4cb38639da1db1cfe02a95b3d0b276d37ce179d"
+    },
+    {
+      "case_id": "s0574",
+      "mask": "sacrum",
+      "bytes": 141496,
+      "sha256": "d8427a1e1baea1931e72d874f03398ee16e56d0cc95ee5b147060c6d3d57f9fc"
+    },
+    {
+      "case_id": "s0574",
+      "mask": "femur_left",
+      "bytes": 134548,
+      "sha256": "9ef644e737169212247101f887c5ce7d0a8bf0ae5fd1710161174ae450399f09"
+    },
+    {
+      "case_id": "s0574",
+      "mask": "femur_right",
+      "bytes": 135484,
+      "sha256": "146990debe455ceddc575ff6306c0eb3e0a89a64f3f625ed2d490520db2e2a66"
+    },
+    {
+      "case_id": "s0098",
+      "mask": "hip_left",
+      "bytes": 68901,
+      "sha256": "f819cdfe31921b6eb3dd3857b47fba5dc9dcdb7d7f4b415d333ad21ec1bffb72"
+    },
+    {
+      "case_id": "s0098",
+      "mask": "hip_right",
+      "bytes": 67659,
+      "sha256": "8dbec03e3650e7dee2c6a283feaa41bf6cbdb8cbac843f13ed0ef1ea1e7d142d"
+    },
+    {
+      "case_id": "s0098",
+      "mask": "sacrum",
+      "bytes": 60246,
+      "sha256": "043e4fcd7369cdd2b65d90066a36cf2c0879ef356cc3966a14b18de648c4933b"
+    },
+    {
+      "case_id": "s0098",
+      "mask": "femur_left",
+      "bytes": 48940,
+      "sha256": "7172817ad1747e8c1df91180648decd320301d77c8fa7ef949a60be465dc0e6f"
+    },
+    {
+      "case_id": "s0098",
+      "mask": "femur_right",
+      "bytes": 48938,
+      "sha256": "97daf868a917f018265c7404858efb84a0377437f8696b4894957304d29472f6"
+    },
+    {
+      "case_id": "s1389",
+      "mask": "hip_left",
+      "bytes": 20299,
+      "sha256": "e2661a051ddfe6fda670df92df46275d27e988513bb9d0064aa0d05522b96692"
+    },
+    {
+      "case_id": "s1389",
+      "mask": "hip_right",
+      "bytes": 20299,
+      "sha256": "e2661a051ddfe6fda670df92df46275d27e988513bb9d0064aa0d05522b96692"
+    },
+    {
+      "case_id": "s1389",
+      "mask": "sacrum",
+      "bytes": 20313,
+      "sha256": "7959a308bc8b9e4f1e159f206960e68de18035565b54014668a78b17ce070b1e"
+    },
+    {
+      "case_id": "s1389",
+      "mask": "femur_left",
+      "bytes": 20299,
+      "sha256": "e2661a051ddfe6fda670df92df46275d27e988513bb9d0064aa0d05522b96692"
+    },
+    {
+      "case_id": "s1389",
+      "mask": "femur_right",
+      "bytes": 20299,
+      "sha256": "e2661a051ddfe6fda670df92df46275d27e988513bb9d0064aa0d05522b96692"
+    },
+    {
+      "case_id": "s1012",
+      "mask": "hip_left",
+      "bytes": 193240,
+      "sha256": "365a1c83c8f75f7895b8694115c9a4d484e4049f45330a8eb61f499950840386"
+    },
+    {
+      "case_id": "s1012",
+      "mask": "hip_right",
+      "bytes": 193508,
+      "sha256": "478cb8a70fcc172538cad24e1d64fc8019c2964329b5152b43f11fb7cbc91a24"
+    },
+    {
+      "case_id": "s1012",
+      "mask": "sacrum",
+      "bytes": 178884,
+      "sha256": "e72eff84119aefa878c43293581d6590228ff983d17c8008962afd7c7ca9b637"
+    },
+    {
+      "case_id": "s1012",
+      "mask": "femur_left",
+      "bytes": 172839,
+      "sha256": "86a211f09a50750abe4c2f1d0dd9e2cd93fc7e5d375146e7770b31ad31e905bd"
+    },
+    {
+      "case_id": "s1012",
+      "mask": "femur_right",
+      "bytes": 173462,
+      "sha256": "d55e0bb6d01f8089dbcdd6f32ceb885d0cd132cedd3194971b2f88f290fd94fe"
+    },
+    {
+      "case_id": "s0577",
+      "mask": "hip_left",
+      "bytes": 144803,
+      "sha256": "8cf65ab041bad34b88b379dfec28edc23d9c20cacaf433dc0bb1278b13b721cd"
+    },
+    {
+      "case_id": "s0577",
+      "mask": "hip_right",
+      "bytes": 144673,
+      "sha256": "fa03cb35278bcc166ac06e31b6130d1199a84b6f9350696171e6d212dfc1ea3e"
+    },
+    {
+      "case_id": "s0577",
+      "mask": "sacrum",
+      "bytes": 128141,
+      "sha256": "943b632253976a6ef1421d23e52102e444da7b26fe306b2bfbf6687144c69371"
+    },
+    {
+      "case_id": "s0577",
+      "mask": "femur_left",
+      "bytes": 122155,
+      "sha256": "830a93a12200d9b96ac5cc9117dbe21ff96d22a37b261f943f9d02e21ffaea28"
+    },
+    {
+      "case_id": "s0577",
+      "mask": "femur_right",
+      "bytes": 122478,
+      "sha256": "39e84a87e7371e186fdbefc3e6c2cb801644d6c80ebe347517f2638e168a7bb0"
+    },
+    {
+      "case_id": "s0250",
+      "mask": "hip_left",
+      "bytes": 159711,
+      "sha256": "2c8be079d9d442284e4b209aef1328287f15f90209f256bdcaec4f7880b996f6"
+    },
+    {
+      "case_id": "s0250",
+      "mask": "hip_right",
+      "bytes": 162396,
+      "sha256": "f5262bea36388fe162e4e6fae713a061f2abcf9d440ec5f404cc1ccf17f1eb8e"
+    },
+    {
+      "case_id": "s0250",
+      "mask": "sacrum",
+      "bytes": 143640,
+      "sha256": "cd8a4c9824fc06020c599efd35bc26bee7cbc3e00605e03225d73bc3c37ef66e"
+    },
+    {
+      "case_id": "s0250",
+      "mask": "femur_left",
+      "bytes": 135345,
+      "sha256": "11ce659634f88f6be1f94d8fae0699f50c9ee4565a07923e46c38398cef963d4"
+    },
+    {
+      "case_id": "s0250",
+      "mask": "femur_right",
+      "bytes": 135523,
+      "sha256": "2d2575e6a74cb372fa97347dfca17afbc5d93dfce5d03db534c0556933f47bfd"
+    }
+  ],
+  "present_mask_count": 85,
+  "total_size_on_disk_bytes": 9653738
+}
