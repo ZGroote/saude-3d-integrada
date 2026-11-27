@@ -48,7 +48,7 @@ before(async () => {
   await db.exec(await readFile(resolve(pasta, '../migrations/0001_fundacao.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../seed.sql'), 'utf8'));
   await db.exec(await readFile(resolve(pasta, '../migrations/0002_cid10.sql'), 'utf8'));
-  for (const file of ['0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql','0009_sessao_inatividade.sql'])
+  for (const file of ['0003_achados.sql','0004_gestacao.sql','0005_fhir.sql','0006_bodysite_leitura.sql','0007_endurecimento.sql','0008_endurecimento_piloto.sql','0009_sessao_inatividade.sql','0010_vista_achado.sql'])
     await db.exec(await readFile(resolve(pasta, '../migrations', file), 'utf8'));
 });
 after(async () => db.close());
@@ -65,7 +65,7 @@ test('cardiologia registra I10 normal e F32 restrito; obstetrícia não recebe p
   assert.equal(cardioRows.rows.find((r) => r.id === f32).nivel_sigilo, 'restrito');
   assert.deepEqual(Object.keys(cardioRows.rows[0]), [
     'id','ancora','estrutura','cid10','cid10_descricao','categoria','lado','status','nivel_sigilo',
-    'inicio','observacao','especialidade','autor_nome','unidade_nome','unidade_id','substitui_id','criado_em',
+    'inicio','observacao','especialidade','autor_nome','unidade_nome','unidade_id','substitui_id','criado_em','vista',
   ]);
   assert.equal(cardioRows.rows.find((r) => r.id === i10).cid10_descricao.length > 0, true);
   assert.equal(cardioRows.rows.find((r) => r.id === i10).autor_nome, 'Profissional Cardiologia');
@@ -87,7 +87,7 @@ test('correção mantém cadeia e lista apenas o vigente', async () => {
   assert.deepEqual(historico.rows.map((r) => r.id), [primeiro, segundo, terceiro]);
   assert.deepEqual(Object.keys(historico.rows[0]), [
     'id','ancora','estrutura','cid10','cid10_descricao','categoria','lado','status','nivel_sigilo',
-    'inicio','observacao','especialidade','autor_nome','unidade_nome','unidade_id','substitui_id','criado_em',
+    'inicio','observacao','especialidade','autor_nome','unidade_nome','unidade_id','substitui_id','criado_em','vista',
   ]);
 });
 
