@@ -1,5 +1,5 @@
 // Regras puras dos achados (SPEC §5.4, §6 e §7). Só tipos do motor: nada de three no servidor.
-import type { Ancora } from "@saude3d/motor-anatomico";
+import type { Ancora, VistaCamera } from "@saude3d/motor-anatomico";
 
 export const CATEGORIAS = { doenca: "Doença", sintoma: "Sintoma", lesao: "Lesão", cirurgia: "Cirurgia", dispositivo: "Dispositivo", alergia: "Alergia" } as const;
 export const LADOS = { esquerdo: "Esquerdo", direito: "Direito", bilateral: "Bilateral", nao_se_aplica: "Não se aplica" } as const;
@@ -13,6 +13,7 @@ export type Status = keyof typeof STATUS;
 export type Achado = {
   id: string;
   ancora: Ancora | null;
+  vista: VistaCamera | null;
   cid10: string;
   cid10_descricao: string;
   categoria: Categoria;

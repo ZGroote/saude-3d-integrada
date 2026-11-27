@@ -114,6 +114,10 @@ Ao abrir uma âncora gravada noutra `atlas_versao`, o motor reprojeta `posicao_l
 
 **Lado:** `lateralidade` do índice (`left`/`right`/`null`) vira `achados.lado` (`esquerdo`/`direito`/`nao_se_aplica`).
 
+**Câmera e visibilidade (Leva A):** `NomeVista`, `VistaCamera` e `ComandoCamera` permitem vistas anatômicas, enquadrar/focar/restaurar e reportar a câmera; `seq` evita executar o mesmo comando duas vezes. Props opcionais `ocultas`, `isoladas`, `transparencia`, `camadasRemovidas`/`onCamadas` controlam malhas sem alterar âncoras ou o carregamento necessário a marcadores. Selecionar um marcador centraliza a câmera respeitando movimento reduzido.
+
+**Camadas musculares:** aproximação por profundidade do centro de cada malha muscular à pele, agrupada em até dez faixas por quantis; camadas superficiais podem ser removidas da visualização. Não representa planos anatômicos validados.
+
 ## 6. Modelo de dados
 
 Nomes de tabelas e colunas em português.
@@ -261,6 +265,8 @@ Leitura do prontuário pelo app passa **sempre** por `abrir_prontuario`; a pági
 4. Clicar no marcador abre o cartão: CID, autor, especialidade, unidade, data, observação.
 5. A linha do tempo filtra o corpo pelo período escolhido.
 6. Meta de desempenho: abrir o prontuário em até 3 s num tablet intermediário com 200 achados.
+
+Controles do visualizador: corpo inteiro/foco, seis vistas anatômicas, transparência e camadas musculares aproximadas; estruturas podem ser ocultadas ou isoladas. O card da estrutura mostra nome em português/inglês e, no prontuário, os achados ligados por estrutura (ou malha quando sem ID). A atribuição do atlas permanece visível.
 
 ## 8. Pesquisa populacional
 

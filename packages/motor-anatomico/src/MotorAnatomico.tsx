@@ -1,9 +1,9 @@
 'use client';
 // Motor 3D (SPEC §5.4). Não sabe o que é paciente: recebe atlas e marcadores, desenha e devolve geometria.
 import { Canvas, useFrame, useThree, type ThreeEvent } from '@react-three/fiber';
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
-  BackSide, Box3, DirectionalLight, DoubleSide, InstancedMesh, Matrix4, Mesh, MeshStandardMaterial, Vector3,
+  BackSide, Box3, DirectionalLight, DoubleSide, InstancedMesh, Matrix4, Mesh, MeshStandardMaterial, Sphere, Vector3,
   type Intersection, type Raycaster,
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -11,8 +11,8 @@ import { ancoraDeIntersecao, candidatas, criarBVH, precisaDeGeometria, reprojeta
 import {
   carregarPacote, carregarSistema, descartarSistema, doisQuadros, montarBVHs, urlDoPacote, type Pacote, type Sistema,
 } from './pacote';
-import type { Ancora, EntradaIndice, Marcador, Vetor3 } from './tipos';
-import { COR_PADRAO, CORES_SISTEMA, distanciaDeEnquadramento } from './visual';
+import type { Ancora, ComandoCamera, EntradaIndice, Marcador, NomeVista, Vetor3, VistaCamera } from './tipos';
+import { binningCamadas, calcularVista, COR_PADRAO, CORES_SISTEMA, distanciaDeEnquadramento } from './visual';
 
 export type MotorAnatomicoProps = {
   atlas: string;
@@ -34,6 +34,13 @@ export type MotorAnatomicoProps = {
   onSelecionarMarcador?: (id: string) => void;
   /** lista completa dos marcadores que não dá para desenhar; chamada quando muda (pode voltar vazia) */
   onMarcadoresSemPosicao?: (ids: string[]) => void;
+  comandoCamera?: ComandoCamera;
+  onVista?: (vista: Omit<VistaCamera, 'sistemas'>) => void;
+  ocultas?: string[];
+  isoladas?: string[] | null;
+  transparencia?: boolean;
+  camadasRemovidas?: number;
+  onCamadas?: (total: number) => void;
 };
 
 const PELE = 'tegumentar';
@@ -111,7 +118,7 @@ function Instancias({ itens, destaque = false, onSelecionar }: {
  * Uma falha é repetida quando o sistema é ligado de novo ou deixa de ser pedido.
  */
 function useSistemas(base: string, pacote: Pacote | null, visiveis: string[], completos: string[]) {
-  const cache = useRef(new Map<string, Carga>());
+  const [cache] = useState(() => new Map<string, Carga>());
   const visiveisAntes = useRef<string[]>([]);
   const substituidos = useRef<Sistema[]>([]);
   const [revisao, setRevisao] = useState(0);
@@ -121,8 +128,8 @@ function useSistemas(base: string, pacote: Pacote | null, visiveis: string[], co
   const mensagem = (erro: unknown) => (erro instanceof Error ? erro.message : String(erro));
 
   const carga = (id: string) => {
-    let atual = cache.current.get(id);
-    if (!atual) cache.current.set(id, (atual = {}));
+    let atual = cache.get(id);
+    if (!atual) cache.set(id, (atual = {}));
     return atual;
   };
 
@@ -152,7 +159,7 @@ function useSistemas(base: string, pacote: Pacote | null, visiveis: string[], co
     if (alvo.pedidoCompleto) return alvo.pedidoCompleto;
     alvo.pedidoCompleto = baixar(id, definicao.glb).then(
       (sistema) => {
-        if (cache.current.get(id) !== alvo) {
+        if (cache.get(id) !== alvo) {
           descartarSistema(sistema); // o motor saiu da tela
           throw new Error('carga descartada');
         }
@@ -174,37 +181,39 @@ function useSistemas(base: string, pacote: Pacote | null, visiveis: string[], co
 
   useEffect(() => {
     if (!pacote) return;
-    for (const [id, atual] of cache.current) {
+    for (const [id, atual] of cache) {
       const religado = visiveis.includes(id) && !visiveisAntes.current.includes(id);
-      if (atual.erro && (religado || !pedidos.includes(id))) cache.current.delete(id);
+      if (atual.erro && (religado || !pedidos.includes(id))) cache.delete(id);
     }
     visiveisAntes.current = visiveis;
     const semPropagar = () => {}; // a falha já fica registrada na carga
     for (const id of pedidos) {
       const definicao = pacote.manifesto.sistemas.find((s) => s.id === id);
-      if (!definicao || cache.current.get(id)?.erro) continue;
+      if (!definicao || cache.get(id)?.erro) continue;
       const alvo = carga(id);
       const { glb_leve: leve } = definicao;
       if (leve && visiveis.includes(id) && !alvo.sistema && !alvo.pedindoLeve) {
         alvo.pedindoLeve = true;
         baixar(id, leve).then(
           (sistema) => {
-            if (cache.current.get(id) !== alvo || alvo.completo) return descartarSistema(sistema);
+            if (cache.get(id) !== alvo || alvo.completo) return descartarSistema(sistema);
             usar(alvo, sistema, false);
             // com o corpo na tela, a versão completa vem em segundo plano
             void doisQuadros().then(() => {
-              if (cache.current.get(id) === alvo) obterCompleto(id).catch(semPropagar);
+              if (cache.get(id) === alvo) obterCompleto(id).catch(semPropagar);
             });
           },
           (erro: unknown) => {
             console.error(erro); // sem a versão leve, tenta a completa
-            if (cache.current.get(id) === alvo) obterCompleto(id).catch(semPropagar);
+            if (cache.get(id) === alvo) obterCompleto(id).catch(semPropagar);
           },
         );
       }
-      if (!leve || completos.includes(id)) obterCompleto(id).catch(semPropagar);
+      if (!leve || completos.includes(id)) {
+        void Promise.resolve().then(() => obterCompleto(id)).catch(semPropagar);
+      }
     }
-    avisar();
+    queueMicrotask(avisar);
   }, [pacote, chave]);
 
   useEffect(() => {
@@ -212,7 +221,7 @@ function useSistemas(base: string, pacote: Pacote | null, visiveis: string[], co
   }, [revisao]);
 
   useEffect(() => {
-    const atual = cache.current;
+    const atual = cache;
     const velhos = substituidos.current;
     return () => {
       for (const { sistema } of atual.values()) if (sistema) descartarSistema(sistema);
@@ -221,7 +230,7 @@ function useSistemas(base: string, pacote: Pacote | null, visiveis: string[], co
     };
   }, []);
 
-  return { cache: cache.current, revisao, obterCompleto };
+  return { cache, revisao, obterCompleto };
 }
 
 /** Avisa depois que um quadro com o conteúdo atual da cena foi desenhado. */
@@ -234,11 +243,14 @@ function AposDesenhar({ avisar }: { avisar: () => void }) {
 
 function Motor({
   atlas, versao, baseUrl, sistemasVisiveis, marcadores = [], marcadoresPendentes, onMarcadoresDesenhados, selecionado,
-  onEscolherPonto, onSelecionarMarcador, onMarcadoresSemPosicao,
+  onEscolherPonto, onSelecionarMarcador, onMarcadoresSemPosicao, comandoCamera, onVista,
+  ocultas = [], isoladas = null, transparencia = false, camadasRemovidas = 0, onCamadas,
 }: MotorAnatomicoProps) {
   const base = urlDoPacote(baseUrl, atlas, versao);
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [falha, setFalha] = useState('');
+  const [vistaAtual, setVistaAtual] = useState<NomeVista | 'livre'>('anterior');
+  const [cameraAtual, setCameraAtual] = useState<{ posicao: Vetor3; alvo: Vetor3 } | null>(null);
 
   useEffect(() => {
     const cancelar = new AbortController();
@@ -276,6 +288,7 @@ function Motor({
     ...dosMarcadores,
     ...(ampliado ? liberados : []),
     ...(doSelecionado?.atlas === atlas && liberados.includes(doSelecionado.sistema) ? [doSelecionado.sistema] : []),
+    ...(liberados.includes('muscular') ? [PELE, 'muscular'] : []),
   ])].sort();
 
   const { cache, revisao, obterCompleto } = useSistemas(base, pacote, liberados, completos);
@@ -331,6 +344,79 @@ function Motor({
   }, [posicionados, selecionado]);
   const emDestaque = posicionados.find((m) => m.id === selecionado);
 
+  const informarCamera = useCallback((posicao: Vetor3, alvo: Vetor3, vista?: NomeVista) => {
+    setVistaAtual(vista ?? 'livre');
+    setCameraAtual({ posicao, alvo });
+    onVista?.({ atlas, atlas_versao: versao, posicao, alvo });
+  }, [atlas, versao, onVista]);
+
+  const camadas = useMemo(() => {
+    const muscle = cache.get('muscular');
+    const skin = cache.get(PELE);
+    if (!sistemasVisiveis.includes('muscular') || !muscle?.completo || !muscle.sistema || !skin?.completo || !skin.sistema)
+      return { total: 0, porMalha: {} };
+    const pele = [...skin.sistema.malhas.values()];
+    const bvhPorMalha = new Map<Mesh, ReturnType<typeof criarBVH>>();
+    for (const m of pele) {
+      const atual = m.geometry.boundsTree as ReturnType<typeof criarBVH> | null;
+      const bvh = atual ?? criarBVH(m.geometry);
+      m.geometry.boundsTree = bvh;
+      bvhPorMalha.set(m, bvh);
+    }
+    const profundidades = [...muscle.sistema.malhas.values()].map((malha) => {
+      if (!malha.geometry.boundingBox) malha.geometry.computeBoundingBox();
+      const centro = malha.geometry.boundingBox!.getCenter(new Vector3());
+      const distancia = Math.min(...pele.map((p) => bvhPorMalha.get(p)!.closestPointToPoint(centro)?.distance ?? Number.POSITIVE_INFINITY));
+      return { malha: malha.name, profundidade: distancia };
+    });
+    return binningCamadas(profundidades);
+  }, [cache, revisao, sistemasVisiveis]);
+
+  useEffect(() => { onCamadas?.(camadas.total); }, [camadas.total, onCamadas]);
+
+  // Guarda os materiais e raycasts originais para filtrar por malha sem alterar o GLB/cache.
+  const visuaisOriginais = useRef(new Map<Mesh, { material: Mesh['material']; raycast: Mesh['raycast']; translucido?: MeshStandardMaterial }>());
+  useLayoutEffect(() => {
+    for (const id of prontos) {
+      const sistema = cache.get(id)?.sistema;
+      if (!sistema) continue;
+      for (const malha of sistema.malhas.values()) {
+        let original = visuaisOriginais.current.get(malha);
+        if (!original) {
+          original = { material: malha.material, raycast: malha.raycast };
+          visuaisOriginais.current.set(malha, original);
+        }
+        const daCamadaRemovida = id === 'muscular' && (camadas.porMalha[malha.name] ?? -1) < camadasRemovidas;
+        const desenhar = !ocultas.includes(malha.name) && (isoladas === null || isoladas.includes(malha.name)) && !daCamadaRemovida;
+        malha.visible = desenhar;
+        malha.raycast = desenhar ? original.raycast : (() => []);
+        const tornarTranslucida = transparencia && id !== 'esqueletico' && id !== 'articular' && id !== PELE
+          && !isoladas?.includes(malha.name);
+        if (tornarTranslucida) {
+          const baseMaterial = Array.isArray(original.material) ? original.material[0] : original.material;
+          if (baseMaterial instanceof MeshStandardMaterial) {
+            original.translucido ??= baseMaterial.clone();
+            original.translucido.opacity = 0.3;
+            original.translucido.transparent = true;
+            original.translucido.depthWrite = false;
+            original.translucido.needsUpdate = true;
+            malha.material = original.translucido;
+          }
+        } else malha.material = original.material;
+      }
+    }
+  }, [cache, revisao, prontos.join(','), ocultas.join(','), isoladas?.join(',') ?? 'null', transparencia, camadas.porMalha, camadasRemovidas]);
+
+  useEffect(() => () => {
+    for (const [malha, original] of visuaisOriginais.current) {
+      malha.material = original.material;
+      malha.raycast = original.raycast;
+      malha.visible = true;
+      original.translucido?.dispose();
+    }
+    visuaisOriginais.current.clear();
+  }, []);
+
   const relatado = useRef<string | null>(null);
   const chaveSemPosicao = JSON.stringify(semPosicao);
   useEffect(() => {
@@ -356,8 +442,6 @@ function Motor({
 
   // só o último clique vale enquanto o detalhe carrega
   const ultimoClique = useRef(0);
-  const aoEscolher = useRef(onEscolherPonto);
-  aoEscolher.current = onEscolherPonto;
   useEffect(() => () => { ultimoClique.current++; }, []);
 
   const escolher = (evento: ThreeEvent<MouseEvent>) => {
@@ -373,15 +457,16 @@ function Motor({
     const ancora = ancoraDeIntersecao(evento, contexto);
     // o que foi clicado pode ainda ser a versão leve, mesmo com a completa recém-chegada
     const atual = cache.get(sistema);
-    if (atual?.completo && atual.sistema!.malhas.get(malha) === evento.object) return aoEscolher.current?.(ancora);
+    if (atual?.completo && atual.sistema!.malhas.get(malha) === evento.object) return onEscolherPonto?.(ancora);
     // clique na versão leve: a âncora (ponto, triângulo, baricêntricas) é a da geometria completa
-    const entregar = (a: Ancora) => { if (clique === ultimoClique.current) aoEscolher.current?.(a); };
+    const entregar = (a: Ancora) => { if (clique === ultimoClique.current) onEscolherPonto?.(a); };
     obterCompleto(sistema).then(
       (completo) => {
         const geometria = completo.malhas.get(malha)?.geometry;
         if (!geometria) return console.error(`malha ${malha} não está na versão completa de ${sistema}`);
         geometria.boundsTree ??= criarBVH(geometria);
-        const { distancia: _, ...projecao } = reprojetar(ancora, geometria);
+        const { distancia: distanciaProjecao, ...projecao } = reprojetar(ancora, geometria);
+        void distanciaProjecao;
         entregar({ ...contexto, ...projecao });
       },
       // sem a versão completa, o ponto vale, mas triângulo e baricêntricas não
@@ -401,6 +486,11 @@ function Motor({
       data-completos={prontos.filter((id) => cache.get(id)!.completo).join(' ')}
       data-marcadores={posicionados.length}
       data-pele={peleTranslucida ? 'translucida' : 'opaca'}
+      data-vista={vistaAtual}
+      data-camera={cameraAtual ? JSON.stringify(cameraAtual) : undefined}
+      data-isoladas={isoladas === null ? 0 : 1}
+      data-ocultas={ocultas.length}
+      data-camadas-total={camadas.total}
     >
       <Canvas
         flat
@@ -410,7 +500,12 @@ function Motor({
         role="group"
         aria-label="Corpo em 3D"
       >
-        <Camera alvo={prontos.length ? cache.get(prontos[0]!)!.sistema! : null} onAmpliar={() => setAmpliado(true)} />
+        <Camera
+          atlas={atlas} versao={versao} comando={comandoCamera}
+          alvo={prontos.length ? cache.get(prontos[0]!)!.sistema! : null}
+          selecionado={emDestaque?.posicao ?? null} selecionadoId={emDestaque?.id ?? null}
+          onCamera={informarCamera} onAmpliar={() => setAmpliado(true)}
+        />
         {!liberado && marcadoresPendentes === false && <AposDesenhar avisar={() => { setLiberado(true); onMarcadoresDesenhados?.(); }} />}
         <hemisphereLight args={[0xffffff, 0x444444, 2.2]} />
         {/* ponytail: uma chamada de desenho por estrutura; BatchedMesh se ficar lento com tudo ligado */}
@@ -446,28 +541,150 @@ function Motor({
   );
 }
 
-/** Órbita, luz presa à câmera e enquadramento do primeiro sistema que chegar. */
-function Camera({ alvo, onAmpliar }: { alvo: Sistema | null; onAmpliar: () => void }) {
+/** Órbita, comandos de câmera, foco e enquadramento do primeiro sistema que chegar. */
+function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCamera, onAmpliar }: {
+  atlas: string;
+  versao: string;
+  comando?: ComandoCamera;
+  alvo: Sistema | null;
+  selecionado: Vetor3 | null;
+  selecionadoId: string | null;
+  onCamera: (posicao: Vetor3, alvo: Vetor3, vista?: NomeVista) => void;
+  onAmpliar: () => void;
+}) {
   const camera = useThree((s) => s.camera);
   const cena = useThree((s) => s.scene);
   const tela = useThree((s) => s.gl.domElement);
   const tamanho = useThree((s) => s.size);
   const controles = useRef<OrbitControls | null>(null);
   const enquadrado = useRef(false);
-  /** distância do primeiro enquadramento; 0 depois que a ampliação já foi avisada */
-  const referencia = useRef(0);
+  const ampliadoAvisado = useRef(false);
+  const distanciaReferencia = useRef(0);
+  const ultimoSeq = useRef(0);
+  const comandoPendente = useRef<ComandoCamera | null>(null);
+  const ultimaSelecao = useRef<string | null>(null);
+  const onCameraAtual = useRef(onCamera);
+  useEffect(() => { onCameraAtual.current = onCamera; }, [onCamera]);
+  const animacao = useRef<{
+    inicio: number; posicaoInicial: Vector3; posicaoFinal: Vector3; alvoInicial: Vector3; alvoFinal: Vector3; amortecimento: boolean;
+  } | null>(null);
+
+  const cancelarAnimacao = () => {
+    if (animacao.current && controles.current) controles.current.enableDamping = animacao.current.amortecimento;
+    animacao.current = null;
+  };
+
+  const enviarVista = (nome?: NomeVista) => {
+    const orbit = controles.current;
+    if (!orbit) return;
+    onCameraAtual.current(camera.position.toArray() as Vetor3, orbit.target.toArray() as Vetor3, nome);
+  };
+
+  const dadosEnquadramento = () => {
+    if (!alvo) return null;
+    const caixa = new Box3().setFromObject(alvo.grupo);
+    const centro = caixa.getCenter(new Vector3());
+    const distanciaCaixa = distanciaDeEnquadramento(caixa, 35, tamanho.width / tamanho.height);
+    const raio = caixa.getBoundingSphere(new Sphere()).radius;
+    const semiVertical = Math.PI * 35 / 360;
+    const semiHorizontal = Math.atan(Math.tan(semiVertical) * (tamanho.width / tamanho.height));
+    const distanciaEsfera = raio / Math.sin(Math.min(semiVertical, semiHorizontal));
+    return { centro, distancia: Math.max(distanciaCaixa, distanciaEsfera) };
+  };
+
+  const enquadrar = () => {
+    const data = dadosEnquadramento();
+    const orbit = controles.current;
+    if (!data || !orbit) return false;
+    cancelarAnimacao();
+    camera.position.set(data.centro.x, data.centro.y, data.centro.z + data.distancia);
+    camera.up.set(0, 1, 0);
+    orbit.target.copy(data.centro);
+    orbit.update();
+    distanciaReferencia.current = data.distancia;
+    return true;
+  };
+
+  const moverAlvo = (alvoNovo: Vector3, animar: boolean) => {
+    const orbit = controles.current;
+    if (!orbit) return false;
+    const alvoAtual = orbit.target.clone();
+    const posAtual = camera.position.clone();
+    const deslocamento = posAtual.clone().sub(alvoAtual);
+    const limite = distanciaReferencia.current * 0.5;
+    if (limite > 0 && deslocamento.length() > limite) deslocamento.setLength(limite);
+    const posicaoFinal = alvoNovo.clone().add(deslocamento);
+    const reduzido = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!animar || reduzido) {
+      cancelarAnimacao();
+      orbit.target.copy(alvoNovo);
+      camera.position.copy(posicaoFinal);
+      orbit.update();
+      return true;
+    }
+    const amortecimento = orbit.enableDamping;
+    orbit.enableDamping = false;
+    animacao.current = { inicio: performance.now(), posicaoInicial: posAtual, posicaoFinal,
+      alvoInicial: alvoAtual, alvoFinal: alvoNovo.clone(), amortecimento };
+    return true;
+  };
+
+  const executar = (cmd: ComandoCamera) => {
+    if (cmd.seq <= ultimoSeq.current) return;
+    const orbit = controles.current;
+    if (!orbit || !enquadrado.current) { comandoPendente.current = cmd; return; }
+    if (comandoPendente.current?.seq === cmd.seq || comandoPendente.current?.seq === -1) comandoPendente.current = null;
+    ultimoSeq.current = cmd.seq;
+    if (cmd.acao === 'restaurar') {
+      if (cmd.vista.atlas !== atlas || cmd.vista.atlas_versao !== versao) return;
+      cancelarAnimacao();
+      orbit.target.fromArray(cmd.vista.alvo);
+      camera.position.fromArray(cmd.vista.posicao);
+      orbit.update();
+      enviarVista();
+      return;
+    }
+    if (cmd.acao === 'enquadrar') {
+      if (enquadrar()) enviarVista('anterior');
+      return;
+    }
+    if (cmd.acao === 'vista') {
+      const data = dadosEnquadramento();
+      if (!data) return;
+      const pose = calcularVista(cmd.vista, data.centro.toArray() as Vetor3, data.distancia);
+      cancelarAnimacao();
+      camera.position.fromArray(pose.posicao);
+      camera.up.fromArray(pose.up);
+      orbit.target.fromArray(pose.alvo);
+      distanciaReferencia.current = data.distancia;
+      orbit.update();
+      enviarVista(cmd.vista);
+      return;
+    }
+    if (selecionado) {
+      moverAlvo(new Vector3(...selecionado), true);
+      if (animacao.current) comandoPendente.current = { seq: -1, acao: 'focar' };
+      else enviarVista();
+      return;
+    }
+  };
 
   useLayoutEffect(() => {
-    // o lado que se olha fica sempre iluminado
     const luz = new DirectionalLight(0xffffff, 1.4);
     luz.position.set(0.5, 1, 1);
     camera.add(luz);
     cena.add(camera);
-    const orbita = new OrbitControls(camera, tela);
-    orbita.enableDamping = true;
-    controles.current = orbita;
+    const orbit = new OrbitControls(camera, tela);
+    orbit.enableDamping = true;
+    const terminou = () => {
+      const atual = controles.current;
+      if (atual) onCameraAtual.current(camera.position.toArray() as Vetor3, atual.target.toArray() as Vetor3);
+    };
+    orbit.addEventListener('end', terminou);
+    controles.current = orbit;
     return () => {
-      orbita.dispose();
+      orbit.removeEventListener('end', terminou);
+      orbit.dispose();
       camera.remove(luz);
       cena.remove(camera);
     };
@@ -476,22 +693,56 @@ function Camera({ alvo, onAmpliar }: { alvo: Sistema | null; onAmpliar: () => vo
   useLayoutEffect(() => {
     if (!alvo || enquadrado.current || !controles.current) return;
     enquadrado.current = true;
-    const caixa = new Box3().setFromObject(alvo.grupo);
-    const centro = caixa.getCenter(new Vector3());
-    const distancia = distanciaDeEnquadramento(caixa, 35, tamanho.width / tamanho.height);
-    referencia.current = distancia;
-    controles.current.target.copy(centro);
-    camera.position.set(centro.x, centro.y, centro.z + distancia);
-    controles.current.update();
+    enquadrar();
   }, [alvo, camera, tamanho]);
 
+  useEffect(() => {
+    if (!comando) return;
+    if (!alvo || !enquadrado.current) comandoPendente.current = comando;
+    else executar(comando);
+  }, [comando, alvo, atlas, versao]);
+
+  useEffect(() => {
+    if (!selecionadoId || !selecionado) return;
+    if (comando?.acao === 'restaurar'
+      && comando.vista.atlas === atlas && comando.vista.atlas_versao === versao) {
+      ultimaSelecao.current = selecionadoId;
+      return;
+    }
+    if (ultimaSelecao.current === selecionadoId) return;
+    ultimaSelecao.current = selecionadoId;
+    if (moverAlvo(new Vector3(...selecionado), true)) {
+      if (animacao.current) comandoPendente.current = { seq: -1, acao: 'focar' };
+      else enviarVista();
+    }
+  }, [selecionadoId, selecionado, comando, atlas, versao]);
+
   useFrame(() => {
-    const orbita = controles.current;
-    if (!orbita) return;
-    orbita.update();
-    if (camera.position.distanceTo(orbita.target) < referencia.current * AMPLIADO) {
-      referencia.current = 0;
+    const orbit = controles.current;
+    if (!orbit) return;
+    const movimento = animacao.current;
+    if (movimento) {
+      const t = Math.min(1, (performance.now() - movimento.inicio) / 400);
+      const suave = t * t * (3 - 2 * t);
+      camera.position.lerpVectors(movimento.posicaoInicial, movimento.posicaoFinal, suave);
+      orbit.target.lerpVectors(movimento.alvoInicial, movimento.alvoFinal, suave);
+      orbit.update();
+      if (t >= 1) {
+        animacao.current = null;
+        orbit.enableDamping = movimento.amortecimento;
+        const pendente = comandoPendente.current;
+        comandoPendente.current = null;
+        if (pendente?.acao === 'focar') enviarVista();
+      }
+    } else orbit.update();
+    if (!ampliadoAvisado.current && distanciaReferencia.current > 0 && camera.position.distanceTo(orbit.target) < distanciaReferencia.current * AMPLIADO) {
+      ampliadoAvisado.current = true;
       onAmpliar();
+    }
+    if (comandoPendente.current && comandoPendente.current.acao !== 'focar' && enquadrado.current) {
+      const pendente = comandoPendente.current;
+      comandoPendente.current = null;
+      executar(pendente);
     }
   });
   return null;

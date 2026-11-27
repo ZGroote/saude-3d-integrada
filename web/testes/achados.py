@@ -235,6 +235,7 @@ with sync_playwright() as p:
     pg.get_by_role('button', name='Salvar correção').click()
     pg.wait_for_selector('text=Correção registrada.')
     envio = [c for n, c in chamadas if n == 'registrar_achado'][-1]
+    assert 'p_vista' in envio and gravados[0]['vista'] is None, envio
     assert envio['p_substitui'] == original['id'] and envio['p_ancora'] == original['ancora'], envio
     versoes = pg.locator('[data-cartao] ol[aria-label="Versões do achado"] li')
     versoes.nth(1).wait_for()

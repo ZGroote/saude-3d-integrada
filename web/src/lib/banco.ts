@@ -126,6 +126,7 @@ export type Database = {
         Args: {
           p_paciente: string; p_ancora: Ancora | null; p_cid10: string; p_categoria: Categoria; p_lado: Lado;
           p_status: Status; p_inicio: string | null; p_observacao: string | null; p_substitui?: string | null;
+          p_vista?: import("@saude3d/motor-anatomico").VistaCamera | null;
         };
         Returns: string;
       };

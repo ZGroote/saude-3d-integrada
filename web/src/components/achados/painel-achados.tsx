@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { Marcador } from "@saude3d/motor-anatomico";
+import type { Marcador, VistaCamera } from "@saude3d/motor-anatomico";
 import { CartaoAchado } from "@/components/achados/cartao-achado";
 import { ListaEventos } from "@/components/achados/eventos";
 import { FormularioAchado } from "@/components/achados/formulario-achado";
@@ -11,7 +11,7 @@ import { Prontuario3D } from "@/components/anatomia/prontuario-3d";
 import type { AtlasPronto, PontoNoCorpo } from "@/components/anatomia/visualizador-atlas";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { corDaEspecialidade, filtrar, ordenarPorData, SEM_FILTRO, TAMANHO_DO_STATUS, type Achado } from "@/lib/achados";
+import { corDaEspecialidade, dataDoAchado, filtrar, formatarData, ordenarPorData, SEM_FILTRO, TAMANHO_DO_STATUS, type Achado } from "@/lib/achados";
 import type { Sexo } from "@/lib/banco";
 import { filtrarEventos, type Evento } from "@/lib/eventos";
 import { useHidratado } from "@/lib/hidratacao";
@@ -37,6 +37,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
   // undefined = formulário fechado; ponto null = nenhum ponto clicado
   const [novo, setNovo] = useState<{ ponto: PontoNoCorpo | null; corrigindo?: Achado; comLocal?: boolean } | undefined>();
   const [atlasPronto, setAtlasPronto] = useState<AtlasPronto | null>(null);
+  const [vistaCamera, setVistaCamera] = useState<VistaCamera | null>(null);
   const [filtro, setFiltro] = useState(SEM_FILTRO);
   // unidade de quem está logado: só ela vê o botão de corrigir
   const [minhaUnidade, setMinhaUnidade] = useState<string | null>(null);
@@ -76,10 +77,13 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
   const visiveis = useMemo(() => ordenarPorData(filtrar(achados ?? [], filtro)), [achados, filtro]);
   const marcadores = useMemo<Marcador[]>(
     () => visiveis.flatMap((a) => a.ancora
-      ? [{ id: a.id, ancora: a.ancora, cor: corDaEspecialidade(a.especialidade), tamanho: TAMANHO_DO_STATUS[a.status] }]
+      ? [{ id: a.id, ancora: a.ancora, vista: a.vista, cor: corDaEspecialidade(a.especialidade), tamanho: TAMANHO_DO_STATUS[a.status] }]
       : []),
     [visiveis],
   );
+  const rotulos = useMemo(() => Object.fromEntries(visiveis.map((a) => [
+    a.id, `${a.cid10} — ${a.cid10_descricao.slice(0, 100)} — ${formatarData(dataDoAchado(a))}`,
+  ])), [visiveis]);
   const aberto = visiveis.find((a) => a.id === selecionado);
   const abrir = useCallback((id: string) => { setNovo(undefined); setSelecionado(id); }, []);
   const registrar = (comLocal: boolean) => { setSelecionado(null); setAviso(""); setNovo({ ponto: null, comLocal }); };
@@ -88,6 +92,8 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
     () => atlasPronto && (gestacaoEmCurso ? atlasPronto : { ...atlasPronto, indice: atlasPronto.indice.filter((e) => e.sistema !== "gestacional") }),
     [atlasPronto, gestacaoEmCurso],
   );
+  const vistaParaSalvar = vistaCamera && vistaCamera.atlas === atlasDaBusca?.atlas
+    && vistaCamera.atlas_versao === atlasDaBusca?.versao ? vistaCamera : null;
   // clicar no corpo durante uma correção muda o local dela, sem virar achado novo
   const escolherPonto = (ponto: PontoNoCorpo) => {
     setSelecionado(null);
@@ -107,6 +113,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
           ponto={novo.ponto}
           corrigindo={novo.corrigindo}
           atlas={atlasDaBusca}
+          vista={vistaParaSalvar}
           comLocal={novo.comLocal}
           onEscolherPonto={(ponto) => setNovo((atual) => atual && { ...atual, ponto })}
           onCancelar={() => setNovo(undefined)}
@@ -173,7 +180,7 @@ export function PainelAchados({ pacienteId, sexo, com3d, inicial, eventos = SEM_
       <Prontuario3D
         sexo={sexo}
         prontuario={{
-          marcadores, selecionado,
+          marcadores, selecionado, rotulos, onVistaCamera: setVistaCamera,
           carregando: !achados && !falha,
           gestacaoEmCurso,
           onEscolherPonto: escolherPonto,

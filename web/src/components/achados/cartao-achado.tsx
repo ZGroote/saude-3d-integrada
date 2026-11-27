@@ -38,6 +38,7 @@ export function CartaoAchado({ achado: a, podeCorrigir, onCorrigir, onFechar }: 
         ))}
       </dl>
       <section className="mt-4 border-t border-slate-100 pt-3">
+        {a.vista && <p className="mb-2 text-xs text-slate-600">Vista salva no registro</p>}
         <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-600">Histórico de correções</h4>
         {a.substitui_id ? <Historico id={a.id} /> : <p className="mt-1 text-sm text-slate-600">Este achado não foi corrigido.</p>}
       </section>

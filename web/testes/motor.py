@@ -25,7 +25,11 @@ NEXT = next(n for p in (WEB, *WEB.parents) if (n := p / 'node_modules/next/dist/
 ATLAS = WEB / 'public/atlas'
 CAPTURAS = Path(sys.argv[1]) if len(sys.argv) > 1 else None
 assert (ATLAS / 'bp3d-m/4.0-1/manifesto.json').exists(), 'rode antes: npm run atlas'
-assert (WEB / '.next/BUILD_ID').exists(), 'rode antes: npm run build'
+SOLO_NAVEGADOR = os.environ.get('MOTOR_SOLO_NAVEGADOR') == '1'
+if SOLO_NAVEGADOR:
+    assert os.environ.get('APP_URL'), 'MOTOR_SOLO_NAVEGADOR=1 exige APP_URL de um servidor já iniciado'
+else:
+    assert (WEB / '.next/BUILD_ID').exists(), 'rode antes: npm run build'
 FEMININO_REAL = (ATLAS / 'hra-f/1.10-1/manifesto.json').exists()
 
 
@@ -117,7 +121,7 @@ def desenvolvimento(url):
         assert set(glbs) == {'bp3d-m/4.0-1/tegumentar.glb'}, glbs
         assert pg.get_attribute('[data-motor]', 'data-pele') == 'opaca'
         # estilos do Tailwind aplicados: corpo alto, com o painel ao lado
-        caixa, painel = pg.locator('canvas').bounding_box(), pg.locator('fieldset').bounding_box()
+        caixa, painel = pg.locator('canvas').bounding_box(), pg.get_by_role('group', name='Sistemas').bounding_box()
         assert caixa['height'] >= 600 and painel['x'] > caixa['x'] + caixa['width'], (caixa, painel)
         assert 'BodyParts3D' in pg.inner_text('[data-motor]')
         assert pg.is_checked('input[value=tegumentar]') and pg.locator('fieldset input').count() == 15
@@ -132,6 +136,17 @@ def desenvolvimento(url):
             assert trecho in femur, (trecho, femur)
         print('masculino: pele, seletor e painel ok ->', ' | '.join(femur.split('\n')))
         foto(pg, '1440-femur')
+        pg.get_by_role('button', name='Vista posterior').click()
+        pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-vista') === 'posterior'")
+        pg.get_by_role('button', name='Isolar estrutura').click()
+        pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-isoladas') === '1'")
+        pg.get_by_role('button', name='Mostrar tudo').click()
+        pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-isoladas') === '0'")
+        pg.check('input[value=muscular]')
+        carregados(pg, 'tegumentar esqueletico muscular')
+        pg.wait_for_function("Number(document.querySelector('[data-motor]')?.getAttribute('data-camadas-total')) > 0")
+        assert 'Camadas aproximadas' in pg.inner_text('[aria-label="Ferramentas do corpo"]')
+        print('vistas, isolamento/restauração e camadas musculares ok')
         pg.close()
 
         # feminino sem atlas publicado (404 forçado para valer mesmo quando ele existir)
@@ -196,6 +211,11 @@ def desenvolvimento(url):
             sobra = pg.evaluate('document.documentElement.scrollWidth - innerWidth')
             caixa = pg.locator('canvas').bounding_box()
             assert sobra <= 0 and caixa['width'] > largura * 0.8 and caixa['height'] >= 380, (largura, sobra, caixa)
+            centro_coberto = pg.locator('canvas').evaluate("""canvas => {
+              const r = canvas.getBoundingClientRect();
+              return document.elementFromPoint(r.left + r.width / 2, r.top + r.height * 0.42) !== canvas;
+            }""")
+            assert not centro_coberto, f'barra/elemento cobre o centro do canvas em {largura}px'
             foto(pg, str(largura))
             pg.close()
         print('820 e 390 px: sem rolagem lateral')
@@ -211,9 +231,12 @@ else:
     with Servidor('dev') as url:
         desenvolvimento(url)
 
-with Servidor('start') as url:
-    assert pedir(f'{url}/dev/motor') == 404, '/dev/motor existe em produção'
-    assert pedir(f'{url}/atlas/bp3d-m/4.0-1/manifesto.json') == 200
-rotas = json.loads((WEB / '.next/app-path-routes-manifest.json').read_text(encoding='utf-8'))
-assert not [r for r in rotas if 'dev' in r], rotas
-print('produção: /dev/motor = 404 e fora do build; atlas servido\nOK')
+if not SOLO_NAVEGADOR:
+    with Servidor('start') as url:
+        assert pedir(f'{url}/dev/motor') == 404, '/dev/motor existe em produção'
+        assert pedir(f'{url}/atlas/bp3d-m/4.0-1/manifesto.json') == 200
+    rotas = json.loads((WEB / '.next/app-path-routes-manifest.json').read_text(encoding='utf-8'))
+    assert not [r for r in rotas if 'dev' in r], rotas
+    print('produção: /dev/motor = 404 e fora do build; atlas servido\nOK')
+else:
+    print('teste de navegador isolado: servidor externo preservado; produção não iniciada')

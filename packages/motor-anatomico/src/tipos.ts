@@ -1,5 +1,22 @@
 export type Vetor3 = [number, number, number];
 
+export type NomeVista = 'anterior' | 'posterior' | 'direita' | 'esquerda' | 'superior' | 'inferior';
+
+/** Estado de câmera no espaço do mundo do atlas (metros); só vale para atlas/versão iguais. */
+export type VistaCamera = {
+  atlas: string;
+  atlas_versao: string;
+  posicao: Vetor3;
+  alvo: Vetor3;
+  sistemas: string[];
+};
+
+export type ComandoCamera =
+  | { seq: number; acao: 'enquadrar' }
+  | { seq: number; acao: 'focar' }
+  | { seq: number; acao: 'vista'; vista: NomeVista }
+  | { seq: number; acao: 'restaurar'; vista: VistaCamera };
+
 /** SPEC §5.4. "Espaço da malha" = metros, nos eixos do atlas, já sem a transformação de nó do GLB (ver pacote.ts). */
 export type Ancora = {
   atlas: string;
@@ -22,6 +39,8 @@ export type Ancora = {
 export type Marcador = {
   id: string;
   ancora: Ancora;
+  /** Vista persistida com o achado, quando presente; o motor só encaminha o valor. */
+  vista?: VistaCamera | null;
   cor: string;
   /** raio da esfera, em metros (ex.: 0.01) */
   tamanho: number;

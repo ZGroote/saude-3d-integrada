@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  carregarPacote, COR_PADRAO, CORES_SISTEMA, MotorAnatomico, type Ancora, type EntradaIndice, type Marcador, type Pacote,
+  carregarPacote, COR_PADRAO, CORES_SISTEMA, filtrarMarcadoresNestaEstrutura, MotorAnatomico,
+  type Ancora, type ComandoCamera, type EntradaIndice, type Marcador, type NomeVista, type Pacote, type VistaCamera,
 } from "@saude3d/motor-anatomico";
 import { Card } from "@/components/ui/card";
 import { ladoDaLateralidade, LADOS, type Lado } from "@/lib/achados";
@@ -15,6 +16,7 @@ const ATLAS = {
   "hra-f": { versao: "1.10-1", rotulo: "Feminino (HRA)" },
 } as const;
 type Atlas = keyof typeof ATLAS;
+type ComandoSemSeq = ComandoCamera extends infer C ? C extends { seq: number } ? Omit<C, "seq"> : never : never;
 
 // SPEC §7: o atlas segue o sexo; indeterminado → o profissional escolhe
 const ATLAS_DO_SEXO: Record<Sexo, Atlas | null> = { feminino: "hra-f", masculino: "bp3d-m", indeterminado: null };
@@ -51,6 +53,8 @@ type Prontuario = {
   /** libera a camada gestacional (SPEC §5.1: só no contexto de gestação) */
   gestacaoEmCurso: boolean;
   selecionado: string | null;
+  rotulos?: Record<string, string>;
+  onVistaCamera?: (vista: VistaCamera) => void;
   onEscolherPonto: (ponto: PontoNoCorpo) => void;
   onSelecionarMarcador: (id: string) => void;
   onMarcadoresSemPosicao: (ids: string[]) => void;
@@ -120,6 +124,14 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [sistemas, setSistemas] = useState(["tegumentar"]); // abre na pele
   const [ancora, setAncora] = useState<Ancora | null>(null);
+  const [ocultas, setOcultas] = useState<string[]>([]);
+  const [isoladas, setIsoladas] = useState<string[] | null>(null);
+  const [transparencia, setTransparencia] = useState(false);
+  const [camadasRemovidas, setCamadasRemovidas] = useState(0);
+  const [totalCamadas, setTotalCamadas] = useState(0);
+  const [comandoCamera, setComandoCamera] = useState<ComandoCamera>();
+  const sequenciaCamera = useRef(0);
+  const [vistaCamera, setVistaCamera] = useState<Omit<VistaCamera, "sistemas"> | null>(null);
 
   // ponytail: o motor também lê o índice (o navegador reaproveita o cache); expor o pacote pelo motor se pesar
   useEffect(() => {
@@ -132,7 +144,6 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
   }, [atlas, versao, onAusente]);
 
   const entradaDe = (a: Ancora) => pacote?.indice.find((e) => e.malha === a.malha);
-  const entrada = ancora && entradaDe(ancora);
 
   const onAtlasPronto = prontuario?.onAtlasPronto;
   useEffect(() => {
@@ -143,27 +154,97 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
   }, [pacote, provisorio, atlas, versao, onAtlasPronto]);
 
   function escolher(a: Ancora) {
-    if (!prontuario) return setAncora(a);
+    setAncora(a);
+    if (!prontuario) return;
     const e = entradaDe(a);
     // SPEC §6: no corpo provisório não se grava âncora. Sem o índice não há nome nem lado.
     if (provisorio || !e) return;
     prontuario.onEscolherPonto(pontoDaEntrada(a, e));
   }
 
+  const emitirComando = useCallback((comando: ComandoSemSeq) => {
+    const seq = ++sequenciaCamera.current;
+    setComandoCamera({ ...comando, seq } as ComandoCamera);
+  }, []);
+  const onVistaCamera = prontuario?.onVistaCamera;
+  const registrarVista = useCallback((vista: Omit<VistaCamera, "sistemas">) => setVistaCamera(vista), []);
+  useEffect(() => {
+    if (vistaCamera) onVistaCamera?.({ ...vistaCamera, sistemas: [...sistemas] });
+  }, [vistaCamera, sistemas, onVistaCamera]);
+  const registrarCamadas = useCallback((total: number) => setTotalCamadas(total), []);
+  const camadasAplicadas = sistemas.includes("muscular")
+    ? Math.min(camadasRemovidas, totalCamadas)
+    : 0;
+  const entradaAtual = ancora ? entradaDe(ancora) : undefined;
+  const malhasDaEstrutura = useMemo(() => {
+    if (!ancora) return [];
+    return pacote?.indice.filter((e) => ancora.estrutura !== null
+      ? e.estrutura === ancora.estrutura
+      : e.estrutura === null && e.malha === ancora.malha).map((e) => e.malha) ?? [ancora.malha];
+  }, [ancora, pacote]);
+  const achadosDaEstrutura = useMemo(() => ancora && prontuario
+    ? filtrarMarcadoresNestaEstrutura(prontuario.marcadores, ancora.estrutura, ancora.malha)
+    : [], [ancora, prontuario]);
+  const mostrarTudo = () => { setOcultas([]); setIsoladas(null); setCamadasRemovidas(0); };
+
+  const nomeVista: Record<NomeVista, string> = {
+    anterior: "Vista anterior", posterior: "Vista posterior", direita: "Vista lateral direita",
+    esquerda: "Vista lateral esquerda", superior: "Vista superior", inferior: "Vista inferior",
+  };
+
   // achado num sistema desligado ficaria escondido sob a pele: selecioná-lo liga o sistema (uma vez por seleção)
   const doSelecionado = prontuario?.marcadores.find((m) => m.id === prontuario.selecionado && m.ancora.atlas === atlas);
-  const [revelado, setRevelado] = useState<string | null>(null);
-  if ((doSelecionado?.id ?? null) !== revelado) {
-    setRevelado(doSelecionado?.id ?? null);
-    const sistema = doSelecionado?.ancora.sistema;
-    if (sistema && !sistemas.includes(sistema)) setSistemas([...sistemas, sistema]);
-  }
+  const ultimaSelecao = useRef<string | null>(null);
+  useEffect(() => {
+    if (!doSelecionado) {
+      ultimaSelecao.current = null;
+      return;
+    }
+    if (ultimaSelecao.current === doSelecionado.id) return;
+    ultimaSelecao.current = doSelecionado.id;
+    const salva = doSelecionado.vista;
+    queueMicrotask(() => {
+      if (ultimaSelecao.current !== doSelecionado.id) return;
+      if (salva && salva.atlas === atlas && salva.atlas_versao === versao) {
+        setSistemas([...new Set([...salva.sistemas, doSelecionado.ancora.sistema])]);
+        emitirComando({ acao: "restaurar", vista: salva });
+      } else {
+        setSistemas((atuais) => atuais.includes(doSelecionado.ancora.sistema)
+          ? atuais : [...atuais, doSelecionado.ancora.sistema]);
+        emitirComando({ acao: "focar" });
+      }
+    });
+  }, [doSelecionado, atlas, versao, emitirComando]);
 
   // no prontuário a coluna ao lado é a dos achados: aqui os sistemas vão para baixo do corpo
   return (
     <div className={prontuario ? "space-y-4" : "grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]"} data-atlas={atlas}>
-      {/* o motor sobrepõe a atribuição ao 3D; aqui ela vai para baixo do canvas, para não cobrir os pés */}
+      <div className="space-y-2">
+      <div role="group" aria-label="Ferramentas do corpo" className="flex flex-wrap items-center gap-2 rounded-md border border-slate-300 bg-white p-2 text-xs shadow-sm">
+        <div className="flex flex-wrap gap-1">
+          <button type="button" className="min-h-9 rounded border px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => emitirComando({ acao: "enquadrar" })}>Corpo inteiro</button>
+          <button type="button" className="min-h-9 rounded border px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={!prontuario?.selecionado} onClick={() => emitirComando({ acao: "focar" })}>Focar achado</button>
+        </div>
+        <fieldset className="flex flex-wrap items-center gap-1 border-l pl-2">
+          <legend className="sr-only">Vista</legend>
+          {(Object.keys(nomeVista) as NomeVista[]).map((vista) => (
+            <button key={vista} type="button" aria-label={nomeVista[vista]} className="min-h-9 rounded border px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => emitirComando({ acao: "vista", vista })}>{nomeVista[vista]}</button>
+          ))}
+        </fieldset>
+        <button type="button" aria-pressed={transparencia} className="min-h-9 rounded border px-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => setTransparencia((v) => !v)}>Transparência: {transparencia ? "ligada" : "desligada"}</button>
+        {sistemas.includes("muscular") && totalCamadas > 0 && (
+          <div className="flex items-center gap-1">
+            <span className="mr-auto">Camadas aproximadas</span>
+            <button type="button" aria-label="Remover uma camada muscular" className="size-9 rounded border focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={camadasAplicadas <= 0} onClick={() => setCamadasRemovidas((n) => Math.max(0, n - 1))}>−</button>
+            <span aria-live="polite" className="min-w-5 text-center">{camadasAplicadas}</span>
+            <button type="button" aria-label="Remover mais uma camada muscular" className="size-9 rounded border focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={camadasAplicadas >= totalCamadas} onClick={() => setCamadasRemovidas((n) => Math.min(totalCamadas, n + 1))}>+</button>
+          </div>
+        )}
+        {(ocultas.length > 0 || isoladas !== null) && <button type="button" className="min-h-9 rounded border px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={mostrarTudo}>Mostrar tudo</button>}
+      </div>
+      {/* A barra fica fora do canvas para não cobrir o corpo em telas estreitas. */}
       <Card className="h-[60svh] min-h-96 overflow-hidden lg:h-[75svh] [&_[data-motor]]:flex [&_[data-motor]]:flex-col [&_[data-motor]>small]:static! [&_[data-motor]>small]:shrink-0 [&_[data-motor]>small]:px-2 [&_[data-motor]>small]:py-1">
+        <div className="h-full min-h-0" data-vista-camera={vistaCamera ? "registrada" : "nao-registrada"}>
         <MotorAnatomico
           atlas={atlas}
           versao={versao}
@@ -176,19 +257,29 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
           onSelecionarMarcador={prontuario?.onSelecionarMarcador}
           onMarcadoresSemPosicao={prontuario?.onMarcadoresSemPosicao}
           onMarcadoresDesenhados={prontuario?.onMarcadoresDesenhados}
+          comandoCamera={comandoCamera}
+          onVista={registrarVista}
+          ocultas={ocultas}
+          isoladas={isoladas}
+          transparencia={transparencia}
+          camadasRemovidas={camadasAplicadas}
+          onCamadas={registrarCamadas}
         />
+        </div>
       </Card>
+      </div>
       <div className="space-y-4">
-        {!prontuario && <Card className="px-5 py-4" aria-live="polite">
-          <h3 className="text-sm font-semibold text-slate-950">Ponto selecionado</h3>
-          {!ancora || !entrada ? (
+        {(!prontuario || ancora) && <Card className="px-5 py-4" aria-live="polite">
+          <h3 className="text-sm font-semibold text-slate-950">{prontuario ? "Estrutura selecionada" : "Ponto selecionado"}</h3>
+          {!ancora || !entradaAtual ? (
             <p className="mt-2 text-sm text-slate-600">Clique no corpo para identificar uma estrutura.</p>
           ) : (
             <dl className="mt-3 space-y-3 text-sm" data-ancora>
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Nome</dt>
-                <dd className="font-semibold text-slate-900">{entrada.nome_pt || entrada.nome_en}</dd>
-                {naoRevisado(entrada) && (
+                <dd className="font-semibold text-slate-900">{entradaAtual.nome_pt || entradaAtual.nome_en}</dd>
+                {entradaAtual.nome_pt && entradaAtual.nome_en && entradaAtual.nome_pt !== entradaAtual.nome_en && <dd className="text-sm text-slate-600">{entradaAtual.nome_en}</dd>}
+                {naoRevisado(entradaAtual) && (
                   <dd className="text-xs italic text-amber-800">tradução não revisada</dd>
                 )}
               </div>
@@ -198,7 +289,7 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
               </div>
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Lado</dt>
-                <dd className="text-slate-900">{LADOS[ladoDaLateralidade(entrada.lateralidade)]}</dd>
+                <dd className="text-slate-900">{LADOS[ladoDaLateralidade(entradaAtual.lateralidade)]}</dd>
               </div>
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">Sistema</dt>
@@ -206,6 +297,16 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
               </div>
             </dl>
           )}
+          {ancora && entradaAtual && <div className="mt-3 flex flex-wrap gap-2">
+            <button type="button" className="min-h-9 rounded border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => setOcultas((atual) => [...new Set([...atual, ...malhasDaEstrutura])])}>Ocultar estrutura</button>
+            <button type="button" className="min-h-9 rounded border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => setIsoladas(malhasDaEstrutura)}>Isolar estrutura</button>
+          </div>}
+          {prontuario && ancora && <section className="mt-4 border-t pt-3">
+            <h4 className="text-sm font-semibold text-slate-900">Achados nesta estrutura</h4>
+            {!achadosDaEstrutura.length ? <p className="mt-1 text-sm text-slate-600">Nenhum achado nesta estrutura.</p> : <ul className="mt-1 space-y-1">
+              {achadosDaEstrutura.map((m) => <li key={m.id}><button type="button" className="min-h-9 text-left text-sm text-teal-900 underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => prontuario.onSelecionarMarcador(m.id)}>{prontuario.rotulos?.[m.id] ?? m.id}</button></li>)}
+            </ul>}
+          </section>}
         </Card>}
         <Card className="px-5 py-4">
           <fieldset>

@@ -9,13 +9,14 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { CATEGORIAS, LADOS, STATUS, type Achado, type Categoria, type Lado, type Status } from "@/lib/achados";
 import type { Cid10 } from "@/lib/banco";
+import type { VistaCamera } from "@saude3d/motor-anatomico";
 import { ancoraNaEntrada } from "@/lib/fhir/ancora";
 import { CAMPO, hoje, ROTULO } from "@/lib/formulario";
 import { createClient } from "@/lib/supabase/client";
 
 const opcoes = (mapa: Record<string, string>) => Object.entries(mapa).map(([valor, rotulo]) => <option key={valor} value={valor}>{rotulo}</option>);
 
-export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLocal, onEscolherPonto, onSalvo, onCancelar }: {
+export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLocal, vista, onEscolherPonto, onSalvo, onCancelar }: {
   pacienteId: string;
   /** ponto clicado agora; null = nenhum (sem local, ou correção que mantém o local gravado) */
   ponto: PontoNoCorpo | null;
@@ -25,6 +26,8 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLoca
   atlas: AtlasPronto | null;
   /** aberto para marcar um local: o foco começa na busca de estrutura */
   comLocal?: boolean;
+  /** Última câmera do mesmo atlas; nulo quando não há vista registrada nesta sessão. */
+  vista?: VistaCamera | null;
   /** estrutura escolhida pela busca; null = tirar o local escolhido */
   onEscolherPonto: (ponto: PontoNoCorpo | null) => void;
   onSalvo: (id: string) => void;
@@ -67,6 +70,7 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLoca
       p_inicio: texto("inicio") || null,
       p_observacao: texto("observacao") || null,
       p_substitui: corrigindo?.id ?? null,
+      p_vista: vista ?? null,
     });
     setSalvando(false);
     if (error || !data) return setErro("O achado não foi salvo. Confira os dados e o vínculo com o paciente e tente de novo.");
