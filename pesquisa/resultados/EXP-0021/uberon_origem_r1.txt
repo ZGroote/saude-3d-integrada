@@ -1,0 +1,4 @@
+Fonte solicitada: http://purl.obolibrary.org/obo/uberon/basic.obo
+data-version: uberon/releases/2026-11-05/uberon-basic.owl
+SHA-256: 1F119822DC2DFD7ACF973FA1534E692D971064CAECAE6B7701D3221F1810A397
+A cópia básica está em hra/externo/uberon/basic.obo (fora do git).

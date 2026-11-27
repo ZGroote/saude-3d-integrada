@@ -1,0 +1,51 @@
+n,dataset,arquivo,nome,categoria_automatica,concorda,justificativa
+1,BP3D,FJ1692M,Sphenoid part of left middle cerebral artery,ausente,sim,
+2,BP3D,FJ2256,Left superficial cervical artery,ausente,sim,
+3,BP3D,FJ1352,Right lacrimal lake,ausente,sim,
+4,HRA,Allen_frontal_operculum_R,frontal operculum,so_no_hra,sim,
+5,BP3D,FJ3190,Distal phalanx of right third toe,ausente,sim,
+6,BP3D,FJ1835,Left superior parietal lobule,ausente,nao,"HRA Allen_supraparietal_lobule_L (lóbulo parietal superior, sinônimo): presente"
+7,HRA,VH_F_long_posterior_ciliary_artery_L,Left long posterior ciliary artery,so_no_hra,sim,
+8,BP3D,FJ1596,Right sternohyoid,ausente,sim,
+9,HRA,VH_F_cartilage_of_tertiary_bronchus_R,Cartilage of segmental bronchus,so_no_hra,sim,
+10,HRA,VH_F_abdominal_ostium_of_uterine_tube,Abdominal ostium of uterine tube,exclusivo_feminino,sim,
+11,BP3D,FJ2716,First posterior ventricular branch of right coronary artery,ausente,sim,
+12,BP3D,FJ1487,Right brachioradialis,ausente,sim,
+13,BP3D,FJ2212,Left anterior circumflex humeral artery,ausente,sim,
+14,BP3D,FJ2365,Lateral proper palmar digital artery of right middle finger,ausente,sim,
+15,BP3D,FJ1423,Right iliotibial tract,ausente,sim,
+16,BP3D,FJ2607,Middle part of jejunum,ausente,nao,HRA VH_F_jejenum (grafia errada no HRA): parcial
+17,HRA,Allen_posterior_cortical_nucleus_R,posterior cortical nucleus,so_no_hra,nao,BP3D tem 'Right amygdala' (pai do núcleo cortical posterior): presente_no_bp3d
+18,BP3D,FJ1815,Mammillary body,ausente,nao,HRA Allen_mammillary_region_of_HTH (contém o corpo mamilar): parcial
+19,HRA,VH_F_sclera_R,Right sclera,presente_no_bp3d,sim,
+20,HRA,VH_F_renal_pyramid_R_e,renal pyramid,so_no_hra,sim,
+21,HRA,VH_F_epiglotic_cartilage,epiglottic cartilage,so_no_hra,nao,BP3D tem 'Epiglottis' (contém a cartilagem): presente_no_bp3d
+22,BP3D,FJ3120,Posterior inferior segmental tributary of right hepatic vein,ausente,nao,HRA VH_F_right_hepatic_vein (pai da tributária): parcial
+23,HRA,VH_F_middle_rectal_vein_R,Right middle rectal vein,so_no_hra,sim,
+24,BP3D,FJ1420M,Left gluteus minimus,ausente,sim,
+25,HRA,Allen_cerebellar_vermis_L,cerebellar vermis,so_no_hra,sim,
+26,BP3D,FJ1343,Tendon of right levator palpebrae superioris,ausente,sim,
+27,HRA,Allen_cerebral_aqueduct_L,cerebral aqueduct,so_no_hra,nao,BP3D tem 'Cerebral aqueduct': presente_no_bp3d
+28,BP3D,FJ2344,Right second common palmar digital artery,ausente,sim,
+29,BP3D,FJ2571,Rectum,presente,sim,
+30,BP3D,FJ3084,Medial inferior segmental tributary of middle hepatic vein,ausente,nao,HRA VH_F_middle_hepatic_vein (pai da tributária): parcial
+31,BP3D,FJ1931,Descending thoracic aorta,ausente,nao,HRA VH_F_descending_aorta_a/b: presente ou parcial
+32,BP3D,FJ1820,Right optic tract,presente,sim,
+33,BP3D,FJ1559,Left geniohyoid,ausente,sim,
+34,HRA,Allen_inferior_temporal_gyrus_L,inferior temporal gyrus,presente_no_bp3d,sim,
+35,BP3D,FJ3585,Right internal jugular vein,ausente,sim,
+36,HRA,VH_F_hilum_lower_L,left lung hilus,so_no_hra,sim,
+37,HRA,VH_F_meniscus_L,Articular disk of knee joint,so_no_hra,sim,
+38,HRA,Allen_septal_nuclei_L,septal nuclei,so_no_hra,sim,
+39,BP3D,FJ1446M,Abdominal part of left pectoralis major,ausente,sim,
+40,HRA,VH_F_pulmonary_valve,pulmonary valve,so_no_hra,nao,BP3D tem as cúspides da valva pulmonar (filhas): presente_no_bp3d
+41,BP3D,FJ2636,Diagonal branch of anterior descending branch of left coronary artery,presente,sim,
+42,HRA,Allen_posterior_intermediate_orbital_gyrus_R,intermediate orbital gyrus,so_no_hra,nao,BP3D tem 'Orbital gyrus' (pai): presente_no_bp3d
+43,BP3D,FJ2672,Marginal branch of right coronary artery,presente,sim,
+44,BP3D,FJ2321,Proper palmar digital vein of left little finger,ausente,sim,
+45,BP3D,FJ1836,Right superior parietal lobule,ausente,nao,HRA Allen_supraparietal_lobule_R: presente
+46,BP3D,FJ2968,Apical part of right posterior segmental artery,ausente,sim,
+47,BP3D,FJ2578,Middle part of ileum,ausente,nao,HRA VH_F_ileum: parcial
+48,HRA,VH_F_mesovarium_L,Left mesovarium,exclusivo_feminino,sim,
+49,BP3D,FJ3496,Left dorsal artery of penis,exclusivo_masculino,sim,
+50,BP3D,FJ1696M,Paracentral branch of left callosomarginal artery,ausente,sim,

@@ -1,0 +1,957 @@
+﻿arquivo,fma,nome,sistema,lado,categoria,metodo,malha_bp3d,prioridade,ontologia
+VH_F_subcutaneous_abdominal_adipose_tissue_umbilicus_area,,integumentary system layer,VH_F_integumentary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0013754
+VH_F_subcutaneous_abdominal_adipose_tissue_RUQ_area,,integumentary system layer,VH_F_integumentary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0013754
+VH_F_subcutaneous_abdominal_adipose_tissue_LUQ_area,,integumentary system layer,VH_F_integumentary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0013754
+VH_F_skin,FMA7163,skin of body,VH_F_integumentary_system,,presente_no_bp3d,xref_uberon_fma,FJ2810,P3,UBERON:0002097
+VH_F_fat_L,FMA73166,Interlobar adipose tissue of left mammary gland,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:73166
+VH_F_areolar_tubercles_L,FMA58091,areolar tubercle,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0011828
+VH_F_nipple_L,FMA223695,left nipple,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0013772
+VH_F_areola_L,FMA223679,Left female areola,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:223679
+VH_F_mammary_lobes_L,,mammary lobe,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0018140
+VH_F_main_lactiferous_ducts_L,FMA62102,main lactiferous duct,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0015134
+VH_F_main_lactiferous_sinuses_L,FMA58088,Lactiferous sinus,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:58088
+VH_F_suspensory_ligaments_L,FMA73119,Suspensory ligament of left breast,VH_F_integumentary_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:73119
+VH_F_fat_R,FMA73165,Interlobar adipose tissue of right mammary gland,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:73165
+VH_F_areolar_tubercles_R,FMA58091,areolar tubercle,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0011828
+VH_F_nipple_R,FMA223693,right nipple,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0013773
+VH_F_areola_R,FMA223677,Right female areola,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:223677
+VH_F_main_lactiferous_sinuses_R,FMA58088,Lactiferous sinus,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:58088
+VH_F_main_lactiferous_ducts_R,FMA62102,main lactiferous duct,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0015134
+VH_F_mammary_lobes_R,,mammary lobe,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0018140
+VH_F_suspensory_ligaments_R,FMA73118,Suspensory ligament of right breast,VH_F_integumentary_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:73118
+VH_F_retina_R,FMA58302,Right retina,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:58302
+VH_F_fovea_R,FMA58661,Right fovea centralis,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1367,P3,FMA:58661
+VH_F_macula_lutea_R,FMA58638,Right macula lutea,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1367,P3,FMA:58638
+VH_F_optic_disc_R,FMA58635,Right optic disc,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1367,P3,FMA:58635
+VH_F_palpebral_conjunctiva_of_right_upper_eyelid,FMA223076,Palpebral conjunctiva of right upper eyelid,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:223076
+VH_F_palpebral_conjunctiva_of_right_lower_eyelid,FMA223074,Palpebral conjunctiva of right lower eyelid,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:223074
+VH_F_sclera_R,FMA58271,Right sclera,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1368,P3,FMA:58271
+VH_F_optic_choroid_R,FMA58299,Right choroid,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1336;FJ1337,P3,FMA:58299
+VH_F_pupil_R,FMA58253,right pupil,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0010224
+VH_F_ciliary_processes_R,FMA76551,ciliary processes,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0010427
+VH_F_suspensory_ligament_of_lens_R,FMA58839,Suspensory ligament of right lens,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1371,P3,FMA:58839
+VH_F_ora_serrata_of_retina_R,FMA58601,Right ora serrata,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:58601
+VH_F_corneo_scleral_junction_R,FMA58343,Right corneoscleral junction,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:58343
+VH_F_lens_R,FMA58242,Right lens,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1356,P3,FMA:58242
+VH_F_schlemms_canal_R,FMA51874,Right scleral venous sinus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3583;FJ3585,P3,FMA:51874
+VH_F_aqueous_humor_R,FMA58820,Aqueous humor of right eyeball,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:58820
+VH_F_ciliary_body_R,FMA58296,Right ciliary body,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:58296
+VH_F_ciliary_muscle_R,FMA49152,Right ciliary muscle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:49152
+VH_F_trabecular_meshwork_R,FMA77660,eye trabecular meshwork,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0005969
+VH_F_iris_R,FMA58236,Right iris,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1348,P3,FMA:58236
+VH_F_bulbar_conjunctiva_R,FMA59028,Right bulbar conjunctiva,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,FMA:59028
+VH_F_cornea_R,FMA58239,Right cornea,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1340,P3,FMA:58239
+VH_F_vitreous_humor_R,FMA261236,Humor of right vitreous body,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1382,P3,FMA:261236
+VH_F_retina_L,FMA58303,Left retina,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:58303
+VH_F_fovea_L,FMA58663,Left fovea centralis,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1316,P3,FMA:58663
+VH_F_macula_lutea_L,FMA58639,Left macula lutea,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1316,P3,FMA:58639
+VH_F_optic_disc_L,FMA58636,Left optic disc,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1316,P3,FMA:58636
+VH_F_palpebral_conjunctiva_of_left_upper_eyelid,FMA223078,Palpebral conjunctiva of left upper eyelid,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:223078
+VH_F_palpebral_conjunctiva_of_left_lower_eyelid,FMA223075,Palpebral conjunctiva of left lower eyelid,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:223075
+VH_F_vitreous_humor_L,FMA261238,Humor of left vitreous body,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1331,P3,FMA:261238
+VH_F_cornea_L,FMA58240,Left cornea,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1289,P3,FMA:58240
+VH_F_bulbar_conjunctiva_L,FMA59029,Left bulbar conjunctiva,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:59029
+VH_F_iris_L,FMA58237,Left iris,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1297,P3,FMA:58237
+VH_F_trabecular_meshwork_L,FMA77660,eye trabecular meshwork,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0005969
+VH_F_ciliary_body_L,FMA58297,Left ciliary body,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:58297
+VH_F_ciliary_muscle_L,FMA49153,Left ciliary muscle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:49153
+VH_F_aqueous_humor_L,FMA58821,Aqueous humor of left eyeball,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:58821
+VH_F_schlemms_canal_L,FMA51875,Left scleral venous sinus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3482;FJ3485,P3,FMA:51875
+VH_F_lens_L,FMA58243,Left lens,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1305,P3,FMA:58243
+VH_F_corneo_scleral_junction_L,FMA58344,Left corneoscleral junction,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:58344
+VH_F_ora_serrata_of_retina_L,FMA58602,Left ora serrata,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,FMA:58602
+VH_F_suspensory_ligament_of_lens_L,FMA58840,Suspensory ligament of left lens,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1320,P3,FMA:58840
+VH_F_ciliary_processes_L,FMA76551,ciliary processes,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0010427
+VH_F_pupil_L,FMA58254,left pupil,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0010223
+VH_F_optic_choroid_L,FMA58300,Left choroid,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1285;FJ1286,P3,FMA:58300
+VH_F_sclera_L,FMA58272,Left sclera,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1317,P3,FMA:58272
+VH_F_dura_mater_right,FMA9592,dura mater,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1843,P3,UBERON:0002363
+VH_F_right_optic_nerve,FMA50875,Right optic nerve,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1364;FJ1819,P3,FMA:50875
+VH_F_dura_mater_left,FMA9592,dura mater,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1843,P3,UBERON:0002363
+VH_F_left_optic_nerve,FMA50878,Left optic nerve,VH_F_nervous_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1313;FJ1772,P3,FMA:50878
+VH_F_optic_chiasm,FMA62045,optic chiasma,VH_F_nervous_system,,presente_no_bp3d,xref_uberon_fma,FJ1771;FJ1818,P3,UBERON:0000959
+Allen_olfactory_bulb_L,FMA77624,olfactory bulb,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002264
+Allen_anterior_olfactory_nucleus_L,FMA77628,anterior olfactory nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002266
+Allen_piriform_region_L,,piriform cortex,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0004725
+Allen_frontal_agranular_insular_cortex_area_Fl_L,,frontal agranular insular cortex area Fl,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_temporal_agranular_insular_cortex_area_Tl_L,,temporal agranular insular cortex area Tl,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_head_of_caudate_L,,head of caudate,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_body_of_caudate_L,,body of caudate,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_tail_of_caudate_L,,tail of caudate,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_putamen_L,FMA72829,left putamen,VH_F_nervous_system,left,presente_no_bp3d,xref_uberon_fma,FJ1776,P3,UBERON:0008884
+Allen_nucleus_accumbens_L,,nucleus accumbens,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_external_segment_of_globus_pallidus_L,,external segment of globus pallidus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_internal_segment_of_globus_pallidus_L,,internal segment of globus pallidus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_claustrum_L,,claustrum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_basal_forebrain_L,,basal forebrain,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_septal_nuclei_L,,septal nuclei,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_amygdaloid_complex_L,,amygdaloid complex,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_amygdaloid_area_L,,anterior amygdaloid area,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_central_nuclear_group_L,,central nuclear group,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_nucleus_L,,lateral nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_basolateral_nucleus_basal_nucleus_L,,basolateral nucleus basal nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_basomedial_nucleus_accessory_basal_nucleus_L,,basomedial nucleus accessory basal nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_cortical_nucleus_L,,anterior cortical nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_posterior_cortical_nucleus_L,,posterior cortical nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_medial_nucleus_L,,medial nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_amygdalohippocampal_area_L,,amygdalohippocampal area,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_bed_nucleus_of_stria_terminalis_L,,bed nucleus of stria terminalis,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_thalamus_L,,thalamus,VH_F_nervous_system,left,presente_no_bp3d,nome_normalizado,FJ1782,P3,-
+Allen_anterior_nuclear_complex_of_thalamus_L,,anterior nuclear complex of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_dorsal_nucleus_of_thalamus_L,,lateral dorsal nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_mediodorsal_nucleus_of_thalamus_L,,mediodorsal nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_reuniens_nucleus_medioventral_nucleus_of_thalamus_L,,reuniens nucleus medioventral nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_posterior_nucleus_of_thalamus_L,,lateral posterior nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_pulvinar_of_thalamus_L,,pulvinar of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_anterior_nucleus_of_thalamus_L,,ventral anterior nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_lateral_nucleus_of_thalamus_L,,ventral lateral nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_posterior_lateral_nucleus_L,,ventral posterior lateral nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_posterior_medial_nucleus_L,,ventral posterior medial nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_dorsal_lateral_geniculate_nucleus_L,,dorsal lateral geniculate nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_medial_geniculate_nuclei_L,,medial geniculate nuclei,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_centromedian_nucleus_of_thalamus_L,,centromedian nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_parafascicular_nucleus_of_thalamus_L,,parafascicular nucleus of thalamus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_habenular_nuclei_L,,habenular nuclei,VH_F_nervous_system,left,presente_no_bp3d,sinonimo_uberon_relacionado,FJ1743,P3,-
+Allen_pineal_body_L,FMA62033,pineal body,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0001905
+Allen_zona_incerta_L,,zona incerta,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_supraoptic_region_of_HTH_L,,supraoptic region of HTH,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_preoptic_region_of_HTH_L,,preoptic region of HTH,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_tuberal_region_of_HTH_L,,tuberal region of HTH,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_white_matter_of_forebrain_L,,white matter of forebrain,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_commissure_L,FMA61961,anterior commissure,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1734;FJ1799,P3,UBERON:0000935
+Allen_corpus_callosum_L,FMA86464,corpus callosum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002336
+Allen_fornix_L,FMA61965;FMA83865,fornix of brain,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1741;FJ1756;FJ1804,P3,UBERON:0000052
+Allen_mammillothalamic_tract_L,,mammillothalamic tract,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_optic_tract_L,FMA62046,optic tract,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1773;FJ1820,P3,UBERON:0001908
+Allen_anterior_horn_of_lateral_ventricle_L,,anterior horn of lateral ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_body_of_lateral_ventricle_L,,body of lateral ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_posterior_horn_of_lateral_ventricle_L,,posterior horn of lateral ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_inferior_horn_of_lateral_ventricle_L,,inferior horn of lateral ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_third_ventricle_L,,third ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_cerebellar_vermis_L,FMA76928,cerebellar vermis,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1781;FJ1830,P3,UBERON:0004720
+Allen_cerebellar_deep_nuclei_L,,cerebellar deep nuclei,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_white_matter_of_hindbrain_L,,white matter of hindbrain,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_olfactory_tract_L,,olfactory tract,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_primary_motor_cortex_L,FMA61819,left cerebral hemisphere,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1732;FJ1739;FJ1744;FJ1746;FJ1748;FJ1750;FJ1758;FJ1759;FJ1767;FJ1785;FJ1787;FJ1789;FJ1791;FJ1797;FJ1800;FJ1833;FJ1835;FJ1841,P3,UBERON:0002812
+Allen_superior_frontal_gyrus_L,FMA61857,superior frontal gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1833;FJ1834,P3,UBERON:0002661
+Allen_middle_frontal_gyrus_L,FMA61859,middle frontal gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1787;FJ1788,P3,UBERON:0002702
+Allen_inferior_frontal_gyrus_triangular_part_L,FMA61980,triangular part of inferior frontal gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002629
+Allen_inferior_frontal_gyrus_opercular_part_L,FMA61981,opercular part of inferior frontal gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1744;FJ1833,P3,UBERON:0002980
+Allen_gyrus_rectus_straight_gyrus_L,FMA61893,gyrus rectus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0004671
+Allen_medial_orbital_gyrus_L,FMA62419,medial orbital gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1793;FJ1794,P3,UBERON:0002570
+Allen_anterior_intermediate_orbital_gyrus_L,FMA80183,intermediate orbital gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002644
+Allen_posterior_intermediate_orbital_gyrus_L,FMA80183,intermediate orbital gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002644
+Allen_lateral_orbital_gyrus_L,FMA62418,lateral orbital gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1793;FJ1794,P3,UBERON:0002564
+Allen_paracentral_lobule_rostral_part_L,FMA273508,anterior segment of paracentral lobule,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1800,P3,UBERON:0035932
+Allen_frontal_operculum_L,FMA74886,frontal operculum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002947
+Allen_postcentral_gyrus_L,FMA61896,postcentral gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1797;FJ1798,P3,UBERON:0002581
+Allen_supraparietal_lobule_L,,supraparietal lobule,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_supramarginal_gyrus_L,,supramarginal gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_normalizado,FJ1841,P3,-
+Allen_angular_gyrus_L,,angular gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_normalizado,FJ1732,P3,-
+Allen_precuneus_L,FMA61900,precuneus cortex,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0006093
+Allen_paracentral_lobule_caudal_part_L,,paracentral lobule caudal part,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_superior_temporal_gyrus_L,FMA61905,superior temporal gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1837;FJ1838;FJ1839;FJ1840,P3,UBERON:0002769
+Allen_middle_temporal_gyrus_L,FMA61906,middle temporal gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1789;FJ1790,P3,UBERON:0002771
+Allen_inferior_temporal_gyrus_L,FMA61907,inferior temporal gyrus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1746;FJ1747,P3,UBERON:0002751
+Allen_occipitotemporal_fusiform_gyrus_temporal_part_L,,occipitotemporal fusiform gyrus temporal part,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_transverse_temporal_gyrus_Heschls_gyrus_L,,transverse temporal gyrus Heschls gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_planum_temporale_L,,planum temporale,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0022268
+Allen_temporal_pole_L,FMA74890,temporal pole,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002576
+Allen_planum_polare_L,,planum polare,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0023861
+Allen_occipital_pole_L,FMA74892,occipital pole,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002902
+Allen_cuneus_L,FMA61903,cuneus cortex,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0006092
+Allen_lingual_gyrus_medial_occipitotemporal_gyrus_L,FMA61904,lingual gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002943
+Allen_lateral_occipitotemporal_fusiform_gyrus_occipital_part_L,FMA71033,occipital fusiform gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0022364
+Allen_inferior_occipital_gyrus_L,FMA273129,inferior occipital gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0014608
+Allen_superior_occipital_gyrus_L,FMA61901,superior occipital gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002948
+Allen_cingulate_gyrus_rostral_anterior_part_L,FMA61916,anterior cingulate gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1739,P3,UBERON:0002756
+Allen_cingulate_gyrus_caudal_posterior_part_L,FMA61924,posterior cingulate gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1739,P3,UBERON:0002740
+Allen_ingulo_parahippocampal_isthmus_L,FMA62502,isthmus of cingulate gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002738
+Allen_subcallosal_gyrus_parolfactory_gyrus_L,FMA61890,subcallosal area,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0003020
+Allen_anterior_parahippocampal_gyrus_L,FMA71039,anterior parahippocampal gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1785,P3,UBERON:0022383
+Allen_posterior_parahippocampal_gyrus_L,FMA67966,posterior parahippocampal gyrus,VH_F_nervous_system,left,presente_no_bp3d,nome_no_parte_todo,FJ1785,P3,UBERON:0002657
+Allen_gyrus_ambiens_L,,gyrus ambiens,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_long_insular_gyri_L,,long insular gyri,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_short_insular_gyri_L,,short insular gyri,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_limen_insula_L,,limen insula,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_pretectal_region_L,,pretectal region,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_substantia_nigra_L,FMA67947,substantia nigra,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002038
+Allen_superior_colliculus_L,FMA62403,superior colliculus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1735;FJ1736;FJ1779;FJ1826,P3,UBERON:0001945
+Allen_cerebral_peduncle_crus_cerebri_L,FMA62394,cerebral peduncle,VH_F_nervous_system,left,presente_no_bp3d,sinonimo_uberon_relacionado,FJ1774;FJ1821,P3,UBERON:0002623
+Allen_superior_cerebellar_peduncle_brachium_conjunctivum_L,,superior cerebellar peduncle brachium conjunctivum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_cerebral_aqueduct_L,,cerebral aqueduct,VH_F_nervous_system,left,presente_no_bp3d,manual,FJ1738,P3,-
+Allen_paravermis_of_cerebellum_L,,paravermis of cerebellum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_hemisphere_of_cerebellum_L,,lateral hemisphere of cerebellum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_basilar_part_of_pons_L,FMA72512,pontine nuclear group,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1775;FJ1822,P3,UBERON:0002151
+Allen_pontine_tegmentum_L,FMA71108,pontine tegmentum,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1775;FJ1822,P3,UBERON:0003023
+Allen_pyramidal_part_of_medulla_oblongata_L,,pyramidal part of medulla oblongata,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_tegmentum_of_medulla_oblongata_L,,tegmentum of medulla oblongata,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_inferior_olive_L,,inferior olive,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_middle_cerebellar_peduncle_L,,middle cerebellar peduncle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_fourth_ventricle_L,FMA78469,fourth ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002422
+Allen_central_canal_of_medulla_oblongata_L,,central canal of medulla oblongata,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_midline_nuclear_complex_L,,midline nuclear complex,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_olfactory_gyrus_L,,lateral olfactory gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_parietal_operculum_L,FMA74889,parietal operculum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0002911
+Allen_optic_radiation_L,FMA61941,optic radiation,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0022264
+Allen_posteroventral_putamen_L,,posteroventral putamen,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_atrium_of_lateral_ventricle_L,,atrium of lateral ventricle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_paracingulate_gyrus_L,,paracingulate gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_rostral_gyrus_L,,rostral gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_frontomarginal_gyrus_L,,frontomarginal gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_frontal_pole_L,,frontal pole,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_inferior_cerebellar_peduncle_L,,inferior cerebellar peduncle,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_perirhinal_gyrus_rostral_part_of_FuGt_L,,perirhinal gyrus rostral part of FuGt,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_head_of_hippocampus_L,,head of hippocampus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_body_of_hippocampus_L,,body of hippocampus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_tail_of_hippocampus_L,,tail of hippocampus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_olfactory_bulb_R,,olfactory bulb,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_olfactory_nucleus_R,,anterior olfactory nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_piriform_region_R,,piriform region,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_frontal_agranular_insular_cortex_area_Fl_R,,frontal agranular insular cortex area Fl,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_temporal_agranular_insular_cortex_area_Tl_R,,temporal agranular insular cortex area Tl,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_head_of_caudate_R,,head of caudate,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_body_of_caudate_R,,body of caudate,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_tail_of_caudate_R,,tail of caudate,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_putamen_R,FMA72828,right putamen,VH_F_nervous_system,right,presente_no_bp3d,xref_uberon_fma,FJ1823,P3,UBERON:0008885
+Allen_nucleus_accumbens_R,,nucleus accumbens,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_external_segment_of_globus_pallidus_R,,external segment of globus pallidus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_internal_segment_of_globus_pallidus_R,,internal segment of globus pallidus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_claustrum_R,,claustrum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_basal_forebrain_R,,basal forebrain,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_septal_nuclei_R,,septal nuclei,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_amygdaloid_complex_R,,amygdaloid complex,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_amygdaloid_area_R,,anterior amygdaloid area,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_central_nuclear_group_R,,central nuclear group,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_nucleus_R,,lateral nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_basolateral_nucleus_basal_nucleus_R,,basolateral nucleus basal nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_basomedial_nucleus_accessory_basal_nucleus_R,,basomedial nucleus accessory basal nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_cortical_nucleus_R,,anterior cortical nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_posterior_cortical_nucleus_R,,posterior cortical nucleus,VH_F_nervous_system,right,presente_no_bp3d,manual,FJ1829,P3,-
+Allen_medial_nucleus_R,,medial nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_amygdalohippocampal_area_R,,amygdalohippocampal area,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_bed_nucleus_of_stria_terminalis_R,,bed nucleus of stria terminalis,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_thalamus_R,,thalamus,VH_F_nervous_system,right,presente_no_bp3d,nome_normalizado,FJ1827,P3,-
+Allen_anterior_nuclear_complex_of_thalamus_R,,anterior nuclear complex of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_dorsal_nucleus_of_thalamus_R,,lateral dorsal nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_mediodorsal_nucleus_of_thalamus_R,,mediodorsal nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_reuniens_nucleus_medioventral_nucleus_of_thalamus_R,,reuniens nucleus medioventral nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_posterior_nucleus_of_thalamus_R,,lateral posterior nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_pulvinar_of_thalamus_R,,pulvinar of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_anterior_nucleus_of_thalamus_R,,ventral anterior nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_lateral_nucleus_of_thalamus_R,,ventral lateral nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_posterior_lateral_nucleus_R,,ventral posterior lateral nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_ventral_posterior_medial_nucleus_R,,ventral posterior medial nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_dorsal_lateral_geniculate_nucleus_R,,dorsal lateral geniculate nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_medial_geniculate_nuclei_R,,medial geniculate nuclei,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_centromedian_nucleus_of_thalamus_R,,centromedian nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_parafascicular_nucleus_of_thalamus_R,,parafascicular nucleus of thalamus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_habenular_nuclei_R,,habenular nuclei,VH_F_nervous_system,right,presente_no_bp3d,sinonimo_uberon_relacionado,FJ1743,P3,-
+Allen_pineal_body_R,FMA62033,pineal body,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0001905
+Allen_zona_incerta_R,,zona incerta,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_supraoptic_region_of_HTH_R,,supraoptic region of HTH,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_white_matter_of_forebrain_R,,white matter of forebrain,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_anterior_commissure_R,FMA61961,anterior commissure,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1734;FJ1799,P3,UBERON:0000935
+Allen_corpus_callosum_R,FMA86464,corpus callosum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002336
+Allen_fornix_R,FMA61965;FMA83865,fornix of brain,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1741;FJ1756;FJ1804,P3,UBERON:0000052
+Allen_mammillothalamic_tract_R,,mammillothalamic tract,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_optic_tract_R,FMA62046,optic tract,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1773;FJ1820,P3,UBERON:0001908
+Allen_anterior_horn_of_lateral_ventricle_R,,anterior horn of lateral ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_body_of_lateral_ventricle_R,,body of lateral ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_posterior_horn_of_lateral_ventricle_R,,posterior horn of lateral ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_inferior_horn_of_lateral_ventricle_R,,inferior horn of lateral ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_third_ventricle_R,,third ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_cerebellar_vermis_R,,cerebellar vermis,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_cerebellar_deep_nuclei_R,,cerebellar deep nuclei,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_white_matter_of_hindbrain_R,,white matter of hindbrain,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_olfactory_tract_R,,olfactory tract,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_primary_motor_cortex_R,FMA67292,right cerebral hemisphere,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1733;FJ1740;FJ1745;FJ1747;FJ1749;FJ1751;FJ1786;FJ1788;FJ1790;FJ1792;FJ1798;FJ1801;FJ1806;FJ1807;FJ1814;FJ1834;FJ1836;FJ1842,P3,UBERON:0002813
+Allen_superior_frontal_gyrus_R,FMA61857,superior frontal gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1833;FJ1834,P3,UBERON:0002661
+Allen_middle_frontal_gyrus_R,FMA61859,middle frontal gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1787;FJ1788,P3,UBERON:0002702
+Allen_inferior_frontal_gyrus_triangular_part_R,FMA61980,triangular part of inferior frontal gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002629
+Allen_inferior_frontal_gyrus_opercular_part_R,FMA61981,opercular part of inferior frontal gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1745;FJ1834,P3,UBERON:0002980
+Allen_gyrus_rectus_straight_gyrus_R,FMA61893,gyrus rectus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0004671
+Allen_medial_orbital_gyrus_R,FMA62419,medial orbital gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1793;FJ1794,P3,UBERON:0002570
+Allen_anterior_intermediate_orbital_gyrus_R,FMA80183,intermediate orbital gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002644
+Allen_posterior_intermediate_orbital_gyrus_R,FMA80183,intermediate orbital gyrus,VH_F_nervous_system,right,presente_no_bp3d,manual,FJ1793;FJ1794,P3,UBERON:0002644
+Allen_lateral_orbital_gyrus_R,FMA62418,lateral orbital gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1793;FJ1794,P3,UBERON:0002564
+Allen_paracentral_lobule_rostral_part_R,FMA273508,anterior segment of paracentral lobule,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1801,P3,UBERON:0035932
+Allen_frontal_operculum_R,FMA74886,frontal operculum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002947
+Allen_postcentral_gyrus_R,FMA61896,postcentral gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1797;FJ1798,P3,UBERON:0002581
+Allen_supraparietal_lobule_R,,supraparietal lobule,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_supramarginal_gyrus_R,,supramarginal gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_normalizado,FJ1842,P3,-
+Allen_angular_gyrus_R,,angular gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_normalizado,FJ1733,P3,-
+Allen_precuneus_R,FMA61900,precuneus cortex,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0006093
+Allen_paracentral_lobule_caudal_part_R,,paracentral lobule caudal part,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_superior_temporal_gyrus_R,FMA61905,superior temporal gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1837;FJ1838;FJ1839;FJ1840,P3,UBERON:0002769
+Allen_middle_temporal_gyrus_R,FMA61906,middle temporal gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1789;FJ1790,P3,UBERON:0002771
+Allen_inferior_temporal_gyrus_R,FMA61907,inferior temporal gyrus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1746;FJ1747,P3,UBERON:0002751
+Allen_occipitotemporal_fusiform_gyrus_temporal_part_R,,occipitotemporal fusiform gyrus temporal part,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_transverse_temporal_gyrus_Heschls_gyrus_R,,transverse temporal gyrus Heschls gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_planum_temporale_R,,planum temporale,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0022268
+Allen_temporal_pole_R,FMA74890,temporal pole,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002576
+Allen_planum_polare_R,,planum polare,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0023861
+Allen_occipital_pole_R,FMA74892,occipital pole,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002902
+Allen_cuneus_R,FMA61903,cuneus cortex,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0006092
+Allen_lingual_gyrus_medial_occipitotemporal_gyrus_R,FMA61904,lingual gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002943
+Allen_lateral_occipitotemporal_fusiform_gyrus_occipital_part_R,FMA71033,occipital fusiform gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0022364
+Allen_inferior_occipital_gyrus_R,FMA273129,inferior occipital gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0014608
+Allen_superior_occipital_gyrus_R,FMA61901,superior occipital gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002948
+Allen_cingulate_gyrus_rostral_anterior_part_R,FMA61916,anterior cingulate gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1740,P3,UBERON:0002756
+Allen_cingulate_gyrus_caudal_posterior_part_R,FMA61924,posterior cingulate gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1740,P3,UBERON:0002740
+Allen_ingulo_parahippocampal_isthmus_R,FMA62502,isthmus of cingulate gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002738
+Allen_subcallosal_gyrus_parolfactory_gyrus_R,FMA61890,subcallosal area,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0003020
+Allen_anterior_parahippocampal_gyrus_R,FMA71039,anterior parahippocampal gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1786,P3,UBERON:0022383
+Allen_posterior_parahippocampal_gyrus_R,FMA67966,posterior parahippocampal gyrus,VH_F_nervous_system,right,presente_no_bp3d,nome_no_parte_todo,FJ1786,P3,UBERON:0002657
+Allen_gyrus_ambiens_R,,gyrus ambiens,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_long_insular_gyri_R,,long insular gyri,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_short_insular_gyri_R,,short insular gyri,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_limen_insula_R,,limen insula,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_pretectal_region_R,,pretectal region,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_red_nucleus_R,FMA62407,red nucleus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1770;FJ1774;FJ1817;FJ1821,P3,UBERON:0001947
+Allen_substantia_nigra_R,FMA67947,substantia nigra,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002038
+Allen_superior_colliculus_R,FMA62403,superior colliculus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1735;FJ1736;FJ1779;FJ1826,P3,UBERON:0001945
+Allen_inferior_colliculus_R,FMA62404,inferior colliculus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1761;FJ1762;FJ1809;FJ1810,P3,UBERON:0001946
+Allen_cerebral_peduncle_crus_cerebri_R,FMA62394,cerebral peduncle,VH_F_nervous_system,right,presente_no_bp3d,sinonimo_uberon_relacionado,FJ1774;FJ1821,P3,UBERON:0002623
+Allen_superior_cerebellar_peduncle_brachium_conjunctivum_R,,superior cerebellar peduncle brachium conjunctivum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_cerebral_aqueduct_R,,cerebral aqueduct,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_paravermis_of_cerebellum_R,,paravermis of cerebellum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_hemisphere_of_cerebellum_R,,lateral hemisphere of cerebellum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_basilar_part_of_pons_R,FMA72512,pontine nuclear group,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1775;FJ1822,P3,UBERON:0002151
+Allen_pontine_tegmentum_R,FMA71108,pontine tegmentum,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1775;FJ1822,P3,UBERON:0003023
+Allen_pyramidal_part_of_medulla_oblongata_R,,pyramidal part of medulla oblongata,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_tegmentum_of_medulla_oblongata_R,,tegmentum of medulla oblongata,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_inferior_olive_R,,inferior olive,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_inferior_cerebellar_peduncle_R,,inferior cerebellar peduncle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_middle_cerebellar_peduncle_R,,middle cerebellar peduncle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_fourth_ventricle_R,FMA78469,fourth ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002422
+Allen_central_canal_of_medulla_oblongata_R,,central canal of medulla oblongata,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_midline_nuclear_complex_R,,midline nuclear complex,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_lateral_olfactory_gyrus_R,,lateral olfactory gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_parietal_operculum_R,FMA74889,parietal operculum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0002911
+Allen_optic_radiation_R,FMA61941,optic radiation,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0022264
+Allen_posteroventral_putamen_R,,posteroventral putamen,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_atrium_of_lateral_ventricle_R,,atrium of lateral ventricle,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_paracingulate_gyrus_R,,paracingulate gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_rostral_gyrus_R,,rostral gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_frontomarginal_gyrus_R,,frontomarginal gyrus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_frontal_pole_R,,frontal pole,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_perirhinal_gyrus_rostral_part_of_FuGt_R,,perirhinal gyrus rostral part of FuGt,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_hypothalamus_L,FMA62008,hypothalamus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1780;FJ1828,P3,UBERON:0001898
+Allen_hypothalamus_R,FMA62008,hypothalamus,VH_F_nervous_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1780;FJ1828,P3,UBERON:0001898
+Allen_subthalamic_nucleus_R,,subthalamic nucleus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_mammillary_region_of_HTH_R,,mammillary region of HTH,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_midbrain_tegmentum_R,,midbrain tegmentum,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_tuberal_region_of_HTH_R,,tuberal region of HTH,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_preoptic_region_of_HTH_R,,preoptic region of HTH,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_midbrain_tegmentum_L,,midbrain tegmentum,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_red_nucleus_L,FMA62407,red nucleus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1770;FJ1774;FJ1817;FJ1821,P3,UBERON:0001947
+Allen_inferior_colliculus_L,FMA62404,inferior colliculus,VH_F_nervous_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1761;FJ1762;FJ1809;FJ1810,P3,UBERON:0001946
+Allen_mammillary_region_of_HTH_L,,mammillary region of HTH,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_subthalamic_nucleus_L,,subthalamic nucleus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,,P3,-
+Allen_head_of_hippocampus_R,,head of hippocampus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_body_of_hippocampus_R,,body of hippocampus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+Allen_tail_of_hippocampus_R,,tail of hippocampus,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_C1_segment_of_cervical_spinal_cord,FMA71179,C1 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006469
+VH_F_C2_segment_of_cervical_spinal_cord,FMA71180,C2 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006489
+VH_F_C3_segment_of_cervical_spinal_cord,FMA71181,C3 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006488
+VH_F_C4_segment_of_cervical_spinal_cord,FMA71182,C4 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006490
+VH_F_C5_segment_of_cervical_spinal_cord,FMA71183,C5 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006491
+VH_F_C6_segment_of_cervical_spinal_cord,FMA71184,C6 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006492
+VH_F_C7_segment_of_cervical_spinal_cord,FMA71185,C7 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006493
+VH_F_C8_segment_of_cervical_spinal_cord,FMA71186,C8 segment of cervical spinal cord,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006470
+VH_F_first_thoracic_spinal_cord_segment,FMA62421,first thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006457
+VH_F_second_thoracic_spinal_cord_segment,FMA62422,second thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006458
+VH_F_third_thoracic_spinal_cord_segment,FMA71169,third thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006459
+VH_F_fourth_thoracic_spinal_cord_segment,FMA71170,fourth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006452
+VH_F_fifth_thoracic_spinal_cord_segment,FMA71171,fifth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006453
+VH_F_seventh_thoracic_spinal_cord_segment,FMA71173,seventh thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006455
+VH_F_eigth_thoracic_spinal_cord_segment,FMA71174,eighth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006456
+VH_F_sixth_thoracic_spinal_cord_segment,FMA71172,sixth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006454
+VH_F_ninth_thoracic_spinal_cord_segment,FMA71175,ninth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006465
+VH_F_tenth_thoracic_spinal_cord_segment,FMA71176,tenth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006466
+VH_F_eleventh_thoracic_spinal_cord_segment,FMA71177,eleventh thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006467
+VH_F_twelfth_thoracic_spinal_cord_segment,FMA71178,twelfth thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006468
+VH_F_first_lumbar_spinal_cord_segment,FMA71187,first lumbar spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006448
+VH_F_second_lumbar_spinal_cord_segment,FMA71188,second lumbar spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006450
+VH_F_third_lumbar_spinal_cord_segment,FMA71189,third lumbar spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006449
+VH_F_fourth_lumbar_spinal_cord_segment,FMA71190,fourth lumbar spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006451
+VH_F_fifth_lumbar_spinal_cord_segment,FMA71191,fifth lumbar spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006447
+VH_F_first_sacral_spinal_cord_segment,FMA256625,first sacral spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006460
+VH_F_second_sacral_spinal_cord_segment,FMA256627,second sacral spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006461
+VH_F_third_sacral_spinal_cord_segment,FMA256629,third sacral spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006462
+VH_F_fourth_sacral_spinal_cord_segment,FMA256631,fourth sacral spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006463
+VH_F_medial_rectus_extraocular_muscle_L,FMA49057,Left medial rectus,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1308,P3,FMA:49057
+VH_F_inferior_rectus_extraocular_muscle_L,FMA49047,Left inferior rectus,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1295,P3,FMA:49047
+VH_F_superior_rectus_extraocular_muscle_L,FMA49045,Left superior rectus,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1323,P3,FMA:49045
+VH_F_inferior_oblique_extraocular_muscle_L,FMA49051,Left inferior oblique,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1294,P3,FMA:49051
+VH_F_lateral_rectus_extraocular_muscle_L,FMA49055,Left lateral rectus,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1304,P3,FMA:49055
+VH_F_superior_oblique_extraocular_muscle_L,FMA49053,Left superior oblique,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1322,P3,FMA:49053
+VH_F_medial_rectus_extraocular_muscle_R,FMA49056,Right medial rectus,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1359,P3,FMA:49056
+VH_F_inferior_rectus_extraocular_muscle_R,FMA49046,Right inferior rectus,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1346,P3,FMA:49046
+VH_F_superior_rectus_extraocular_muscle_R,FMA49044,Right superior rectus,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1374,P3,FMA:49044
+VH_F_inferior_oblique_extraocular_muscle_R,FMA49050,Right inferior oblique,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1345,P3,FMA:49050
+VH_F_lateral_rectus_extraocular_muscle_R,FMA49054,Right lateral rectus,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1355,P3,FMA:49054
+VH_F_superior_oblique_extraocular_muscle_R,FMA49052,Right superior oblique,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1373,P3,FMA:49052
+VH_F_rectus_femoris_L,FMA38929,Left rectus femoris,VH_F_muscular_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ1433M,P3,FMA:38929
+VH_F_tendon_of_quadriceps_femoris_L,FMA46902,Tendon of left quadriceps femoris,VH_F_muscular_system,left,so_no_hra,sem_correspondencia,,P3,FMA:46902
+VH_F_rectus_femoris_R,FMA38928,Right rectus femoris,VH_F_muscular_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1433,P3,FMA:38928
+VH_F_tendon_of_quadriceps_femoris_R,FMA46901,Tendon of right quadriceps femoris,VH_F_muscular_system,right,so_no_hra,sem_correspondencia,,P3,FMA:46901
+VH_F_basal_plate,,basal plate,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,-
+VH_F_chorionic_plate,,chorionic plate,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004027
+VH_F_placenta_vessels,,placenta vessels,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,-
+VH_F_amnion,FMA80223,amnion,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0000305
+VH_F_umbilical_cord,FMA85541,umbilical cord,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0002331
+VH_F_umbilical_artery_1,FMA18820,umbilical artery,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001310
+VH_F_umbilical_artery_2,FMA18820,umbilical artery,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001310
+VH_F_umbilical_vein,FMA70317,umbilical vein,VH_F_reproductive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0002066
+VH_F_vagina,FMA19949,vagina,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0000996
+VH_F_cervicovaginal_junction,,cervicovaginal junction,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,-
+VH_F_ampulla_of_uterine_tube_R,FMA18491,Ampulla of right uterine tube,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18491
+VH_F_isthmus_of_fallopian_tube_R,FMA18493,Isthmus of right uterine tube,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18493
+VH_F_fibria_of_uterine_tube_R,FMA18497,Fimbria of right uterine tube,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18497
+VH_F_uterine_tube_infundibulum_R,FMA18489,Infundibulum of right uterine tube,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18489
+VH_F_uterine_tube_infundibulum_L,FMA18490,Infundibulum of left uterine tube,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18490
+VH_F_fibria_of_uterine_tube_L,FMA18498,Fimbria of left uterine tube,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18498
+VH_F_isthmus_of_fallopian_tube_L,FMA18494,Isthmus of left uterine tube,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18494
+VH_F_ampulla_of_uterine_tube_L,FMA18492,Ampulla of left uterine tube,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:18492
+VH_F_uterovesical_pouch,FMA14729,Uterovesical pouch,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:14729
+VH_F_right_round_ligament_of_uterus,FMA57789,Right round ligament of uterus,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:57789
+VH_F_left_round_ligament_of_uterus,FMA57790,Left round ligament of uterus,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:57790
+VH_F_right_uterosacral_ligament,FMA19119,Right uterosacral ligament,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:19119
+VH_F_left_uterosacral_ligament,FMA19120,Left uterosacral ligament,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:19120
+VH_F_right_cardinal_ligament_of_uterus,FMA77064,Cardinal ligament,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:77064
+VH_F_left_cardinal_ligament_of_uterus,FMA77064,Cardinal ligament,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:77064
+VH_F_suspensory_ligament_of_ovary_R,FMA19823,Suspensory ligament of right ovary,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:19823
+VH_F_suspensory_ligament_of_ovary_L,FMA19824,Suspensory ligament of left ovary,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:19824
+VH_F_ovarian_ligament_L,FMA55424,Left ovarian ligament,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:55424
+VH_F_ovarian_ligament_R,FMA55423,Right ovarian ligament,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:55423
+VH_F_broad_ligament,FMA16516,broad ligament of uterus,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P2,UBERON:0012332
+VH_F_mesosalpinx_L,FMA19810,Left mesosalpinx,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:19810
+VH_F_mesosalpinx_R,FMA19809,Right mesosalpinx,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:19809
+VH_F_mesovarium_R,FMA19817,Right mesovarium,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:19817
+VH_F_mesovarium_L,FMA19818,Left mesovarium,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:19818
+VH_F_left_ovary,FMA7214,Left ovary,VH_F_reproductive_system,left,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:7214
+VH_F_right_ovary,FMA7213,Right ovary,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:7213
+VH_F_abdominal_ostium_of_uterine_tube,FMA77049,Abdominal ostium of uterine tube,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:77049
+VH_F_body_of_uterus,FMA17739,body of uterus,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P2,UBERON:0009853
+VH_F_fundus_of_uterus,FMA17561,Fundus of uterus,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:17561
+VH_F_cornua,,cornua,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,-
+VH_F_lower_uterine_segment,FMA17752,Lower uterine segment,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,FMA:17752
+VH_F_posterior_wall_of_uterus,FMA224878,Posterior wall of uterus,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:224878
+VH_F_anterior_wall_of_uterus,FMA224876,Anterior wall of uterus,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P2,FMA:224876
+VH_F_cervix,FMA17740,uterine cervix,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0000002
+VH_F_internal_cervical_os,FMA17747,internal cervical os,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0013759
+VH_F_external_cervical_os,FMA76836,external cervical os,VH_F_reproductive_system,,exclusivo_feminino,termo_exclusivo_feminino,,P3,UBERON:0013760
+VH_F_omentum,FMA7152,omentum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_epiploic_appendage_of_transverse_colon,FMA7152,epiploic appendage of transverse colon,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_submandibular_gland_L,FMA7152,submandibular gland,VH_F_digestive_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_submandibular_gland_R,FMA7152,submandibular gland,VH_F_digestive_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_parotid_gland_R,FMA7152,parotid gland,VH_F_digestive_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_parotid_gland_L,FMA7152,parotid gland,VH_F_digestive_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_sublingual_gland_R,FMA7152,sublingual gland,VH_F_digestive_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_sublingual_gland_L,FMA7152,sublingual gland,VH_F_digestive_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_buccal_mucosa,FMA7152,buccal mucosa,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_frenulum_of_upper_lip,FMA7152,frenulum of upper lip,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_frenulum_of_lower_lip,FMA7152,frenulum of lower lip,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_mouth_floor,FMA7152,mouth floor,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_ginviva_of_upper_jaw,FMA7152,ginviva of upper jaw,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_gingiva_of_lower_jaw,FMA7152,gingiva of lower jaw,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_posterior_part_of_tongue,FMA7152,posterior part of tongue,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_dorsal_tongue,FMA7152,dorsal tongue,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_ventral_tongue,FMA7152,ventral tongue,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_fungiform_papillae,FMA7152,fungiform papillae,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_circumvallate_papillae,FMA7152,circumvallate papillae,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_hard_palate,FMA7152,hard palate,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_mucosa_of_soft_palate,FMA7152,mucosa of soft palate,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_set_of_lower_jaw_teeth,FMA7152,set of lower jaw teeth,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_set_of_upper_jaw_teeth,FMA7152,set of upper jaw teeth,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1252;FJ1253;FJ1883;FJ1895;FJ1896;FJ2563;FJ2564;FJ2566;FJ2567;FJ2568;FJ2569;FJ2570;FJ2571;FJ2572;FJ2573;FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605;FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628;FJ2629;FJ2630;FJ2741;FJ2748;FJ2753;FJ2760;FJ2761;FJ2765;FJ2766;FJ2767;FJ2768;FJ2817;FJ3079;FJ3080;FJ3096;FJ3123;FJ3269;FJ3289;FJ3375,P3,UBERON:0001007
+VH_F_gastric_impression_of_liver,FMA14487,gastric impression of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:14487
+VH_F_suprarenal_impression_of_liver,FMA14489,Suprarenal impression of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:14489
+VH_F_renal_impression_of_liver,FMA14488,renal impression of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:14488
+VH_F_duodenal_impression_of_liver,FMA14485,duodenal impression of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:14485
+VH_F_esophageal_impression_of_liver,FMA14486,esophageal impression of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:14486
+VH_F_porta_hepatis,FMA15758,porta hepatis,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,FMA:15758
+VH_F_colic_impression_of_liver,FMA14484,colic impression of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:14484
+VH_F_capsule_of_the_liver,FMA15813,capsule of the liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0016479
+VH_F_bare_area_of_liver,FMA14480,bare area of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0001149
+VH_F_diaphragmatic_surface_of_liver,FMA15729,diaphragmatic surface of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,FMA:15729
+VH_F_left_anterolateral_segment,,left anterolateral segment,VH_F_digestive_system,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_left_superomedial_segment,,left superomedial segment,VH_F_digestive_system,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_left_superomedial_segment1,,left superomedial segment1,VH_F_digestive_system,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_left_inferomedial_segment,,left inferomedial segment,VH_F_digestive_system,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_quadrate_lobe,FMA13364,quadrate lobe of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0001116
+VH_F_right_anterosuperior_segment,,right anterosuperior segment,VH_F_digestive_system,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_right_posteroinferior_segment,,right posteroinferior segment,VH_F_digestive_system,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_right_posterosuperior_segment,,right posterosuperior segment,VH_F_digestive_system,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_right_anteroinferior_segment,,right anteroinferior segment,VH_F_digestive_system,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_caudate_lobe,FMA13365,caudate lobe of liver,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2816,P1,UBERON:0001117
+VH_F_coronary_ligament_of_liver,FMA15822,coronary ligament of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0013138
+VH_F_falciform_ligament,FMA15823,falciform ligament,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001247
+VH_F_triangular_ligament_of_liver,FMA15821,triangular ligament of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0035444
+VH_F_ligamentum_venosum,FMA14080,ligamentum venosum,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0006587
+VH_F_round_ligament_of_liver,FMA14079,round ligament of liver,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0006588
+VH_F_hepataduodenal_ligament,FMA16521,hepatoduodenal ligament,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0012472
+VH_F_tail_of_pancreas,FMA14519,tail of pancreas,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1895,P2,UBERON:0001151
+VH_F_body_of_pancreas,FMA14518,body of pancreas,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1895,P2,UBERON:0001150
+VH_F_ucinate_process1,FMA7198,Pancreas,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ1895,P2,UBERON:0001264
+VH_F_head_of_pancreas,FMA10468,head of pancreas,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1895,P2,UBERON:0001069
+VH_F_neck_of_pancreas,FMA14517,Neck of pancreas,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1895,P2,FMA:14517
+VH_F_right_hepatic_duct,FMA14669,right hepatic duct,VH_F_digestive_system,right,presente_no_bp3d,xref_uberon_fma,FJ3123,P3,UBERON:0001176
+VH_F_left_hepatic_duct,FMA14670,left hepatic duct,VH_F_digestive_system,left,presente_no_bp3d,xref_uberon_fma,FJ3096,P3,UBERON:0001177
+VH_F_common_hepatic_duct,FMA14668,common hepatic duct,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ3079,P3,UBERON:0001175
+VH_F_hepatopancreatic_ampulla,FMA15076,hepatopancreatic ampulla,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2573,P3,UBERON:0004913
+VH_F_dorsal_pancreatic_duct,FMA14534,dorsal pancreatic duct,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1895;FJ1896;FJ2630,P3,UBERON:0005429
+VH_F_common_bile_duct,FMA14667,common bile duct,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001174
+VH_F_ventral_pancreatic_duct,FMA16003,Ventral pancreatic duct,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1895;FJ1896;FJ2630,P3,UBERON:0001064
+VH_F_cystic_duct,FMA14539,cystic duct,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ3080,P3,UBERON:0001152
+VH_F_duodenum_superior,FMA7206,superior part of duodenum,VH_F_digestive_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ2573,P3,FMA:7206
+VH_F_duodenal_ampulla,FMA14927,duodenal ampulla,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0013644
+VH_F_duodenum_descending,FMA14928,descending part of duodenum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2573,P3,FMA:14928
+VH_F_sphincter_of_heptopancreatic_ampulla,FMA15077,Sphincter of hepatopancreatic ampulla,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,FMA:15077
+VH_F_duodenum_ascending,FMA14930,ascending part of duodenum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2573,P3,FMA:14930
+VH_F_duodenum_horizontal,FMA14929,horizontal part of duodenum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2573,P3,FMA:14929
+VH_F_jejenum,FMA7207,jejunum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2606;FJ2607;FJ2608;FJ2609;FJ2610;FJ2611;FJ2612;FJ2613;FJ2614;FJ2615;FJ2616;FJ2617;FJ2618;FJ2619;FJ2620;FJ2621;FJ2622;FJ2623;FJ2624;FJ2625;FJ2626;FJ2627;FJ2628,P3,UBERON:0002115
+VH_F_ileum,FMA7208,ileum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2574;FJ2575;FJ2576;FJ2577;FJ2578;FJ2579;FJ2580;FJ2581;FJ2582;FJ2583;FJ2584;FJ2585;FJ2586;FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2596;FJ2597;FJ2598;FJ2599;FJ2600;FJ2601;FJ2602;FJ2603;FJ2604;FJ2605,P3,UBERON:0002116
+VH_F_ileum_terminal,FMA14966,distal part of ileum,VH_F_digestive_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2597;FJ2598,P3,FMA:14966
+VH_F_palatine_tonsil_L,FMA54974,left palatine tonsil,VH_F_digestive_system,left,so_no_hra,sem_correspondencia,,P3,FMA:54974
+VH_F_palatine_tonsil_R,FMA54973,right palatine tonsil,VH_F_digestive_system,right,so_no_hra,sem_correspondencia,,P3,FMA:54973
+VH_F_hepatic_flexure_of_colon,FMA14550,hepatic flexure of colon,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2566;FJ2572,P3,UBERON:0022277
+VH_F_transverse_colon,FMA14546,transverse colon,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2572,P3,UBERON:0001157
+VH_F_ascending_colon,FMA14545,ascending colon,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2566,P3,UBERON:0001156
+VH_F_vermiform_appendix,FMA14542,vermiform appendix,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2565,P3,UBERON:0001154
+VH_F_descending_colon,FMA14547,descending colon,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2567,P3,UBERON:0001158
+VH_F_ileocecal_valve,FMA15973,ileocecal valve,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2587;FJ2588;FJ2589;FJ2590;FJ2591;FJ2592;FJ2593;FJ2594;FJ2595;FJ2597;FJ2598;FJ2599,P3,UBERON:0000569
+VH_F_caecum,FMA14541,caecum,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2599,P3,UBERON:0001153
+VH_F_rectum,FMA14544,rectum,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2571,P3,UBERON:0001052
+VH_F_sigmoid_colon,FMA14548,sigmoid colon,VH_F_digestive_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001159
+VH_F_splenic_flexure_of_colon,FMA14551,splenic flexure of colon,VH_F_digestive_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2567;FJ2572,P3,UBERON:0022276
+VH_F_gallbladder,FMA7202,gallbladder,VH_F_digestive_system,,presente_no_bp3d,xref_uberon_fma,FJ2817,P2,UBERON:0002110
+VH_F_kidney_capsule_L,FMA66610,kidney capsule,VH_F_urinary_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0002015
+VH_F_hilum_of_kidney_L,FMA15610,hilum of kidney,VH_F_urinary_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0008716
+VH_F_renal_papilla_L_a,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_b,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_c,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_d,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_e,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_f,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_g,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_h,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_i,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_j,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_L_k,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_pyramid_L_a,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_b,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_c,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_d,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_e,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_f,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_g,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_h,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_i,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_j,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_L_k,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_column_L,FMA17633,renal column,VH_F_urinary_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0001284
+VH_F_outer_cortex_of_kidney_L,FMA74285,outer cortex of kidney,VH_F_urinary_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0002189
+VH_F_kidney_capsule_R,FMA66610,kidney capsule,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0002015
+VH_F_hilum_of_kidney_R,FMA15610,hilum of kidney,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0008716
+VH_F_outer_cortex_of_kidney_R,FMA74285,outer cortex of kidney,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0002189
+VH_F_renal_column_R,FMA17633,renal column,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0001284
+VH_F_renal_papilla_R_a,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_b,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_c,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_d,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_e,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_f,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_g,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_h,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_i,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_papilla_R_j,FMA15622,renal papilla,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001228
+VH_F_renal_pyramid_R_a,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_b,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_c,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_d,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_e,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_f,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_g,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_h,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_i,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_renal_pyramid_R_j,FMA258870,renal pyramid,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004200
+VH_F_minor_calyx_R_a,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_b,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_c,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_d,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_e,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_f,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_g,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_h,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_i,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_R_j,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_major_calyx_R_a,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_major_calyx_R_b,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_major_calyx_R_c,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_renal_pelvis_R,FMA15575,renal pelvis,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0001224
+VH_F_right_ureter,FMA15571,right ureter,VH_F_urinary_system,right,presente_no_bp3d,xref_uberon_fma,FJ3146,P3,UBERON:0001222
+VH_F_minor_calyx_L_a,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_b,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_c,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_d,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_e,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_f,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_g,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_h,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_i,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_minor_calyx_L_j,FMA15614,minor calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001227
+VH_F_major_calyx_L_a,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_major_calyx_L_b,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_major_calyx_L_c,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_major_calyx_L_d,FMA15613,major calyx,VH_F_urinary_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0001226
+VH_F_renal_pelvis_L,FMA15575,renal pelvis,VH_F_urinary_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0001224
+VH_F_left_ureter,FMA15572,left ureter,VH_F_urinary_system,left,presente_no_bp3d,xref_uberon_fma,FJ3144,P3,UBERON:0001223
+VH_F_fundus_of_urinary_bladder_dome,FMA15908,fundus of urinary bladder,VH_F_urinary_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3149,P2,UBERON:0006082
+VH_F_urinary_bladder_neck_smooth_muscle,FMA67990,urinary bladder neck smooth muscle,VH_F_urinary_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3149,P2,UBERON:0004230
+VH_F_fundus_of_urinary_bladder_base,FMA15908,fundus of urinary bladder,VH_F_urinary_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3149,P2,UBERON:0006082
+VH_F_trigone_of_urinary_bladder,FMA15910,trigone of urinary bladder,VH_F_urinary_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3149,P2,UBERON:0001257
+VH_F_ureteral_orifice_R,FMA15939,Right ureteral orifice,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,,P3,FMA:15939
+VH_F_ureteral_orifice_L,FMA15940,Left ureteral orifice,VH_F_urinary_system,left,so_no_hra,sem_correspondencia,,P3,FMA:15940
+VH_F_interventricular_septum,FMA7133,interventricular septum,VH_F_circulatory_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0002094
+VH_F_left_cardiac_atrium,FMA7097,left cardiac atrium,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2420;FJ2425;FJ2426;FJ2431;FJ2432;FJ2438,P3,UBERON:0002079
+VH_F_left_ventricle,FMA7101,heart left ventricle,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2418;FJ2420;FJ2422;FJ2426;FJ2429;FJ2431;FJ2432;FJ2435,P2,UBERON:0002084
+VH_F_right_cardiac_atrium,FMA7096,right cardiac atrium,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2421;FJ2424;FJ2433;FJ2436;FJ2439,P3,UBERON:0002078
+VH_F_right_ventricle,FMA7098,heart right ventricle,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2417;FJ2419;FJ2421;FJ2423;FJ2427;FJ2430;FJ2433;FJ2434;FJ2436;FJ2437,P2,UBERON:0002080
+VH_F_papillary_muscle_of_heart_ant,FMA7264,Anterior papillary muscle of left ventricle,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2429,P3,FMA:7264
+VH_F_papillary_muscle_of_heart_antlat,FMA7265,Anterolateral head of lateral papillary muscle of left ventricle,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2418,P3,FMA:7265
+VH_F_papillary_muscle_of_heart_med,FMA7262,Septal papillary muscle of right ventricle,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ2437,P3,FMA:7262
+VH_F_papillary_muscle_of_heart_pos,FMA7261,Posterior papillary muscle of right ventricle,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ2430,P3,FMA:7261
+VH_F_papillary_muscle_of_heart_posmed,FMA7267,Posteromedial head of posterior papillary muscle of left ventricle,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2428,P3,FMA:7267
+VH_F_aortic_valve,FMA7236,aortic valve,VH_F_circulatory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2426;FJ2431;FJ2435,P3,UBERON:0002137
+VH_F_pulmonary_valve,FMA7246,pulmonary valve,VH_F_circulatory_system,,presente_no_bp3d,manual,FJ2417;FJ2427;FJ2434,P3,UBERON:0002146
+VH_F_mitral_valve,FMA7235,mitral valve,VH_F_circulatory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2420;FJ2426;FJ2431;FJ2432,P3,UBERON:0002135
+VH_F_tricuspid_valve,FMA7234,tricuspid valve,VH_F_circulatory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2421;FJ2433;FJ2436,P3,UBERON:0002134
+VH_F_left_uterine_artery,FMA18831,Left uterine artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3464;FJ3468,P3,FMA:18831
+VH_F_right_uterine_artery,FMA18830,Right uterine artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3565;FJ3569,P3,FMA:18830
+VH_F_left_uterine_vein,FMA18898,Left uterine vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3441;FJ3465;FJ3469;FJ3470;FJ3471;FJ3659,P3,FMA:18898
+VH_F_right_uterine_vein,FMA18897,Right uterine vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3441;FJ3566;FJ3570;FJ3571;FJ3572;FJ3607;FJ3608;FJ3609;FJ3659,P3,FMA:18897
+VH_F_ophthalmic_vein_L,,ophthalmic vein,VH_F_circulatory_system,left,so_no_hra,sem_correspondencia,,P3,UBERON:0011191
+VH_F_superior_ophthalmic_vein_L,FMA51249,Left superior ophthalmic vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3482;FJ3485,P3,FMA:51249
+VH_F_inferior_ophthalmic_vein_L,FMA51251,Left inferior ophthalmic vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3482;FJ3485,P3,FMA:51251
+VH_F_central_retinal_vein_L,FMA51885,Left central retinal vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3482;FJ3485,P3,FMA:51885
+VH_F_ophthalmic_vein_R,,ophthalmic vein,VH_F_circulatory_system,right,so_no_hra,sem_correspondencia,,P3,UBERON:0011191
+VH_F_superior_ophthalmic_vein_R,FMA51248,Right superior ophthalmic vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3583;FJ3585,P3,FMA:51248
+VH_F_inferior_ophthalmic_vein_R,FMA51250,Right inferior ophthalmic vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3583;FJ3585,P3,FMA:51250
+VH_F_central_retinal_vein_R,FMA51884,Right central retinal vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3583;FJ3585,P3,FMA:51884
+VH_F_long_posterior_ciliary_artery_L,FMA49958,Left long posterior ciliary artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1682M;FJ1695M;FJ3483,P3,FMA:49958
+VH_F_opthalmic_artery_L,FMA49868,ophthalmic artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1695;FJ1695M,P3,UBERON:0001619
+VH_F_central_retinal_artery_L,FMA49881,Left central retinal artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1682M;FJ1695M;FJ3483,P3,FMA:49881
+VH_F_long_posterior_ciliary_artery_R,FMA49957,Right long posterior ciliary artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1682;FJ1695;FJ3417;FJ3564,P3,FMA:49957
+VH_F_opthalmic_artery_R,FMA49868,ophthalmic artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1695;FJ1695M,P3,UBERON:0001619
+VH_F_central_retinal_artery_R,FMA49880,Right central retinal artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1682;FJ1695;FJ3417;FJ3564,P3,FMA:49880
+VH_F_right_renal_artery,FMA14752,right renal artery,VH_F_circulatory_system,right,presente_no_bp3d,xref_uberon_fma,FJ2038,P3,UBERON:0001185
+VH_F_left_renal_artery,FMA14753,left renal artery,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ2046,P3,UBERON:0001186
+VH_F_left_renal_vein,FMA14336,left renal vein,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ3477;FJ3478,P3,UBERON:0001142
+VH_F_right_renal_vein,FMA14335,right renal vein,VH_F_circulatory_system,right,presente_no_bp3d,xref_uberon_fma,FJ3577;FJ3578,P3,UBERON:0001141
+VH_F_superior_mesenteric_vein,FMA14332,superior mesenteric vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3647,P3,UBERON:0001138
+VH_F_superior_rectal_vein,FMA14832,superior rectal artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3656,P3,UBERON:0035040
+VH_F_left_common_iliac_vein,FMA21388,Left common iliac vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3465,P3,FMA:21388
+VH_F_right_common_iliac_vein,FMA21387,Right common iliac vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3566,P3,FMA:21387
+VH_F_left_colic_vein,FMA15394,Left colic vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3400;FJ3429;FJ3495,P3,FMA:15394
+VH_F_right_colic_vein,FMA15407,Right colic vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3591,P3,FMA:15407
+VH_F_ileocolic_vein,FMA15408,ileocolic vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3415;FJ3440,P3,UBERON:0001219
+VH_F_middle_colic_vein,FMA15406,middle colic vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3543,P3,UBERON:0001218
+VH_F_inferior_rectal_vein_L,FMA21242,Inferior rectal vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3441;FJ3659,P3,FMA:21242
+VH_F_inferior_rectal_vein_R,FMA21242,Inferior rectal vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3441;FJ3659,P3,FMA:21242
+VH_F_internal_iliac_vein_L,FMA18884,internal iliac vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2056;FJ3441;FJ3469;FJ3470;FJ3471;FJ3510;FJ3513;FJ3525;FJ3526;FJ3527;FJ3531;FJ3570;FJ3571;FJ3572;FJ3603;FJ3606;FJ3607;FJ3608;FJ3609;FJ3610;FJ3611;FJ3612;FJ3616;FJ3659,P3,UBERON:0001317
+VH_F_internal_iliac_vein_R,FMA18884,internal iliac vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2056;FJ3441;FJ3469;FJ3470;FJ3471;FJ3510;FJ3513;FJ3525;FJ3526;FJ3527;FJ3531;FJ3570;FJ3571;FJ3572;FJ3603;FJ3606;FJ3607;FJ3608;FJ3609;FJ3610;FJ3611;FJ3612;FJ3616;FJ3659,P3,UBERON:0001317
+VH_F_internal_pudendal_vein_L,FMA18917,internal pudendal vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2056;FJ3441;FJ3525;FJ3610;FJ3659,P3,UBERON:0018252
+VH_F_internal_pudendal_vein_R,FMA18917,internal pudendal vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2056;FJ3441;FJ3525;FJ3610;FJ3659,P3,UBERON:0018252
+VH_F_middle_rectal_vein_L,FMA18895,Left middle rectal vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3441;FJ3465;FJ3469;FJ3470;FJ3471;FJ3659,P3,FMA:18895
+VH_F_middle_rectal_vein_R,FMA18894,Right middle rectal vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3441;FJ3566;FJ3570;FJ3571;FJ3572;FJ3607;FJ3608;FJ3609;FJ3659,P3,FMA:18894
+VH_F_sigmoid_vein_a,FMA15395,sigmoid vein,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3639,P3,FMA:15395
+VH_F_sigmoid_vein_c,FMA15395,sigmoid vein,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3639,P3,FMA:15395
+VH_F_median_sacral_vein,FMA77168,median sacral vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3541,P3,UBERON:0006687
+VH_F_sigmoid_vein_b,FMA15395,sigmoid vein,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3639,P3,FMA:15395
+VH_F_inferior_pancreaticoduodenal_vein,FMA0329299,Inferior pancreaticoduodenal vein,VH_F_circulatory_system,,presente_no_bp3d,nome_no_parte_todo,FJ3545;FJ3646;FJ3655,P3,FMA:0329299
+VH_F_inferior_mesenteric_vein,FMA14749,superior mesenteric artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ1928;FJ2011,P3,UBERON:0001182
+VH_F_left_colic_artery,FMA14826,Left colic artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3494,P3,FMA:14826
+VH_F_right_colic_artery,FMA14811,Right colic artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3590,P3,FMA:14811
+VH_F_ileocolic_artery,,ileocolic artery,VH_F_circulatory_system,,presente_no_bp3d,nome_normalizado,FJ3439,P3,UBERON:0035548
+VH_F_middle_colic_artery,FMA14810,middle colic artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3542,P3,UBERON:0001196
+VH_F_celiac_trunk,FMA14812,Celiac trunk,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3421,P3,FMA:14812
+VH_F_superior_rectal_artery,FMA14832,superior rectal artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3656,P3,UBERON:0035040
+VH_F_superior_mesenteric_artery,FMA14749,superior mesenteric artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ1928;FJ2011,P3,UBERON:0001182
+VH_F_inferior_mesenteric_artery,FMA14750,inferior mesenteric artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3442,P3,UBERON:0001183
+VH_F_marginal_artery_of_Drummond,FMA14824,marginal colic artery,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ2025,P3,FMA:14824
+VH_F_sigmoid_artery_c,FMA14830,sigmoid artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3638,P3,UBERON:0035180
+VH_F_sigmoid_artery_b,FMA14830,sigmoid artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3638,P3,UBERON:0035180
+VH_F_sigmoid_artery_a,FMA14830,sigmoid artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3638,P3,UBERON:0035180
+VH_F_splenic_artery,FMA14773,splenic artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ2562;FJ3420;FJ3544;FJ3640,P3,UBERON:0001194
+VH_F_splenic_vein,FMA14331,splenic vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3641,P3,UBERON:0003713
+VH_F_cystic_artery,FMA14835,cystic artery,VH_F_circulatory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1846;FJ2013;FJ3078;FJ3081,P3,UBERON:0039222
+VH_F_cystic_vein,FMA15403,cystic vein,VH_F_circulatory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3082;FJ3647,P3,UBERON:0035392
+VH_F_middle_hepatic_artery_branch_of_left_hepatic_artery,,middle hepatic artery branch of left hepatic artery,VH_F_circulatory_system,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_proper_hepatic_artery,FMA14772,Hepatic artery proper,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3081,P3,FMA:14772
+VH_F_right_hepatic_artery,FMA14778,Right hepatic artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1846;FJ1916;FJ1924;FJ2013;FJ2386;FJ2394;FJ3075;FJ3076;FJ3078;FJ3081;FJ3114;FJ3115;FJ3116;FJ3117,P3,FMA:14778
+VH_F_common_hepatic_artery,FMA14771,common hepatic artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3078,P3,UBERON:0005436
+VH_F_posterior_segmental_right_hepatic_artery,,posterior segmental right hepatic artery,VH_F_circulatory_system,right,presente_no_bp3d,nome_no_parte_todo,FJ2041;FJ2044;FJ2970;FJ2971;FJ2972;FJ2974;FJ2975;FJ2976;FJ2977;FJ2979;FJ2980;FJ2981;FJ2982;FJ2983;FJ2984;FJ2985;FJ2986;FJ2987;FJ2988;FJ2990;FJ2991;FJ2992;FJ2993;FJ2994;FJ2995;FJ2996;FJ2997;FJ2998;FJ2999;FJ3075;FJ3076;FJ3091;FJ3092;FJ3093;FJ3106;FJ3107;FJ3114;FJ3115;FJ3116,P3,-
+VH_F_anterior_segmental_right_hepatic_artery,,anterior segmental right hepatic artery,VH_F_circulatory_system,right,presente_no_bp3d,nome_no_parte_todo,FJ2041;FJ2044;FJ2970;FJ2971;FJ2972;FJ2974;FJ2975;FJ2976;FJ2977;FJ2979;FJ2980;FJ2981;FJ2982;FJ2983;FJ2984;FJ2985;FJ2986;FJ2987;FJ2988;FJ2990;FJ2991;FJ2992;FJ2993;FJ2994;FJ2995;FJ2996;FJ2997;FJ2998;FJ2999;FJ3075;FJ3076;FJ3091;FJ3092;FJ3093;FJ3106;FJ3107;FJ3114;FJ3115;FJ3116,P3,-
+VH_F_left_hepatic_artery,FMA14779,Left hepatic artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ1846;FJ1874;FJ2013;FJ3077;FJ3078;FJ3081;FJ3091;FJ3092;FJ3093;FJ3095;FJ3106;FJ3107,P3,FMA:14779
+VH_F_hepatic_portal_vein,FMA50735,hepatic portal vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ1853,P3,UBERON:0001639
+VH_F_middle_hepatic_vein,FMA14340,Middle hepatic vein,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ2414,P3,FMA:14340
+VH_F_left_hepatic_vein,FMA14339,Left hepatic vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2415,P3,FMA:14339
+VH_F_right_hepatic_vein,FMA14338,Right hepatic vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ2416,P3,FMA:14338
+VH_F_right_branch_of_portal_vein,,right branch of portal vein,VH_F_circulatory_system,right,presente_no_bp3d,nome_normalizado,FJ1913;FJ2405,P3,-
+VH_F_left_branch_of_portal_vein,,left branch of portal vein,VH_F_circulatory_system,left,presente_no_bp3d,nome_normalizado,FJ1893;FJ2404,P3,-
+VH_F_pulmonary_vein_L_sup,FMA49916,left superior pulmonary vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2925;FJ2933,P3,FMA:49916
+VH_F_pulmonary_vein_R_inf,FMA49913,left inferior pulmonary vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2944;FJ2950;FJ2955,P3,FMA:49913
+VH_F_pulmonary_vein_R_sup,FMA49914,right superior pulmonary vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3020,P3,FMA:49914
+VH_F_pulmonary_vein_L_inf,FMA49911,right inferior pulmonary vein,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3040,P3,FMA:49911
+VH_F_coronary_sinus,FMA4706,coronary sinus,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ2655,P3,UBERON:0005438
+VH_F_great_cardiac_vein,FMA4707,great vein of heart,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ2656,P2,UBERON:0006958
+VH_F_middle_cardiac_vein,FMA4713,middle cardiac vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ2678;FJ2679;FJ2680;FJ2681;FJ2682;FJ2683;FJ2684;FJ2685;FJ2686;FJ2687;FJ2688;FJ2689;FJ2690;FJ2691,P3,UBERON:0009687
+VH_F_oblique_vein_of_left_atrium,FMA4715,Oblique vein of left atrium,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2655,P3,FMA:4715
+VH_F_left_marginal_vein,FMA4708,left marginal vein,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2703;FJ2704;FJ2705,P3,FMA:4708
+VH_F_posterior_vein_of_left_ventricle,FMA4712,Posterior vein of left ventricle,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2701;FJ2702;FJ2706;FJ2707;FJ2708;FJ2709;FJ2710;FJ2711;FJ2712;FJ2713,P3,FMA:4712
+VH_F_anterior_cardiac_vein,FMA76767,Anterior cardiac vein,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ2725;FJ2730,P3,FMA:76767
+VH_F_small_cardiac_vein,FMA4714,small cardiac vein,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ2724;FJ2731,P3,UBERON:0035374
+VH_F_superior_vena_cava,FMA4720,superior vena cava,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3645,P3,FMA:4720
+VH_F_inferior_vena_cava_a,FMA10951,inferior vena cava,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3441;FJ3659,P3,FMA:10951
+VH_F_inferior_vena_cava_b,FMA10951,inferior vena cava,VH_F_circulatory_system,,presente_no_bp3d,fma_direto_catalogo_hra,FJ3441;FJ3659,P3,FMA:10951
+VH_F_left_anterior_descending_artery,FMA8636,Anterior descending branch of left pulmonary artery,VH_F_circulatory_system,left,presente_no_bp3d,nome_no_parte_todo,FJ2924,P3,FMA:8636
+VH_F_left_circumflex_artery,FMA3895,circumflex branch of left coronary artery,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ2649;FJ2650;FJ2651;FJ2652;FJ2653;FJ2654,P3,UBERON:0035422
+VH_F_diagonal_branch_of_left_anterior_descending_artery,FMA3860,Diagonal branch of anterior descending branch of left coronary artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2633;FJ2634;FJ2635;FJ2636;FJ2637;FJ2638;FJ2639;FJ2640;FJ2642;FJ2648,P3,FMA:3860
+VH_F_left_coronary_artery,FMA50040,left coronary artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2631;FJ2632;FJ2633;FJ2634;FJ2635;FJ2636;FJ2637;FJ2638;FJ2639;FJ2640;FJ2641;FJ2642;FJ2643;FJ2644;FJ2645;FJ2646;FJ2647;FJ2648;FJ2649;FJ2650;FJ2651;FJ2652;FJ2653;FJ2654;FJ2732;FJ2733;FJ2734;FJ2737;FJ3413,P3,UBERON:0001626
+VH_F_left_marginal_branch,FMA3902,Left marginal artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2649;FJ2650;FJ2651;FJ2652;FJ2653;FJ2654;FJ3413,P3,FMA:3902
+VH_F_left_posterior_descending_branch_of_circumflex_branch_of_left_coronary_artery,FMA322904,left posterior descending branch of circumflex branch of left coronary artery,VH_F_circulatory_system,left,so_no_hra,sem_correspondencia,,P3,FMA:322904
+VH_F_posterior_left_ventricular_branch,FMA13905,Posterior ventricular branch of circumflex coronary artery,VH_F_circulatory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2649;FJ2650;FJ2651;FJ2652;FJ2653;FJ2654;FJ3413,P3,FMA:13905
+VH_F_right_coronary_artery,FMA50039,right coronary artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2667;FJ2668;FJ2670;FJ2671;FJ2672;FJ2673;FJ2674;FJ2675;FJ2676;FJ2677;FJ2692;FJ2693;FJ2694;FJ2695;FJ2696;FJ2697;FJ2698;FJ2699;FJ2700;FJ2714;FJ2715;FJ2716;FJ2717;FJ2718;FJ2719;FJ2720;FJ2721;FJ2722;FJ2723;FJ2735;FJ2736;FJ3413,P3,UBERON:0001625
+VH_F_right_marginal_artery,FMA3818,marginal branch of right coronary artery,VH_F_circulatory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ2667;FJ2668;FJ2672;FJ2674;FJ2675,P3,FMA:3818
+VH_F_pulmonary_artery_L,FMA50873,left pulmonary artery,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ2924,P3,UBERON:0001652
+VH_F_pulmonary_trunk,FMA8612,pulmonary trunk,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ2966,P3,UBERON:0002333
+VH_F_pulmonary_artery_R,FMA50872,right pulmonary artery,VH_F_circulatory_system,right,presente_no_bp3d,xref_uberon_fma,FJ3019,P3,UBERON:0001651
+VH_F_aortic_arch,FMA3768,arch of aorta,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3411,P3,UBERON:0001508
+VH_F_ascending_aorta,FMA3736,ascending aorta,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3413,P3,UBERON:0001496
+VH_F_descending_aorta_a,FMA3784,descending aorta,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3427,P3,UBERON:0001514
+VH_F_descending_aorta_b,FMA3784,descending aorta,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3427,P3,UBERON:0001514
+VH_F_left_common_carotid_artery_a,FMA4058,left common carotid artery plus branches,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ3483,P3,UBERON:0001536
+VH_F_left_common_carotid_artery_b,FMA4058,left common carotid artery plus branches,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ3483,P3,UBERON:0001536
+VH_F_left_subclavian_artery_a,FMA4694,left subclavian artery,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ3479,P3,UBERON:0001584
+VH_F_left_subclavian_artery_b,FMA4694,left subclavian artery,VH_F_circulatory_system,left,presente_no_bp3d,xref_uberon_fma,FJ3479,P3,UBERON:0001584
+VH_F_brachiocephalic_artery_b,FMA3932,brachiocephalic artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3417,P3,UBERON:0001529
+VH_F_brachiocephalic_artery_a,FMA3932,brachiocephalic artery,VH_F_circulatory_system,,presente_no_bp3d,xref_uberon_fma,FJ3417,P3,UBERON:0001529
+VH_F_hilum_L,FMA9751,left lung hilus,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0004887
+VH_F_hilum_upper_L,FMA9751,left lung hilus,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0004887
+VH_F_lingula_superior_bronchopulmonary_segment,FMA7374,Superior lingular bronchopulmonary segment,VH_F_respiratory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2476;FJ2477;FJ2478;FJ2540;FJ2898;FJ2899;FJ2900;FJ2901;FJ2937;FJ2938,P3,FMA:7374
+VH_F_left_anterior_bronchopulmonary_segment,FMA7373,Left Anterior Bronchopulmonary Segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2443;FJ2467;FJ2468;FJ2469;FJ2471;FJ2472;FJ2473;FJ2474;FJ2902;FJ2904;FJ2905;FJ2906;FJ2907;FJ2908;FJ2909;FJ2910;FJ2930;FJ2931;FJ2932;FJ3021,P3,FMA:7373
+VH_F_left_apical_bronchopulmonary_segment,FMA7385,Left apical bronchopulmonary segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2444;FJ2460;FJ2461;FJ2462;FJ2463;FJ2464;FJ2915;FJ2916;FJ2917;FJ2918;FJ2936;FJ2947;FJ2958;FJ2961;FJ2962;FJ2963;FJ2964,P3,FMA:7385
+VH_F_left_posterior_bronchopulmonary_segment,FMA7386,Left posterior bronchopulmonary segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2911;FJ2912;FJ2913;FJ2926;FJ2927;FJ2928;FJ2929;FJ2939;FJ2940;FJ2941;FJ2942;FJ2943;FJ2965,P3,FMA:7386
+VH_F_lingula_inferior_bronchopulmonary_segment,FMA7375,Inferior lingular bronchopulmonary segment,VH_F_respiratory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2441;FJ2475;FJ2896;FJ2897;FJ2934;FJ2935,P3,FMA:7375
+VH_F_left_superior_bronchopulmonary_segment,FMA7376,Left superior bronchopulmonary segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2448;FJ2479;FJ2480;FJ2482;FJ2483;FJ2484;FJ2485;FJ2888;FJ2889;FJ2890;FJ2891;FJ2893;FJ2894;FJ2895,P3,FMA:7376
+VH_F_left_posterior_basal_bronchopulmonary_segment,FMA7380,Left posterior basal bronchopulmonary segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2446;FJ2527;FJ2528;FJ2529;FJ2530;FJ2531;FJ2881;FJ2892;FJ2903;FJ2914;FJ2919;FJ2920;FJ2945;FJ2946;FJ2948;FJ2949,P3,FMA:7380
+VH_F_left_anterior_basal_bronchopulmonary_segment,FMA7378,left anterior basal bronchopulmonary segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2535;FJ2536;FJ2538;FJ2883;FJ2886;FJ2887;FJ2956;FJ2957;FJ2959;FJ2960,P3,FMA:7378
+VH_F_left_lateral_basal_bronchopulmonary_segment,FMA7379,left Lateral Basal Bronchopulmonary Segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2445;FJ2532;FJ2533;FJ2534;FJ2882;FJ2921;FJ2922;FJ2923;FJ2951;FJ2952;FJ2953;FJ2954,P3,FMA:7379
+VH_F_left_medial_basal_bronchopulmonary_segment,FMA7377,Left Medial Basal Bronchopulmonary Segment,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2442;FJ2537;FJ2884;FJ2885,P3,FMA:7377
+VH_F_hilum_lower_L,FMA9751,left lung hilus,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0004887
+VH_F_hilum_R,FMA7456,right lung hilus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0004888
+VH_F_right_medial_basal_bronchopulmonary_segment,FMA7365,Right Medial Basal Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2456;FJ2488;FJ3054;FJ3055,P3,FMA:7365
+VH_F_right_posterior_basal_bronchopulmonary_segment,FMA7362,Right Posterior Basal Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2457;FJ2470;FJ2481;FJ2486;FJ2487;FJ2489;FJ3008;FJ3009;FJ3010;FJ3012;FJ3013;FJ3014;FJ3041;FJ3043;FJ3044;FJ3045;FJ3046;FJ3047;FJ3048;FJ3057;FJ3058,P3,FMA:7362
+VH_F_right_anterior_basal_bronchopulmonary_segment,FMA7364,Right anterior basal bronchopulmonary segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2452;FJ2493;FJ2494;FJ3001;FJ3002;FJ3003;FJ3049;FJ3056,P3,FMA:7364
+VH_F_right_lateral_basal_bronchopulmonary_segment,FMA7363,Right Lateral Basal Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2455;FJ2490;FJ2491;FJ2492;FJ3004;FJ3005;FJ3006;FJ3007;FJ3059;FJ3060;FJ3061;FJ3062,P3,FMA:7363
+VH_F_right_superior_bronchopulmonary_segment,FMA7366,Right Superior Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2459;FJ2495;FJ2496;FJ2497;FJ2498;FJ2499;FJ2500;FJ2501;FJ2502;FJ2991;FJ2992;FJ2993;FJ2994;FJ2995;FJ2996;FJ2997;FJ2998;FJ2999;FJ3050;FJ3051;FJ3052;FJ3063;FJ3065;FJ3066,P3,FMA:7366
+VH_F_hilum_lower_R,FMA7456,right lung hilus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0004888
+VH_F_right_medial_bronchopulmonary_segment,FMA7360,Right Medial Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2451;FJ2506;FJ2507;FJ2508;FJ2986;FJ2987;FJ2988;FJ2990;FJ3030;FJ3032;FJ3033,P3,FMA:7360
+VH_F_right_lateral_bronchopulmonary_segmennt,FMA7361,Right Lateral Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2449;FJ2503;FJ2504;FJ2505;FJ2982;FJ2983;FJ2984;FJ2985;FJ3034;FJ3035;FJ3036;FJ3037;FJ3038;FJ3039,P3,FMA:7361
+VH_F_hilum_middle_R,FMA7456,right lung hilus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0004888
+VH_F_right_anterior_bronchopulmonary_segm,FMA7359,Right Anterior Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2041;FJ2044;FJ2453;FJ2509;FJ2510;FJ2511;FJ2512;FJ2513;FJ2514;FJ2974;FJ2975;FJ2976;FJ2977;FJ2979;FJ2980;FJ2981;FJ3021;FJ3027;FJ3028;FJ3029,P3,FMA:7359
+VH_F_right_apical_bronchopulmonary_segment,FMA7338,Right Apical Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2454;FJ2520;FJ2521;FJ2522;FJ2523;FJ2524;FJ2525;FJ2526;FJ2967;FJ2978;FJ2989;FJ3000;FJ3011;FJ3015;FJ3016;FJ3017;FJ3031;FJ3042;FJ3053;FJ3064;FJ3067;FJ3068,P3,FMA:7338
+VH_F_right_posterior_bronchopulmonary_segment,FMA7339,Right Posterior Bronchopulmonary Segment,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2458;FJ2515;FJ2516;FJ2517;FJ2518;FJ2519;FJ2968;FJ2969;FJ2970;FJ2971;FJ2972;FJ3018;FJ3022;FJ3023;FJ3024;FJ3025;FJ3026;FJ3069;FJ3070,P3,FMA:7339
+VH_F_hilum_upper_R,FMA7456,right lung hilus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0004888
+VH_F_arytenoid_cartilage_R,FMA55113,Right arytenoid cartilage,VH_F_respiratory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ2792,P3,FMA:55113
+VH_F_arytenoid_cartilage_L,FMA55114,Left arytenoid cartilage,VH_F_respiratory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2775,P3,FMA:55114
+VH_F_epiglotic_cartilage,FMA55112,epiglottic cartilage,VH_F_respiratory_system,,presente_no_bp3d,manual,FJ2770,P3,UBERON:0001742
+VH_F_cricoid_cartilage,FMA9615,cricoid cartilage,VH_F_respiratory_system,,presente_no_bp3d,xref_uberon_fma,FJ2440;FJ2769,P3,UBERON:0002375
+VH_F_thyroid_cartilage,FMA55099,thyroid cartilage,VH_F_respiratory_system,,presente_no_bp3d,xref_uberon_fma,FJ2808,P3,UBERON:0001738
+VH_F_corniculate_cartilage_L,FMA55116,Left corniculate cartilage,VH_F_respiratory_system,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ2776,P3,FMA:55116
+VH_F_corniculate_cartilage_R,FMA55115,Right corniculate cartilage,VH_F_respiratory_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ2793,P3,FMA:55115
+VH_F_trachea,FMA7394,trachea,VH_F_respiratory_system,,presente_no_bp3d,xref_uberon_fma,FJ2541,P3,UBERON:0003126
+VH_F_tracheal_cartilage,FMA7434,trachea cartilage,VH_F_respiratory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2541,P3,UBERON:0003604
+VH_F_carina,FMA7465,carina of trachea,VH_F_respiratory_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2541,P3,UBERON:0006679
+VH_F_right_main_bronchus,FMA7395,Right Main Bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2539,P3,UBERON:0002177
+VH_F_cartilage_of_main_bronchus_R,FMA13143,Cartilage of right main bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P3,FMA:13143
+VH_F_left_main_bronchus,FMA7396,Left Main Bronchus,VH_F_respiratory_system,left,presente_no_bp3d,xref_uberon_fma,FJ2450,P3,UBERON:0002178
+VH_F_cartilage_of_main_bronchus_L,FMA13144,Cartilage of left main bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2450,P3,FMA:13144
+VH_F_cartilage_of_lobar_bronchus_L,FMA62659,Cartilage of lobar bronchus,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P3,FMA:62659
+VH_F_cartilage_of_tertiary_bronchus_L,FMA62662,Cartilage of segmental bronchus,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P3,FMA:62662
+VH_F_left_superior_lobar_bronchus,FMA7423,lobar bronchus of left lung upper lobe,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0012065
+VH_F_left_inferior_lobar_bronchus,FMA7432,lobar bronchus of left lung lower lobe,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0012066
+VH_F_left_anterior_basal_bronchus,FMA7506,Left anterior basal segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2535;FJ2536;FJ2538,P3,FMA:7506
+VH_F_left_lingula_superior_bronchus,FMA7430,Superior lingular bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2476;FJ2477;FJ2478;FJ2540,P3,FMA:7430
+VH_F_left_apical_bronchus,FMA7426,Left apical segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2444;FJ2460;FJ2461;FJ2462;FJ2463;FJ2464,P3,FMA:7426
+VH_F_left_posterior_basal_bronchus,FMA7508,Left posterior basal segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2446;FJ2527;FJ2528;FJ2529;FJ2530;FJ2531,P3,FMA:7508
+VH_F_left_medial_basal_bronchus,FMA7505,Left medial basal segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2442;FJ2537,P3,FMA:7505
+VH_F_left_superior_bronchus,FMA7504,Left superior segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2448;FJ2479;FJ2480;FJ2482;FJ2483;FJ2484;FJ2485,P3,FMA:7504
+VH_F_left_anterior_bronchus,FMA7428,Left anterior segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2443;FJ2467;FJ2468;FJ2469;FJ2471;FJ2472;FJ2473;FJ2474,P3,FMA:7428
+VH_F_left_posterior_bronchus,FMA7427,Left posterior segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,manual,FJ2449,P3,FMA:7427
+VH_F_left_lateral_basal_bronchus,FMA7507,Left lateral basal segmental bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2445;FJ2532;FJ2533;FJ2534,P3,FMA:7507
+VH_F_left_lingula_inferior_bronchi,FMA7431,Inferior lingular bronchus,VH_F_respiratory_system,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2441;FJ2475,P3,FMA:7431
+VH_F_cartilage_of_lobar_bronchus_R,FMA62659,Cartilage of lobar bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P3,FMA:62659
+VH_F_cartilage_of_tertiary_bronchus_R,FMA62662,Cartilage of segmental bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P3,FMA:62662
+VH_F_right_middle_lobar_bronchus,FMA7401,Middle lobar bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P3,FMA:7401
+VH_F_right_superior_lobar_bronchus,FMA7397,Right superior lobar bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P3,FMA:7397
+VH_F_right_inferior_lobar_bronchus,FMA7404,Right inferior lobar bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,,P3,FMA:7404
+VH_F_right_anterior_bronchus,FMA7400,Right anterior segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2453;FJ2509;FJ2510;FJ2511;FJ2512;FJ2513;FJ2514,P3,FMA:7400
+VH_F_right_lateral_basal_bronchus,FMA7419,Right lateral basal segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2455;FJ2490;FJ2491;FJ2492,P3,FMA:7419
+VH_F_right_lateral_bronchus,FMA7402,Lateral segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,manual,FJ2449,P3,FMA:7402
+VH_F_right_medial_bronchus,FMA7403,Medial segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2451;FJ2506;FJ2507;FJ2508,P3,FMA:7403
+VH_F_right_medial_basal_bronchus,FMA7417,Right medial basal segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2456;FJ2488,P3,FMA:7417
+VH_F_right_posterior_basal_bronchus,FMA7420,Right posterior basal segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2457;FJ2470;FJ2481;FJ2486;FJ2487;FJ2489,P3,FMA:7420
+VH_F_right_posterior_bronchus,FMA7399,Right posterior segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2458;FJ2515;FJ2516;FJ2517;FJ2518;FJ2519,P3,FMA:7399
+VH_F_right_superior_bronchus,FMA7416,Right superior segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2459;FJ2495;FJ2496;FJ2497;FJ2498;FJ2499;FJ2500;FJ2501;FJ2502,P3,FMA:7416
+VH_F_right_apical_bronchus,FMA7398,Right apical segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2454;FJ2520;FJ2521;FJ2522;FJ2523;FJ2524;FJ2525;FJ2526,P3,FMA:7398
+VH_F_right_anterior_basal_bronchus,FMA7418,Right anterior basal segmental bronchus,VH_F_respiratory_system,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2452;FJ2493;FJ2494,P3,FMA:7418
+VH_F_gastric_surface_of_spleen,FMA15837,gastric surface of spleen,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P2,FMA:15837
+VH_F_diaphragmatic_surface_of_spleen,FMA15828,diaphragmatic surface of spleen,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P2,FMA:15828
+VH_F_colic_surface_of_spleen,FMA15838,colic surface of spleen,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P2,FMA:15838
+VH_F_hilum_of_spleen,FMA15841,hilum of spleen,VH_F_lymphatic_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2561,P2,UBERON:0001248
+VH_F_renal_surface_of_spleen,FMA15839,renal surface of spleen,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P2,FMA:15839
+VH_F_thymus_lobe_L,FMA71195,left thymus lobe,VH_F_lymphatic_system,left,presente_no_bp3d,xref_uberon_fma,FJ3150,P3,UBERON:0005457
+VH_F_thymus_lobe_R,FMA71194,right thymus lobe,VH_F_lymphatic_system,right,presente_no_bp3d,xref_uberon_fma,FJ3151,P3,UBERON:0005469
+Yao_afferent_lymphatic_vessel,,afferent lymphatic vessel,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0010396
+Yao_capsule_of_lymph_node,FMA74604,capsule of lymph node,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0002194
+Yao_follicles,,lymph node follicle,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0010748
+Yao_efferent_lymph_node,,efferent lymphatic vessel,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0010397
+Yao_medulla_of_lymph_node,FMA66254,medulla of lymph node,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0002007
+Yao_paracortex,,lymph node T cell domain,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0010417
+Yao_blood_vasculature,FMA63815,Lymph vasculature,VH_F_lymphatic_system,,so_no_hra,sem_correspondencia,,P3,UBERON:0004536
+VH_F_sternum,FMA23881,sternum,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_manubrium,FMA23881,manubrium,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_sacrum,FMA16202,fused sacrum,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3393,P2,UBERON:0003690
+VH_F_coccyx,FMA20229,coccyx,VH_F_skeletal_system,,so_no_hra,sem_correspondencia,,P2,UBERON:0001350
+VH_F_ilium_compact_bone_R,FMA24018,compact bone tissue,VH_F_skeletal_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0001439
+VH_F_ilium_compact_bone_L,FMA24018,compact bone tissue,VH_F_skeletal_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0001439
+VH_F_ilium_spongy_bone_L,FMA24019,trabecular bone tissue,VH_F_skeletal_system,left,so_no_hra,sem_correspondencia,,P2,UBERON:0002483
+VH_F_ilium_spongy_bone_R,FMA24019,trabecular bone tissue,VH_F_skeletal_system,right,so_no_hra,sem_correspondencia,,P2,UBERON:0002483
+VH_F_thoracic_vertebra_1,FMA9165,thoracic vertebra 1,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3158,P2,UBERON:0004626
+VH_F_thoracic_vertebra_2,FMA9187,thoracic vertebra 2,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3160,P2,UBERON:0004627
+VH_F_thoracic_vertebra_3,FMA9209,thoracic vertebra 3,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3163,P2,UBERON:0004628
+VH_F_thoracic_vertebra_4,FMA9248,thoracic vertebra 4,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3166,P2,UBERON:0004629
+VH_F_thoracic_vertebra_5,FMA9922,thoracic vertebra 5,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3169,P2,UBERON:0004630
+VH_F_thoracic_vertebra_6,FMA9945,thoracic vertebra 6,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3171,P2,UBERON:0004631
+VH_F_thoracic_vertebra_7,FMA9968,thoracic vertebra 7,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3173,P2,UBERON:0004632
+VH_F_thoracic_vertebra_8,FMA9991,thoracic vertebra 8,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3174,P2,UBERON:0011050
+VH_F_thoracic_vertebra_9,FMA10014,thoracic vertebra 9,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3175,P2,UBERON:0004633
+VH_F_thoracic_vertebra_10,FMA10037,thoracic vertebra 10,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3154,P2,UBERON:0004634
+VH_F_thoracic_vertebra_11,FMA10059,thoracic vertebra 11,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3155,P2,UBERON:0004635
+VH_F_thoracic_vertebra_12,FMA10081,thoracic vertebra 12,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3156,P2,UBERON:0004636
+VH_F_cervical_vertebra_1,FMA12519,vertebral bone 1,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3176,P2,UBERON:0001092
+VH_F_cervical_vertebra_2,FMA12520,vertebral bone 2,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3177,P2,UBERON:0001093
+VH_F_cervical_vertebra_3,FMA12521,mammalian cervical vertebra 3,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3161,P2,UBERON:0004612
+VH_F_cervical_vertebra_4,FMA12522,mammalian cervical vertebra 4,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3164,P2,UBERON:0004613
+VH_F_cervical_vertebra_5,FMA12523,mammalian cervical vertebra 5,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3167,P2,UBERON:0004614
+VH_F_cervical_vertebra_6,FMA12524,mammalian cervical vertebra 6,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3170,P2,UBERON:0004615
+VH_F_cervical_vertebra_7,FMA12525,mammalian cervical vertebra 7,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3172,P2,UBERON:0004616
+VH_F_lumbar_vertebra_6,,lumbar vertebra 6,VH_F_skeletal_system,,so_no_hra,sem_correspondencia,,P2,-
+VH_F_lumbar_vertebra_5,FMA13076,lumbar vertebra 5,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3168,P2,UBERON:0004621
+VH_F_lumbar_vertebra_4,FMA13075,lumbar vertebra 4,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3165,P2,UBERON:0004620
+VH_F_lumbar_vertebra_3,FMA13074,lumbar vertebra 3,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3162,P2,UBERON:0004619
+VH_F_lumbar_vertebra_2,FMA13073,lumbar vertebra 2,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3159,P2,UBERON:0004618
+VH_F_lumbar_vertebra_1,FMA13072,lumbar vertebra 1,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3157,P1,UBERON:0004617
+VH_F_intervertebral_disk_of_axis,FMA23881,intervertebral disk of axis,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_third_cervical_vertebra,FMA23881,intervertebral disk of third cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_fourth_cervical_vertebra,FMA23881,intervertebral disk of fourth cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_fifth_cervical_vertebra,FMA23881,intervertebral disk of fifth cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_sixth_cervical_vertebra,FMA23881,intervertebral disk of sixth cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_seventh_cervical_vertebra,FMA23881,intervertebral disk of seventh cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_axis,FMA23881,nucleus pulposus of intervertebral disk of axis,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_third_cervical_vertebra,FMA23881,nucleus pulposus of intervertebral disk of third cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_fourth_cervical_vertebra,FMA23881,nucleus pulposus of intervertebral disk of fourth cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_fifth_cervical_vertebra,FMA23881,nucleus pulposus of intervertebral disk of fifth cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_sixth_cervical_vertebra,FMA23881,nucleus pulposus of intervertebral disk of sixth cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_seventh_cervical_vertebra,FMA23881,nucleus pulposus of intervertebral disk of seventh cervical vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_first_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of first thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_second_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of second thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_third_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of third thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_fourth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of fourth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_fifth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of fifth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_sixth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of sixth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_seventh_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of seventh thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_eighth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of eighth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_ninth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of ninth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_tenth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of tenth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_eleventh_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of eleventh thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_twelfth_thoracic_vertebra,FMA23881,nucleus pulposus of intervertebral disk of twelfth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_first_thoracic_vertebra,FMA23881,intervertebral disk of first thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_second_thoracic_vertebra,FMA23881,intervertebral disk of second thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_third_thoracic_vertebra,FMA23881,intervertebral disk of third thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_fourth_thoracic_vertebra,FMA23881,intervertebral disk of fourth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_fifth_thoracic_vertebra,FMA23881,intervertebral disk of fifth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_sixth_thoracic_vertebra,FMA23881,intervertebral disk of sixth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_seventh_thoracic_vertebra,FMA23881,intervertebral disk of seventh thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_eighth_thoracic_vertebra,FMA23881,intervertebral disk of eighth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_ninth_thoracic_vertebra,FMA23881,intervertebral disk of ninth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_tenth_thoracic_vertebra,FMA23881,intervertebral disk of tenth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_eleventh_thoracic_vertebra,FMA23881,intervertebral disk of eleventh thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_twelfth_thoracic_vertebra,FMA23881,intervertebral disk of twelfth thoracic vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_first_lumbar_vertebra,FMA23881,nucleus pulposus of intervertebral disk of first lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_second_lumbar_vertebra,FMA23881,nucleus pulposus of intervertebral disk of second lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_third_lumbar_vertebra,FMA23881,nucleus pulposus of intervertebral disk of third lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_fourth_lumbar_vertebra,FMA23881,nucleus pulposus of intervertebral disk of fourth lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_fifth_lumbar_vertebra,FMA23881,nucleus pulposus of intervertebral disk of fifth lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_nucleus_pulposus_of_intervertebral_disk_of_sixth_lumbar_vertebra,FMA23881,nucleus pulposus of intervertebral disk of sixth lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_first_lumbar_vertebra,FMA23881,intervertebral disk of first lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_second_lumbar_vertebra,FMA23881,intervertebral disk of second lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_third_lumbar_vertebra,FMA23881,intervertebral disk of third lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_fourth_lumbar_vertebra,FMA23881,intervertebral disk of fourth lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_fifth_lumbar_vertebra,FMA23881,intervertebral disk of fifth lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_intervertebral_disk_of_sixth_lumbar_vertebra,FMA23881,intervertebral disk of sixth lumbar vertebra,VH_F_skeletal_system,,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ2772;FJ3152;FJ3153;FJ3178;FJ3199;FJ3200;FJ3201;FJ3225;FJ3226;FJ3227;FJ3228;FJ3229;FJ3230;FJ3231;FJ3232;FJ3233;FJ3234;FJ3235;FJ3236;FJ3239;FJ3242;FJ3245;FJ3248;FJ3251;FJ3254;FJ3255;FJ3259;FJ3262;FJ3263;FJ3265;FJ3269;FJ3272;FJ3273;FJ3274;FJ3281;FJ3287;FJ3288;FJ3289;FJ3290;FJ3309;FJ3330;FJ3331;FJ3332;FJ3333;FJ3334;FJ3335;FJ3336;FJ3337;FJ3338;FJ3339;FJ3340;FJ3341;FJ3342;FJ3343;FJ3344;FJ3345;FJ3346;FJ3347;FJ3348;FJ3365;FJ3368;FJ3369;FJ3371;FJ3375;FJ3378;FJ3379;FJ3380;FJ3386;FJ3392;FJ3393;FJ3394;FJ3395,P2,UBERON:0001434
+VH_F_right_tibial_collateral_ligament,FMA44601,Right tibial collateral ligament,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:44601
+VH_F_anterior_cruciate_ligament_of_knee_R,FMA44615,Right anterior cruciate ligament,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:44615
+VH_F_posterior_cruciate_ligament_of_knee_R,FMA44618,Right posterior cruciate ligament,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:44618
+VH_F_anterolateral_ligament_of_knee_R,,anterolateral ligament of knee,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,UBERON:0014899
+VH_F_fibular_collateral_ligament_R,FMA44609,Right fibular collateral ligament,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:44609
+VH_F_patellar_ligament_R,FMA44585,Right patellar ligament,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:44585
+VH_F_meniscus_R,FMA64019,Articular disk of knee joint,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA64019
+VH_F_femur_R,FMA24474,Right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3365,P3,FMA:24474
+VH_F_trochlear_groove_R,FMA43746,Patellar surface of right femur,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:43746
+VH_F_medial_perichondular_surface_R,,medial perichondular surface,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_articular_cartilage_of_knee_R,FMA33189,Articular cartilage of distal epiphysis of right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3365,P3,FMA:33189
+VH_F_medial_condyle_of_right_femur_sup,FMA32862,Medial condyle of right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3365,P3,FMA:32862
+VH_F_lateral_condyle_of_femur_sup_R,FMA32860,Lateral condyle of right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3365,P3,FMA:32860
+VH_F_medial_condyle_of_right_femur_inf,FMA32862,Medial condyle of right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3365,P3,FMA:32862
+VH_F_lateral_condyle_of_femur_inf_R,FMA32860,Lateral condyle of right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3365,P3,FMA:32860
+VH_F_lateral_condyle_of_femur_frontal_R,FMA32860,Lateral condyle of right femur,VH_F_lower_limb,right,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3365,P3,FMA:32860
+VH_F_distal_most_point_of_medial_condyle_R,,distal-most point of medial condyle of femur,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,UBERON:7500033
+VH_F_intercondylar_fossa_R,FMA43749,Intercondylar fossa of right femur,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,FMA:43749
+VH_F_posterior_cruciate_enthesis_R,,posterior cruciate enthesis,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_anterior_cruciate_enthesis_R,,anterior cruciate enthesis,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_lateral_perichondular_surface_R,,lateral perichondular surface,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_lateral_epicondylar_enthesis_R,,lateral epicondylar enthesis,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_medial_epicondylar_enthesis_R,,medial epicondylar enthesis,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,,P3,-
+VH_F_tibia_R,FMA24477,Right tibia,VH_F_lower_limb,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3387,P3,FMA:24477
+VH_F_fibula_R,FMA24480,Right fibula,VH_F_lower_limb,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3366,P3,FMA:24480
+VH_F_patella_R,FMA24486,Right patella,VH_F_lower_limb,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ3381,P1,FMA:24486
+VH_F_anterolateral_ligament_of_knee_L,,anterolateral ligament of knee,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,UBERON:0014899
+VH_F_fibular_collateral_ligament_L,FMA44610,Left fibular collateral ligament,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:44610
+VH_F_patellar_ligament_L,FMA44586,Left patellar ligament,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:44586
+VH_F_left_tibial_collateral_ligament,FMA44602,Left tibial collateral ligament,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:44602
+VH_F_anterior_cruciate_ligament_of_knee_L,FMA44616,Left anterior cruciate ligament,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:44616
+VH_F_posterior_cruciate_ligament_of_knee_L,FMA44619,Left posterior cruciate ligament,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:44619
+VH_F_meniscus_L,FMA64019,Articular disk of knee joint,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA64019
+VH_F_femur_L,FMA24475,Left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3259,P3,FMA:24475
+VH_F_intercondylar_fossa_L,FMA43750,Intercondylar fossa of left femur,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:43750
+VH_F_anterior_cruciate_enthesis_L,,anterior cruciate enthesis,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_posterior_cruciate_enthesis_L,,posterior cruciate enthesis,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_lateral_perichondular_surface_L,,lateral perichondular surface,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_lateral_epicondylar_enthesis_L,,lateral epicondylar enthesis,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_medial_epicondylar_enthesis_L,,medial epicondylar enthesis,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_trochlear_groove_L,FMA43747,Patellar surface of left femur,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,FMA:43747
+VH_F_medial_perichondular_surface_L,,medial perichondular surface,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,-
+VH_F_articular_cartilage_of_knee_L,FMA33190,Articular cartilage of distal epiphysis of left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3259,P3,FMA:33190
+VH_F_medial_condyle_of_left_femur_inf,FMA32863,Medial condyle of left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3259,P3,FMA:32863
+VH_F_lateral_condyle_of_femur_inf_L,FMA32861,Lateral condyle of left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3259,P3,FMA:32861
+VH_F_lateral_condyle_of_femur_frontal_L,FMA32861,Lateral condyle of left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3259,P3,FMA:32861
+VH_F_distal_most_point_of_medial_condyle_L,,distal-most point of medial condyle of femur,VH_F_lower_limb,left,so_no_hra,sem_correspondencia,,P3,UBERON:7500033
+VH_F_lateral_condyle_of_femur_sup_L,FMA32861,Lateral condyle of left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3259,P3,FMA:32861
+VH_F_medial_condyle_of_left_femur_sup,FMA32863,Medial condyle of left femur,VH_F_lower_limb,left,presente_no_bp3d,fma_is_a_part_of_ate_6_niveis,FJ3259,P3,FMA:32863
+VH_F_patella_L,FMA24487,Left patella,VH_F_lower_limb,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3275,P1,FMA:24487
+VH_F_tibia_L,FMA24478,Left tibia,VH_F_lower_limb,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3282,P3,FMA:24478
+VH_F_fibula_L,FMA24481,Left fibula,VH_F_lower_limb,left,presente_no_bp3d,fma_direto_catalogo_hra,FJ3260,P3,FMA:24481

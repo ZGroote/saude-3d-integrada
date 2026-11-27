@@ -1,0 +1,5 @@
+EXP-0021 Frente A — situação dos critérios mensuráveis
+A1: classificação automática executada para 2234/2234 malhas BP3D e 956/956 malhas HRA; cada linha tem exatamente uma categoria válida e método registrado.
+A2: nova amostra de 50 classificações automáticas gerada em amostra_revisao.csv com random.seed(23); revisão pendente.
+A3: 222/958 = 23.17%; limite pré-registrado ≥50%; H21 não julgada até a revisão A2.
+As seções 8–11 do protocolo não foram alteradas.

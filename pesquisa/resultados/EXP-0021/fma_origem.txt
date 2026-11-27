@@ -1,0 +1,4 @@
+Fonte solicitada: http://purl.obolibrary.org/obo/fma.owl
+versão: 5.1.0
+SHA-256: BEB3DC47979AD5434EF70FD02AF4307F147F2023F7D8C2C57103B995191194C3
+Cópia: hra/externo/fma/fma.owl (fora do git).

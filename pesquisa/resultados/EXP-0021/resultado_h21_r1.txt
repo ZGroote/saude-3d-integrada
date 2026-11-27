@@ -1,0 +1,12 @@
+EXP-0021 — Critério A3 (H21)
+UBERON data-version: uberon/releases/2026-11-05/uberon-basic.owl
+UBERON SHA-256: 1F119822DC2DFD7ACF973FA1534E692D971064CAECAE6B7701D3221F1810A397
+Total de malhas BP3D lidas: 2234
+Categoria ausente (denominador A3): 1936
+Grupos H21 incluídos no numerador: osso_membro_superior=90, musculo_membro_superior=14, vaso_membro=125, nervo_periferico=28
+Numerador A3: 257
+Cálculo: 257/1936 = 13.27%
+Limite pré-registrado: ≥ 50% das malhas `ausente`.
+Resultado A3: H21 REJEITADA.
+Grupo `outro` não integra o numerador; nenhuma categoria exclusiva_masculino ou nao_mapeavel integra o denominador.
+Decisões manuais aplicadas: BP3D=0; HRA=0
