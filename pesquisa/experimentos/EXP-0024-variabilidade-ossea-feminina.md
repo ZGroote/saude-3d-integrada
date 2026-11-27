@@ -77,7 +77,9 @@ Execução por Codex 2 em 2026-11-27 (`pesquisa/resultados/EXP-0024/RELATORIO.md
 Registradas depois de ver os resultados da rodada 1 (V1 com 12 homens já conhecido), e por isso declaradas aqui:
 1. **Correção (implementação):** comparador `hra-f` = malhas do atlas publicado `web/public/atlas/hra-f/1.10-1` (sistema esquelético), selecionadas pelo `indice.json` (ossos do quadril E/D, sacro, fêmures E/D); `bp3d-m` conferido da mesma forma em `web/public/atlas/bp3d-m/4.0-1`. A lista de malhas usadas fica registrada.
 2. **Emenda (amostra masculina):** os homens que falham no QC são substituídos pelos demais do pool masculino (77 − 20 = 57), em ordem sorteada com seed `240025`, até 20 passarem Q1/Q2/Q4 — a mesma lógica de extensão já usada para as mulheres.
-3. Nada mais muda: mulheres, divisão, parâmetros congelados, métricas e critérios V0–V3 iguais.
+3. **Cobertura da pelve do `hra-f` (acrescentado antes da execução):** o `hra-f/1.10-1` não tem malha chamada "osso do quadril"; as candidatas são `VH_F_ilium_compact_bone_R/L` (+ `VH_F_sacrum`). Antes de medir V2, verificar se elas cobrem o osso do quadril inteiro: após o alinhamento por similaridade a cada mulher de validação, fração da superfície feminina (máscaras `hip_left/right`) a até 5 mm da malha do `hra-f`. Se a mediana for `< 90%`, V2 é registrado como **não avaliável — pelve do `hra-f` incompleta** (achado sobre o atlas), e não como falha. Os fêmures `VH_F_femur_R/L` também são conferidos (há indício de que um é o espelho do outro).
+4. As malhas do atlas publicado são montadas na posição de corpo com a mesma regra do motor (`packages/motor-anatomico/src/pacote.ts`); conferência visual obrigatória (figura frontal com as peças nos lugares).
+5. Nada mais muda: mulheres, divisão, parâmetros congelados, métricas e critérios V0–V3 iguais.
 
 ## 9. Validação
 A preencher.
