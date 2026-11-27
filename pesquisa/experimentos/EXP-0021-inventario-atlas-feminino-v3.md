@@ -46,7 +46,21 @@ Para cada fonte — Female Atlas (GitHub HiMahendraBeniwal/female-atlas), Visibl
 Este experimento é descritivo: ele não aprova nem reprova nenhum atlas.
 
 ## 8. Resultados
-_A preencher._
+
+### Rodada 1 (2026-11-27, Codex) — A2 reprovado
+- UBERON `releases/2026-11-05`, SHA-256 `1F119822…1810A397` (`uberon_origem.txt`).
+- **A1 atendido:** 2.234 malhas BP3D e 956 malhas HRA classificadas. BP3D: 250 `presente`, 13 `parcial`, 1.936 `ausente`, 18 `exclusivo_masculino` e 17 `nao_mapeavel`. HRA: 184 `presente_no_bp3d`, 58 `exclusivo_feminino` e 714 `so_no_hra`.
+- **A2 reprovado: 43/50 = 86% (< 90%)** na revisão de Claude Code (`revisao_A2_rodada1.csv`). As 7 divergências têm três causas:
+  - (a) os nomes dos nós do HRA (`VH_F_intervertebral_disk_of_third_lumbar_vertebra`, `Allen_fornix_L`) foram ignorados. Há 50 malhas com o rótulo genérico `skeletal system` e 210 sem rótulo;
+  - (b) a relação parte/todo não foi usada (árvore brônquica segmentar × brônquio segmentar, giro do cíngulo × partes, ramo × veia porta);
+  - (c) a lateralidade dos nós `Allen_*_L/_R` não foi lida.
+- **A3 calculado, mas sem valor de conclusão:** 257/1.936 = 13,27%. Como o denominador vem de uma classificação reprovada em A2, H21 **não** é julgada nesta rodada.
+
+### Rodada 2 — método revisto (registrado antes de executar)
+Pela regra de A2, o cruzamento é refeito. Os critérios A1–A3 e B1 **não mudam**. Mudanças no método:
+1. Usar também o nome do nó do HRA: sem o prefixo `VH_F_`/`Allen_`, com `_` trocado por espaço, e com `_L`/`_R` convertidos em lado.
+2. A relação pai/filha (`part_of`/`is_a`) do UBERON e as xrefs FMA dos ancestrais definem a categoria `parcial`.
+3. A revisão A2 usa uma nova amostra de 50 classificações automáticas (`random.seed(22)`).
 
 ## 9. Validação
 _A preencher._
