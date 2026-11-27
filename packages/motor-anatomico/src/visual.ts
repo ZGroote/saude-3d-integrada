@@ -1,6 +1,6 @@
 // Cores e enquadramento, vindos de bodyparts3d/visualizador.html.
 import { MathUtils, Sphere, Vector3, type Box3 } from 'three';
-import type { Ancora, NomeVista, Vetor3 } from './tipos';
+import type { Ancora, NomeVista, Vetor3, VistaCamera } from './tipos';
 
 export const CORES_SISTEMA: Record<string, string> = {
   esqueletico: '#e9e0c8', articular: '#9fc4c9', muscular: '#b5524a', fascia: '#cfc3b0', cardiaco: '#9e1b32',
@@ -37,8 +37,27 @@ export function calcularVista(vista: NomeVista, centro: Vetor3, distancia: numbe
   };
 }
 
+/** Monta o valor persistível da câmera a partir da pose calculada para uma vista. */
+export function montarVistaCamera(
+  vista: NomeVista, atlas: string, atlas_versao: string, centro: Vetor3, distancia: number, sistemas: string[],
+): VistaCamera {
+  return { atlas, atlas_versao, ...calcularVista(vista, centro, distancia), sistemas: [...sistemas] };
+}
+
 export type ProfundidadeMalha = { malha: string; profundidade: number };
 export type CamadasMalhas = { total: number; porMalha: Record<string, number> };
+
+/** Remove do mapa os itens cujas malhas deixaram de estar em uso e libera recursos associados. */
+export function limparMapaForaDeUso<K, V>(
+  mapa: Map<K, V>, emUso: ReadonlySet<K>, liberar?: (valor: V, chave: K) => void,
+): number {
+  for (const [chave, valor] of mapa) {
+    if (emUso.has(chave)) continue;
+    liberar?.(valor, chave);
+    mapa.delete(chave);
+  }
+  return mapa.size;
+}
 
 /** Até dez faixas por quantis; índice zero é a camada mais superficial. */
 export function binningCamadas(profundidades: ProfundidadeMalha[]): CamadasMalhas {

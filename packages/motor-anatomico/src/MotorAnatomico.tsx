@@ -3,8 +3,8 @@
 import { Canvas, useFrame, useThree, type ThreeEvent } from '@react-three/fiber';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
-  BackSide, Box3, DirectionalLight, DoubleSide, InstancedMesh, Matrix4, Mesh, MeshStandardMaterial, Sphere, Vector3,
-  type Intersection, type Raycaster,
+  BackSide, Box3, DirectionalLight, DoubleSide, InstancedMesh, Matrix4, Mesh, MeshStandardMaterial, Quaternion, Sphere, Vector3,
+  type Camera as ThreeCamera, type Intersection, type Raycaster,
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { ancoraDeIntersecao, candidatas, criarBVH, precisaDeGeometria, reprojetar, situarMarcador } from './ancora';
@@ -12,7 +12,7 @@ import {
   carregarPacote, carregarSistema, descartarSistema, doisQuadros, montarBVHs, urlDoPacote, type Pacote, type Sistema,
 } from './pacote';
 import type { Ancora, ComandoCamera, EntradaIndice, Marcador, NomeVista, Vetor3, VistaCamera } from './tipos';
-import { binningCamadas, calcularVista, COR_PADRAO, CORES_SISTEMA, distanciaDeEnquadramento } from './visual';
+import { binningCamadas, limparMapaForaDeUso, montarVistaCamera, COR_PADRAO, CORES_SISTEMA, distanciaDeEnquadramento } from './visual';
 
 export type MotorAnatomicoProps = {
   atlas: string;
@@ -44,6 +44,8 @@ export type MotorAnatomicoProps = {
 };
 
 const PELE = 'tegumentar';
+const UP_PADRAO: Vetor3 = [0, 1, 0];
+const EIXO_VERTICAL = new Vector3(0, 1, 0);
 /** Fração da distância de enquadramento abaixo da qual a vista conta como ampliada. */
 const AMPLIADO = 0.6;
 
@@ -71,6 +73,16 @@ function raycastNaFrente(this: InstancedMesh, raio: Raycaster, acertos: Intersec
 }
 
 type Posicionado = Marcador & { posicao: Vetor3; estrutural: boolean };
+
+type OrbitControlsComEixo = OrbitControls & { _quat: Quaternion; _quatInverse: Quaternion };
+
+/** OrbitControls fixa seus quaternions a partir de object.up no construtor; acompanhe alterações posteriores. */
+function atualizarEixoOrbitacao(camera: ThreeCamera, orbit: OrbitControls, up: Vetor3) {
+  camera.up.fromArray(up);
+  const controle = orbit as OrbitControlsComEixo;
+  controle._quat.setFromUnitVectors(camera.up, EIXO_VERTICAL);
+  controle._quatInverse.copy(controle._quat).invert();
+}
 
 /** Marcadores iguais no material (cor e se ficam por cima de tudo): uma chamada de desenho para todos. */
 function Instancias({ itens, destaque = false, onSelecionar }: {
@@ -250,7 +262,7 @@ function Motor({
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [falha, setFalha] = useState('');
   const [vistaAtual, setVistaAtual] = useState<NomeVista | 'livre'>('anterior');
-  const [cameraAtual, setCameraAtual] = useState<{ posicao: Vetor3; alvo: Vetor3 } | null>(null);
+  const [cameraAtual, setCameraAtual] = useState<{ posicao: Vetor3; alvo: Vetor3; up: Vetor3 } | null>(null);
 
   useEffect(() => {
     const cancelar = new AbortController();
@@ -344,10 +356,10 @@ function Motor({
   }, [posicionados, selecionado]);
   const emDestaque = posicionados.find((m) => m.id === selecionado);
 
-  const informarCamera = useCallback((posicao: Vetor3, alvo: Vetor3, vista?: NomeVista) => {
+  const informarCamera = useCallback((posicao: Vetor3, alvo: Vetor3, up: Vetor3, vista?: NomeVista) => {
     setVistaAtual(vista ?? 'livre');
-    setCameraAtual({ posicao, alvo });
-    onVista?.({ atlas, atlas_versao: versao, posicao, alvo });
+    setCameraAtual({ posicao, alvo, up });
+    onVista?.({ atlas, atlas_versao: versao, posicao, alvo, up });
   }, [atlas, versao, onVista]);
 
   const camadas = useMemo(() => {
@@ -376,7 +388,18 @@ function Motor({
 
   // Guarda os materiais e raycasts originais para filtrar por malha sem alterar o GLB/cache.
   const visuaisOriginais = useRef(new Map<Mesh, { material: Mesh['material']; raycast: Mesh['raycast']; translucido?: MeshStandardMaterial }>());
+  const wrapperMotor = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
+    const malhasEmUso = new Set<Mesh>();
+    for (const id of prontos) {
+      for (const malha of cache.get(id)?.sistema?.malhas.values() ?? []) malhasEmUso.add(malha);
+    }
+    limparMapaForaDeUso(visuaisOriginais.current, malhasEmUso, (original, malha) => {
+      malha.material = original.material;
+      malha.raycast = original.raycast;
+      malha.visible = true;
+      original.translucido?.dispose();
+    });
     for (const id of prontos) {
       const sistema = cache.get(id)?.sistema;
       if (!sistema) continue;
@@ -405,6 +428,7 @@ function Motor({
         } else malha.material = original.material;
       }
     }
+    wrapperMotor.current?.setAttribute('data-visuais', String(visuaisOriginais.current.size));
   }, [cache, revisao, prontos.join(','), ocultas.join(','), isoladas?.join(',') ?? 'null', transparencia, camadas.porMalha, camadasRemovidas]);
 
   useEffect(() => () => {
@@ -480,6 +504,7 @@ function Motor({
 
   return (
     <div
+      ref={wrapperMotor}
       style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}
       data-motor
       data-carregados={prontos.join(' ')}
@@ -549,7 +574,7 @@ function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCa
   alvo: Sistema | null;
   selecionado: Vetor3 | null;
   selecionadoId: string | null;
-  onCamera: (posicao: Vetor3, alvo: Vetor3, vista?: NomeVista) => void;
+  onCamera: (posicao: Vetor3, alvo: Vetor3, up: Vetor3, vista?: NomeVista) => void;
   onAmpliar: () => void;
 }) {
   const camera = useThree((s) => s.camera);
@@ -577,7 +602,8 @@ function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCa
   const enviarVista = (nome?: NomeVista) => {
     const orbit = controles.current;
     if (!orbit) return;
-    onCameraAtual.current(camera.position.toArray() as Vetor3, orbit.target.toArray() as Vetor3, nome);
+    onCameraAtual.current(camera.position.toArray() as Vetor3, orbit.target.toArray() as Vetor3,
+      camera.up.toArray() as Vetor3, nome);
   };
 
   const dadosEnquadramento = () => {
@@ -598,7 +624,7 @@ function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCa
     if (!data || !orbit) return false;
     cancelarAnimacao();
     camera.position.set(data.centro.x, data.centro.y, data.centro.z + data.distancia);
-    camera.up.set(0, 1, 0);
+    atualizarEixoOrbitacao(camera, orbit, UP_PADRAO);
     orbit.target.copy(data.centro);
     orbit.update();
     distanciaReferencia.current = data.distancia;
@@ -640,6 +666,7 @@ function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCa
       cancelarAnimacao();
       orbit.target.fromArray(cmd.vista.alvo);
       camera.position.fromArray(cmd.vista.posicao);
+      atualizarEixoOrbitacao(camera, orbit, cmd.vista.up ?? UP_PADRAO);
       orbit.update();
       enviarVista();
       return;
@@ -651,11 +678,11 @@ function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCa
     if (cmd.acao === 'vista') {
       const data = dadosEnquadramento();
       if (!data) return;
-      const pose = calcularVista(cmd.vista, data.centro.toArray() as Vetor3, data.distancia);
+      const vista = montarVistaCamera(cmd.vista, atlas, versao, data.centro.toArray() as Vetor3, data.distancia, []);
       cancelarAnimacao();
-      camera.position.fromArray(pose.posicao);
-      camera.up.fromArray(pose.up);
-      orbit.target.fromArray(pose.alvo);
+      camera.position.fromArray(vista.posicao);
+      atualizarEixoOrbitacao(camera, orbit, vista.up ?? UP_PADRAO);
+      orbit.target.fromArray(vista.alvo);
       distanciaReferencia.current = data.distancia;
       orbit.update();
       enviarVista(cmd.vista);
@@ -678,7 +705,8 @@ function Camera({ atlas, versao, comando, alvo, selecionado, selecionadoId, onCa
     orbit.enableDamping = true;
     const terminou = () => {
       const atual = controles.current;
-      if (atual) onCameraAtual.current(camera.position.toArray() as Vetor3, atual.target.toArray() as Vetor3);
+      if (atual) onCameraAtual.current(camera.position.toArray() as Vetor3, atual.target.toArray() as Vetor3,
+        camera.up.toArray() as Vetor3);
     };
     orbit.addEventListener('end', terminou);
     controles.current = orbit;

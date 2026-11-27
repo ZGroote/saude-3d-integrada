@@ -233,11 +233,12 @@ function Corpo({ atlas, versao, provisorio, prontuario, onAusente }: {
         </fieldset>
         <button type="button" aria-pressed={transparencia} className="min-h-9 rounded border px-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={() => setTransparencia((v) => !v)}>Transparência: {transparencia ? "ligada" : "desligada"}</button>
         {sistemas.includes("muscular") && totalCamadas > 0 && (
-          <div className="flex items-center gap-1">
-            <span className="mr-auto">Camadas aproximadas</span>
-            <button type="button" aria-label="Remover uma camada muscular" className="size-9 rounded border focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={camadasAplicadas <= 0} onClick={() => setCamadasRemovidas((n) => Math.max(0, n - 1))}>−</button>
+          <div role="group" aria-label="Camadas musculares aproximadas" aria-describedby="descricao-camadas-musculares" className="flex flex-wrap items-center gap-1">
+            <span className="mr-auto">Camadas musculares aproximadas</span>
+            <button type="button" aria-label="Recolocar uma camada muscular" className="size-9 rounded border focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={camadasAplicadas <= 0} onClick={() => setCamadasRemovidas((n) => Math.max(0, n - 1))}>−</button>
             <span aria-live="polite" className="min-w-5 text-center">{camadasAplicadas}</span>
-            <button type="button" aria-label="Remover mais uma camada muscular" className="size-9 rounded border focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={camadasAplicadas >= totalCamadas} onClick={() => setCamadasRemovidas((n) => Math.min(totalCamadas, n + 1))}>+</button>
+            <button type="button" aria-label="Remover uma camada muscular" className="size-9 rounded border focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" disabled={camadasAplicadas >= totalCamadas} onClick={() => setCamadasRemovidas((n) => Math.min(totalCamadas, n + 1))}>+</button>
+            <span id="descricao-camadas-musculares" className="basis-full text-xs text-slate-600">Agrupadas pela distância até a pele; não são planos anatômicos.</span>
           </div>
         )}
         {(ocultas.length > 0 || isoladas !== null) && <button type="button" className="min-h-9 rounded border px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-800" onClick={mostrarTudo}>Mostrar tudo</button>}

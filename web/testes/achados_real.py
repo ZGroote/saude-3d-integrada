@@ -124,12 +124,12 @@ def abrir_maria(pg, email):
     return carregar(pg, lambda: pg.locator(f'a[href="/pacientes/{MARIA}"]').click(), email)
 
 
-def registrar(pg, cid, posterior=False):
+def registrar(pg, cid, superior=False):
     """Clica no corpo, preenche o formulário e salva. Devolve (id, âncora do clique)."""
     canvas = pg.locator('canvas')
     formulario = pg.locator('form[aria-labelledby="titulo-novo-achado"]')
     cartao = pg.locator('[data-cartao]')
-    camera_posterior = None
+    camera_superior = None
     # os achados de execuções anteriores continuam no corpo, e um clique num marcador abre o cartão dele:
     # pontos sorteados pelo corpo inteiro (cabeça, tronco, coxas, pernas) até cair em pele livre
     pontos = [(dx, fy) for fy in (0.12, 0.28, 0.33, 0.38, 0.43, 0.48, 0.58, 0.63, 0.68, 0.74, 0.80)
@@ -152,11 +152,11 @@ def registrar(pg, cid, posterior=False):
         marcadores += 1
     assert formulario.count() and formulario.locator('[data-ancora]').count(), (
         f'clique no corpo não abriu o formulário ({marcadores} cliques caíram em marcadores, {fora} fora do corpo)')
-    if posterior:
-        pg.get_by_role('button', name='Vista posterior').click()
-        pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-vista') === 'posterior'")
+    if superior:
+        pg.get_by_role('button', name='Vista superior').click()
+        pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-vista') === 'superior'")
         pg.wait_for_function("!!document.querySelector('[data-motor]')?.getAttribute('data-camera')")
-        camera_posterior = json.loads(pg.get_attribute('[data-motor]', 'data-camera'))
+        camera_superior = json.loads(pg.get_attribute('[data-motor]', 'data-camera'))
     formulario.get_by_role('searchbox').press_sequentially(cid, delay=40)
     pg.get_by_role('list', name='Resultados do CID-10').locator('li button').filter(has_text=cid).first.click()
     assert formulario.locator('[data-cid-escolhido] strong').inner_text() == cid
@@ -167,10 +167,13 @@ def registrar(pg, cid, posterior=False):
         formulario.get_by_role('button', name='Salvar achado').click()
     resposta = espera.value
     assert resposta.ok and resposta.json(), f'registrar_achado: {resposta.status} {resposta.text()}'
-    if posterior:
+    if superior:
         enviado = resposta.request.post_data_json.get('p_vista')
-        assert enviado and enviado['atlas'] == 'hra-f' and len(enviado['sistemas']) > 0, enviado
-        assert enviado['posicao'] == camera_posterior['posicao'] and enviado['alvo'] == camera_posterior['alvo'], enviado
+        ancora_enviada = resposta.request.post_data_json.get('p_ancora')
+        assert enviado and ancora_enviada and enviado['atlas'] == ancora_enviada['atlas'] \
+            and enviado['atlas_versao'] == ancora_enviada['atlas_versao'] and len(enviado['sistemas']) > 0, enviado
+        assert enviado['posicao'] == camera_superior['posicao'] and enviado['alvo'] == camera_superior['alvo'] \
+            and enviado['up'] == [0, 0, 1], enviado
     pg.wait_for_selector(f'button[data-achado="{resposta.json()}"]')
     return resposta.json(), resposta.request.post_data_json['p_ancora'], resposta.request.post_data_json.get('p_vista')
 
@@ -213,7 +216,7 @@ with sync_playwright() as p:
     # 1) cardiologia registra o I10 clicando no corpo; recarrega
     entrar(pg, CARDIO)
     abrir_maria(pg, CARDIO)
-    normal, clique, vista_registrada = registrar(pg, 'I10', posterior=True)
+    normal, clique, vista_registrada = registrar(pg, 'I10', superior=True)
     linhas = carregar(pg, pg.reload, CARDIO)
     [i10] = [a for a in linhas if a['id'] == normal]
     assert i10['cid10'] == 'I10' and i10['nivel_sigilo'] == 'normal', i10
@@ -227,10 +230,11 @@ with sync_playwright() as p:
       if (!dado) return false;
       const atual = JSON.parse(dado);
       return atual.posicao.every((v, i) => Math.abs(v - esperada.posicao[i]) < 1e-6)
-        && atual.alvo.every((v, i) => Math.abs(v - esperada.alvo[i]) < 1e-6);
+        && atual.alvo.every((v, i) => Math.abs(v - esperada.alvo[i]) < 1e-6)
+        && atual.up.every((v, i) => Math.abs(v - esperada.up[i]) < 1e-6);
     }""", arg=vista_registrada)
     assert 'Vista salva no registro' in pg.locator(f'[data-cartao="{normal}"]').inner_text()
-    print('5) vista posterior persistida e restaurada ao selecionar I10')
+    print('5) vista superior persistida e restaurada ao selecionar I10 (posição, alvo e up)')
     conferir_linha(pg, i10, problemas)
     print(f'1) I10: clique {clique["posicao_local"]} == listar_achados {i10["ancora"]["posicao_local"]} == marcador desenhado')
 

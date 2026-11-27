@@ -6,6 +6,7 @@
 Precisa de Playwright para Python e do Chrome.
 """
 import json
+import math
 import os
 import signal
 import socket
@@ -138,6 +139,26 @@ def desenvolvimento(url):
         foto(pg, '1440-femur')
         pg.get_by_role('button', name='Vista posterior').click()
         pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-vista') === 'posterior'")
+        pg.get_by_role('button', name='Vista superior').click()
+        pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-vista') === 'superior'")
+        camera_antes = json.loads(pg.get_attribute('[data-motor]', 'data-camera'))
+        assert camera_antes['up'] == [0, 0, 1], camera_antes
+        area_canvas = pg.locator('canvas').bounding_box()
+        x, y = area_canvas['x'] + area_canvas['width'] / 2, area_canvas['y'] + area_canvas['height'] / 2
+        pg.mouse.move(x, y)
+        pg.mouse.down()
+        pg.mouse.move(x + 55, y + 30, steps=6)
+        pg.mouse.up()
+        pg.wait_for_function("""antes => {
+          const bruto = document.querySelector('[data-motor]')?.getAttribute('data-camera');
+          if (!bruto) return false;
+          const atual = JSON.parse(bruto);
+          return atual.posicao.some((v, i) => v !== antes.posicao[i])
+            || atual.alvo.some((v, i) => v !== antes.alvo[i]);
+        }""", arg=camera_antes)
+        camera_depois = json.loads(pg.get_attribute('[data-motor]', 'data-camera'))
+        assert camera_depois['up'] == [0, 0, 1], camera_depois
+        assert all(math.isfinite(v) for v in camera_depois['posicao'] + camera_depois['alvo'] + camera_depois['up']), camera_depois
         pg.get_by_role('button', name='Isolar estrutura').click()
         pg.wait_for_function("document.querySelector('[data-motor]')?.getAttribute('data-isoladas') === '1'")
         pg.get_by_role('button', name='Mostrar tudo').click()
@@ -145,8 +166,8 @@ def desenvolvimento(url):
         pg.check('input[value=muscular]')
         carregados(pg, 'tegumentar esqueletico muscular')
         pg.wait_for_function("Number(document.querySelector('[data-motor]')?.getAttribute('data-camadas-total')) > 0")
-        assert 'Camadas aproximadas' in pg.inner_text('[aria-label="Ferramentas do corpo"]')
-        print('vistas, isolamento/restauração e camadas musculares ok')
+        assert 'Camadas musculares aproximadas' in pg.inner_text('[aria-label="Ferramentas do corpo"]')
+        print('vistas superior/posterior, órbita sem NaN, isolamento/restauração e camadas musculares ok')
         pg.close()
 
         # feminino sem atlas publicado (404 forçado para valer mesmo quando ele existir)

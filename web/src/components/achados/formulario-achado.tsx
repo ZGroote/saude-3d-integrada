@@ -60,6 +60,8 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLoca
     const texto = (nome: string) => String(campos.get(nome) ?? "").trim();
     setErro("");
     setSalvando(true);
+    const vistaCompativel = ancora && vista?.atlas === ancora.atlas && vista.atlas_versao === ancora.atlas_versao
+      ? vista : null;
     const { data, error } = await createClient().rpc("registrar_achado", {
       p_paciente: pacienteId,
       p_ancora: ancora,
@@ -70,7 +72,7 @@ export function FormularioAchado({ pacienteId, ponto, corrigindo, atlas, comLoca
       p_inicio: texto("inicio") || null,
       p_observacao: texto("observacao") || null,
       p_substitui: corrigindo?.id ?? null,
-      p_vista: vista ?? null,
+      p_vista: vistaCompativel,
     });
     setSalvando(false);
     if (error || !data) return setErro("O achado não foi salvo. Confira os dados e o vínculo com o paciente e tente de novo.");

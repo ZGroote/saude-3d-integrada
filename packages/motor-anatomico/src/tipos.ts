@@ -8,6 +8,7 @@ export type VistaCamera = {
   atlas_versao: string;
   posicao: Vetor3;
   alvo: Vetor3;
+  up?: Vetor3;
   sistemas: string[];
 };
 
