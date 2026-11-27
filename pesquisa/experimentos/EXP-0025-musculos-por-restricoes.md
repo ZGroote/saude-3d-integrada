@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `em andamento — rodada 1 rejeitada; rodada 2 registrada`
 
 ## 2. Problema
 O `hra-f` não tem ~95% da musculatura (EXP-0021), e não existe fonte aberta de músculos femininos de outras mulheres (EXP-0023). Deformar o corpo masculino pela silhueta não funciona (EXP-0022). A alternativa é deformar cada músculo masculino guiado pelos **ossos** femininos em que ele se prende. Antes de pensar em escala, é preciso saber se esse método chega perto de músculos femininos reais.
@@ -54,16 +54,42 @@ Mesmas medidas para B0.
 Leitura: **H25 sustentada** se R1, R2 e R3; **rejeitada** se R1 falha. R4 só descreve.
 
 ## 8. Resultados
-A preencher.
+
+### 8.1 Rodada 1 (método M como registrado)
+Execução por Codex em 2026-11-27 (`pesquisa/resultados/EXP-0025/RELATORIO.md`, `metricas.csv`, `veredito_R1_R4.txt`). As 22 malhas adaptadas foram gravadas e tiveram o SHA-256 conferido antes de qualquer músculo da Denver ser aberto. O script de adaptação leu só 13 STLs ósseos.
+
+| Critério | Resultado |
+|---|---|
+| R1 — M melhora `≥ 20%` sobre B0 em `≥ 8/10` | **reprovado (0/10)**: M **piorou** a distância média em 9 de 10 (de −5,7% no sartório a −42,0% no gastrocnêmio medial); tibial anterior +0,4% |
+| R2 — inserções `≤ 2 mm` | atendido (0,000 mm), mas por construção: as inserções foram projetadas no osso |
+| R3 — penetração em osso `< 2%` | reprovado (máximo 22,1%, tibial anterior) |
+| R4 — Dice mediano `≥ 0,60` (exploratório) | 0,27 |
+
+B0 (só alinhamento global com escala 0,895) já fica longe da Denver: distância média de 6,8 mm (tibial anterior) a 28,7 mm (grácil).
+
+**Veredito da rodada 1: H25 rejeitada** (R1), pela regra pré-registrada.
+
+### 8.2 Rodada 2 — mudança de método registrada antes da execução
+Ver seção 9 para a causa. Mudanças (o resto da metodologia, B0, avaliação e critérios R1–R4 ficam iguais):
+- **M2b (primário):** inserções = vértices `≤ 3 mm` de um osso **e** situados nos 10% terminais do comprimento do músculo ao longo do seu eixo principal (cada extremidade). Só esses vértices são projetados e fixados; o relaxamento laplaciano é o mesmo.
+- **M2a (secundário):** só o campo thin-plate spline da rodada 1, sem projeção e sem relaxamento.
+- Leitura: **H25 sustentada na rodada 2** se M2b cumprir R1, R2 e R3. M2a é reportado para separar o efeito do campo do efeito da projeção; não decide a hipótese.
+- **Medida exploratória acrescentada (não decide):** distância unidirecional Denver→adaptado (média), para separar "músculo no lugar errado" de "músculo com tendão a mais".
+- A rodada 1 fica preservada integralmente (malhas, hashes, métricas).
 
 ## 9. Validação
-A preencher.
+Revisão (Claude Code) da rodada 1:
+- **Separação adaptação/avaliação:** conferida pelos hashes e pela lista de arquivos lidos (`metricas_meta.json`).
+- **Causa da piora (falha de protocolo, do revisor):** a definição de inserção como "vértice `≤ 3 mm` de um osso" capturou de 11% a 49% da superfície de cada músculo (tibial anterior 49%, grácil 37%, glúteo médio 36%). Isso é **área de contato**, não origem/inserção. Projetar essas áreas no osso achatou os músculos: abriu 112–568 ciclos de borda por músculo e mudou o volume para 0,25–1,87× o da Denver.
+- **Diferença de convenção de segmentação:** na figura, o reto femoral do BodyParts3D se estende ~200 mm abaixo do da Denver, sugerindo que o molde inclui tendão/ligamento patelar e a Denver só o ventre muscular. Isso pesa igual em B0 e M (não muda R1), mas infla as distâncias absolutas e o Dice.
+- **R2:** passou por construção; não é evidência do método.
 
 ## 10. Limitações
 - Uma única doadora (VHF): a prova é de viabilidade do método, não de generalização para outras mulheres.
 - A Denver vem da mesma doadora do `hra-f`; a conferência é independente do método, não da doadora.
 - O BP3D é masculino e de resolução moderada; erros do molde passam para o resultado.
 - Diferenças de volume muscular entre sexos não são modeladas; R4 e a razão de volume mostram o tamanho desse efeito.
+- Convenções diferentes de segmentação (tendão incluído ou não) entre BodyParts3D e Denver.
 
 ## 11. Conclusão
 A preencher.

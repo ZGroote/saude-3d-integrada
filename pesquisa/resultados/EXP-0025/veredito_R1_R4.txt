@@ -1,0 +1,9 @@
+EXP-0025 — veredito pelos critérios pré-registrados
+R1 — redução >=20% em pelo menos 8/10 grupos: REPROVOU (0/10; grupos: rectus_femoris=-16.4%, vastus_lateralis=-11.6%, vastus_medialis=-12.0%, sartorius=-5.7%, gracilis=-12.8%, adductor_longus=-12.8%, biceps_femoris=-17.4%, gastrocnemius_medial=-42.0%, gluteus_medius=-22.6%, tibialis_anterior=0.4%)
+R2 — mediana de distância das inserções M <=2 mm: PASSOU (0.000 mm; n=14490)
+R3 — colisão M <2% em todos os grupos: REPROVOU (máximo=22.060%)
+R4 — Dice mediano M >=0,60 (exploratório): REPROVOU (0.2684)
+H25: REJEITADA (R1 falhou, regra pré-registrada)
+R3 é estimado por interseção de voxels ocupados a 1 mm entre músculos e união dos ossos Denver mapeados; contato de superfície pode contribuir para voxels de borda.
+DESVIO de medição (não de critério): M pode abrir contornos ao projetar inserções. Para Dice/volume/colisão, o avaliador fecha apenas em memória cada ciclo de borda por leque ao centróide antes da voxelização; as malhas salvas não são alteradas. STL Denver é carregado com weld de vértices coincidentes. A voxelização usa subdivide max_iter=8 e pitch=1 mm.
+R1 conta o bíceps femoral como um grupo: cabeças longa e curta têm arquivos separados, mas malhas/volumes são unidos para as métricas do grupo.

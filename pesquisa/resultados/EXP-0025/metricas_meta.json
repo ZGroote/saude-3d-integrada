@@ -1,0 +1,49 @@
+{
+  "seed": 25022,
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "trimesh": "5.2.2",
+    "scikit-image": "0.26.0",
+    "matplotlib": "3.11.1"
+  },
+  "surface_samples_each_direction": [
+    6000,
+    6000
+  ],
+  "voxel_pitch_mm": 1.0,
+  "voxelizer": "trimesh subdivide, max_iter=8, fill; temporary centroid fan caps for boundary loops only in measurement",
+  "collision_definition": "overlap of filled 1 mm voxel occupancy of adapted muscle and union of mapped Denver bones",
+  "denver_muscle_files_read_after_hash_verification": [
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_RectusFemoris_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_VastusLateralis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_VastusMedialis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_Sartorius_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_Gracilis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_AdductorLongus_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_BicepsFemorisLong_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_BicepsFemorisShort_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_GastrocnemiusMedial_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_GluteusMedius_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_TibialisAnterior_smooth.stl"
+  ],
+  "all_adapted_hashes_verified_before_denver_muscles": true,
+  "r1_reductions": {
+    "rectus_femoris": -0.16388465320795223,
+    "vastus_lateralis": -0.1158571288609288,
+    "vastus_medialis": -0.11958143433729465,
+    "sartorius": -0.056687904555206226,
+    "gracilis": -0.12845540697334495,
+    "adductor_longus": -0.1276964892672486,
+    "biceps_femoris": -0.17358123958700267,
+    "gastrocnemius_medial": -0.42042710017404106,
+    "gluteus_medius": -0.22578828972248854,
+    "tibialis_anterior": 0.003750906940222079
+  },
+  "r1_count": 0,
+  "r2_insertion_median_mm": 7.182239259038417e-06,
+  "r2_insertion_vertex_count": 14490,
+  "r3_max_collision_percent": 22.060331041646734,
+  "r4_dice_median": 0.26839330269522016,
+  "verdict": "REJEITADA (R1 falhou, regra pré-registrada)"
+}
