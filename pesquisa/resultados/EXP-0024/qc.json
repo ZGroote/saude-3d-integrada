@@ -1,0 +1,2020 @@
+{
+  "qc": {
+    "s0028": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 99.21686924732902,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 98.6547080188281,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s0030": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 106.68943319441,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 112.7151368798865,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0062": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 227.93847246629215,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 292.01515905931115,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0089": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 103.62570657246954,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 104.78428328250706,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0108": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 120.46038647888889,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 118.55793075129883,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0119": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 139.3091065769684,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 137.99190292495916,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0139": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 114.28948901378124,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 116.70557218114519,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0157": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 128.7617327344212,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 109.2581900551623,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0160": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0190": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 113.11255208619589,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 100.50348040259465,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0196": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 92.960643795186,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 87.92396006366783,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s0216": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 86.91670727166127,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 85.23331045988326,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s0218": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 105.93966863506299,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 102.10210820836113,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s0222": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0241": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0245": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0262": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0336": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0350": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 125.97728574774509,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 122.12963218545963,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0381": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 166.21502251966854,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 163.67936809092774,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0440": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 112.23444640697642,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 107.17962272264785,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0442": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 144.2798096858501,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 152.9871336423015,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0472": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 115.60255318432117,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 103.1075834455453,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0571": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 99.7380071551809,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 96.22857093637012,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s0578": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 98.69654795000639,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 108.50093658037608,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0611": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 124.09042993106834,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 120.90339880813127,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0617": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 131.71546725728754,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 113.25586917925449,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice"
+      ]
+    },
+    "s0675": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 22.606659184602936,
+          "touches_superior_volume_edge": true,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0731": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 130.51154787843396,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 112.73134092117252,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0760": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 110.8204583140479,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 113.50940649081585,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0764": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 116.27154361585616,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 136.85644210944437,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0765": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 104.78362700599405,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 114.63843001537289,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0785": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0786": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0790": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 81.46672243977498,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 80.93016132827398,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s0795": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0798": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0804": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 113.31242122366282,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 115.28176323699066,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0835": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 102.56217718562948,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 110.31483365816341,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0836": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 107.46736797869241,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 118.48970507930431,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0844": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s0863": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 135.45291158165782,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 132.7397163998069,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice"
+      ]
+    },
+    "s0864": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 113.97673398763891,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 105.22463329748862,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0873": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 144.23467989261206,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 122.11809387396475,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0903": {
+      "Q1": false,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 136.90672028139699,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 135.7362911049768,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty sacrum"
+      ]
+    },
+    "s0928": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 118.88855457372955,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 121.71781943815628,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s0970": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice",
+        "Q2 sacrum touches first/last slice"
+      ]
+    },
+    "s0971": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 144.227038617654,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 136.88745393236738,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1016": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 146.35740457701755,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 143.45225333340517,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1025": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1057": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 151.45368978489574,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 137.94747964658947,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1069": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 133.3437458597451,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 124.50531595290067,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1070": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 111.51156765910258,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 115.66383043052696,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1094": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1111": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 122.78227086234088,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 124.84632638512596,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1120": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 135.97233457505865,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 138.46056468422054,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1121": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 410.82402396533774,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 409.13003408639474,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1128": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 121.73874069626493,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 120.55646382192819,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1132": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1136": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 118.77213742737946,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 117.16572640678427,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1146": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1155": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1159": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 60.00186523155311,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 65.51513974919449,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s1182": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1218": {
+      "Q1": false,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        },
+        "femur_right": {
+          "pass": false,
+          "reason": "empty mask",
+          "principal_extent_mm": null,
+          "touches_superior_volume_edge": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q1 empty hip_left",
+        "Q1 empty hip_right",
+        "Q1 empty sacrum",
+        "empty pelvis union",
+        "empty pelvis union"
+      ]
+    },
+    "s1228": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 106.44482087411879,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 121.25079531057548,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1233": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 122.36817273356517,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 114.48961176248696,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1267": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 126.55665832580216,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 125.92026896528282,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1304": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 14.220172053685149,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 16.762699668658577,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice",
+        "Q2 sacrum touches first/last slice"
+      ]
+    },
+    "s1314": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 79.58127680157115,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 80.78553900622218,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s1336": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 128.6883981779719,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 128.848729699385,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1340": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 129.72745181710883,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 130.10076547057105,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1355": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 98.22531034343629,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 95.10533987386783,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1358": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 111.21225079893527,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 104.22313927269724,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    },
+    "s1368": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 114.5865109364284,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 114.51711362439663,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s1385": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 96.01205920967224,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 93.6572352928728,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s1401": {
+      "Q1": true,
+      "Q2": false,
+      "Q3": {
+        "femur_left": {
+          "pass": false,
+          "principal_extent_mm": 93.04018331098395,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        },
+        "femur_right": {
+          "pass": false,
+          "principal_extent_mm": 88.90434164323302,
+          "touches_superior_volume_edge": false,
+          "reason": "extent below 100 mm"
+        }
+      },
+      "pelvis_pass": false,
+      "reasons": [
+        "Q2 hip_left touches first/last slice",
+        "Q2 hip_right touches first/last slice"
+      ]
+    },
+    "s1404": {
+      "Q1": true,
+      "Q2": true,
+      "Q3": {
+        "femur_left": {
+          "pass": true,
+          "principal_extent_mm": 114.99143673468573,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        },
+        "femur_right": {
+          "pass": true,
+          "principal_extent_mm": 106.06794341007068,
+          "touches_superior_volume_edge": false,
+          "reason": null
+        }
+      },
+      "pelvis_pass": true,
+      "reasons": []
+    }
+  },
+  "female_primary_unique": [
+    "s0030",
+    "s0089",
+    "s0139",
+    "s0157",
+    "s0190",
+    "s0350",
+    "s0381",
+    "s0440",
+    "s0472",
+    "s0578",
+    "s0731",
+    "s0760",
+    "s0764",
+    "s0765",
+    "s0804",
+    "s0835",
+    "s0836",
+    "s0864",
+    "s0873",
+    "s0928",
+    "s1057",
+    "s1070",
+    "s1120",
+    "s1121",
+    "s1128",
+    "s1136",
+    "s1228",
+    "s1233",
+    "s1355",
+    "s1358",
+    "s1404"
+  ],
+  "male_control_unique": [
+    "s0062",
+    "s0108",
+    "s0119",
+    "s0442",
+    "s0611",
+    "s0971",
+    "s1016",
+    "s1069",
+    "s1111",
+    "s1267",
+    "s1336",
+    "s1340"
+  ],
+  "female_decisions": {
+    "s0028": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s0030": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0089": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0139": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0157": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0190": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0196": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s0216": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s0218": [
+      "excluded",
+      "Q2 hip_right touches first/last slice"
+    ],
+    "s0350": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0381": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0440": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0472": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0571": [
+      "excluded",
+      "Q2 hip_right touches first/last slice"
+    ],
+    "s0578": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0731": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0760": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0764": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0765": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0790": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s0804": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0835": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0836": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0863": [
+      "excluded",
+      "Q2 hip_left touches first/last slice"
+    ],
+    "s0864": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0873": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0928": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0970": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice; Q2 sacrum touches first/last slice"
+    ],
+    "s1057": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1070": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1120": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1121": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1128": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1136": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1159": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s1228": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1233": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1314": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s1355": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1358": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1385": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s1401": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ],
+    "s1404": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ]
+  },
+  "male_decisions": {
+    "s0062": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0108": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0119": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0442": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0611": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s0617": [
+      "excluded",
+      "Q2 hip_left touches first/last slice"
+    ],
+    "s0903": [
+      "excluded",
+      "Q1 empty sacrum"
+    ],
+    "s0971": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1016": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1069": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1111": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1267": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1304": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice; Q2 sacrum touches first/last slice"
+    ],
+    "s1336": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1340": [
+      "included",
+      "Q1/Q2 passed; no Q4 duplicate below 1.0 mm among size-prefilter candidate pairs"
+    ],
+    "s1368": [
+      "excluded",
+      "Q2 hip_left touches first/last slice; Q2 hip_right touches first/last slice"
+    ]
+  },
+  "counts": {
+    "female_primary": 58,
+    "female_QC_Q1Q2": 31,
+    "female_unique_after_Q4": 31,
+    "male_selected": 20,
+    "male_QC_Q1Q2": 12,
+    "female_extension_needed": 0
+  },
+  "protocol_Q0_masks": 390,
+  "size_on_disk_bytes": 43212790
+}

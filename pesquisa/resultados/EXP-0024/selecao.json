@@ -1,0 +1,21 @@
+{
+  "metadata_sha256": "b9ca9a5ce9407f9caad1d039c7574cba154efe93f3a5802bc1aed2e05a732922",
+  "seed": 240024,
+  "rng": "Python random.Random (protocol specifies seed, not RNG implementation)",
+  "literal_filter_counts": {
+    "female_adult_study_slice": 200,
+    "female_no_pathology": 58,
+    "female_extension_raw_remaining": 142,
+    "female_extension_eligible_after_exclusions": 67,
+    "male_no_pathology": 77,
+    "male_selected": 20
+  },
+  "protocol_expected_counts": {
+    "female_total": 200,
+    "female_primary": 58,
+    "female_extension_raw_remaining": 142,
+    "male_control": 77
+  },
+  "pool_count_mismatch": false,
+  "filters": "gender f/m; age >=18; study_type contains pelvis/lower limb/leg/polytrauma; slice_thickness <=2; extension excludes blank/unclear pathology and pathology_location containing pelvis/bones/extremity"
+}

@@ -1,0 +1,1207 @@
+﻿group,id,metric,value,unit,status,detail
+female_pair,s0030|s0089,M1_symmetric_mean,3.7078219338845035,mm,measured,p95=9.157214373192618; convergence=True; iterations=129
+female_pair,s0030|s0089,M1_symmetric_p95,9.157214373192618,mm,measured,
+female_pair,s0030|s0157,M1_symmetric_mean,3.5597598316941768,mm,measured,p95=9.923411773554994; convergence=True; iterations=151
+female_pair,s0030|s0157,M1_symmetric_p95,9.923411773554994,mm,measured,
+female_pair,s0030|s0190,M1_symmetric_mean,3.6612677316149687,mm,measured,p95=8.858426532917958; convergence=True; iterations=122
+female_pair,s0030|s0190,M1_symmetric_p95,8.858426532917958,mm,measured,
+female_pair,s0030|s0350,M1_symmetric_mean,4.41790007805338,mm,measured,p95=12.39729695941886; convergence=True; iterations=158
+female_pair,s0030|s0350,M1_symmetric_p95,12.39729695941886,mm,measured,
+female_pair,s0030|s0381,M1_symmetric_mean,4.433415077639638,mm,measured,p95=11.249922272935338; convergence=True; iterations=137
+female_pair,s0030|s0381,M1_symmetric_p95,11.249922272935338,mm,measured,
+female_pair,s0030|s0472,M1_symmetric_mean,4.299404906626468,mm,measured,p95=11.269184095389466; convergence=True; iterations=121
+female_pair,s0030|s0472,M1_symmetric_p95,11.269184095389466,mm,measured,
+female_pair,s0030|s0578,M1_symmetric_mean,5.24709701493176,mm,measured,p95=16.487201759215647; convergence=True; iterations=181
+female_pair,s0030|s0578,M1_symmetric_p95,16.487201759215647,mm,measured,
+female_pair,s0030|s0731,M1_symmetric_mean,3.871091379956307,mm,measured,p95=10.745090046418234; convergence=False; iterations=200
+female_pair,s0030|s0731,M1_symmetric_p95,10.745090046418234,mm,measured,
+female_pair,s0030|s0765,M1_symmetric_mean,4.284087302549752,mm,measured,p95=12.011953857283032; convergence=True; iterations=199
+female_pair,s0030|s0765,M1_symmetric_p95,12.011953857283032,mm,measured,
+female_pair,s0030|s0804,M1_symmetric_mean,4.1068425308443715,mm,measured,p95=11.174780693272314; convergence=True; iterations=181
+female_pair,s0030|s0804,M1_symmetric_p95,11.174780693272314,mm,measured,
+female_pair,s0030|s0835,M1_symmetric_mean,3.712018832264452,mm,measured,p95=8.737153173154674; convergence=True; iterations=119
+female_pair,s0030|s0835,M1_symmetric_p95,8.737153173154674,mm,measured,
+female_pair,s0030|s0864,M1_symmetric_mean,4.095986316504271,mm,measured,p95=10.564992548735836; convergence=True; iterations=135
+female_pair,s0030|s0864,M1_symmetric_p95,10.564992548735836,mm,measured,
+female_pair,s0030|s0928,M1_symmetric_mean,3.9985000343381225,mm,measured,p95=9.424637900602573; convergence=True; iterations=139
+female_pair,s0030|s0928,M1_symmetric_p95,9.424637900602573,mm,measured,
+female_pair,s0030|s1057,M1_symmetric_mean,6.53909158396106,mm,measured,p95=19.292057864210392; convergence=True; iterations=100
+female_pair,s0030|s1057,M1_symmetric_p95,19.292057864210392,mm,measured,
+female_pair,s0030|s1070,M1_symmetric_mean,4.033694976288392,mm,measured,p95=10.716800636185011; convergence=False; iterations=200
+female_pair,s0030|s1070,M1_symmetric_p95,10.716800636185011,mm,measured,
+female_pair,s0030|s1120,M1_symmetric_mean,4.842116375407687,mm,measured,p95=14.922312073811687; convergence=True; iterations=114
+female_pair,s0030|s1120,M1_symmetric_p95,14.922312073811687,mm,measured,
+female_pair,s0030|s1121,M1_symmetric_mean,5.0252685014343434,mm,measured,p95=13.039103809200629; convergence=True; iterations=138
+female_pair,s0030|s1121,M1_symmetric_p95,13.039103809200629,mm,measured,
+female_pair,s0030|s1233,M1_symmetric_mean,4.495659154859664,mm,measured,p95=11.30872520817839; convergence=True; iterations=198
+female_pair,s0030|s1233,M1_symmetric_p95,11.30872520817839,mm,measured,
+female_pair,s0030|s1355,M1_symmetric_mean,6.3401792229193985,mm,measured,p95=18.994491094183786; convergence=False; iterations=200
+female_pair,s0030|s1355,M1_symmetric_p95,18.994491094183786,mm,measured,
+female_pair,s0030|s1404,M1_symmetric_mean,5.808452978421953,mm,measured,p95=16.587128471853966; convergence=False; iterations=200
+female_pair,s0030|s1404,M1_symmetric_p95,16.587128471853966,mm,measured,
+female_pair,s0089|s0157,M1_symmetric_mean,3.805910551477794,mm,measured,p95=10.45151249292669; convergence=True; iterations=164
+female_pair,s0089|s0157,M1_symmetric_p95,10.45151249292669,mm,measured,
+female_pair,s0089|s0190,M1_symmetric_mean,3.42509058219064,mm,measured,p95=8.36077663008064; convergence=True; iterations=102
+female_pair,s0089|s0190,M1_symmetric_p95,8.36077663008064,mm,measured,
+female_pair,s0089|s0350,M1_symmetric_mean,3.6123941294410753,mm,measured,p95=9.085031042918173; convergence=True; iterations=152
+female_pair,s0089|s0350,M1_symmetric_p95,9.085031042918173,mm,measured,
+female_pair,s0089|s0381,M1_symmetric_mean,3.438482689020626,mm,measured,p95=8.48364805241088; convergence=True; iterations=111
+female_pair,s0089|s0381,M1_symmetric_p95,8.48364805241088,mm,measured,
+female_pair,s0089|s0472,M1_symmetric_mean,3.5693890055375475,mm,measured,p95=8.606580929975905; convergence=False; iterations=200
+female_pair,s0089|s0472,M1_symmetric_p95,8.606580929975905,mm,measured,
+female_pair,s0089|s0578,M1_symmetric_mean,4.030818330712372,mm,measured,p95=10.729192992139863; convergence=True; iterations=131
+female_pair,s0089|s0578,M1_symmetric_p95,10.729192992139863,mm,measured,
+female_pair,s0089|s0731,M1_symmetric_mean,3.75812841125245,mm,measured,p95=9.758439897654196; convergence=True; iterations=107
+female_pair,s0089|s0731,M1_symmetric_p95,9.758439897654196,mm,measured,
+female_pair,s0089|s0765,M1_symmetric_mean,4.177870514663411,mm,measured,p95=12.336368399541634; convergence=True; iterations=128
+female_pair,s0089|s0765,M1_symmetric_p95,12.336368399541634,mm,measured,
+female_pair,s0089|s0804,M1_symmetric_mean,3.8270443226896087,mm,measured,p95=11.221445210243168; convergence=True; iterations=88
+female_pair,s0089|s0804,M1_symmetric_p95,11.221445210243168,mm,measured,
+female_pair,s0089|s0835,M1_symmetric_mean,3.5707470784269253,mm,measured,p95=9.382743811078774; convergence=True; iterations=117
+female_pair,s0089|s0835,M1_symmetric_p95,9.382743811078774,mm,measured,
+female_pair,s0089|s0864,M1_symmetric_mean,3.7004629103110327,mm,measured,p95=9.45313491416379; convergence=True; iterations=123
+female_pair,s0089|s0864,M1_symmetric_p95,9.45313491416379,mm,measured,
+female_pair,s0089|s0928,M1_symmetric_mean,3.6708164805992527,mm,measured,p95=9.185780073754017; convergence=False; iterations=200
+female_pair,s0089|s0928,M1_symmetric_p95,9.185780073754017,mm,measured,
+female_pair,s0089|s1057,M1_symmetric_mean,5.183427921296098,mm,measured,p95=16.25947472199955; convergence=True; iterations=147
+female_pair,s0089|s1057,M1_symmetric_p95,16.25947472199955,mm,measured,
+female_pair,s0089|s1070,M1_symmetric_mean,3.842671413254119,mm,measured,p95=9.950150258990764; convergence=True; iterations=102
+female_pair,s0089|s1070,M1_symmetric_p95,9.950150258990764,mm,measured,
+female_pair,s0089|s1120,M1_symmetric_mean,4.8164213645523954,mm,measured,p95=15.339707067469787; convergence=True; iterations=128
+female_pair,s0089|s1120,M1_symmetric_p95,15.339707067469787,mm,measured,
+female_pair,s0089|s1121,M1_symmetric_mean,3.6288518488873054,mm,measured,p95=11.54637252996359; convergence=True; iterations=120
+female_pair,s0089|s1121,M1_symmetric_p95,11.54637252996359,mm,measured,
+female_pair,s0089|s1233,M1_symmetric_mean,3.4853108987518957,mm,measured,p95=9.38870443295827; convergence=True; iterations=147
+female_pair,s0089|s1233,M1_symmetric_p95,9.38870443295827,mm,measured,
+female_pair,s0089|s1355,M1_symmetric_mean,4.053113942109795,mm,measured,p95=13.29032496332576; convergence=True; iterations=76
+female_pair,s0089|s1355,M1_symmetric_p95,13.29032496332576,mm,measured,
+female_pair,s0089|s1404,M1_symmetric_mean,3.991643542373307,mm,measured,p95=11.042211677131258; convergence=True; iterations=128
+female_pair,s0089|s1404,M1_symmetric_p95,11.042211677131258,mm,measured,
+female_pair,s0157|s0190,M1_symmetric_mean,3.072310359515495,mm,measured,p95=7.460577668981638; convergence=False; iterations=200
+female_pair,s0157|s0190,M1_symmetric_p95,7.460577668981638,mm,measured,
+female_pair,s0157|s0350,M1_symmetric_mean,4.147491702634698,mm,measured,p95=10.930480631724963; convergence=True; iterations=139
+female_pair,s0157|s0350,M1_symmetric_p95,10.930480631724963,mm,measured,
+female_pair,s0157|s0381,M1_symmetric_mean,3.9126087642670355,mm,measured,p95=9.835604770667034; convergence=True; iterations=167
+female_pair,s0157|s0381,M1_symmetric_p95,9.835604770667034,mm,measured,
+female_pair,s0157|s0472,M1_symmetric_mean,3.2411715660549456,mm,measured,p95=7.3937441270561735; convergence=False; iterations=200
+female_pair,s0157|s0472,M1_symmetric_p95,7.3937441270561735,mm,measured,
+female_pair,s0157|s0578,M1_symmetric_mean,4.074736529172248,mm,measured,p95=9.666594868762866; convergence=True; iterations=172
+female_pair,s0157|s0578,M1_symmetric_p95,9.666594868762866,mm,measured,
+female_pair,s0157|s0731,M1_symmetric_mean,4.130323621755476,mm,measured,p95=10.69387521486389; convergence=False; iterations=200
+female_pair,s0157|s0731,M1_symmetric_p95,10.69387521486389,mm,measured,
+female_pair,s0157|s0765,M1_symmetric_mean,2.6899443990587177,mm,measured,p95=6.131840637798145; convergence=True; iterations=127
+female_pair,s0157|s0765,M1_symmetric_p95,6.131840637798145,mm,measured,
+female_pair,s0157|s0804,M1_symmetric_mean,3.47602896090918,mm,measured,p95=9.275737028103574; convergence=False; iterations=200
+female_pair,s0157|s0804,M1_symmetric_p95,9.275737028103574,mm,measured,
+female_pair,s0157|s0835,M1_symmetric_mean,2.7651572410922163,mm,measured,p95=6.332962497933334; convergence=False; iterations=200
+female_pair,s0157|s0835,M1_symmetric_p95,6.332962497933334,mm,measured,
+female_pair,s0157|s0864,M1_symmetric_mean,3.100407305788257,mm,measured,p95=7.789428979159743; convergence=False; iterations=200
+female_pair,s0157|s0864,M1_symmetric_p95,7.789428979159743,mm,measured,
+female_pair,s0157|s0928,M1_symmetric_mean,3.1461441749529677,mm,measured,p95=7.3270832629700156; convergence=True; iterations=136
+female_pair,s0157|s0928,M1_symmetric_p95,7.3270832629700156,mm,measured,
+female_pair,s0157|s1057,M1_symmetric_mean,5.218833747027476,mm,measured,p95=14.378057835865333; convergence=True; iterations=167
+female_pair,s0157|s1057,M1_symmetric_p95,14.378057835865333,mm,measured,
+female_pair,s0157|s1070,M1_symmetric_mean,3.6626859220998544,mm,measured,p95=9.461740950921323; convergence=True; iterations=175
+female_pair,s0157|s1070,M1_symmetric_p95,9.461740950921323,mm,measured,
+female_pair,s0157|s1120,M1_symmetric_mean,3.0560374689929506,mm,measured,p95=7.2656929989222245; convergence=True; iterations=117
+female_pair,s0157|s1120,M1_symmetric_p95,7.2656929989222245,mm,measured,
+female_pair,s0157|s1121,M1_symmetric_mean,3.945859636293283,mm,measured,p95=10.605985763241083; convergence=False; iterations=200
+female_pair,s0157|s1121,M1_symmetric_p95,10.605985763241083,mm,measured,
+female_pair,s0157|s1233,M1_symmetric_mean,3.4365565810607,mm,measured,p95=8.270685804522188; convergence=True; iterations=178
+female_pair,s0157|s1233,M1_symmetric_p95,8.270685804522188,mm,measured,
+female_pair,s0157|s1355,M1_symmetric_mean,4.847232487818854,mm,measured,p95=14.540396298037265; convergence=False; iterations=200
+female_pair,s0157|s1355,M1_symmetric_p95,14.540396298037265,mm,measured,
+female_pair,s0157|s1404,M1_symmetric_mean,4.2669867892312245,mm,measured,p95=11.671552891891016; convergence=False; iterations=200
+female_pair,s0157|s1404,M1_symmetric_p95,11.671552891891016,mm,measured,
+female_pair,s0190|s0350,M1_symmetric_mean,4.013211154566346,mm,measured,p95=10.324697545467897; convergence=True; iterations=191
+female_pair,s0190|s0350,M1_symmetric_p95,10.324697545467897,mm,measured,
+female_pair,s0190|s0381,M1_symmetric_mean,3.264375614619136,mm,measured,p95=8.128412052337886; convergence=False; iterations=200
+female_pair,s0190|s0381,M1_symmetric_p95,8.128412052337886,mm,measured,
+female_pair,s0190|s0472,M1_symmetric_mean,3.095822367159151,mm,measured,p95=7.556678997187051; convergence=True; iterations=120
+female_pair,s0190|s0472,M1_symmetric_p95,7.556678997187051,mm,measured,
+female_pair,s0190|s0578,M1_symmetric_mean,3.830793434053022,mm,measured,p95=9.648378231341455; convergence=False; iterations=200
+female_pair,s0190|s0578,M1_symmetric_p95,9.648378231341455,mm,measured,
+female_pair,s0190|s0731,M1_symmetric_mean,4.052356916744718,mm,measured,p95=11.289349186900091; convergence=True; iterations=119
+female_pair,s0190|s0731,M1_symmetric_p95,11.289349186900091,mm,measured,
+female_pair,s0190|s0765,M1_symmetric_mean,3.2474332369191354,mm,measured,p95=8.63284355700262; convergence=True; iterations=160
+female_pair,s0190|s0765,M1_symmetric_p95,8.63284355700262,mm,measured,
+female_pair,s0190|s0804,M1_symmetric_mean,3.5040507589512737,mm,measured,p95=9.805290124333128; convergence=True; iterations=95
+female_pair,s0190|s0804,M1_symmetric_p95,9.805290124333128,mm,measured,
+female_pair,s0190|s0835,M1_symmetric_mean,2.994259932715495,mm,measured,p95=7.298837644640719; convergence=True; iterations=122
+female_pair,s0190|s0835,M1_symmetric_p95,7.298837644640719,mm,measured,
+female_pair,s0190|s0864,M1_symmetric_mean,2.7783041786729887,mm,measured,p95=6.854568880836254; convergence=True; iterations=115
+female_pair,s0190|s0864,M1_symmetric_p95,6.854568880836254,mm,measured,
+female_pair,s0190|s0928,M1_symmetric_mean,3.5294680074357756,mm,measured,p95=8.716832248922652; convergence=True; iterations=144
+female_pair,s0190|s0928,M1_symmetric_p95,8.716832248922652,mm,measured,
+female_pair,s0190|s1057,M1_symmetric_mean,4.90095336717354,mm,measured,p95=13.95671276907333; convergence=True; iterations=124
+female_pair,s0190|s1057,M1_symmetric_p95,13.95671276907333,mm,measured,
+female_pair,s0190|s1070,M1_symmetric_mean,4.209982979995613,mm,measured,p95=12.377960571511634; convergence=True; iterations=186
+female_pair,s0190|s1070,M1_symmetric_p95,12.377960571511634,mm,measured,
+female_pair,s0190|s1120,M1_symmetric_mean,3.921854831002498,mm,measured,p95=10.391321195937255; convergence=True; iterations=152
+female_pair,s0190|s1120,M1_symmetric_p95,10.391321195937255,mm,measured,
+female_pair,s0190|s1121,M1_symmetric_mean,3.8548766824433733,mm,measured,p95=10.991689163647585; convergence=False; iterations=200
+female_pair,s0190|s1121,M1_symmetric_p95,10.991689163647585,mm,measured,
+female_pair,s0190|s1233,M1_symmetric_mean,2.801747098283026,mm,measured,p95=6.775118648719064; convergence=True; iterations=97
+female_pair,s0190|s1233,M1_symmetric_p95,6.775118648719064,mm,measured,
+female_pair,s0190|s1355,M1_symmetric_mean,4.1069330021440456,mm,measured,p95=11.255827738095808; convergence=True; iterations=198
+female_pair,s0190|s1355,M1_symmetric_p95,11.255827738095808,mm,measured,
+female_pair,s0190|s1404,M1_symmetric_mean,3.6282148638916563,mm,measured,p95=9.210402114096329; convergence=True; iterations=116
+female_pair,s0190|s1404,M1_symmetric_p95,9.210402114096329,mm,measured,
+female_pair,s0350|s0381,M1_symmetric_mean,4.424155022610409,mm,measured,p95=12.155072322153336; convergence=True; iterations=136
+female_pair,s0350|s0381,M1_symmetric_p95,12.155072322153336,mm,measured,
+female_pair,s0350|s0472,M1_symmetric_mean,3.2603151124104826,mm,measured,p95=7.208556882371642; convergence=False; iterations=200
+female_pair,s0350|s0472,M1_symmetric_p95,7.208556882371642,mm,measured,
+female_pair,s0350|s0578,M1_symmetric_mean,3.6141676383760313,mm,measured,p95=8.649474336536228; convergence=True; iterations=198
+female_pair,s0350|s0578,M1_symmetric_p95,8.649474336536228,mm,measured,
+female_pair,s0350|s0731,M1_symmetric_mean,4.891274895372048,mm,measured,p95=12.62448999727917; convergence=True; iterations=104
+female_pair,s0350|s0731,M1_symmetric_p95,12.62448999727917,mm,measured,
+female_pair,s0350|s0765,M1_symmetric_mean,3.9100562778275916,mm,measured,p95=9.973375859106367; convergence=False; iterations=200
+female_pair,s0350|s0765,M1_symmetric_p95,9.973375859106367,mm,measured,
+female_pair,s0350|s0804,M1_symmetric_mean,4.242192288506884,mm,measured,p95=12.071208428402134; convergence=True; iterations=136
+female_pair,s0350|s0804,M1_symmetric_p95,12.071208428402134,mm,measured,
+female_pair,s0350|s0835,M1_symmetric_mean,3.8130260889877956,mm,measured,p95=9.699943202516007; convergence=True; iterations=124
+female_pair,s0350|s0835,M1_symmetric_p95,9.699943202516007,mm,measured,
+female_pair,s0350|s0864,M1_symmetric_mean,4.327693453255998,mm,measured,p95=11.941517335356806; convergence=False; iterations=200
+female_pair,s0350|s0864,M1_symmetric_p95,11.941517335356806,mm,measured,
+female_pair,s0350|s0928,M1_symmetric_mean,4.381223008926205,mm,measured,p95=11.67453050865788; convergence=True; iterations=140
+female_pair,s0350|s0928,M1_symmetric_p95,11.67453050865788,mm,measured,
+female_pair,s0350|s1057,M1_symmetric_mean,4.0763823720034456,mm,measured,p95=11.741638467508507; convergence=True; iterations=89
+female_pair,s0350|s1057,M1_symmetric_p95,11.741638467508507,mm,measured,
+female_pair,s0350|s1070,M1_symmetric_mean,3.689828425778483,mm,measured,p95=9.868277221687594; convergence=False; iterations=200
+female_pair,s0350|s1070,M1_symmetric_p95,9.868277221687594,mm,measured,
+female_pair,s0350|s1120,M1_symmetric_mean,4.470636605851756,mm,measured,p95=12.650259588453425; convergence=True; iterations=152
+female_pair,s0350|s1120,M1_symmetric_p95,12.650259588453425,mm,measured,
+female_pair,s0350|s1121,M1_symmetric_mean,3.3983901318631426,mm,measured,p95=9.162801456095973; convergence=True; iterations=117
+female_pair,s0350|s1121,M1_symmetric_p95,9.162801456095973,mm,measured,
+female_pair,s0350|s1233,M1_symmetric_mean,3.420378470098386,mm,measured,p95=8.631449311152075; convergence=True; iterations=88
+female_pair,s0350|s1233,M1_symmetric_p95,8.631449311152075,mm,measured,
+female_pair,s0350|s1355,M1_symmetric_mean,4.166500912357348,mm,measured,p95=10.906829593008771; convergence=True; iterations=111
+female_pair,s0350|s1355,M1_symmetric_p95,10.906829593008771,mm,measured,
+female_pair,s0350|s1404,M1_symmetric_mean,3.827834141419035,mm,measured,p95=9.55164222138457; convergence=True; iterations=185
+female_pair,s0350|s1404,M1_symmetric_p95,9.55164222138457,mm,measured,
+female_pair,s0381|s0472,M1_symmetric_mean,3.695732860037581,mm,measured,p95=9.452677166993553; convergence=True; iterations=141
+female_pair,s0381|s0472,M1_symmetric_p95,9.452677166993553,mm,measured,
+female_pair,s0381|s0578,M1_symmetric_mean,4.189480227860716,mm,measured,p95=12.260526232531761; convergence=True; iterations=158
+female_pair,s0381|s0578,M1_symmetric_p95,12.260526232531761,mm,measured,
+female_pair,s0381|s0731,M1_symmetric_mean,3.198261684562737,mm,measured,p95=7.901710753589987; convergence=False; iterations=200
+female_pair,s0381|s0731,M1_symmetric_p95,7.901710753589987,mm,measured,
+female_pair,s0381|s0765,M1_symmetric_mean,3.951996102903073,mm,measured,p95=10.81764132955035; convergence=True; iterations=158
+female_pair,s0381|s0765,M1_symmetric_p95,10.81764132955035,mm,measured,
+female_pair,s0381|s0804,M1_symmetric_mean,3.0595516303418195,mm,measured,p95=7.759561313362954; convergence=True; iterations=84
+female_pair,s0381|s0804,M1_symmetric_p95,7.759561313362954,mm,measured,
+female_pair,s0381|s0835,M1_symmetric_mean,3.270354251134771,mm,measured,p95=7.935293201631129; convergence=True; iterations=123
+female_pair,s0381|s0835,M1_symmetric_p95,7.935293201631129,mm,measured,
+female_pair,s0381|s0864,M1_symmetric_mean,2.88075106000312,mm,measured,p95=6.9174036052565695; convergence=True; iterations=127
+female_pair,s0381|s0864,M1_symmetric_p95,6.9174036052565695,mm,measured,
+female_pair,s0381|s0928,M1_symmetric_mean,3.447515434515319,mm,measured,p95=7.952350017937752; convergence=False; iterations=200
+female_pair,s0381|s0928,M1_symmetric_p95,7.952350017937752,mm,measured,
+female_pair,s0381|s1057,M1_symmetric_mean,5.406261810559739,mm,measured,p95=14.937491399740043; convergence=True; iterations=89
+female_pair,s0381|s1057,M1_symmetric_p95,14.937491399740043,mm,measured,
+female_pair,s0381|s1070,M1_symmetric_mean,4.211186733181626,mm,measured,p95=11.762922853419575; convergence=True; iterations=163
+female_pair,s0381|s1070,M1_symmetric_p95,11.762922853419575,mm,measured,
+female_pair,s0381|s1120,M1_symmetric_mean,4.224282136150726,mm,measured,p95=11.372125514272707; convergence=False; iterations=200
+female_pair,s0381|s1120,M1_symmetric_p95,11.372125514272707,mm,measured,
+female_pair,s0381|s1121,M1_symmetric_mean,4.3346207824818626,mm,measured,p95=12.917906726934035; convergence=False; iterations=200
+female_pair,s0381|s1121,M1_symmetric_p95,12.917906726934035,mm,measured,
+female_pair,s0381|s1233,M1_symmetric_mean,3.2337197433097,mm,measured,p95=8.138991867643602; convergence=True; iterations=142
+female_pair,s0381|s1233,M1_symmetric_p95,8.138991867643602,mm,measured,
+female_pair,s0381|s1355,M1_symmetric_mean,4.268993824263327,mm,measured,p95=11.628335512057367; convergence=True; iterations=122
+female_pair,s0381|s1355,M1_symmetric_p95,11.628335512057367,mm,measured,
+female_pair,s0381|s1404,M1_symmetric_mean,3.9415944170718964,mm,measured,p95=10.187888705692373; convergence=True; iterations=103
+female_pair,s0381|s1404,M1_symmetric_p95,10.187888705692373,mm,measured,
+female_pair,s0472|s0578,M1_symmetric_mean,3.152813882869456,mm,measured,p95=7.381482159865265; convergence=False; iterations=200
+female_pair,s0472|s0578,M1_symmetric_p95,7.381482159865265,mm,measured,
+female_pair,s0472|s0731,M1_symmetric_mean,4.63445391587453,mm,measured,p95=13.221637033695323; convergence=True; iterations=117
+female_pair,s0472|s0731,M1_symmetric_p95,13.221637033695323,mm,measured,
+female_pair,s0472|s0765,M1_symmetric_mean,3.143241917502189,mm,measured,p95=8.838441400517699; convergence=True; iterations=193
+female_pair,s0472|s0765,M1_symmetric_p95,8.838441400517699,mm,measured,
+female_pair,s0472|s0804,M1_symmetric_mean,3.9639101744871246,mm,measured,p95=11.311498035126053; convergence=True; iterations=95
+female_pair,s0472|s0804,M1_symmetric_p95,11.311498035126053,mm,measured,
+female_pair,s0472|s0835,M1_symmetric_mean,3.177869538494927,mm,measured,p95=7.757635254048258; convergence=True; iterations=90
+female_pair,s0472|s0835,M1_symmetric_p95,7.757635254048258,mm,measured,
+female_pair,s0472|s0864,M1_symmetric_mean,3.3459408739701106,mm,measured,p95=8.959221426293857; convergence=True; iterations=148
+female_pair,s0472|s0864,M1_symmetric_p95,8.959221426293857,mm,measured,
+female_pair,s0472|s0928,M1_symmetric_mean,3.610875188210237,mm,measured,p95=8.382947840064322; convergence=True; iterations=151
+female_pair,s0472|s0928,M1_symmetric_p95,8.382947840064322,mm,measured,
+female_pair,s0472|s1057,M1_symmetric_mean,3.8756905963911996,mm,measured,p95=10.379346121932427; convergence=True; iterations=79
+female_pair,s0472|s1057,M1_symmetric_p95,10.379346121932427,mm,measured,
+female_pair,s0472|s1070,M1_symmetric_mean,3.6770380899262487,mm,measured,p95=8.768363257277427; convergence=False; iterations=200
+female_pair,s0472|s1070,M1_symmetric_p95,8.768363257277427,mm,measured,
+female_pair,s0472|s1120,M1_symmetric_mean,4.027526115910622,mm,measured,p95=10.666756399712549; convergence=True; iterations=92
+female_pair,s0472|s1120,M1_symmetric_p95,10.666756399712549,mm,measured,
+female_pair,s0472|s1121,M1_symmetric_mean,3.563860766956446,mm,measured,p95=9.370823720781392; convergence=False; iterations=200
+female_pair,s0472|s1121,M1_symmetric_p95,9.370823720781392,mm,measured,
+female_pair,s0472|s1233,M1_symmetric_mean,3.028655905597397,mm,measured,p95=7.381819533432005; convergence=True; iterations=101
+female_pair,s0472|s1233,M1_symmetric_p95,7.381819533432005,mm,measured,
+female_pair,s0472|s1355,M1_symmetric_mean,3.320603969316733,mm,measured,p95=8.09172867237075; convergence=True; iterations=95
+female_pair,s0472|s1355,M1_symmetric_p95,8.09172867237075,mm,measured,
+female_pair,s0472|s1404,M1_symmetric_mean,2.8491950610426113,mm,measured,p95=6.5533704914114965; convergence=True; iterations=110
+female_pair,s0472|s1404,M1_symmetric_p95,6.5533704914114965,mm,measured,
+female_pair,s0578|s0731,M1_symmetric_mean,5.238907646676673,mm,measured,p95=14.972868186859937; convergence=True; iterations=125
+female_pair,s0578|s0731,M1_symmetric_p95,14.972868186859937,mm,measured,
+female_pair,s0578|s0765,M1_symmetric_mean,4.170470893062597,mm,measured,p95=12.016983849039244; convergence=True; iterations=187
+female_pair,s0578|s0765,M1_symmetric_p95,12.016983849039244,mm,measured,
+female_pair,s0578|s0804,M1_symmetric_mean,4.066159853346093,mm,measured,p95=11.315384925301222; convergence=True; iterations=116
+female_pair,s0578|s0804,M1_symmetric_p95,11.315384925301222,mm,measured,
+female_pair,s0578|s0835,M1_symmetric_mean,3.964914231206217,mm,measured,p95=10.648605548564035; convergence=True; iterations=131
+female_pair,s0578|s0835,M1_symmetric_p95,10.648605548564035,mm,measured,
+female_pair,s0578|s0864,M1_symmetric_mean,3.754810998287561,mm,measured,p95=9.858469882361913; convergence=True; iterations=108
+female_pair,s0578|s0864,M1_symmetric_p95,9.858469882361913,mm,measured,
+female_pair,s0578|s0928,M1_symmetric_mean,4.456793456017331,mm,measured,p95=11.191995911783355; convergence=True; iterations=157
+female_pair,s0578|s0928,M1_symmetric_p95,11.191995911783355,mm,measured,
+female_pair,s0578|s1057,M1_symmetric_mean,4.18752907742445,mm,measured,p95=11.870399661214222; convergence=True; iterations=112
+female_pair,s0578|s1057,M1_symmetric_p95,11.870399661214222,mm,measured,
+female_pair,s0578|s1070,M1_symmetric_mean,3.594824761149295,mm,measured,p95=8.661009455622478; convergence=False; iterations=200
+female_pair,s0578|s1070,M1_symmetric_p95,8.661009455622478,mm,measured,
+female_pair,s0578|s1120,M1_symmetric_mean,4.357937240095043,mm,measured,p95=12.028497210732603; convergence=True; iterations=166
+female_pair,s0578|s1120,M1_symmetric_p95,12.028497210732603,mm,measured,
+female_pair,s0578|s1121,M1_symmetric_mean,3.351770143159699,mm,measured,p95=8.676497482252891; convergence=True; iterations=135
+female_pair,s0578|s1121,M1_symmetric_p95,8.676497482252891,mm,measured,
+female_pair,s0578|s1233,M1_symmetric_mean,3.201966813333804,mm,measured,p95=8.288431107944952; convergence=True; iterations=89
+female_pair,s0578|s1233,M1_symmetric_p95,8.288431107944952,mm,measured,
+female_pair,s0578|s1355,M1_symmetric_mean,3.27878033010144,mm,measured,p95=8.251628347720219; convergence=False; iterations=200
+female_pair,s0578|s1355,M1_symmetric_p95,8.251628347720219,mm,measured,
+female_pair,s0578|s1404,M1_symmetric_mean,3.236562610577364,mm,measured,p95=7.951660441380879; convergence=True; iterations=127
+female_pair,s0578|s1404,M1_symmetric_p95,7.951660441380879,mm,measured,
+female_pair,s0731|s0765,M1_symmetric_mean,4.579764910112353,mm,measured,p95=12.411981413235894; convergence=False; iterations=200
+female_pair,s0731|s0765,M1_symmetric_p95,12.411981413235894,mm,measured,
+female_pair,s0731|s0804,M1_symmetric_mean,3.2441804621011014,mm,measured,p95=8.651908615086887; convergence=True; iterations=153
+female_pair,s0731|s0804,M1_symmetric_p95,8.651908615086887,mm,measured,
+female_pair,s0731|s0835,M1_symmetric_mean,4.012682927724422,mm,measured,p95=10.432514990180607; convergence=True; iterations=125
+female_pair,s0731|s0835,M1_symmetric_p95,10.432514990180607,mm,measured,
+female_pair,s0731|s0864,M1_symmetric_mean,3.578296784657758,mm,measured,p95=9.451563198406808; convergence=True; iterations=88
+female_pair,s0731|s0864,M1_symmetric_p95,9.451563198406808,mm,measured,
+female_pair,s0731|s0928,M1_symmetric_mean,3.6996606566652104,mm,measured,p95=9.554239411868439; convergence=True; iterations=97
+female_pair,s0731|s0928,M1_symmetric_p95,9.554239411868439,mm,measured,
+female_pair,s0731|s1057,M1_symmetric_mean,8.611215046280568,mm,measured,p95=37.00736541847956; convergence=True; iterations=99
+female_pair,s0731|s1057,M1_symmetric_p95,37.00736541847956,mm,measured,
+female_pair,s0731|s1070,M1_symmetric_mean,4.516929095343963,mm,measured,p95=13.209727310295964; convergence=True; iterations=164
+female_pair,s0731|s1070,M1_symmetric_p95,13.209727310295964,mm,measured,
+female_pair,s0731|s1120,M1_symmetric_mean,4.981966967648488,mm,measured,p95=13.001374067498057; convergence=False; iterations=200
+female_pair,s0731|s1120,M1_symmetric_p95,13.001374067498057,mm,measured,
+female_pair,s0731|s1121,M1_symmetric_mean,4.934884613239978,mm,measured,p95=14.02160573664262; convergence=True; iterations=116
+female_pair,s0731|s1121,M1_symmetric_p95,14.02160573664262,mm,measured,
+female_pair,s0731|s1233,M1_symmetric_mean,4.261687497031472,mm,measured,p95=11.26870590007021; convergence=True; iterations=154
+female_pair,s0731|s1233,M1_symmetric_p95,11.26870590007021,mm,measured,
+female_pair,s0731|s1355,M1_symmetric_mean,5.434956807299721,mm,measured,p95=15.02819328350997; convergence=False; iterations=200
+female_pair,s0731|s1355,M1_symmetric_p95,15.02819328350997,mm,measured,
+female_pair,s0731|s1404,M1_symmetric_mean,5.350450163005598,mm,measured,p95=15.318935464173746; convergence=True; iterations=132
+female_pair,s0731|s1404,M1_symmetric_p95,15.318935464173746,mm,measured,
+female_pair,s0765|s0804,M1_symmetric_mean,3.9311644548828566,mm,measured,p95=10.501833592018075; convergence=False; iterations=200
+female_pair,s0765|s0804,M1_symmetric_p95,10.501833592018075,mm,measured,
+female_pair,s0765|s0835,M1_symmetric_mean,3.077854598764963,mm,measured,p95=7.157298709743137; convergence=True; iterations=133
+female_pair,s0765|s0835,M1_symmetric_p95,7.157298709743137,mm,measured,
+female_pair,s0765|s0864,M1_symmetric_mean,3.2174078093146004,mm,measured,p95=8.009440674289191; convergence=False; iterations=200
+female_pair,s0765|s0864,M1_symmetric_p95,8.009440674289191,mm,measured,
+female_pair,s0765|s0928,M1_symmetric_mean,3.8116271308769964,mm,measured,p95=9.443172289602085; convergence=True; iterations=151
+female_pair,s0765|s0928,M1_symmetric_p95,9.443172289602085,mm,measured,
+female_pair,s0765|s1057,M1_symmetric_mean,5.35149660422007,mm,measured,p95=14.468467278551161; convergence=True; iterations=93
+female_pair,s0765|s1057,M1_symmetric_p95,14.468467278551161,mm,measured,
+female_pair,s0765|s1070,M1_symmetric_mean,4.16367055626287,mm,measured,p95=12.176292935364007; convergence=True; iterations=143
+female_pair,s0765|s1070,M1_symmetric_p95,12.176292935364007,mm,measured,
+female_pair,s0765|s1120,M1_symmetric_mean,3.438236016282097,mm,measured,p95=8.077846362193448; convergence=True; iterations=145
+female_pair,s0765|s1120,M1_symmetric_p95,8.077846362193448,mm,measured,
+female_pair,s0765|s1121,M1_symmetric_mean,3.96155474865591,mm,measured,p95=10.69152890726148; convergence=False; iterations=200
+female_pair,s0765|s1121,M1_symmetric_p95,10.69152890726148,mm,measured,
+female_pair,s0765|s1233,M1_symmetric_mean,3.7889417003427948,mm,measured,p95=9.966499420551099; convergence=False; iterations=200
+female_pair,s0765|s1233,M1_symmetric_p95,9.966499420551099,mm,measured,
+female_pair,s0765|s1355,M1_symmetric_mean,4.549423991630788,mm,measured,p95=12.39609152005012; convergence=False; iterations=200
+female_pair,s0765|s1355,M1_symmetric_p95,12.39609152005012,mm,measured,
+female_pair,s0765|s1404,M1_symmetric_mean,4.706664556589333,mm,measured,p95=14.405492927236542; convergence=True; iterations=114
+female_pair,s0765|s1404,M1_symmetric_p95,14.405492927236542,mm,measured,
+female_pair,s0804|s0835,M1_symmetric_mean,3.08353547581882,mm,measured,p95=7.726016651202704; convergence=True; iterations=190
+female_pair,s0804|s0835,M1_symmetric_p95,7.726016651202704,mm,measured,
+female_pair,s0804|s0864,M1_symmetric_mean,2.80263107709421,mm,measured,p95=6.219917826908228; convergence=True; iterations=93
+female_pair,s0804|s0864,M1_symmetric_p95,6.219917826908228,mm,measured,
+female_pair,s0804|s0928,M1_symmetric_mean,3.404798546904592,mm,measured,p95=8.102368845310842; convergence=False; iterations=200
+female_pair,s0804|s0928,M1_symmetric_p95,8.102368845310842,mm,measured,
+female_pair,s0804|s1057,M1_symmetric_mean,5.408672824209736,mm,measured,p95=15.583114309190098; convergence=True; iterations=67
+female_pair,s0804|s1057,M1_symmetric_p95,15.583114309190098,mm,measured,
+female_pair,s0804|s1070,M1_symmetric_mean,3.361879620103926,mm,measured,p95=8.518451657482135; convergence=True; iterations=169
+female_pair,s0804|s1070,M1_symmetric_p95,8.518451657482135,mm,measured,
+female_pair,s0804|s1120,M1_symmetric_mean,3.47677200771589,mm,measured,p95=8.717143260495675; convergence=True; iterations=108
+female_pair,s0804|s1120,M1_symmetric_p95,8.717143260495675,mm,measured,
+female_pair,s0804|s1121,M1_symmetric_mean,3.6215980031667523,mm,measured,p95=9.755185305086144; convergence=True; iterations=136
+female_pair,s0804|s1121,M1_symmetric_p95,9.755185305086144,mm,measured,
+female_pair,s0804|s1233,M1_symmetric_mean,3.3261950795288984,mm,measured,p95=7.830594338654246; convergence=True; iterations=170
+female_pair,s0804|s1233,M1_symmetric_p95,7.830594338654246,mm,measured,
+female_pair,s0804|s1355,M1_symmetric_mean,4.253312172705407,mm,measured,p95=11.55878933002846; convergence=True; iterations=123
+female_pair,s0804|s1355,M1_symmetric_p95,11.55878933002846,mm,measured,
+female_pair,s0804|s1404,M1_symmetric_mean,4.122729694624215,mm,measured,p95=11.321466162466121; convergence=True; iterations=105
+female_pair,s0804|s1404,M1_symmetric_p95,11.321466162466121,mm,measured,
+female_pair,s0835|s0864,M1_symmetric_mean,2.7657389722487866,mm,measured,p95=6.578946992601242; convergence=False; iterations=200
+female_pair,s0835|s0864,M1_symmetric_p95,6.578946992601242,mm,measured,
+female_pair,s0835|s0928,M1_symmetric_mean,3.0432485783487735,mm,measured,p95=6.706755248657631; convergence=True; iterations=138
+female_pair,s0835|s0928,M1_symmetric_p95,6.706755248657631,mm,measured,
+female_pair,s0835|s1057,M1_symmetric_mean,4.823533473149959,mm,measured,p95=13.27823221270993; convergence=True; iterations=81
+female_pair,s0835|s1057,M1_symmetric_p95,13.27823221270993,mm,measured,
+female_pair,s0835|s1070,M1_symmetric_mean,3.2703309344379896,mm,measured,p95=8.393217152786304; convergence=True; iterations=192
+female_pair,s0835|s1070,M1_symmetric_p95,8.393217152786304,mm,measured,
+female_pair,s0835|s1120,M1_symmetric_mean,3.020130756826637,mm,measured,p95=7.764843579179433; convergence=True; iterations=97
+female_pair,s0835|s1120,M1_symmetric_p95,7.764843579179433,mm,measured,
+female_pair,s0835|s1121,M1_symmetric_mean,3.49316072664841,mm,measured,p95=9.701200370070021; convergence=True; iterations=133
+female_pair,s0835|s1121,M1_symmetric_p95,9.701200370070021,mm,measured,
+female_pair,s0835|s1233,M1_symmetric_mean,3.0417411145535365,mm,measured,p95=6.712588479874241; convergence=True; iterations=179
+female_pair,s0835|s1233,M1_symmetric_p95,6.712588479874241,mm,measured,
+female_pair,s0835|s1355,M1_symmetric_mean,3.7790704131079433,mm,measured,p95=9.341069464626095; convergence=True; iterations=103
+female_pair,s0835|s1355,M1_symmetric_p95,9.341069464626095,mm,measured,
+female_pair,s0835|s1404,M1_symmetric_mean,3.7601453496868924,mm,measured,p95=10.069852256755931; convergence=True; iterations=135
+female_pair,s0835|s1404,M1_symmetric_p95,10.069852256755931,mm,measured,
+female_pair,s0864|s0928,M1_symmetric_mean,3.183668626315905,mm,measured,p95=7.5881475951772925; convergence=True; iterations=122
+female_pair,s0864|s0928,M1_symmetric_p95,7.5881475951772925,mm,measured,
+female_pair,s0864|s1057,M1_symmetric_mean,5.4315771372441235,mm,measured,p95=15.227729521036554; convergence=True; iterations=115
+female_pair,s0864|s1057,M1_symmetric_p95,15.227729521036554,mm,measured,
+female_pair,s0864|s1070,M1_symmetric_mean,4.045261655895944,mm,measured,p95=12.095105908931432; convergence=False; iterations=200
+female_pair,s0864|s1070,M1_symmetric_p95,12.095105908931432,mm,measured,
+female_pair,s0864|s1120,M1_symmetric_mean,3.5434842081866917,mm,measured,p95=8.853825604373363; convergence=True; iterations=170
+female_pair,s0864|s1120,M1_symmetric_p95,8.853825604373363,mm,measured,
+female_pair,s0864|s1121,M1_symmetric_mean,3.886171926040119,mm,measured,p95=10.510265840305507; convergence=True; iterations=172
+female_pair,s0864|s1121,M1_symmetric_p95,10.510265840305507,mm,measured,
+female_pair,s0864|s1233,M1_symmetric_mean,3.1047258903388526,mm,measured,p95=7.33569671619371; convergence=True; iterations=159
+female_pair,s0864|s1233,M1_symmetric_p95,7.33569671619371,mm,measured,
+female_pair,s0864|s1355,M1_symmetric_mean,3.8054523938491607,mm,measured,p95=9.757059276717346; convergence=True; iterations=182
+female_pair,s0864|s1355,M1_symmetric_p95,9.757059276717346,mm,measured,
+female_pair,s0864|s1404,M1_symmetric_mean,3.50286957377629,mm,measured,p95=8.851260388312625; convergence=True; iterations=77
+female_pair,s0864|s1404,M1_symmetric_p95,8.851260388312625,mm,measured,
+female_pair,s0928|s1057,M1_symmetric_mean,5.280592404893419,mm,measured,p95=14.812080296585286; convergence=True; iterations=69
+female_pair,s0928|s1057,M1_symmetric_p95,14.812080296585286,mm,measured,
+female_pair,s0928|s1070,M1_symmetric_mean,3.911485540486125,mm,measured,p95=12.106731002478144; convergence=True; iterations=195
+female_pair,s0928|s1070,M1_symmetric_p95,12.106731002478144,mm,measured,
+female_pair,s0928|s1120,M1_symmetric_mean,3.786189922118248,mm,measured,p95=10.414418481133303; convergence=True; iterations=90
+female_pair,s0928|s1120,M1_symmetric_p95,10.414418481133303,mm,measured,
+female_pair,s0928|s1121,M1_symmetric_mean,4.197686993567049,mm,measured,p95=11.533773305433845; convergence=True; iterations=182
+female_pair,s0928|s1121,M1_symmetric_p95,11.533773305433845,mm,measured,
+female_pair,s0928|s1233,M1_symmetric_mean,3.4836531347317874,mm,measured,p95=7.505044928131789; convergence=True; iterations=148
+female_pair,s0928|s1233,M1_symmetric_p95,7.505044928131789,mm,measured,
+female_pair,s0928|s1355,M1_symmetric_mean,4.375310913349628,mm,measured,p95=11.363936240692338; convergence=True; iterations=199
+female_pair,s0928|s1355,M1_symmetric_p95,11.363936240692338,mm,measured,
+female_pair,s0928|s1404,M1_symmetric_mean,4.305082568034739,mm,measured,p95=12.228344640754566; convergence=True; iterations=132
+female_pair,s0928|s1404,M1_symmetric_p95,12.228344640754566,mm,measured,
+female_pair,s1057|s1070,M1_symmetric_mean,4.527806569498418,mm,measured,p95=13.638820424078936; convergence=True; iterations=148
+female_pair,s1057|s1070,M1_symmetric_p95,13.638820424078936,mm,measured,
+female_pair,s1057|s1120,M1_symmetric_mean,4.547392982917276,mm,measured,p95=13.648255617335812; convergence=True; iterations=141
+female_pair,s1057|s1120,M1_symmetric_p95,13.648255617335812,mm,measured,
+female_pair,s1057|s1121,M1_symmetric_mean,3.5134831424710793,mm,measured,p95=9.269563597216118; convergence=False; iterations=200
+female_pair,s1057|s1121,M1_symmetric_p95,9.269563597216118,mm,measured,
+female_pair,s1057|s1233,M1_symmetric_mean,3.502655187323696,mm,measured,p95=10.576081491219492; convergence=True; iterations=86
+female_pair,s1057|s1233,M1_symmetric_p95,10.576081491219492,mm,measured,
+female_pair,s1057|s1355,M1_symmetric_mean,3.572142854211952,mm,measured,p95=9.366583890035603; convergence=True; iterations=141
+female_pair,s1057|s1355,M1_symmetric_p95,9.366583890035603,mm,measured,
+female_pair,s1057|s1404,M1_symmetric_mean,3.788584777622136,mm,measured,p95=9.551059097479252; convergence=True; iterations=125
+female_pair,s1057|s1404,M1_symmetric_p95,9.551059097479252,mm,measured,
+female_pair,s1070|s1120,M1_symmetric_mean,3.615434020066934,mm,measured,p95=9.311112135616266; convergence=True; iterations=112
+female_pair,s1070|s1120,M1_symmetric_p95,9.311112135616266,mm,measured,
+female_pair,s1070|s1121,M1_symmetric_mean,3.638962081931278,mm,measured,p95=9.618205128594386; convergence=True; iterations=128
+female_pair,s1070|s1121,M1_symmetric_p95,9.618205128594386,mm,measured,
+female_pair,s1070|s1233,M1_symmetric_mean,3.4205701217972058,mm,measured,p95=8.08786816373899; convergence=True; iterations=149
+female_pair,s1070|s1233,M1_symmetric_p95,8.08786816373899,mm,measured,
+female_pair,s1070|s1355,M1_symmetric_mean,3.9490102093261075,mm,measured,p95=9.682306990753993; convergence=True; iterations=93
+female_pair,s1070|s1355,M1_symmetric_p95,9.682306990753993,mm,measured,
+female_pair,s1070|s1404,M1_symmetric_mean,4.220816579821477,mm,measured,p95=10.681524101653212; convergence=True; iterations=91
+female_pair,s1070|s1404,M1_symmetric_p95,10.681524101653212,mm,measured,
+female_pair,s1120|s1121,M1_symmetric_mean,4.067642918761486,mm,measured,p95=11.225806366641404; convergence=False; iterations=200
+female_pair,s1120|s1121,M1_symmetric_p95,11.225806366641404,mm,measured,
+female_pair,s1120|s1233,M1_symmetric_mean,3.391280996077049,mm,measured,p95=9.448318041911993; convergence=True; iterations=164
+female_pair,s1120|s1233,M1_symmetric_p95,9.448318041911993,mm,measured,
+female_pair,s1120|s1355,M1_symmetric_mean,4.691166619791768,mm,measured,p95=13.287153021344883; convergence=True; iterations=124
+female_pair,s1120|s1355,M1_symmetric_p95,13.287153021344883,mm,measured,
+female_pair,s1120|s1404,M1_symmetric_mean,4.6603471172342195,mm,measured,p95=12.502051814017586; convergence=True; iterations=180
+female_pair,s1120|s1404,M1_symmetric_p95,12.502051814017586,mm,measured,
+female_pair,s1121|s1233,M1_symmetric_mean,3.5224014936505266,mm,measured,p95=8.633753220536846; convergence=False; iterations=200
+female_pair,s1121|s1233,M1_symmetric_p95,8.633753220536846,mm,measured,
+female_pair,s1121|s1355,M1_symmetric_mean,2.9464369251272626,mm,measured,p95=7.204097299390623; convergence=True; iterations=174
+female_pair,s1121|s1355,M1_symmetric_p95,7.204097299390623,mm,measured,
+female_pair,s1121|s1404,M1_symmetric_mean,3.2735245670719038,mm,measured,p95=7.995825189736568; convergence=True; iterations=187
+female_pair,s1121|s1404,M1_symmetric_p95,7.995825189736568,mm,measured,
+female_pair,s1233|s1355,M1_symmetric_mean,3.2746567223980616,mm,measured,p95=8.20283192372135; convergence=True; iterations=86
+female_pair,s1233|s1355,M1_symmetric_p95,8.20283192372135,mm,measured,
+female_pair,s1233|s1404,M1_symmetric_mean,3.2210379731971397,mm,measured,p95=7.698921251308013; convergence=True; iterations=117
+female_pair,s1233|s1404,M1_symmetric_p95,7.698921251308013,mm,measured,
+female_pair,s1355|s1404,M1_symmetric_mean,2.900673551066409,mm,measured,p95=6.5140591873815525; convergence=True; iterations=141
+female_pair,s1355|s1404,M1_symmetric_p95,6.5140591873815525,mm,measured,
+female_val,s0030,M1_LOO_mean,4.523982788209734,mm,measured,
+female_val,s0030,M1_LOO_p95,12.343094257185772,mm,measured,
+female_val,s0089,M1_LOO_mean,3.8648208935716077,mm,measured,
+female_val,s0089,M1_LOO_p95,10.651440723595964,mm,measured,
+female_val,s0157,M1_LOO_mean,3.6778093820448783,mm,measured,
+female_val,s0157,M1_LOO_p95,9.470348324895173,mm,measured,
+female_val,s0190,M1_LOO_mean,3.594665355004595,mm,measured,
+female_val,s0190,M1_LOO_p95,9.394735075101549,mm,measured,
+female_val,s0350,M1_LOO_mean,4.005252595517026,mm,measured,
+female_val,s0350,M1_LOO_p95,10.56242864556002,mm,measured,
+female_val,s0381,M1_LOO_mean,3.839366993326744,mm,measured,
+female_val,s0381,M1_LOO_p95,10.089774283555911,mm,measured,
+female_val,s0472,M1_LOO_mean,3.5266755907188005,mm,measured,
+female_val,s0472,M1_LOO_p95,8.927624677275132,mm,measured,
+female_val,s0578,M1_LOO_mean,3.9500667556206586,mm,measured,
+female_val,s0578,M1_LOO_p95,10.527764129558552,mm,measured,
+female_val,s0731,M1_LOO_mean,4.549073720165279,mm,measured,
+female_val,s0731,M1_LOO_p95,13.028278756335478,mm,measured,
+female_val,s0765,M1_LOO_mean,3.907645386121105,mm,measured,
+female_val,s0765,M1_LOO_p95,10.523269745996766,mm,measured,
+female_val,s0804,M1_LOO_mean,3.7141624969466376,mm,measured,
+female_val,s0804,M1_LOO_p95,9.921084782603707,mm,measured,
+female_val,s0835,M1_LOO_mean,3.4219760257819964,mm,measured,
+female_val,s0835,M1_LOO_p95,8.582785522097709,mm,measured,
+female_val,s0864,M1_LOO_mean,3.54258215758779,mm,measured,
+female_val,s0864,M1_LOO_p95,9.140884855770905,mm,measured,
+female_val,s0928,M1_LOO_mean,3.8362170400643834,mm,measured,
+female_val,s0928,M1_LOO_p95,9.760758502525906,mm,measured,
+female_val,s1057,M1_LOO_mean,4.887366173993972,mm,measured,
+female_val,s1057,M1_LOO_p95,14.46212659977308,mm,measured,
+female_val,s1070,M1_LOO_mean,3.8782035143322937,mm,measured,
+female_val,s1070,M1_LOO_p95,10.45432940586948,mm,measured,
+female_val,s1120,M1_LOO_mean,4.0468428335795235,mm,measured,
+female_val,s1120,M1_LOO_p95,11.044441020052671,mm,measured,
+female_val,s1121,M1_LOO_mean,3.8080503316925594,mm,measured,
+female_val,s1121,M1_LOO_p95,10.323599545951634,mm,measured,
+female_val,s1233,M1_LOO_mean,3.42217707881328,mm,measured,
+female_val,s1233,M1_LOO_p95,8.572541489523125,mm,measured,
+female_val,s1355,M1_LOO_mean,4.095697563244757,mm,measured,
+female_val,s1355,M1_LOO_p95,11.033086682352604,mm,measured,
+female_val,s1404,M1_LOO_mean,3.96817054378797,mm,measured,
+female_val,s1404,M1_LOO_p95,10.49473247480588,mm,measured,
+female_val,s0030,M2_centroid_size,17358.634094205405,mm,measured,
+female_val,s0030,M3_width_height,1.3077965394860536,ratio,measured,
+female_val,s0030,M3_width_depth,1.511152155116508,ratio,measured,
+female_val,s0030,M3_femoral_head_distance_width,0.5884800276509983,ratio,measured,
+female_val,s0089,M2_centroid_size,16044.236570542651,mm,measured,
+female_val,s0089,M3_width_height,1.451174793382274,ratio,measured,
+female_val,s0089,M3_width_depth,1.6795704233754167,ratio,measured,
+female_val,s0089,M3_femoral_head_distance_width,0.6188939655656202,ratio,measured,
+female_val,s0157,M2_centroid_size,16224.160526503074,mm,measured,
+female_val,s0157,M3_width_height,1.3573378663979319,ratio,measured,
+female_val,s0157,M3_width_depth,1.657902235726295,ratio,measured,
+female_val,s0157,M3_femoral_head_distance_width,0.7099937020319047,ratio,measured,
+female_val,s0190,M2_centroid_size,16183.418238961624,mm,measured,
+female_val,s0190,M3_width_height,1.3108574957947265,ratio,measured,
+female_val,s0190,M3_width_depth,1.630739735941687,ratio,measured,
+female_val,s0190,M3_femoral_head_distance_width,0.6456993137122963,ratio,measured,
+female_val,s0350,M2_centroid_size,17474.029238453277,mm,measured,
+female_val,s0350,M3_width_height,1.4389970196353992,ratio,measured,
+female_val,s0350,M3_width_depth,1.7344411169917813,ratio,measured,
+female_val,s0350,M3_femoral_head_distance_width,0.6398427594489915,ratio,measured,
+female_val,s0381,M2_centroid_size,16771.589172253935,mm,measured,
+female_val,s0381,M3_width_height,1.3619905456000778,ratio,measured,
+female_val,s0381,M3_width_depth,1.6704981061004238,ratio,measured,
+female_val,s0381,M3_femoral_head_distance_width,0.9089933521397479,ratio,measured,
+female_val,s0472,M2_centroid_size,16473.58805691673,mm,measured,
+female_val,s0472,M3_width_height,1.4598245499443012,ratio,measured,
+female_val,s0472,M3_width_depth,1.7258543445540981,ratio,measured,
+female_val,s0472,M3_femoral_head_distance_width,0.58434238251401,ratio,measured,
+female_val,s0578,M2_centroid_size,16028.512978095549,mm,measured,
+female_val,s0578,M3_width_height,1.4441996929473335,ratio,measured,
+female_val,s0578,M3_width_depth,1.7354592884852154,ratio,measured,
+female_val,s0731,M2_centroid_size,15273.00682359154,mm,measured,
+female_val,s0731,M3_width_height,1.216540462165052,ratio,measured,
+female_val,s0731,M3_width_depth,1.4665203283941208,ratio,measured,
+female_val,s0731,M3_femoral_head_distance_width,0.9105158875969197,ratio,measured,
+female_val,s0765,M2_centroid_size,15519.067064127443,mm,measured,
+female_val,s0765,M3_width_height,1.3531843521631939,ratio,measured,
+female_val,s0765,M3_width_depth,1.6678374907845501,ratio,measured,
+female_val,s0765,M3_femoral_head_distance_width,0.8276099731901533,ratio,measured,
+female_val,s0804,M2_centroid_size,16083.431854441404,mm,measured,
+female_val,s0804,M3_width_height,1.2605898683028238,ratio,measured,
+female_val,s0804,M3_width_depth,1.6687717982620045,ratio,measured,
+female_val,s0804,M3_femoral_head_distance_width,0.7160667318160127,ratio,measured,
+female_val,s0835,M2_centroid_size,16881.843339732633,mm,measured,
+female_val,s0835,M3_width_height,1.3444040996206423,ratio,measured,
+female_val,s0835,M3_width_depth,1.6516922900888515,ratio,measured,
+female_val,s0835,M3_femoral_head_distance_width,0.6254914433225695,ratio,measured,
+female_val,s0864,M2_centroid_size,16023.703498466084,mm,measured,
+female_val,s0864,M3_width_height,1.315568920691672,ratio,measured,
+female_val,s0864,M3_width_depth,1.598128205067479,ratio,measured,
+female_val,s0864,M3_femoral_head_distance_width,0.6726119233468022,ratio,measured,
+female_val,s0928,M2_centroid_size,17387.064845319765,mm,measured,
+female_val,s0928,M3_width_height,1.379258803782713,ratio,measured,
+female_val,s0928,M3_width_depth,1.701248071643873,ratio,measured,
+female_val,s0928,M3_femoral_head_distance_width,0.6058175335905274,ratio,measured,
+female_val,s1057,M2_centroid_size,17739.928573352532,mm,measured,
+female_val,s1057,M3_width_height,1.4240343080156213,ratio,measured,
+female_val,s1057,M3_width_depth,2.0117606540234285,ratio,measured,
+female_val,s1057,M3_femoral_head_distance_width,0.6314880198413572,ratio,measured,
+female_val,s1070,M2_centroid_size,15969.483229314556,mm,measured,
+female_val,s1070,M3_width_height,1.3063927377088653,ratio,measured,
+female_val,s1070,M3_width_depth,1.6300566660871436,ratio,measured,
+female_val,s1070,M3_femoral_head_distance_width,0.6268284205277413,ratio,measured,
+female_val,s1120,M2_centroid_size,15868.450472300181,mm,measured,
+female_val,s1120,M3_width_height,1.3111001662171258,ratio,measured,
+female_val,s1120,M3_width_depth,1.786965354014306,ratio,measured,
+female_val,s1120,M3_femoral_head_distance_width,0.8084150904620505,ratio,measured,
+female_val,s1121,M2_centroid_size,15466.469684953143,mm,measured,
+female_val,s1121,M3_width_height,1.3360517926510806,ratio,measured,
+female_val,s1121,M3_width_depth,1.815450959796052,ratio,measured,
+female_val,s1121,M3_femoral_head_distance_width,0.9231275272857751,ratio,measured,
+female_val,s1233,M2_centroid_size,16395.237345290163,mm,measured,
+female_val,s1233,M3_width_height,1.3634075542799067,ratio,measured,
+female_val,s1233,M3_width_depth,1.8160541240888728,ratio,measured,
+female_val,s1233,M3_femoral_head_distance_width,0.6364776925227049,ratio,measured,
+female_val,s1355,M2_centroid_size,16317.708232969435,mm,measured,
+female_val,s1355,M3_width_height,1.3769280976903775,ratio,measured,
+female_val,s1355,M3_width_depth,1.8743182358850075,ratio,measured,
+female_val,s1404,M2_centroid_size,17155.18397276441,mm,measured,
+female_val,s1404,M3_width_height,1.466924788712982,ratio,measured,
+female_val,s1404,M3_width_depth,1.8323457711909739,ratio,measured,
+female_val,s1404,M3_femoral_head_distance_width,0.635340742896211,ratio,measured,
+hra,s0030,M1_to_validation_case_mean,8.552580741590322,mm,measured,converged=False;iterations=200;scale=0.9815052961508439
+hra,s0030,M1_to_validation_case_p95,25.27243299253141,mm,measured,
+hra,s0089,M1_to_validation_case_mean,6.216671850916961,mm,measured,converged=True;iterations=77;scale=0.9665926670369734
+hra,s0089,M1_to_validation_case_p95,18.271279065847473,mm,measured,
+hra,s0157,M1_to_validation_case_mean,6.889049599940075,mm,measured,converged=True;iterations=141;scale=0.9734319048550621
+hra,s0157,M1_to_validation_case_p95,19.236503518967275,mm,measured,
+hra,s0190,M1_to_validation_case_mean,6.043032869665356,mm,measured,converged=True;iterations=72;scale=0.9806324110734979
+hra,s0190,M1_to_validation_case_p95,17.21354187365627,mm,measured,
+hra,s0350,M1_to_validation_case_mean,7.06092415746345,mm,measured,converged=True;iterations=130;scale=1.0428318702726378
+hra,s0350,M1_to_validation_case_p95,20.234039798329757,mm,measured,
+hra,s0381,M1_to_validation_case_mean,6.83775346880408,mm,measured,converged=True;iterations=88;scale=1.0161954085995402
+hra,s0381,M1_to_validation_case_p95,19.72982099431778,mm,measured,
+hra,s0472,M1_to_validation_case_mean,5.8945895095883225,mm,measured,converged=True;iterations=148;scale=1.0113379184158424
+hra,s0472,M1_to_validation_case_p95,17.5934209595664,mm,measured,
+hra,s0578,M1_to_validation_case_mean,5.150068843114995,mm,measured,converged=True;iterations=74;scale=0.990533439436537
+hra,s0578,M1_to_validation_case_p95,15.631549923759115,mm,measured,
+hra,s0731,M1_to_validation_case_mean,11.80689905799727,mm,measured,converged=False;iterations=200;scale=0.7719794147708297
+hra,s0731,M1_to_validation_case_p95,45.66111571278574,mm,measured,
+hra,s0765,M1_to_validation_case_mean,7.031888699885448,mm,measured,converged=True;iterations=167;scale=0.9422311109802308
+hra,s0765,M1_to_validation_case_p95,19.19334206178929,mm,measured,
+hra,s0804,M1_to_validation_case_mean,6.477012304061587,mm,measured,converged=True;iterations=135;scale=0.979257508609899
+hra,s0804,M1_to_validation_case_p95,18.94121358504326,mm,measured,
+hra,s0835,M1_to_validation_case_mean,6.925443641879231,mm,measured,converged=True;iterations=105;scale=1.0242886861062952
+hra,s0835,M1_to_validation_case_p95,20.041487398337804,mm,measured,
+hra,s0864,M1_to_validation_case_mean,6.102064937749683,mm,measured,converged=True;iterations=144;scale=0.9835980593055611
+hra,s0864,M1_to_validation_case_p95,16.82503654568334,mm,measured,
+hra,s0928,M1_to_validation_case_mean,6.953013990504471,mm,measured,converged=True;iterations=142;scale=1.0655916762317894
+hra,s0928,M1_to_validation_case_p95,18.99426146526369,mm,measured,
+hra,s1057,M1_to_validation_case_mean,6.996976803837285,mm,measured,converged=True;iterations=101;scale=1.0797301540778954
+hra,s1057,M1_to_validation_case_p95,21.990925725417497,mm,measured,
+hra,s1070,M1_to_validation_case_mean,5.887166719090335,mm,measured,converged=False;iterations=200;scale=0.9818196513460926
+hra,s1070,M1_to_validation_case_p95,16.40970653656295,mm,measured,
+hra,s1120,M1_to_validation_case_mean,7.037384045710403,mm,measured,converged=True;iterations=178;scale=0.9552523795807585
+hra,s1120,M1_to_validation_case_p95,19.917179550919034,mm,measured,
+hra,s1121,M1_to_validation_case_mean,5.541695383739917,mm,measured,converged=True;iterations=145;scale=0.9291313493499691
+hra,s1121,M1_to_validation_case_p95,16.24709049814752,mm,measured,
+hra,s1233,M1_to_validation_case_mean,5.6063196296436635,mm,measured,converged=True;iterations=88;scale=1.0019475298207778
+hra,s1233,M1_to_validation_case_p95,16.670979377241,mm,measured,
+hra,s1355,M1_to_validation_case_mean,4.785071282163325,mm,measured,converged=True;iterations=135;scale=1.0022812458333263
+hra,s1355,M1_to_validation_case_p95,14.093425408201812,mm,measured,
+hra,s1404,M1_to_validation_case_mean,5.544573389510024,mm,measured,converged=True;iterations=81;scale=1.0508624210808954
+hra,s1404,M1_to_validation_case_p95,16.98083804634367,mm,measured,
+hra,hra,M2_centroid_size,14848.86501992328,mm,measured,
+bp3d_m,s0030,M1_to_validation_case_mean,6.641883564196086,mm,measured,converged=True;iterations=96;scale=1.0004324640710893
+bp3d_m,s0030,M1_to_validation_case_p95,20.783934049220225,mm,measured,
+bp3d_m,s0089,M1_to_validation_case_mean,4.872351312466838,mm,measured,converged=True;iterations=124;scale=0.9438575433406293
+bp3d_m,s0089,M1_to_validation_case_p95,16.288466962985215,mm,measured,
+bp3d_m,s0157,M1_to_validation_case_mean,5.3920253473990964,mm,measured,converged=True;iterations=162;scale=0.965259127859584
+bp3d_m,s0157,M1_to_validation_case_p95,16.6975715569445,mm,measured,
+bp3d_m,s0190,M1_to_validation_case_mean,5.056976488745804,mm,measured,converged=True;iterations=189;scale=0.9597804558783668
+bp3d_m,s0190,M1_to_validation_case_p95,14.152661435499597,mm,measured,
+bp3d_m,s0350,M1_to_validation_case_mean,4.917905169958766,mm,measured,converged=True;iterations=99;scale=1.0326955946463976
+bp3d_m,s0350,M1_to_validation_case_p95,15.59069611976805,mm,measured,
+bp3d_m,s0381,M1_to_validation_case_mean,5.6941470127832705,mm,measured,converged=True;iterations=121;scale=0.9884222008430843
+bp3d_m,s0381,M1_to_validation_case_p95,15.551323384692944,mm,measured,
+bp3d_m,s0472,M1_to_validation_case_mean,4.464990256216389,mm,measured,converged=True;iterations=159;scale=0.9862092976733744
+bp3d_m,s0472,M1_to_validation_case_p95,13.602413608628666,mm,measured,
+bp3d_m,s0578,M1_to_validation_case_mean,3.8540918521109124,mm,measured,converged=True;iterations=67;scale=1.000259992319062
+bp3d_m,s0578,M1_to_validation_case_p95,10.232646109143257,mm,measured,
+bp3d_m,s0731,M1_to_validation_case_mean,6.709360808516267,mm,measured,converged=True;iterations=176;scale=0.8985458911410361
+bp3d_m,s0731,M1_to_validation_case_p95,18.910220309704943,mm,measured,
+bp3d_m,s0765,M1_to_validation_case_mean,5.52750808034741,mm,measured,converged=True;iterations=157;scale=0.9274442209692668
+bp3d_m,s0765,M1_to_validation_case_p95,18.526513120282416,mm,measured,
+bp3d_m,s0804,M1_to_validation_case_mean,5.495995146280614,mm,measured,converged=True;iterations=152;scale=0.9593377999821914
+bp3d_m,s0804,M1_to_validation_case_p95,14.139807953134103,mm,measured,
+bp3d_m,s0835,M1_to_validation_case_mean,5.223981126250294,mm,measured,converged=True;iterations=81;scale=1.0140831600455806
+bp3d_m,s0835,M1_to_validation_case_p95,15.569962159931563,mm,measured,
+bp3d_m,s0864,M1_to_validation_case_mean,5.178099142320383,mm,measured,converged=True;iterations=176;scale=0.9523997770483605
+bp3d_m,s0864,M1_to_validation_case_p95,13.662397084118975,mm,measured,
+bp3d_m,s0928,M1_to_validation_case_mean,6.252113296171963,mm,measured,converged=True;iterations=147;scale=1.0306636514255625
+bp3d_m,s0928,M1_to_validation_case_p95,17.969613183426738,mm,measured,
+bp3d_m,s1057,M1_to_validation_case_mean,4.3823285251226975,mm,measured,converged=True;iterations=125;scale=1.0936447332303079
+bp3d_m,s1057,M1_to_validation_case_p95,12.245787132631849,mm,measured,
+bp3d_m,s1070,M1_to_validation_case_mean,4.868409084705923,mm,measured,converged=True;iterations=105;scale=0.9611779688771872
+bp3d_m,s1070,M1_to_validation_case_p95,16.239026919729614,mm,measured,
+bp3d_m,s1120,M1_to_validation_case_mean,5.288667968914421,mm,measured,converged=True;iterations=73;scale=0.9611252041869263
+bp3d_m,s1120,M1_to_validation_case_p95,16.69123461945249,mm,measured,
+bp3d_m,s1121,M1_to_validation_case_mean,3.7538649829036816,mm,measured,converged=True;iterations=170;scale=0.9400989821384063
+bp3d_m,s1121,M1_to_validation_case_p95,11.389593293986632,mm,measured,
+bp3d_m,s1233,M1_to_validation_case_mean,4.306277979406613,mm,measured,converged=True;iterations=180;scale=0.9906850104181718
+bp3d_m,s1233,M1_to_validation_case_p95,10.594987292356004,mm,measured,
+bp3d_m,s1355,M1_to_validation_case_mean,3.305739948871161,mm,measured,converged=True;iterations=110;scale=1.0152149266160992
+bp3d_m,s1355,M1_to_validation_case_p95,8.114180496529057,mm,measured,
+bp3d_m,s1404,M1_to_validation_case_mean,3.928271774555227,mm,measured,converged=True;iterations=93;scale=1.0575426589171888
+bp3d_m,s1404,M1_to_validation_case_p95,9.204301450899392,mm,measured,
+bp3d_m,bp3d_m,M2_centroid_size,16549.79120950322,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.781554780518673,mm,measured,target=s0030; converged=True;scale=0.9776581948592363
+male_control,s0062,M1_to_validation_case_p95,15.072880711861849,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.535792467157995,mm,measured,target=s0089; converged=True;scale=0.9217417444086705
+male_control,s0062,M1_to_validation_case_p95,13.588593457457687,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.173648525460913,mm,measured,target=s0157; converged=False;scale=0.9312027682230433
+male_control,s0062,M1_to_validation_case_p95,12.08867117176828,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.134058733636647,mm,measured,target=s0190; converged=True;scale=0.9528281243332948
+male_control,s0062,M1_to_validation_case_p95,10.637984143024338,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,5.189446585260263,mm,measured,target=s0350; converged=True;scale=0.9814215178233788
+male_control,s0062,M1_to_validation_case_p95,15.058742301075698,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.332748096186555,mm,measured,target=s0381; converged=False;scale=0.9715848501885684
+male_control,s0062,M1_to_validation_case_p95,12.10119974164378,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.30723590847956,mm,measured,target=s0472; converged=True;scale=0.9534495066988277
+male_control,s0062,M1_to_validation_case_p95,12.659475046509197,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,3.9924521133551045,mm,measured,target=s0578; converged=True;scale=0.9426636881690006
+male_control,s0062,M1_to_validation_case_p95,11.301034903955774,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.4455408475704115,mm,measured,target=s0731; converged=True;scale=0.8853282979737646
+male_control,s0062,M1_to_validation_case_p95,12.662055471939336,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.668701112730132,mm,measured,target=s0765; converged=True;scale=0.9010680178295227
+male_control,s0062,M1_to_validation_case_p95,13.154922695011711,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,3.866163424488613,mm,measured,target=s0804; converged=True;scale=0.9402382574912395
+male_control,s0062,M1_to_validation_case_p95,9.746625977375976,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.2123342370054395,mm,measured,target=s0835; converged=False;scale=0.9750721028234434
+male_control,s0062,M1_to_validation_case_p95,10.690649761107421,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,3.972056836076572,mm,measured,target=s0864; converged=True;scale=0.9356776728062275
+male_control,s0062,M1_to_validation_case_p95,10.235035255113607,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.6613366812768815,mm,measured,target=s0928; converged=True;scale=1.0052582919704436
+male_control,s0062,M1_to_validation_case_p95,12.159038309172024,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,5.640355978034237,mm,measured,target=s1057; converged=True;scale=1.010535177946978
+male_control,s0062,M1_to_validation_case_p95,18.43269855074206,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,3.9021886145138334,mm,measured,target=s1070; converged=True;scale=0.9478126969638359
+male_control,s0062,M1_to_validation_case_p95,9.729088785970944,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.179705734232689,mm,measured,target=s1120; converged=True;scale=0.9327959958577959
+male_control,s0062,M1_to_validation_case_p95,11.834341674147694,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.2516879199997115,mm,measured,target=s1121; converged=True;scale=0.8892516799718089
+male_control,s0062,M1_to_validation_case_p95,11.888820608992669,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,3.645167410860452,mm,measured,target=s1233; converged=False;scale=0.9670556291058616
+male_control,s0062,M1_to_validation_case_p95,9.025341461983745,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.107879093091904,mm,measured,target=s1355; converged=True;scale=0.9522051428354316
+male_control,s0062,M1_to_validation_case_p95,11.390313330090676,mm,measured,
+male_control,s0062,M1_to_validation_case_mean,4.630226332663051,mm,measured,target=s1404; converged=True;scale=0.9886650464499939
+male_control,s0062,M1_to_validation_case_p95,12.63015634731827,mm,measured,
+male_control,s0062,M2_centroid_size,16702.60618446629,mm,measured,
+male_control,s0062,M3_width_height,1.1770372792963302,ratio,measured,
+male_control,s0062,M3_width_depth,1.6511706464820157,ratio,measured,
+male_control,s0062,M3_femoral_head_distance_width,0.9925652225895104,ratio,measured,
+male_control,s0108,M1_to_validation_case_mean,3.648879554262284,mm,measured,target=s0030; converged=True;scale=1.0250590873496426
+male_control,s0108,M1_to_validation_case_p95,8.79744916009686,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.801065439902636,mm,measured,target=s0089; converged=True;scale=0.922328887195787
+male_control,s0108,M1_to_validation_case_p95,13.861588370263824,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.290856155977436,mm,measured,target=s0157; converged=True;scale=0.949371702515383
+male_control,s0108,M1_to_validation_case_p95,12.054324112749477,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.5155562389591415,mm,measured,target=s0190; converged=True;scale=0.9570189354717271
+male_control,s0108,M1_to_validation_case_p95,11.67931224204982,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,5.321964386508127,mm,measured,target=s0350; converged=True;scale=1.0045793604831315
+male_control,s0108,M1_to_validation_case_p95,17.635808642644392,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,5.178497586888703,mm,measured,target=s0381; converged=True;scale=0.9721355814458763
+male_control,s0108,M1_to_validation_case_p95,14.501728089280864,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,5.503218319795323,mm,measured,target=s0472; converged=True;scale=0.9465575459825128
+male_control,s0108,M1_to_validation_case_p95,17.058591028715412,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,5.921446096115634,mm,measured,target=s0578; converged=True;scale=0.9104868318781807
+male_control,s0108,M1_to_validation_case_p95,18.891873349907822,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.020495430946477,mm,measured,target=s0731; converged=True;scale=0.910423876610136
+male_control,s0108,M1_to_validation_case_p95,11.67462778893203,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.774647663319916,mm,measured,target=s0765; converged=True;scale=0.9189580041003359
+male_control,s0108,M1_to_validation_case_p95,13.590071008402369,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.085870255197174,mm,measured,target=s0804; converged=True;scale=0.9489835703149115
+male_control,s0108,M1_to_validation_case_p95,11.866244826777155,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.374171171957315,mm,measured,target=s0835; converged=True;scale=0.9917873121472212
+male_control,s0108,M1_to_validation_case_p95,11.249557672481524,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.76171743865575,mm,measured,target=s0864; converged=True;scale=0.9281339958798895
+male_control,s0108,M1_to_validation_case_p95,13.411368784188678,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.763770951826767,mm,measured,target=s0928; converged=True;scale=1.0197466312271826
+male_control,s0108,M1_to_validation_case_p95,13.084624461216864,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,7.110379974133186,mm,measured,target=s1057; converged=True;scale=1.017293042131249
+male_control,s0108,M1_to_validation_case_p95,24.021089830687178,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.007265185818137,mm,measured,target=s1070; converged=True;scale=0.9495692945780102
+male_control,s0108,M1_to_validation_case_p95,11.700617126055654,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.631500862712189,mm,measured,target=s1120; converged=True;scale=0.947967470586012
+male_control,s0108,M1_to_validation_case_p95,12.010065164799874,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,5.308816913318494,mm,measured,target=s1121; converged=True;scale=0.8792228813227273
+male_control,s0108,M1_to_validation_case_p95,16.299640077457042,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,4.6527971788059395,mm,measured,target=s1233; converged=True;scale=0.9580176708772324
+male_control,s0108,M1_to_validation_case_p95,12.206236946164143,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,6.564999099305872,mm,measured,target=s1355; converged=True;scale=0.9015868463773237
+male_control,s0108,M1_to_validation_case_p95,21.01533864640896,mm,measured,
+male_control,s0108,M1_to_validation_case_mean,6.343594617588188,mm,measured,target=s1404; converged=True;scale=0.9566145368766729
+male_control,s0108,M1_to_validation_case_p95,19.775313318004496,mm,measured,
+male_control,s0108,M2_centroid_size,16722.45373028891,mm,measured,
+male_control,s0108,M3_width_height,1.1361730326385735,ratio,measured,
+male_control,s0108,M3_width_depth,1.5077030703449819,ratio,measured,
+male_control,s0108,M3_femoral_head_distance_width,0.7263094378243047,ratio,measured,
+male_control,s0119,M1_to_validation_case_mean,5.363830669030227,mm,measured,target=s0030; converged=True;scale=0.9734828878159623
+male_control,s0119,M1_to_validation_case_p95,13.793113461575588,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.970159535180936,mm,measured,target=s0089; converged=True;scale=0.9113203934448154
+male_control,s0119,M1_to_validation_case_p95,11.513224918990845,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.601969118988452,mm,measured,target=s0157; converged=True;scale=0.9206334844643868
+male_control,s0119,M1_to_validation_case_p95,13.136025152959423,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.69215477419926,mm,measured,target=s0190; converged=True;scale=0.9210781807488992
+male_control,s0119,M1_to_validation_case_p95,13.042810699603749,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.820754867761398,mm,measured,target=s0350; converged=True;scale=0.9918100472959868
+male_control,s0119,M1_to_validation_case_p95,10.053520846259895,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,5.180036743153986,mm,measured,target=s0381; converged=True;scale=0.9650962020737868
+male_control,s0119,M1_to_validation_case_p95,15.382666951488325,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.911186764917484,mm,measured,target=s0472; converged=False;scale=0.9600588031984536
+male_control,s0119,M1_to_validation_case_p95,10.060833543463527,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.8185743674654224,mm,measured,target=s0578; converged=False;scale=0.9377956743645183
+male_control,s0119,M1_to_validation_case_p95,9.804599782193078,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,5.3681109434486425,mm,measured,target=s0731; converged=True;scale=0.8917324590555835
+male_control,s0119,M1_to_validation_case_p95,14.819986609531647,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.932522501566242,mm,measured,target=s0765; converged=True;scale=0.881845838542194
+male_control,s0119,M1_to_validation_case_p95,13.904594642885653,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.742642939508218,mm,measured,target=s0804; converged=True;scale=0.9389895953041532
+male_control,s0119,M1_to_validation_case_p95,13.143035959371312,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.67610882945661,mm,measured,target=s0835; converged=True;scale=0.9725041729718423
+male_control,s0119,M1_to_validation_case_p95,12.203227067411724,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.84811125590281,mm,measured,target=s0864; converged=True;scale=0.9125945347546947
+male_control,s0119,M1_to_validation_case_p95,13.486153414506596,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,5.057950326149135,mm,measured,target=s0928; converged=True;scale=0.9997010328665459
+male_control,s0119,M1_to_validation_case_p95,12.852323168694257,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,4.570604162203061,mm,measured,target=s1057; converged=True;scale=1.0347610584391165
+male_control,s0119,M1_to_validation_case_p95,11.430653386598939,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.8797920552712633,mm,measured,target=s1070; converged=True;scale=0.9471518258469881
+male_control,s0119,M1_to_validation_case_p95,10.621717206981739,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,5.08849830843931,mm,measured,target=s1120; converged=True;scale=0.9176510105486674
+male_control,s0119,M1_to_validation_case_p95,15.05894735367062,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.4554240402358194,mm,measured,target=s1121; converged=True;scale=0.8996710809898165
+male_control,s0119,M1_to_validation_case_p95,8.701098422828505,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.8634375973486237,mm,measured,target=s1233; converged=True;scale=0.9653383452963199
+male_control,s0119,M1_to_validation_case_p95,9.795094410638804,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.6175355778099094,mm,measured,target=s1355; converged=True;scale=0.9517276889950422
+male_control,s0119,M1_to_validation_case_p95,9.443710988651207,mm,measured,
+male_control,s0119,M1_to_validation_case_mean,3.783996356165534,mm,measured,target=s1404; converged=True;scale=0.9983982663299437
+male_control,s0119,M1_to_validation_case_p95,9.882734685416597,mm,measured,
+male_control,s0119,M2_centroid_size,17152.170443471212,mm,measured,
+male_control,s0119,M3_width_height,1.3312618689029176,ratio,measured,
+male_control,s0119,M3_width_depth,1.8088830233394013,ratio,measured,
+male_control,s0119,M3_femoral_head_distance_width,0.6054360415873651,ratio,measured,
+male_control,s0442,M1_to_validation_case_mean,4.217481043510235,mm,measured,target=s0030; converged=True;scale=1.0046620931846528
+male_control,s0442,M1_to_validation_case_p95,10.93872672529524,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,3.6832171929141495,mm,measured,target=s0089; converged=True;scale=0.9447023463480686
+male_control,s0442,M1_to_validation_case_p95,9.743091661370176,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.240791657343078,mm,measured,target=s0157; converged=True;scale=0.9527004202736032
+male_control,s0442,M1_to_validation_case_p95,12.267400256540798,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.4194529369016395,mm,measured,target=s0190; converged=True;scale=0.9615994945647117
+male_control,s0442,M1_to_validation_case_p95,10.955223135165394,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.777406179912563,mm,measured,target=s0350; converged=True;scale=1.005152346696955
+male_control,s0442,M1_to_validation_case_p95,12.682643276347681,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.71599008604072,mm,measured,target=s0381; converged=True;scale=0.9837968006627947
+male_control,s0442,M1_to_validation_case_p95,13.52161389186893,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.403858186324145,mm,measured,target=s0472; converged=True;scale=0.9713008622384772
+male_control,s0442,M1_to_validation_case_p95,11.724621790611952,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.596024024945857,mm,measured,target=s0578; converged=True;scale=0.9474139480777898
+male_control,s0442,M1_to_validation_case_p95,13.326223572863125,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.782608424953917,mm,measured,target=s0731; converged=True;scale=0.8994012341046453
+male_control,s0442,M1_to_validation_case_p95,15.239318360751126,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,5.006344818904982,mm,measured,target=s0765; converged=True;scale=0.9220273646335988
+male_control,s0442,M1_to_validation_case_p95,15.242466282053675,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.6389666480211,mm,measured,target=s0804; converged=True;scale=0.9471461064254653
+male_control,s0442,M1_to_validation_case_p95,14.428017736614795,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.469407163227208,mm,measured,target=s0835; converged=True;scale=0.991938649573235
+male_control,s0442,M1_to_validation_case_p95,11.607020917183984,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.529342846480938,mm,measured,target=s0864; converged=True;scale=0.9551773525710124
+male_control,s0442,M1_to_validation_case_p95,12.112351003196387,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.707671338016444,mm,measured,target=s0928; converged=True;scale=1.0361640614302694
+male_control,s0442,M1_to_validation_case_p95,12.447081581764948,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,6.400745630426789,mm,measured,target=s1057; converged=True;scale=1.035924604780829
+male_control,s0442,M1_to_validation_case_p95,18.35144732972544,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.072471441096623,mm,measured,target=s1070; converged=True;scale=0.958683510575589
+male_control,s0442,M1_to_validation_case_p95,11.44599612682782,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,5.199242533891542,mm,measured,target=s1120; converged=True;scale=0.9387326659670104
+male_control,s0442,M1_to_validation_case_p95,15.693483604156503,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.691119615788952,mm,measured,target=s1121; converged=True;scale=0.9029338119358967
+male_control,s0442,M1_to_validation_case_p95,12.955928883681832,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.33330646530305,mm,measured,target=s1233; converged=True;scale=0.9762029543759592
+male_control,s0442,M1_to_validation_case_p95,10.891094647098095,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,4.8331277917760405,mm,measured,target=s1355; converged=True;scale=0.9772966475008974
+male_control,s0442,M1_to_validation_case_p95,12.66701218646004,mm,measured,
+male_control,s0442,M1_to_validation_case_mean,5.071233927837996,mm,measured,target=s1404; converged=True;scale=1.002943988539861
+male_control,s0442,M1_to_validation_case_p95,13.616919214580296,mm,measured,
+male_control,s0442,M2_centroid_size,16936.199302697947,mm,measured,
+male_control,s0442,M3_width_height,1.3417678730523945,ratio,measured,
+male_control,s0442,M3_width_depth,1.6081939250017305,ratio,measured,
+male_control,s0442,M3_femoral_head_distance_width,0.6480858427928208,ratio,measured,
+male_control,s0611,M1_to_validation_case_mean,4.171434006935632,mm,measured,target=s0030; converged=True;scale=1.0329320616411877
+male_control,s0611,M1_to_validation_case_p95,10.429602179634905,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.241493376651491,mm,measured,target=s0089; converged=True;scale=0.9526120945832277
+male_control,s0611,M1_to_validation_case_p95,12.385355098433301,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.090048176900474,mm,measured,target=s0157; converged=False;scale=0.9915437850501122
+male_control,s0611,M1_to_validation_case_p95,10.934623643263361,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.023832737130793,mm,measured,target=s0190; converged=True;scale=0.9970526835299237
+male_control,s0611,M1_to_validation_case_p95,10.682896945242504,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.642454494769324,mm,measured,target=s0350; converged=True;scale=1.0301341697772268
+male_control,s0611,M1_to_validation_case_p95,12.593805789188028,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.500684341689403,mm,measured,target=s0381; converged=True;scale=1.0115282061399988
+male_control,s0611,M1_to_validation_case_p95,14.082184637072125,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.366336274619761,mm,measured,target=s0472; converged=True;scale=1.0109187097667776
+male_control,s0611,M1_to_validation_case_p95,12.036282135764075,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.5593520708090525,mm,measured,target=s0578; converged=True;scale=0.9607561530894513
+male_control,s0611,M1_to_validation_case_p95,12.828477626215255,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.099249903305291,mm,measured,target=s0731; converged=True;scale=0.9257587765821461
+male_control,s0611,M1_to_validation_case_p95,12.03519136168985,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.68916230951086,mm,measured,target=s0765; converged=True;scale=0.9513884496008194
+male_control,s0611,M1_to_validation_case_p95,12.68367932550297,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,3.7983429266455446,mm,measured,target=s0804; converged=True;scale=0.9753721486576261
+male_control,s0611,M1_to_validation_case_p95,10.84650483289867,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.317205418562252,mm,measured,target=s0835; converged=True;scale=1.0402416063254354
+male_control,s0611,M1_to_validation_case_p95,11.027916187318429,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.232999269473011,mm,measured,target=s0864; converged=True;scale=0.9729154360583478
+male_control,s0611,M1_to_validation_case_p95,11.482199709656136,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.337403196235039,mm,measured,target=s0928; converged=True;scale=1.0619949146844803
+male_control,s0611,M1_to_validation_case_p95,11.838630962528352,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,5.9952965142474826,mm,measured,target=s1057; converged=True;scale=1.06433157072329
+male_control,s0611,M1_to_validation_case_p95,19.18378346412894,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,3.7082300878157954,mm,measured,target=s1070; converged=True;scale=0.9866498389080745
+male_control,s0611,M1_to_validation_case_p95,9.326169369822741,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.5767777511618295,mm,measured,target=s1120; converged=False;scale=0.9728480320726004
+male_control,s0611,M1_to_validation_case_p95,12.452459679433241,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.449605020373525,mm,measured,target=s1121; converged=True;scale=0.927044279050783
+male_control,s0611,M1_to_validation_case_p95,12.298523221789543,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,3.930687029013284,mm,measured,target=s1233; converged=False;scale=1.000912523892046
+male_control,s0611,M1_to_validation_case_p95,10.67977881535553,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.815716442154336,mm,measured,target=s1355; converged=True;scale=0.9841791341218934
+male_control,s0611,M1_to_validation_case_p95,13.004494394806056,mm,measured,
+male_control,s0611,M1_to_validation_case_mean,4.86092126508117,mm,measured,target=s1404; converged=True;scale=1.0238270628401045
+male_control,s0611,M1_to_validation_case_p95,12.98600596494977,mm,measured,
+male_control,s0611,M2_centroid_size,16403.518221911636,mm,measured,
+male_control,s0611,M3_width_height,1.1318048900341775,ratio,measured,
+male_control,s0611,M3_width_depth,1.5672397608782254,ratio,measured,
+male_control,s0611,M3_femoral_head_distance_width,0.6829967620733085,ratio,measured,
+male_control,s0971,M1_to_validation_case_mean,3.7240483046405424,mm,measured,target=s0030; converged=True;scale=0.9654081303528993
+male_control,s0971,M1_to_validation_case_p95,9.774070380000222,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.9181609267177357,mm,measured,target=s0089; converged=True;scale=0.894363178870597
+male_control,s0971,M1_to_validation_case_p95,11.06753714447958,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.5899146953645853,mm,measured,target=s0157; converged=True;scale=0.9216996085456072
+male_control,s0971,M1_to_validation_case_p95,8.890271459739894,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.6890005080340207,mm,measured,target=s0190; converged=True;scale=0.9215651291886755
+male_control,s0971,M1_to_validation_case_p95,8.771080814876358,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.464713857414282,mm,measured,target=s0350; converged=True;scale=0.949940737470598
+male_control,s0971,M1_to_validation_case_p95,13.006274879290611,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.9068631163036,mm,measured,target=s0381; converged=False;scale=0.9509237798088642
+male_control,s0971,M1_to_validation_case_p95,10.299661929942918,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.281587554542581,mm,measured,target=s0472; converged=True;scale=0.9175691338194104
+male_control,s0971,M1_to_validation_case_p95,11.756336975171449,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.281070670159228,mm,measured,target=s0578; converged=True;scale=0.9035797644583582
+male_control,s0971,M1_to_validation_case_p95,11.604241143553413,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.8484921863680692,mm,measured,target=s0731; converged=True;scale=0.8756289457383121
+male_control,s0971,M1_to_validation_case_p95,10.30511569875857,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.329198604024355,mm,measured,target=s0765; converged=True;scale=0.8734358545119253
+male_control,s0971,M1_to_validation_case_p95,11.45925678791304,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.260908822253303,mm,measured,target=s0804; converged=True;scale=0.916023828777302
+male_control,s0971,M1_to_validation_case_p95,8.268029556163379,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.493878333928838,mm,measured,target=s0835; converged=True;scale=0.9627704665355723
+male_control,s0971,M1_to_validation_case_p95,8.500087403435565,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.69263394275264,mm,measured,target=s0864; converged=True;scale=0.912533849510448
+male_control,s0971,M1_to_validation_case_p95,8.927244486357504,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.889794726782916,mm,measured,target=s0928; converged=True;scale=0.9914057036158583
+male_control,s0971,M1_to_validation_case_p95,9.724302922622169,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,5.688305673243331,mm,measured,target=s1057; converged=True;scale=0.9830512924326585
+male_control,s0971,M1_to_validation_case_p95,17.50282615794806,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.463851135173363,mm,measured,target=s1070; converged=True;scale=0.9092086345554875
+male_control,s0971,M1_to_validation_case_p95,9.093537232515008,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.976655630895679,mm,measured,target=s1120; converged=True;scale=0.9047999633669268
+male_control,s0971,M1_to_validation_case_p95,10.775468923604436,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.077578527395556,mm,measured,target=s1121; converged=True;scale=0.8585074489238075
+male_control,s0971,M1_to_validation_case_p95,10.759055534884673,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,3.549362045592801,mm,measured,target=s1233; converged=True;scale=0.9276132785678487
+male_control,s0971,M1_to_validation_case_p95,8.634103893963132,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.584772998842753,mm,measured,target=s1355; converged=True;scale=0.9123874388959358
+male_control,s0971,M1_to_validation_case_p95,12.939731839595744,mm,measured,
+male_control,s0971,M1_to_validation_case_mean,4.353662536218926,mm,measured,target=s1404; converged=True;scale=0.9524524638091284
+male_control,s0971,M1_to_validation_case_p95,12.256961856755238,mm,measured,
+male_control,s0971,M2_centroid_size,17502.74221616935,mm,measured,
+male_control,s0971,M3_width_height,1.2386397075569302,ratio,measured,
+male_control,s0971,M3_width_depth,1.6322017827250903,ratio,measured,
+male_control,s0971,M3_femoral_head_distance_width,0.6516005106337545,ratio,measured,
+male_control,s1016,M1_to_validation_case_mean,6.486904545940749,mm,measured,target=s0030; converged=True;scale=0.925733848458172
+male_control,s1016,M1_to_validation_case_p95,18.283827046549256,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,4.944332032900681,mm,measured,target=s0089; converged=True;scale=0.8670121138225371
+male_control,s1016,M1_to_validation_case_p95,13.342323084787369,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.771212214553139,mm,measured,target=s0157; converged=True;scale=0.8842286601095478
+male_control,s1016,M1_to_validation_case_p95,18.101201962719063,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.265924642179397,mm,measured,target=s0190; converged=False;scale=0.8879342958846639
+male_control,s1016,M1_to_validation_case_p95,13.903197105469864,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.075157338191375,mm,measured,target=s0350; converged=True;scale=0.9492918060134714
+male_control,s1016,M1_to_validation_case_p95,14.27863698224491,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,6.192956100737884,mm,measured,target=s0381; converged=True;scale=0.9027224286972678
+male_control,s1016,M1_to_validation_case_p95,18.513570353762212,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,4.988194377620747,mm,measured,target=s0472; converged=True;scale=0.9118445676834488
+male_control,s1016,M1_to_validation_case_p95,13.988824532029392,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,4.2360456322622175,mm,measured,target=s0578; converged=True;scale=0.9022289649405822
+male_control,s1016,M1_to_validation_case_p95,11.034951540721114,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,7.263921629800499,mm,measured,target=s0731; converged=True;scale=0.8192866184144493
+male_control,s1016,M1_to_validation_case_p95,22.035670671416344,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,6.172394774285065,mm,measured,target=s0765; converged=True;scale=0.8563604754585867
+male_control,s1016,M1_to_validation_case_p95,19.29969282478417,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.959139015522868,mm,measured,target=s0804; converged=True;scale=0.8741780034553774
+male_control,s1016,M1_to_validation_case_p95,17.576968651829844,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.710427952230569,mm,measured,target=s0835; converged=True;scale=0.9185794997274701
+male_control,s1016,M1_to_validation_case_p95,15.31642448502392,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.694135513761468,mm,measured,target=s0864; converged=True;scale=0.874497276249864
+male_control,s1016,M1_to_validation_case_p95,15.911168343432976,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,6.512470005880143,mm,measured,target=s0928; converged=True;scale=0.9367984592900717
+male_control,s1016,M1_to_validation_case_p95,17.152072021123313,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.727277738133222,mm,measured,target=s1057; converged=True;scale=0.9837768653814842
+male_control,s1016,M1_to_validation_case_p95,15.952555274072134,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.115217406638811,mm,measured,target=s1070; converged=True;scale=0.8841170137522657
+male_control,s1016,M1_to_validation_case_p95,13.516997221566408,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.930508351276984,mm,measured,target=s1120; converged=True;scale=0.864784172590681
+male_control,s1016,M1_to_validation_case_p95,17.522905759752497,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,4.66277441119819,mm,measured,target=s1121; converged=True;scale=0.8544827109097006
+male_control,s1016,M1_to_validation_case_p95,12.402117026525254,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,5.197735946382063,mm,measured,target=s1233; converged=True;scale=0.8876885977124773
+male_control,s1016,M1_to_validation_case_p95,16.376902015751853,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,4.5369854964377225,mm,measured,target=s1355; converged=False;scale=0.9147859815631446
+male_control,s1016,M1_to_validation_case_p95,12.155030263751664,mm,measured,
+male_control,s1016,M1_to_validation_case_mean,4.827632135542789,mm,measured,target=s1404; converged=True;scale=0.9542197104836423
+male_control,s1016,M1_to_validation_case_p95,13.05619986934387,mm,measured,
+male_control,s1016,M2_centroid_size,17999.89381743491,mm,measured,
+male_control,s1016,M3_width_height,1.4180435661880368,ratio,measured,
+male_control,s1016,M3_width_depth,1.7977010716621078,ratio,measured,
+male_control,s1016,M3_femoral_head_distance_width,0.6943066875492517,ratio,measured,
+male_control,s1069,M1_to_validation_case_mean,4.212688720536492,mm,measured,target=s0030; converged=True;scale=1.0707464630356445
+male_control,s1069,M1_to_validation_case_p95,10.468108650687663,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,3.7241606157898124,mm,measured,target=s0089; converged=True;scale=1.0040321945254753
+male_control,s1069,M1_to_validation_case_p95,9.758426746533202,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,3.8770335228555246,mm,measured,target=s0157; converged=True;scale=1.021705766064181
+male_control,s1069,M1_to_validation_case_p95,10.133881182144444,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,3.9996551627884176,mm,measured,target=s0190; converged=True;scale=1.0308803285687325
+male_control,s1069,M1_to_validation_case_p95,9.778901144552218,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.5120101078468595,mm,measured,target=s0350; converged=True;scale=1.0620167167799108
+male_control,s1069,M1_to_validation_case_p95,11.990910514873395,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.214475406782777,mm,measured,target=s0381; converged=True;scale=1.057677897801503
+male_control,s1069,M1_to_validation_case_p95,11.25155028099906,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.157103486507507,mm,measured,target=s0472; converged=True;scale=1.0454605276690232
+male_control,s1069,M1_to_validation_case_p95,9.667634897292372,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.392722111752392,mm,measured,target=s0578; converged=True;scale=0.9949627258594165
+male_control,s1069,M1_to_validation_case_p95,12.146984382344709,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.152241430937337,mm,measured,target=s0731; converged=True;scale=0.9571410107340347
+male_control,s1069,M1_to_validation_case_p95,12.33144096478221,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.645003901157777,mm,measured,target=s0765; converged=True;scale=0.9787669907377483
+male_control,s1069,M1_to_validation_case_p95,12.513915244735841,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,3.8417453686032466,mm,measured,target=s0804; converged=True;scale=1.014256297317458
+male_control,s1069,M1_to_validation_case_p95,10.629333401662558,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.027371722529763,mm,measured,target=s0835; converged=True;scale=1.061784311255883
+male_control,s1069,M1_to_validation_case_p95,10.060571156751617,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.120635393034924,mm,measured,target=s0864; converged=True;scale=1.015763778975911
+male_control,s1069,M1_to_validation_case_p95,10.413687363294096,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.143969434287997,mm,measured,target=s0928; converged=True;scale=1.1024712284242375
+male_control,s1069,M1_to_validation_case_p95,10.084469500371112,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,5.640017067724699,mm,measured,target=s1057; converged=True;scale=1.1080764232394547
+male_control,s1069,M1_to_validation_case_p95,16.140457080221147,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,3.789471582082078,mm,measured,target=s1070; converged=True;scale=1.01536072964627
+male_control,s1069,M1_to_validation_case_p95,9.648964318342744,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.564260846869298,mm,measured,target=s1120; converged=True;scale=0.9998638489664604
+male_control,s1069,M1_to_validation_case_p95,13.8001235232705,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.207115066970394,mm,measured,target=s1121; converged=True;scale=0.9622415300968934
+male_control,s1069,M1_to_validation_case_p95,11.048404916299969,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,3.632065824952705,mm,measured,target=s1233; converged=True;scale=1.047774509252329
+male_control,s1069,M1_to_validation_case_p95,7.931655818924158,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.340658484237581,mm,measured,target=s1355; converged=True;scale=1.0302569030898512
+male_control,s1069,M1_to_validation_case_p95,10.953129791715702,mm,measured,
+male_control,s1069,M1_to_validation_case_mean,4.488800894587311,mm,measured,target=s1404; converged=True;scale=1.0622952966172847
+male_control,s1069,M1_to_validation_case_p95,11.66310396778365,mm,measured,
+male_control,s1069,M2_centroid_size,15930.413816018661,mm,measured,
+male_control,s1069,M3_width_height,1.2514722063986579,ratio,measured,
+male_control,s1069,M3_width_depth,1.6995961596587186,ratio,measured,
+male_control,s1069,M3_femoral_head_distance_width,0.6920517937948817,ratio,measured,
+male_control,s1111,M1_to_validation_case_mean,5.3685954675645435,mm,measured,target=s0030; converged=True;scale=1.012189589642558
+male_control,s1111,M1_to_validation_case_p95,15.996415565752287,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.192328542448334,mm,measured,target=s0089; converged=True;scale=0.9540621200870378
+male_control,s1111,M1_to_validation_case_p95,12.79952408052694,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.408577345857769,mm,measured,target=s0157; converged=True;scale=0.9598039897117634
+male_control,s1111,M1_to_validation_case_p95,12.388801884145785,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.679978276156494,mm,measured,target=s0190; converged=True;scale=0.9601713435689356
+male_control,s1111,M1_to_validation_case_p95,11.554776421195946,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.642317218235632,mm,measured,target=s0350; converged=True;scale=1.0198956254791576
+male_control,s1111,M1_to_validation_case_p95,12.17765061497197,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.69162021555222,mm,measured,target=s0381; converged=True;scale=0.9915243427791665
+male_control,s1111,M1_to_validation_case_p95,13.464776250467626,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.102073503668186,mm,measured,target=s0472; converged=True;scale=0.9847312794531258
+male_control,s1111,M1_to_validation_case_p95,10.083984193550629,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.28018509746856,mm,measured,target=s0578; converged=True;scale=0.9510757053480234
+male_control,s1111,M1_to_validation_case_p95,11.944155031653539,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.926956347318921,mm,measured,target=s0731; converged=True;scale=0.9209443214443286
+male_control,s1111,M1_to_validation_case_p95,13.50812660826681,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.909860064785269,mm,measured,target=s0765; converged=True;scale=0.9277870396532946
+male_control,s1111,M1_to_validation_case_p95,13.408201534748539,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.403683392182323,mm,measured,target=s0804; converged=True;scale=0.9579042383068579
+male_control,s1111,M1_to_validation_case_p95,11.277144520334131,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.350629625183135,mm,measured,target=s0835; converged=True;scale=1.0090500269968101
+male_control,s1111,M1_to_validation_case_p95,10.773812158561608,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.5642208563107145,mm,measured,target=s0864; converged=True;scale=0.9528134182239325
+male_control,s1111,M1_to_validation_case_p95,12.23521064432526,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.834930089886438,mm,measured,target=s0928; converged=False;scale=1.0279170916797018
+male_control,s1111,M1_to_validation_case_p95,12.573718042858593,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.760467096676224,mm,measured,target=s1057; converged=True;scale=1.0641986740926344
+male_control,s1111,M1_to_validation_case_p95,13.284790870644224,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,3.6881537254017585,mm,measured,target=s1070; converged=True;scale=0.9697159629246135
+male_control,s1111,M1_to_validation_case_p95,9.472978292946092,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.395321082199676,mm,measured,target=s1120; converged=True;scale=0.9532109491674147
+male_control,s1111,M1_to_validation_case_p95,13.063150158636947,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,3.927902100756326,mm,measured,target=s1121; converged=True;scale=0.9276983841088413
+male_control,s1111,M1_to_validation_case_p95,10.570820759107628,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,3.6597449371219173,mm,measured,target=s1233; converged=True;scale=0.9938589894424891
+male_control,s1111,M1_to_validation_case_p95,8.362663029266628,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,3.7310005593509756,mm,measured,target=s1355; converged=True;scale=0.9892402417533427
+male_control,s1111,M1_to_validation_case_p95,9.45863249436615,mm,measured,
+male_control,s1111,M1_to_validation_case_mean,4.228309434531658,mm,measured,target=s1404; converged=True;scale=1.027150956642226
+male_control,s1111,M1_to_validation_case_p95,11.278413735502117,mm,measured,
+male_control,s1111,M2_centroid_size,16259.086670443074,mm,measured,
+male_control,s1111,M3_width_height,1.253806846090265,ratio,measured,
+male_control,s1111,M3_width_depth,1.7948304171248959,ratio,measured,
+male_control,s1111,M3_femoral_head_distance_width,0.6620677522191639,ratio,measured,
+male_control,s1267,M1_to_validation_case_mean,4.574973325132364,mm,measured,target=s0030; converged=True;scale=0.9984132984870338
+male_control,s1267,M1_to_validation_case_p95,11.878309970556714,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.628786327647234,mm,measured,target=s0089; converged=True;scale=0.9237631007328481
+male_control,s1267,M1_to_validation_case_p95,13.551075178805199,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.2287502360728375,mm,measured,target=s0157; converged=True;scale=0.9169758643023626
+male_control,s1267,M1_to_validation_case_p95,11.659575500712368,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.754580041855446,mm,measured,target=s0190; converged=True;scale=0.9280335612809694
+male_control,s1267,M1_to_validation_case_p95,13.047773114364892,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.797037472406218,mm,measured,target=s0350; converged=True;scale=0.9915155431256361
+male_control,s1267,M1_to_validation_case_p95,12.526361311597642,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,5.021340579651977,mm,measured,target=s0381; converged=True;scale=0.948713136111697
+male_control,s1267,M1_to_validation_case_p95,14.485439986979973,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.743670704900745,mm,measured,target=s0472; converged=True;scale=0.9303089407817583
+male_control,s1267,M1_to_validation_case_p95,11.895520526911316,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.934074180273384,mm,measured,target=s0578; converged=True;scale=0.9198363414322336
+male_control,s1267,M1_to_validation_case_p95,13.474292435350266,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.627695138460202,mm,measured,target=s0731; converged=True;scale=0.8822043801771466
+male_control,s1267,M1_to_validation_case_p95,13.83286267592828,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.403416622192802,mm,measured,target=s0765; converged=True;scale=0.8864102636591101
+male_control,s1267,M1_to_validation_case_p95,12.108433864537746,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,3.773461511694964,mm,measured,target=s0804; converged=True;scale=0.9383683998532864
+male_control,s1267,M1_to_validation_case_p95,10.43379698080248,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.159093604244786,mm,measured,target=s0835; converged=True;scale=0.9659092405802325
+male_control,s1267,M1_to_validation_case_p95,10.978296034610121,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.420037263642003,mm,measured,target=s0864; converged=True;scale=0.911326888131685
+male_control,s1267,M1_to_validation_case_p95,12.612838662052006,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.651542789977558,mm,measured,target=s0928; converged=False;scale=0.9968816659420507
+male_control,s1267,M1_to_validation_case_p95,11.935021850176721,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,5.821720651815276,mm,measured,target=s1057; converged=True;scale=1.0054459663230317
+male_control,s1267,M1_to_validation_case_p95,15.697782031628325,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,3.566654301558732,mm,measured,target=s1070; converged=True;scale=0.9493022102504426
+male_control,s1267,M1_to_validation_case_p95,8.788677318112155,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,3.9618718137497204,mm,measured,target=s1120; converged=False;scale=0.9450719480088284
+male_control,s1267,M1_to_validation_case_p95,9.301219204430193,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,3.9179828326023105,mm,measured,target=s1121; converged=True;scale=0.8814164230145609
+male_control,s1267,M1_to_validation_case_p95,11.173856170358418,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.259344876072669,mm,measured,target=s1233; converged=False;scale=0.9620674183073596
+male_control,s1267,M1_to_validation_case_p95,10.423645952243,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.926359281620024,mm,measured,target=s1355; converged=True;scale=0.9094896601137468
+male_control,s1267,M1_to_validation_case_p95,15.46582338176959,mm,measured,
+male_control,s1267,M1_to_validation_case_mean,4.9255867475145205,mm,measured,target=s1404; converged=False;scale=0.9580491682693361
+male_control,s1267,M1_to_validation_case_p95,13.558829461774307,mm,measured,
+male_control,s1267,M2_centroid_size,17007.144273906044,mm,measured,
+male_control,s1267,M3_width_height,1.2235382940192858,ratio,measured,
+male_control,s1267,M3_width_depth,1.762490861504034,ratio,measured,
+male_control,s1267,M3_femoral_head_distance_width,0.6170964868433718,ratio,measured,
+male_control,s1336,M1_to_validation_case_mean,4.323564721883235,mm,measured,target=s0030; converged=True;scale=1.0309240672586044
+male_control,s1336,M1_to_validation_case_p95,11.474668551373986,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.4246830717599,mm,measured,target=s0089; converged=True;scale=0.9748531823910114
+male_control,s1336,M1_to_validation_case_p95,8.844908015898094,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.499979563580802,mm,measured,target=s0157; converged=True;scale=0.9857235369392003
+male_control,s1336,M1_to_validation_case_p95,9.62504459993378,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.631440561856781,mm,measured,target=s0190; converged=True;scale=0.9976236783329098
+male_control,s1336,M1_to_validation_case_p95,8.824174433551082,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.7492991447841626,mm,measured,target=s0350; converged=True;scale=1.0388775577016593
+male_control,s1336,M1_to_validation_case_p95,8.963299159048104,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.93982057138159,mm,measured,target=s0381; converged=True;scale=1.007419909021664
+male_control,s1336,M1_to_validation_case_p95,10.79726647580729,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.3641182684269033,mm,measured,target=s0472; converged=False;scale=1.0167235811067126
+male_control,s1336,M1_to_validation_case_p95,7.761338902359314,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.5518843572123107,mm,measured,target=s0578; converged=True;scale=0.9694960968809494
+male_control,s1336,M1_to_validation_case_p95,9.705614478646824,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,4.2679835418567595,mm,measured,target=s0731; converged=True;scale=0.9269523178446609
+male_control,s1336,M1_to_validation_case_p95,12.037282755697966,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,4.119182272115932,mm,measured,target=s0765; converged=True;scale=0.945938454132948
+male_control,s1336,M1_to_validation_case_p95,11.051697943481386,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.721425328569697,mm,measured,target=s0804; converged=True;scale=0.978283915477934
+male_control,s1336,M1_to_validation_case_p95,10.046587245946549,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.755022287819333,mm,measured,target=s0835; converged=True;scale=1.0341375057984181
+male_control,s1336,M1_to_validation_case_p95,9.197914966153212,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.7362519488851422,mm,measured,target=s0864; converged=True;scale=0.9780675678707156
+male_control,s1336,M1_to_validation_case_p95,10.057518401138504,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,4.038115475335141,mm,measured,target=s0928; converged=False;scale=1.0562413708809486
+male_control,s1336,M1_to_validation_case_p95,9.501367278769484,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,4.604433371675187,mm,measured,target=s1057; converged=True;scale=1.0845355487369421
+male_control,s1336,M1_to_validation_case_p95,12.579521773053365,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.4460181449069296,mm,measured,target=s1070; converged=True;scale=0.9797316042904152
+male_control,s1336,M1_to_validation_case_p95,8.569915205899566,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,4.0734087562625385,mm,measured,target=s1120; converged=True;scale=0.9749790661017941
+male_control,s1336,M1_to_validation_case_p95,10.965646690078659,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.7313142267177817,mm,measured,target=s1121; converged=True;scale=0.9485671551047032
+male_control,s1336,M1_to_validation_case_p95,9.201039956175956,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,2.995939276018771,mm,measured,target=s1233; converged=True;scale=1.0125092499002941
+male_control,s1336,M1_to_validation_case_p95,6.750017155486551,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,3.7043375023496172,mm,measured,target=s1355; converged=True;scale=1.0115441747635854
+male_control,s1336,M1_to_validation_case_p95,9.128675568524141,mm,measured,
+male_control,s1336,M1_to_validation_case_mean,4.042163673401113,mm,measured,target=s1404; converged=True;scale=1.0365413149422882
+male_control,s1336,M1_to_validation_case_p95,10.034047222710894,mm,measured,
+male_control,s1336,M2_centroid_size,16101.650357221773,mm,measured,
+male_control,s1336,M3_width_height,1.2503661242153266,ratio,measured,
+male_control,s1336,M3_width_depth,1.6309834080035086,ratio,measured,
+male_control,s1336,M3_femoral_head_distance_width,0.6385252161038356,ratio,measured,
+male_control,s1340,M1_to_validation_case_mean,4.595742009410208,mm,measured,target=s0030; converged=True;scale=0.9962068567444524
+male_control,s1340,M1_to_validation_case_p95,11.18657483210217,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.458166158013436,mm,measured,target=s0089; converged=True;scale=0.9273307792185727
+male_control,s1340,M1_to_validation_case_p95,9.565141907087666,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.0478821236900275,mm,measured,target=s0157; converged=True;scale=0.9330169118622134
+male_control,s1340,M1_to_validation_case_p95,10.550212012255475,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.375711517906259,mm,measured,target=s0190; converged=True;scale=0.9385395395033083
+male_control,s1340,M1_to_validation_case_p95,11.277149518838005,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.823328380545185,mm,measured,target=s0350; converged=False;scale=1.0021602736822388
+male_control,s1340,M1_to_validation_case_p95,9.411959774892892,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.473907282209474,mm,measured,target=s0381; converged=True;scale=0.9669543795965242
+male_control,s1340,M1_to_validation_case_p95,12.105700664052133,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.7832658785710866,mm,measured,target=s0472; converged=True;scale=0.972651171731697
+male_control,s1340,M1_to_validation_case_p95,8.413263870341297,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.799632524696433,mm,measured,target=s0578; converged=False;scale=0.9286238625191077
+male_control,s1340,M1_to_validation_case_p95,10.144862859733875,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.8788815913171115,mm,measured,target=s0731; converged=True;scale=0.8840694622868847
+male_control,s1340,M1_to_validation_case_p95,13.654555091903283,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.665587583029752,mm,measured,target=s0765; converged=True;scale=0.9060303062199524
+male_control,s1340,M1_to_validation_case_p95,12.033960225542856,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.24669120147397,mm,measured,target=s0804; converged=True;scale=0.9306028137054828
+male_control,s1340,M1_to_validation_case_p95,10.862174541547699,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.116280764015348,mm,measured,target=s0835; converged=True;scale=0.984959212947944
+male_control,s1340,M1_to_validation_case_p95,9.617420349022114,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.356795509802361,mm,measured,target=s0864; converged=True;scale=0.9240622203611855
+male_control,s1340,M1_to_validation_case_p95,11.044605314759572,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.343194753069738,mm,measured,target=s0928; converged=True;scale=1.0150728267331492
+male_control,s1340,M1_to_validation_case_p95,10.374316828017108,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.687418220878911,mm,measured,target=s1057; converged=True;scale=1.0409804741107733
+male_control,s1340,M1_to_validation_case_p95,12.901879066420037,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.404358279898548,mm,measured,target=s1070; converged=True;scale=0.9480055729057744
+male_control,s1340,M1_to_validation_case_p95,8.284153732219647,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.45150696569897,mm,measured,target=s1120; converged=True;scale=0.9224352689988732
+male_control,s1340,M1_to_validation_case_p95,12.924924945883276,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.6560523440117225,mm,measured,target=s1121; converged=True;scale=0.9120593072953227
+male_control,s1340,M1_to_validation_case_p95,9.641602570618392,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.546448144705378,mm,measured,target=s1233; converged=True;scale=0.9646014965990874
+male_control,s1340,M1_to_validation_case_p95,8.242038786377371,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,3.9107816202699404,mm,measured,target=s1355; converged=True;scale=0.9646212961695603
+male_control,s1340,M1_to_validation_case_p95,9.884984629517927,mm,measured,
+male_control,s1340,M1_to_validation_case_mean,4.090513803452944,mm,measured,target=s1404; converged=True;scale=1.0033524792888686
+male_control,s1340,M1_to_validation_case_p95,9.66005332756718,mm,measured,
+male_control,s1340,M2_centroid_size,16893.558454885693,mm,measured,
+male_control,s1340,M3_width_height,1.296114611344871,ratio,measured,
+male_control,s1340,M3_width_depth,1.6741246851033378,ratio,measured,
+male_control,s1340,M3_femoral_head_distance_width,0.8909016296605371,ratio,measured,
+male_control,s0062,M1_mean,4.363346734885697,mm,measured,
+male_control,s0062,M1_p95_mean,12.194650938393462,mm,measured,
+male_control,s0108,M1_mean,4.980071929618795,mm,measured,
+male_control,s0108,M1_p95_mean,14.589784316537353,mm,measured,
+male_control,s0119,M1_mean,4.440161987342969,mm,measured,
+male_control,s0119,M1_p95_mean,12.006193936843905,mm,measured,
+male_control,s0442,M1_mean,4.65665761683895,mm,measured,
+male_control,s0442,M1_p95_mean,12.945603913531345,mm,measured,
+male_control,s0611,M1_mean,4.400344410146921,mm,measured,
+male_control,s0611,M1_p95_mean,12.181836444985418,mm,measured,
+male_control,s0971,M1_mean,4.003069276030909,mm,measured,
+male_control,s0971,M1_p95_mean,10.681676048646235,mm,measured,
+male_control,s1016,M1_mean,5.536730821975075,mm,measured,
+male_control,s1016,M1_p95_mean,15.701011287459878,mm,measured,
+male_control,s1069,M1_mean,4.223009816801662,mm,measured,
+male_control,s1069,M1_p95_mean,11.067412135599161,mm,measured,
+male_control,s1111,M1_mean,4.416516903745574,mm,measured,
+male_control,s1111,M1_p95_mean,11.889416518658544,mm,measured,
+male_control,s1267,M1_mean,4.528475252527894,mm,measured,
+male_control,s1267,M1_p95_mean,12.325211029223889,mm,measured,
+male_control,s1336,M1_mean,3.7962088603237927,mm,measured,
+male_control,s1336,M1_p95_mean,9.767502227606414,mm,measured,
+male_control,s1340,M1_mean,4.129149840793658,mm,measured,
+male_control,s1340,M1_p95_mean,10.561025468985715,mm,measured,

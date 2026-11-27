@@ -9,7 +9,7 @@
 - **Branch:** `etapa-1-fundacao`
 - **Commit(s):** a preencher
 - **Linha de pesquisa:** `LP01`
-- **Situação:** `planejado`
+- **Situação:** `em andamento — rodada 1 inconclusiva (V0) e com comparador inválido; rodada 2 registrada`
 
 ## 2. Problema
 Até o EXP-0022, as geometrias femininas só eram comparadas com uma mulher (a doadora da Visible Human Female). O EXP-0023 mostrou que o TotalSegmentator V3 (CC BY 4.0) tem centenas de exames de mulheres com quadril, sacro e fêmur segmentados. Falta transformar isso em **faixas de variação** contra as quais qualquer pelve feminina do atlas (atual ou adaptada) possa ser julgada.
@@ -63,7 +63,21 @@ A pelve é o osso com maior dimorfismo sexual (largura relativa, abertura superi
 Leitura: **H24 sustentada** se V0, V1, V2 e V3; **parcial** se V0, V1 e V2 sem V3; **rejeitada** se V1 vale e V2 falha; **inconclusiva** se V0 ou V1 falham.
 
 ## 8. Resultados
-A preencher.
+
+### 8.1 Rodada 1 (preservada; comparador `hra-f` inválido)
+Execução por Codex 2 em 2026-11-27 (`pesquisa/resultados/EXP-0024/RELATORIO.md`); máscaras baixadas pelo revisor (390 arquivos, 78 casos, 43 MB; nenhuma TC), porque o ambiente do agente não tinha rede.
+- QC: 31/58 mulheres passaram Q1/Q2 e permaneceram únicas em Q4 (extensão desnecessária); **12/20 homens** passaram Q1/Q2. Divisão: 10 desenvolvimento, 21 validação. Script congelado SHA-256 `9b75b023…0654bcd`.
+- Faixa feminina M1 médio (p2,5–p97,5): 3,42–4,72 mm.
+- V0: **falha** (12 homens, não 20). V1: AUC 0,837 (com 12 homens). V2 "`hra-f`": M1 6,64 mm. V3 `bp3d-m`: M1 5,01 mm (fora da faixa).
+- Veredito pela regra: **inconclusivo** (V0).
+
+**Erro de implementação achado na revisão:** o comparador rotulado `hra-f` não é o atlas `hra-f/1.10-1`. `analisar_local.py` reaproveitou `pelvis_sources` do EXP-0022 e montou a pelve a partir do **Female Atlas externo** (fragmentos HRA + quadris e sacro BodyParts3D deformados, com duplicação) e usou fêmures BodyParts3D deformados (`BP3D_FJ3259/FJ3365`). Sinal do erro: razão distância entre cabeças femorais / largura da pelve = 1,08, anatomicamente impossível. O resultado V2 da rodada 1 não se refere ao `hra-f` e fica sem valor para H24.
+
+### 8.2 Rodada 2 — correção e emenda registradas antes da execução
+Registradas depois de ver os resultados da rodada 1 (V1 com 12 homens já conhecido), e por isso declaradas aqui:
+1. **Correção (implementação):** comparador `hra-f` = malhas do atlas publicado `web/public/atlas/hra-f/1.10-1` (sistema esquelético), selecionadas pelo `indice.json` (ossos do quadril E/D, sacro, fêmures E/D); `bp3d-m` conferido da mesma forma em `web/public/atlas/bp3d-m/4.0-1`. A lista de malhas usadas fica registrada.
+2. **Emenda (amostra masculina):** os homens que falham no QC são substituídos pelos demais do pool masculino (77 − 20 = 57), em ordem sorteada com seed `240025`, até 20 passarem Q1/Q2/Q4 — a mesma lógica de extensão já usada para as mulheres.
+3. Nada mais muda: mulheres, divisão, parâmetros congelados, métricas e critérios V0–V3 iguais.
 
 ## 9. Validação
 A preencher.
