@@ -23,8 +23,8 @@ O produto foi construído e testado só por agentes de IA e testes automáticos.
 Teste de uso formativo com poucos participantes (5 a 8) serve para achar problemas, não para estimar proporções na população. A SUS (System Usability Scale) é um questionário de 10 itens de uso comum; 68 é o valor usualmente adotado como média de referência (referência a confirmar e registrar em `pesquisa/REFERENCIAS.md` antes da análise).
 
 ## 5. Materiais e ambiente
-- **Protocolo:** `pesquisa/validacao-medica/usabilidade/ROTEIRO.md` (roteiro, tarefas T1–T10, SUS, perguntas U1–U4, entrevista).
-- **Dados:** `pesquisa/validacao-medica/usabilidade/PACIENTES.md` — 8 pacientes fictícios em 5 unidades/especialidades, carregados por `supabase/seed_avaliacao.mjs --rodada NN` na homologação. Quadros redigidos com apoio de IA, **sem revisão médica**.
+- **Protocolo:** `pesquisa/validacao-medica/usabilidade/ROTEIRO.md` (roteiro, tarefas T1–T11, SUS, perguntas U1–U4, entrevista).
+- **Dados:** `pesquisa/validacao-medica/usabilidade/PACIENTES.md` — 10 pacientes fictícios em 5 unidades/especialidades, carregados por `supabase/seed_avaliacao.mjs --rodada NN` na homologação. Quadros redigidos com apoio de IA, **sem revisão médica**.
 - **Registro:** `FICHA.csv` (tarefas) e `QUESTIONARIO.csv` (SUS e utilidade), na mesma pasta.
 - **Ambiente:** app de homologação no commit vigente (registrar o hash na sessão), navegador do participante ou do moderador.
 - **Ética e privacidade:** nenhum dado real de paciente. Participante identificado só por código (`P01`…); nome, CRM e contato nunca entram no repositório. Gravação só com consentimento. **Se os resultados forem publicados como pesquisa, o protocolo precisa passar antes pelo sistema CEP/Conep**; como avaliação interna de produto, confirmar com a instituição se basta o consentimento registrado. Essa decisão é humana e está pendente.
@@ -45,6 +45,8 @@ Com n participantes analisados (excluído o piloto):
 - **C5 — falhas críticas:** zero falhas críticas (lado trocado, paciente errado, estrutura incompatível com o diagnóstico, sigilo exposto) em todas as tarefas. Cada falha crítica vira problema obrigatório a corrigir antes do piloto clínico, independentemente dos outros critérios.
 
 Veredito: H28a sustentada se C1 e C2; H28b se C3; H28c se C4. Com menos de 5 participantes analisados, o experimento fica **inconclusivo** e os dados viram só lista de problemas.
+
+**Adendo 1 (2026-11-27, antes de qualquer sessão, inclusive o piloto):** acrescentados a família P09/P10 (HIV na gestação, O98.7 restrita) e a tarefa T11, por pedido do usuário. T11 é **só observacional**: não entra em C1–C4 e nenhum critério foi alterado. Vale para C5 apenas se O98.7 aparecer na conta da Pediatria. Se a Pediatria concluir "nada relevante" a partir de "Nenhuma condição disponível", isso entra na lista de problemas como problema de desenho do produto (gravidade decidida na análise), não como falha crítica.
 
 **Regra de parada:** se as 2 primeiras sessões (após o piloto) tiverem a mesma falha crítica, interromper, corrigir o produto, registrar a mudança e recomeçar a contagem.
 

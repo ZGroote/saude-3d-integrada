@@ -99,6 +99,15 @@ P07: Davi Santos Fictício, masculino, nascido na data acima (≈ 7 meses). **Se
 
 Uso: T8 (família mãe–filho, histórico gestacional visto pela Pediatria).
 
+### P09 — Marina Oliveira Fictícia e P10 — Lucas Oliveira Fictício
+P09: feminino, 26 anos. Vínculos: UBS Centro, Maternidade. Gestação **encerrada**: DUM = hoje − 285 d; pré-natal DUM + 56 d; condição **O98.7** (HIV complicando a gravidez) pela Obstetrícia na semana 8 — fica **restrita** pela regra de sigilo (só a Maternidade vê). Nascimento (`registrar_nascimento`, Obstetrícia) em DUM + 273 d (≈ 12 dias antes da sessão) criando P10: peso 2890 g, 39 semanas, Apgar 5 min = 9. Sem achados.
+
+P10: Lucas Oliveira Fictício, masculino, sem CNS, identificado pelo nascimento ligado à gestação da P09. Vínculos: Maternidade (do nascimento) e Pediatria. Sem achados (primeira consulta).
+
+O que cada unidade vê no histórico gestacional do P10: Pediatria vê a mãe, peso, idade gestacional e Apgar, e **"Nenhuma condição disponível"**; Maternidade vê também O98.7. A carga confere isso no banco e aborta se não bater.
+
+Uso: T11 (conflito entre sigilo da mãe e cuidado do recém-nascido exposto ao HIV).
+
 ### P08 — Sam Costa Fictício
 Sexo **indeterminado**, 36 anos. Vínculo: UBS Centro.
 

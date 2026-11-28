@@ -1,6 +1,6 @@
 # Contrato — carga de pacientes fictícios para avaliação com médicos (EXP-0028)
 
-Fonte do conteúdo: `pesquisa/validacao-medica/usabilidade/PACIENTES.md` (unidades, contas, rodadas, CNS, 8 pacientes, achados, gestações, regras). Seguir à risca; não inventar achados nem trocar estruturas.
+Fonte do conteúdo: `pesquisa/validacao-medica/usabilidade/PACIENTES.md` (unidades, contas, rodadas, CNS, 10 pacientes, achados, gestações, regras). Seguir à risca; não inventar achados nem trocar estruturas.
 
 ## Entregas
 1. **Conta nova** em `supabase/seed.sql`: usuário `20000000-0000-4000-8000-00000000000a`, `mfc@saude3d.invalid`, perfil "Profissional Medicina de Família", UBS Centro (`10000000-…-0001`), especialidade `medicina_familia`, papel `profissional`. O revisor roda `python supabase/seed_homologacao_complemento.py` depois (você não tem rede); não rode.
@@ -8,7 +8,7 @@ Fonte do conteúdo: `pesquisa/validacao-medica/usabilidade/PACIENTES.md` (unidad
 3. **`supabase/seed_avaliacao.mjs --rodada NN`** (NN = 00–99, obrigatório):
    - usa `login`/`rpc` de `etapa4_comum.mjs` (acrescente as contas que faltarem em `emails`: mfc, pediatria, admins de cada unidade presentes em `seed.sql`);
    - **antes de criar**: para cada paciente cujo CNS começa com `79` e cuja rodada ≠ NN, encerrar todos os vínculos ativos com `encerrar_vinculo` (pelo admin da unidade do vínculo). Nada é apagado;
-   - cria os 8 pacientes da rodada (CNS conforme `PACIENTES.md`), vínculos, achados (observação `AVAL-NN-<paciente>-<CID>`), gestações, condição, nascimento e a correção do P04 (`p_substitui`);
+   - cria os pacientes da rodada (CNS conforme `PACIENTES.md`), vínculos, achados (observação `AVAL-NN-<paciente>-<CID>`), gestações, condição, nascimento e a correção do P04 (`p_substitui`);
    - idempotente dentro da mesma rodada: rodar de novo não duplica (conferir por CNS e por observação);
    - local: escolher a malha pelo nome no `indice.json` do atlas do paciente (lista de candidatas na ordem do `PACIENTES.md`; casar por `nome_pt`/`nome_en`/`malha`, sem acento e sem caixa). Sem candidata → sem local, e anotar;
    - imprime no fim um resumo: por paciente, achados criados, com local (malha escolhida) e sem local por falta de malha.
@@ -29,3 +29,14 @@ As três incompatibilidades apontadas estão resolvidas assim (o `PACIENTES.md` 
 9. **Idempotência:** paciente por CNS (leitura de serviço); achado por observação `AVAL-NN-<paciente>-<CID>` em `listar_achados`; gestação por mãe + DUM.
 10. **Lacuna nova (web):** em `web/src/lib/lacunas.ts`, `"bp3d-m/4.0-1": [{ nome: "Pulmão", termos: ["pulmao", "pulmoes", "lung"], parcial: "só a árvore brônquica está no corpo" }]`. Como a mensagem parcial do `BuscaEstrutura` hoje cita púbis/ísquio/acetábulo fixo, passe a texto do próprio dado: acrescente o campo opcional `detalhe` à `Lacuna` e use-o (hra-f quadril: "Púbis, ísquio e acetábulo não existem neste corpo."; bp3d-m pulmão: "Registre no brônquio ou sem local e descreva na observação."). Teste vitest para "pulm" no `bp3d-m`.
 11. Verificar: `--seco` com as malhas fixas (todas resolvidas), tsc/vitest do web. A carga real o revisor roda.
+
+## Rodada 3 do contrato — família com HIV na gestação (P09/P10)
+Só `supabase/seed_avaliacao.mjs`. Não rode sem `--seco`; não commite.
+12. **Pacientes novos** em `pacientes`:
+    - `P09` "Marina Oliveira Fictícia", feminino, 26 anos, `hra-f`/`1.10-1`, unidades `ubs`, `maternidade`, gestação encerrada.
+    - `P10` "Lucas Oliveira Fictício", masculino, sem CNS, sem atlas, unidades `maternidade`, `pediatria`, nascimento. Nenhum achado para P09 nem P10.
+13. **Gestação P09** no laço de gestações: DUM = hoje − 285 d; pré-natal = DUM + 56 d; condição `O98.7` (Obstetrícia) na **semana 8**. Mantenha as semanas de P03 e P06 exatamente como hoje (troque o cálculo por um campo `semana` por configuração só se der o mesmo número).
+14. **Nascimentos generalizados:** troque o bloco fixo da P07 por um laço sobre `[{ mae: 'P06', crianca: 'P07', peso: 3150, ig: 39, apgar: 9 }, { mae: 'P09', crianca: 'P10', peso: 2890, ig: 39, apgar: 9 }]` (data = DUM da mãe + 273 d, sexo e nome da criança vindos de `pacientes`; mesma idempotência pelo nascimento já existente na data; depois `garantirVinculo(..., 'pediatria')`). Ajuste `dataNascimento` e os filtros `p.id !== 'P07'` para valer para toda criança com `nascimento: true`.
+15. **Conferência no fim do `mainReal`** (só leitura): `historico_gestacional_crianca` de P10 logado como `emails.pediatria` **não** pode trazer `O98.7` e precisa trazer peso 2890; logado como `emails.obstetricia` **precisa** trazer `O98.7`. Falhou → `throw`. Imprima `P10 sigilo: pediatria não vê O98.7; maternidade vê`.
+16. `--seco`: textos de contagem ("10 pacientes"), fluxos e datas (incluir P09 DUM/nascimento).
+17. Verificar: `node supabase/seed_avaliacao.mjs --rodada 01 --seco` sem erro, e `node --check supabase/seed_avaliacao.mjs`.

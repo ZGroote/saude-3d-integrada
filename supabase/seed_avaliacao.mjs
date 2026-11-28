@@ -26,6 +26,12 @@ const unidades = {
   pediatria: '10000000-0000-4000-8000-000000000004',
 };
 
+const gestacoesConfig = [
+  { paciente: 'P03', offset: 168, prenatal: 28, condicao: 'O24.4', semana: 24 },
+  { paciente: 'P06', offset: 485, prenatal: 35, condicao: 'O13', semana: 39 },
+  { paciente: 'P09', offset: 285, prenatal: 56, condicao: 'O98.7', semana: 8 },
+];
+
 const pacientes = [
   { id: 'P01', nome: 'Ana Lima Fictícia', sexo: 'feminino', idade: 58, atlas: 'hra-f', versao: '1.10-1', unidades: ['ubs', 'cardio'] },
   { id: 'P02', nome: 'José Pereira Fictício', sexo: 'masculino', idade: 65, atlas: 'bp3d-m', versao: '4.0-1', unidades: ['ubs', 'cardio'] },
@@ -33,8 +39,10 @@ const pacientes = [
   { id: 'P04', nome: 'Pedro Alves Fictício', sexo: 'masculino', idade: 41, atlas: 'bp3d-m', versao: '4.0-1', unidades: ['ubs'] },
   { id: 'P05', nome: 'Lúcia Rocha Fictícia', sexo: 'feminino', idade: 47, atlas: 'hra-f', versao: '1.10-1', unidades: ['ubs', 'maternidade'] },
   { id: 'P06', nome: 'Juliana Santos Fictícia', sexo: 'feminino', idade: 32, atlas: 'hra-f', versao: '1.10-1', unidades: ['ubs', 'maternidade'], gestacao: 'encerrada' },
-  { id: 'P07', nome: 'Davi Santos Fictício', sexo: 'masculino', idade: null, atlas: null, versao: null, unidades: ['maternidade', 'pediatria'], nascimento: true },
+  { id: 'P07', nome: 'Davi Santos Fictício', sexo: 'masculino', idade: null, atlas: null, versao: null, unidades: ['maternidade', 'pediatria'], nascimento: true, mae: 'P06' },
   { id: 'P08', nome: 'Sam Costa Fictício', sexo: 'indeterminado', idade: 36, atlas: 'hra-f', versao: '1.10-1', unidades: ['ubs'] },
+  { id: 'P09', nome: 'Marina Oliveira Fictícia', sexo: 'feminino', idade: 26, atlas: 'hra-f', versao: '1.10-1', unidades: ['ubs', 'maternidade'], gestacao: 'encerrada' },
+  { id: 'P10', nome: 'Lucas Oliveira Fictício', sexo: 'masculino', idade: null, atlas: null, versao: null, unidades: ['maternidade', 'pediatria'], nascimento: true, mae: 'P09' },
 ];
 
 // Malhas fixadas na revisão de PACIENTES.md. A ausência de qualquer ID no índice aborta.
@@ -95,7 +103,11 @@ function anosAtras(anos) {
   return hoje.toISOString().slice(0, 10);
 }
 function dataNascimento(paciente) {
-  if (paciente.id === 'P07') return somarDias(somarDias(hojeISO(), -485), 273);
+  if (paciente.nascimento) {
+    const gestacao = gestacoesConfig.find((config) => config.paciente === paciente.mae);
+    assert.ok(gestacao, `Gestação de ${paciente.id} não configurada`);
+    return somarDias(somarDias(hojeISO(), -gestacao.offset), 273);
+  }
   return anosAtras(paciente.idade);
 }
 
@@ -157,20 +169,23 @@ async function mainSeco() {
   const resolucoes = await resolverAncoras();
 
   console.log(`SECO — rodada ${rodada}; sem login e sem chamadas de rede.`);
-  console.log('Plano: 8 pacientes, 25 achados; idempotência prevista por CNS e observação AVAL-<rodada>-<paciente>-<CID>.');
+  console.log(`Plano: ${pacientes.length} pacientes, ${achados.length} achados; idempotência prevista por CNS e observação AVAL-<rodada>-<paciente>-<CID>.`);
   for (const paciente of pacientes) {
     const registros = achados.filter((item) => item.paciente === paciente.id);
     const comLocal = registros.filter((item) => resolucoes.get(item)?.ancora);
     const semLocal = registros.filter((item) => !resolucoes.get(item)?.ancora);
-    const identificador = paciente.id === 'P07' ? 'sem CNS (identificado pelo nascimento)' : `CNS=${cnsPara(paciente.id)}`;
+    const identificador = paciente.nascimento ? 'sem CNS (identificado pelo nascimento)' : `CNS=${cnsPara(paciente.id)}`;
     console.log(`${paciente.id} ${paciente.nome}: sexo=${paciente.sexo}; nascimento=${dataNascimento(paciente)}; ${identificador}; unidades=${paciente.unidades.join(',')}; ${registros.length} achados; ${comLocal.length} com malha e GLB válidos; ${semLocal.length} sem local.`);
     for (const finding of registros) {
       const resolucao = resolucoes.get(finding);
       console.log(`  ${finding.cid10} (${finding.autor}) início ${dataInicio(finding)} → ${resolucao.entrada?.malha ?? 'sem local'}${resolucao.motivo ? `; ${resolucao.motivo}` : ''}`);
     }
   }
-  console.log('Fluxos previstos: links por unidade; achados com observação AVAL-' + rodada + '-<paciente>-<CID>; gestações de P03/P06; condição gestacional; nascimento P07; correção P04 via p_substitui.');
-  console.log(`Datas da rodada: hoje=${hojeISO()}; P03 DUM=${somarDias(hojeISO(), -168)}, pré-natal=${somarDias(hojeISO(), -140)}; P06 DUM=${somarDias(hojeISO(), -485)}, nascimento=${somarDias(hojeISO(), -212)}.`);
+  console.log('Fluxos previstos: links por unidade; achados com observação AVAL-' + rodada + '-<paciente>-<CID>; gestações P03/P06/P09 e respectivas condições; nascimentos P07/P10; correção P04 via p_substitui.');
+  const dumP03 = somarDias(hojeISO(), -168);
+  const dumP06 = somarDias(hojeISO(), -485);
+  const dumP09 = somarDias(hojeISO(), -285);
+  console.log(`Datas da rodada: hoje=${hojeISO()}; P03 DUM=${dumP03}, pré-natal=${somarDias(dumP03, 28)}; P06 DUM=${dumP06}, nascimento=${somarDias(dumP06, 273)}; P09 DUM=${dumP09}, pré-natal=${somarDias(dumP09, 56)}, nascimento=${somarDias(dumP09, 273)}.`);
 }
 
 // Leituras de controle (rodadas, vínculos, CNS) pelo dono do banco, só SELECT: a chave de serviço não lê pacientes (0008).
@@ -257,7 +272,7 @@ async function mainReal() {
 
   const linksEncerrados = await encerrarRodadasAnteriores();
   const idsPacientes = new Map();
-  for (const paciente of pacientes.filter((p) => p.id !== 'P07')) {
+  for (const paciente of pacientes.filter((p) => !p.nascimento)) {
     const cns = cnsPara(paciente.id);
     let existente = await pacientePorCns(cns);
     if (!existente) {
@@ -289,10 +304,7 @@ async function mainReal() {
   const obstetra = await cliente(emails.obstetricia);
   const hoje = hojeISO();
   const dadosGestacoes = new Map();
-  for (const config of [
-    { paciente: 'P03', offset: 168, prenatal: 28, condicao: 'O24.4' },
-    { paciente: 'P06', offset: 485, prenatal: 35, condicao: 'O13' },
-  ]) {
+  for (const config of gestacoesConfig) {
     const motherId = idsPacientes.get(config.paciente);
     const dum = somarDias(hoje, -config.offset);
     const prenatal = somarDias(dum, config.prenatal);
@@ -304,29 +316,33 @@ async function mainReal() {
       if (!id) throw new Error(`registrar_gestacao não retornou ID para ${config.paciente}.`);
       gestacao = { gestacao_id: id, dum, condicoes: [], nascimentos: [], desfecho: 'em_curso' };
     }
-    const inicioCondicaoP03 = somarDias(dum, 170) > hoje ? hoje : somarDias(dum, 170);
-    const semana = config.paciente === 'P03'
-      ? Math.floor((new Date(`${inicioCondicaoP03}T00:00:00Z`) - new Date(`${dum}T00:00:00Z`)) / 604800000)
-      : Math.floor((new Date(`${somarDias(dum, 273)}T00:00:00Z`) - new Date(`${dum}T00:00:00Z`)) / 604800000);
-    await garantirCondicao(gestacao.gestacao_id, gestacao, config.condicao, semana, obstetra);
+    // P03 permanece na semana 24 (hoje é DUM+168; DUM+170 ainda está no futuro);
+    // P06 permanece na semana 39 (DUM+273); P09 é a semana 8 registrada no protocolo.
+    await garantirCondicao(gestacao.gestacao_id, gestacao, config.condicao, config.semana, obstetra);
     dadosGestacoes.set(config.paciente, { gestacao, dum, id: gestacao.gestacao_id });
   }
 
-  const gestacaoP06 = dadosGestacoes.get('P06');
-  const dataNascimentoP07 = somarDias(gestacaoP06.dum, 273);
-  const nascimentoExistente = (gestacaoP06.gestacao.nascimentos ?? [])
-    .find((nascimento) => String(nascimento.data).slice(0, 10) === dataNascimentoP07);
-  let idP07 = nascimentoExistente?.crianca_id;
-  if (!idP07) {
-    idP07 = await rpc(obstetra, 'registrar_nascimento', {
-      p_gestacao: gestacaoP06.id, p_nome: pacientes.find((p) => p.id === 'P07').nome,
-      p_sexo: 'masculino', p_data: dataNascimentoP07, p_peso_g: 3150,
-      p_idade_gestacional_sem: 39, p_apgar_5: 9,
-    });
-    if (!idP07) throw new Error('registrar_nascimento não retornou o ID da P07.');
+  for (const nascimento of [
+    { mae: 'P06', crianca: 'P07', peso: 3150, ig: 39, apgar: 9 },
+    { mae: 'P09', crianca: 'P10', peso: 2890, ig: 39, apgar: 9 },
+  ]) {
+    const gestacaoMae = dadosGestacoes.get(nascimento.mae);
+    const crianca = pacientes.find((p) => p.id === nascimento.crianca);
+    const data = somarDias(gestacaoMae.dum, 273);
+    const existente = (gestacaoMae.gestacao.nascimentos ?? [])
+      .find((row) => String(row.data).slice(0, 10) === data);
+    let criancaId = existente?.crianca_id;
+    if (!criancaId) {
+      criancaId = await rpc(obstetra, 'registrar_nascimento', {
+        p_gestacao: gestacaoMae.id, p_nome: crianca.nome,
+        p_sexo: crianca.sexo, p_data: data, p_peso_g: nascimento.peso,
+        p_idade_gestacional_sem: nascimento.ig, p_apgar_5: nascimento.apgar,
+      });
+      if (!criancaId) throw new Error(`registrar_nascimento não retornou ID para ${nascimento.crianca}.`);
+    }
+    idsPacientes.set(nascimento.crianca, criancaId);
+    await garantirVinculo(criancaId, 'pediatria');
   }
-  idsPacientes.set('P07', idP07);
-  await garantirVinculo(idP07, 'pediatria');
 
   const resumo = new Map(pacientes.map((p) => [p.id, { criados: 0, existentes: 0, comLocal: [], semLocal: [] }]));
   const idsPorObservacao = new Map();
@@ -372,6 +388,17 @@ async function mainReal() {
     const linha = resumo.get(paciente.id);
     console.log(`${paciente.id}: criados=${linha.criados}; já_existiam=${linha.existentes}; com_local=[${linha.comLocal.join(', ')}]; sem_local=[${linha.semLocal.join(', ')}].`);
   }
+
+  const p10 = idsPacientes.get('P10');
+  const historicoPediatria = await rpc(await cliente(emails.pediatria), 'historico_gestacional_crianca', { p_crianca: p10 }) ?? [];
+  const historicoMaternidade = await rpc(obstetra, 'historico_gestacional_crianca', { p_crianca: p10 }) ?? [];
+  if (historicoPediatria.some((row) => row.cid10 === 'O98.7'))
+    throw new Error('Conferência de sigilo falhou: Pediatria recebeu O98.7.');
+  if (!historicoPediatria.some((row) => Number(row.peso_g) === 2890))
+    throw new Error('Conferência gestacional falhou: Pediatria não recebeu o peso 2890 g de P10.');
+  if (!historicoMaternidade.some((row) => row.cid10 === 'O98.7'))
+    throw new Error('Conferência de sigilo falhou: Obstetrícia não recebeu O98.7.');
+  console.log('P10 sigilo: pediatria não vê O98.7; maternidade vê');
 }
 
 if (seco) await mainSeco();

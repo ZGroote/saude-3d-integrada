@@ -34,9 +34,12 @@ Ler cada tarefa como está. Não dizer o nome de botões. Anotar: concluiu sem a
 | T7 | Ortopedia | "Mostre a lombalgia do José olhando o corpo por trás e deixe essa vista salva junto do achado que você registrar." | Usa vista posterior; ao reabrir o achado, a vista volta |
 | T8 | Obstetrícia, depois Pediatria | "Quantas semanas de gestação tem a Carla Mendes e que condições ela tem nesta gestação?" Depois, na Pediatria: "O Davi Santos teve algo importante na gestação da mãe?" | 24 semanas e diabetes gestacional; depois, hipertensão gestacional da mãe visto a partir da criança |
 | T9 | Obstetrícia, depois Medicina de Família | "Liste tudo o que a Lúcia Rocha tem." (nas duas contas) | Nota que a ansiedade (F41.1) aparece para uma e não para a outra; pedir que comente |
+| T11 | Pediatria, depois Obstetrícia | "O Lucas Oliveira nasceu há 12 dias e veio para a primeira consulta. Há algo na gestação da mãe que mude a sua conduta?" Depois que responder, o moderador conta: "A mãe tem HIV registrado pela Maternidade; o sistema esconde isso de outras unidades." Na Obstetrícia, mostrar o mesmo histórico com O98.7. | Sem critério de acerto (observação). Anotar: se concluiu "nada relevante" a partir de "Nenhuma condição disponível", se desconfiou da mensagem, e a opinião sobre quem deveria ver. **Falha crítica** só se O98.7 aparecer na conta da Pediatria |
 | T10 | qualquer | "Explore livremente por 3 minutos o que achar interessante no corpo 3D." | Sem critério; anotar o que usa e o que comenta |
 
 Após T6 e T9, perguntar: "O que você entendeu dessa mensagem/desse comportamento? Faz sentido para a sua prática?"
+
+T11 vem antes de T10 (a exploração livre fecha as tarefas). Após T11, perguntar: "A Pediatria deveria ver essa condição? Sempre, com consentimento da mãe, só como alerta sem o diagnóstico, ou nunca?" Anotar a resposta literal. Não defender a regra atual.
 
 **Falha crítica** (registrar à parte, independentemente do sucesso): lado trocado, paciente errado, achado gravado em estrutura que não corresponde ao diagnóstico, ou informação sigilosa exposta indevidamente.
 
