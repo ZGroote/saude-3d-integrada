@@ -1,0 +1,222 @@
+{
+  "F1": {
+    "status": "not_verifiable",
+    "criterion": "at least 99% of imported bones/muscles inside skin",
+    "skin": {
+      "id": "BP3D_FJ2810",
+      "watertight": false,
+      "winding_consistent": true,
+      "vertices": 22902,
+      "triangles": 44744,
+      "bounds_m": [
+        [
+          -0.31120648980140686,
+          1.3369166856864788e-17,
+          -0.1994880586862564
+        ],
+        [
+          0.31003209948539734,
+          1.6564140319824219,
+          0.10707408934831619
+        ]
+      ],
+      "eligible_imported_bone_muscle_meshes": 698,
+      "closed_imported_bone_muscle_meshes": 13
+    },
+    "reason": "Skin mesh is open (not watertight); point-in-volume containment is undefined for the required closed-surface test."
+  },
+  "F2": {
+    "femur_to_same_side_hip_bone_proxy": {
+      "left": {
+        "sampled_surface_min_mm": 0.06494616022075303,
+        "femur_id": "BP3D_FJ3259",
+        "hip_id": "BP3D_FJ3288",
+        "interpretation": "whole-mesh proxy; femoral-head-to-acetabulum subregions are not separately named."
+      },
+      "right": {
+        "sampled_surface_min_mm": 0.11722438063056004,
+        "femur_id": "BP3D_FJ3365",
+        "hip_id": "BP3D_FJ3152",
+        "interpretation": "whole-mesh proxy; femoral-head-to-acetabulum subregions are not separately named."
+      }
+    },
+    "rib_to_same_number_thoracic_vertebra": {
+      "left_1": {
+        "sampled_surface_min_mm": 0.024691032580282157,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3228",
+        "vertebra_id": "BP3D_FJ3158"
+      },
+      "left_2": {
+        "sampled_surface_min_mm": 0.034610530411048196,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3229",
+        "vertebra_id": "BP3D_FJ3160"
+      },
+      "left_3": {
+        "sampled_surface_min_mm": 0.031450425525483376,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3230",
+        "vertebra_id": "BP3D_FJ3163"
+      },
+      "left_4": {
+        "sampled_surface_min_mm": 0.037572444071600215,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3231",
+        "vertebra_id": "BP3D_FJ3166"
+      },
+      "left_5": {
+        "sampled_surface_min_mm": 0.04759432715691319,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3232",
+        "vertebra_id": "BP3D_FJ3169"
+      },
+      "left_6": {
+        "sampled_surface_min_mm": 0.046744879782422775,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3233",
+        "vertebra_id": "BP3D_FJ3171"
+      },
+      "left_7": {
+        "sampled_surface_min_mm": 0.028708411312209327,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3234",
+        "vertebra_id": "BP3D_FJ3173"
+      },
+      "left_8": {
+        "sampled_surface_min_mm": 0.0338198847556333,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3235",
+        "vertebra_id": "BP3D_FJ3174"
+      },
+      "left_9": {
+        "sampled_surface_min_mm": 0.05378943977710677,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3236",
+        "vertebra_id": "BP3D_FJ3175"
+      },
+      "left_10": {
+        "sampled_surface_min_mm": 0.10691828126210565,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3225",
+        "vertebra_id": "BP3D_FJ3154"
+      },
+      "left_11": {
+        "sampled_surface_min_mm": 0.024947768667540206,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3226",
+        "vertebra_id": "BP3D_FJ3155"
+      },
+      "left_12": {
+        "sampled_surface_min_mm": 0.04212478870666465,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3227",
+        "vertebra_id": "BP3D_FJ3156"
+      },
+      "right_1": {
+        "sampled_surface_min_mm": 0.03220440975298167,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3334",
+        "vertebra_id": "BP3D_FJ3158"
+      },
+      "right_2": {
+        "sampled_surface_min_mm": 0.007818538601320976,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3336",
+        "vertebra_id": "BP3D_FJ3160"
+      },
+      "right_3": {
+        "sampled_surface_min_mm": 0.022542775253043282,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3338",
+        "vertebra_id": "BP3D_FJ3163"
+      },
+      "right_4": {
+        "sampled_surface_min_mm": 0.04297212489895991,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3340",
+        "vertebra_id": "BP3D_FJ3166"
+      },
+      "right_5": {
+        "sampled_surface_min_mm": 0.06859211711684117,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3342",
+        "vertebra_id": "BP3D_FJ3169"
+      },
+      "right_6": {
+        "sampled_surface_min_mm": 0.048516547085949255,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3344",
+        "vertebra_id": "BP3D_FJ3171"
+      },
+      "right_7": {
+        "sampled_surface_min_mm": 0.05971383755809964,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3346",
+        "vertebra_id": "BP3D_FJ3173"
+      },
+      "right_8": {
+        "sampled_surface_min_mm": 0.027974722727295575,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3347",
+        "vertebra_id": "BP3D_FJ3174"
+      },
+      "right_9": {
+        "sampled_surface_min_mm": 0.029001838367395227,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3348",
+        "vertebra_id": "BP3D_FJ3175"
+      },
+      "right_10": {
+        "sampled_surface_min_mm": 0.03540467493741763,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3330",
+        "vertebra_id": "BP3D_FJ3154"
+      },
+      "right_11": {
+        "sampled_surface_min_mm": 0.014726603889587006,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3331",
+        "vertebra_id": "BP3D_FJ3155"
+      },
+      "right_12": {
+        "sampled_surface_min_mm": 0.020092481227495775,
+        "pairing": "same-numbered T vertebra",
+        "rib_id": "BP3D_FJ3332",
+        "vertebra_id": "BP3D_FJ3156"
+      }
+    },
+    "skull_to_C1": {
+      "sampled_surface_min_mm": 0.11645862509941589,
+      "skull_mesh_count": 18,
+      "C1_id": "VH_F_cervical_vertebra_1",
+      "interpretation": "whole cranial bone group to whole C1 proxy; occipital condyle/articular facets are not separately named."
+    }
+  },
+  "F3": {
+    "status": "not_verifiable",
+    "definition": "volume fraction of each imported structure inside/intersecting HRA-origin organs or bones; limit <2%.",
+    "imported_meshes": 2163,
+    "imported_watertight": 162,
+    "hra_origin_meshes": 841,
+    "hra_origin_watertight": 397,
+    "reason": "The source meshes include open surfaces, so a watertight volume intersection denominator is unavailable; no volumetric result is inferred from surface proximity."
+  },
+  "F4": {
+    "status": "pass",
+    "side_specific_meshes_checked": 1705,
+    "mismatches": [],
+    "ids_without_catalog_record": []
+  },
+  "mesh_integrity_summary": {
+    "total_parts": 3004,
+    "imported_BP3D_parts": 2163,
+    "HRA_prefix_counts": {
+      "VH_F": 552,
+      "Allen": 282,
+      "Yao": 7
+    },
+    "watertight_imported": 162,
+    "watertight_HRA_origin": 397
+  }
+}

@@ -1,0 +1,21 @@
+dataset,chave,categoria,malha_correspondente,justificativa
+BP3D,FJ1756,presente,Allen_fornix_L,Revisao A2 r1: no Allen_fornix_L corresponde ao fornix; forebrain/brain sao sinonimos
+BP3D,FJ2449,parcial,VH_F_left_posterior_bronchus;VH_F_right_lateral_bronchus;VH_F_right_posterior_bronchus,Revisoes A2 r1/r2: arvore bronquica e bronquios segmentares tem granularidades relacionadas
+BP3D,FJ3112,parcial,VH_F_hepatic_portal_vein;VH_F_right_branch_of_portal_vein,Revisao A2 r1: tributaria segmentar e veia porta/ramo tem relacao pai/filho
+HRA,VH_F_left_posterior_bronchus,presente_no_bp3d,FJ2449,Revisao A2 r1: arvore bronquica BP3D corresponde parcialmente ao bronquio segmentar HRA
+HRA,VH_F_right_lateral_bronchus,presente_no_bp3d,FJ2449,Revisoes A2 r1/r2: arvore bronquica BP3D corresponde parcialmente ao bronquio segmentar HRA
+BP3D,FJ3215,presente,VH_F_intervertebral_disk_of_third_lumbar_vertebra,Revisao A2 r1: no HRA identifica o disco apesar do label generico
+BP3D,FJ1740,parcial,Allen_cingulate_gyrus_rostral_anterior_part_R;Allen_cingulate_gyrus_caudal_posterior_part_R,Revisao A2 r1: giro do cingulo BP3D corresponde as partes anterior/posterior Allen
+BP3D,FJ1835,presente,Allen_supraparietal_lobule_L,Revisao A2 r2: supraparietal lobule e sinonimo de superior parietal lobule
+BP3D,FJ2607,parcial,VH_F_jejenum,Revisao A2 r2: middle part of jejunum corresponde parcialmente ao no HRA com grafia errada jejenum
+HRA,Allen_posterior_cortical_nucleus_R,presente_no_bp3d,FJ1829,Revisao A2 r2: BP3D contem amigdala direita que inclui este nucleo
+BP3D,FJ1815,parcial,Allen_mammillary_region_of_HTH_R;Allen_mammillary_region_of_HTH_L,Revisao A2 r2: corpo mamilar e parte da regiao mamilar Allen
+HRA,VH_F_epiglotic_cartilage,presente_no_bp3d,FJ2770,Revisao A2 r2: epiglote BP3D inclui a cartilagem epiglotica HRA
+BP3D,FJ3120,parcial,VH_F_right_hepatic_vein,Revisao A2 r2: tributaria segmentar BP3D e veia hepatica HRA tem relacao pai/filho
+HRA,Allen_cerebral_aqueduct_L,presente_no_bp3d,FJ1738,Revisao A2 r2: aqueduto cerebral tem correspondencia direta no BP3D
+BP3D,FJ3084,parcial,VH_F_middle_hepatic_vein,Revisao A2 r2: tributaria segmentar BP3D e veia hepatica media HRA tem relacao pai/filho
+BP3D,FJ1931,parcial,VH_F_descending_aorta_a;VH_F_descending_aorta_b,Revisao A2 r2: aorta toracica BP3D corresponde aos dois segmentos HRA
+HRA,VH_F_pulmonary_valve,presente_no_bp3d,FJ2417;FJ2427;FJ2434,Revisao A2 r2: cuspes BP3D sao partes da valva pulmonar HRA
+HRA,Allen_posterior_intermediate_orbital_gyrus_R,presente_no_bp3d,FJ1793;FJ1794,Revisao A2 r2: giro orbital BP3D e pai do giro intermediario posterior Allen
+BP3D,FJ1836,presente,Allen_supraparietal_lobule_R,Revisao A2 r2: supraparietal lobule e sinonimo de superior parietal lobule
+BP3D,FJ2578,parcial,VH_F_ileum,Revisao A2 r2: middle part of ileum corresponde parcialmente ao ileum HRA

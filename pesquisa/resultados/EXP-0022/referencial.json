@@ -1,0 +1,255 @@
+{
+  "HRA_local_frame": "x positive=left; y positive=up; z positive=front; metres, per project record and HRA source conversion.",
+  "bp3d_m_local_frame": "x positive=left, y positive=up, z positive=front; metres, confirmed by BodyParts3D exporter and decoded node lateralities.",
+  "TC_world_frame": "NIfTI affine coordinates labelled RAS mm by EXP-0010; x increases right, y increases anterior, z increases superior. Affine is diagonal +1.5 mm voxel spacing; negative world Z origin is a translation, not an axis reversal.",
+  "HRA_to_RAS_axis_map": {
+    "x_RAS_mm": "-1000*x_local_m",
+    "y_RAS_mm": "1000*z_local_m",
+    "z_RAS_mm": "1000*y_local_m"
+  },
+  "BP3D_representative_geometry": {
+    "FJ3152": {
+      "name": "Right hip bone",
+      "bounds_m": [
+        [
+          -0.14422450917988322,
+          -0.03460640087723732,
+          -0.09964854765056866
+        ],
+        [
+          -0.002143792060844099,
+          0.17110960185527802,
+          0.03825092437981861
+        ]
+      ],
+      "centroid_m": [
+        -0.07545182137094637,
+        0.07313341737158191,
+        -0.028604591465260933
+      ]
+    },
+    "FJ3288": {
+      "name": "Left hip bone",
+      "bounds_m": [
+        [
+          0.003398307750225274,
+          -0.03480840101838112,
+          -0.09945292736010816
+        ],
+        [
+          0.14540000314615648,
+          0.17133060097694397,
+          0.038327470073273445
+        ]
+      ],
+      "centroid_m": [
+        0.07687981005265969,
+        0.07317394429522345,
+        -0.028570807373956703
+      ]
+    },
+    "FJ3393": {
+      "name": "Sacrum",
+      "bounds_m": [
+        [
+          -0.058943128624276864,
+          -0.003922400064766407,
+          -0.10802035881546895
+        ],
+        [
+          0.0588488303509519,
+          0.14044059813022614,
+          -0.019372393280587985
+        ]
+      ],
+      "centroid_m": [
+        -4.412411454736481e-06,
+        0.08855596453056566,
+        -0.06745975657918832
+      ]
+    },
+    "FJ3259": {
+      "name": "Left femur",
+      "bounds_m": [
+        [
+          0.03261320034309912,
+          -0.4187034070491791,
+          -0.05128805439456343
+        ],
+        [
+          0.15088400130823565,
+          0.047479599714279175,
+          0.011510852794190639
+        ]
+      ],
+      "centroid_m": [
+        0.09417203501253915,
+        -0.19746490793345534,
+        -0.015710308228693255
+      ]
+    },
+    "FJ3365": {
+      "name": "Right femur",
+      "bounds_m": [
+        [
+          -0.14948516527363215,
+          -0.4186094105243683,
+          -0.05123658735878013
+        ],
+        [
+          -0.031249137574945338,
+          0.04749260097742081,
+          0.011423386415608153
+        ]
+      ],
+      "centroid_m": [
+        -0.09288548220992483,
+        -0.19742954072480592,
+        -0.015723992139503422
+      ]
+    }
+  },
+  "NLM_label_boxes": {
+    "hip_left": {
+      "voxel_count": 112774,
+      "bounds_RAS_mm": [
+        [
+          -141.75,
+          -83.25,
+          -1261.0
+        ],
+        [
+          5.25,
+          69.75,
+          -739.0
+        ]
+      ],
+      "centroid_RAS_mm": [
+        -73.77191107879476,
+        -3.9454971890684023,
+        -836.0109910085658
+      ]
+    },
+    "hip_right": {
+      "voxel_count": 112689,
+      "bounds_RAS_mm": [
+        [
+          8.25,
+          -83.25,
+          -950.5
+        ],
+        [
+          155.25,
+          66.75,
+          -737.5
+        ]
+      ],
+      "centroid_RAS_mm": [
+        87.89063040758192,
+        -4.808009211191864,
+        -835.5079599605996
+      ]
+    },
+    "sacrum": {
+      "voxel_count": 50129,
+      "bounds_RAS_mm": [
+        [
+          -53.25,
+          -101.25,
+          -883.0
+        ],
+        [
+          65.25,
+          -11.25,
+          -763.0
+        ]
+      ],
+      "centroid_RAS_mm": [
+        7.237562089808295,
+        -54.25555566638074,
+        -804.8111272915877
+      ]
+    },
+    "femur_left": {
+      "voxel_count": 150453,
+      "bounds_RAS_mm": [
+        [
+          -156.75,
+          -29.25,
+          -1280.5
+        ],
+        [
+          -29.25,
+          38.25,
+          -862.0
+        ]
+      ],
+      "centroid_RAS_mm": [
+        -93.64534605491416,
+        9.831753105621024,
+        -1087.7600546350022
+      ]
+    },
+    "femur_right": {
+      "voxel_count": 154789,
+      "bounds_RAS_mm": [
+        [
+          33.75,
+          -41.25,
+          -1285.0
+        ],
+        [
+          170.25,
+          36.75,
+          -862.0
+        ]
+      ],
+      "centroid_RAS_mm": [
+        103.21822125603241,
+        1.2946511056987253,
+        -1089.0147458798751
+      ]
+    },
+    "vertebrae_L1": {
+      "voxel_count": 17490,
+      "bounds_RAS_mm": [
+        [
+          -24.75,
+          -90.75,
+          -655.0
+        ],
+        [
+          44.25,
+          -3.75,
+          -572.5
+        ]
+      ],
+      "centroid_RAS_mm": [
+        1.995368782161235,
+        -44.82941680960549,
+        -600.1403945111492
+      ]
+    },
+    "vertebrae_L5": {
+      "voxel_count": 18899,
+      "bounds_RAS_mm": [
+        [
+          -41.25,
+          -74.25,
+          -779.5
+        ],
+        [
+          56.25,
+          5.25,
+          -734.5
+        ]
+      ],
+      "centroid_RAS_mm": [
+        7.340745542092174,
+        -24.763413408116833,
+        -758.9689136991375
+      ]
+    }
+  },
+  "note": "30-voxel disconnected hip_left component at z≈−1261 mm is included in metric mask; the figure zooms the connected pelvic ROI and clips this tiny outlier."
+}

@@ -1,0 +1,43 @@
+{
+  "seed": 25022,
+  "surface_samples_each_direction": [
+    6000,
+    6000
+  ],
+  "voxel_pitch_mm": 1.0,
+  "same_sampling_seeds_as_r1": true,
+  "qosso_pass": true,
+  "all_adapted_hashes_verified_before_denver_muscles": true,
+  "denver_muscle_paths_read_after_hash_verification": [
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_RectusFemoris_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_VastusLateralis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_VastusMedialis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_Sartorius_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_Gracilis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_AdductorLongus_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_BicepsFemorisLong_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_BicepsFemorisShort_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_GastrocnemiusMedial_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_GluteusMedius_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Muscle_TibialisAnterior_smooth.stl"
+  ],
+  "r1_reductions": {
+    "rectus_femoris": -0.44712528771988375,
+    "vastus_lateralis": 0.030786912822775063,
+    "vastus_medialis": -0.639009955771875,
+    "sartorius": -0.31954905967893044,
+    "gracilis": -0.1607282841751433,
+    "adductor_longus": -0.14049834064068983,
+    "biceps_femoris": 0.07402875827135469,
+    "gastrocnemius_medial": -0.3895995118682206,
+    "gluteus_medius": 0.23348269541365968,
+    "tibialis_anterior": 0.10413275851324742
+  },
+  "r1_count": 1,
+  "r2_insertion_median_mm": 7.631962401044239e-06,
+  "r2_insertion_vertex_count": 4640,
+  "r3_max_collision_percent": 8.955841005568113,
+  "r4_dice_median": 0.3622630603492245,
+  "verdict": "REJEITADA",
+  "stopping_rule": "EXP-0025 encerrado se R1 reprova"
+}

@@ -1,0 +1,23 @@
+arquivo=hra/nlm/bruto/saida/segmentacao.nii.gz shape=(320, 320, 1156) axcodes=('R', 'A', 'S') rotulos_nao_vazios=114
+femur_left: 507.78 cm3; centroide RAS=(-93.6, 9.8, -1087.8)
+femur_right: 522.41 cm3; centroide RAS=(103.2, 1.3, -1089.0)
+hip_left: 380.61 cm3; centroide RAS=(-73.8, -3.9, -836.0)
+hip_right: 380.33 cm3; centroide RAS=(87.9, -4.8, -835.5)
+sacrum: 169.19 cm3; centroide RAS=(7.2, -54.3, -804.8)
+vertebrae_L1: 59.03 cm3; centroide RAS=(2.0, -44.8, -600.1)
+vertebrae_L2: 98.57 cm3; centroide RAS=(2.0, -39.2, -645.5)
+vertebrae_L3: 72.86 cm3; centroide RAS=(3.5, -33.2, -691.4)
+vertebrae_L4: 63.91 cm3; centroide RAS=(4.0, -26.4, -727.8)
+vertebrae_L5: 63.78 cm3; centroide RAS=(7.3, -24.8, -759.0)
+kidney_left: 204.61 cm3; centroide RAS=(-72.5, -28.5, -666.8)
+kidney_right: 155.40 cm3; centroide RAS=(78.5, -27.1, -654.8)
+liver: 2171.67 cm3; centroide RAS=(48.3, 13.0, -559.6)
+spleen: 171.51 cm3; centroide RAS=(-79.5, -47.6, -567.9)
+heart: 590.28 cm3; centroide RAS=(-35.8, 15.8, -461.4)
+skull: 766.58 cm3; centroide RAS=(7.1, 15.1, -128.1)
+humerus_left: 169.56 cm3; centroide RAS=(-184.2, -30.1, -399.3)
+humerus_right: 156.62 cm3; centroide RAS=(190.3, -24.8, -399.2)
+rib_left_1: 9.00 cm3; centroide RAS=(-49.8, 5.3, -331.3)
+rib_right_12: 4.98 cm3; centroide RAS=(73.5, -63.9, -609.9)
+
+sha256 hra/nlm/bruto/saida/segmentacao.nii.gz = 21a8c7c7e81dcc6554706fcbb5e6a5ade66d99a3880535358f1c981f61ad8830

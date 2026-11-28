@@ -1,0 +1,8 @@
+EXP-0025 — Rodada 3; critérios R1–R4 originais
+Q-osso passou nos 13 ossos; adaptação só prosseguiu após a barreira.
+R1 — redução >=20% em >=8/10: REPROVOU (1/10; rectus_femoris=-44.7%, vastus_lateralis=3.1%, vastus_medialis=-63.9%, sartorius=-32.0%, gracilis=-16.1%, adductor_longus=-14.0%, biceps_femoris=7.4%, gastrocnemius_medial=-39.0%, gluteus_medius=23.3%, tibialis_anterior=10.4%)
+R2 — inserções mediana <=2 mm: PASSOU (0.000 mm; n=4640)
+R3 — penetração óssea <2% em todos: REPROVOU (máximo=8.956%; grupos <2%=3/10)
+R4 — Dice mediano >=0,60 (exploratório): REPROVOU (0.3623)
+Veredito pela regra de parada: H25 REJEITADA.
+Denver->adaptado exploratória por músculo está em metricas_r3.csv. R3/R4: voxelização 1 mm com fechamento temporário em memória, mesma aproximação da rodada 1.

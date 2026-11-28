@@ -1,0 +1,592 @@
+{
+  "rodada": "EXP-0016-R2",
+  "variante": "B",
+  "F1": {
+    "status": "REPROVOU",
+    "percentual_dentro": 79.00218494620272,
+    "vertices_total": 1016501,
+    "vertices_dentro": 803058,
+    "vertices_fora": 213443,
+    "pitch_mm": 3.0,
+    "pele_fechada_por_fatia_axial": true,
+    "pele_watertight_original": false,
+    "voxels_casca": 258924,
+    "voxels_fechados": 3087233,
+    "volume_fechado_cm3": 83355.291,
+    "escapes": [
+      {
+        "malha": "total__clavicula_left",
+        "sistema": "esqueletico",
+        "vertices": 5292,
+        "fora": 1103,
+        "fracao_fora": 0.20842781557067272
+      },
+      {
+        "malha": "total__clavicula_right",
+        "sistema": "esqueletico",
+        "vertices": 5468,
+        "fora": 449,
+        "fracao_fora": 0.08211411850768105
+      },
+      {
+        "malha": "total__humerus_left",
+        "sistema": "esqueletico",
+        "vertices": 17714,
+        "fora": 4231,
+        "fracao_fora": 0.23885062662301004
+      },
+      {
+        "malha": "total__humerus_right",
+        "sistema": "esqueletico",
+        "vertices": 16676,
+        "fora": 2387,
+        "fracao_fora": 0.14313984168865435
+      },
+      {
+        "malha": "total__rib_left_10",
+        "sistema": "esqueletico",
+        "vertices": 4302,
+        "fora": 69,
+        "fracao_fora": 0.01603905160390516
+      },
+      {
+        "malha": "total__rib_right_10",
+        "sistema": "esqueletico",
+        "vertices": 4297,
+        "fora": 270,
+        "fracao_fora": 0.06283453572259716
+      },
+      {
+        "malha": "total__scapula_left",
+        "sistema": "esqueletico",
+        "vertices": 18603,
+        "fora": 2159,
+        "fracao_fora": 0.11605655001881417
+      },
+      {
+        "malha": "total__scapula_right",
+        "sistema": "esqueletico",
+        "vertices": 19306,
+        "fora": 1761,
+        "fracao_fora": 0.0912151662695535
+      },
+      {
+        "malha": "total__skull",
+        "sistema": "esqueletico",
+        "vertices": 117156,
+        "fora": 1732,
+        "fracao_fora": 0.014783707193827034
+      },
+      {
+        "malha": "denver__bone_calcaneous__left",
+        "sistema": "esqueletico",
+        "vertices": 8738,
+        "fora": 8738,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_coccyx__left",
+        "sistema": "esqueletico",
+        "vertices": 1173,
+        "fora": 684,
+        "fracao_fora": 0.5831202046035806
+      },
+      {
+        "malha": "denver__bone_cuboid__left",
+        "sistema": "esqueletico",
+        "vertices": 2465,
+        "fora": 2465,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_femur__left",
+        "sistema": "esqueletico",
+        "vertices": 45945,
+        "fora": 1825,
+        "fracao_fora": 0.03972140602894766
+      },
+      {
+        "malha": "denver__bone_fibula__left",
+        "sistema": "esqueletico",
+        "vertices": 9461,
+        "fora": 4736,
+        "fracao_fora": 0.5005813338970511
+      },
+      {
+        "malha": "denver__bone_intermediatecuneiform__left",
+        "sistema": "esqueletico",
+        "vertices": 1166,
+        "fora": 1166,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_lateralcuneiform__left",
+        "sistema": "esqueletico",
+        "vertices": 1351,
+        "fora": 1351,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_medialcuneiform__left",
+        "sistema": "esqueletico",
+        "vertices": 2047,
+        "fora": 2047,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_navicular__left",
+        "sistema": "esqueletico",
+        "vertices": 2307,
+        "fora": 2307,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_phalanges__left",
+        "sistema": "esqueletico",
+        "vertices": 17462,
+        "fora": 17462,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_talus__left",
+        "sistema": "esqueletico",
+        "vertices": 5539,
+        "fora": 5539,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_tibia__left",
+        "sistema": "esqueletico",
+        "vertices": 29730,
+        "fora": 13740,
+        "fracao_fora": 0.46215943491422806
+      },
+      {
+        "malha": "denver__cartilage_femurdistal__left",
+        "sistema": "articular",
+        "vertices": 14074,
+        "fora": 3371,
+        "fracao_fora": 0.23951968168253518
+      },
+      {
+        "malha": "denver__cartilage_talus__left",
+        "sistema": "articular",
+        "vertices": 20001,
+        "fora": 20001,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__cartilage_tibiadistal__left",
+        "sistema": "articular",
+        "vertices": 1356,
+        "fora": 1356,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__cartilage_tibiamedial__left",
+        "sistema": "articular",
+        "vertices": 2888,
+        "fora": 1313,
+        "fracao_fora": 0.4546398891966759
+      },
+      {
+        "malha": "denver__ligament_mcl__left",
+        "sistema": "articular",
+        "vertices": 2144,
+        "fora": 2144,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__ligament_pcl__left",
+        "sistema": "articular",
+        "vertices": 1909,
+        "fora": 63,
+        "fracao_fora": 0.03300157150340492
+      },
+      {
+        "malha": "denver__bone_calcaneous__right",
+        "sistema": "esqueletico",
+        "vertices": 8789,
+        "fora": 8789,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_cuboid__right",
+        "sistema": "esqueletico",
+        "vertices": 2523,
+        "fora": 2523,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_femur__right",
+        "sistema": "esqueletico",
+        "vertices": 44735,
+        "fora": 6632,
+        "fracao_fora": 0.14825081032748408
+      },
+      {
+        "malha": "denver__bone_fibula__right",
+        "sistema": "esqueletico",
+        "vertices": 9742,
+        "fora": 9179,
+        "fracao_fora": 0.9422089919934306
+      },
+      {
+        "malha": "denver__bone_intermediatecuneiform__right",
+        "sistema": "esqueletico",
+        "vertices": 1159,
+        "fora": 1159,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_lateralcuneiform__right",
+        "sistema": "esqueletico",
+        "vertices": 1406,
+        "fora": 1406,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_medialcuneiform__right",
+        "sistema": "esqueletico",
+        "vertices": 2110,
+        "fora": 2110,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_navicular__right",
+        "sistema": "esqueletico",
+        "vertices": 2251,
+        "fora": 2251,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_patella__right",
+        "sistema": "esqueletico",
+        "vertices": 3296,
+        "fora": 701,
+        "fracao_fora": 0.21268203883495146
+      },
+      {
+        "malha": "denver__bone_phalanges__right",
+        "sistema": "esqueletico",
+        "vertices": 18093,
+        "fora": 18093,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_talus__right",
+        "sistema": "esqueletico",
+        "vertices": 5340,
+        "fora": 5340,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__bone_tibia__right",
+        "sistema": "esqueletico",
+        "vertices": 30183,
+        "fora": 27175,
+        "fracao_fora": 0.9003412516979756
+      },
+      {
+        "malha": "denver__cartilage_femurdistal__right",
+        "sistema": "articular",
+        "vertices": 12316,
+        "fora": 8564,
+        "fracao_fora": 0.6953556349464112
+      },
+      {
+        "malha": "denver__cartilage_patella__right",
+        "sistema": "articular",
+        "vertices": 2835,
+        "fora": 823,
+        "fracao_fora": 0.290299823633157
+      },
+      {
+        "malha": "denver__cartilage_talus__right",
+        "sistema": "articular",
+        "vertices": 2244,
+        "fora": 2244,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__cartilage_tibiadistal__right",
+        "sistema": "articular",
+        "vertices": 1764,
+        "fora": 1764,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__cartilage_tibialateral__right",
+        "sistema": "articular",
+        "vertices": 2554,
+        "fora": 1442,
+        "fracao_fora": 0.5646045418950666
+      },
+      {
+        "malha": "denver__cartilage_tibiamedial__right",
+        "sistema": "articular",
+        "vertices": 3249,
+        "fora": 3249,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__ligament_acl__right",
+        "sistema": "articular",
+        "vertices": 2150,
+        "fora": 2121,
+        "fracao_fora": 0.9865116279069768
+      },
+      {
+        "malha": "denver__ligament_lcl__right",
+        "sistema": "articular",
+        "vertices": 1013,
+        "fora": 44,
+        "fracao_fora": 0.04343534057255676
+      },
+      {
+        "malha": "denver__ligament_mcl__right",
+        "sistema": "articular",
+        "vertices": 1557,
+        "fora": 1557,
+        "fracao_fora": 1.0
+      },
+      {
+        "malha": "denver__ligament_pcl__right",
+        "sistema": "articular",
+        "vertices": 1808,
+        "fora": 1808,
+        "fracao_fora": 1.0
+      }
+    ],
+    "volume_adicionado_por_fill_cm3": 76364.343
+  },
+  "F3_interface": {
+    "status": "REPROVOU",
+    "criterio": "fração >=2% e profundidade >3 mm",
+    "exclusoes_f3_v2": "hra/vhf/avaliar_base.py:F3_V2_EXCLUDED_PAIRS",
+    "pele_excluida": true,
+    "pares_bbox_fechados": 131,
+    "pares_abertos_ignorados": 1939,
+    "pares_com_sobreposicao_amostrada": 10,
+    "pares_ge_2pct": 6,
+    "invasoes_ge_2pct_e_gt_3mm": 6,
+    "invasoes": [
+      {
+        "a": "total__costal_cartilages",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.046,
+        "frac_b_em_a": 0.1685,
+        "fracao_maxima": 0.1685,
+        "sobreposicao_media_cm3": 6.217599547839493,
+        "profundidade_mm": 10.0,
+        "volume_a_cm3": 6.329667326541026,
+        "volume_b_cm3": 6.105531769137959
+      },
+      {
+        "a": "total__costal_cartilages",
+        "b": "VH_F_thymus_lobe_R",
+        "frac_a_em_b": 0.008,
+        "frac_b_em_a": 0.05,
+        "fracao_maxima": 0.05,
+        "sobreposicao_media_cm3": 1.13296805027565,
+        "profundidade_mm": 6.0,
+        "volume_a_cm3": 1.1008117089636569,
+        "volume_b_cm3": 1.1651243915876432
+      },
+      {
+        "a": "total__rib_left_2",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.034,
+        "frac_b_em_a": 0.016,
+        "fracao_maxima": 0.034,
+        "sobreposicao_media_cm3": 0.47636229129620866,
+        "profundidade_mm": 4.898979485566356,
+        "volume_a_cm3": 0.37297082409860527,
+        "volume_b_cm3": 0.579753758493812
+      },
+      {
+        "a": "total__sternum",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.1205,
+        "frac_b_em_a": 0.1635,
+        "fracao_maxima": 0.1635,
+        "sobreposicao_media_cm3": 5.955158906981943,
+        "profundidade_mm": 9.797958971132712,
+        "volume_a_cm3": 5.985959094355245,
+        "volume_b_cm3": 5.924358719608642
+      },
+      {
+        "a": "total__sternum",
+        "b": "VH_F_thymus_lobe_R",
+        "frac_a_em_b": 0.27,
+        "frac_b_em_a": 0.5105,
+        "fracao_maxima": 0.5105,
+        "sobreposicao_media_cm3": 12.654221245096064,
+        "profundidade_mm": 10.0,
+        "volume_a_cm3": 13.412522452082293,
+        "volume_b_cm3": 11.895920038109836
+      },
+      {
+        "a": "denver__bone_pelvis__right",
+        "b": "VH_F_right_cardinal_ligament_of_uterus",
+        "frac_a_em_b": 0.0055,
+        "frac_b_em_a": 0.27391304347826084,
+        "fracao_maxima": 0.27391304347826084,
+        "sobreposicao_media_cm3": 1.2332618724565263,
+        "profundidade_mm": 10.954451150103322,
+        "volume_a_cm3": 1.9127812884211515,
+        "volume_b_cm3": 0.553742456491901
+      }
+    ],
+    "top20_volume": [
+      {
+        "a": "total__sternum",
+        "b": "VH_F_thymus_lobe_R",
+        "frac_a_em_b": 0.27,
+        "frac_b_em_a": 0.5105,
+        "fracao_maxima": 0.5105,
+        "sobreposicao_media_cm3": 12.654221245096064,
+        "profundidade_mm": 10.0,
+        "volume_a_cm3": 13.412522452082293,
+        "volume_b_cm3": 11.895920038109836
+      },
+      {
+        "a": "total__costal_cartilages",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.046,
+        "frac_b_em_a": 0.1685,
+        "fracao_maxima": 0.1685,
+        "sobreposicao_media_cm3": 6.217599547839493,
+        "profundidade_mm": 10.0,
+        "volume_a_cm3": 6.329667326541026,
+        "volume_b_cm3": 6.105531769137959
+      },
+      {
+        "a": "total__sternum",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.1205,
+        "frac_b_em_a": 0.1635,
+        "fracao_maxima": 0.1635,
+        "sobreposicao_media_cm3": 5.955158906981943,
+        "profundidade_mm": 9.797958971132712,
+        "volume_a_cm3": 5.985959094355245,
+        "volume_b_cm3": 5.924358719608642
+      },
+      {
+        "a": "denver__bone_pelvis__right",
+        "b": "VH_F_right_cardinal_ligament_of_uterus",
+        "frac_a_em_b": 0.0055,
+        "frac_b_em_a": 0.27391304347826084,
+        "fracao_maxima": 0.27391304347826084,
+        "sobreposicao_media_cm3": 1.2332618724565263,
+        "profundidade_mm": 10.954451150103322,
+        "volume_a_cm3": 1.9127812884211515,
+        "volume_b_cm3": 0.553742456491901
+      },
+      {
+        "a": "total__costal_cartilages",
+        "b": "VH_F_thymus_lobe_R",
+        "frac_a_em_b": 0.008,
+        "frac_b_em_a": 0.05,
+        "fracao_maxima": 0.05,
+        "sobreposicao_media_cm3": 1.13296805027565,
+        "profundidade_mm": 6.0,
+        "volume_a_cm3": 1.1008117089636569,
+        "volume_b_cm3": 1.1651243915876432
+      },
+      {
+        "a": "total__rib_left_2",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.034,
+        "frac_b_em_a": 0.016,
+        "fracao_maxima": 0.034,
+        "sobreposicao_media_cm3": 0.47636229129620866,
+        "profundidade_mm": 4.898979485566356,
+        "volume_a_cm3": 0.37297082409860527,
+        "volume_b_cm3": 0.579753758493812
+      }
+    ],
+    "top20_fracao": [
+      {
+        "a": "total__sternum",
+        "b": "VH_F_thymus_lobe_R",
+        "frac_a_em_b": 0.27,
+        "frac_b_em_a": 0.5105,
+        "fracao_maxima": 0.5105,
+        "sobreposicao_media_cm3": 12.654221245096064,
+        "profundidade_mm": 10.0,
+        "volume_a_cm3": 13.412522452082293,
+        "volume_b_cm3": 11.895920038109836
+      },
+      {
+        "a": "denver__bone_pelvis__right",
+        "b": "VH_F_right_cardinal_ligament_of_uterus",
+        "frac_a_em_b": 0.0055,
+        "frac_b_em_a": 0.27391304347826084,
+        "fracao_maxima": 0.27391304347826084,
+        "sobreposicao_media_cm3": 1.2332618724565263,
+        "profundidade_mm": 10.954451150103322,
+        "volume_a_cm3": 1.9127812884211515,
+        "volume_b_cm3": 0.553742456491901
+      },
+      {
+        "a": "total__costal_cartilages",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.046,
+        "frac_b_em_a": 0.1685,
+        "fracao_maxima": 0.1685,
+        "sobreposicao_media_cm3": 6.217599547839493,
+        "profundidade_mm": 10.0,
+        "volume_a_cm3": 6.329667326541026,
+        "volume_b_cm3": 6.105531769137959
+      },
+      {
+        "a": "total__sternum",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.1205,
+        "frac_b_em_a": 0.1635,
+        "fracao_maxima": 0.1635,
+        "sobreposicao_media_cm3": 5.955158906981943,
+        "profundidade_mm": 9.797958971132712,
+        "volume_a_cm3": 5.985959094355245,
+        "volume_b_cm3": 5.924358719608642
+      },
+      {
+        "a": "total__costal_cartilages",
+        "b": "VH_F_thymus_lobe_R",
+        "frac_a_em_b": 0.008,
+        "frac_b_em_a": 0.05,
+        "fracao_maxima": 0.05,
+        "sobreposicao_media_cm3": 1.13296805027565,
+        "profundidade_mm": 6.0,
+        "volume_a_cm3": 1.1008117089636569,
+        "volume_b_cm3": 1.1651243915876432
+      },
+      {
+        "a": "total__rib_left_2",
+        "b": "VH_F_thymus_lobe_L",
+        "frac_a_em_b": 0.034,
+        "frac_b_em_a": 0.016,
+        "fracao_maxima": 0.034,
+        "sobreposicao_media_cm3": 0.47636229129620866,
+        "profundidade_mm": 4.898979485566356,
+        "volume_a_cm3": 0.37297082409860527,
+        "volume_b_cm3": 0.579753758493812
+      }
+    ]
+  },
+  "F4": {
+    "status": "PASSOU",
+    "testados": 80,
+    "corretos": 80,
+    "por_fonte": {
+      "vhf-f": {
+        "testados": 80,
+        "corretos": 80,
+        "erros": []
+      }
+    },
+    "metodo": "sinal do centroide de vértices RAS das estruturas importadas VHF: left x<0, right x>0; HRA existente não é reavaliado"
+  },
+  "nota": "F2/F3 de mesma fonte herdados do EXP-0015 e não remedidos."
+}

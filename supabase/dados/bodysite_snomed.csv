@@ -1,0 +1,13 @@
+snomed,termo,estrutura_fma,estrutura_uberon,fonte_url,verificado
+80891009,Heart structure,FJ2428 (FMA13884 - Wall of ventricle),VH_F_left_ventricle (UBERON:0002084 - heart left ventricle),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/80891009,sim
+10200004,Liver structure,FJ2816 (FMA13365 - Caudate lobe of liver),VH_F_diaphragmatic_surface_of_liver (UBERON:0001106 - diaphragmatic surface of liver),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/10200004,sim
+3341006,Right lung structure,FJ2454 (FMA68211 - Right apical segmental bronchial tree),VH_F_hilum_R (UBERON:0004888 - right lung hilus),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/3341006,sim
+44029006,Left lung structure,FJ2444 (FMA68223 - Left apical segmental bronchial tree),VH_F_hilum_L (UBERON:0004887 - left lung hilus),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/44029006,sim
+9846003,Right kidney structure,FJ3147 (FMA7204 - Right kidney),VH_F_outer_cortex_of_kidney_R (UBERON:0002189 - outer cortex of kidney),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/9846003,sim
+18639004,Left kidney structure,FJ3145 (FMA7205 - Left kidney),VH_F_outer_cortex_of_kidney_L (UBERON:0002189 - outer cortex of kidney),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/18639004,sim
+52612000,Structure of lumbar region of back,FJ3157 (FMA13072 - First lumbar vertebra),VH_F_lumbar_vertebra_1 (UBERON:0004617 - lumbar vertebra 1),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/52612000,sim
+6757004,Structure of right knee region,FJ3381 (FMA24486 - Right patella),VH_F_patella_R (FMA:24486 - Right patella),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/6757004,sim
+82169009,Structure of left knee region,FJ3275 (FMA24487 - Left patella),VH_F_patella_L (FMA:24487 - Left patella),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/82169009,sim
+35039007,Uterine structure,ausente (atlas masculino bp3d-m),VH_F_body_of_uterus (UBERON:0009853 - body of uterus),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/35039007,sim
+73056007,Right breast structure,ausente (atlas masculino bp3d-m),VH_F_mammary_lobes_R (UBERON:0018140 - mammary lobe),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/73056007,sim
+80248007,Left breast structure,ausente (atlas masculino bp3d-m),VH_F_mammary_lobes_L (UBERON:0018140 - mammary lobe),https://snomed.hl7.org.br/snowstorm/snomed-ct/browser/MAIN/concepts/80248007,sim

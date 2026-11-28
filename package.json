@@ -1,0 +1,5 @@
+{
+  "name": "saude-3d-integrada",
+  "private": true,
+  "workspaces": ["web", "packages/*", "supabase"]
+}

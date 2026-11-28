@@ -1,0 +1,957 @@
+﻿atlas,malha,estrutura,nome_en,nome_pt_atual,correto? / sugestão,estado,revisor_nome,revisor_CRM,data_revisao,origem
+hra-f,VH_F_subcutaneous_abdominal_adipose_tissue_umbilicus_area,UBERON:0013754,integumentary system layer,Camada do sistema tegumentar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:2
+hra-f,VH_F_subcutaneous_abdominal_adipose_tissue_RUQ_area,UBERON:0013754,integumentary system layer,Camada do sistema tegumentar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:2
+hra-f,VH_F_subcutaneous_abdominal_adipose_tissue_LUQ_area,UBERON:0013754,integumentary system layer,Camada do sistema tegumentar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:2
+hra-f,VH_F_skin,UBERON:0002097,skin of body,Pele do corpo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:3
+hra-f,VH_F_fat_L,FMA:73166,Interlobar adipose tissue of left mammary gland,Tecido adiposo interlobar da glândula mamária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:4
+hra-f,VH_F_areolar_tubercles_L,UBERON:0011828,areolar tubercle,Tubérculo areolar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:5
+hra-f,VH_F_nipple_L,UBERON:0013772,left nipple,Papila mamária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:6
+hra-f,VH_F_areola_L,FMA:223679,Left female areola,Aréola mamária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:7
+hra-f,VH_F_mammary_lobes_L,UBERON:0018140,mammary lobe,Lobo mamário,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:8
+hra-f,VH_F_main_lactiferous_ducts_L,UBERON:0015134,main lactiferous duct,Ducto lactífero principal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:9
+hra-f,VH_F_main_lactiferous_sinuses_L,FMA:58088,Lactiferous sinus,Seio lactífero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:10
+hra-f,VH_F_suspensory_ligaments_L,FMA:73119,Suspensory ligament of left breast,Ligamento suspensor da mama esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:11
+hra-f,VH_F_fat_R,FMA:73165,Interlobar adipose tissue of right mammary gland,Tecido adiposo interlobar da glândula mamária direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:12
+hra-f,VH_F_areolar_tubercles_R,UBERON:0011828,areolar tubercle,Tubérculo areolar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:5
+hra-f,VH_F_nipple_R,UBERON:0013773,right nipple,Papila mamária direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:13
+hra-f,VH_F_areola_R,FMA:223677,Right female areola,Aréola mamária direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:14
+hra-f,VH_F_main_lactiferous_sinuses_R,FMA:58088,Lactiferous sinus,Seio lactífero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:10
+hra-f,VH_F_main_lactiferous_ducts_R,UBERON:0015134,main lactiferous duct,Ducto lactífero principal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:9
+hra-f,VH_F_mammary_lobes_R,UBERON:0018140,mammary lobe,Lobo mamário,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:8
+hra-f,VH_F_suspensory_ligaments_R,FMA:73118,Suspensory ligament of right breast,Ligamento suspensor da mama direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:15
+hra-f,VH_F_retina_R,FMA:58302,Right retina,Retina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:16
+hra-f,VH_F_fovea_R,FMA:58661,Right fovea centralis,Fóvea central direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:17
+hra-f,VH_F_macula_lutea_R,FMA:58638,Right macula lutea,Mácula lútea direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:18
+hra-f,VH_F_optic_disc_R,FMA:58635,Right optic disc,Disco óptico direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:19
+hra-f,VH_F_palpebral_conjunctiva_of_right_upper_eyelid,FMA:223076,Palpebral conjunctiva of right upper eyelid,Conjuntiva palpebral da pálpebra superior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:20
+hra-f,VH_F_palpebral_conjunctiva_of_right_lower_eyelid,FMA:223074,Palpebral conjunctiva of right lower eyelid,Conjuntiva palpebral da pálpebra inferior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:21
+hra-f,VH_F_sclera_R,FMA:58271,Right sclera,Esclera direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:22
+hra-f,VH_F_optic_choroid_R,FMA:58299,Right choroid,Coroide direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:23
+hra-f,VH_F_pupil_R,UBERON:0010224,right pupil,Pupila direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:24
+hra-f,VH_F_ciliary_processes_R,UBERON:0010427,ciliary processes,Processos ciliares,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:25
+hra-f,VH_F_suspensory_ligament_of_lens_R,FMA:58839,Suspensory ligament of right lens,Ligamento suspensor do cristalino direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:26
+hra-f,VH_F_ora_serrata_of_retina_R,FMA:58601,Right ora serrata,Ora serrata direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:27
+hra-f,VH_F_corneo_scleral_junction_R,FMA:58343,Right corneoscleral junction,Junção corneoescleral direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:28
+hra-f,VH_F_lens_R,FMA:58242,Right lens,Cristalino direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:29
+hra-f,VH_F_schlemms_canal_R,FMA:51874,Right scleral venous sinus,Seio venoso da esclera direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:30
+hra-f,VH_F_aqueous_humor_R,FMA:58820,Aqueous humor of right eyeball,Humor aquoso do bulbo do olho direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:31
+hra-f,VH_F_ciliary_body_R,FMA:58296,Right ciliary body,Corpo ciliar direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:32
+hra-f,VH_F_ciliary_muscle_R,FMA:49152,Right ciliary muscle,Músculo ciliar direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:33
+hra-f,VH_F_trabecular_meshwork_R,UBERON:0005969,eye trabecular meshwork,Malha trabecular do olho,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:34
+hra-f,VH_F_iris_R,FMA:58236,Right iris,Íris direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:35
+hra-f,VH_F_bulbar_conjunctiva_R,FMA:59028,Right bulbar conjunctiva,Conjuntiva bulbar direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:36
+hra-f,VH_F_cornea_R,FMA:58239,Right cornea,Córnea direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:37
+hra-f,VH_F_vitreous_humor_R,FMA:261236,Humor of right vitreous body,Humor vítreo do corpo vítreo direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:38
+hra-f,VH_F_retina_L,FMA:58303,Left retina,Retina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:39
+hra-f,VH_F_fovea_L,FMA:58663,Left fovea centralis,Fóvea central esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:40
+hra-f,VH_F_macula_lutea_L,FMA:58639,Left macula lutea,Mácula lútea esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:41
+hra-f,VH_F_optic_disc_L,FMA:58636,Left optic disc,Disco óptico esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:42
+hra-f,VH_F_palpebral_conjunctiva_of_left_upper_eyelid,FMA:223078,Palpebral conjunctiva of left upper eyelid,Conjuntiva palpebral da pálpebra superior esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:43
+hra-f,VH_F_palpebral_conjunctiva_of_left_lower_eyelid,FMA:223075,Palpebral conjunctiva of left lower eyelid,Conjuntiva palpebral da pálpebra inferior esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:44
+hra-f,VH_F_vitreous_humor_L,FMA:261238,Humor of left vitreous body,Humor vítreo do corpo vítreo esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:45
+hra-f,VH_F_cornea_L,FMA:58240,Left cornea,Córnea esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:46
+hra-f,VH_F_bulbar_conjunctiva_L,FMA:59029,Left bulbar conjunctiva,Conjuntiva bulbar esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:47
+hra-f,VH_F_iris_L,FMA:58237,Left iris,Íris esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:48
+hra-f,VH_F_trabecular_meshwork_L,UBERON:0005969,eye trabecular meshwork,Malha trabecular do olho,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:34
+hra-f,VH_F_ciliary_body_L,FMA:58297,Left ciliary body,Corpo ciliar esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:49
+hra-f,VH_F_ciliary_muscle_L,FMA:49153,Left ciliary muscle,Músculo ciliar esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:50
+hra-f,VH_F_aqueous_humor_L,FMA:58821,Aqueous humor of left eyeball,Humor aquoso do bulbo do olho esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:51
+hra-f,VH_F_schlemms_canal_L,FMA:51875,Left scleral venous sinus,Seio venoso da esclera esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:52
+hra-f,VH_F_lens_L,FMA:58243,Left lens,Cristalino esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:53
+hra-f,VH_F_corneo_scleral_junction_L,FMA:58344,Left corneoscleral junction,Junção corneoescleral esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:54
+hra-f,VH_F_ora_serrata_of_retina_L,FMA:58602,Left ora serrata,Ora serrata esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:55
+hra-f,VH_F_suspensory_ligament_of_lens_L,FMA:58840,Suspensory ligament of left lens,Ligamento suspensor do cristalino esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:56
+hra-f,VH_F_ciliary_processes_L,UBERON:0010427,ciliary processes,Processos ciliares,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:25
+hra-f,VH_F_pupil_L,UBERON:0010223,left pupil,Pupila esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:57
+hra-f,VH_F_optic_choroid_L,FMA:58300,Left choroid,Coroide esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:58
+hra-f,VH_F_sclera_L,FMA:58272,Left sclera,Esclera esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:59
+hra-f,VH_F_dura_mater_right,UBERON:0002363,dura mater,Dura-máter,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:60
+hra-f,VH_F_right_optic_nerve,FMA:50875,Right optic nerve,Nervo óptico direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:61
+hra-f,VH_F_dura_mater_left,UBERON:0002363,dura mater,Dura-máter,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:60
+hra-f,VH_F_left_optic_nerve,FMA:50878,Left optic nerve,Nervo óptico esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:62
+hra-f,VH_F_optic_chiasm,UBERON:0000959,optic chiasma,Quiasma óptico,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:63
+hra-f,Allen_olfactory_bulb_L,UBERON:0002264,olfactory bulb,Bulbo olfatório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:64
+hra-f,Allen_anterior_olfactory_nucleus_L,UBERON:0002266,anterior olfactory nucleus,Núcleo olfatório anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:65
+hra-f,Allen_piriform_region_L,UBERON:0004725,piriform cortex,Córtex piriforme,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:66
+hra-f,Allen_frontal_agranular_insular_cortex_area_Fl_L,,Allen frontal agranular insular cortex area Fl L,Córtex insular agranular frontal (área Fl) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:561
+hra-f,Allen_temporal_agranular_insular_cortex_area_Tl_L,,Allen temporal agranular insular cortex area Tl L,Córtex insular agranular temporal (área Tl) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:669
+hra-f,Allen_head_of_caudate_L,,Allen head of caudate L,Cabeça do núcleo caudado esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:571
+hra-f,Allen_body_of_caudate_L,,Allen body of caudate L,Corpo do núcleo caudado esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:538
+hra-f,Allen_tail_of_caudate_L,,Allen tail of caudate L,Cauda do núcleo caudado esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:663
+hra-f,Allen_putamen_L,UBERON:0008884,left putamen,Putame esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:67
+hra-f,Allen_nucleus_accumbens_L,,Allen nucleus accumbens L,Núcleo accumbens esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:613
+hra-f,Allen_external_segment_of_globus_pallidus_L,,Allen external segment of globus pallidus L,Segmento externo do globo pálido esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:559
+hra-f,Allen_internal_segment_of_globus_pallidus_L,,Allen internal segment of globus pallidus L,Segmento interno do globo pálido esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:581
+hra-f,Allen_claustrum_L,,Allen claustrum L,Claustro esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:555
+hra-f,Allen_basal_forebrain_L,,Allen basal forebrain L,Prosencéfalo basal esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:530
+hra-f,Allen_septal_nuclei_L,,Allen septal nuclei L,Núcleos septais esquerdos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:649
+hra-f,Allen_amygdaloid_complex_L,,Allen amygdaloid complex L,Complexo amigdaloide esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:515
+hra-f,Allen_anterior_amygdaloid_area_L,,Allen anterior amygdaloid area L,Área amigdaloide anterior esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:519
+hra-f,Allen_central_nuclear_group_L,,Allen central nuclear group L,Grupo nuclear central esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:546
+hra-f,Allen_lateral_nucleus_L,,Allen lateral nucleus L,Núcleo lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:587
+hra-f,Allen_basolateral_nucleus_basal_nucleus_L,,Allen basolateral nucleus basal nucleus L,Núcleo basolateral (núcleo basal) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:532
+hra-f,Allen_basomedial_nucleus_accessory_basal_nucleus_L,,Allen basomedial nucleus accessory basal nucleus L,Núcleo basomedial (núcleo basal acessório) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:534
+hra-f,Allen_anterior_cortical_nucleus_L,,Allen anterior cortical nucleus L,Núcleo cortical anterior esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:521
+hra-f,Allen_posterior_cortical_nucleus_L,,Allen posterior cortical nucleus L,Núcleo cortical posterior esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:631
+hra-f,Allen_medial_nucleus_L,,Allen medial nucleus L,Núcleo medial esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:603
+hra-f,Allen_amygdalohippocampal_area_L,,Allen amygdalohippocampal area L,Área amigdalo-hipocampal esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:513
+hra-f,Allen_bed_nucleus_of_stria_terminalis_L,,Allen bed nucleus of stria terminalis L,Núcleo do leito da estria terminal esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:536
+hra-f,Allen_thalamus_L,,Allen thalamus L,Tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:671
+hra-f,Allen_anterior_nuclear_complex_of_thalamus_L,,Allen anterior nuclear complex of thalamus L,Complexo nuclear anterior do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:525
+hra-f,Allen_lateral_dorsal_nucleus_of_thalamus_L,,Allen lateral dorsal nucleus of thalamus L,Núcleo dorsal lateral do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:583
+hra-f,Allen_mediodorsal_nucleus_of_thalamus_L,,Allen mediodorsal nucleus of thalamus L,Núcleo mediodorsal do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:605
+hra-f,Allen_reuniens_nucleus_medioventral_nucleus_of_thalamus_L,,Allen reuniens nucleus medioventral nucleus of thalamus L,Núcleo reuniens (núcleo medioventral) do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:645
+hra-f,Allen_lateral_posterior_nucleus_of_thalamus_L,,Allen lateral posterior nucleus of thalamus L,Núcleo posterior lateral do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:591
+hra-f,Allen_pulvinar_of_thalamus_L,,Allen pulvinar of thalamus L,Pulvinar do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:641
+hra-f,Allen_ventral_anterior_nucleus_of_thalamus_L,,Allen ventral anterior nucleus of thalamus L,Núcleo ventral anterior do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:679
+hra-f,Allen_ventral_lateral_nucleus_of_thalamus_L,,Allen ventral lateral nucleus of thalamus L,Núcleo ventral lateral do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:681
+hra-f,Allen_ventral_posterior_lateral_nucleus_L,,Allen ventral posterior lateral nucleus L,Núcleo ventral posterolateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:683
+hra-f,Allen_ventral_posterior_medial_nucleus_L,,Allen ventral posterior medial nucleus L,Núcleo ventral posteromedial esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:685
+hra-f,Allen_dorsal_lateral_geniculate_nucleus_L,,Allen dorsal lateral geniculate nucleus L,Núcleo geniculado lateral dorsal esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:557
+hra-f,Allen_medial_geniculate_nuclei_L,,Allen medial geniculate nuclei L,Núcleos geniculados mediais esquerdos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:601
+hra-f,Allen_centromedian_nucleus_of_thalamus_L,,Allen centromedian nucleus of thalamus L,Núcleo centromediano do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:548
+hra-f,Allen_parafascicular_nucleus_of_thalamus_L,,Allen parafascicular nucleus of thalamus L,Núcleo parafascicular do tálamo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:624
+hra-f,Allen_habenular_nuclei_L,,Allen habenular nuclei L,Núcleos habenulares esquerdos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:569
+hra-f,Allen_pineal_body_L,UBERON:0001905,pineal body,Glândula pineal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:68
+hra-f,Allen_zona_incerta_L,,Allen zona incerta L,Zona incerta esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:691
+hra-f,Allen_supraoptic_region_of_HTH_L,,Allen supraoptic region of HTH L,Região supraóptica do hipotálamo esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:659
+hra-f,Allen_preoptic_region_of_HTH_L,,Allen preoptic region of HTH L,Região pré-óptica do hipotálamo esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:637
+hra-f,Allen_tuberal_region_of_HTH_L,,Allen tuberal region of HTH L,Região tuberal do hipotálamo esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:677
+hra-f,Allen_white_matter_of_forebrain_L,,Allen white matter of forebrain L,Substância branca do prosencéfalo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:687
+hra-f,Allen_anterior_commissure_L,UBERON:0000935,anterior commissure,Comissura anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:69
+hra-f,Allen_corpus_callosum_L,UBERON:0002336,corpus callosum,Corpo caloso,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:70
+hra-f,Allen_fornix_L,UBERON:0000052,fornix of brain,Fórnix do encéfalo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:71
+hra-f,Allen_mammillothalamic_tract_L,,Allen mammillothalamic tract L,Fascículo mamilotalâmico esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:599
+hra-f,Allen_optic_tract_L,UBERON:0001908,optic tract,Trato óptico,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:72
+hra-f,Allen_anterior_horn_of_lateral_ventricle_L,,Allen anterior horn of lateral ventricle L,Corno anterior do ventrículo lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:523
+hra-f,Allen_body_of_lateral_ventricle_L,,Allen body of lateral ventricle L,Corpo do ventrículo lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:542
+hra-f,Allen_posterior_horn_of_lateral_ventricle_L,,Allen posterior horn of lateral ventricle L,Corno posterior do ventrículo lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:633
+hra-f,Allen_inferior_horn_of_lateral_ventricle_L,,Allen inferior horn of lateral ventricle L,Corno inferior do ventrículo lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:577
+hra-f,Allen_third_ventricle_L,,Allen third ventricle L,Terceiro ventrículo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:673
+hra-f,Allen_cerebellar_vermis_L,UBERON:0004720,cerebellar vermis,Vérmis do cerebelo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:73
+hra-f,Allen_cerebellar_deep_nuclei_L,,Allen cerebellar deep nuclei L,Núcleos profundos do cerebelo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:550
+hra-f,Allen_white_matter_of_hindbrain_L,,Allen white matter of hindbrain L,Substância branca do rombencéfalo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:689
+hra-f,Allen_olfactory_tract_L,,Allen olfactory tract L,Trato olfatório esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:618
+hra-f,Allen_primary_motor_cortex_L,UBERON:0002812,left cerebral hemisphere,Hemisfério cerebral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:74
+hra-f,Allen_superior_frontal_gyrus_L,UBERON:0002661,superior frontal gyrus,Giro frontal superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:75
+hra-f,Allen_middle_frontal_gyrus_L,UBERON:0002702,middle frontal gyrus,Giro frontal médio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:76
+hra-f,Allen_inferior_frontal_gyrus_triangular_part_L,UBERON:0002629,triangular part of inferior frontal gyrus,Parte triangular do giro frontal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:77
+hra-f,Allen_inferior_frontal_gyrus_opercular_part_L,UBERON:0002980,opercular part of inferior frontal gyrus,Parte opercular do giro frontal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:78
+hra-f,Allen_gyrus_rectus_straight_gyrus_L,UBERON:0004671,gyrus rectus,Giro reto,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:79
+hra-f,Allen_medial_orbital_gyrus_L,UBERON:0002570,medial orbital gyrus,Giro orbital medial,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:80
+hra-f,Allen_anterior_intermediate_orbital_gyrus_L,UBERON:0002644,intermediate orbital gyrus,Giro orbital intermédio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:81
+hra-f,Allen_posterior_intermediate_orbital_gyrus_L,UBERON:0002644,intermediate orbital gyrus,Giro orbital intermédio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:81
+hra-f,Allen_lateral_orbital_gyrus_L,UBERON:0002564,lateral orbital gyrus,Giro orbital lateral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:82
+hra-f,Allen_paracentral_lobule_rostral_part_L,UBERON:0035932,anterior segment of paracentral lobule,Segmento anterior do lóbulo paracentral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:83
+hra-f,Allen_frontal_operculum_L,UBERON:0002947,frontal operculum,Opérculo frontal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:84
+hra-f,Allen_postcentral_gyrus_L,UBERON:0002581,postcentral gyrus,Giro pós-central,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:85
+hra-f,Allen_supraparietal_lobule_L,,Allen supraparietal lobule L,Lóbulo parietal superior esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:661
+hra-f,Allen_supramarginal_gyrus_L,,Allen supramarginal gyrus L,Giro supramarginal esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:657
+hra-f,Allen_angular_gyrus_L,,Allen angular gyrus L,Giro angular esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:517
+hra-f,Allen_precuneus_L,UBERON:0006093,precuneus cortex,Córtex do pré-cúneo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:86
+hra-f,Allen_paracentral_lobule_caudal_part_L,,Allen paracentral lobule caudal part L,Parte caudal do lóbulo paracentral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:620
+hra-f,Allen_superior_temporal_gyrus_L,UBERON:0002769,superior temporal gyrus,Giro temporal superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:87
+hra-f,Allen_middle_temporal_gyrus_L,UBERON:0002771,middle temporal gyrus,Giro temporal médio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:88
+hra-f,Allen_inferior_temporal_gyrus_L,UBERON:0002751,inferior temporal gyrus,Giro temporal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:89
+hra-f,Allen_occipitotemporal_fusiform_gyrus_temporal_part_L,,Allen occipitotemporal fusiform gyrus temporal part L,Parte temporal do giro occipitotemporal lateral (fusiforme) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:615
+hra-f,Allen_transverse_temporal_gyrus_Heschls_gyrus_L,,Allen transverse temporal gyrus Heschls gyrus L,Giro temporal transverso (de Heschl) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:675
+hra-f,Allen_planum_temporale_L,UBERON:0022268,planum temporale,Plano temporal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:90
+hra-f,Allen_temporal_pole_L,UBERON:0002576,temporal pole,Polo temporal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:91
+hra-f,Allen_planum_polare_L,UBERON:0023861,planum polare,Plano polar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:92
+hra-f,Allen_occipital_pole_L,UBERON:0002902,occipital pole,Polo occipital,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:93
+hra-f,Allen_cuneus_L,UBERON:0006092,cuneus cortex,Córtex do cúneo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:94
+hra-f,Allen_lingual_gyrus_medial_occipitotemporal_gyrus_L,UBERON:0002943,lingual gyrus,Giro lingual,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:95
+hra-f,Allen_lateral_occipitotemporal_fusiform_gyrus_occipital_part_L,UBERON:0022364,occipital fusiform gyrus,Giro fusiforme occipital,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:96
+hra-f,Allen_inferior_occipital_gyrus_L,UBERON:0014608,inferior occipital gyrus,Giro occipital inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:97
+hra-f,Allen_superior_occipital_gyrus_L,UBERON:0002948,superior occipital gyrus,Giro occipital superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:98
+hra-f,Allen_cingulate_gyrus_rostral_anterior_part_L,UBERON:0002756,anterior cingulate gyrus,Giro do cíngulo anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:99
+hra-f,Allen_cingulate_gyrus_caudal_posterior_part_L,UBERON:0002740,posterior cingulate gyrus,Giro do cíngulo posterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:100
+hra-f,Allen_ingulo_parahippocampal_isthmus_L,UBERON:0002738,isthmus of cingulate gyrus,Istmo do giro do cíngulo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:101
+hra-f,Allen_subcallosal_gyrus_parolfactory_gyrus_L,UBERON:0003020,subcallosal area,Área subcalosa,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:102
+hra-f,Allen_anterior_parahippocampal_gyrus_L,UBERON:0022383,anterior parahippocampal gyrus,Giro para-hipocampal anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:103
+hra-f,Allen_posterior_parahippocampal_gyrus_L,UBERON:0002657,posterior parahippocampal gyrus,Giro para-hipocampal posterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:104
+hra-f,Allen_gyrus_ambiens_L,,Allen gyrus ambiens L,Giro ambiente esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:567
+hra-f,Allen_long_insular_gyri_L,,Allen long insular gyri L,Giros longos da ínsula esquerdos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:595
+hra-f,Allen_short_insular_gyri_L,,Allen short insular gyri L,Giros curtos da ínsula esquerdos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:651
+hra-f,Allen_limen_insula_L,,Allen limen insula L,Límen da ínsula esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:593
+hra-f,Allen_pretectal_region_L,,Allen pretectal region L,Região pré-tectal esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:639
+hra-f,Allen_substantia_nigra_L,UBERON:0002038,substantia nigra,Substância negra,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:105
+hra-f,Allen_superior_colliculus_L,UBERON:0001945,superior colliculus,Colículo superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:106
+hra-f,Allen_cerebral_peduncle_crus_cerebri_L,UBERON:0002623,cerebral peduncle,Pedúnculo cerebral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:107
+hra-f,Allen_superior_cerebellar_peduncle_brachium_conjunctivum_L,,Allen superior cerebellar peduncle brachium conjunctivum L,Pedúnculo cerebelar superior esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:655
+hra-f,Allen_cerebral_aqueduct_L,,Allen cerebral aqueduct L,Aqueduto do mesencéfalo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:553
+hra-f,Allen_paravermis_of_cerebellum_L,,Allen paravermis of cerebellum L,Paravérmis do cerebelo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:626
+hra-f,Allen_lateral_hemisphere_of_cerebellum_L,,Allen lateral hemisphere of cerebellum L,Hemisfério lateral do cerebelo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:585
+hra-f,Allen_basilar_part_of_pons_L,UBERON:0002151,pontine nuclear group,Núcleos da ponte,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:108
+hra-f,Allen_pontine_tegmentum_L,UBERON:0003023,pontine tegmentum,Tegmento da ponte,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:109
+hra-f,Allen_pyramidal_part_of_medulla_oblongata_L,,Allen pyramidal part of medulla oblongata L,Parte piramidal do bulbo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:643
+hra-f,Allen_tegmentum_of_medulla_oblongata_L,,Allen tegmentum of medulla oblongata L,Tegmento do bulbo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:667
+hra-f,Allen_inferior_olive_L,,Allen inferior olive L,Oliva inferior esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:579
+hra-f,Allen_middle_cerebellar_peduncle_L,,Allen middle cerebellar peduncle L,Pedúnculo cerebelar médio esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:609
+hra-f,Allen_fourth_ventricle_L,UBERON:0002422,fourth ventricle,Quarto ventrículo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:110
+hra-f,Allen_central_canal_of_medulla_oblongata_L,,Allen central canal of medulla oblongata L,Canal central do bulbo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:544
+hra-f,Allen_midline_nuclear_complex_L,,Allen midline nuclear complex L,Complexo nuclear da linha média esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:611
+hra-f,Allen_lateral_olfactory_gyrus_L,,Allen lateral olfactory gyrus L,Giro olfatório lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:589
+hra-f,Allen_parietal_operculum_L,UBERON:0002911,parietal operculum,Opérculo parietal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:111
+hra-f,Allen_optic_radiation_L,UBERON:0022264,optic radiation,Radiação óptica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:112
+hra-f,Allen_posteroventral_putamen_L,,Allen posteroventral putamen L,Putame posteroventral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:635
+hra-f,Allen_atrium_of_lateral_ventricle_L,,Allen atrium of lateral ventricle L,Átrio do ventrículo lateral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:528
+hra-f,Allen_paracingulate_gyrus_L,,Allen paracingulate gyrus L,Giro paracingulado esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:622
+hra-f,Allen_rostral_gyrus_L,,Allen rostral gyrus L,Giro rostral esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:647
+hra-f,Allen_frontomarginal_gyrus_L,,Allen frontomarginal gyrus L,Giro frontomarginal esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:565
+hra-f,Allen_frontal_pole_L,,Allen frontal pole L,Polo frontal esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:563
+hra-f,Allen_inferior_cerebellar_peduncle_L,,Allen inferior cerebellar peduncle L,Pedúnculo cerebelar inferior esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:575
+hra-f,Allen_perirhinal_gyrus_rostral_part_of_FuGt_L,,Allen perirhinal gyrus rostral part of FuGt L,Giro perirrinal (parte rostral do giro fusiforme) esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:628
+hra-f,Allen_head_of_hippocampus_L,,Allen head of hippocampus L,Cabeça do hipocampo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:573
+hra-f,Allen_body_of_hippocampus_L,,Allen body of hippocampus L,Corpo do hipocampo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:540
+hra-f,Allen_tail_of_hippocampus_L,,Allen tail of hippocampus L,Cauda do hipocampo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:665
+hra-f,Allen_olfactory_bulb_R,,Allen olfactory bulb R,Bulbo olfatório direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:617
+hra-f,Allen_anterior_olfactory_nucleus_R,,Allen anterior olfactory nucleus R,Núcleo olfatório anterior direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:527
+hra-f,Allen_piriform_region_R,,Allen piriform region R,Região piriforme direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:630
+hra-f,Allen_frontal_agranular_insular_cortex_area_Fl_R,,Allen frontal agranular insular cortex area Fl R,Córtex insular agranular frontal (área Fl) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:562
+hra-f,Allen_temporal_agranular_insular_cortex_area_Tl_R,,Allen temporal agranular insular cortex area Tl R,Córtex insular agranular temporal (área Tl) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:670
+hra-f,Allen_head_of_caudate_R,,Allen head of caudate R,Cabeça do núcleo caudado direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:572
+hra-f,Allen_body_of_caudate_R,,Allen body of caudate R,Corpo do núcleo caudado direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:539
+hra-f,Allen_tail_of_caudate_R,,Allen tail of caudate R,Cauda do núcleo caudado direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:664
+hra-f,Allen_putamen_R,UBERON:0008885,right putamen,Putame direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:113
+hra-f,Allen_nucleus_accumbens_R,,Allen nucleus accumbens R,Núcleo accumbens direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:614
+hra-f,Allen_external_segment_of_globus_pallidus_R,,Allen external segment of globus pallidus R,Segmento externo do globo pálido direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:560
+hra-f,Allen_internal_segment_of_globus_pallidus_R,,Allen internal segment of globus pallidus R,Segmento interno do globo pálido direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:582
+hra-f,Allen_claustrum_R,,Allen claustrum R,Claustro direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:556
+hra-f,Allen_basal_forebrain_R,,Allen basal forebrain R,Prosencéfalo basal direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:531
+hra-f,Allen_septal_nuclei_R,,Allen septal nuclei R,Núcleos septais direitos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:650
+hra-f,Allen_amygdaloid_complex_R,,Allen amygdaloid complex R,Complexo amigdaloide direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:516
+hra-f,Allen_anterior_amygdaloid_area_R,,Allen anterior amygdaloid area R,Área amigdaloide anterior direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:520
+hra-f,Allen_central_nuclear_group_R,,Allen central nuclear group R,Grupo nuclear central direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:547
+hra-f,Allen_lateral_nucleus_R,,Allen lateral nucleus R,Núcleo lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:588
+hra-f,Allen_basolateral_nucleus_basal_nucleus_R,,Allen basolateral nucleus basal nucleus R,Núcleo basolateral (núcleo basal) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:533
+hra-f,Allen_basomedial_nucleus_accessory_basal_nucleus_R,,Allen basomedial nucleus accessory basal nucleus R,Núcleo basomedial (núcleo basal acessório) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:535
+hra-f,Allen_anterior_cortical_nucleus_R,,Allen anterior cortical nucleus R,Núcleo cortical anterior direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:522
+hra-f,Allen_posterior_cortical_nucleus_R,,Allen posterior cortical nucleus R,Núcleo cortical posterior direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:632
+hra-f,Allen_medial_nucleus_R,,Allen medial nucleus R,Núcleo medial direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:604
+hra-f,Allen_amygdalohippocampal_area_R,,Allen amygdalohippocampal area R,Área amigdalo-hipocampal direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:514
+hra-f,Allen_bed_nucleus_of_stria_terminalis_R,,Allen bed nucleus of stria terminalis R,Núcleo do leito da estria terminal direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:537
+hra-f,Allen_thalamus_R,,Allen thalamus R,Tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:672
+hra-f,Allen_anterior_nuclear_complex_of_thalamus_R,,Allen anterior nuclear complex of thalamus R,Complexo nuclear anterior do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:526
+hra-f,Allen_lateral_dorsal_nucleus_of_thalamus_R,,Allen lateral dorsal nucleus of thalamus R,Núcleo dorsal lateral do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:584
+hra-f,Allen_mediodorsal_nucleus_of_thalamus_R,,Allen mediodorsal nucleus of thalamus R,Núcleo mediodorsal do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:606
+hra-f,Allen_reuniens_nucleus_medioventral_nucleus_of_thalamus_R,,Allen reuniens nucleus medioventral nucleus of thalamus R,Núcleo reuniens (núcleo medioventral) do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:646
+hra-f,Allen_lateral_posterior_nucleus_of_thalamus_R,,Allen lateral posterior nucleus of thalamus R,Núcleo posterior lateral do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:592
+hra-f,Allen_pulvinar_of_thalamus_R,,Allen pulvinar of thalamus R,Pulvinar do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:642
+hra-f,Allen_ventral_anterior_nucleus_of_thalamus_R,,Allen ventral anterior nucleus of thalamus R,Núcleo ventral anterior do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:680
+hra-f,Allen_ventral_lateral_nucleus_of_thalamus_R,,Allen ventral lateral nucleus of thalamus R,Núcleo ventral lateral do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:682
+hra-f,Allen_ventral_posterior_lateral_nucleus_R,,Allen ventral posterior lateral nucleus R,Núcleo ventral posterolateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:684
+hra-f,Allen_ventral_posterior_medial_nucleus_R,,Allen ventral posterior medial nucleus R,Núcleo ventral posteromedial direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:686
+hra-f,Allen_dorsal_lateral_geniculate_nucleus_R,,Allen dorsal lateral geniculate nucleus R,Núcleo geniculado lateral dorsal direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:558
+hra-f,Allen_medial_geniculate_nuclei_R,,Allen medial geniculate nuclei R,Núcleos geniculados mediais direitos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:602
+hra-f,Allen_centromedian_nucleus_of_thalamus_R,,Allen centromedian nucleus of thalamus R,Núcleo centromediano do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:549
+hra-f,Allen_parafascicular_nucleus_of_thalamus_R,,Allen parafascicular nucleus of thalamus R,Núcleo parafascicular do tálamo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:625
+hra-f,Allen_habenular_nuclei_R,,Allen habenular nuclei R,Núcleos habenulares direitos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:570
+hra-f,Allen_pineal_body_R,UBERON:0001905,pineal body,Glândula pineal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:68
+hra-f,Allen_zona_incerta_R,,Allen zona incerta R,Zona incerta direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:692
+hra-f,Allen_supraoptic_region_of_HTH_R,,Allen supraoptic region of HTH R,Região supraóptica do hipotálamo direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:660
+hra-f,Allen_white_matter_of_forebrain_R,,Allen white matter of forebrain R,Substância branca do prosencéfalo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:688
+hra-f,Allen_anterior_commissure_R,UBERON:0000935,anterior commissure,Comissura anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:69
+hra-f,Allen_corpus_callosum_R,UBERON:0002336,corpus callosum,Corpo caloso,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:70
+hra-f,Allen_fornix_R,UBERON:0000052,fornix of brain,Fórnix do encéfalo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:71
+hra-f,Allen_mammillothalamic_tract_R,,Allen mammillothalamic tract R,Fascículo mamilotalâmico direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:600
+hra-f,Allen_optic_tract_R,UBERON:0001908,optic tract,Trato óptico,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:72
+hra-f,Allen_anterior_horn_of_lateral_ventricle_R,,Allen anterior horn of lateral ventricle R,Corno anterior do ventrículo lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:524
+hra-f,Allen_body_of_lateral_ventricle_R,,Allen body of lateral ventricle R,Corpo do ventrículo lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:543
+hra-f,Allen_posterior_horn_of_lateral_ventricle_R,,Allen posterior horn of lateral ventricle R,Corno posterior do ventrículo lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:634
+hra-f,Allen_inferior_horn_of_lateral_ventricle_R,,Allen inferior horn of lateral ventricle R,Corno inferior do ventrículo lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:578
+hra-f,Allen_third_ventricle_R,,Allen third ventricle R,Terceiro ventrículo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:674
+hra-f,Allen_cerebellar_vermis_R,,Allen cerebellar vermis R,Vérmis do cerebelo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:552
+hra-f,Allen_cerebellar_deep_nuclei_R,,Allen cerebellar deep nuclei R,Núcleos profundos do cerebelo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:551
+hra-f,Allen_white_matter_of_hindbrain_R,,Allen white matter of hindbrain R,Substância branca do rombencéfalo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:690
+hra-f,Allen_olfactory_tract_R,,Allen olfactory tract R,Trato olfatório direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:619
+hra-f,Allen_primary_motor_cortex_R,UBERON:0002813,right cerebral hemisphere,Hemisfério cerebral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:114
+hra-f,Allen_superior_frontal_gyrus_R,UBERON:0002661,superior frontal gyrus,Giro frontal superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:75
+hra-f,Allen_middle_frontal_gyrus_R,UBERON:0002702,middle frontal gyrus,Giro frontal médio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:76
+hra-f,Allen_inferior_frontal_gyrus_triangular_part_R,UBERON:0002629,triangular part of inferior frontal gyrus,Parte triangular do giro frontal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:77
+hra-f,Allen_inferior_frontal_gyrus_opercular_part_R,UBERON:0002980,opercular part of inferior frontal gyrus,Parte opercular do giro frontal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:78
+hra-f,Allen_gyrus_rectus_straight_gyrus_R,UBERON:0004671,gyrus rectus,Giro reto,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:79
+hra-f,Allen_medial_orbital_gyrus_R,UBERON:0002570,medial orbital gyrus,Giro orbital medial,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:80
+hra-f,Allen_anterior_intermediate_orbital_gyrus_R,UBERON:0002644,intermediate orbital gyrus,Giro orbital intermédio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:81
+hra-f,Allen_posterior_intermediate_orbital_gyrus_R,UBERON:0002644,intermediate orbital gyrus,Giro orbital intermédio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:81
+hra-f,Allen_lateral_orbital_gyrus_R,UBERON:0002564,lateral orbital gyrus,Giro orbital lateral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:82
+hra-f,Allen_paracentral_lobule_rostral_part_R,UBERON:0035932,anterior segment of paracentral lobule,Segmento anterior do lóbulo paracentral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:83
+hra-f,Allen_frontal_operculum_R,UBERON:0002947,frontal operculum,Opérculo frontal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:84
+hra-f,Allen_postcentral_gyrus_R,UBERON:0002581,postcentral gyrus,Giro pós-central,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:85
+hra-f,Allen_supraparietal_lobule_R,,Allen supraparietal lobule R,Lóbulo parietal superior direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:662
+hra-f,Allen_supramarginal_gyrus_R,,Allen supramarginal gyrus R,Giro supramarginal direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:658
+hra-f,Allen_angular_gyrus_R,,Allen angular gyrus R,Giro angular direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:518
+hra-f,Allen_precuneus_R,UBERON:0006093,precuneus cortex,Córtex do pré-cúneo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:86
+hra-f,Allen_paracentral_lobule_caudal_part_R,,Allen paracentral lobule caudal part R,Parte caudal do lóbulo paracentral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:621
+hra-f,Allen_superior_temporal_gyrus_R,UBERON:0002769,superior temporal gyrus,Giro temporal superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:87
+hra-f,Allen_middle_temporal_gyrus_R,UBERON:0002771,middle temporal gyrus,Giro temporal médio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:88
+hra-f,Allen_inferior_temporal_gyrus_R,UBERON:0002751,inferior temporal gyrus,Giro temporal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:89
+hra-f,Allen_occipitotemporal_fusiform_gyrus_temporal_part_R,,Allen occipitotemporal fusiform gyrus temporal part R,Parte temporal do giro occipitotemporal lateral (fusiforme) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:616
+hra-f,Allen_transverse_temporal_gyrus_Heschls_gyrus_R,,Allen transverse temporal gyrus Heschls gyrus R,Giro temporal transverso (de Heschl) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:676
+hra-f,Allen_planum_temporale_R,UBERON:0022268,planum temporale,Plano temporal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:90
+hra-f,Allen_temporal_pole_R,UBERON:0002576,temporal pole,Polo temporal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:91
+hra-f,Allen_planum_polare_R,UBERON:0023861,planum polare,Plano polar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:92
+hra-f,Allen_occipital_pole_R,UBERON:0002902,occipital pole,Polo occipital,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:93
+hra-f,Allen_cuneus_R,UBERON:0006092,cuneus cortex,Córtex do cúneo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:94
+hra-f,Allen_lingual_gyrus_medial_occipitotemporal_gyrus_R,UBERON:0002943,lingual gyrus,Giro lingual,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:95
+hra-f,Allen_lateral_occipitotemporal_fusiform_gyrus_occipital_part_R,UBERON:0022364,occipital fusiform gyrus,Giro fusiforme occipital,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:96
+hra-f,Allen_inferior_occipital_gyrus_R,UBERON:0014608,inferior occipital gyrus,Giro occipital inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:97
+hra-f,Allen_superior_occipital_gyrus_R,UBERON:0002948,superior occipital gyrus,Giro occipital superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:98
+hra-f,Allen_cingulate_gyrus_rostral_anterior_part_R,UBERON:0002756,anterior cingulate gyrus,Giro do cíngulo anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:99
+hra-f,Allen_cingulate_gyrus_caudal_posterior_part_R,UBERON:0002740,posterior cingulate gyrus,Giro do cíngulo posterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:100
+hra-f,Allen_ingulo_parahippocampal_isthmus_R,UBERON:0002738,isthmus of cingulate gyrus,Istmo do giro do cíngulo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:101
+hra-f,Allen_subcallosal_gyrus_parolfactory_gyrus_R,UBERON:0003020,subcallosal area,Área subcalosa,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:102
+hra-f,Allen_anterior_parahippocampal_gyrus_R,UBERON:0022383,anterior parahippocampal gyrus,Giro para-hipocampal anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:103
+hra-f,Allen_posterior_parahippocampal_gyrus_R,UBERON:0002657,posterior parahippocampal gyrus,Giro para-hipocampal posterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:104
+hra-f,Allen_gyrus_ambiens_R,,Allen gyrus ambiens R,Giro ambiente direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:568
+hra-f,Allen_long_insular_gyri_R,,Allen long insular gyri R,Giros longos da ínsula direitos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:596
+hra-f,Allen_short_insular_gyri_R,,Allen short insular gyri R,Giros curtos da ínsula direitos (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:652
+hra-f,Allen_limen_insula_R,,Allen limen insula R,Límen da ínsula direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:594
+hra-f,Allen_pretectal_region_R,,Allen pretectal region R,Região pré-tectal direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:640
+hra-f,Allen_red_nucleus_R,UBERON:0001947,red nucleus,Núcleo rubro,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:115
+hra-f,Allen_substantia_nigra_R,UBERON:0002038,substantia nigra,Substância negra,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:105
+hra-f,Allen_superior_colliculus_R,UBERON:0001945,superior colliculus,Colículo superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:106
+hra-f,Allen_inferior_colliculus_R,UBERON:0001946,inferior colliculus,Colículo inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:116
+hra-f,Allen_cerebral_peduncle_crus_cerebri_R,UBERON:0002623,cerebral peduncle,Pedúnculo cerebral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:107
+hra-f,Allen_superior_cerebellar_peduncle_brachium_conjunctivum_R,,Allen superior cerebellar peduncle brachium conjunctivum R,Pedúnculo cerebelar superior direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:656
+hra-f,Allen_cerebral_aqueduct_R,,Allen cerebral aqueduct R,Aqueduto do mesencéfalo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:554
+hra-f,Allen_paravermis_of_cerebellum_R,,Allen paravermis of cerebellum R,Paravérmis do cerebelo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:627
+hra-f,Allen_lateral_hemisphere_of_cerebellum_R,,Allen lateral hemisphere of cerebellum R,Hemisfério lateral do cerebelo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:586
+hra-f,Allen_basilar_part_of_pons_R,UBERON:0002151,pontine nuclear group,Núcleos da ponte,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:108
+hra-f,Allen_pontine_tegmentum_R,UBERON:0003023,pontine tegmentum,Tegmento da ponte,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:109
+hra-f,Allen_pyramidal_part_of_medulla_oblongata_R,,Allen pyramidal part of medulla oblongata R,Parte piramidal do bulbo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:644
+hra-f,Allen_tegmentum_of_medulla_oblongata_R,,Allen tegmentum of medulla oblongata R,Tegmento do bulbo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:668
+hra-f,Allen_inferior_olive_R,,Allen inferior olive R,Oliva inferior direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:580
+hra-f,Allen_inferior_cerebellar_peduncle_R,,Allen inferior cerebellar peduncle R,Pedúnculo cerebelar inferior direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:576
+hra-f,Allen_middle_cerebellar_peduncle_R,,Allen middle cerebellar peduncle R,Pedúnculo cerebelar médio direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:610
+hra-f,Allen_fourth_ventricle_R,UBERON:0002422,fourth ventricle,Quarto ventrículo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:110
+hra-f,Allen_central_canal_of_medulla_oblongata_R,,Allen central canal of medulla oblongata R,Canal central do bulbo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:545
+hra-f,Allen_midline_nuclear_complex_R,,Allen midline nuclear complex R,Complexo nuclear da linha média direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:612
+hra-f,Allen_lateral_olfactory_gyrus_R,,Allen lateral olfactory gyrus R,Giro olfatório lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:590
+hra-f,Allen_parietal_operculum_R,UBERON:0002911,parietal operculum,Opérculo parietal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:111
+hra-f,Allen_optic_radiation_R,UBERON:0022264,optic radiation,Radiação óptica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:112
+hra-f,Allen_posteroventral_putamen_R,,Allen posteroventral putamen R,Putame posteroventral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:636
+hra-f,Allen_atrium_of_lateral_ventricle_R,,Allen atrium of lateral ventricle R,Átrio do ventrículo lateral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:529
+hra-f,Allen_paracingulate_gyrus_R,,Allen paracingulate gyrus R,Giro paracingulado direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:623
+hra-f,Allen_rostral_gyrus_R,,Allen rostral gyrus R,Giro rostral direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:648
+hra-f,Allen_frontomarginal_gyrus_R,,Allen frontomarginal gyrus R,Giro frontomarginal direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:566
+hra-f,Allen_frontal_pole_R,,Allen frontal pole R,Polo frontal direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:564
+hra-f,Allen_perirhinal_gyrus_rostral_part_of_FuGt_R,,Allen perirhinal gyrus rostral part of FuGt R,Giro perirrinal (parte rostral do giro fusiforme) direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:629
+hra-f,Allen_hypothalamus_L,UBERON:0001898,hypothalamus,Hipotálamo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:117
+hra-f,Allen_hypothalamus_R,UBERON:0001898,hypothalamus,Hipotálamo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:117
+hra-f,Allen_subthalamic_nucleus_R,,Allen subthalamic nucleus R,Núcleo subtalâmico direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:654
+hra-f,Allen_mammillary_region_of_HTH_R,,Allen mammillary region of HTH R,Região mamilar do hipotálamo direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:598
+hra-f,Allen_midbrain_tegmentum_R,,Allen midbrain tegmentum R,Tegmento do mesencéfalo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:608
+hra-f,Allen_tuberal_region_of_HTH_R,,Allen tuberal region of HTH R,Região tuberal do hipotálamo direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:678
+hra-f,Allen_preoptic_region_of_HTH_R,,Allen preoptic region of HTH R,Região pré-óptica do hipotálamo direita (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:638
+hra-f,Allen_midbrain_tegmentum_L,,Allen midbrain tegmentum L,Tegmento do mesencéfalo esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:607
+hra-f,Allen_red_nucleus_L,UBERON:0001947,red nucleus,Núcleo rubro,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:115
+hra-f,Allen_inferior_colliculus_L,UBERON:0001946,inferior colliculus,Colículo inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:116
+hra-f,Allen_mammillary_region_of_HTH_L,,Allen mammillary region of HTH L,Região mamilar do hipotálamo esquerda (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:597
+hra-f,Allen_subthalamic_nucleus_L,,Allen subthalamic nucleus L,Núcleo subtalâmico esquerdo (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:653
+hra-f,Allen_head_of_hippocampus_R,,Allen head of hippocampus R,Cabeça do hipocampo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:574
+hra-f,Allen_body_of_hippocampus_R,,Allen body of hippocampus R,Corpo do hipocampo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:541
+hra-f,Allen_tail_of_hippocampus_R,,Allen tail of hippocampus R,Cauda do hipocampo direito (Allen),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:666
+hra-f,VH_F_C1_segment_of_cervical_spinal_cord,UBERON:0006469,C1 segment of cervical spinal cord,Segmento C1 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:118
+hra-f,VH_F_C2_segment_of_cervical_spinal_cord,UBERON:0006489,C2 segment of cervical spinal cord,Segmento C2 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:119
+hra-f,VH_F_C3_segment_of_cervical_spinal_cord,UBERON:0006488,C3 segment of cervical spinal cord,Segmento C3 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:120
+hra-f,VH_F_C4_segment_of_cervical_spinal_cord,UBERON:0006490,C4 segment of cervical spinal cord,Segmento C4 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:121
+hra-f,VH_F_C5_segment_of_cervical_spinal_cord,UBERON:0006491,C5 segment of cervical spinal cord,Segmento C5 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:122
+hra-f,VH_F_C6_segment_of_cervical_spinal_cord,UBERON:0006492,C6 segment of cervical spinal cord,Segmento C6 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:123
+hra-f,VH_F_C7_segment_of_cervical_spinal_cord,UBERON:0006493,C7 segment of cervical spinal cord,Segmento C7 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:124
+hra-f,VH_F_C8_segment_of_cervical_spinal_cord,UBERON:0006470,C8 segment of cervical spinal cord,Segmento C8 da medula espinal cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:125
+hra-f,VH_F_first_thoracic_spinal_cord_segment,UBERON:0006457,first thoracic spinal cord segment,Primeiro segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:126
+hra-f,VH_F_second_thoracic_spinal_cord_segment,UBERON:0006458,second thoracic spinal cord segment,Segundo segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:127
+hra-f,VH_F_third_thoracic_spinal_cord_segment,UBERON:0006459,third thoracic spinal cord segment,Terceiro segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:128
+hra-f,VH_F_fourth_thoracic_spinal_cord_segment,UBERON:0006452,fourth thoracic spinal cord segment,Quarto segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:129
+hra-f,VH_F_fifth_thoracic_spinal_cord_segment,UBERON:0006453,fifth thoracic spinal cord segment,Quinto segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:130
+hra-f,VH_F_seventh_thoracic_spinal_cord_segment,UBERON:0006455,seventh thoracic spinal cord segment,Sétimo segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:131
+hra-f,VH_F_eigth_thoracic_spinal_cord_segment,UBERON:0006456,eighth thoracic spinal cord segment,Oitavo segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:132
+hra-f,VH_F_sixth_thoracic_spinal_cord_segment,UBERON:0006454,sixth thoracic spinal cord segment,Sexto segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:133
+hra-f,VH_F_ninth_thoracic_spinal_cord_segment,UBERON:0006465,ninth thoracic spinal cord segment,Nono segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:134
+hra-f,VH_F_tenth_thoracic_spinal_cord_segment,UBERON:0006466,tenth thoracic spinal cord segment,Décimo segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:135
+hra-f,VH_F_eleventh_thoracic_spinal_cord_segment,UBERON:0006467,eleventh thoracic spinal cord segment,Décimo primeiro segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:136
+hra-f,VH_F_twelfth_thoracic_spinal_cord_segment,UBERON:0006468,twelfth thoracic spinal cord segment,Décimo segundo segmento torácico da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:137
+hra-f,VH_F_first_lumbar_spinal_cord_segment,UBERON:0006448,first lumbar spinal cord segment,Primeiro segmento lombar da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:138
+hra-f,VH_F_second_lumbar_spinal_cord_segment,UBERON:0006450,second lumbar spinal cord segment,Segundo segmento lombar da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:139
+hra-f,VH_F_third_lumbar_spinal_cord_segment,UBERON:0006449,third lumbar spinal cord segment,Terceiro segmento lombar da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:140
+hra-f,VH_F_fourth_lumbar_spinal_cord_segment,UBERON:0006451,fourth lumbar spinal cord segment,Quarto segmento lombar da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:141
+hra-f,VH_F_fifth_lumbar_spinal_cord_segment,UBERON:0006447,fifth lumbar spinal cord segment,Quinto segmento lombar da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:142
+hra-f,VH_F_first_sacral_spinal_cord_segment,UBERON:0006460,first sacral spinal cord segment,Primeiro segmento sacral da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:143
+hra-f,VH_F_second_sacral_spinal_cord_segment,UBERON:0006461,second sacral spinal cord segment,Segundo segmento sacral da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:144
+hra-f,VH_F_third_sacral_spinal_cord_segment,UBERON:0006462,third sacral spinal cord segment,Terceiro segmento sacral da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:145
+hra-f,VH_F_fourth_sacral_spinal_cord_segment,UBERON:0006463,fourth sacral spinal cord segment,Quarto segmento sacral da medula espinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:146
+hra-f,VH_F_medial_rectus_extraocular_muscle_L,FMA:49057,Left medial rectus,Reto medial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:147
+hra-f,VH_F_inferior_rectus_extraocular_muscle_L,FMA:49047,Left inferior rectus,Reto inferior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:148
+hra-f,VH_F_superior_rectus_extraocular_muscle_L,FMA:49045,Left superior rectus,Reto superior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:149
+hra-f,VH_F_inferior_oblique_extraocular_muscle_L,FMA:49051,Left inferior oblique,Oblíquo inferior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:150
+hra-f,VH_F_lateral_rectus_extraocular_muscle_L,FMA:49055,Left lateral rectus,Reto lateral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:151
+hra-f,VH_F_superior_oblique_extraocular_muscle_L,FMA:49053,Left superior oblique,Oblíquo superior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:152
+hra-f,VH_F_medial_rectus_extraocular_muscle_R,FMA:49056,Right medial rectus,Reto medial direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:153
+hra-f,VH_F_inferior_rectus_extraocular_muscle_R,FMA:49046,Right inferior rectus,Reto inferior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:154
+hra-f,VH_F_superior_rectus_extraocular_muscle_R,FMA:49044,Right superior rectus,Reto superior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:155
+hra-f,VH_F_inferior_oblique_extraocular_muscle_R,FMA:49050,Right inferior oblique,Oblíquo inferior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:156
+hra-f,VH_F_lateral_rectus_extraocular_muscle_R,FMA:49054,Right lateral rectus,Reto lateral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:157
+hra-f,VH_F_superior_oblique_extraocular_muscle_R,FMA:49052,Right superior oblique,Oblíquo superior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:158
+hra-f,VH_F_rectus_femoris_L,FMA:38929,Left rectus femoris,Reto femoral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:159
+hra-f,VH_F_tendon_of_quadriceps_femoris_L,FMA:46902,Tendon of left quadriceps femoris,Tendão do quadríceps femoral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:160
+hra-f,VH_F_rectus_femoris_R,FMA:38928,Right rectus femoris,Reto femoral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:161
+hra-f,VH_F_tendon_of_quadriceps_femoris_R,FMA:46901,Tendon of right quadriceps femoris,Tendão do quadríceps femoral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:162
+hra-f,VH_F_basal_plate,,basal plate,Placa basal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:696
+hra-f,VH_F_chorionic_plate,UBERON:0004027,chorionic plate,Placa coriônica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:163
+hra-f,VH_F_placenta_vessels,,placenta vessels,Vasos placentários,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:714
+hra-f,VH_F_amnion,UBERON:0000305,amnion,Âmnio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:164
+hra-f,VH_F_umbilical_cord,UBERON:0002331,umbilical cord,Cordão umbilical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:165
+hra-f,VH_F_umbilical_artery_1,UBERON:0001310,umbilical artery,Artéria umbilical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:166
+hra-f,VH_F_umbilical_artery_2,UBERON:0001310,umbilical artery,Artéria umbilical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:166
+hra-f,VH_F_umbilical_vein,UBERON:0002066,umbilical vein,Veia umbilical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:167
+hra-f,VH_F_vagina,UBERON:0000996,vagina,Vagina,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:168
+hra-f,VH_F_cervicovaginal_junction,,cervicovaginal junction,Junção cervicovaginal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:697
+hra-f,VH_F_ampulla_of_uterine_tube_R,FMA:18491,Ampulla of right uterine tube,Ampola da tuba uterina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:169
+hra-f,VH_F_isthmus_of_fallopian_tube_R,FMA:18493,Isthmus of right uterine tube,Istmo da tuba uterina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:170
+hra-f,VH_F_fibria_of_uterine_tube_R,FMA:18497,Fimbria of right uterine tube,Fímbria da tuba uterina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:171
+hra-f,VH_F_uterine_tube_infundibulum_R,FMA:18489,Infundibulum of right uterine tube,Infundíbulo da tuba uterina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:172
+hra-f,VH_F_uterine_tube_infundibulum_L,FMA:18490,Infundibulum of left uterine tube,Infundíbulo da tuba uterina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:173
+hra-f,VH_F_fibria_of_uterine_tube_L,FMA:18498,Fimbria of left uterine tube,Fímbria da tuba uterina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:174
+hra-f,VH_F_isthmus_of_fallopian_tube_L,FMA:18494,Isthmus of left uterine tube,Istmo da tuba uterina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:175
+hra-f,VH_F_ampulla_of_uterine_tube_L,FMA:18492,Ampulla of left uterine tube,Ampola da tuba uterina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:176
+hra-f,VH_F_uterovesical_pouch,FMA:14729,Uterovesical pouch,Escavação vesicouterina,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:177
+hra-f,VH_F_right_round_ligament_of_uterus,FMA:57789,Right round ligament of uterus,Ligamento redondo do útero direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:178
+hra-f,VH_F_left_round_ligament_of_uterus,FMA:57790,Left round ligament of uterus,Ligamento redondo do útero esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:179
+hra-f,VH_F_right_uterosacral_ligament,FMA:19119,Right uterosacral ligament,Ligamento uterossacral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:180
+hra-f,VH_F_left_uterosacral_ligament,FMA:19120,Left uterosacral ligament,Ligamento uterossacral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:181
+hra-f,VH_F_right_cardinal_ligament_of_uterus,FMA:77064,Cardinal ligament,Ligamento cardinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:182
+hra-f,VH_F_left_cardinal_ligament_of_uterus,FMA:77064,Cardinal ligament,Ligamento cardinal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:182
+hra-f,VH_F_suspensory_ligament_of_ovary_R,FMA:19823,Suspensory ligament of right ovary,Ligamento suspensor do ovário direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:183
+hra-f,VH_F_suspensory_ligament_of_ovary_L,FMA:19824,Suspensory ligament of left ovary,Ligamento suspensor do ovário esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:184
+hra-f,VH_F_ovarian_ligament_L,FMA:55424,Left ovarian ligament,Ligamento próprio do ovário esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:185
+hra-f,VH_F_ovarian_ligament_R,FMA:55423,Right ovarian ligament,Ligamento próprio do ovário direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:186
+hra-f,VH_F_broad_ligament,UBERON:0012332,broad ligament of uterus,Ligamento largo do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:187
+hra-f,VH_F_mesosalpinx_L,FMA:19810,Left mesosalpinx,Mesossalpinge esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:188
+hra-f,VH_F_mesosalpinx_R,FMA:19809,Right mesosalpinx,Mesossalpinge direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:189
+hra-f,VH_F_mesovarium_R,FMA:19817,Right mesovarium,Mesovário direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:190
+hra-f,VH_F_mesovarium_L,FMA:19818,Left mesovarium,Mesovário esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:191
+hra-f,VH_F_left_ovary,FMA:7214,Left ovary,Ovário esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:192
+hra-f,VH_F_right_ovary,FMA:7213,Right ovary,Ovário direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:193
+hra-f,VH_F_abdominal_ostium_of_uterine_tube,FMA:77049,Abdominal ostium of uterine tube,Óstio abdominal da tuba uterina,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:194
+hra-f,VH_F_body_of_uterus,UBERON:0009853,body of uterus,Corpo do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:195
+hra-f,VH_F_fundus_of_uterus,FMA:17561,Fundus of uterus,Fundo do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:196
+hra-f,VH_F_cornua,,cornua,Corno uterino,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:698
+hra-f,VH_F_lower_uterine_segment,FMA:17752,Lower uterine segment,Segmento uterino inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:197
+hra-f,VH_F_posterior_wall_of_uterus,FMA:224878,Posterior wall of uterus,Parede posterior do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:198
+hra-f,VH_F_anterior_wall_of_uterus,FMA:224876,Anterior wall of uterus,Parede anterior do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:199
+hra-f,VH_F_cervix,UBERON:0000002,uterine cervix,Colo do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:200
+hra-f,VH_F_internal_cervical_os,UBERON:0013759,internal cervical os,Óstio interno do colo do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:201
+hra-f,VH_F_external_cervical_os,UBERON:0013760,external cervical os,Óstio externo do colo do útero,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:202
+hra-f,VH_F_omentum,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_epiploic_appendage_of_transverse_colon,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_submandibular_gland_L,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_submandibular_gland_R,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_parotid_gland_R,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_parotid_gland_L,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_sublingual_gland_R,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_sublingual_gland_L,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_buccal_mucosa,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_frenulum_of_upper_lip,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_frenulum_of_lower_lip,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_mouth_floor,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_ginviva_of_upper_jaw,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_gingiva_of_lower_jaw,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_posterior_part_of_tongue,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_dorsal_tongue,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_ventral_tongue,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_fungiform_papillae,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_circumvallate_papillae,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_hard_palate,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_mucosa_of_soft_palate,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_set_of_lower_jaw_teeth,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_set_of_upper_jaw_teeth,UBERON:0001007,digestive system,Sistema digestório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:203
+hra-f,VH_F_gastric_impression_of_liver,FMA:14487,gastric impression of liver,Impressão gástrica do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:204
+hra-f,VH_F_suprarenal_impression_of_liver,FMA:14489,Suprarenal impression of liver,Impressão suprarrenal do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:205
+hra-f,VH_F_renal_impression_of_liver,FMA:14488,renal impression of liver,Impressão renal do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:206
+hra-f,VH_F_duodenal_impression_of_liver,FMA:14485,duodenal impression of liver,Impressão duodenal do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:207
+hra-f,VH_F_esophageal_impression_of_liver,FMA:14486,esophageal impression of liver,Impressão esofágica do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:208
+hra-f,VH_F_porta_hepatis,FMA:15758,porta hepatis,Porta do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:209
+hra-f,VH_F_colic_impression_of_liver,FMA:14484,colic impression of liver,Impressão cólica do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:210
+hra-f,VH_F_capsule_of_the_liver,UBERON:0016479,capsule of the liver,Cápsula fibrosa do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:211
+hra-f,VH_F_bare_area_of_liver,UBERON:0001149,bare area of liver,Área nua do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:212
+hra-f,VH_F_diaphragmatic_surface_of_liver,FMA:15729,diaphragmatic surface of liver,Face diafragmática do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:213
+hra-f,VH_F_left_anterolateral_segment,,left anterolateral segment,Segmento anterolateral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:703
+hra-f,VH_F_left_superomedial_segment,,left superomedial segment,Segmento superomedial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:706
+hra-f,VH_F_left_superomedial_segment1,,left superomedial segment1,Segmento superomedial esquerdo (1),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:707
+hra-f,VH_F_left_inferomedial_segment,,left inferomedial segment,Segmento inferomedial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:705
+hra-f,VH_F_quadrate_lobe,UBERON:0001116,quadrate lobe of liver,Lobo quadrado do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:214
+hra-f,VH_F_right_anterosuperior_segment,,right anterosuperior segment,Segmento anterosuperior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:719
+hra-f,VH_F_right_posteroinferior_segment,,right posteroinferior segment,Segmento posteroinferior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:721
+hra-f,VH_F_right_posterosuperior_segment,,right posterosuperior segment,Segmento posterosuperior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:722
+hra-f,VH_F_right_anteroinferior_segment,,right anteroinferior segment,Segmento anteroinferior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:718
+hra-f,VH_F_caudate_lobe,UBERON:0001117,caudate lobe of liver,Lobo caudado do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:215
+hra-f,VH_F_coronary_ligament_of_liver,UBERON:0013138,coronary ligament of liver,Ligamento coronário do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:216
+hra-f,VH_F_falciform_ligament,UBERON:0001247,falciform ligament,Ligamento falciforme do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:217
+hra-f,VH_F_triangular_ligament_of_liver,UBERON:0035444,triangular ligament of liver,Ligamento triangular do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:218
+hra-f,VH_F_ligamentum_venosum,UBERON:0006587,ligamentum venosum,Ligamento venoso,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:219
+hra-f,VH_F_round_ligament_of_liver,UBERON:0006588,round ligament of liver,Ligamento redondo do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:220
+hra-f,VH_F_hepataduodenal_ligament,UBERON:0012472,hepatoduodenal ligament,Ligamento hepatoduodenal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:221
+hra-f,VH_F_tail_of_pancreas,UBERON:0001151,tail of pancreas,Cauda do pâncreas,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:222
+hra-f,VH_F_body_of_pancreas,UBERON:0001150,body of pancreas,Corpo do pâncreas,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:223
+hra-f,VH_F_ucinate_process1,UBERON:0001264,Pancreas,Pâncreas,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:224
+hra-f,VH_F_head_of_pancreas,UBERON:0001069,head of pancreas,Cabeça do pâncreas,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:225
+hra-f,VH_F_neck_of_pancreas,FMA:14517,Neck of pancreas,Colo do pâncreas,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:226
+hra-f,VH_F_right_hepatic_duct,UBERON:0001176,right hepatic duct,Ducto hepático direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:227
+hra-f,VH_F_left_hepatic_duct,UBERON:0001177,left hepatic duct,Ducto hepático esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:228
+hra-f,VH_F_common_hepatic_duct,UBERON:0001175,common hepatic duct,Ducto hepático comum,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:229
+hra-f,VH_F_hepatopancreatic_ampulla,UBERON:0004913,hepatopancreatic ampulla,Ampola hepatopancreática,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:230
+hra-f,VH_F_dorsal_pancreatic_duct,UBERON:0005429,dorsal pancreatic duct,Ducto pancreático acessório,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:231
+hra-f,VH_F_common_bile_duct,UBERON:0001174,common bile duct,Ducto colédoco,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:232
+hra-f,VH_F_ventral_pancreatic_duct,UBERON:0001064,Ventral pancreatic duct,Ducto pancreático principal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:233
+hra-f,VH_F_cystic_duct,UBERON:0001152,cystic duct,Ducto cístico,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:234
+hra-f,VH_F_duodenum_superior,FMA:7206,superior part of duodenum,Parte superior do duodeno,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:235
+hra-f,VH_F_duodenal_ampulla,UBERON:0013644,duodenal ampulla,Ampola duodenal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:236
+hra-f,VH_F_duodenum_descending,FMA:14928,descending part of duodenum,Parte descendente do duodeno,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:237
+hra-f,VH_F_sphincter_of_heptopancreatic_ampulla,FMA:15077,Sphincter of hepatopancreatic ampulla,Músculo esfíncter da ampola hepatopancreática,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:238
+hra-f,VH_F_duodenum_ascending,FMA:14930,ascending part of duodenum,Parte ascendente do duodeno,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:239
+hra-f,VH_F_duodenum_horizontal,FMA:14929,horizontal part of duodenum,Parte horizontal do duodeno,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:240
+hra-f,VH_F_jejenum,UBERON:0002115,jejunum,Jejuno,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:241
+hra-f,VH_F_ileum,UBERON:0002116,ileum,Íleo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:242
+hra-f,VH_F_ileum_terminal,FMA:14966,distal part of ileum,Parte distal do íleo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:243
+hra-f,VH_F_palatine_tonsil_L,FMA:54974,left palatine tonsil,Tonsila palatina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:244
+hra-f,VH_F_palatine_tonsil_R,FMA:54973,right palatine tonsil,Tonsila palatina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:245
+hra-f,VH_F_hepatic_flexure_of_colon,UBERON:0022277,hepatic flexure of colon,Flexura direita do colo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:246
+hra-f,VH_F_transverse_colon,UBERON:0001157,transverse colon,Colo transverso,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:247
+hra-f,VH_F_ascending_colon,UBERON:0001156,ascending colon,Colo ascendente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:248
+hra-f,VH_F_vermiform_appendix,UBERON:0001154,vermiform appendix,Apêndice vermiforme,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:249
+hra-f,VH_F_descending_colon,UBERON:0001158,descending colon,Colo descendente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:250
+hra-f,VH_F_ileocecal_valve,UBERON:0000569,ileocecal valve,Valva ileocecal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:251
+hra-f,VH_F_caecum,UBERON:0001153,caecum,Ceco,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:252
+hra-f,VH_F_rectum,UBERON:0001052,rectum,Reto,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:253
+hra-f,VH_F_sigmoid_colon,UBERON:0001159,sigmoid colon,Colo sigmoide,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:254
+hra-f,VH_F_splenic_flexure_of_colon,UBERON:0022276,splenic flexure of colon,Flexura esquerda do colo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:255
+hra-f,VH_F_gallbladder,UBERON:0002110,gallbladder,Vesícula biliar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:256
+hra-f,VH_F_kidney_capsule_L,UBERON:0002015,kidney capsule,Cápsula fibrosa do rim,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:257
+hra-f,VH_F_hilum_of_kidney_L,UBERON:0008716,hilum of kidney,Hilo renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:258
+hra-f,VH_F_renal_papilla_L_a,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_b,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_c,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_d,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_e,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_f,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_g,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_h,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_i,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_j,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_L_k,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_pyramid_L_a,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_b,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_c,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_d,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_e,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_f,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_g,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_h,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_i,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_j,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_L_k,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_column_L,UBERON:0001284,renal column,Coluna renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:261
+hra-f,VH_F_outer_cortex_of_kidney_L,UBERON:0002189,outer cortex of kidney,Córtex renal externo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:262
+hra-f,VH_F_kidney_capsule_R,UBERON:0002015,kidney capsule,Cápsula fibrosa do rim,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:257
+hra-f,VH_F_hilum_of_kidney_R,UBERON:0008716,hilum of kidney,Hilo renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:258
+hra-f,VH_F_outer_cortex_of_kidney_R,UBERON:0002189,outer cortex of kidney,Córtex renal externo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:262
+hra-f,VH_F_renal_column_R,UBERON:0001284,renal column,Coluna renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:261
+hra-f,VH_F_renal_papilla_R_a,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_b,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_c,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_d,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_e,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_f,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_g,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_h,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_i,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_papilla_R_j,UBERON:0001228,renal papilla,Papila renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:259
+hra-f,VH_F_renal_pyramid_R_a,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_b,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_c,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_d,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_e,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_f,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_g,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_h,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_i,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_renal_pyramid_R_j,UBERON:0004200,renal pyramid,Pirâmide renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:260
+hra-f,VH_F_minor_calyx_R_a,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_b,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_c,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_d,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_e,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_f,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_g,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_h,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_i,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_R_j,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_major_calyx_R_a,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_major_calyx_R_b,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_major_calyx_R_c,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_renal_pelvis_R,UBERON:0001224,renal pelvis,Pelve renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:265
+hra-f,VH_F_right_ureter,UBERON:0001222,right ureter,Ureter direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:266
+hra-f,VH_F_minor_calyx_L_a,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_b,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_c,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_d,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_e,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_f,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_g,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_h,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_i,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_minor_calyx_L_j,UBERON:0001227,minor calyx,Cálice renal menor,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:263
+hra-f,VH_F_major_calyx_L_a,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_major_calyx_L_b,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_major_calyx_L_c,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_major_calyx_L_d,UBERON:0001226,major calyx,Cálice renal maior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:264
+hra-f,VH_F_renal_pelvis_L,UBERON:0001224,renal pelvis,Pelve renal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:265
+hra-f,VH_F_left_ureter,UBERON:0001223,left ureter,Ureter esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:267
+hra-f,VH_F_fundus_of_urinary_bladder_dome,UBERON:0006082,fundus of urinary bladder,Fundo da bexiga urinária,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:268
+hra-f,VH_F_urinary_bladder_neck_smooth_muscle,UBERON:0004230,urinary bladder neck smooth muscle,Músculo liso do colo da bexiga urinária,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:269
+hra-f,VH_F_fundus_of_urinary_bladder_base,UBERON:0006082,fundus of urinary bladder,Fundo da bexiga urinária,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:268
+hra-f,VH_F_trigone_of_urinary_bladder,UBERON:0001257,trigone of urinary bladder,Trígono da bexiga urinária,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:270
+hra-f,VH_F_ureteral_orifice_R,FMA:15939,Right ureteral orifice,Óstio do ureter direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:271
+hra-f,VH_F_ureteral_orifice_L,FMA:15940,Left ureteral orifice,Óstio do ureter esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:272
+hra-f,VH_F_interventricular_septum,UBERON:0002094,interventricular septum,Septo interventricular,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:273
+hra-f,VH_F_left_cardiac_atrium,UBERON:0002079,left cardiac atrium,Átrio esquerdo do coração,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:274
+hra-f,VH_F_left_ventricle,UBERON:0002084,heart left ventricle,Ventrículo esquerdo do coração,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:275
+hra-f,VH_F_right_cardiac_atrium,UBERON:0002078,right cardiac atrium,Átrio direito do coração,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:276
+hra-f,VH_F_right_ventricle,UBERON:0002080,heart right ventricle,Ventrículo direito do coração,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:277
+hra-f,VH_F_papillary_muscle_of_heart_ant,FMA:7264,Anterior papillary muscle of left ventricle,Músculo papilar anterior do ventrículo esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:278
+hra-f,VH_F_papillary_muscle_of_heart_antlat,FMA:7265,Anterolateral head of lateral papillary muscle of left ventricle,Cabeça anterolateral do músculo papilar lateral do ventrículo esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:279
+hra-f,VH_F_papillary_muscle_of_heart_med,FMA:7262,Septal papillary muscle of right ventricle,Músculo papilar septal do ventrículo direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:280
+hra-f,VH_F_papillary_muscle_of_heart_pos,FMA:7261,Posterior papillary muscle of right ventricle,Músculo papilar posterior do ventrículo direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:281
+hra-f,VH_F_papillary_muscle_of_heart_posmed,FMA:7267,Posteromedial head of posterior papillary muscle of left ventricle,Cabeça posteromedial do músculo papilar posterior do ventrículo esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:282
+hra-f,VH_F_aortic_valve,UBERON:0002137,aortic valve,Valva da aorta,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:283
+hra-f,VH_F_pulmonary_valve,UBERON:0002146,pulmonary valve,Valva do tronco pulmonar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:284
+hra-f,VH_F_mitral_valve,UBERON:0002135,mitral valve,Valva atrioventricular esquerda (mitral),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:285
+hra-f,VH_F_tricuspid_valve,UBERON:0002134,tricuspid valve,Valva atrioventricular direita (tricúspide),,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:286
+hra-f,VH_F_left_uterine_artery,FMA:18831,Left uterine artery,Artéria uterina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:287
+hra-f,VH_F_right_uterine_artery,FMA:18830,Right uterine artery,Artéria uterina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:288
+hra-f,VH_F_left_uterine_vein,FMA:18898,Left uterine vein,Veia uterina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:289
+hra-f,VH_F_right_uterine_vein,FMA:18897,Right uterine vein,Veia uterina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:290
+hra-f,VH_F_ophthalmic_vein_L,UBERON:0011191,ophthalmic vein,Veia oftálmica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:291
+hra-f,VH_F_superior_ophthalmic_vein_L,FMA:51249,Left superior ophthalmic vein,Veia oftálmica superior esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:292
+hra-f,VH_F_inferior_ophthalmic_vein_L,FMA:51251,Left inferior ophthalmic vein,Veia oftálmica inferior esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:293
+hra-f,VH_F_central_retinal_vein_L,FMA:51885,Left central retinal vein,Veia central da retina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:294
+hra-f,VH_F_ophthalmic_vein_R,UBERON:0011191,ophthalmic vein,Veia oftálmica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:291
+hra-f,VH_F_superior_ophthalmic_vein_R,FMA:51248,Right superior ophthalmic vein,Veia oftálmica superior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:295
+hra-f,VH_F_inferior_ophthalmic_vein_R,FMA:51250,Right inferior ophthalmic vein,Veia oftálmica inferior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:296
+hra-f,VH_F_central_retinal_vein_R,FMA:51884,Right central retinal vein,Veia central da retina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:297
+hra-f,VH_F_long_posterior_ciliary_artery_L,FMA:49958,Left long posterior ciliary artery,Artéria ciliar posterior longa esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:298
+hra-f,VH_F_opthalmic_artery_L,UBERON:0001619,ophthalmic artery,Artéria oftálmica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:299
+hra-f,VH_F_central_retinal_artery_L,FMA:49881,Left central retinal artery,Artéria central da retina esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:300
+hra-f,VH_F_long_posterior_ciliary_artery_R,FMA:49957,Right long posterior ciliary artery,Artéria ciliar posterior longa direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:301
+hra-f,VH_F_opthalmic_artery_R,UBERON:0001619,ophthalmic artery,Artéria oftálmica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:299
+hra-f,VH_F_central_retinal_artery_R,FMA:49880,Right central retinal artery,Artéria central da retina direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:302
+hra-f,VH_F_right_renal_artery,UBERON:0001185,right renal artery,Artéria renal direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:303
+hra-f,VH_F_left_renal_artery,UBERON:0001186,left renal artery,Artéria renal esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:304
+hra-f,VH_F_left_renal_vein,UBERON:0001142,left renal vein,Veia renal esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:305
+hra-f,VH_F_right_renal_vein,UBERON:0001141,right renal vein,Veia renal direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:306
+hra-f,VH_F_superior_mesenteric_vein,UBERON:0001138,superior mesenteric vein,Veia mesentérica superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:307
+hra-f,VH_F_superior_rectal_vein,UBERON:0035040,superior rectal artery,Artéria retal superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:308
+hra-f,VH_F_left_common_iliac_vein,FMA:21388,Left common iliac vein,Veia ilíaca comum esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:309
+hra-f,VH_F_right_common_iliac_vein,FMA:21387,Right common iliac vein,Veia ilíaca comum direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:310
+hra-f,VH_F_left_colic_vein,FMA:15394,Left colic vein,Veia cólica esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:311
+hra-f,VH_F_right_colic_vein,FMA:15407,Right colic vein,Veia cólica direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:312
+hra-f,VH_F_ileocolic_vein,UBERON:0001219,ileocolic vein,Veia ileocólica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:313
+hra-f,VH_F_middle_colic_vein,UBERON:0001218,middle colic vein,Veia cólica média,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:314
+hra-f,VH_F_inferior_rectal_vein_L,FMA:21242,Inferior rectal vein,Veia retal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:315
+hra-f,VH_F_inferior_rectal_vein_R,FMA:21242,Inferior rectal vein,Veia retal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:315
+hra-f,VH_F_internal_iliac_vein_L,UBERON:0001317,internal iliac vein,Veia ilíaca interna,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:316
+hra-f,VH_F_internal_iliac_vein_R,UBERON:0001317,internal iliac vein,Veia ilíaca interna,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:316
+hra-f,VH_F_internal_pudendal_vein_L,UBERON:0018252,internal pudendal vein,Veia pudenda interna,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:317
+hra-f,VH_F_internal_pudendal_vein_R,UBERON:0018252,internal pudendal vein,Veia pudenda interna,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:317
+hra-f,VH_F_middle_rectal_vein_L,FMA:18895,Left middle rectal vein,Veia retal média esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:318
+hra-f,VH_F_middle_rectal_vein_R,FMA:18894,Right middle rectal vein,Veia retal média direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:319
+hra-f,VH_F_sigmoid_vein_a,FMA:15395,sigmoid vein,Veia sigmóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:320
+hra-f,VH_F_sigmoid_vein_c,FMA:15395,sigmoid vein,Veia sigmóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:320
+hra-f,VH_F_median_sacral_vein,UBERON:0006687,median sacral vein,Veia sacral mediana,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:321
+hra-f,VH_F_sigmoid_vein_b,FMA:15395,sigmoid vein,Veia sigmóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:320
+hra-f,VH_F_inferior_pancreaticoduodenal_vein,FMA:0329299,Inferior pancreaticoduodenal vein,Veia pancreaticoduodenal inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:322
+hra-f,VH_F_inferior_mesenteric_vein,UBERON:0001182,superior mesenteric artery,Artéria mesentérica superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:323
+hra-f,VH_F_left_colic_artery,FMA:14826,Left colic artery,Artéria cólica esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:324
+hra-f,VH_F_right_colic_artery,FMA:14811,Right colic artery,Artéria cólica direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:325
+hra-f,VH_F_ileocolic_artery,UBERON:0035548,ileocolic artery,Artéria ileocólica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:326
+hra-f,VH_F_middle_colic_artery,UBERON:0001196,middle colic artery,Artéria cólica média,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:327
+hra-f,VH_F_celiac_trunk,FMA:14812,Celiac trunk,Tronco celíaco,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:328
+hra-f,VH_F_superior_rectal_artery,UBERON:0035040,superior rectal artery,Artéria retal superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:308
+hra-f,VH_F_superior_mesenteric_artery,UBERON:0001182,superior mesenteric artery,Artéria mesentérica superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:323
+hra-f,VH_F_inferior_mesenteric_artery,UBERON:0001183,inferior mesenteric artery,Artéria mesentérica inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:329
+hra-f,VH_F_marginal_artery_of_Drummond,FMA:14824,marginal colic artery,Artéria marginal do colo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:330
+hra-f,VH_F_sigmoid_artery_c,UBERON:0035180,sigmoid artery,Artéria sigmóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:331
+hra-f,VH_F_sigmoid_artery_b,UBERON:0035180,sigmoid artery,Artéria sigmóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:331
+hra-f,VH_F_sigmoid_artery_a,UBERON:0035180,sigmoid artery,Artéria sigmóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:331
+hra-f,VH_F_splenic_artery,UBERON:0001194,splenic artery,Artéria esplênica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:332
+hra-f,VH_F_splenic_vein,UBERON:0003713,splenic vein,Veia esplênica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:333
+hra-f,VH_F_cystic_artery,UBERON:0039222,cystic artery,Artéria cística,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:334
+hra-f,VH_F_cystic_vein,UBERON:0035392,cystic vein,Veia cística,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:335
+hra-f,VH_F_middle_hepatic_artery_branch_of_left_hepatic_artery,,middle hepatic artery branch of left hepatic artery,Ramo médio da artéria hepática esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:713
+hra-f,VH_F_proper_hepatic_artery,FMA:14772,Hepatic artery proper,Artéria hepática própria,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:336
+hra-f,VH_F_right_hepatic_artery,FMA:14778,Right hepatic artery,Artéria hepática direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:337
+hra-f,VH_F_common_hepatic_artery,UBERON:0005436,common hepatic artery,Artéria hepática comum,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:338
+hra-f,VH_F_posterior_segmental_right_hepatic_artery,,posterior segmental right hepatic artery,Artéria hepática segmentar posterior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:717
+hra-f,VH_F_anterior_segmental_right_hepatic_artery,,anterior segmental right hepatic artery,Artéria hepática segmentar anterior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:695
+hra-f,VH_F_left_hepatic_artery,FMA:14779,Left hepatic artery,Artéria hepática esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:339
+hra-f,VH_F_hepatic_portal_vein,UBERON:0001639,hepatic portal vein,Veia porta do fígado,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:340
+hra-f,VH_F_middle_hepatic_vein,FMA:14340,Middle hepatic vein,Veia hepática média,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:341
+hra-f,VH_F_left_hepatic_vein,FMA:14339,Left hepatic vein,Veia hepática esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:342
+hra-f,VH_F_right_hepatic_vein,FMA:14338,Right hepatic vein,Veia hepática direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:343
+hra-f,VH_F_right_branch_of_portal_vein,,right branch of portal vein,Ramo direito da veia porta,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:720
+hra-f,VH_F_left_branch_of_portal_vein,,left branch of portal vein,Ramo esquerdo da veia porta,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:704
+hra-f,VH_F_pulmonary_vein_L_sup,FMA:49916,left superior pulmonary vein,Veia pulmonar superior esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:344
+hra-f,VH_F_pulmonary_vein_R_inf,FMA:49913,left inferior pulmonary vein,Veia pulmonar inferior esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:345
+hra-f,VH_F_pulmonary_vein_R_sup,FMA:49914,right superior pulmonary vein,Veia pulmonar superior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:346
+hra-f,VH_F_pulmonary_vein_L_inf,FMA:49911,right inferior pulmonary vein,Veia pulmonar inferior direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:347
+hra-f,VH_F_coronary_sinus,UBERON:0005438,coronary sinus,Seio coronário,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:348
+hra-f,VH_F_great_cardiac_vein,UBERON:0006958,great vein of heart,Veia cardíaca magna,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:349
+hra-f,VH_F_middle_cardiac_vein,UBERON:0009687,middle cardiac vein,Veia cardíaca média,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:350
+hra-f,VH_F_oblique_vein_of_left_atrium,FMA:4715,Oblique vein of left atrium,Veia oblíqua do átrio esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:351
+hra-f,VH_F_left_marginal_vein,FMA:4708,left marginal vein,Veia marginal esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:352
+hra-f,VH_F_posterior_vein_of_left_ventricle,FMA:4712,Posterior vein of left ventricle,Veia posterior do ventrículo esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:353
+hra-f,VH_F_anterior_cardiac_vein,FMA:76767,Anterior cardiac vein,Veia cardíaca anterior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:354
+hra-f,VH_F_small_cardiac_vein,UBERON:0035374,small cardiac vein,Veia cardíaca parva,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:355
+hra-f,VH_F_superior_vena_cava,FMA:4720,superior vena cava,Veia cava superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:356
+hra-f,VH_F_inferior_vena_cava_a,FMA:10951,inferior vena cava,Veia cava inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:357
+hra-f,VH_F_inferior_vena_cava_b,FMA:10951,inferior vena cava,Veia cava inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:357
+hra-f,VH_F_left_anterior_descending_artery,FMA:8636,Anterior descending branch of left pulmonary artery,Ramo descendente anterior da artéria pulmonar esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:358
+hra-f,VH_F_left_circumflex_artery,UBERON:0035422,circumflex branch of left coronary artery,Ramo circunflexo da artéria coronária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:359
+hra-f,VH_F_diagonal_branch_of_left_anterior_descending_artery,FMA:3860,Diagonal branch of anterior descending branch of left coronary artery,Ramo diagonal do ramo descendente anterior da artéria coronária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:360
+hra-f,VH_F_left_coronary_artery,UBERON:0001626,left coronary artery,Artéria coronária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:361
+hra-f,VH_F_left_marginal_branch,FMA:3902,Left marginal artery,Artéria marginal esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:362
+hra-f,VH_F_left_posterior_descending_branch_of_circumflex_branch_of_left_coronary_artery,FMA:322904,left posterior descending branch of circumflex branch of left coronary artery,Ramo descendente posterior esquerdo do ramo circunflexo da artéria coronária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:363
+hra-f,VH_F_posterior_left_ventricular_branch,FMA:13905,Posterior ventricular branch of circumflex coronary artery,Ramo ventricular posterior do ramo circunflexo da artéria coronária esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:364
+hra-f,VH_F_right_coronary_artery,UBERON:0001625,right coronary artery,Artéria coronária direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:365
+hra-f,VH_F_right_marginal_artery,FMA:3818,marginal branch of right coronary artery,Ramo marginal da artéria coronária direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:366
+hra-f,VH_F_pulmonary_artery_L,UBERON:0001652,left pulmonary artery,Artéria pulmonar esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:367
+hra-f,VH_F_pulmonary_trunk,UBERON:0002333,pulmonary trunk,Tronco pulmonar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:368
+hra-f,VH_F_pulmonary_artery_R,UBERON:0001651,right pulmonary artery,Artéria pulmonar direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:369
+hra-f,VH_F_aortic_arch,UBERON:0001508,arch of aorta,Arco da aorta,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:370
+hra-f,VH_F_ascending_aorta,UBERON:0001496,ascending aorta,Aorta ascendente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:371
+hra-f,VH_F_descending_aorta_a,UBERON:0001514,descending aorta,Aorta descendente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:372
+hra-f,VH_F_descending_aorta_b,UBERON:0001514,descending aorta,Aorta descendente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:372
+hra-f,VH_F_left_common_carotid_artery_a,UBERON:0001536,left common carotid artery plus branches,Artéria carótida comum esquerda e ramos,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:373
+hra-f,VH_F_left_common_carotid_artery_b,UBERON:0001536,left common carotid artery plus branches,Artéria carótida comum esquerda e ramos,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:373
+hra-f,VH_F_left_subclavian_artery_a,UBERON:0001584,left subclavian artery,Artéria subclávia esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:374
+hra-f,VH_F_left_subclavian_artery_b,UBERON:0001584,left subclavian artery,Artéria subclávia esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:374
+hra-f,VH_F_brachiocephalic_artery_b,UBERON:0001529,brachiocephalic artery,Artéria braquiocefálica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:375
+hra-f,VH_F_brachiocephalic_artery_a,UBERON:0001529,brachiocephalic artery,Artéria braquiocefálica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:375
+hra-f,VH_F_hilum_L,UBERON:0004887,left lung hilus,Hilo do pulmão esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:376
+hra-f,VH_F_hilum_upper_L,UBERON:0004887,left lung hilus,Hilo do pulmão esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:376
+hra-f,VH_F_lingula_superior_bronchopulmonary_segment,FMA:7374,Superior lingular bronchopulmonary segment,Segmento broncopulmonar lingular superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:377
+hra-f,VH_F_left_anterior_bronchopulmonary_segment,FMA:7373,Left Anterior Bronchopulmonary Segment,Segmento broncopulmonar anterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:378
+hra-f,VH_F_left_apical_bronchopulmonary_segment,FMA:7385,Left apical bronchopulmonary segment,Segmento broncopulmonar apical esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:379
+hra-f,VH_F_left_posterior_bronchopulmonary_segment,FMA:7386,Left posterior bronchopulmonary segment,Segmento broncopulmonar posterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:380
+hra-f,VH_F_lingula_inferior_bronchopulmonary_segment,FMA:7375,Inferior lingular bronchopulmonary segment,Segmento broncopulmonar lingular inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:381
+hra-f,VH_F_left_superior_bronchopulmonary_segment,FMA:7376,Left superior bronchopulmonary segment,Segmento broncopulmonar superior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:382
+hra-f,VH_F_left_posterior_basal_bronchopulmonary_segment,FMA:7380,Left posterior basal bronchopulmonary segment,Segmento broncopulmonar basal posterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:383
+hra-f,VH_F_left_anterior_basal_bronchopulmonary_segment,FMA:7378,left anterior basal bronchopulmonary segment,Segmento broncopulmonar basal anterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:384
+hra-f,VH_F_left_lateral_basal_bronchopulmonary_segment,FMA:7379,left Lateral Basal Bronchopulmonary Segment,Segmento broncopulmonar basal lateral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:385
+hra-f,VH_F_left_medial_basal_bronchopulmonary_segment,FMA:7377,Left Medial Basal Bronchopulmonary Segment,Segmento broncopulmonar basal medial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:386
+hra-f,VH_F_hilum_lower_L,UBERON:0004887,left lung hilus,Hilo do pulmão esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:376
+hra-f,VH_F_hilum_R,UBERON:0004888,right lung hilus,Hilo do pulmão direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:387
+hra-f,VH_F_right_medial_basal_bronchopulmonary_segment,FMA:7365,Right Medial Basal Bronchopulmonary Segment,Segmento broncopulmonar basal medial direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:388
+hra-f,VH_F_right_posterior_basal_bronchopulmonary_segment,FMA:7362,Right Posterior Basal Bronchopulmonary Segment,Segmento broncopulmonar basal posterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:389
+hra-f,VH_F_right_anterior_basal_bronchopulmonary_segment,FMA:7364,Right anterior basal bronchopulmonary segment,Segmento broncopulmonar basal anterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:390
+hra-f,VH_F_right_lateral_basal_bronchopulmonary_segment,FMA:7363,Right Lateral Basal Bronchopulmonary Segment,Segmento broncopulmonar basal lateral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:391
+hra-f,VH_F_right_superior_bronchopulmonary_segment,FMA:7366,Right Superior Bronchopulmonary Segment,Segmento broncopulmonar superior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:392
+hra-f,VH_F_hilum_lower_R,UBERON:0004888,right lung hilus,Hilo do pulmão direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:387
+hra-f,VH_F_right_medial_bronchopulmonary_segment,FMA:7360,Right Medial Bronchopulmonary Segment,Segmento broncopulmonar medial direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:393
+hra-f,VH_F_right_lateral_bronchopulmonary_segmennt,FMA:7361,Right Lateral Bronchopulmonary Segment,Segmento broncopulmonar lateral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:394
+hra-f,VH_F_hilum_middle_R,UBERON:0004888,right lung hilus,Hilo do pulmão direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:387
+hra-f,VH_F_right_anterior_bronchopulmonary_segm,FMA:7359,Right Anterior Bronchopulmonary Segment,Segmento broncopulmonar anterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:395
+hra-f,VH_F_right_apical_bronchopulmonary_segment,FMA:7338,Right Apical Bronchopulmonary Segment,Segmento broncopulmonar apical direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:396
+hra-f,VH_F_right_posterior_bronchopulmonary_segment,FMA:7339,Right Posterior Bronchopulmonary Segment,Segmento broncopulmonar posterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:397
+hra-f,VH_F_hilum_upper_R,UBERON:0004888,right lung hilus,Hilo do pulmão direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:387
+hra-f,VH_F_arytenoid_cartilage_R,FMA:55113,Right arytenoid cartilage,Cartilagem aritenóidea direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:398
+hra-f,VH_F_arytenoid_cartilage_L,FMA:55114,Left arytenoid cartilage,Cartilagem aritenóidea esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:399
+hra-f,VH_F_epiglotic_cartilage,UBERON:0001742,epiglottic cartilage,Cartilagem epiglótica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:400
+hra-f,VH_F_cricoid_cartilage,UBERON:0002375,cricoid cartilage,Cartilagem cricóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:401
+hra-f,VH_F_thyroid_cartilage,UBERON:0001738,thyroid cartilage,Cartilagem tireóidea,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:402
+hra-f,VH_F_corniculate_cartilage_L,FMA:55116,Left corniculate cartilage,Cartilagem corniculada esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:403
+hra-f,VH_F_corniculate_cartilage_R,FMA:55115,Right corniculate cartilage,Cartilagem corniculada direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:404
+hra-f,VH_F_trachea,UBERON:0003126,trachea,Traqueia,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:405
+hra-f,VH_F_tracheal_cartilage,UBERON:0003604,trachea cartilage,Cartilagem traqueal,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:406
+hra-f,VH_F_carina,UBERON:0006679,carina of trachea,Carina da traqueia,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:407
+hra-f,VH_F_right_main_bronchus,UBERON:0002177,Right Main Bronchus,Brônquio principal direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:408
+hra-f,VH_F_cartilage_of_main_bronchus_R,FMA:13143,Cartilage of right main bronchus,Cartilagem do brônquio principal direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:409
+hra-f,VH_F_left_main_bronchus,UBERON:0002178,Left Main Bronchus,Brônquio principal esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:410
+hra-f,VH_F_cartilage_of_main_bronchus_L,FMA:13144,Cartilage of left main bronchus,Cartilagem do brônquio principal esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:411
+hra-f,VH_F_cartilage_of_lobar_bronchus_L,FMA:62659,Cartilage of lobar bronchus,Cartilagem do brônquio lobar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:412
+hra-f,VH_F_cartilage_of_tertiary_bronchus_L,FMA:62662,Cartilage of segmental bronchus,Cartilagem do brônquio segmentar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:413
+hra-f,VH_F_left_superior_lobar_bronchus,UBERON:0012065,lobar bronchus of left lung upper lobe,Brônquio lobar superior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:414
+hra-f,VH_F_left_inferior_lobar_bronchus,UBERON:0012066,lobar bronchus of left lung lower lobe,Brônquio lobar inferior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:415
+hra-f,VH_F_left_anterior_basal_bronchus,FMA:7506,Left anterior basal segmental bronchus,Brônquio segmentar basal anterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:416
+hra-f,VH_F_left_lingula_superior_bronchus,FMA:7430,Superior lingular bronchus,Brônquio lingular superior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:417
+hra-f,VH_F_left_apical_bronchus,FMA:7426,Left apical segmental bronchus,Brônquio segmentar apical esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:418
+hra-f,VH_F_left_posterior_basal_bronchus,FMA:7508,Left posterior basal segmental bronchus,Brônquio segmentar basal posterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:419
+hra-f,VH_F_left_medial_basal_bronchus,FMA:7505,Left medial basal segmental bronchus,Brônquio segmentar basal medial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:420
+hra-f,VH_F_left_superior_bronchus,FMA:7504,Left superior segmental bronchus,Brônquio segmentar superior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:421
+hra-f,VH_F_left_anterior_bronchus,FMA:7428,Left anterior segmental bronchus,Brônquio segmentar anterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:422
+hra-f,VH_F_left_posterior_bronchus,FMA:7427,Left posterior segmental bronchus,Brônquio segmentar posterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:423
+hra-f,VH_F_left_lateral_basal_bronchus,FMA:7507,Left lateral basal segmental bronchus,Brônquio segmentar basal lateral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:424
+hra-f,VH_F_left_lingula_inferior_bronchi,FMA:7431,Inferior lingular bronchus,Brônquio lingular inferior,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:425
+hra-f,VH_F_cartilage_of_lobar_bronchus_R,FMA:62659,Cartilage of lobar bronchus,Cartilagem do brônquio lobar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:412
+hra-f,VH_F_cartilage_of_tertiary_bronchus_R,FMA:62662,Cartilage of segmental bronchus,Cartilagem do brônquio segmentar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:413
+hra-f,VH_F_right_middle_lobar_bronchus,FMA:7401,Middle lobar bronchus,Brônquio lobar médio,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:426
+hra-f,VH_F_right_superior_lobar_bronchus,FMA:7397,Right superior lobar bronchus,Brônquio lobar superior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:427
+hra-f,VH_F_right_inferior_lobar_bronchus,FMA:7404,Right inferior lobar bronchus,Brônquio lobar inferior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:428
+hra-f,VH_F_right_anterior_bronchus,FMA:7400,Right anterior segmental bronchus,Brônquio segmentar anterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:429
+hra-f,VH_F_right_lateral_basal_bronchus,FMA:7419,Right lateral basal segmental bronchus,Brônquio segmentar basal lateral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:430
+hra-f,VH_F_right_lateral_bronchus,FMA:7402,Lateral segmental bronchus,Brônquio segmentar lateral,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:431
+hra-f,VH_F_right_medial_bronchus,FMA:7403,Medial segmental bronchus,Brônquio segmentar medial,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:432
+hra-f,VH_F_right_medial_basal_bronchus,FMA:7417,Right medial basal segmental bronchus,Brônquio segmentar basal medial direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:433
+hra-f,VH_F_right_posterior_basal_bronchus,FMA:7420,Right posterior basal segmental bronchus,Brônquio segmentar basal posterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:434
+hra-f,VH_F_right_posterior_bronchus,FMA:7399,Right posterior segmental bronchus,Brônquio segmentar posterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:435
+hra-f,VH_F_right_superior_bronchus,FMA:7416,Right superior segmental bronchus,Brônquio segmentar superior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:436
+hra-f,VH_F_right_apical_bronchus,FMA:7398,Right apical segmental bronchus,Brônquio segmentar apical direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:437
+hra-f,VH_F_right_anterior_basal_bronchus,FMA:7418,Right anterior basal segmental bronchus,Brônquio segmentar basal anterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:438
+hra-f,VH_F_gastric_surface_of_spleen,FMA:15837,gastric surface of spleen,Face gástrica do baço,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:439
+hra-f,VH_F_diaphragmatic_surface_of_spleen,FMA:15828,diaphragmatic surface of spleen,Face diafragmática do baço,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:440
+hra-f,VH_F_colic_surface_of_spleen,FMA:15838,colic surface of spleen,Face cólica do baço,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:441
+hra-f,VH_F_hilum_of_spleen,UBERON:0001248,hilum of spleen,Hilo do baço,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:442
+hra-f,VH_F_renal_surface_of_spleen,FMA:15839,renal surface of spleen,Face renal do baço,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:443
+hra-f,VH_F_thymus_lobe_L,UBERON:0005457,left thymus lobe,Lobo esquerdo do timo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:444
+hra-f,VH_F_thymus_lobe_R,UBERON:0005469,right thymus lobe,Lobo direito do timo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:445
+hra-f,Yao_afferent_lymphatic_vessel,UBERON:0010396,afferent lymphatic vessel,Vaso linfático aferente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:446
+hra-f,Yao_capsule_of_lymph_node,UBERON:0002194,capsule of lymph node,Cápsula do linfonodo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:447
+hra-f,Yao_follicles,UBERON:0010748,lymph node follicle,Folículo linfoide do linfonodo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:448
+hra-f,Yao_efferent_lymph_node,UBERON:0010397,efferent lymphatic vessel,Vaso linfático eferente,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:449
+hra-f,Yao_medulla_of_lymph_node,UBERON:0002007,medulla of lymph node,Medula do linfonodo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:450
+hra-f,Yao_paracortex,UBERON:0010417,lymph node T cell domain,Área de células T do linfonodo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:451
+hra-f,Yao_blood_vasculature,UBERON:0004536,Lymph vasculature,Sistema vascular linfático,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:452
+hra-f,VH_F_sternum,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_manubrium,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_sacrum,UBERON:0003690,fused sacrum,Sacro,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:454
+hra-f,VH_F_coccyx,UBERON:0001350,coccyx,Cóccix,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:455
+hra-f,VH_F_ilium_compact_bone_R,UBERON:0001439,compact bone tissue,Tecido ósseo compacto,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:456
+hra-f,VH_F_ilium_compact_bone_L,UBERON:0001439,compact bone tissue,Tecido ósseo compacto,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:456
+hra-f,VH_F_ilium_spongy_bone_L,UBERON:0002483,trabecular bone tissue,Tecido ósseo trabecular,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:457
+hra-f,VH_F_ilium_spongy_bone_R,UBERON:0002483,trabecular bone tissue,Tecido ósseo trabecular,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:457
+hra-f,VH_F_thoracic_vertebra_1,UBERON:0004626,thoracic vertebra 1,Primeira vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:458
+hra-f,VH_F_thoracic_vertebra_2,UBERON:0004627,thoracic vertebra 2,Segunda vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:459
+hra-f,VH_F_thoracic_vertebra_3,UBERON:0004628,thoracic vertebra 3,Terceira vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:460
+hra-f,VH_F_thoracic_vertebra_4,UBERON:0004629,thoracic vertebra 4,Quarta vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:461
+hra-f,VH_F_thoracic_vertebra_5,UBERON:0004630,thoracic vertebra 5,Quinta vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:462
+hra-f,VH_F_thoracic_vertebra_6,UBERON:0004631,thoracic vertebra 6,Sexta vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:463
+hra-f,VH_F_thoracic_vertebra_7,UBERON:0004632,thoracic vertebra 7,Sétima vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:464
+hra-f,VH_F_thoracic_vertebra_8,UBERON:0011050,thoracic vertebra 8,Oitava vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:465
+hra-f,VH_F_thoracic_vertebra_9,UBERON:0004633,thoracic vertebra 9,Nona vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:466
+hra-f,VH_F_thoracic_vertebra_10,UBERON:0004634,thoracic vertebra 10,Décima vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:467
+hra-f,VH_F_thoracic_vertebra_11,UBERON:0004635,thoracic vertebra 11,Décima primeira vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:468
+hra-f,VH_F_thoracic_vertebra_12,UBERON:0004636,thoracic vertebra 12,Décima segunda vértebra torácica,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:469
+hra-f,VH_F_cervical_vertebra_1,UBERON:0001092,vertebral bone 1,Primeira vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:470
+hra-f,VH_F_cervical_vertebra_2,UBERON:0001093,vertebral bone 2,Segunda vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:471
+hra-f,VH_F_cervical_vertebra_3,UBERON:0004612,mammalian cervical vertebra 3,Terceira vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:472
+hra-f,VH_F_cervical_vertebra_4,UBERON:0004613,mammalian cervical vertebra 4,Quarta vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:473
+hra-f,VH_F_cervical_vertebra_5,UBERON:0004614,mammalian cervical vertebra 5,Quinta vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:474
+hra-f,VH_F_cervical_vertebra_6,UBERON:0004615,mammalian cervical vertebra 6,Sexta vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:475
+hra-f,VH_F_cervical_vertebra_7,UBERON:0004616,mammalian cervical vertebra 7,Sétima vértebra cervical,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:476
+hra-f,VH_F_lumbar_vertebra_6,,lumbar vertebra 6,Sexta vértebra lombar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:708
+hra-f,VH_F_lumbar_vertebra_5,UBERON:0004621,lumbar vertebra 5,Quinta vértebra lombar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:477
+hra-f,VH_F_lumbar_vertebra_4,UBERON:0004620,lumbar vertebra 4,Quarta vértebra lombar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:478
+hra-f,VH_F_lumbar_vertebra_3,UBERON:0004619,lumbar vertebra 3,Terceira vértebra lombar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:479
+hra-f,VH_F_lumbar_vertebra_2,UBERON:0004618,lumbar vertebra 2,Segunda vértebra lombar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:480
+hra-f,VH_F_lumbar_vertebra_1,UBERON:0004617,lumbar vertebra 1,Primeira vértebra lombar,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:481
+hra-f,VH_F_intervertebral_disk_of_axis,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_third_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_fourth_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_fifth_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_sixth_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_seventh_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_axis,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_third_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_fourth_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_fifth_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_sixth_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_seventh_cervical_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_first_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_second_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_third_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_fourth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_fifth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_sixth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_seventh_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_eighth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_ninth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_tenth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_eleventh_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_twelfth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_first_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_second_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_third_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_fourth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_fifth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_sixth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_seventh_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_eighth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_ninth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_tenth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_eleventh_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_twelfth_thoracic_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_first_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_second_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_third_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_fourth_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_fifth_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_nucleus_pulposus_of_intervertebral_disk_of_sixth_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_first_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_second_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_third_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_fourth_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_fifth_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_intervertebral_disk_of_sixth_lumbar_vertebra,UBERON:0001434,skeletal system,Sistema esquelético,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:453
+hra-f,VH_F_right_tibial_collateral_ligament,FMA:44601,Right tibial collateral ligament,Ligamento colateral tibial direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:482
+hra-f,VH_F_anterior_cruciate_ligament_of_knee_R,FMA:44615,Right anterior cruciate ligament,Ligamento cruzado anterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:483
+hra-f,VH_F_posterior_cruciate_ligament_of_knee_R,FMA:44618,Right posterior cruciate ligament,Ligamento cruzado posterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:484
+hra-f,VH_F_anterolateral_ligament_of_knee_R,UBERON:0014899,anterolateral ligament of knee,Ligamento anterolateral do joelho,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:485
+hra-f,VH_F_fibular_collateral_ligament_R,FMA:44609,Right fibular collateral ligament,Ligamento colateral fibular direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:486
+hra-f,VH_F_patellar_ligament_R,FMA:44585,Right patellar ligament,Ligamento da patela direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:487
+hra-f,VH_F_meniscus_R,FMA64019,Articular disk of knee joint,Disco articular da articulação do joelho,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:488
+hra-f,VH_F_femur_R,FMA:24474,Right femur,Fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:489
+hra-f,VH_F_trochlear_groove_R,FMA:43746,Patellar surface of right femur,Face patelar do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:490
+hra-f,VH_F_medial_perichondular_surface_R,,medial perichondular surface R,Superfície pericondral medial direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:712
+hra-f,VH_F_articular_cartilage_of_knee_R,FMA:33189,Articular cartilage of distal epiphysis of right femur,Cartilagem articular da epífise distal do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:491
+hra-f,VH_F_medial_condyle_of_right_femur_sup,FMA:32862,Medial condyle of right femur,Côndilo medial do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:492
+hra-f,VH_F_lateral_condyle_of_femur_sup_R,FMA:32860,Lateral condyle of right femur,Côndilo lateral do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:493
+hra-f,VH_F_medial_condyle_of_right_femur_inf,FMA:32862,Medial condyle of right femur,Côndilo medial do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:492
+hra-f,VH_F_lateral_condyle_of_femur_inf_R,FMA:32860,Lateral condyle of right femur,Côndilo lateral do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:493
+hra-f,VH_F_lateral_condyle_of_femur_frontal_R,FMA:32860,Lateral condyle of right femur,Côndilo lateral do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:493
+hra-f,VH_F_distal_most_point_of_medial_condyle_R,UBERON:7500033,distal-most point of medial condyle of femur,Ponto mais distal do côndilo medial do fêmur,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:494
+hra-f,VH_F_intercondylar_fossa_R,FMA:43749,Intercondylar fossa of right femur,Fossa intercondilar do fêmur direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:495
+hra-f,VH_F_posterior_cruciate_enthesis_R,,posterior cruciate enthesis R,Êntese do ligamento cruzado posterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:716
+hra-f,VH_F_anterior_cruciate_enthesis_R,,anterior cruciate enthesis R,Êntese do ligamento cruzado anterior direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:694
+hra-f,VH_F_lateral_perichondular_surface_R,,lateral perichondular surface R,Superfície pericondral lateral direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:702
+hra-f,VH_F_lateral_epicondylar_enthesis_R,,lateral epicondylar enthesis R,Êntese do epicôndilo lateral direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:700
+hra-f,VH_F_medial_epicondylar_enthesis_R,,medial epicondylar enthesis R,Êntese do epicôndilo medial direito,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:710
+hra-f,VH_F_tibia_R,FMA:24477,Right tibia,Tíbia direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:496
+hra-f,VH_F_fibula_R,FMA:24480,Right fibula,Fíbula direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:497
+hra-f,VH_F_patella_R,FMA:24486,Right patella,Patela direita,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:498
+hra-f,VH_F_anterolateral_ligament_of_knee_L,UBERON:0014899,anterolateral ligament of knee,Ligamento anterolateral do joelho,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:485
+hra-f,VH_F_fibular_collateral_ligament_L,FMA:44610,Left fibular collateral ligament,Ligamento colateral fibular esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:499
+hra-f,VH_F_patellar_ligament_L,FMA:44586,Left patellar ligament,Ligamento da patela esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:500
+hra-f,VH_F_left_tibial_collateral_ligament,FMA:44602,Left tibial collateral ligament,Ligamento colateral tibial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:501
+hra-f,VH_F_anterior_cruciate_ligament_of_knee_L,FMA:44616,Left anterior cruciate ligament,Ligamento cruzado anterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:502
+hra-f,VH_F_posterior_cruciate_ligament_of_knee_L,FMA:44619,Left posterior cruciate ligament,Ligamento cruzado posterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:503
+hra-f,VH_F_meniscus_L,FMA64019,Articular disk of knee joint,Disco articular da articulação do joelho,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:488
+hra-f,VH_F_femur_L,FMA:24475,Left femur,Fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:504
+hra-f,VH_F_intercondylar_fossa_L,FMA:43750,Intercondylar fossa of left femur,Fossa intercondilar do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:505
+hra-f,VH_F_anterior_cruciate_enthesis_L,,anterior cruciate enthesis L,Êntese do ligamento cruzado anterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:693
+hra-f,VH_F_posterior_cruciate_enthesis_L,,posterior cruciate enthesis L,Êntese do ligamento cruzado posterior esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:715
+hra-f,VH_F_lateral_perichondular_surface_L,,lateral perichondular surface L,Superfície pericondral lateral esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:701
+hra-f,VH_F_lateral_epicondylar_enthesis_L,,lateral epicondylar enthesis L,Êntese do epicôndilo lateral esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:699
+hra-f,VH_F_medial_epicondylar_enthesis_L,,medial epicondylar enthesis L,Êntese do epicôndilo medial esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:709
+hra-f,VH_F_trochlear_groove_L,FMA:43747,Patellar surface of left femur,Face patelar do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:506
+hra-f,VH_F_medial_perichondular_surface_L,,medial perichondular surface L,Superfície pericondral medial esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:711
+hra-f,VH_F_articular_cartilage_of_knee_L,FMA:33190,Articular cartilage of distal epiphysis of left femur,Cartilagem articular da epífise distal do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:507
+hra-f,VH_F_medial_condyle_of_left_femur_inf,FMA:32863,Medial condyle of left femur,Côndilo medial do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:508
+hra-f,VH_F_lateral_condyle_of_femur_inf_L,FMA:32861,Lateral condyle of left femur,Côndilo lateral do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:509
+hra-f,VH_F_lateral_condyle_of_femur_frontal_L,FMA:32861,Lateral condyle of left femur,Côndilo lateral do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:509
+hra-f,VH_F_distal_most_point_of_medial_condyle_L,UBERON:7500033,distal-most point of medial condyle of femur,Ponto mais distal do côndilo medial do fêmur,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:494
+hra-f,VH_F_lateral_condyle_of_femur_sup_L,FMA:32861,Lateral condyle of left femur,Côndilo lateral do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:509
+hra-f,VH_F_medial_condyle_of_left_femur_sup,FMA:32863,Medial condyle of left femur,Côndilo medial do fêmur esquerdo,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:508
+hra-f,VH_F_patella_L,FMA:24487,Left patella,Patela esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:510
+hra-f,VH_F_tibia_L,FMA:24478,Left tibia,Tíbia esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:511
+hra-f,VH_F_fibula_L,FMA:24481,Left fibula,Fíbula esquerda,,pendente de avaliação humana,,,,hra/nomes_pt_hra.csv:512

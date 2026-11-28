@@ -1,0 +1,1777 @@
+{
+  "coordinate_system": "RAS mm of the generated NIfTI; empirical affine metadata limitations are documented in RELATORIO.md",
+  "stl_to_ras": {
+    "scale": [
+      -1,
+      1,
+      1
+    ],
+    "translation_mm": [
+      290.0,
+      -690.0,
+      430.0
+    ]
+  },
+  "voxel_lookup": "round(inv_affine @ [x', y', z', 1]); out-of-volume vertices count as failures",
+  "empirical_status": "NOT VALIDATED: edge-shell match is low and not a narrow peak; do not use as accepted anatomical registration; proceed to ICP with TotalSegmentator",
+  "metadata_audit": {
+    "dicom_first_last": [
+      {
+        "file": "VHF_FullBody_CT0000.dcm",
+        "ImagePositionPatient": null,
+        "ImageOrientationPatient": null,
+        "SliceLocation": "0.000000",
+        "PixelSpacing": [
+          0.722656,
+          0.722656
+        ],
+        "SpacingBetweenSlices": 1.0,
+        "Modality": "OT",
+        "PixelRepresentation": 0,
+        "RescaleType": "US",
+        "RescaleSlope": 1.0,
+        "RescaleIntercept": 0.0
+      },
+      {
+        "file": "VHF_FullBody_CT1726.dcm",
+        "ImagePositionPatient": null,
+        "ImageOrientationPatient": null,
+        "SliceLocation": "1726.000000",
+        "PixelSpacing": [
+          0.722656,
+          0.722656
+        ],
+        "SpacingBetweenSlices": 1.0,
+        "Modality": "OT",
+        "PixelRepresentation": 0,
+        "RescaleType": "US",
+        "RescaleSlope": 1.0,
+        "RescaleIntercept": 0.0
+      }
+    ],
+    "sample_rescaled_pixel_stats": [
+      {
+        "slice": 0,
+        "min": 0.0,
+        "max": 1164.0,
+        "p50": 0.0,
+        "p90": 72.0
+      },
+      {
+        "slice": 400,
+        "min": 0.0,
+        "max": 2726.0,
+        "p50": 0.0,
+        "p90": 466.0
+      },
+      {
+        "slice": 800,
+        "min": 0.0,
+        "max": 2530.0,
+        "p50": 58.0,
+        "p90": 988.0
+      },
+      {
+        "slice": 1200,
+        "min": 0.0,
+        "max": 2609.0,
+        "p50": 77.0,
+        "p90": 1063.0
+      },
+      {
+        "slice": 1726,
+        "min": 0.0,
+        "max": 1607.0,
+        "p50": 0.0,
+        "p90": 65.0
+      }
+    ],
+    "denver_workbooks": [
+      {
+        "file": "MetaData/Overclosure Data/VHFL_Overclosure.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "headers": [
+              "Geometry 1",
+              "Geometry 2",
+              "Maximum Overclosure (mm)"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "MetaData/Overclosure Data/VHFR_Overclosure.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "headers": [
+              "Geometry 1",
+              "Geometry 2",
+              "Maximum Overclosure (mm)"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "MetaData/Volume Data/VHFL_Final_volumes.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "headers": [
+              "Geometry",
+              "Volume (mm^3)"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "MetaData/Volume Data/VHFL_Initial_volumes.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "headers": [
+              "Geometry",
+              "Volume (mm^3)"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "MetaData/Volume Data/VHFR_Final_volumes.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "headers": [
+              "Geometry",
+              "Volume (mm^3)"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "MetaData/Volume Data/VHFR_Initial_volumes.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "headers": [
+              "Geometry",
+              "Volume (mm^3)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "edge_registration": {
+    "histogram": {
+      "sample_size": 1500000,
+      "seed": 20261125,
+      "range": [
+        0.0,
+        3788.0
+      ],
+      "thresholds": [
+        228.88916015625,
+        726.43408203125
+      ],
+      "classes": [
+        {
+          "label": "ar/fundo (inclui exterior)",
+          "sample_count": 1132000,
+          "fraction": 0.7546666666666667,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 73.0
+        },
+        {
+          "label": "tecido mole",
+          "sample_count": 72400,
+          "fraction": 0.048266666666666666,
+          "median": 427.0,
+          "p10": 274.0,
+          "p90": 596.0
+        },
+        {
+          "label": "osso",
+          "sample_count": 295600,
+          "fraction": 0.19706666666666667,
+          "median": 994.0,
+          "p10": 898.0,
+          "p90": 1106.0
+        }
+      ],
+      "prominent_histogram_peaks": [
+        {
+          "value": 18.95849609375,
+          "count_smoothed": 9697.727498293903
+        },
+        {
+          "value": 54.10107421875,
+          "count_smoothed": 7085.714422571061
+        },
+        {
+          "value": 46.70263671875,
+          "count_smoothed": 5783.013268912246
+        },
+        {
+          "value": 65.19873046875,
+          "count_smoothed": 4624.251083721509
+        },
+        {
+          "value": 77.22119140625,
+          "count_smoothed": 3028.4289496362426
+        },
+        {
+          "value": 916.01904296875,
+          "count_smoothed": 1925.8132998255037
+        },
+        {
+          "value": 906.77099609375,
+          "count_smoothed": 1706.580008913504
+        },
+        {
+          "value": 927.11669921875,
+          "count_smoothed": 1704.0286140902483
+        },
+        {
+          "value": 1063.98779296875,
+          "count_smoothed": 1577.6706119644712
+        },
+        {
+          "value": 1052.89013671875,
+          "count_smoothed": 1485.7946652900582
+        },
+        {
+          "value": 1073.23583984375,
+          "count_smoothed": 1366.9083644354102
+        },
+        {
+          "value": 1040.86767578125,
+          "count_smoothed": 1294.423452032973
+        }
+      ],
+      "dominant_peak_by_class": [
+        {
+          "label": "ar/fundo",
+          "peak": 0.46240234375,
+          "count_smoothed": 235014.5642138656
+        },
+        {
+          "label": "tecido mole",
+          "peak": 435.12060546875,
+          "count_smoothed": 246.00409378795308
+        },
+        {
+          "label": "osso",
+          "peak": 916.01904296875,
+          "count_smoothed": 1925.8132998255037
+        }
+      ],
+      "zero_sample_count": 624057
+    },
+    "bone_threshold": {
+      "definition": "rescaled value > upper 3-class Otsu threshold",
+      "value": 726.43408203125
+    },
+    "edge_definition": "bone_mask XOR 3x3x3 binary erosion; one-voxel 3x3x3 dilation (26-neighborhood)",
+    "search_structures": [
+      {
+        "name": "Femur Left",
+        "file": "Left/VHF_Left_Bone_Femur_smooth.stl",
+        "vertices_total": 275658,
+        "vertices_search_sample": 500
+      },
+      {
+        "name": "Pelvis Left",
+        "file": "Left/VHF_Left_Bone_Pelvis_smooth.stl",
+        "vertices_total": 297924,
+        "vertices_search_sample": 500
+      },
+      {
+        "name": "Femur Right",
+        "file": "Right/VHF_Right_Bone_Femur_smooth.stl",
+        "vertices_total": 268398,
+        "vertices_search_sample": 500
+      },
+      {
+        "name": "Pelvis Right",
+        "file": "Right/VHF_Right_Bone_Pelvis_smooth.stl",
+        "vertices_total": 295266,
+        "vertices_search_sample": 500
+      }
+    ],
+    "search_objective": "macro-average of four per-structure edge-shell fractions; same coarse grid for both X signs",
+    "coarse_grid": {
+      "x_mm": [
+        -1200,
+        800,
+        40
+      ],
+      "y_mm": [
+        -1200,
+        0,
+        40
+      ],
+      "z_mm": [
+        -400,
+        1200,
+        40
+      ]
+    },
+    "candidate_count": 129642,
+    "search_by_x_sign": [
+      {
+        "sign_x": -1,
+        "score_sample_macro": 0.20800000000000002,
+        "offset_mm": [
+          290,
+          -690,
+          430
+        ],
+        "per_object_sample": [
+          0.128,
+          0.292,
+          0.072,
+          0.34
+        ],
+        "score_all_vertex_macro": 0.19888115993169414,
+        "per_object_all_vertices": [
+          0.12185751909975405,
+          0.2846632026959896,
+          0.06846921363050396,
+          0.320534704300529
+        ],
+        "coarse_score_sample_macro": 0.187,
+        "coarse_offset_mm": [
+          280,
+          -680,
+          440
+        ]
+      },
+      {
+        "sign_x": 1,
+        "score_sample_macro": 0.20999999999999996,
+        "offset_mm": [
+          -790,
+          -680,
+          445
+        ],
+        "per_object_sample": [
+          0.104,
+          0.29,
+          0.142,
+          0.304
+        ],
+        "score_all_vertex_macro": 0.18234122952442516,
+        "per_object_all_vertices": [
+          0.08053820313576969,
+          0.2648326418818222,
+          0.116807874872391,
+          0.2671861982077178
+        ],
+        "coarse_score_sample_macro": 0.185,
+        "coarse_offset_mm": [
+          -800,
+          -680,
+          440
+        ]
+      }
+    ],
+    "winner": {
+      "scale": [
+        -1,
+        1,
+        1
+      ],
+      "translation_mm": [
+        290.0,
+        -690.0,
+        430.0
+      ],
+      "sample_macro_fraction": 0.20800000000000002,
+      "all_vertex_macro_fraction": 0.19888115993169414,
+      "all_vertex_per_structure": [
+        0.12185751909975405,
+        0.2846632026959896,
+        0.06846921363050396,
+        0.320534704300529
+      ]
+    },
+    "prior_empirical_transform": {
+      "scale": [
+        -1,
+        1,
+        1
+      ],
+      "translation_mm": [
+        300,
+        -700,
+        0
+      ],
+      "sample_macro_fraction": 0.003,
+      "sample_per_structure": [
+        0.0,
+        0.0,
+        0.004,
+        0.008
+      ],
+      "all_vertex_macro_fraction": 0.002638769476240953,
+      "all_vertex_per_structure": [
+        0.0,
+        0.0024402196533344074,
+        0.005026117929343736,
+        0.0030887403222856677
+      ]
+    },
+    "sensitivity_by_structure": [
+      {
+        "name": "Femur Left",
+        "baseline": 0.12185751909975405,
+        "deltas": [
+          {
+            "axis": "X",
+            "delta_mm": -20,
+            "fraction": 0.16056127520333166,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": -10,
+            "fraction": 0.13725703589230134,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": -5,
+            "fraction": 0.12705236198477823,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": -2,
+            "fraction": 0.12274992926017021,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": 2,
+            "fraction": 0.12064587278439226,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": 5,
+            "fraction": 0.11844386885198326,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": 10,
+            "fraction": 0.10870353844256289,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "X",
+            "delta_mm": 20,
+            "fraction": 0.08775729345783544,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -20,
+            "fraction": 0.10556196446321166,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -10,
+            "fraction": 0.11526964572042168,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -5,
+            "fraction": 0.12463269703763359,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -2,
+            "fraction": 0.1216797626043866,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 2,
+            "fraction": 0.12260844960059204,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 5,
+            "fraction": 0.12143308012101953,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 10,
+            "fraction": 0.1202831044264995,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 20,
+            "fraction": 0.1155489773559991,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -20,
+            "fraction": 0.0840207793715401,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -10,
+            "fraction": 0.10442649950300735,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -5,
+            "fraction": 0.11119212937770716,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -2,
+            "fraction": 0.11803394060756445,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 2,
+            "fraction": 0.12247785299175065,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 5,
+            "fraction": 0.12014525245050026,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 10,
+            "fraction": 0.12198086034143758,
+            "inside_volume": 275658,
+            "vertices": 275658
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 20,
+            "fraction": 0.12151651684333485,
+            "inside_volume": 275658,
+            "vertices": 275658
+          }
+        ]
+      },
+      {
+        "name": "Pelvis Left",
+        "baseline": 0.2846632026959896,
+        "deltas": [
+          {
+            "axis": "X",
+            "delta_mm": -20,
+            "fraction": 0.2696459499738188,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": -10,
+            "fraction": 0.27992038237939876,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": -5,
+            "fraction": 0.2851566171238302,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": -2,
+            "fraction": 0.2872309716572012,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": 2,
+            "fraction": 0.2847101945462601,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": 5,
+            "fraction": 0.2863951880345323,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": 10,
+            "fraction": 0.28225990521072486,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "X",
+            "delta_mm": 20,
+            "fraction": 0.246213799492488,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -20,
+            "fraction": 0.28743907842268496,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -10,
+            "fraction": 0.2786381761791598,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -5,
+            "fraction": 0.27411017574952,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -2,
+            "fraction": 0.28214913870651576,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 2,
+            "fraction": 0.28792913628979205,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 5,
+            "fraction": 0.29243028423356293,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 10,
+            "fraction": 0.2874457915441522,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 20,
+            "fraction": 0.26898470750929765,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -20,
+            "fraction": 0.29581705401377534,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -10,
+            "fraction": 0.2994656355312093,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -5,
+            "fraction": 0.2893691008445107,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -2,
+            "fraction": 0.2880835380835381,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 2,
+            "fraction": 0.28143754783099045,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 5,
+            "fraction": 0.2815113921671299,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 10,
+            "fraction": 0.27571796834091916,
+            "inside_volume": 297924,
+            "vertices": 297924
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 20,
+            "fraction": 0.25936816100750526,
+            "inside_volume": 297924,
+            "vertices": 297924
+          }
+        ]
+      },
+      {
+        "name": "Femur Right",
+        "baseline": 0.06846921363050396,
+        "deltas": [
+          {
+            "axis": "X",
+            "delta_mm": -20,
+            "fraction": 0.06929261767971445,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": -10,
+            "fraction": 0.06388646711227357,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": -5,
+            "fraction": 0.06921437566598856,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": -2,
+            "fraction": 0.06947145656823075,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": 2,
+            "fraction": 0.06683358296261523,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": 5,
+            "fraction": 0.06507872636904895,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": 10,
+            "fraction": 0.06457201618491941,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "X",
+            "delta_mm": 20,
+            "fraction": 0.07273154047347596,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -20,
+            "fraction": 0.0623588849395301,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -10,
+            "fraction": 0.06298482104933718,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -5,
+            "fraction": 0.0677016967339548,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -2,
+            "fraction": 0.06922555309652084,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 2,
+            "fraction": 0.06798858411761638,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 5,
+            "fraction": 0.06423669326895133,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 10,
+            "fraction": 0.06852882659334272,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 20,
+            "fraction": 0.06190061028770706,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -20,
+            "fraction": 0.04664714342133697,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -10,
+            "fraction": 0.055603991087862056,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -5,
+            "fraction": 0.06025380218928606,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -2,
+            "fraction": 0.06503029083674244,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 2,
+            "fraction": 0.07151692635563603,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 5,
+            "fraction": 0.07646852808143131,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 10,
+            "fraction": 0.08803716868232997,
+            "inside_volume": 268398,
+            "vertices": 268398
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 20,
+            "fraction": 0.09494854656144978,
+            "inside_volume": 268398,
+            "vertices": 268398
+          }
+        ]
+      },
+      {
+        "name": "Pelvis Right",
+        "baseline": 0.320534704300529,
+        "deltas": [
+          {
+            "axis": "X",
+            "delta_mm": -20,
+            "fraction": 0.194451782460561,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": -10,
+            "fraction": 0.25619949469292097,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": -5,
+            "fraction": 0.28974551760107836,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": -2,
+            "fraction": 0.3118205279307472,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": 2,
+            "fraction": 0.32575372714772444,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": 5,
+            "fraction": 0.3276300014224462,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": 10,
+            "fraction": 0.3325780821361078,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "X",
+            "delta_mm": 20,
+            "fraction": 0.32594677341786726,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -20,
+            "fraction": 0.2823623444622815,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -10,
+            "fraction": 0.3122201675777096,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -5,
+            "fraction": 0.3127789857281231,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -2,
+            "fraction": 0.3207853257740478,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 2,
+            "fraction": 0.32049406298049893,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 5,
+            "fraction": 0.31369002865213064,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 10,
+            "fraction": 0.30620863898992773,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 20,
+            "fraction": 0.2933388876470708,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -20,
+            "fraction": 0.30359743417799545,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -10,
+            "fraction": 0.318909051499326,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -5,
+            "fraction": 0.3174527375315817,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -2,
+            "fraction": 0.3204839026504914,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 2,
+            "fraction": 0.32021634729362675,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 5,
+            "fraction": 0.3166263640243035,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 10,
+            "fraction": 0.3147467029729126,
+            "inside_volume": 295266,
+            "vertices": 295266
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 20,
+            "fraction": 0.31052000568978483,
+            "inside_volume": 295266,
+            "vertices": 295266
+          }
+        ]
+      }
+    ],
+    "all_28_bones": [
+      {
+        "file": "Left/VHF_Left_Bone_Calcaneous_smooth.stl",
+        "vertices": 52416,
+        "inside_volume": 52416,
+        "within_one_voxel_of_bone_edge_fraction": 0.0713331807081807
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Coccyx_smooth.stl",
+        "vertices": 7026,
+        "inside_volume": 7026,
+        "within_one_voxel_of_bone_edge_fraction": 0.10375747224594364
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Cuboid_smooth.stl",
+        "vertices": 14778,
+        "inside_volume": 14778,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Femur_smooth.stl",
+        "vertices": 275658,
+        "inside_volume": 275658,
+        "within_one_voxel_of_bone_edge_fraction": 0.12185751909975405
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Fibula_smooth.stl",
+        "vertices": 56754,
+        "inside_volume": 56754,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Left/VHF_Left_Bone_IntermediateCuneiform_smooth.stl",
+        "vertices": 6984,
+        "inside_volume": 6984,
+        "within_one_voxel_of_bone_edge_fraction": 0.22308132875143186
+      },
+      {
+        "file": "Left/VHF_Left_Bone_LateralCuneiform_smooth.stl",
+        "vertices": 8094,
+        "inside_volume": 8094,
+        "within_one_voxel_of_bone_edge_fraction": 0.040770941438102296
+      },
+      {
+        "file": "Left/VHF_Left_Bone_MedialCuneiform_smooth.stl",
+        "vertices": 12270,
+        "inside_volume": 12270,
+        "within_one_voxel_of_bone_edge_fraction": 0.14319478402607988
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Navicular_smooth.stl",
+        "vertices": 13830,
+        "inside_volume": 13830,
+        "within_one_voxel_of_bone_edge_fraction": 0.13506869125090384
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Patella_smooth.stl",
+        "vertices": 19572,
+        "inside_volume": 19572,
+        "within_one_voxel_of_bone_edge_fraction": 0.14484978540772533
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Pelvis_smooth.stl",
+        "vertices": 297924,
+        "inside_volume": 297924,
+        "within_one_voxel_of_bone_edge_fraction": 0.2846632026959896
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Phalanges_smooth.stl",
+        "vertices": 104820,
+        "inside_volume": 104820,
+        "within_one_voxel_of_bone_edge_fraction": 0.023735928257966037
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Sacrum_smooth.stl",
+        "vertices": 153222,
+        "inside_volume": 153222,
+        "within_one_voxel_of_bone_edge_fraction": 0.12101395360979494
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Talus_smooth.stl",
+        "vertices": 33222,
+        "inside_volume": 33222,
+        "within_one_voxel_of_bone_edge_fraction": 0.13319487086870146
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Tibia_smooth.stl",
+        "vertices": 178368,
+        "inside_volume": 178368,
+        "within_one_voxel_of_bone_edge_fraction": 0.0283739235737352
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Calcaneous_smooth.stl",
+        "vertices": 52722,
+        "inside_volume": 52722,
+        "within_one_voxel_of_bone_edge_fraction": 0.036265695535070745
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Cuboid_smooth.stl",
+        "vertices": 15126,
+        "inside_volume": 15126,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Femur_smooth.stl",
+        "vertices": 268398,
+        "inside_volume": 268398,
+        "within_one_voxel_of_bone_edge_fraction": 0.06846921363050396
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Fibula_smooth.stl",
+        "vertices": 58440,
+        "inside_volume": 58440,
+        "within_one_voxel_of_bone_edge_fraction": 0.007255304585900069
+      },
+      {
+        "file": "Right/VHF_Right_Bone_IntermediateCuneiform_smooth.stl",
+        "vertices": 6942,
+        "inside_volume": 6942,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_LateralCuneiform_smooth.stl",
+        "vertices": 8424,
+        "inside_volume": 8424,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_MedialCuneiform_smooth.stl",
+        "vertices": 12648,
+        "inside_volume": 12648,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Navicular_smooth.stl",
+        "vertices": 13494,
+        "inside_volume": 13494,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Patella_smooth.stl",
+        "vertices": 19764,
+        "inside_volume": 19764,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Pelvis_smooth.stl",
+        "vertices": 295266,
+        "inside_volume": 295266,
+        "within_one_voxel_of_bone_edge_fraction": 0.320534704300529
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Phalanges_smooth.stl",
+        "vertices": 108606,
+        "inside_volume": 108606,
+        "within_one_voxel_of_bone_edge_fraction": 0.03468500819475904
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Talus_smooth.stl",
+        "vertices": 32028,
+        "inside_volume": 32028,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Tibia_smooth.stl",
+        "vertices": 181086,
+        "inside_volume": 181086,
+        "within_one_voxel_of_bone_edge_fraction": 0.0
+      }
+    ]
+  },
+  "previous_value_threshold_validation": {
+    "bones": [
+      {
+        "file": "Left/VHF_Left_Bone_Calcaneous_smooth.stl",
+        "vertices": 52416,
+        "inside_volume": 52416,
+        "value_gt_200_fraction": 0.9505303724053724
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Coccyx_smooth.stl",
+        "vertices": 7026,
+        "inside_volume": 7026,
+        "value_gt_200_fraction": 0.6564190150868204
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Cuboid_smooth.stl",
+        "vertices": 14778,
+        "inside_volume": 14778,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Femur_smooth.stl",
+        "vertices": 275658,
+        "inside_volume": 275658,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Fibula_smooth.stl",
+        "vertices": 56754,
+        "inside_volume": 56754,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Left/VHF_Left_Bone_IntermediateCuneiform_smooth.stl",
+        "vertices": 6984,
+        "inside_volume": 6984,
+        "value_gt_200_fraction": 0.9745131729667812
+      },
+      {
+        "file": "Left/VHF_Left_Bone_LateralCuneiform_smooth.stl",
+        "vertices": 8094,
+        "inside_volume": 8094,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Left/VHF_Left_Bone_MedialCuneiform_smooth.stl",
+        "vertices": 12270,
+        "inside_volume": 12270,
+        "value_gt_200_fraction": 0.5577017114914425
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Navicular_smooth.stl",
+        "vertices": 13830,
+        "inside_volume": 13830,
+        "value_gt_200_fraction": 0.6765726681127983
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Patella_smooth.stl",
+        "vertices": 19572,
+        "inside_volume": 19572,
+        "value_gt_200_fraction": 0.9899856938483548
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Pelvis_smooth.stl",
+        "vertices": 297924,
+        "inside_volume": 297924,
+        "value_gt_200_fraction": 0.9998657375706556
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Phalanges_smooth.stl",
+        "vertices": 104820,
+        "inside_volume": 104820,
+        "value_gt_200_fraction": 0.9142625453157794
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Sacrum_smooth.stl",
+        "vertices": 153222,
+        "inside_volume": 153222,
+        "value_gt_200_fraction": 0.9170223597133571
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Talus_smooth.stl",
+        "vertices": 33222,
+        "inside_volume": 33222,
+        "value_gt_200_fraction": 0.8684305580639335
+      },
+      {
+        "file": "Left/VHF_Left_Bone_Tibia_smooth.stl",
+        "vertices": 178368,
+        "inside_volume": 178368,
+        "value_gt_200_fraction": 0.9639509329027628
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Calcaneous_smooth.stl",
+        "vertices": 52722,
+        "inside_volume": 52722,
+        "value_gt_200_fraction": 0.49996206517203445
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Cuboid_smooth.stl",
+        "vertices": 15126,
+        "inside_volume": 15126,
+        "value_gt_200_fraction": 0.37584291947639825
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Femur_smooth.stl",
+        "vertices": 268398,
+        "inside_volume": 268398,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Fibula_smooth.stl",
+        "vertices": 58440,
+        "inside_volume": 58440,
+        "value_gt_200_fraction": 0.4700205338809035
+      },
+      {
+        "file": "Right/VHF_Right_Bone_IntermediateCuneiform_smooth.stl",
+        "vertices": 6942,
+        "inside_volume": 6942,
+        "value_gt_200_fraction": 0.9297032555459521
+      },
+      {
+        "file": "Right/VHF_Right_Bone_LateralCuneiform_smooth.stl",
+        "vertices": 8424,
+        "inside_volume": 8424,
+        "value_gt_200_fraction": 0.5593542260208927
+      },
+      {
+        "file": "Right/VHF_Right_Bone_MedialCuneiform_smooth.stl",
+        "vertices": 12648,
+        "inside_volume": 12648,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Navicular_smooth.stl",
+        "vertices": 13494,
+        "inside_volume": 13494,
+        "value_gt_200_fraction": 0.8922484066992737
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Patella_smooth.stl",
+        "vertices": 19764,
+        "inside_volume": 19764,
+        "value_gt_200_fraction": 1.0
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Pelvis_smooth.stl",
+        "vertices": 295266,
+        "inside_volume": 295266,
+        "value_gt_200_fraction": 0.998980580222579
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Phalanges_smooth.stl",
+        "vertices": 108606,
+        "inside_volume": 108606,
+        "value_gt_200_fraction": 0.4856453602931698
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Talus_smooth.stl",
+        "vertices": 32028,
+        "inside_volume": 32028,
+        "value_gt_200_fraction": 0.8244660921693518
+      },
+      {
+        "file": "Right/VHF_Right_Bone_Tibia_smooth.stl",
+        "vertices": 181086,
+        "inside_volume": 181086,
+        "value_gt_200_fraction": 0.9580696464663199
+      }
+    ],
+    "muscles": [
+      {
+        "file": "Left/VHF_Left_Muscle_GluteusMaximus_smooth.stl",
+        "vertices": 137328,
+        "inside_volume": 137328,
+        "soft_tissue_fraction": 0.05114761738319935
+      },
+      {
+        "file": "Left/VHF_Left_Muscle_Soleus_smooth.stl",
+        "vertices": 85356,
+        "inside_volume": 85356,
+        "soft_tissue_fraction": 0.0
+      },
+      {
+        "file": "Left/VHF_Left_Muscle_VastusLateralis_smooth.stl",
+        "vertices": 126450,
+        "inside_volume": 126450,
+        "soft_tissue_fraction": 0.0
+      },
+      {
+        "file": "Right/VHF_Right_Muscle_GluteusMaximus_smooth.stl",
+        "vertices": 145308,
+        "inside_volume": 145308,
+        "soft_tissue_fraction": 0.08943760839045338
+      },
+      {
+        "file": "Right/VHF_Right_Muscle_Soleus_smooth.stl",
+        "vertices": 85680,
+        "inside_volume": 85680,
+        "soft_tissue_fraction": 0.40003501400560226
+      },
+      {
+        "file": "Right/VHF_Right_Muscle_VastusLateralis_smooth.stl",
+        "vertices": 122202,
+        "inside_volume": 122202,
+        "soft_tissue_fraction": 0.00701297851099
+      }
+    ],
+    "femur_sensitivity": {
+      "Left": {
+        "file": "Left/VHF_Left_Bone_Femur_smooth.stl",
+        "vertices": 2000,
+        "baseline_fraction": 1.0,
+        "baseline_inside_volume": 2000,
+        "sensitivity": [
+          {
+            "axis": "X",
+            "delta_mm": -2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": 2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": -5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": 5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": -10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": 10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          }
+        ]
+      },
+      "Right": {
+        "file": "Right/VHF_Right_Bone_Femur_smooth.stl",
+        "vertices": 2000,
+        "baseline_fraction": 1.0,
+        "baseline_inside_volume": 2000,
+        "sensitivity": [
+          {
+            "axis": "X",
+            "delta_mm": -2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": 2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": -5,
+            "fraction": 0.9985,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": 5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": -10,
+            "fraction": 0.986,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "X",
+            "delta_mm": 10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -5,
+            "fraction": 0.9985,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": -10,
+            "fraction": 0.9905,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Y",
+            "delta_mm": 10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 2,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 5,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": -10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          },
+          {
+            "axis": "Z",
+            "delta_mm": 10,
+            "fraction": 1.0,
+            "inside_volume": 2000,
+            "vertices": 2000
+          }
+        ]
+      }
+    }
+  },
+  "previous_value_threshold_validation_note": "Legacy raw-value thresholds from prior review; DICOM does not establish HU, so these are not HU validation results."
+}

@@ -3,4 +3,20 @@ __pycache__/
 bodyparts3d/bruto/
 hra/bruto/
 bodyparts3d/modelos/
-atlas/
+/atlas/
+node_modules/
+.next/
+.env*
+!.env.example
+supabase/dados/bruto/
+supabase/.temp/
+hra/denver/bruto/
+hra/totalseg/bruto/
+hra/nlm/bruto/
+hra/externo/
+
+# EXP-0022: GLB decodificado de atlas/ (regerável com hra/alinhar/decoder_glb.mjs)
+pesquisa/resultados/EXP-0022/bp3d-esqueletico.glb
+pesquisa/resultados/EXP-0024/surface_samples.npz
+pesquisa/resultados/EXP-0024/__pycache__/
+pesquisa/resultados/EXP-0024/rodada2/*.npz

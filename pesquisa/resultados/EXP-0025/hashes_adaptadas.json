@@ -1,0 +1,477 @@
+{
+  "experiment": "EXP-0025",
+  "seed": 25021,
+  "status": "malhas congeladas antes da avaliação",
+  "input_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "trimesh": "5.2.2",
+    "scikit-image": "0.26.0"
+  },
+  "units": "mm (inferidos por dimensões anatômicas; cabeçalhos não declaram unidade)",
+  "frame_check": {
+    "bp3d_and_denver_z_up": {
+      "bp3d_hip_gt_tibia": true,
+      "denver_hip_gt_tibia": true
+    },
+    "orientation_observation": "centros relativos de osso esquerdo indicam inversão dos eixos x/y entre catálogos; ICP testa rotações próprias, sem reflexão",
+    "rotation_determinant": 1.0000000000000004
+  },
+  "alignment": {
+    "score_mean_nn_mm": 5.12259265635368,
+    "scale": 0.8953401099098561,
+    "rotation_row": [
+      [
+        -0.9948485237411416,
+        0.07430845981379436,
+        -0.06895409784902264
+      ],
+      [
+        -0.07717362630859254,
+        -0.996220598923783,
+        0.03985912294972546
+      ],
+      [
+        -0.06573162262147951,
+        0.04497522740399794,
+        0.9968232454690785
+      ]
+    ],
+    "translation_mm": [
+      560.7024126482756,
+      346.9468248291823,
+      165.83117312096135
+    ],
+    "matrix_source_column_4x4": [
+      [
+        -0.8907277865900519,
+        -0.0690966430612774,
+        -0.05885215822246865,
+        560.7024126482756
+      ],
+      [
+        0.06653134457691477,
+        -0.8919562605348825,
+        0.040268125047116285,
+        346.9468248291823
+      ],
+      [
+        -0.061737369546878904,
+        0.035687471522717666,
+        0.8924958341589843,
+        165.83117312096135
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "iterations": 45,
+    "proper_axis_starts": 24,
+    "fit_scores_best_5_mm": [
+      5.12259265635368,
+      5.122605668047372,
+      5.30833532760124,
+      8.04798952820889,
+      8.088717849016103
+    ],
+    "diagnostic_per_anchor_bone": {
+      "pelvis": {
+        "mean_mm": 4.728830147716576,
+        "p95_mm": 11.958405676662837
+      },
+      "femur": {
+        "mean_mm": 4.9060796076268085,
+        "p95_mm": 9.842160618587744
+      },
+      "tibia": {
+        "mean_mm": 3.2533348845713843,
+        "p95_mm": 8.05549812141791
+      }
+    },
+    "protocol_anchor_bones": [
+      "pelvis",
+      "femur",
+      "tibia"
+    ],
+    "icp_sampling": {
+      "source_samples_per_bone": 850,
+      "target_samples_per_bone": 1700,
+      "trim_quantile": 0.88
+    }
+  },
+  "deformation": {
+    "method": "SciPy RBFInterpolator thin_plate_spline residual displacement",
+    "smoothing": 2.0,
+    "neighbors": 48,
+    "bone_surface_samples_per_selected_bone": 420,
+    "insertion_threshold_mm": 3.0,
+    "laplacian_iterations": 12,
+    "laplacian_factor": 0.22,
+    "bones_used": [
+      "pelvis",
+      "sacrum",
+      "femur",
+      "patella",
+      "tibia",
+      "fibula",
+      "calcaneus",
+      "cuboid",
+      "intermediate_cuneiform",
+      "lateral_cuneiform",
+      "medial_cuneiform",
+      "navicular",
+      "talus"
+    ],
+    "biceps_metric_grouping": "cabeças longa/curta preservadas em malhas separadas; métricas do critério agrupam ambas"
+  },
+  "denver_files_read_only_bone": [
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Pelvis_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Sacrum_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Femur_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Patella_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Tibia_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Fibula_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Calcaneous_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Cuboid_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_IntermediateCuneiform_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_LateralCuneiform_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_MedialCuneiform_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Navicular_smooth.stl",
+    "C:\\Users\\respawn\\Desktop\\saude governamental\\hra\\denver\\bruto\\Final 3D STL Models-stl\\Left\\VHF_Left_Bone_Talus_smooth.stl"
+  ],
+  "muscles": {
+    "rectus_femoris": [
+      {
+        "fma": "FMA38929",
+        "bp3d_file": "FJ1433M",
+        "bp3d_name": "Left rectus femoris",
+        "denver_file": "VHF_Left_Muscle_RectusFemoris_smooth.stl"
+      }
+    ],
+    "vastus_lateralis": [
+      {
+        "fma": "FMA38931",
+        "bp3d_file": "FJ1442M",
+        "bp3d_name": "Left vastus lateralis",
+        "denver_file": "VHF_Left_Muscle_VastusLateralis_smooth.stl"
+      }
+    ],
+    "vastus_medialis": [
+      {
+        "fma": "FMA38933",
+        "bp3d_file": "FJ1443M",
+        "bp3d_name": "Left vastus medialis",
+        "denver_file": "VHF_Left_Muscle_VastusMedialis_smooth.stl"
+      }
+    ],
+    "sartorius": [
+      {
+        "fma": "FMA22355",
+        "bp3d_file": "FJ1434M",
+        "bp3d_name": "Left sartorius",
+        "denver_file": "VHF_Left_Muscle_Sartorius_smooth.stl"
+      }
+    ],
+    "gracilis": [
+      {
+        "fma": "FMA43884",
+        "bp3d_file": "FJ1421M",
+        "bp3d_name": "Left gracilis",
+        "denver_file": "VHF_Left_Muscle_Gracilis_smooth.stl"
+      }
+    ],
+    "adductor_longus": [
+      {
+        "fma": "FMA22457",
+        "bp3d_file": "FJ1402M",
+        "bp3d_name": "Left adductor longus",
+        "denver_file": "VHF_Left_Muscle_AdductorLongus_smooth.stl"
+      }
+    ],
+    "biceps_femoris": [
+      {
+        "fma": "FMA45889",
+        "bp3d_file": "FJ1395M",
+        "bp3d_name": "Long head of left biceps femoris",
+        "denver_file": "VHF_Left_Muscle_BicepsFemorisLong_smooth.stl"
+      },
+      {
+        "fma": "FMA45892",
+        "bp3d_file": "FJ1444M",
+        "bp3d_name": "Short head of left biceps femoris",
+        "denver_file": "VHF_Left_Muscle_BicepsFemorisShort_smooth.stl"
+      }
+    ],
+    "gastrocnemius_medial": [
+      {
+        "fma": "FMA45958",
+        "bp3d_file": "FJ1397M",
+        "bp3d_name": "Medial head of left gastrocnemius",
+        "denver_file": "VHF_Left_Muscle_GastrocnemiusMedial_smooth.stl"
+      }
+    ],
+    "gluteus_medius": [
+      {
+        "fma": "FMA22331",
+        "bp3d_file": "FJ1419M",
+        "bp3d_name": "Left gluteus medius",
+        "denver_file": "VHF_Left_Muscle_GluteusMedius_smooth.stl"
+      }
+    ],
+    "tibialis_anterior": [
+      {
+        "fma": "FMA22545",
+        "bp3d_file": "FJ1439M",
+        "bp3d_name": "Left tibialis anterior",
+        "denver_file": "VHF_Left_Muscle_TibialisAnterior_smooth.stl"
+      }
+    ]
+  },
+  "adapted_meshes": [
+    {
+      "arquivo": "B0_rectus_femoris.ply",
+      "metodo": "B0",
+      "grupo": "rectus_femoris",
+      "componente": 0,
+      "fma": "FMA38929",
+      "vertices": 3326,
+      "faces": 5688,
+      "watertight": false,
+      "sha256": "705625c2e19e05d182b66f58a931d05b51d6900c3650181fb3544a56e7b7e304"
+    },
+    {
+      "arquivo": "M_rectus_femoris.ply",
+      "metodo": "M",
+      "grupo": "rectus_femoris",
+      "componente": 0,
+      "fma": "FMA38929",
+      "vertices": 3326,
+      "faces": 5688,
+      "watertight": false,
+      "sha256": "77d94c112ce2a8469e7e84ba32766b9b33d19dd82f1f29f53982e4ab3f5e4c4d"
+    },
+    {
+      "arquivo": "B0_vastus_lateralis.ply",
+      "metodo": "B0",
+      "grupo": "vastus_lateralis",
+      "componente": 0,
+      "fma": "FMA38931",
+      "vertices": 3974,
+      "faces": 6688,
+      "watertight": false,
+      "sha256": "e9ed15ab1dc2067e926a9885dc51eae8d246a9fcc007a27a912feaad76475d08"
+    },
+    {
+      "arquivo": "M_vastus_lateralis.ply",
+      "metodo": "M",
+      "grupo": "vastus_lateralis",
+      "componente": 0,
+      "fma": "FMA38931",
+      "vertices": 3974,
+      "faces": 6688,
+      "watertight": false,
+      "sha256": "d85f72db4a43bbb39d68eeb0a70f317446a4c1495517abf25eee02dc2f04d6d8"
+    },
+    {
+      "arquivo": "B0_vastus_medialis.ply",
+      "metodo": "B0",
+      "grupo": "vastus_medialis",
+      "componente": 0,
+      "fma": "FMA38933",
+      "vertices": 2772,
+      "faces": 4552,
+      "watertight": false,
+      "sha256": "4e67c81e8c80876458ddc774ae9ab7004cb622f282f2d6b45b16f8d43f41ccc5"
+    },
+    {
+      "arquivo": "M_vastus_medialis.ply",
+      "metodo": "M",
+      "grupo": "vastus_medialis",
+      "componente": 0,
+      "fma": "FMA38933",
+      "vertices": 2772,
+      "faces": 4552,
+      "watertight": false,
+      "sha256": "91526e30da1c00d4853cb007abc4ea4bdc05507b1d323c9bba9d7e1389fc324a"
+    },
+    {
+      "arquivo": "B0_sartorius.ply",
+      "metodo": "B0",
+      "grupo": "sartorius",
+      "componente": 0,
+      "fma": "FMA22355",
+      "vertices": 2633,
+      "faces": 3444,
+      "watertight": false,
+      "sha256": "39d17a1877713b3bf3726960e1e0cbe37c900fb092ee880093406e8052154b58"
+    },
+    {
+      "arquivo": "M_sartorius.ply",
+      "metodo": "M",
+      "grupo": "sartorius",
+      "componente": 0,
+      "fma": "FMA22355",
+      "vertices": 2633,
+      "faces": 3444,
+      "watertight": false,
+      "sha256": "8b61f2d5c218e6e45b9f873c563689636c2bfa752442ccf1cf89b705785d1161"
+    },
+    {
+      "arquivo": "B0_gracilis.ply",
+      "metodo": "B0",
+      "grupo": "gracilis",
+      "componente": 0,
+      "fma": "FMA43884",
+      "vertices": 2085,
+      "faces": 3172,
+      "watertight": false,
+      "sha256": "ae2613a9472b18c9e96d20b97e6dfdf44f5aafd4fd4b51f3355cb3cc67fa17c5"
+    },
+    {
+      "arquivo": "M_gracilis.ply",
+      "metodo": "M",
+      "grupo": "gracilis",
+      "componente": 0,
+      "fma": "FMA43884",
+      "vertices": 2085,
+      "faces": 3172,
+      "watertight": false,
+      "sha256": "e7965c3a9e23356f8c732288cc793a06a010862197983932068f9fcb76a7aa5b"
+    },
+    {
+      "arquivo": "B0_adductor_longus.ply",
+      "metodo": "B0",
+      "grupo": "adductor_longus",
+      "componente": 0,
+      "fma": "FMA22457",
+      "vertices": 1536,
+      "faces": 2616,
+      "watertight": false,
+      "sha256": "345d27084595640809b1ffb0ea1771bdffff45a53362703dc6b3d15ea1154341"
+    },
+    {
+      "arquivo": "M_adductor_longus.ply",
+      "metodo": "M",
+      "grupo": "adductor_longus",
+      "componente": 0,
+      "fma": "FMA22457",
+      "vertices": 1536,
+      "faces": 2616,
+      "watertight": false,
+      "sha256": "686f6000f408662bb870e517c4e4bae80c540b0e9f8335807a739f9bd6b04839"
+    },
+    {
+      "arquivo": "B0_biceps_femoris_long.ply",
+      "metodo": "B0",
+      "grupo": "biceps_femoris",
+      "componente": 0,
+      "fma": "FMA45889",
+      "vertices": 2837,
+      "faces": 5110,
+      "watertight": false,
+      "sha256": "74ef5a816a80c0d731323c3998489653cd8569e260ab3867865ea076ec78feb3"
+    },
+    {
+      "arquivo": "M_biceps_femoris_long.ply",
+      "metodo": "M",
+      "grupo": "biceps_femoris",
+      "componente": 0,
+      "fma": "FMA45889",
+      "vertices": 2837,
+      "faces": 5110,
+      "watertight": false,
+      "sha256": "df61d2e4ddaa21f2d21010ff6042ec85854ad9d23f848a44d8b5b010784ca894"
+    },
+    {
+      "arquivo": "B0_biceps_femoris_short.ply",
+      "metodo": "B0",
+      "grupo": "biceps_femoris",
+      "componente": 1,
+      "fma": "FMA45892",
+      "vertices": 1215,
+      "faces": 1728,
+      "watertight": false,
+      "sha256": "b4f5c69aa6f569fdd47b3a52e05739b1c6568df39fd13e665555f2d57d9ee8d7"
+    },
+    {
+      "arquivo": "M_biceps_femoris_short.ply",
+      "metodo": "M",
+      "grupo": "biceps_femoris",
+      "componente": 1,
+      "fma": "FMA45892",
+      "vertices": 1215,
+      "faces": 1728,
+      "watertight": false,
+      "sha256": "da6b7448623a55a0159f98d8d3188d59e0e1735cec9e7fb6202082d39b53e48e"
+    },
+    {
+      "arquivo": "B0_gastrocnemius_medial.ply",
+      "metodo": "B0",
+      "grupo": "gastrocnemius_medial",
+      "componente": 0,
+      "fma": "FMA45958",
+      "vertices": 2264,
+      "faces": 3842,
+      "watertight": false,
+      "sha256": "68b6c19c9e7ad4ed91ba6ea36850f391d716f1ab43f9f601704d6242678d8585"
+    },
+    {
+      "arquivo": "M_gastrocnemius_medial.ply",
+      "metodo": "M",
+      "grupo": "gastrocnemius_medial",
+      "componente": 0,
+      "fma": "FMA45958",
+      "vertices": 2264,
+      "faces": 3842,
+      "watertight": false,
+      "sha256": "b3e0ac8575b84f3ab99752e04e581875162054f84f3c5e08c78d20849cabd669"
+    },
+    {
+      "arquivo": "B0_gluteus_medius.ply",
+      "metodo": "B0",
+      "grupo": "gluteus_medius",
+      "componente": 0,
+      "fma": "FMA22331",
+      "vertices": 2308,
+      "faces": 3356,
+      "watertight": false,
+      "sha256": "14e198249882f3de4c408ea957a3ec75e09de7ef78770e6eaf394805e0aec501"
+    },
+    {
+      "arquivo": "M_gluteus_medius.ply",
+      "metodo": "M",
+      "grupo": "gluteus_medius",
+      "componente": 0,
+      "fma": "FMA22331",
+      "vertices": 2308,
+      "faces": 3356,
+      "watertight": false,
+      "sha256": "d6a07056c741c1a4eff7a51bf64ce13b993933475ee371b1e97df04cf92a0d75"
+    },
+    {
+      "arquivo": "B0_tibialis_anterior.ply",
+      "metodo": "B0",
+      "grupo": "tibialis_anterior",
+      "componente": 0,
+      "fma": "FMA22545",
+      "vertices": 2206,
+      "faces": 2510,
+      "watertight": false,
+      "sha256": "c3469689e590e6ab1706b34245d36933f43e0c27c0261598a5de57164746fead"
+    },
+    {
+      "arquivo": "M_tibialis_anterior.ply",
+      "metodo": "M",
+      "grupo": "tibialis_anterior",
+      "componente": 0,
+      "fma": "FMA22545",
+      "vertices": 2206,
+      "faces": 2510,
+      "watertight": false,
+      "sha256": "f97ab3422035e89f83fd7c340f70ef39f01868e2eb4294b73c758cc2d431c303"
+    }
+  ]
+}

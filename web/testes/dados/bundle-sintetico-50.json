@@ -1,0 +1,3706 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:sintetico-001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-001",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000015"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 001"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-002",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-002",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000023"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 002"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1982-05-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-003",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-003",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000031"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 003"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1989-08-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-004",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-004",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000040"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 004"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-06-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-005",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-005",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000058"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 005"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-01-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-006",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-006",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000066"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 006"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1989-11-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-007",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-007",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000074"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 007"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-12-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-008",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-008",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000082"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 008"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1988-05-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-009",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-009",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000090"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 009"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1984-01-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-010",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-010",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000104"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 010"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1981-11-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-011",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-011",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000112"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 011"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1980-04-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-012",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-012",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000120"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 012"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-11-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-013",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-013",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000139"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 013"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1980-09-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-014",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-014",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000147"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 014"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1989-08-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-015",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-015",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000155"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 015"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1984-05-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-016",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-016",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000163"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 016"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1984-09-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-017",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-017",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000171"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 017"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1988-08-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-018",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-018",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000180"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 018"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-01-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-019",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-019",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000198"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 019"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1981-04-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-020",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-020",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000201"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 020"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1984-04-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-021",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-021",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000210"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 021"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1986-11-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-022",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-022",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000228"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 022"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1981-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-023",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-023",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000236"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 023"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1983-06-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-024",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-024",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000244"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 024"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1980-06-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-025",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-025",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000252"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 025"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1984-04-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-026",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-026",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000260"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 026"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-05-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-027",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-027",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000279"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 027"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1983-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-028",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-028",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000287"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 028"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1981-03-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-029",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-029",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000295"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 029"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-06-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-030",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-030",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000309"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 030"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-04-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-031",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-031",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000317"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 031"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-05-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-032",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-032",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000325"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 032"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1989-01-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-033",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-033",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000333"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 033"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1986-05-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-034",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-034",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000341"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 034"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1981-03-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-035",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-035",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000350"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 035"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1982-12-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-036",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-036",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000368"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 036"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1981-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-037",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-037",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000376"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 037"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-09-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-038",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-038",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000384"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 038"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1982-07-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-039",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-039",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000392"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 039"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-04-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-040",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-040",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000406"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 040"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1984-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-041",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-041",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000414"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 041"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1984-01-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-042",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-042",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000422"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 042"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-043",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-043",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000430"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 043"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1980-08-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-044",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-044",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000449"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 044"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1986-11-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-045",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-045",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000457"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 045"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1984-12-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-046",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-046",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000465"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 046"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1984-03-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-047",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-047",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000473"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 047"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1983-07-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-048",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-048",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000481"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 048"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1984-08-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-049",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-049",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000490"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 049"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1986-02-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:sintetico-050",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "sintetico-050",
+        "identifier": [
+          {
+            "system": "http://rnDS.saude.gov.br/fhir/r4/StructureDefinition/BRIndividuo-1.0",
+            "value": "999000000000503"
+          }
+        ],
+        "name": [
+          {
+            "text": "PACIENTE FICTICIO 050"
+          }
+        ],
+        "gender": "unknown",
+        "birthDate": "1987-03-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-001",
+        "subject": {
+          "reference": "Patient/sintetico-001"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-001",
+        "subject": {
+          "reference": "Patient/sintetico-001"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-02-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 95,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-002",
+        "subject": {
+          "reference": "Patient/sintetico-002"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-03-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-002",
+        "subject": {
+          "reference": "Patient/sintetico-002"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-03-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 69,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-003",
+        "subject": {
+          "reference": "Patient/sintetico-003"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-04-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-003",
+        "subject": {
+          "reference": "Patient/sintetico-003"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-04-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 60,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-004",
+        "subject": {
+          "reference": "Patient/sintetico-004"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "9846003"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-05-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-004",
+        "subject": {
+          "reference": "Patient/sintetico-004"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-05-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 71,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-005",
+        "subject": {
+          "reference": "Patient/sintetico-005"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-06-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-005",
+        "subject": {
+          "reference": "Patient/sintetico-005"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-06-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 78,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-006",
+        "subject": {
+          "reference": "Patient/sintetico-006"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "73780009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-07-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-006",
+        "subject": {
+          "reference": "Patient/sintetico-006"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-07-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 83,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-007",
+        "subject": {
+          "reference": "Patient/sintetico-007"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-08-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-007",
+        "subject": {
+          "reference": "Patient/sintetico-007"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-08-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 79,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-008",
+        "subject": {
+          "reference": "Patient/sintetico-008"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "52612000"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-09-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-008",
+        "subject": {
+          "reference": "Patient/sintetico-008"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-09-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 90,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-009",
+        "subject": {
+          "reference": "Patient/sintetico-009"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-10-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-009",
+        "subject": {
+          "reference": "Patient/sintetico-009"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-10-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 85,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-010",
+        "subject": {
+          "reference": "Patient/sintetico-010"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-11-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-010",
+        "subject": {
+          "reference": "Patient/sintetico-010"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-11-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 82,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-011",
+        "subject": {
+          "reference": "Patient/sintetico-011"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-12-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-011",
+        "subject": {
+          "reference": "Patient/sintetico-011"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-12-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 74,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-012",
+        "subject": {
+          "reference": "Patient/sintetico-012"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "9846003"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-01-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-012",
+        "subject": {
+          "reference": "Patient/sintetico-012"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-01-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 78,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-013",
+        "subject": {
+          "reference": "Patient/sintetico-013"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-013",
+        "subject": {
+          "reference": "Patient/sintetico-013"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-02-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 66,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-014",
+        "subject": {
+          "reference": "Patient/sintetico-014"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "73780009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-03-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-014",
+        "subject": {
+          "reference": "Patient/sintetico-014"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-03-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 98,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-015",
+        "subject": {
+          "reference": "Patient/sintetico-015"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-04-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-015",
+        "subject": {
+          "reference": "Patient/sintetico-015"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-04-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 88,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-016",
+        "subject": {
+          "reference": "Patient/sintetico-016"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "52612000"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-05-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-016",
+        "subject": {
+          "reference": "Patient/sintetico-016"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-05-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 64,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-017",
+        "subject": {
+          "reference": "Patient/sintetico-017"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-06-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-017",
+        "subject": {
+          "reference": "Patient/sintetico-017"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-06-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 83,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-018",
+        "subject": {
+          "reference": "Patient/sintetico-018"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-07-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-018",
+        "subject": {
+          "reference": "Patient/sintetico-018"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-07-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 83,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-019",
+        "subject": {
+          "reference": "Patient/sintetico-019"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-08-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-019",
+        "subject": {
+          "reference": "Patient/sintetico-019"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-08-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 85,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-020",
+        "subject": {
+          "reference": "Patient/sintetico-020"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "9846003"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-09-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-020",
+        "subject": {
+          "reference": "Patient/sintetico-020"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-09-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 97,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-021",
+        "subject": {
+          "reference": "Patient/sintetico-021"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-10-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-021",
+        "subject": {
+          "reference": "Patient/sintetico-021"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-10-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 63,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-022",
+        "subject": {
+          "reference": "Patient/sintetico-022"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "73780009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-11-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-022",
+        "subject": {
+          "reference": "Patient/sintetico-022"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-11-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 60,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-023",
+        "subject": {
+          "reference": "Patient/sintetico-023"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-12-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-023",
+        "subject": {
+          "reference": "Patient/sintetico-023"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-12-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 68,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-024",
+        "subject": {
+          "reference": "Patient/sintetico-024"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "52612000"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-01-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-024",
+        "subject": {
+          "reference": "Patient/sintetico-024"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-01-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 75,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-025",
+        "subject": {
+          "reference": "Patient/sintetico-025"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-025",
+        "subject": {
+          "reference": "Patient/sintetico-025"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-02-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 63,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-026",
+        "subject": {
+          "reference": "Patient/sintetico-026"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-03-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-026",
+        "subject": {
+          "reference": "Patient/sintetico-026"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-03-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 98,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-027",
+        "subject": {
+          "reference": "Patient/sintetico-027"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-04-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-027",
+        "subject": {
+          "reference": "Patient/sintetico-027"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-04-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 80,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-028",
+        "subject": {
+          "reference": "Patient/sintetico-028"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "9846003"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-05-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-028",
+        "subject": {
+          "reference": "Patient/sintetico-028"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-05-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 80,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-029",
+        "subject": {
+          "reference": "Patient/sintetico-029"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-06-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-029",
+        "subject": {
+          "reference": "Patient/sintetico-029"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-06-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 92,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-030",
+        "subject": {
+          "reference": "Patient/sintetico-030"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "73780009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-07-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-030",
+        "subject": {
+          "reference": "Patient/sintetico-030"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-07-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 94,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-031",
+        "subject": {
+          "reference": "Patient/sintetico-031"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-08-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-031",
+        "subject": {
+          "reference": "Patient/sintetico-031"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-08-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 64,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-032",
+        "subject": {
+          "reference": "Patient/sintetico-032"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "52612000"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-09-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-032",
+        "subject": {
+          "reference": "Patient/sintetico-032"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-09-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 89,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-033",
+        "subject": {
+          "reference": "Patient/sintetico-033"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-10-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-033",
+        "subject": {
+          "reference": "Patient/sintetico-033"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-10-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 93,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-034",
+        "subject": {
+          "reference": "Patient/sintetico-034"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-11-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-034",
+        "subject": {
+          "reference": "Patient/sintetico-034"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-11-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 71,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-035",
+        "subject": {
+          "reference": "Patient/sintetico-035"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-12-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-035",
+        "subject": {
+          "reference": "Patient/sintetico-035"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-12-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 83,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-036",
+        "subject": {
+          "reference": "Patient/sintetico-036"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "9846003"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-01-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-036",
+        "subject": {
+          "reference": "Patient/sintetico-036"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-01-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 83,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-037",
+        "subject": {
+          "reference": "Patient/sintetico-037"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-037",
+        "subject": {
+          "reference": "Patient/sintetico-037"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-02-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 90,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-038",
+        "subject": {
+          "reference": "Patient/sintetico-038"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "73780009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-03-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-038",
+        "subject": {
+          "reference": "Patient/sintetico-038"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-03-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 63,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-039",
+        "subject": {
+          "reference": "Patient/sintetico-039"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-04-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-039",
+        "subject": {
+          "reference": "Patient/sintetico-039"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-04-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 60,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-040",
+        "subject": {
+          "reference": "Patient/sintetico-040"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "52612000"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-05-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-040",
+        "subject": {
+          "reference": "Patient/sintetico-040"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-05-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 93,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-041",
+        "subject": {
+          "reference": "Patient/sintetico-041"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-06-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-041",
+        "subject": {
+          "reference": "Patient/sintetico-041"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-06-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 67,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-042",
+        "subject": {
+          "reference": "Patient/sintetico-042"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-07-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-042",
+        "subject": {
+          "reference": "Patient/sintetico-042"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-07-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 88,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-043",
+        "subject": {
+          "reference": "Patient/sintetico-043"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-08-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-043",
+        "subject": {
+          "reference": "Patient/sintetico-043"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-08-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 62,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-044",
+        "subject": {
+          "reference": "Patient/sintetico-044"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "9846003"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-09-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-044",
+        "subject": {
+          "reference": "Patient/sintetico-044"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-09-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 82,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-045",
+        "subject": {
+          "reference": "Patient/sintetico-045"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-10-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-045",
+        "subject": {
+          "reference": "Patient/sintetico-045"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-10-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 82,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-046",
+        "subject": {
+          "reference": "Patient/sintetico-046"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "73780009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-11-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-046",
+        "subject": {
+          "reference": "Patient/sintetico-046"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-11-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 94,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-047",
+        "subject": {
+          "reference": "Patient/sintetico-047"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-12-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-047",
+        "subject": {
+          "reference": "Patient/sintetico-047"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-12-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 98,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-048",
+        "subject": {
+          "reference": "Patient/sintetico-048"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "M54.5"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "52612000"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-01-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-048",
+        "subject": {
+          "reference": "Patient/sintetico-048"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-01-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 80,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-049",
+        "subject": {
+          "reference": "Patient/sintetico-049"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.saude.gov.br/fhir/r4/CodeSystem/BRCID10",
+              "code": "I10"
+            }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-02-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-049",
+        "subject": {
+          "reference": "Patient/sintetico-049"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-02-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 78,
+          "unit": "bpm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condicao-050",
+        "subject": {
+          "reference": "Patient/sintetico-050"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80891009"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "display": "active"
+            }
+          ]
+        },
+        "onsetDateTime": "2025-03-10"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observacao-050",
+        "subject": {
+          "reference": "Patient/sintetico-050"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-03-10T10:00:00Z",
+        "valueQuantity": {
+          "value": 100,
+          "unit": "bpm"
+        }
+      }
+    }
+  ]
+}

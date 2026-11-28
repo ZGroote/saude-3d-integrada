@@ -1,0 +1,2821 @@
+{
+  "status": "locally_present",
+  "downloaded_by": "reviewer Claude Code",
+  "download_date": "2026-11-27",
+  "download_source": "TotalSegmentator V3 Zenodo 22688904, masks only; no CT downloaded",
+  "case_count": 78,
+  "mask_count": 390,
+  "size_on_disk_total_bytes": 43212790,
+  "range_transfer_bytes": "not recorded by downloader; do not equate with disk size",
+  "mask_set_sha256": "83c5537fa1cfac28607e0fe969a82bd3acdcc27933e5840b752500a332daef7b",
+  "cases": {
+    "s0028": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 728784,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 182657,
+          "sha256": "e4b116fff9c6e8fef7be2143721d8072c132f7008974cf15e2975a4b914d0ca7",
+          "path": "hra\\externo\\totalseg_v3\\s0028\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 180960,
+          "sha256": "b84e790f3a68440f434e32f042deaa08ad13f2a5b97148611232eaea9d1b6fc2",
+          "path": "hra\\externo\\totalseg_v3\\s0028\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 43061,
+          "sha256": "7459c0d2c8be58c452793b1940c1d65e67de4e5c5125e87d7bd9841ef3df8493",
+          "path": "hra\\externo\\totalseg_v3\\s0028\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 161140,
+          "sha256": "d859c3099b291592cd55f42bdd24ed3f1035730eb2ae129d4981c30326b8e436",
+          "path": "hra\\externo\\totalseg_v3\\s0028\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 160966,
+          "sha256": "a1fdf1228c1091370c2508d3b14db612ff2ca16ab3f9e8c54778a642816d41e7",
+          "path": "hra\\externo\\totalseg_v3\\s0028\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0030": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 779223,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 172003,
+          "sha256": "ebe02acceea9a68567140c5f7aa3fc304be3e65769ed271f8f9d2dfc84bed43c",
+          "path": "hra\\externo\\totalseg_v3\\s0030\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 171772,
+          "sha256": "759791a2e7846cb9d30bb52912b7b239922abc534ea067d466623f0174d91ee8",
+          "path": "hra\\externo\\totalseg_v3\\s0030\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 150251,
+          "sha256": "adbfaddba2cae04222411dd97321519b083dcaddd16b0653a07218f6163a6698",
+          "path": "hra\\externo\\totalseg_v3\\s0030\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 142351,
+          "sha256": "7937408e412b957d814a87f67bb027b54c253e4e39a8ea435e89f47c5a07f066",
+          "path": "hra\\externo\\totalseg_v3\\s0030\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 142846,
+          "sha256": "befc3dee1d8867f34aafb6c8eadf5cd2efe77a79f16625e8657b22e5068d2125",
+          "path": "hra\\externo\\totalseg_v3\\s0030\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0062": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 459158,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 99213,
+          "sha256": "ba1203a0c7421d102103a207731d900b559a2fb2f3210b50f018fa32b232fb08",
+          "path": "hra\\externo\\totalseg_v3\\s0062\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 99310,
+          "sha256": "01ebd534766c01b190ce91d0662002b1883d90a89cd30bd95c7e8678c157d570",
+          "path": "hra\\externo\\totalseg_v3\\s0062\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 87861,
+          "sha256": "3740ee214534f2f462688101e73f70b34a4a3eb60e5142af95237cd678658d6e",
+          "path": "hra\\externo\\totalseg_v3\\s0062\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 84174,
+          "sha256": "aa404f512fbec70a7c1b162033ff0c44987445271a93376636841957cdf32abb",
+          "path": "hra\\externo\\totalseg_v3\\s0062\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 88600,
+          "sha256": "1be5cd520ebf13274ab9288ab46058b4c22819eebfba227715411f75fd90233f",
+          "path": "hra\\externo\\totalseg_v3\\s0062\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0089": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 369382,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 85127,
+          "sha256": "af7276d45fed49a108cfeb75eec67e94fb6f0aa7aef71b2c21c661589adcf6d2",
+          "path": "hra\\externo\\totalseg_v3\\s0089\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 84989,
+          "sha256": "e428e8592b47ee69e05b79508cf257f1bcc1c27b409ce6556fcaca8d7c9a0776",
+          "path": "hra\\externo\\totalseg_v3\\s0089\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 70684,
+          "sha256": "724bb516801f067912a19e2bc18b06ae738aeacbdeef426208dc12bc5457138f",
+          "path": "hra\\externo\\totalseg_v3\\s0089\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 64296,
+          "sha256": "5e1f913df9299bf4a23bd795d86d5c3525838fdbcc604a25f72e40df7640746c",
+          "path": "hra\\externo\\totalseg_v3\\s0089\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 64286,
+          "sha256": "db59b494c59c67416006137e70ab4dc1bcb5f6a642e8535e29517943bc05885f",
+          "path": "hra\\externo\\totalseg_v3\\s0089\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0108": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 552790,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 141871,
+          "sha256": "3f597d26e4fdb96c1ef9cb3b71b67702475e53754f8c127de385376fa15e29fe",
+          "path": "hra\\externo\\totalseg_v3\\s0108\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 141390,
+          "sha256": "f7ec0869e9a4035048c1888e31c1becb0bd67eb03c5beb4aae52a2741cafc6ce",
+          "path": "hra\\externo\\totalseg_v3\\s0108\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 35795,
+          "sha256": "10b912d6dd5f41d0a87b09aa99a0107e99ed18af14f648bf5108be418e9218b9",
+          "path": "hra\\externo\\totalseg_v3\\s0108\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 116734,
+          "sha256": "8edae75ddf46ec612e53ed340d52d5ba4e9e5797edc324cb2fd065f888577462",
+          "path": "hra\\externo\\totalseg_v3\\s0108\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 117000,
+          "sha256": "9cc080314647907f9e2212f4dfb8964ae1f298a24d5e503a86d87230976cf681",
+          "path": "hra\\externo\\totalseg_v3\\s0108\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0119": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 759580,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 164966,
+          "sha256": "a2808a9f9909109324c7a0e9ad14cac7df46f7e8c81a28f5b7506209ef9d0ce1",
+          "path": "hra\\externo\\totalseg_v3\\s0119\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 165271,
+          "sha256": "ab6afae627d148c26e809aa62edbe3b319edb8429822e43010699ef72b68cf40",
+          "path": "hra\\externo\\totalseg_v3\\s0119\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 147312,
+          "sha256": "e621858ef8bc6b41aa101417c8ae609d903d1fca78c621d489b32d38720bb1fe",
+          "path": "hra\\externo\\totalseg_v3\\s0119\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 141120,
+          "sha256": "8c8234cbf91051e33a9e7ad1bcffc1824d76960b3a2c2d5c1169473a1c8547d9",
+          "path": "hra\\externo\\totalseg_v3\\s0119\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 140911,
+          "sha256": "5b6f0218c4559928e6f324fbe5042a95ad25f97877c4622715cd230a0e37e1ad",
+          "path": "hra\\externo\\totalseg_v3\\s0119\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0139": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 584317,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 127124,
+          "sha256": "848ddbe6cf6327784f06afbfd50f541e8d717855dd91fa0cb2e7a81ee394e57d",
+          "path": "hra\\externo\\totalseg_v3\\s0139\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 127007,
+          "sha256": "672ea7c7c2963405d1869194d9082844d07a9da068d3ca534ef01c1a3d929fb1",
+          "path": "hra\\externo\\totalseg_v3\\s0139\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 115284,
+          "sha256": "ac493a9fd05fbf939da7fc3e0bd84cfb1b43d089baf73b492fb118907ab175dd",
+          "path": "hra\\externo\\totalseg_v3\\s0139\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 107654,
+          "sha256": "d38a6925bc4a17440eeea44eb524051ef0d98796cbb6dd89765218728667d6a6",
+          "path": "hra\\externo\\totalseg_v3\\s0139\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 107248,
+          "sha256": "0dc3d72b0c2d3fca7b3531158d5ae02b56d016af52b84e6964b3681fd6a1f66a",
+          "path": "hra\\externo\\totalseg_v3\\s0139\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0157": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 664592,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 144269,
+          "sha256": "209c06030c064d69a36729cf3e55640ef781bb2cbc616176f65517240383f1e1",
+          "path": "hra\\externo\\totalseg_v3\\s0157\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 144978,
+          "sha256": "266f8167e008d302c3637ffb012828249b1ec6bb44ba0b728b992fa2d3d0ddc4",
+          "path": "hra\\externo\\totalseg_v3\\s0157\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 130833,
+          "sha256": "84ec2329fb84882bff85a4786c49186e572bd3a83ab7130c998c44799a36c35c",
+          "path": "hra\\externo\\totalseg_v3\\s0157\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 122919,
+          "sha256": "93bfaac8ddd81606aa58ca1e02127736a1fdbeccf234ca0f22afd31f88085403",
+          "path": "hra\\externo\\totalseg_v3\\s0157\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 121593,
+          "sha256": "8f072b990140aad85f7d8384d722db15c5d2ce0293a14346efe9c828da620047",
+          "path": "hra\\externo\\totalseg_v3\\s0157\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0160": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 214236,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 42845,
+          "sha256": "d92933b24df88986fec490717fc1bab714f115f9dec142734b86e59217491498",
+          "path": "hra\\externo\\totalseg_v3\\s0160\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 42845,
+          "sha256": "d92933b24df88986fec490717fc1bab714f115f9dec142734b86e59217491498",
+          "path": "hra\\externo\\totalseg_v3\\s0160\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 42856,
+          "sha256": "2198e56edd49d5e548c6fb6cdc05d72fa2e23237840cb983aeda19bb16fd65bc",
+          "path": "hra\\externo\\totalseg_v3\\s0160\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 42845,
+          "sha256": "d92933b24df88986fec490717fc1bab714f115f9dec142734b86e59217491498",
+          "path": "hra\\externo\\totalseg_v3\\s0160\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 42845,
+          "sha256": "d92933b24df88986fec490717fc1bab714f115f9dec142734b86e59217491498",
+          "path": "hra\\externo\\totalseg_v3\\s0160\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0190": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 422708,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 93936,
+          "sha256": "7c74129d34dc7b64986ceca4b95b468b3da64ebd6489bb0ad8e9ab265cd60ecb",
+          "path": "hra\\externo\\totalseg_v3\\s0190\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 91535,
+          "sha256": "bcf5a87725e35dda1314e5e6a23e1eb26aa143be21a035d171d9e1a786d857f1",
+          "path": "hra\\externo\\totalseg_v3\\s0190\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 83494,
+          "sha256": "8635ed7d1ae51dd5ba95731ae2877e5ff9cdb072534d3bd2a8d99ca5ef860835",
+          "path": "hra\\externo\\totalseg_v3\\s0190\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 77067,
+          "sha256": "860aaf397e06a85bb59b3e34f2e3ca0d21f7de959bff05b5152738d8fddbcec6",
+          "path": "hra\\externo\\totalseg_v3\\s0190\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 76676,
+          "sha256": "911bb1938a132b870448e86d339ab21ef1ff230d5b3351cd3eab62f53a067214",
+          "path": "hra\\externo\\totalseg_v3\\s0190\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0196": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 776311,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 165397,
+          "sha256": "c1124c4846f1705bc733aecd4a6e95b8a2b9f125f5e1a5e05cd69c3d74725538",
+          "path": "hra\\externo\\totalseg_v3\\s0196\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 166133,
+          "sha256": "6391f5a0e3e3bdc5815363cbd7ae8523da477412180360791eb5a6e6ae2581c3",
+          "path": "hra\\externo\\totalseg_v3\\s0196\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 153007,
+          "sha256": "b6f3d24b69bf3af2784e9807b5cdc7262b9ab1eb0bd43e8fd9ed5d8d7cd0bbe7",
+          "path": "hra\\externo\\totalseg_v3\\s0196\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 146320,
+          "sha256": "7c8dd3d40df780732b66f7a491cd50c7e5a2263b197b2dd24684c45c9e52fedc",
+          "path": "hra\\externo\\totalseg_v3\\s0196\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 145454,
+          "sha256": "530437e9557448a17382128fad87abe8b8dea8cd95690aea856f10159377116a",
+          "path": "hra\\externo\\totalseg_v3\\s0196\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0216": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 400499,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 90050,
+          "sha256": "ffebd7f9d0123c310413287c86973051a6ddeaf495d02fa6066433469d5880f4",
+          "path": "hra\\externo\\totalseg_v3\\s0216\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 88839,
+          "sha256": "f2a3167b81fd167dd6acfbba6ecaf32af9c7b45dd47da5b5bb196aba3e6630bb",
+          "path": "hra\\externo\\totalseg_v3\\s0216\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 80175,
+          "sha256": "4aa8c2db25d62f4f7eb3beb980a7ea10e3846dfc8459838a367362a9850011fa",
+          "path": "hra\\externo\\totalseg_v3\\s0216\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 71012,
+          "sha256": "0e02e6762e87c0481cbcbe674c579fe9cf7925c8a3850bad229a0eadf89811bc",
+          "path": "hra\\externo\\totalseg_v3\\s0216\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 70423,
+          "sha256": "5ae76fcda1011bc855e50569d3376045b63a79cdf4febebe8bc4a0414128efbb",
+          "path": "hra\\externo\\totalseg_v3\\s0216\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0218": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 518854,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 116423,
+          "sha256": "4e9928cd090237b1c99b07d4f4a4b51dc4f024cb8923e46b1f67776442727c59",
+          "path": "hra\\externo\\totalseg_v3\\s0218\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 115174,
+          "sha256": "d962b0110007a7e9cdcf9df61089d5f73038e81b1e102572bc98ac68f85dfe4f",
+          "path": "hra\\externo\\totalseg_v3\\s0218\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 101399,
+          "sha256": "4a4b2a68f675132a66772304aa6014c45c9822895965003c6b020909e650459d",
+          "path": "hra\\externo\\totalseg_v3\\s0218\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 93000,
+          "sha256": "e10a868e342ab22e403a77778437984e944726592b663a350c28a1d6160a4204",
+          "path": "hra\\externo\\totalseg_v3\\s0218\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 92858,
+          "sha256": "14e65c233325ba178f8531ad6b1e2366dd468d94e442bdb1e131ba1a03280ec4",
+          "path": "hra\\externo\\totalseg_v3\\s0218\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0222": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 234991,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 46996,
+          "sha256": "793d18c726b52127a9b8d57ada692fff791398a5ba018f1b6e6e577f9867db1a",
+          "path": "hra\\externo\\totalseg_v3\\s0222\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 46996,
+          "sha256": "793d18c726b52127a9b8d57ada692fff791398a5ba018f1b6e6e577f9867db1a",
+          "path": "hra\\externo\\totalseg_v3\\s0222\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 47007,
+          "sha256": "62187c81589d1f65f23bbdc77d8639c9dea6b9bc9429c810c68a0701c4d59aa5",
+          "path": "hra\\externo\\totalseg_v3\\s0222\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 46996,
+          "sha256": "793d18c726b52127a9b8d57ada692fff791398a5ba018f1b6e6e577f9867db1a",
+          "path": "hra\\externo\\totalseg_v3\\s0222\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 46996,
+          "sha256": "793d18c726b52127a9b8d57ada692fff791398a5ba018f1b6e6e577f9867db1a",
+          "path": "hra\\externo\\totalseg_v3\\s0222\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0241": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 247066,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 49411,
+          "sha256": "08cf50c3a9177be91eca498ff91c0cf0548facd4c919334e3b35da81a958cf0f",
+          "path": "hra\\externo\\totalseg_v3\\s0241\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 49411,
+          "sha256": "08cf50c3a9177be91eca498ff91c0cf0548facd4c919334e3b35da81a958cf0f",
+          "path": "hra\\externo\\totalseg_v3\\s0241\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 49422,
+          "sha256": "78f31afd2cc7302bab02f86960eb1cef69361c890ddd490a66a31b523f9181c9",
+          "path": "hra\\externo\\totalseg_v3\\s0241\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 49411,
+          "sha256": "08cf50c3a9177be91eca498ff91c0cf0548facd4c919334e3b35da81a958cf0f",
+          "path": "hra\\externo\\totalseg_v3\\s0241\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 49411,
+          "sha256": "08cf50c3a9177be91eca498ff91c0cf0548facd4c919334e3b35da81a958cf0f",
+          "path": "hra\\externo\\totalseg_v3\\s0241\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0245": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 159666,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 31931,
+          "sha256": "bb5bb3f0ebf0863f147edcf1ad09f1fcf4751e50b99607eea3c07afa33e0b544",
+          "path": "hra\\externo\\totalseg_v3\\s0245\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 31931,
+          "sha256": "bb5bb3f0ebf0863f147edcf1ad09f1fcf4751e50b99607eea3c07afa33e0b544",
+          "path": "hra\\externo\\totalseg_v3\\s0245\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 31942,
+          "sha256": "19ee0dfa254cc628bd23a2dbb07961716c6e74894c645b482ea4e7310674c9eb",
+          "path": "hra\\externo\\totalseg_v3\\s0245\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 31931,
+          "sha256": "bb5bb3f0ebf0863f147edcf1ad09f1fcf4751e50b99607eea3c07afa33e0b544",
+          "path": "hra\\externo\\totalseg_v3\\s0245\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 31931,
+          "sha256": "bb5bb3f0ebf0863f147edcf1ad09f1fcf4751e50b99607eea3c07afa33e0b544",
+          "path": "hra\\externo\\totalseg_v3\\s0245\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0262": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 171281,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 34254,
+          "sha256": "7604372f2b1b8e8808f90835825e6fb70a8dbf479dc28e2727d56bd8b71fbda6",
+          "path": "hra\\externo\\totalseg_v3\\s0262\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 34254,
+          "sha256": "7604372f2b1b8e8808f90835825e6fb70a8dbf479dc28e2727d56bd8b71fbda6",
+          "path": "hra\\externo\\totalseg_v3\\s0262\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 34265,
+          "sha256": "0452cb56525fc8fad2b0cd5890843c2f94210d318b3213d0ee2d4f058f0f26c5",
+          "path": "hra\\externo\\totalseg_v3\\s0262\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 34254,
+          "sha256": "7604372f2b1b8e8808f90835825e6fb70a8dbf479dc28e2727d56bd8b71fbda6",
+          "path": "hra\\externo\\totalseg_v3\\s0262\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 34254,
+          "sha256": "7604372f2b1b8e8808f90835825e6fb70a8dbf479dc28e2727d56bd8b71fbda6",
+          "path": "hra\\externo\\totalseg_v3\\s0262\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0336": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 43566,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 8711,
+          "sha256": "6e9f463fefc90953928a241389a5eb204a24b09b302ed4bd03e2561b5a94ecba",
+          "path": "hra\\externo\\totalseg_v3\\s0336\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 8711,
+          "sha256": "6e9f463fefc90953928a241389a5eb204a24b09b302ed4bd03e2561b5a94ecba",
+          "path": "hra\\externo\\totalseg_v3\\s0336\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 8722,
+          "sha256": "7a4ddef1c87ea9380345b926721d773d83d7655472b4b54c260293be050ce30e",
+          "path": "hra\\externo\\totalseg_v3\\s0336\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 8711,
+          "sha256": "6e9f463fefc90953928a241389a5eb204a24b09b302ed4bd03e2561b5a94ecba",
+          "path": "hra\\externo\\totalseg_v3\\s0336\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 8711,
+          "sha256": "6e9f463fefc90953928a241389a5eb204a24b09b302ed4bd03e2561b5a94ecba",
+          "path": "hra\\externo\\totalseg_v3\\s0336\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0350": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 746784,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 160949,
+          "sha256": "1385e802b89e55ac2a277c799e778e52bb7f5137b6588b85bf057e5fef2a8f04",
+          "path": "hra\\externo\\totalseg_v3\\s0350\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 159214,
+          "sha256": "535e3b6da598c160611c1360d61cc4f5bed78a036bd5b611adc1fab58ed1ae48",
+          "path": "hra\\externo\\totalseg_v3\\s0350\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 146232,
+          "sha256": "502be251a5d9599591a010200568dd878b725e0088e7f5ac6ae4e628a0261739",
+          "path": "hra\\externo\\totalseg_v3\\s0350\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 140153,
+          "sha256": "3e68c3c5662fd37a6e8f657751d5ad9971b2a65c63131b8a9532915d52296792",
+          "path": "hra\\externo\\totalseg_v3\\s0350\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 140236,
+          "sha256": "e22d6bf1eeb3c1c5c842a6e70feab1968bf22793e3f4c693f8b6eb412856dcee",
+          "path": "hra\\externo\\totalseg_v3\\s0350\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0381": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 301081,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 69796,
+          "sha256": "0ff64d1f1503552811c162ce47fb3819f92af3289e77a6abf2fa222d02fe92fd",
+          "path": "hra\\externo\\totalseg_v3\\s0381\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 69571,
+          "sha256": "32d962bbd11d12afcc8de7e607fe46c3a7dd66b88959f01a4123ad5599e475c6",
+          "path": "hra\\externo\\totalseg_v3\\s0381\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 57144,
+          "sha256": "d483508593ec79b0cea851c62e83090dff24ecd3b37019cd7e0bd8d6c55800a1",
+          "path": "hra\\externo\\totalseg_v3\\s0381\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 52685,
+          "sha256": "bb08d0b5e5ae56c7eb06bbc2f94dcfb4ca20e2a281fa7d3760f6a85f13871623",
+          "path": "hra\\externo\\totalseg_v3\\s0381\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 51885,
+          "sha256": "a15f51478d1715aa2c8afdf2eb40344437e4df72ac25924a77d44ae23f08bd6c",
+          "path": "hra\\externo\\totalseg_v3\\s0381\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0440": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 686122,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 146663,
+          "sha256": "8eeb8c7e8d34f39c7a03092c9285a13e98882ff36adacef2476ffda32c74beba",
+          "path": "hra\\externo\\totalseg_v3\\s0440\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 147286,
+          "sha256": "02eb3e18a5c1cda46ac114e235b87f034bc7e0267c812f223bb478da06ca32d5",
+          "path": "hra\\externo\\totalseg_v3\\s0440\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 135417,
+          "sha256": "ac67bbef4b1e90e189e58095f93098ba961a52fd564b9b4ecaeace7171136973",
+          "path": "hra\\externo\\totalseg_v3\\s0440\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 128508,
+          "sha256": "8715c70866a634665383cc41c70e082911b482f607db0f381d560d61c20a601c",
+          "path": "hra\\externo\\totalseg_v3\\s0440\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 128248,
+          "sha256": "6da16377244945c20ee9743f8a5656d240e80f3c3b6e3db7ee5132349e92bdef",
+          "path": "hra\\externo\\totalseg_v3\\s0440\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0442": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 391565,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 89345,
+          "sha256": "3fcfbfb4716d9e950f7759c85621f0a1725b1becab7c99f834c4998d324a4c03",
+          "path": "hra\\externo\\totalseg_v3\\s0442\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 92178,
+          "sha256": "0c522037a765e55e807b3f7dd3ba2671e1dc2a6e1ff73487bd860a008c59d548",
+          "path": "hra\\externo\\totalseg_v3\\s0442\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 72326,
+          "sha256": "7140697cc2cc3ff2a108f06fafeb5f3a67fed2e228841b9a48e39a66254a0103",
+          "path": "hra\\externo\\totalseg_v3\\s0442\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 68658,
+          "sha256": "03e5c538573052f1ba6bf7c8d70c5d9862a314f74d3fc33f1510eba84bbf9721",
+          "path": "hra\\externo\\totalseg_v3\\s0442\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 69058,
+          "sha256": "58ed4fdc5e5e059742a845489e8766e7d1ad7b39cda380c6dcde17634f2ac705",
+          "path": "hra\\externo\\totalseg_v3\\s0442\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0472": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 842442,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 179487,
+          "sha256": "8cf933f4ee009dfd51bdf2291d531f76b5207ef0000030392e7af2faf3f3cb6d",
+          "path": "hra\\externo\\totalseg_v3\\s0472\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 179022,
+          "sha256": "b515a0491baa4813d924625f78689dbdfad8e2402f2a81ac1be63149f90b8432",
+          "path": "hra\\externo\\totalseg_v3\\s0472\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 166501,
+          "sha256": "728d96d68b3adf61f6d9322485dc1622b73531de8a575be2bd5a31f771ed0181",
+          "path": "hra\\externo\\totalseg_v3\\s0472\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 158992,
+          "sha256": "250b8add3aed0773994d2f91aa842238dcf2b924d846528499ed885aa76c1d11",
+          "path": "hra\\externo\\totalseg_v3\\s0472\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 158440,
+          "sha256": "2c00243e0adf712cac0d7ac17368eb67883e4bc7602b9f671dcaaa75ef52bf36",
+          "path": "hra\\externo\\totalseg_v3\\s0472\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0571": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 618524,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 133032,
+          "sha256": "a0f17df77187d162140f0c04027ff3b75866bf026181263d14eb74f5f390b71d",
+          "path": "hra\\externo\\totalseg_v3\\s0571\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 132965,
+          "sha256": "809b43dee800b66fd2456366792eb3ac3f82d009f92f498e09934ebfb3e88d61",
+          "path": "hra\\externo\\totalseg_v3\\s0571\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 123779,
+          "sha256": "5892f81a1960cdea3abcbc1f98dad51b5285d07956ea64f3b4a15fa1d9f97575",
+          "path": "hra\\externo\\totalseg_v3\\s0571\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 114433,
+          "sha256": "45e2e1504f1935757b5c0b1a01d94e2b834e0f2719144ccee539b79b4dfaeb15",
+          "path": "hra\\externo\\totalseg_v3\\s0571\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 114315,
+          "sha256": "ce08b1ada9233e20b712a2b0762065d7b9325d79af1b4b574ea23f97516b761f",
+          "path": "hra\\externo\\totalseg_v3\\s0571\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0578": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 522929,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 113720,
+          "sha256": "743913ed9918d2e94a11a0b0d64d54fce3caa983a9bd277d13a1a3f2ed0d2773",
+          "path": "hra\\externo\\totalseg_v3\\s0578\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 113817,
+          "sha256": "c188adaaa195f8809137a62afd3463dcbc8aa1b582f80f639db70440c7adaa1f",
+          "path": "hra\\externo\\totalseg_v3\\s0578\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 105644,
+          "sha256": "f1327e638b909123631671741c8cc0203e8dd466f2e169cb9ba3c25157be697c",
+          "path": "hra\\externo\\totalseg_v3\\s0578\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 94513,
+          "sha256": "ca4959eb4d06b2d266b8753be367f76eb8e8b88a9a636fce3f81c1057fd8b52b",
+          "path": "hra\\externo\\totalseg_v3\\s0578\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 95235,
+          "sha256": "ab32ed0d0ab2fb14c0fc047a057720f8ff79561a790239be7a0e6619cbe23a7b",
+          "path": "hra\\externo\\totalseg_v3\\s0578\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0611": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 210636,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 55400,
+          "sha256": "40d5ac2b57ec8e014be41d8e969792c98519e2d221530bda9ced1499c0c79fa0",
+          "path": "hra\\externo\\totalseg_v3\\s0611\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 54212,
+          "sha256": "33cd55c557772e9b1f97866883368e2b32dff059459ab23f26bed3a8a2aed255",
+          "path": "hra\\externo\\totalseg_v3\\s0611\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 39125,
+          "sha256": "cfba3ebe758dcc58a88e43701877d7ff49972b5415e3b5fc7b81444012d32187",
+          "path": "hra\\externo\\totalseg_v3\\s0611\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 31071,
+          "sha256": "74ca943bee1d8159a26fcbdc26d566d58478fb01e7e09d7390af9e207b132b9f",
+          "path": "hra\\externo\\totalseg_v3\\s0611\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 30828,
+          "sha256": "5ed97508a92a9e5751919f8292126b5f27b54a0cd8123c3b10861b81a3801faf",
+          "path": "hra\\externo\\totalseg_v3\\s0611\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0617": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 703155,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 153403,
+          "sha256": "e564a2888bea882ca514cccbf7174cf6cdfa6fb1c83d24d2115617d82081e0d0",
+          "path": "hra\\externo\\totalseg_v3\\s0617\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 152369,
+          "sha256": "1bc73f0b43a754bbcfbe7d11f40d60e7849140cb74ea29706318ef9aedf2c811",
+          "path": "hra\\externo\\totalseg_v3\\s0617\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 137290,
+          "sha256": "0a174a1395269c58dd6626efd02870417c5b3624794cd34b78e882d3f5838955",
+          "path": "hra\\externo\\totalseg_v3\\s0617\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 130203,
+          "sha256": "8b4782122ab3cc3c42ec72e440f488621b3a345c7b59cc97595ba20e278711f6",
+          "path": "hra\\externo\\totalseg_v3\\s0617\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 129890,
+          "sha256": "9e7d016739b5b4fad9f1fa307b90d24c5ac4c03607711bbd4d31cb788bcff060",
+          "path": "hra\\externo\\totalseg_v3\\s0617\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0675": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 436087,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 87205,
+          "sha256": "a9da5ee9a28eae7093d9e34477bbc9f7717407b1ab630eaebac1cc7a7077a0d4",
+          "path": "hra\\externo\\totalseg_v3\\s0675\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 87205,
+          "sha256": "a9da5ee9a28eae7093d9e34477bbc9f7717407b1ab630eaebac1cc7a7077a0d4",
+          "path": "hra\\externo\\totalseg_v3\\s0675\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 87216,
+          "sha256": "170e547c6e106c2a4c607b588e630ae165e4ea518e33956906037dd9846f39df",
+          "path": "hra\\externo\\totalseg_v3\\s0675\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 87205,
+          "sha256": "a9da5ee9a28eae7093d9e34477bbc9f7717407b1ab630eaebac1cc7a7077a0d4",
+          "path": "hra\\externo\\totalseg_v3\\s0675\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 87256,
+          "sha256": "404ed62aec37609b92920a2818e9f787ad8beac5e6d2701761850f83028b9005",
+          "path": "hra\\externo\\totalseg_v3\\s0675\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0731": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 926252,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 196241,
+          "sha256": "4aed6050b8cd4b8153416d7ee986c5688df46127895e21115c07208803185805",
+          "path": "hra\\externo\\totalseg_v3\\s0731\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 196424,
+          "sha256": "3e96438cbbc44f31870825000af38b160450b1028047fe70ef7aa7a84cdf562b",
+          "path": "hra\\externo\\totalseg_v3\\s0731\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 182520,
+          "sha256": "5881bfcfc5a4205a8626977750acf46aced284e4df478f384868f73a32eca373",
+          "path": "hra\\externo\\totalseg_v3\\s0731\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 176080,
+          "sha256": "e17c729320f7f9d7412c7c891a7531cebe465975661d05ea109e8455ceff4fb7",
+          "path": "hra\\externo\\totalseg_v3\\s0731\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 174987,
+          "sha256": "9620a7a6f3f1f5a585d72cf915e89a923b8209efcd46f76fe729cf6936a54a29",
+          "path": "hra\\externo\\totalseg_v3\\s0731\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0760": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 484191,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 106075,
+          "sha256": "e46fa52d1bbf67f22b2c10eab7d0cb6296b29649577fa18f595efeea30a3173f",
+          "path": "hra\\externo\\totalseg_v3\\s0760\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 106953,
+          "sha256": "8dca91275ccc2255c1c6b94693d992923d93b8c6706dd2157b4e7120678968af",
+          "path": "hra\\externo\\totalseg_v3\\s0760\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 96278,
+          "sha256": "cec06b268cc613e697412fe50a0015e593b6c386054c0420c71893f17286fe21",
+          "path": "hra\\externo\\totalseg_v3\\s0760\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 87303,
+          "sha256": "d96b3d7791ebbebae0f4f99bd97a81cb7712e740b9435c2c269dd64678791e53",
+          "path": "hra\\externo\\totalseg_v3\\s0760\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 87582,
+          "sha256": "a100d8d0a525dfc37c961161fee357a68bee8b5d6a27bd4ff9399186f4cd9bbe",
+          "path": "hra\\externo\\totalseg_v3\\s0760\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0764": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 863397,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 185145,
+          "sha256": "4fdb38e1a27b6d5151faad97690d36e0a5084dac9c9c5df5fdc0ada74cc773fa",
+          "path": "hra\\externo\\totalseg_v3\\s0764\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 186624,
+          "sha256": "038b4a481c18ad61a85fc688a2a62856a7089a1d4676a8c8915bb80983abf568",
+          "path": "hra\\externo\\totalseg_v3\\s0764\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 169569,
+          "sha256": "c7bed2634e4efa317798c960c0f31883fd4c2585e16c3d67cd18eb3604ea3f34",
+          "path": "hra\\externo\\totalseg_v3\\s0764\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 160080,
+          "sha256": "76ec916f6db7540cae55ba4e864aad1348418437b5439e810c5e15ee9bcb75b7",
+          "path": "hra\\externo\\totalseg_v3\\s0764\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 161979,
+          "sha256": "08f4cb69c42aecfd61151471e163f7154330a4cac7a5216a4d097589c263d286",
+          "path": "hra\\externo\\totalseg_v3\\s0764\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0765": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 531367,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 114096,
+          "sha256": "f359deddcdd31292255034877e1c427dddc48b13daf8d4f66a31f9e800cd7459",
+          "path": "hra\\externo\\totalseg_v3\\s0765\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 114705,
+          "sha256": "3d3e1be8d20901711bb0da20f7b5dc638785df7b7d7ce2436e259b17f719e65b",
+          "path": "hra\\externo\\totalseg_v3\\s0765\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 106397,
+          "sha256": "ba903e50dfc933836a142f36410e165cb35987f0914335effb025c92c01668f7",
+          "path": "hra\\externo\\totalseg_v3\\s0765\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 97799,
+          "sha256": "95f626b391b94f198513b9ba7fe100bf0889c50d7777f860dcd48260c69c307a",
+          "path": "hra\\externo\\totalseg_v3\\s0765\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 98370,
+          "sha256": "302d8237517c9e62408609908d1c05514baa90ae5d202ab1cc3c27d10d12e6f8",
+          "path": "hra\\externo\\totalseg_v3\\s0765\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0785": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 173076,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 34612,
+          "sha256": "2743fa591b44e63684e39ad38ab98efcfa1ecdd8d6a70e06226b21cf21d96faa",
+          "path": "hra\\externo\\totalseg_v3\\s0785\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 34612,
+          "sha256": "2743fa591b44e63684e39ad38ab98efcfa1ecdd8d6a70e06226b21cf21d96faa",
+          "path": "hra\\externo\\totalseg_v3\\s0785\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 34628,
+          "sha256": "92ffdb4070aa966051902046f17d5df784af50628dd80a914b89f204d54a8857",
+          "path": "hra\\externo\\totalseg_v3\\s0785\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 34612,
+          "sha256": "2743fa591b44e63684e39ad38ab98efcfa1ecdd8d6a70e06226b21cf21d96faa",
+          "path": "hra\\externo\\totalseg_v3\\s0785\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 34612,
+          "sha256": "2743fa591b44e63684e39ad38ab98efcfa1ecdd8d6a70e06226b21cf21d96faa",
+          "path": "hra\\externo\\totalseg_v3\\s0785\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0786": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 103071,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 20612,
+          "sha256": "4a72af42b2faf9e8030852ec2504beec8908c1694cadd2f71e0f5b511df430de",
+          "path": "hra\\externo\\totalseg_v3\\s0786\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 20612,
+          "sha256": "4a72af42b2faf9e8030852ec2504beec8908c1694cadd2f71e0f5b511df430de",
+          "path": "hra\\externo\\totalseg_v3\\s0786\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 20623,
+          "sha256": "f127d2146811d12bb53a45549457ce056810a21154a249ea2fdb5ce6ac318571",
+          "path": "hra\\externo\\totalseg_v3\\s0786\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 20612,
+          "sha256": "4a72af42b2faf9e8030852ec2504beec8908c1694cadd2f71e0f5b511df430de",
+          "path": "hra\\externo\\totalseg_v3\\s0786\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 20612,
+          "sha256": "4a72af42b2faf9e8030852ec2504beec8908c1694cadd2f71e0f5b511df430de",
+          "path": "hra\\externo\\totalseg_v3\\s0786\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0790": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1060071,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 220053,
+          "sha256": "ef6d09b761ad036437a84700138f82a0c63ccccf7fde3c31bd1bc0db1295c4a9",
+          "path": "hra\\externo\\totalseg_v3\\s0790\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 219831,
+          "sha256": "4d095df524a944c06de6510b1f25f81d85da2e1e02d2173c62873b2f6698c61c",
+          "path": "hra\\externo\\totalseg_v3\\s0790\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 214934,
+          "sha256": "e0fdef4e1820e8fccaf1152db587c1ecf43207e52f83a1892b7e1ea898571a4d",
+          "path": "hra\\externo\\totalseg_v3\\s0790\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 202550,
+          "sha256": "1f9c6827be42c637f69037fe7c1a581d362c95b51028c6911b9d765287762743",
+          "path": "hra\\externo\\totalseg_v3\\s0790\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 202703,
+          "sha256": "0da8614b83d55cdd72d085e0644ce30eb8d65ffa5fea69ee3f6307854f82aae9",
+          "path": "hra\\externo\\totalseg_v3\\s0790\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0795": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 269215,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 53841,
+          "sha256": "eecc413c10744dfb7dc3a4e193376c0ab72d95882eb9ba040d09fa1a9826ffb7",
+          "path": "hra\\externo\\totalseg_v3\\s0795\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 53841,
+          "sha256": "eecc413c10744dfb7dc3a4e193376c0ab72d95882eb9ba040d09fa1a9826ffb7",
+          "path": "hra\\externo\\totalseg_v3\\s0795\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 53851,
+          "sha256": "ced7d4adeaa922cabc3e168b18124630b9db8b2de937e3da7da0e4bae5bbd03d",
+          "path": "hra\\externo\\totalseg_v3\\s0795\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 53841,
+          "sha256": "eecc413c10744dfb7dc3a4e193376c0ab72d95882eb9ba040d09fa1a9826ffb7",
+          "path": "hra\\externo\\totalseg_v3\\s0795\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 53841,
+          "sha256": "eecc413c10744dfb7dc3a4e193376c0ab72d95882eb9ba040d09fa1a9826ffb7",
+          "path": "hra\\externo\\totalseg_v3\\s0795\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0798": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 194339,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 38865,
+          "sha256": "7a800d35ccaf5852c3f2bb4cf9a95856392156c2c4dd62e3bff396dc5fd118c0",
+          "path": "hra\\externo\\totalseg_v3\\s0798\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 38865,
+          "sha256": "7a800d35ccaf5852c3f2bb4cf9a95856392156c2c4dd62e3bff396dc5fd118c0",
+          "path": "hra\\externo\\totalseg_v3\\s0798\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 38879,
+          "sha256": "14a98505241ccef847eed5cb5cf8d1c94c86093ed1ddeab5112e13d3aaeb488e",
+          "path": "hra\\externo\\totalseg_v3\\s0798\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 38865,
+          "sha256": "7a800d35ccaf5852c3f2bb4cf9a95856392156c2c4dd62e3bff396dc5fd118c0",
+          "path": "hra\\externo\\totalseg_v3\\s0798\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 38865,
+          "sha256": "7a800d35ccaf5852c3f2bb4cf9a95856392156c2c4dd62e3bff396dc5fd118c0",
+          "path": "hra\\externo\\totalseg_v3\\s0798\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0804": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 661358,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 141830,
+          "sha256": "bb96faccfa7681ed0fe29097a8b87c361e312ea6a6895c9dd6015ee4b7a5b395",
+          "path": "hra\\externo\\totalseg_v3\\s0804\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 141432,
+          "sha256": "dd1008f8ec1a103d8161aeeb4595d3c83864b7610cbe0b063e84129da44b4d7d",
+          "path": "hra\\externo\\totalseg_v3\\s0804\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 132315,
+          "sha256": "879c8d3edf458302a655e774739922e424f5541f6d7b182e7a8373c24c0397db",
+          "path": "hra\\externo\\totalseg_v3\\s0804\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 123333,
+          "sha256": "a4186ffbe3aa08c2d8c33ecdb440b800eb1b2580809f8834959e0456551c1edd",
+          "path": "hra\\externo\\totalseg_v3\\s0804\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 122448,
+          "sha256": "23c552f94119963193b5c9f32911369f2b9ccc278ac9076ac262fcbda2be0e57",
+          "path": "hra\\externo\\totalseg_v3\\s0804\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0835": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 731045,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 156884,
+          "sha256": "b3ef7e324f095e1ce1825700ec5d6e4240849a4a77f2768decc1b5b2388b0f91",
+          "path": "hra\\externo\\totalseg_v3\\s0835\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 156743,
+          "sha256": "ef4eda845ef35f2c3b7487f01efa5d7f4e887d902c7683c315ea51cf162ee4c2",
+          "path": "hra\\externo\\totalseg_v3\\s0835\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 144255,
+          "sha256": "ae4aefb9db27ab98b8db06182f79e2f1d4eca87f12242db583388ab7ee799aaa",
+          "path": "hra\\externo\\totalseg_v3\\s0835\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 136127,
+          "sha256": "43a58637967ac1235886753b311cd15b07cb615001bc90e16ca8d3acfbe4e36a",
+          "path": "hra\\externo\\totalseg_v3\\s0835\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 137036,
+          "sha256": "1aa4b43e2a4bbc7df26e96d7e26789e62e2cb6e8f99b3beb57e854db3328d4eb",
+          "path": "hra\\externo\\totalseg_v3\\s0835\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0836": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 617849,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 136455,
+          "sha256": "e451f905d71a592cd608a510063a0a4d6ee121ba1462e08ebc976a2a3eed75ae",
+          "path": "hra\\externo\\totalseg_v3\\s0836\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 135652,
+          "sha256": "e3320636e64344a7f95828eb498b23521831abd86e0f51562d9fb65f5d25aace",
+          "path": "hra\\externo\\totalseg_v3\\s0836\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 120062,
+          "sha256": "8a959afd5bc4c828353c70b17b57ab81bab53b81297fcf84b06149cf47e66d8b",
+          "path": "hra\\externo\\totalseg_v3\\s0836\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 112182,
+          "sha256": "5cdef32719577c2c728299505243aae30f7ef3960bd16c42e5222b5573d40f10",
+          "path": "hra\\externo\\totalseg_v3\\s0836\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 113498,
+          "sha256": "0010176533f1c4dc9f65e092f18ae681205e7f159ddd1dffc886006102da4117",
+          "path": "hra\\externo\\totalseg_v3\\s0836\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0844": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 155500,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 31098,
+          "sha256": "03c7aa2cadac7c1a69afd5451edfc5a06053fb2267534458207e21e46a6c0f49",
+          "path": "hra\\externo\\totalseg_v3\\s0844\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 31098,
+          "sha256": "03c7aa2cadac7c1a69afd5451edfc5a06053fb2267534458207e21e46a6c0f49",
+          "path": "hra\\externo\\totalseg_v3\\s0844\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 31108,
+          "sha256": "3cc541dad022533c28ec6124cbd686e41ef1419dd9de1333cccac9904da3795b",
+          "path": "hra\\externo\\totalseg_v3\\s0844\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 31098,
+          "sha256": "03c7aa2cadac7c1a69afd5451edfc5a06053fb2267534458207e21e46a6c0f49",
+          "path": "hra\\externo\\totalseg_v3\\s0844\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 31098,
+          "sha256": "03c7aa2cadac7c1a69afd5451edfc5a06053fb2267534458207e21e46a6c0f49",
+          "path": "hra\\externo\\totalseg_v3\\s0844\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0863": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 754085,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 160935,
+          "sha256": "4f08ff2870bf760a3a39a2e7d1e00241e9e1976e7185ce480f952f03e30078af",
+          "path": "hra\\externo\\totalseg_v3\\s0863\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 160551,
+          "sha256": "be6913c66b98490103377b41231d38f3f606cac41b9cd50004f28c6f4bedf8f2",
+          "path": "hra\\externo\\totalseg_v3\\s0863\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 148243,
+          "sha256": "0ba7c0236aea1c0acffb6e8778d88a9cd446c7e510b8f211ed37c6d2fa54d8fc",
+          "path": "hra\\externo\\totalseg_v3\\s0863\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 141918,
+          "sha256": "ff543d9f39aa20d899afdee99ef4ccaefe0c1eb214f8daa06d9cc6ac4f14ccd3",
+          "path": "hra\\externo\\totalseg_v3\\s0863\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 142438,
+          "sha256": "9e13f3bca869a959574de231beb1b3add9c058bef49e172635f280ccc52efd55",
+          "path": "hra\\externo\\totalseg_v3\\s0863\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0864": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 782331,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 166462,
+          "sha256": "04b1fa23c0859be23c59e6bf77780f2e353b85c33e19f4120e48bf7bf7d59d61",
+          "path": "hra\\externo\\totalseg_v3\\s0864\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 166571,
+          "sha256": "33aa0b113e1a3e42f76dded34ba7b048bdfabd10611e38d8b7694f136bc81642",
+          "path": "hra\\externo\\totalseg_v3\\s0864\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 154502,
+          "sha256": "b44c55674e61cadbe8ae91d15e013d1abcf704f207e51f32b1fdc047e0be25ea",
+          "path": "hra\\externo\\totalseg_v3\\s0864\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 147684,
+          "sha256": "91c8923e69f88c00ac1f21366bfd53a4525b6d5e0eee2291320b6f9f7531d919",
+          "path": "hra\\externo\\totalseg_v3\\s0864\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 147112,
+          "sha256": "41aa8df1fd1316f46653971a377f8bceff15655f45746d76fb9aabd373bcddab",
+          "path": "hra\\externo\\totalseg_v3\\s0864\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0873": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 268016,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 64480,
+          "sha256": "8f2c64869a1a762f43f12d9a44f8f4fbb3bf3cf1d413c011cdd76d064826143a",
+          "path": "hra\\externo\\totalseg_v3\\s0873\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 63952,
+          "sha256": "8a69a910a83c99f4f523a77fb516f34a9d062588301e602ed3ad354a55e862cc",
+          "path": "hra\\externo\\totalseg_v3\\s0873\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 52302,
+          "sha256": "5cb5d4a1d5e9586859472e7e4f4e617d767c41b07f9947f6c690b25f3e2456ea",
+          "path": "hra\\externo\\totalseg_v3\\s0873\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 44298,
+          "sha256": "735ebdc2fdb7053cb17dfcb8993a4d375f427f482cd01da253937ed6d3de1eb8",
+          "path": "hra\\externo\\totalseg_v3\\s0873\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 42984,
+          "sha256": "05b556d683c12c9c42196b1e811fe403f9fa984c0974ed049c13b22c83694aa1",
+          "path": "hra\\externo\\totalseg_v3\\s0873\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0903": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1131637,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 243157,
+          "sha256": "a40566265065974f30c773575646d581866a0dbb0b5824d70e9bed03f8f7d0bf",
+          "path": "hra\\externo\\totalseg_v3\\s0903\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 239730,
+          "sha256": "c15c787caf657c694a66847668293fb31b15b30f265fc220108ed421d99dceb0",
+          "path": "hra\\externo\\totalseg_v3\\s0903\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 206761,
+          "sha256": "bda2074c5a8daeffd1f842de95d2e52baf21abd9ca1593d3f05c4a7efa576df1",
+          "path": "hra\\externo\\totalseg_v3\\s0903\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 223463,
+          "sha256": "51de3229532363a54071bfb35bcf310ae06ee48fd00d4969b202f05f8bcbb94d",
+          "path": "hra\\externo\\totalseg_v3\\s0903\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 218526,
+          "sha256": "b821ad5d514c9972b41ed97827895bf6c7babbfd849e66ba1911ddea0bbce908",
+          "path": "hra\\externo\\totalseg_v3\\s0903\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0928": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 830002,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 176506,
+          "sha256": "7ba4861e4c4e8c1f2749a10d2639457d06c06cd4465eb5be35c29ee80e0f8152",
+          "path": "hra\\externo\\totalseg_v3\\s0928\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 177570,
+          "sha256": "cb1d56f1860a390d669844ff7f5c3c52faa2795e3940103c6a5730d88c9cb0ba",
+          "path": "hra\\externo\\totalseg_v3\\s0928\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 165694,
+          "sha256": "39c3d4b2280357fb282e651cc8615c4ec153dbf8ec10aaaff027b8a70c3ebcea",
+          "path": "hra\\externo\\totalseg_v3\\s0928\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 155028,
+          "sha256": "64615ef948cd062efda832be980de1a67c01b72ca94cab5c02b15c03fb9776ec",
+          "path": "hra\\externo\\totalseg_v3\\s0928\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 155204,
+          "sha256": "fa399d472eaa6501f0a4fb023c9957d2154177f2218d102268df8bac2cbe4e40",
+          "path": "hra\\externo\\totalseg_v3\\s0928\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0970": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1287287,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 265317,
+          "sha256": "1c2c4f95784dd3ca44f5084d55c866f2e6401b406554091b89917f9ac63593e2",
+          "path": "hra\\externo\\totalseg_v3\\s0970\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 265004,
+          "sha256": "7e8043c01bb13d93f682f4c9490167eebf6ca2f0bf87ae309cd25c0e0d3d78e9",
+          "path": "hra\\externo\\totalseg_v3\\s0970\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 262178,
+          "sha256": "78f038c8134314f3dd0ba565b62f8cef947f958e24c21bcea21875ba30be2ea4",
+          "path": "hra\\externo\\totalseg_v3\\s0970\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 247394,
+          "sha256": "5b18a8129fd40a09bca202d685e5ef0927736ad355eae1a43253d7a0bc05c28a",
+          "path": "hra\\externo\\totalseg_v3\\s0970\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 247394,
+          "sha256": "5b18a8129fd40a09bca202d685e5ef0927736ad355eae1a43253d7a0bc05c28a",
+          "path": "hra\\externo\\totalseg_v3\\s0970\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s0971": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 453886,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 103677,
+          "sha256": "c0783f2a17e9bb2759174c00cf49ecebc5992c872a5a01cdda74cfd60be4c3db",
+          "path": "hra\\externo\\totalseg_v3\\s0971\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 104652,
+          "sha256": "1f3faccb39956d1e39d4f8609468dca30697224294bc4d523c72fb4ada3bace4",
+          "path": "hra\\externo\\totalseg_v3\\s0971\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 86848,
+          "sha256": "71566b202b94415c64fbca2e4d5ddb49a7f607abff104c83d41a4991836b87b7",
+          "path": "hra\\externo\\totalseg_v3\\s0971\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 79896,
+          "sha256": "18ed9a6b6277464ce5a9dc3fda3bac131c54d8d3df85a5b58579b90ad91b9032",
+          "path": "hra\\externo\\totalseg_v3\\s0971\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 78813,
+          "sha256": "fa35cdd23555266f4c6fc91dcfc9dcd251a5064930a5857fc45b446a5b07f178",
+          "path": "hra\\externo\\totalseg_v3\\s0971\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1016": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1286478,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 275117,
+          "sha256": "256d984668e00287588d1a7e04442123258b1be490bef6957153c1d131b45e6c",
+          "path": "hra\\externo\\totalseg_v3\\s1016\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 274891,
+          "sha256": "52bef261d9cc915bf0de07d1837cfb4127cc5d84e5091b3b7d57c173e58ebe24",
+          "path": "hra\\externo\\totalseg_v3\\s1016\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 249171,
+          "sha256": "42412ff4ded888c6373d333d667ae799dd037341b28738cb8789ad8570966e87",
+          "path": "hra\\externo\\totalseg_v3\\s1016\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 244544,
+          "sha256": "e1f4f0653922940cf6dd75c915578c3368aefda9b97985e6f1370335b345c90a",
+          "path": "hra\\externo\\totalseg_v3\\s1016\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 242755,
+          "sha256": "6780ff0e9fb4b7bb9ba74f2d88632c9ec53faff7e23a87ba598261fea9982bd0",
+          "path": "hra\\externo\\totalseg_v3\\s1016\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1025": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 38031,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 7604,
+          "sha256": "fa57f56713a8cf5ffb52de9226de74aa6e8e8e03f4cbb09b88cc864f377e5a25",
+          "path": "hra\\externo\\totalseg_v3\\s1025\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 7604,
+          "sha256": "fa57f56713a8cf5ffb52de9226de74aa6e8e8e03f4cbb09b88cc864f377e5a25",
+          "path": "hra\\externo\\totalseg_v3\\s1025\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 7615,
+          "sha256": "7cac29cb54a1ff275839fb7e603774bebb6cb7110c8033dc69f4db7f280bc641",
+          "path": "hra\\externo\\totalseg_v3\\s1025\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 7604,
+          "sha256": "fa57f56713a8cf5ffb52de9226de74aa6e8e8e03f4cbb09b88cc864f377e5a25",
+          "path": "hra\\externo\\totalseg_v3\\s1025\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 7604,
+          "sha256": "fa57f56713a8cf5ffb52de9226de74aa6e8e8e03f4cbb09b88cc864f377e5a25",
+          "path": "hra\\externo\\totalseg_v3\\s1025\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1057": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 359735,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 80332,
+          "sha256": "f387ab1b6b31432122aebc71cfcfe0c65140b8d3fc5e21c28d84e5e0dc4e44b2",
+          "path": "hra\\externo\\totalseg_v3\\s1057\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 81132,
+          "sha256": "9e055bf6c5f4a5d812539688e08e38b091f3c6ffa982da54800ddb3fd7bc54ba",
+          "path": "hra\\externo\\totalseg_v3\\s1057\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 68218,
+          "sha256": "5bd7e38fd0bf185068d84c11f5ad130b7be866b5505f52f37080320194a58e75",
+          "path": "hra\\externo\\totalseg_v3\\s1057\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 65211,
+          "sha256": "8b469a234575279c5b722bdeb7d3e0bc366d8787880b343f866b8782004de6e4",
+          "path": "hra\\externo\\totalseg_v3\\s1057\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 64842,
+          "sha256": "1b9f361a0dfe1145295c71d9f7cc903e6c76b145020d7390f4d707b631aefa54",
+          "path": "hra\\externo\\totalseg_v3\\s1057\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1069": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 620057,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 135907,
+          "sha256": "c20fb60b718546e2b98f766e386c54cbe6f5a988df5a8fd7fc42d571380b6639",
+          "path": "hra\\externo\\totalseg_v3\\s1069\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 135485,
+          "sha256": "60e4c65a10793c3f82405ddff38dbcbe7d7834bc7dd0294c005c3161208a08f3",
+          "path": "hra\\externo\\totalseg_v3\\s1069\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 120267,
+          "sha256": "1d90e84f0e8b522a36aff8104f098dcb06ec73f3c0ac4b436e5a3b910902a646",
+          "path": "hra\\externo\\totalseg_v3\\s1069\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 114509,
+          "sha256": "0785f5b82af43599fda8c6cefc6343dab4bb646212155e677a3ffa640ec29593",
+          "path": "hra\\externo\\totalseg_v3\\s1069\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 113889,
+          "sha256": "d7abb2378c472d84251fc0306072aac2e83dca9880266a12fdb1b8e7743903be",
+          "path": "hra\\externo\\totalseg_v3\\s1069\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1070": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 670928,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 143057,
+          "sha256": "e84b050abd8ca6e897179ea2c3f44c2b8e2fc85dde852e503355abd0e6f6a7c3",
+          "path": "hra\\externo\\totalseg_v3\\s1070\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 143672,
+          "sha256": "dbf14f5d4bcbcb52540cb812552b9bea8a960e3c62349f1711c4b00da866b689",
+          "path": "hra\\externo\\totalseg_v3\\s1070\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 135033,
+          "sha256": "c9c89eee3ae674a9065164dfe1d88a6b3794862a52bde419d3d1aaf2fe055ad9",
+          "path": "hra\\externo\\totalseg_v3\\s1070\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 124107,
+          "sha256": "f6ada1645d4f60dbaf198534a88a3439375db54eac95c804b9ede4233b8fb500",
+          "path": "hra\\externo\\totalseg_v3\\s1070\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 125059,
+          "sha256": "f999c6628404f00c82f2feb2981aa5fb31985a71addc7a06e6f42d7a9d80fd4f",
+          "path": "hra\\externo\\totalseg_v3\\s1070\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1094": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 206421,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 41282,
+          "sha256": "99ac99fb502cd0571d9288603661d2557913d2b66fdfc39cca402257e94e9da0",
+          "path": "hra\\externo\\totalseg_v3\\s1094\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 41282,
+          "sha256": "99ac99fb502cd0571d9288603661d2557913d2b66fdfc39cca402257e94e9da0",
+          "path": "hra\\externo\\totalseg_v3\\s1094\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 41293,
+          "sha256": "0d4efdd9caf350afad8639bd506a979f714ee7e5ba0e9c2eacbe8e1c14a43ac7",
+          "path": "hra\\externo\\totalseg_v3\\s1094\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 41282,
+          "sha256": "99ac99fb502cd0571d9288603661d2557913d2b66fdfc39cca402257e94e9da0",
+          "path": "hra\\externo\\totalseg_v3\\s1094\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 41282,
+          "sha256": "99ac99fb502cd0571d9288603661d2557913d2b66fdfc39cca402257e94e9da0",
+          "path": "hra\\externo\\totalseg_v3\\s1094\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1111": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 603049,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 131992,
+          "sha256": "12b12950607aa04598cda1d69b730da378c690c16bf4ea6f3828f762109e9174",
+          "path": "hra\\externo\\totalseg_v3\\s1111\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 131418,
+          "sha256": "a367dfed986e576506344575c4574189afae4b6ae413d8f9197aef5cece52f55",
+          "path": "hra\\externo\\totalseg_v3\\s1111\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 118243,
+          "sha256": "116358f752c1b3fe01cfe3bce19693c50ad2ce0382e3ec3da72f75ee36d8ac50",
+          "path": "hra\\externo\\totalseg_v3\\s1111\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 110817,
+          "sha256": "fc78659382b6f7fd6797bb200fb0a57f6b4a07bcca59db35b7ddfb53dc35db13",
+          "path": "hra\\externo\\totalseg_v3\\s1111\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 110579,
+          "sha256": "5732c38de22d7142f858a16f3b39edeb150001cfb67bb2f9c58940d581c45204",
+          "path": "hra\\externo\\totalseg_v3\\s1111\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1120": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 551529,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 136625,
+          "sha256": "f0cde5d3ecfb410efca78adebc84009f63e3c366b3108e9e54d2b0c35a896077",
+          "path": "hra\\externo\\totalseg_v3\\s1120\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 136454,
+          "sha256": "102207caed4c6846cd0fb22c38cd2fba5116e1baa06125e3b38da9e1d725c509",
+          "path": "hra\\externo\\totalseg_v3\\s1120\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 35845,
+          "sha256": "0d6e1800b5abd409c91b8f27ae069a72bdfbe108e93e691ea8e050b6282bf389",
+          "path": "hra\\externo\\totalseg_v3\\s1120\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 120618,
+          "sha256": "c1639553b6219ffc9c03a6a81fc7fdaf844f7f9ddbf3b38835d1a3bb87d72447",
+          "path": "hra\\externo\\totalseg_v3\\s1120\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 121987,
+          "sha256": "4859b281eadeaf93f89457d402a8d6277e10876e6d8ab43fab7215d51e6ea336",
+          "path": "hra\\externo\\totalseg_v3\\s1120\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1121": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1014821,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 204474,
+          "sha256": "f1dd29f95c3361638701c317ddd68dbb7a129236c0e396429fb32ceb18b071eb",
+          "path": "hra\\externo\\totalseg_v3\\s1121\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 201734,
+          "sha256": "f7cb615703aff0bfc642c15bf6095180f85c03e54d3eaacaf03776f2f9cf5757",
+          "path": "hra\\externo\\totalseg_v3\\s1121\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 193041,
+          "sha256": "bfae271fb0fd26908ad146fa817f5e4e8bce80692f9f77e5e689df1b7590be67",
+          "path": "hra\\externo\\totalseg_v3\\s1121\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 208022,
+          "sha256": "2a12debd204f173ef19c0774d4cbbaa97ceaac5cd0bcce8e37a40d9082b9bf68",
+          "path": "hra\\externo\\totalseg_v3\\s1121\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 207550,
+          "sha256": "10c7a9d9ce6d6a2818caf6a271329e65428a883d10b03b9196217b08c655014e",
+          "path": "hra\\externo\\totalseg_v3\\s1121\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1128": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 276688,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 66605,
+          "sha256": "b07d684cbe82f24285bf3a24a93091b1b25288946d626a350290b1d9bc9cb69d",
+          "path": "hra\\externo\\totalseg_v3\\s1128\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 65387,
+          "sha256": "c07008e27ceb8989c9f34560eff1eb7b1812ceba9e35c089ed1ec04b8c31ff28",
+          "path": "hra\\externo\\totalseg_v3\\s1128\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 53690,
+          "sha256": "6fb7c991aebccb9436b72e1408259da9f4d1f88188f0b2fd6ef1a2fcd876ffd4",
+          "path": "hra\\externo\\totalseg_v3\\s1128\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 45363,
+          "sha256": "6573e20865032a717f5617a837cfbad0347eae8383e28a618107ea0830d5c119",
+          "path": "hra\\externo\\totalseg_v3\\s1128\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 45643,
+          "sha256": "f59cbea924370294238567d07c65120aa4b0b615485b6015807b7735a47c8517",
+          "path": "hra\\externo\\totalseg_v3\\s1128\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1132": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 280951,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 56188,
+          "sha256": "413afcc0cb3a2442d645272c3e79f7ce55c4fdf67ccfdf4b9269073fe5ca5ad3",
+          "path": "hra\\externo\\totalseg_v3\\s1132\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 56188,
+          "sha256": "413afcc0cb3a2442d645272c3e79f7ce55c4fdf67ccfdf4b9269073fe5ca5ad3",
+          "path": "hra\\externo\\totalseg_v3\\s1132\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 56199,
+          "sha256": "182c3987418c9115891a05f4f96639d7e34d387fddbb6c1b19171ac965096dc1",
+          "path": "hra\\externo\\totalseg_v3\\s1132\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 56188,
+          "sha256": "413afcc0cb3a2442d645272c3e79f7ce55c4fdf67ccfdf4b9269073fe5ca5ad3",
+          "path": "hra\\externo\\totalseg_v3\\s1132\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 56188,
+          "sha256": "413afcc0cb3a2442d645272c3e79f7ce55c4fdf67ccfdf4b9269073fe5ca5ad3",
+          "path": "hra\\externo\\totalseg_v3\\s1132\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1136": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 266546,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 65498,
+          "sha256": "b61c5999b54907d4c030bc560979a2fdac22796ab08414e137c857243c0d933d",
+          "path": "hra\\externo\\totalseg_v3\\s1136\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 63795,
+          "sha256": "714422a098f1f318a4b22324a85b90ec5135ecf0a05a3f8107531e9cbd363225",
+          "path": "hra\\externo\\totalseg_v3\\s1136\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 50761,
+          "sha256": "357e7d76f0ccbb3b10ebd6f65fe1a604242158bcc5d181f7b0312dfdc24430b8",
+          "path": "hra\\externo\\totalseg_v3\\s1136\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 43027,
+          "sha256": "c7983dec06c1992dff0ed7e7459bb0dbeca6b40b016010e6006c09c31db70dc9",
+          "path": "hra\\externo\\totalseg_v3\\s1136\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 43465,
+          "sha256": "da350b93fcf202db2b6151d056bc3b324861dbd3383ef2444dcbd1f8110c4961",
+          "path": "hra\\externo\\totalseg_v3\\s1136\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1146": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 190091,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 38016,
+          "sha256": "47240c13788fb4bc9590409d9c9706083b9cf772f700d3b39cf9710e647044d6",
+          "path": "hra\\externo\\totalseg_v3\\s1146\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 38016,
+          "sha256": "47240c13788fb4bc9590409d9c9706083b9cf772f700d3b39cf9710e647044d6",
+          "path": "hra\\externo\\totalseg_v3\\s1146\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 38027,
+          "sha256": "621231ba30f183f55dc588436357d2b25b271e4441b1970920db24a4de90a839",
+          "path": "hra\\externo\\totalseg_v3\\s1146\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 38016,
+          "sha256": "47240c13788fb4bc9590409d9c9706083b9cf772f700d3b39cf9710e647044d6",
+          "path": "hra\\externo\\totalseg_v3\\s1146\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 38016,
+          "sha256": "47240c13788fb4bc9590409d9c9706083b9cf772f700d3b39cf9710e647044d6",
+          "path": "hra\\externo\\totalseg_v3\\s1146\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1155": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 322736,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 64545,
+          "sha256": "7766bfdfe704bdbb354e91bf5a9f74f57c49d935b7d112d059ee2c07ab9b2327",
+          "path": "hra\\externo\\totalseg_v3\\s1155\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 64545,
+          "sha256": "7766bfdfe704bdbb354e91bf5a9f74f57c49d935b7d112d059ee2c07ab9b2327",
+          "path": "hra\\externo\\totalseg_v3\\s1155\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 64556,
+          "sha256": "fb9ee671cfc96d9d270f06437c3c3007bb88b5e9ee35d751e4158fdefa04d1af",
+          "path": "hra\\externo\\totalseg_v3\\s1155\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 64545,
+          "sha256": "7766bfdfe704bdbb354e91bf5a9f74f57c49d935b7d112d059ee2c07ab9b2327",
+          "path": "hra\\externo\\totalseg_v3\\s1155\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 64545,
+          "sha256": "7766bfdfe704bdbb354e91bf5a9f74f57c49d935b7d112d059ee2c07ab9b2327",
+          "path": "hra\\externo\\totalseg_v3\\s1155\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1159": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1338850,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 278660,
+          "sha256": "84770b14c3f62899e541274b5eff41af51030a0aed745b783671abcb6bee338e",
+          "path": "hra\\externo\\totalseg_v3\\s1159\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 278272,
+          "sha256": "767594ed020ad38655e61943c570f92b031eb84e663f080c9722238f968e0052",
+          "path": "hra\\externo\\totalseg_v3\\s1159\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 270609,
+          "sha256": "957dec28b7d8123050b3cb4aa2f6f84f76b252602e7834bb4c8ea1c24611f213",
+          "path": "hra\\externo\\totalseg_v3\\s1159\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 255597,
+          "sha256": "3bd43c803ca86388f4dea2465a83553729ad13c7a9a872176a0898d779d4e8d5",
+          "path": "hra\\externo\\totalseg_v3\\s1159\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 255712,
+          "sha256": "32fe1f47a8eb79cf652ed898513ebb49272b0ebc2ebf05f1ad3403361814bbd5",
+          "path": "hra\\externo\\totalseg_v3\\s1159\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1182": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 308356,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 61669,
+          "sha256": "127a9ee994c2e942bdcf43d1dcd237f4b35c89ecd5590f440c2fc2d3e7af9d12",
+          "path": "hra\\externo\\totalseg_v3\\s1182\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 61669,
+          "sha256": "127a9ee994c2e942bdcf43d1dcd237f4b35c89ecd5590f440c2fc2d3e7af9d12",
+          "path": "hra\\externo\\totalseg_v3\\s1182\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 61680,
+          "sha256": "19ca5e29165b879bd208f41b214a67d144ca981542dd1b084ca9b1449acb4b0a",
+          "path": "hra\\externo\\totalseg_v3\\s1182\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 61669,
+          "sha256": "127a9ee994c2e942bdcf43d1dcd237f4b35c89ecd5590f440c2fc2d3e7af9d12",
+          "path": "hra\\externo\\totalseg_v3\\s1182\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 61669,
+          "sha256": "127a9ee994c2e942bdcf43d1dcd237f4b35c89ecd5590f440c2fc2d3e7af9d12",
+          "path": "hra\\externo\\totalseg_v3\\s1182\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1218": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 61506,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 12299,
+          "sha256": "9068232709b8baf9d992ce688fb855297881d95a61b5f982512e668c2d4d47d1",
+          "path": "hra\\externo\\totalseg_v3\\s1218\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 12299,
+          "sha256": "9068232709b8baf9d992ce688fb855297881d95a61b5f982512e668c2d4d47d1",
+          "path": "hra\\externo\\totalseg_v3\\s1218\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 12310,
+          "sha256": "8f914971c1bf7bdf82b87a0c991efcf9fe7ed60ab3037ec963c77e667293a0b7",
+          "path": "hra\\externo\\totalseg_v3\\s1218\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 12299,
+          "sha256": "9068232709b8baf9d992ce688fb855297881d95a61b5f982512e668c2d4d47d1",
+          "path": "hra\\externo\\totalseg_v3\\s1218\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 12299,
+          "sha256": "9068232709b8baf9d992ce688fb855297881d95a61b5f982512e668c2d4d47d1",
+          "path": "hra\\externo\\totalseg_v3\\s1218\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1228": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1011090,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 214439,
+          "sha256": "ae21457cfe7728fe19ec89c1c26c6ecc35a923cd90f033374819706557e17484",
+          "path": "hra\\externo\\totalseg_v3\\s1228\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 215989,
+          "sha256": "43e303c4e30a970de5d00e107a32f718e6181b5c7b7e761f84259ec3e073182a",
+          "path": "hra\\externo\\totalseg_v3\\s1228\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 200299,
+          "sha256": "119d577ee8f504d8168c6b7fe33032cc5581613d2a9012f9b259639760feb4e2",
+          "path": "hra\\externo\\totalseg_v3\\s1228\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 189794,
+          "sha256": "6d43835f47b85de3c38d3fbb3d6b2c22b8d9defe1423b3f4120af422ac8d5f3d",
+          "path": "hra\\externo\\totalseg_v3\\s1228\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 190569,
+          "sha256": "fd07a0d4805ca0223ef9371cac663688ecbda4bb2aeab7ac795f9262260971e4",
+          "path": "hra\\externo\\totalseg_v3\\s1228\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1233": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 707560,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 151645,
+          "sha256": "d818ec09288e5ced29f4f94ce1f94630e5358444ce9cd75be6cbcdd532340271",
+          "path": "hra\\externo\\totalseg_v3\\s1233\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 150912,
+          "sha256": "50adec6935c99a3e569a9396e97fcef1938f960cec78402fb15c666281966de1",
+          "path": "hra\\externo\\totalseg_v3\\s1233\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 139168,
+          "sha256": "33a6b07540143019f143439d62b0119b8880b617e8931199050d04843f49a2a0",
+          "path": "hra\\externo\\totalseg_v3\\s1233\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 132866,
+          "sha256": "c720bcb661f5d41ee12bd1f73df6320b9d6aaeb6df0a14e2adfd246a96df7fb5",
+          "path": "hra\\externo\\totalseg_v3\\s1233\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 132969,
+          "sha256": "6fb3021fb36b275f42b94eb1b05215efe30a83b9ca3a8e51d12e99eaab7f117e",
+          "path": "hra\\externo\\totalseg_v3\\s1233\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1267": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 616212,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 155158,
+          "sha256": "c799e9bb892c3c8db5b9af0cd6e1ccb4e081bf8fe457b0cc6a88e079e6f03f42",
+          "path": "hra\\externo\\totalseg_v3\\s1267\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 155077,
+          "sha256": "d10d8a5f5ce84022ba577cd7dc06db2608282f27b5786ac750cce2d351921472",
+          "path": "hra\\externo\\totalseg_v3\\s1267\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 39907,
+          "sha256": "5b55edbd771dd809be7e9c98fcca4947b8f18982582c6d3e928b1da06ca812b3",
+          "path": "hra\\externo\\totalseg_v3\\s1267\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 133106,
+          "sha256": "847809ab07d7b644747fb2208aa68c09a0dab80e3740bef06e86a4bb0c17e648",
+          "path": "hra\\externo\\totalseg_v3\\s1267\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 132964,
+          "sha256": "7ccdafad86d1e7a64dad344b3ab10402b0df4cad8c816bef0d969935a9b0af88",
+          "path": "hra\\externo\\totalseg_v3\\s1267\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1304": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1184807,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 293299,
+          "sha256": "5ef39b48cc9d7232c87d9cdfd344a92bde0fbfb8da3a07eafb16357ccc690214",
+          "path": "hra\\externo\\totalseg_v3\\s1304\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 292494,
+          "sha256": "f2c9190ad095bb21a5b84553744ef9a6e4c7b2763f414aeed7fac38650ae5b18",
+          "path": "hra\\externo\\totalseg_v3\\s1304\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 70212,
+          "sha256": "1cf15f474e44d4a1a9f8281ffea336e9612225519a12e0d9971d995a4cd6bd26",
+          "path": "hra\\externo\\totalseg_v3\\s1304\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 264381,
+          "sha256": "80d552499f6c1ce7c51ed010b11ea496dfab08ca1a70f5c767bcb73b3ae2e456",
+          "path": "hra\\externo\\totalseg_v3\\s1304\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 264421,
+          "sha256": "8e9210ffaa60b14984845d511d1795abd0daf8524b1ab2c34fa9b95654eb6c01",
+          "path": "hra\\externo\\totalseg_v3\\s1304\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1314": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 1397741,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 290019,
+          "sha256": "b4d838d36aa1c0ba4ec738e99a83286e6bc428fcae8d80b2efd07533ecf69304",
+          "path": "hra\\externo\\totalseg_v3\\s1314\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 289808,
+          "sha256": "c36aa917b04b6fefe32bc738e6729b0a5b4b43d91fae3460059ab72e29cb822f",
+          "path": "hra\\externo\\totalseg_v3\\s1314\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 281407,
+          "sha256": "852b802b6f01acdab327f82ce1b08665cd23ab8cd9cf6da7f5bd7613d101ad6d",
+          "path": "hra\\externo\\totalseg_v3\\s1314\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 267888,
+          "sha256": "9434b2e4ae95a08933f0d1eee50d378174f8129613101b3dde5301ca56c0f534",
+          "path": "hra\\externo\\totalseg_v3\\s1314\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 268619,
+          "sha256": "33ac7d665ad1c3f9c4f77f907a1bec3656321c821b406e2bddca6bd2b993711a",
+          "path": "hra\\externo\\totalseg_v3\\s1314\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1336": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 720974,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 179249,
+          "sha256": "51900bbb85172c38dc482933ce452068a4d1e6c17f9f4591ef8fbb5412ae2686",
+          "path": "hra\\externo\\totalseg_v3\\s1336\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 179950,
+          "sha256": "bf2563117fdec9cdb875ccace07787c760db0e002990a579dc9e0310b08a5cb1",
+          "path": "hra\\externo\\totalseg_v3\\s1336\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 44137,
+          "sha256": "eb642f952bdd9cff5f79cfe6a244850d730b7d8df76b35eb0692df7bf2a99a0c",
+          "path": "hra\\externo\\totalseg_v3\\s1336\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 158686,
+          "sha256": "274666e31ae1a9f6d1930d7729cdb92951988d9578651fc38380d190a98c079a",
+          "path": "hra\\externo\\totalseg_v3\\s1336\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 158952,
+          "sha256": "3218174479dbff5c8f768799eed688a01b3b78c211cf6feaf7ae69c1058004ea",
+          "path": "hra\\externo\\totalseg_v3\\s1336\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1340": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 822141,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 176161,
+          "sha256": "0fb5c5ef6790f5fc246894620b0894947e12b0fb67de942c5fb77c0d1b6fd47c",
+          "path": "hra\\externo\\totalseg_v3\\s1340\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 176049,
+          "sha256": "b9a02c882fb7147be39e9a3af1c9894ce2cd820b9fdd64f50f23f6fa966b3917",
+          "path": "hra\\externo\\totalseg_v3\\s1340\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 162345,
+          "sha256": "d6f2b7f6ba6d6c99091242b4fb5da60eabbded1aa73ab98a616b6d8a2836142d",
+          "path": "hra\\externo\\totalseg_v3\\s1340\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 153368,
+          "sha256": "9e5de46ce5f1ef211fb232102eb4690dd22cc95d89eb51f042e941da792856f3",
+          "path": "hra\\externo\\totalseg_v3\\s1340\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 154218,
+          "sha256": "1e10e7720660e74a58d11a4a6143f1ba62d3d98b23c4fa88de00f600a8b5e3d2",
+          "path": "hra\\externo\\totalseg_v3\\s1340\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1355": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 482355,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 107658,
+          "sha256": "ad4b3a93ad3122bad7f242598230b0972f45a9fb45cf3b386bd8b56333a03b2b",
+          "path": "hra\\externo\\totalseg_v3\\s1355\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 107966,
+          "sha256": "c2cdc94ff2bba308a5d7158f00dfe5c0267b084d38000e98bb6edcf5b7ff7fda",
+          "path": "hra\\externo\\totalseg_v3\\s1355\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 94440,
+          "sha256": "a6cadf9355b9fc3a2773475f649fed47a0b6b66fc07eb01a9534fd3d57ec2ed4",
+          "path": "hra\\externo\\totalseg_v3\\s1355\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 86258,
+          "sha256": "7bbfcdf0b37f37895916474451d68e19e38a6646d2721a1346de3b460bb4ccc7",
+          "path": "hra\\externo\\totalseg_v3\\s1355\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 86033,
+          "sha256": "7333923edb08dca7e064f00148ffde209d5018fd26dd470b190229cf24b66b37",
+          "path": "hra\\externo\\totalseg_v3\\s1355\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1358": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 311412,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 74563,
+          "sha256": "6d67ebef45d89fd9e673c4ce52f39d2899287d67841961992b2d832e70d38670",
+          "path": "hra\\externo\\totalseg_v3\\s1358\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 74653,
+          "sha256": "f93ef5374a757cca4393cf3326ac73b7a90aa806c20076c83bd0c7235b2ba501",
+          "path": "hra\\externo\\totalseg_v3\\s1358\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 59464,
+          "sha256": "44d3f2c593b14ce2ab054b5596befc36c30ceff7bf624d1677237aa1168a0df7",
+          "path": "hra\\externo\\totalseg_v3\\s1358\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 51427,
+          "sha256": "0eb9c294a54da02031bda5f7ec7ce3301fcce6045e2776ffd4ed071c750dc26b",
+          "path": "hra\\externo\\totalseg_v3\\s1358\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 51305,
+          "sha256": "0a4ee6c1df39f6e409890778b49c10bd33e809cf4309f2bb6c53e3b4f17b3610",
+          "path": "hra\\externo\\totalseg_v3\\s1358\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1368": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 486336,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 109276,
+          "sha256": "3f22e2108ef1a7721b19c5173101da9db472fc9eacf85e89f41d22f85ef6a8ac",
+          "path": "hra\\externo\\totalseg_v3\\s1368\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 109861,
+          "sha256": "0a875a3a83b63a787429190c08f829b15e240d74ac8c24e5e349c8fc0305a282",
+          "path": "hra\\externo\\totalseg_v3\\s1368\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 92674,
+          "sha256": "0c79c9e55f82b9c9e6ac595c80c5e469887fff6706ac2425d1cd2e30edce7612",
+          "path": "hra\\externo\\totalseg_v3\\s1368\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 87276,
+          "sha256": "3374937a465381190ba679022d06afee977e0f46723901aae2bb5afdf897a21c",
+          "path": "hra\\externo\\totalseg_v3\\s1368\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 87249,
+          "sha256": "edb7722a64339173c9530b08207050aea7630fea51eaf44fd768144a297a0f5d",
+          "path": "hra\\externo\\totalseg_v3\\s1368\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1385": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 317819,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 74271,
+          "sha256": "eeeed207dfde0855516f9363c930b300ef8aab410b3574555ee9bb3af42a50c9",
+          "path": "hra\\externo\\totalseg_v3\\s1385\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 75040,
+          "sha256": "36b0705341a45bf9103bee7d08e08f11ccb508bbb8bd96ad2bc560ca49b9a30e",
+          "path": "hra\\externo\\totalseg_v3\\s1385\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 63196,
+          "sha256": "af27804886c009e3e5515410531dd1bf8d2c705091eba98c08e4109604fd3d3d",
+          "path": "hra\\externo\\totalseg_v3\\s1385\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 52905,
+          "sha256": "61af52050390c6b9bbe9ebc5e57f58cc8082dd1f1071fa129c7fc5ff7811758a",
+          "path": "hra\\externo\\totalseg_v3\\s1385\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 52407,
+          "sha256": "1eae7939ec29ce23b2b04e7d13932d696f2ff68cb74914dac8433afe18fad82c",
+          "path": "hra\\externo\\totalseg_v3\\s1385\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1401": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 327359,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 76287,
+          "sha256": "00fc9b03c2814e189ea205ae078409e0bd1059a51cbc0efe1f488cfa927fce01",
+          "path": "hra\\externo\\totalseg_v3\\s1401\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 76071,
+          "sha256": "8e8cece4f7c40abc2e5ff9042b10fc39ab5149a3c996f0ed41fcb4e2e8f605f9",
+          "path": "hra\\externo\\totalseg_v3\\s1401\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 65485,
+          "sha256": "0ccebf790eb62db7d5ed04809fff12e65cf679effb839830aa87a0b30764eee9",
+          "path": "hra\\externo\\totalseg_v3\\s1401\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 54773,
+          "sha256": "e60d2533158b595fb917d8068e2ce58922157677aca3cc3dc768202febec53b5",
+          "path": "hra\\externo\\totalseg_v3\\s1401\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 54743,
+          "sha256": "1e982cdf505e931906de52d4103ef02e41048592bb1a513af578a3a787cf9730",
+          "path": "hra\\externo\\totalseg_v3\\s1401\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    },
+    "s1404": {
+      "mask_count": 5,
+      "size_on_disk_bytes": 605907,
+      "masks": [
+        {
+          "mask": "hip_left",
+          "size_on_disk_bytes": 131768,
+          "sha256": "3e9c90740f3c7d709f1bdc6b901aad87c87f0782fbac78836204365e66ae8180",
+          "path": "hra\\externo\\totalseg_v3\\s1404\\segmentations\\hip_left.nii.gz"
+        },
+        {
+          "mask": "hip_right",
+          "size_on_disk_bytes": 130143,
+          "sha256": "66ef93d154060b80d9d9ee6ba98c69d022fde46c1ce3926669e075997c10e4a5",
+          "path": "hra\\externo\\totalseg_v3\\s1404\\segmentations\\hip_right.nii.gz"
+        },
+        {
+          "mask": "sacrum",
+          "size_on_disk_bytes": 120721,
+          "sha256": "c2cc685347b2b9e5013b7647920e8b81159d1b5807cf312c42feb766d618241b",
+          "path": "hra\\externo\\totalseg_v3\\s1404\\segmentations\\sacrum.nii.gz"
+        },
+        {
+          "mask": "femur_left",
+          "size_on_disk_bytes": 111893,
+          "sha256": "c2d98d0d8dadad085dc8174d0e9f9642f0c78c9419279f104dc1df89bf86d33d",
+          "path": "hra\\externo\\totalseg_v3\\s1404\\segmentations\\femur_left.nii.gz"
+        },
+        {
+          "mask": "femur_right",
+          "size_on_disk_bytes": 111382,
+          "sha256": "604a36007d55c59290e9c71c2e4aae4100e772d5c5c518d786a4fdcc09124f97",
+          "path": "hra\\externo\\totalseg_v3\\s1404\\segmentations\\femur_right.nii.gz"
+        }
+      ]
+    }
+  }
+}

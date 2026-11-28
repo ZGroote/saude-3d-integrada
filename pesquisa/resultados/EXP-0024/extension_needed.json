@@ -1,0 +1,8 @@
+{
+  "female_unique_after_primary_qc_q4": 31,
+  "protocol_minimum": 30,
+  "additional_cases_needed": 0,
+  "extension_masks_not_downloaded": true,
+  "next_extension_ids_in_seed_order": [],
+  "q4_prefilter": "run ICP only when centroid size relative difference < 5%; unchanged Q4 cutoff < 1.0 mm"
+}

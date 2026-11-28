@@ -1,0 +1,641 @@
+# Advisors da homologação após 0007 (2026-11-26), --type all --level info. Sem dados de conexão.
+{
+ "results": [
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `gestacoes_autor_id_idx` on table `public.gestacoes` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "gestacoes",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_gestacoes_gestacoes_autor_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `gestacoes_unidade_id_idx` on table `public.gestacoes` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "gestacoes",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_gestacoes_gestacoes_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `condicoes_gestacao_gestacao_id_idx` on table `public.condicoes_gestacao` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "condicoes_gestacao",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_condicoes_gestacao_condicoes_gestacao_gestacao_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `condicoes_gestacao_cid10_idx` on table `public.condicoes_gestacao` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "condicoes_gestacao",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_condicoes_gestacao_condicoes_gestacao_cid10_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `condicoes_gestacao_autor_id_idx` on table `public.condicoes_gestacao` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "condicoes_gestacao",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_condicoes_gestacao_condicoes_gestacao_autor_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `condicoes_gestacao_unidade_id_idx` on table `public.condicoes_gestacao` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "condicoes_gestacao",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_condicoes_gestacao_condicoes_gestacao_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `nascimentos_gestacao_id_idx` on table `public.nascimentos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "nascimentos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_nascimentos_nascimentos_gestacao_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `nascimentos_autor_id_idx` on table `public.nascimentos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "nascimentos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_nascimentos_nascimentos_autor_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `perfis_unidade_id_idx` on table `public.perfis` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "perfis",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_perfis_perfis_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `vinculos_unidade_id_idx` on table `public.vinculos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "vinculos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_vinculos_vinculos_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `vinculos_criado_por_idx` on table `public.vinculos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "vinculos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_vinculos_vinculos_criado_por_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `auditoria_autor_id_idx` on table `public.auditoria` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "auditoria",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_auditoria_auditoria_autor_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `auditoria_unidade_id_idx` on table `public.auditoria` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "auditoria",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_auditoria_auditoria_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `auditoria_paciente_id_idx` on table `public.auditoria` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "auditoria",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_auditoria_auditoria_paciente_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `achados_autor_id_idx` on table `public.achados` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "achados",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_achados_achados_autor_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `achados_unidade_id_idx` on table `public.achados` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "achados",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_achados_achados_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `achados_cid10_idx` on table `public.achados` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "achados",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_achados_achados_cid10_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `gestacoes_mae_id_idx` on table `public.gestacoes` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "gestacoes",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_gestacoes_gestacoes_mae_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `nascimentos_unidade_id_idx` on table `public.nascimentos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "nascimentos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_nascimentos_nascimentos_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `importacoes_fhir_autor_id_idx` on table `public.importacoes_fhir` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "importacoes_fhir",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_importacoes_fhir_importacoes_fhir_autor_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `importacoes_fhir_unidade_id_idx` on table `public.importacoes_fhir` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "importacoes_fhir",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_importacoes_fhir_importacoes_fhir_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `eventos_clinicos_unidade_id_idx` on table `public.eventos_clinicos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "eventos_clinicos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_eventos_clinicos_eventos_clinicos_unidade_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `eventos_clinicos_importacao_id_idx` on table `public.eventos_clinicos` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "eventos_clinicos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_eventos_clinicos_eventos_clinicos_importacao_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `paciente_fhir_paciente_id_idx` on table `public.paciente_fhir` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "paciente_fhir",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_paciente_fhir_paciente_fhir_paciente_id_idx"
+  },
+  {
+   "name": "unused_index",
+   "title": "Unused Index",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "PERFORMANCE"
+   ],
+   "description": "Detects if an index has never been used and may be a candidate for removal.",
+   "detail": "Index `paciente_fhir_paciente_idx` on table `public.paciente_fhir` has not been used",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+   "metadata": {
+    "name": "paciente_fhir",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "unused_index_public_paciente_fhir_paciente_fhir_paciente_idx"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.achados` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "achados",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_achados"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.cid10_sigilo` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "cid10_sigilo",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_cid10_sigilo"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.condicoes_gestacao` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "condicoes_gestacao",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_condicoes_gestacao"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.eventos_clinicos` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "eventos_clinicos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_eventos_clinicos"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.gestacoes` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "gestacoes",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_gestacoes"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.importacoes_fhir` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "importacoes_fhir",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_importacoes_fhir"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.nascimentos` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "nascimentos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_nascimentos"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.paciente_fhir` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "paciente_fhir",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_paciente_fhir"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.pacientes` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "pacientes",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_pacientes"
+  },
+  {
+   "name": "rls_enabled_no_policy",
+   "title": "RLS Enabled No Policy",
+   "level": "INFO",
+   "facing": "EXTERNAL",
+   "categories": [
+    "SECURITY"
+   ],
+   "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+   "detail": "Table `public.vinculos` has RLS enabled, but no policies exist",
+   "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+   "metadata": {
+    "name": "vinculos",
+    "type": "table",
+    "schema": "public"
+   },
+   "cacheKey": "rls_enabled_no_policy_public_vinculos"
+  }
+ ],
+ "message": "db advisors",
+ "target": {
+  "kind": "db-url",
+  "host": "aws-0-sa-east-1.pooler.supabase.com",
+  "port": 5432
+ }
+}

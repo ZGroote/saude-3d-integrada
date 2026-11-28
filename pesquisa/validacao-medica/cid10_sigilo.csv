@@ -1,0 +1,16 @@
+﻿prefixo_CID10,critério/motivo,correto? / sugestão,estado,revisor_nome,revisor_CRM,data_revisao,origem
+B20,HIV,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:12
+B21,HIV,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:12
+B22,HIV,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:12
+B23,HIV,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:12
+B24,HIV,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:12
+Z21,HIV,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:12
+T74,violência,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:13
+Y05,violência,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:13
+Y07,violência,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:13
+F,saúde mental,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:14
+O04,aborto,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:14
+O05,aborto,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:14
+O06,aborto,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:14
+O07,aborto,,pendente de avaliação humana,,,,supabase/migrations/0003_achados.sql:14
+O98.7,HIV na gestação,,pendente de avaliação humana,,,,supabase/migrations/0004_gestacao.sql:1

@@ -8,6 +8,7 @@ Toda fonte anatômica usada no repositório, com a versão exata e a atribuiçã
 | `hra-f` (`hra/`) | Human Reference Atlas, 3D Reference Organ Set United Female **v1.10** (publicado em 2026-06-15, DOI 10.48539/HBM637.DWBM.744), baixado do CDN `latest` em 2026-11-25 | CC BY 4.0 | Confirmada em 2026-11-25 no README oficial (detalhes em `hra/LICENCA_HRA.md`) |
 | `teste-anatomia/` | TotalSegmentator, "Small subset" v2.0.1, caso s1371 | CC BY 4.0 | Só teste interno; fora do produto |
 | Nomes em português (`bodyparts3d/nomes_pt.csv`) | Tradução própria dos nomes FMA | Do projeto | Revisão médica pendente |
+| Mapeamento `bodySite` (`supabase/dados/bodysite_snomed.csv`) | 12 códigos SNOMED CT conferidos em snomed.hl7.org.br e Ontoserver/CSIRO | SNOMED CT (licença IHTSDO/SNOMED International) | **Uso em produção a confirmar** — Brasil não consta como membro ativo; ver `supabase/dados/LEIAME_BODYSITE.md` |
 
 ## Atribuições exigidas
 

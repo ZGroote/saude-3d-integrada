@@ -1,0 +1,24 @@
+# Hipóteses Científicas
+
+| ID | Experimento | Linha | Hipótese resumida | Situação |
+|---|---|---|---|---|
+| H01 | `EXP-0001` | LP01 | É possível reconstruir malhas 3D leves por camada anatômica diretamente de segmentações do TotalSegmentator para visualização web. | **Sustentada** |
+| H02 | `EXP-0002` | LP01 | Os 2.234 objetos do BodyParts3D 4.0 podem ser classificados nos 15 sistemas anatômicos pela árvore FMA + revisão manual. | **Sustentada** |
+| H03 | `EXP-0003` | LP01 | Um ajuste global de similaridade alinha o BodyParts3D ao caso tomográfico `s1371` com precisão suficiente para fusão anatômica direta. | **Rejeitada** (erro médio 36,5 mm, máx. 86,2 mm) |
+| H04 | `EXP-0004` | LP02 | Quantização de 16 bits + `EXT_meshopt_compression` reduz substancialmente o tamanho dos GLBs preservando 100% dos nós, extras e triângulos. | **Sustentada** |
+| H05 | `EXP-0005` | LP01 | O conjunto HRA United Female v1.10 (956 malhas) pode ser empacotado com licença CC BY 4.0, nomes PT-BR e hashes SHA-256 no contrato de atlas. | **Sustentada** |
+| H06 | `EXP-0006` | LP01 | Limiarização por intensidade na TC da Denver recupera e valida o deslocamento STL→TC. | **Rejeitada** (TC sem HU, resposta em platô) |
+| H07 | `EXP-0007` | LP01 | Busca conjunta por bordas (Otsu 3 classes) encontra pico estreito de alinhamento STL→TC na Denver. | **Rejeitada** (sem pico estreito, macro 19,888%) |
+| H08 | `EXP-0008` | LP01 | O pipeline de ICP (rígido, similaridade, anisotrópico) e leitor GLB recuperam transformações conhecidas em dados sintéticos. | **Sustentada** (validação sintética) |
+| H09 | `EXP-0009` | LP01 | Calibração por histograma da TC da Denver permite segmentação óssea válida pelo TotalSegmentator em GPU de 4 GB. | **Rejeitada** (ossos falharam) |
+| H10 | `EXP-0010` | LP01 | A TC original da NLM (com cabeçalhos GE completos) segmentada em blocos craniocaudais atinge os critérios anatômicos mínimos. | **Sustentada** (`--fast` 114 rótulos e resolução normal `5ec1c34`; validação técnica) |
+| H11 | `EXP-0011` | LP01 | ICP rígido nos fêmures e pelve alinha os STLs da Denver à TC da NLM com erro médio `< 3 mm` no sacro (*holdout*). | **Rejeitada** (`3,990 mm` em `--fast` e `3,785 mm` em resolução normal `5ec1c34`) |
+| H12 | `EXP-0012` | LP01 | A integração multimodal (TC + RM + máscaras Denver) aumenta a cobertura anatômica sem comprometer a precisão geométrica (`< 3 mm`). | **Planejada** (viabilidade avaliada: ganho limitado a `intervertebral_discs`/`brain`; priorizar Método A só TC) |
+| H13 | `EXP-0013` | LP01 | Existem fontes, métodos e ferramentas abertas (compatíveis com uso comercial mediante atribuição) que podem reduzir os gargalos G1–G5. | **Planejada** (levantamento de existência/licenças concluído; eficácia em aberto até execução) |
+| H14 | `EXP-0014` | LP01 | A integração sob protocolo estratificado por finalidade (critérios geométricos por classe + funcionais F1–F5, Plano B regional e regra de fonte única) produz atlas feminino coerente para referência clínica. | **Rejeitada para a base HRA** (`5ec1c34`: joelho 23–25 mm, quadril 17–21 mm, F1 32/164, F3 28/164, L1–L5/rim esquerdo reprovaram) |
+| H15 | `EXP-0015` | LP01 | Usando a TC NLM como corpo base (`TotalSegmentator 'total' + 'body'`) com as pernas da Denver e só complementos do HRA por ajuste local, o atlas feminino passa no protocolo do `EXP-0014` sem afrouxar critérios. | **Rejeitada / congelada** (4 rodadas; F1 `97,77%`, F2 joelho/costelas e F3 falharam; `vhf-f/0.1-0` rascunho local) |
+| H16 | `EXP-0016` | LP01 | O esqueleto `vhf-f` levado ao referencial do HRA pela similaridade global (A) ou regional (B) fica contido na pele do HRA e não invade órgãos do HRA nos limites do `EXP-0014`. | **Rejeitada / congelada** (Rodada 1 invalidada; Rodada 2: F1 A `76,6141%`/B `79,0022%`, F3 `6` invasões; `hib-f/0.1-0` rascunho; mantido `hra-f/1.10-1`) |
+| — | `EXP-0017` | LP02 | **Retrospectivo (sem hipótese prévia):** critérios tirados da `SPEC-MVP.md` em `2026-11-26` (abertura `< 3 s` sob CPU 4x e Fast 4G). | **Critério SPEC atendido** (`2,77 s → 2,38 s → 2,68 s`) |
+| — | `EXP-0018` | LP02 | **Retrospectivo (sem hipótese prévia):** critérios tirados da `SPEC-MVP.md` em `2026-11-26` (marcador reprojetado `< 1 µm` após recarregamento). | **Critério SPEC atendido** (`achados_real.py` passou em `3e6c960`) |
+| — | `EXP-0019` | LP05 | **Retrospectivo (sem hipótese prévia):** critérios tirados da `SPEC-MVP.md` em `2026-11-26` (isolamento RLS e bloqueio de API pública). | **Critério SPEC atendido** (`46` testes PGlite/e2e; `169` tentativas adversariais, `0` falhas em `ef3aa53`) |
+| — | `EXP-0020` | LP05 | **Retrospectivo (sem hipótese prévia):** critérios tirados da `SPEC-MVP.md` em `2026-11-26` (importação FHIR R4 idempotente e ancoragem por sexo/SNOMED). | **Critério SPEC atendido** (`45` testes banco; `50/50/50` em `importacao_real.py`, `2a7cf0e`/`3e6c960`) |

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Motor anatômico — demo</title>
+  <link rel="icon" href="data:,">
+  <style>
+    html, body, #raiz { margin: 0; height: 100%; font: 14px system-ui, sans-serif; background: #f4f2ee; color: #1d1d1b; }
+    main { display: grid; grid-template-columns: 320px 1fr; height: 100%; }
+    aside { overflow: auto; padding: 12px; background: #fff; border-right: 1px solid #d8d4cc; }
+    section { min-height: 0; min-width: 0; }
+    label { display: block; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+    @media (max-width: 600px) { main { grid-template-columns: 1fr; grid-template-rows: 65% 35%; } aside { order: 1; } }
+  </style>
+</head>
+<body>
+  <div id="raiz"></div>
+  <script type="module" src="./main.tsx"></script>
+</body>
+</html>

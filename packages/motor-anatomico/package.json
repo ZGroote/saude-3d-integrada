@@ -1,0 +1,36 @@
+{
+  "name": "@saude3d/motor-anatomico",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./indice": "./src/indice.ts" },
+  "scripts": {
+    "demo": "vite",
+    "test": "vitest run",
+    "typecheck": "tsc",
+    "teste:navegador": "python testes/navegador.py"
+  },
+  "peerDependencies": {
+    "@react-three/fiber": "^9",
+    "react": "^19",
+    "react-dom": "^19",
+    "three": ">=0.180"
+  },
+  "dependencies": {
+    "three-mesh-bvh": "^0.9.0"
+  },
+  "devDependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.182.0",
+    "@vitejs/plugin-react": "^6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.182.0",
+    "typescript": "^5",
+    "vite": "^8",
+    "vitest": "^5"
+  }
+}

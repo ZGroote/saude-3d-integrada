@@ -1,0 +1,51 @@
+﻿dataset,arquivo,fma,nome,sistema,lado,categoria,metodo,malha_correspondente
+BP3D,FJ1756,FMA72925,Left fornix of forebrain,nervoso,left,ausente,sem_correspondencia,
+BP3D,FJ3070,FMA8663,Right posterior segmental vein,venoso,right,ausente,sem_correspondencia,
+HRA,VH_F_renal_pelvis_R,FMA15575,renal pelvis,VH_F_urinary_system,right,so_no_hra,sem_correspondencia,
+HRA,VH_F_seventh_thoracic_spinal_cord_segment,FMA71173,seventh thoracic spinal cord segment,VH_F_nervous_system,,so_no_hra,sem_correspondencia,
+BP3D,FJ2449,FMA68215,Lateral segmental bronchial tree,respiratorio,,ausente,sem_correspondencia,
+BP3D,FJ3322,FMA24451,Proximal phalanx of right index finger,esqueletico,right,ausente,sem_correspondencia,
+BP3D,FJ2131,FMA43907,Right anterior tibial recurrent artery,arterial,right,ausente,sem_correspondencia,
+BP3D,FJ3304,FMA24458,Middle phalanx of right little finger,esqueletico,right,ausente,sem_correspondencia,
+BP3D,FJ3479,FMA4694,Left subclavian artery,arterial,left,presente,xref_uberon_fma,VH_F_left_subclavian_artery_a;VH_F_left_subclavian_artery_b
+BP3D,FJ1832,FMA61842,Septum of telencephalon,nervoso,,ausente,sem_correspondencia,
+BP3D,FJ3442,FMA14750,Inferior mesenteric artery,arterial,,presente,xref_uberon_fma,VH_F_inferior_mesenteric_artery
+BP3D,FJ3571,FMA18887,Right internal iliac vein,venoso,right,presente,nome_normalizado,VH_F_internal_iliac_vein_R
+BP3D,FJ2229,FMA22913,Left deep palmar venous arch,venoso,left,ausente,sem_correspondencia,
+BP3D,FJ1265,FMA55682,Left upper central secondary incisor tooth,digestorio,left,ausente,sem_correspondencia,
+BP3D,FJ1311,FMA52674,Communicating branch of left nasociliary nerve with left ciliary ganglion,nervoso,left,ausente,sem_correspondencia,
+BP3D,FJ2821,FMA15743,Hepatovenous segment V,digestorio,,ausente,sem_correspondencia,
+HRA,Allen_inferior_occipital_gyrus_L,FMA273129,inferior occipital gyrus,VH_F_nervous_system,left,so_no_hra,sem_correspondencia,
+BP3D,FJ3112,FMA15423,Posterior superior segmental branch of right portal vein,venoso,right,ausente,sem_correspondencia,
+BP3D,FJ1465M,FMA46442,Tendinous arch of levator ani,muscular,,ausente,sem_correspondencia,
+BP3D,FJ1702,FMA50519,Right posterior inferior cerebellar artery,arterial,right,ausente,sem_correspondencia,
+HRA,VH_F_cervical_vertebra_1,FMA12519,vertebral bone 1,VH_F_skeletal_system,,presente_no_bp3d,xref_uberon_fma,FJ3176
+BP3D,FJ2214,FMA22813,Left anterior interosseous artery,arterial,left,ausente,sem_correspondencia,
+BP3D,FJ2216,FMA22656,Left axillary artery,arterial,left,ausente,sem_correspondencia,
+HRA,VH_F_left_ureter,FMA15572,left ureter,VH_F_urinary_system,left,presente_no_bp3d,xref_uberon_fma,FJ3144
+BP3D,FJ1408,FMA22546,Right extensor hallucis longus,muscular,right,ausente,sem_correspondencia,
+BP3D,FJ3148,FMA19667,Urethra,urogenital,,ausente,sem_correspondencia,
+HRA,VH_F_left_posterior_bronchus,FMA7427,Left posterior segmental bronchus,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,
+HRA,VH_F_posterior_cruciate_enthesis_R,,-,VH_F_lower_limb,right,so_no_hra,sem_correspondencia,
+BP3D,FJ3024,FMA8663,Right posterior segmental vein,venoso,right,ausente,sem_correspondencia,
+HRA,Allen_transverse_temporal_gyrus_Heschls_gyrus_R,,-,VH_F_nervous_system,right,so_no_hra,sem_correspondencia,
+BP3D,FJ3168,FMA13076,Fifth lumbar vertebra,esqueletico,,presente,xref_uberon_fma,VH_F_lumbar_vertebra_5
+BP3D,FJ1391,FMA37471,Flexor digiti minimi brevis of right foot,muscular,right,ausente,sem_correspondencia,
+BP3D,FJ2646,FMA3874,Second right anterior branch of anterior interventricular branch of left coronary artery,arterial,left,ausente,sem_correspondencia,
+BP3D,FJ3636,FMA14735,Lumbar artery,arterial,,ausente,sem_correspondencia,
+BP3D,FJ3398,FMA14647,Transverse mesocolon,digestorio,,ausente,sem_correspondencia,
+BP3D,FJ1577,FMA13353,Left thyrohyoid,esqueletico,left,ausente,sem_correspondencia,
+HRA,VH_F_suspensory_ligament_of_ovary_R,FMA19823,Suspensory ligament of right ovary,VH_F_reproductive_system,right,exclusivo_feminino,termo_exclusivo_feminino,
+BP3D,FJ2811,FMA52781,External ear,sensorial,,ausente,sem_correspondencia,
+BP3D,FJ1351,FMA52629,Right lacrimal nerve,sensorial,right,ausente,sem_correspondencia,
+BP3D,FJ1722M,FMA50354,Posteromedial branch of left callosomarginal artery,arterial,left,ausente,sem_correspondencia,
+HRA,VH_F_right_lateral_bronchus,FMA7402,Lateral segmental bronchus,VH_F_respiratory_system,right,so_no_hra,sem_correspondencia,
+BP3D,FJ1505,FMA38513,Right supinator,muscular,right,ausente,sem_correspondencia,
+BP3D,FJ1660M,FMA50370,Insular part of left middle cerebral artery,arterial,left,ausente,sem_correspondencia,
+BP3D,FJ1336,FMA58299,Right choroid,sensorial,right,presente,nome_normalizado,VH_F_optic_choroid_R
+BP3D,FJ3215,FMA16035,Intervertebral disk of third lumbar vertebra,articular,,ausente,sem_correspondencia,
+BP3D,FJ1740,FMA72717,Right cingulate gyrus,nervoso,right,ausente,sem_correspondencia,
+HRA,VH_F_optic_choroid_R,FMA58299,Right choroid,VH_F_nervous_system,right,presente_no_bp3d,fma_direto_catalogo_hra,FJ1336;FJ1337
+HRA,VH_F_left_lateral_basal_bronchopulmonary_segment,FMA7379,left Lateral Basal Bronchopulmonary Segment,VH_F_respiratory_system,left,so_no_hra,sem_correspondencia,
+BP3D,FJ2705,FMA4708,Left marginal vein,venoso,left,presente,nome_normalizado,VH_F_left_marginal_vein
+BP3D,FJ3001,FMA68725,Lateral branch of right anterior basal segmental artery,arterial,right,ausente,sem_correspondencia,
